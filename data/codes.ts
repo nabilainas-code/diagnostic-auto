@@ -698,6 +698,496 @@ export const codes: CodeDefaut[] = [
       { nom: "Connecteur calculateur moteur", boutique: "Oscaro · livraison 48h", prix: "21€" },
     ],
   },
+
+  // Boîte de vitesses automatique (P07XX)
+  {
+    code: "P0700",
+    titre: "Dysfonctionnement transmission — demande d'allumage du voyant",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — roulable, à traiter rapidement",
+    description:
+      "Le calculateur de boîte de vitesses demande au calculateur moteur d'allumer le voyant moteur car il a détecté un défaut interne à la transmission. Ce code s'accompagne presque toujours d'un autre code plus précis stocké dans le calculateur de boîte.",
+    causes: [
+      { pourcentage: 35, libelle: "Autre défaut de transmission sous-jacent (voir codes associés)" },
+      { pourcentage: 25, libelle: "Niveau ou qualité d'huile de boîte incorrecte" },
+      { pourcentage: 20, libelle: "Capteur de vitesse de boîte défaillant" },
+      { pourcentage: 20, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Lire l'intégralité des codes stockés dans le calculateur de boîte (pas seulement le moteur) pour identifier le défaut précis à l'origine de cette alerte générale.",
+    pieces: [
+      { nom: "Vidange boîte auto + filtre", boutique: "AutoDoc · livraison 24h", prix: "45€" },
+      { nom: "Capteur vitesse boîte", boutique: "Oscaro · livraison 48h", prix: "52€" },
+    ],
+  },
+  {
+    code: "P0705",
+    titre: "Circuit capteur position sélecteur (PRNDL) — plage/performance",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque de refus de démarrer ou logique de passage faussée",
+    description:
+      "Ce capteur indique au calculateur la position du levier de vitesses (P, R, N, D, L). Un signal incohérent peut empêcher le démarrage ou fausser la logique de passage des rapports.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de position sélecteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur défaillant" },
+      { pourcentage: 20, libelle: "Mauvais réglage mécanique du sélecteur" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le réglage mécanique du câble ou de la tringlerie de sélection avant de remplacer le capteur.",
+    pieces: [
+      { nom: "Capteur position sélecteur", boutique: "Mister-Auto · sur commande", prix: "68€" },
+    ],
+  },
+  {
+    code: "P0715",
+    titre: "Circuit capteur vitesse d'entrée de turbine — dysfonctionnement",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — roulable, à traiter rapidement",
+    description:
+      "Ce capteur mesure la vitesse de rotation à l'entrée du convertisseur de couple, utilisée pour calculer les rapports de démultiplication et piloter les changements de vitesse.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse turbine défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Contamination du capteur par des particules métalliques dans l'huile" },
+      { pourcentage: 10, libelle: "Calculateur de boîte défaillant (rare)" },
+    ],
+    avisPro:
+      "Contrôler l'état de l'huile de boîte (limaille) en même temps que le capteur — une contamination indique souvent une usure interne plus large.",
+    pieces: [
+      { nom: "Capteur vitesse turbine", boutique: "Oscaro · livraison 48h", prix: "47€" },
+    ],
+  },
+  {
+    code: "P0720",
+    titre: "Circuit capteur vitesse de sortie — dysfonctionnement",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — roulable, à traiter rapidement",
+    description:
+      "Mesure la vitesse de rotation en sortie de boîte pour la comparer à la vitesse d'entrée et calculer le rapport engagé en temps réel.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de sortie défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 18, libelle: "Cible denture endommagée" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant (rare)" },
+    ],
+    avisPro:
+      "Même démarche que pour le capteur d'entrée : contrôle du câblage avant remplacement du capteur.",
+    pieces: [
+      { nom: "Capteur vitesse de sortie", boutique: "Oscaro · livraison 48h", prix: "47€" },
+    ],
+  },
+  {
+    code: "P0730",
+    titre: "Rapport de démultiplication incorrect",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — évitez de rouler, risque d'endommager la boîte",
+    description:
+      "Le calculateur détecte que le rapport réellement engagé ne correspond pas à celui commandé, souvent lié à un patinage interne d'embrayage ou de frein de boîte. Rouler avec ce défaut peut aggraver l'usure interne.",
+    causes: [
+      { pourcentage: 35, libelle: "Usure des embrayages/freins internes de boîte" },
+      { pourcentage: 25, libelle: "Pression hydraulique insuffisante (pompe, filtre colmaté)" },
+      { pourcentage: 20, libelle: "Solénoïde de commande défaillant" },
+      { pourcentage: 20, libelle: "Niveau d'huile de boîte incorrect" },
+    ],
+    avisPro:
+      "Vérifier en priorité le niveau et l'état de l'huile de boîte — une vidange avec filtre neuf résout parfois le problème si pris à temps, avant que l'usure interne ne s'aggrave.",
+    pieces: [
+      { nom: "Vidange boîte auto + filtre", boutique: "AutoDoc · livraison 24h", prix: "45€" },
+      { nom: "Solénoïde de commande boîte", boutique: "Mister-Auto · sur commande", prix: "89€" },
+    ],
+  },
+  {
+    code: "P0740",
+    titre: "Circuit convertisseur de couple (embrayage de verrouillage) — dysfonctionnement",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — roulable, à traiter rapidement",
+    description:
+      "L'embrayage de verrouillage du convertisseur de couple (lock-up) permet une liaison directe moteur-boîte à haute vitesse pour économiser du carburant. Un défaut de circuit l'empêche de s'enclencher ou de se désengager correctement.",
+    causes: [
+      { pourcentage: 35, libelle: "Solénoïde de verrouillage défaillant" },
+      { pourcentage: 25, libelle: "Câblage ou connecteur défaillant" },
+      { pourcentage: 22, libelle: "Usure de l'embrayage de verrouillage" },
+      { pourcentage: 18, libelle: "Pression hydraulique insuffisante" },
+    ],
+    avisPro:
+      "Contrôler le solénoïde de verrouillage avant d'envisager une intervention plus lourde sur le convertisseur lui-même.",
+    pieces: [
+      { nom: "Solénoïde de verrouillage convertisseur", boutique: "Mister-Auto · sur commande", prix: "76€" },
+    ],
+  },
+  {
+    code: "P0750",
+    titre: "Solénoïde de changement de vitesse A — dysfonctionnement",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — à-coups possibles lors des changements de rapport",
+    description:
+      "Ce solénoïde contrôle le flux hydraulique pour engager un rapport spécifique. Un dysfonctionnement peut provoquer des à-coups ou empêcher le passage à un rapport donné.",
+    causes: [
+      { pourcentage: 42, libelle: "Solénoïde défaillant" },
+      { pourcentage: 25, libelle: "Câblage ou connecteur défaillant" },
+      { pourcentage: 20, libelle: "Filtre d'huile de boîte colmaté" },
+      { pourcentage: 13, libelle: "Calculateur de boîte défaillant (rare)" },
+    ],
+    avisPro:
+      "Remplacer le solénoïde est en général la première intervention — vérifier aussi la propreté de l'huile, un filtre colmaté peut en être la cause indirecte.",
+    pieces: [
+      { nom: "Solénoïde changement de vitesse", boutique: "Oscaro · livraison 48h", prix: "58€" },
+      { nom: "Filtre boîte automatique", boutique: "AutoDoc · livraison 24h", prix: "22€" },
+    ],
+  },
+  {
+    code: "P0797",
+    titre: "Pression de la commande d'embrayage — trop élevée",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — à-coups possibles lors des changements de rapport",
+    description:
+      "La pression hydraulique appliquée sur un embrayage interne de boîte dépasse les valeurs attendues, ce qui peut provoquer des à-coups lors des changements de rapport.",
+    causes: [
+      { pourcentage: 38, libelle: "Solénoïde de régulation de pression défaillant" },
+      { pourcentage: 27, libelle: "Capteur de pression hydraulique défaillant" },
+      { pourcentage: 20, libelle: "Pompe à huile de boîte défaillante" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant (rare)" },
+    ],
+    avisPro:
+      "Diagnostic à la valise constructeur recommandé pour lire les valeurs de pression en temps réel avant de remplacer une pièce.",
+    pieces: [
+      { nom: "Solénoïde régulation pression", boutique: "Mister-Auto · sur commande", prix: "82€" },
+    ],
+  },
+
+  // Châssis & ABS/ESP (C0XXX)
+  {
+    code: "C0035",
+    titre: "Circuit capteur de vitesse de roue avant gauche",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Le capteur de vitesse de roue avant gauche envoie un signal incohérent ou absent au calculateur ABS, qui désactive alors l'ABS (et souvent l'ESP) par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS avant gauche", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C0040",
+    titre: "Circuit capteur de vitesse de roue avant droite",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Le capteur de vitesse de roue avant droite envoie un signal incohérent ou absent au calculateur ABS, qui désactive alors l'ABS (et souvent l'ESP) par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS avant droit", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C0045",
+    titre: "Circuit capteur de vitesse de roue arrière gauche",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Le capteur de vitesse de roue arrière gauche envoie un signal incohérent ou absent au calculateur ABS, qui désactive alors l'ABS (et souvent l'ESP) par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS arrière gauche", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C0050",
+    titre: "Circuit capteur de vitesse de roue arrière droite",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Le capteur de vitesse de roue arrière droite envoie un signal incohérent ou absent au calculateur ABS, qui désactive alors l'ABS (et souvent l'ESP) par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS arrière droit", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C0110",
+    titre: "Dysfonctionnement du moteur de la pompe ABS",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS désactivé",
+    description:
+      "Le moteur électrique qui actionne la pompe hydraulique du bloc ABS ne fonctionne pas correctement, désactivant l'assistance au freinage d'urgence.",
+    causes: [
+      { pourcentage: 35, libelle: "Moteur de pompe ABS grillé" },
+      { pourcentage: 25, libelle: "Fusible ou relais de pompe ABS défaillant" },
+      { pourcentage: 25, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 15, libelle: "Bloc hydraulique ABS complet défaillant" },
+    ],
+    avisPro:
+      "Vérifier fusible et relais avant d'envisager un remplacement du bloc hydraulique complet, qui est une pièce coûteuse.",
+    pieces: [
+      { nom: "Fusible/relais pompe ABS", boutique: "Oscaro · livraison 48h", prix: "18€" },
+      { nom: "Bloc hydraulique ABS", boutique: "Mister-Auto · sur commande", prix: "320€" },
+    ],
+  },
+  {
+    code: "C0161",
+    titre: "Défaut du circuit de frein de stationnement électrique",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — à traiter rapidement, sécurité au stationnement",
+    description:
+      "Concerne les véhicules équipés d'un frein de stationnement électrique (bouton au lieu d'un levier manuel). Le calculateur détecte un défaut sur le circuit de commande ou d'actionnement.",
+    causes: [
+      { pourcentage: 35, libelle: "Moteur d'actionneur de frein de stationnement défaillant" },
+      { pourcentage: 25, libelle: "Interrupteur de commande défaillant" },
+      { pourcentage: 25, libelle: "Câblage ou connecteur défaillant" },
+      { pourcentage: 15, libelle: "Calculateur de frein de stationnement défaillant" },
+    ],
+    avisPro:
+      "Diagnostic à la valise recommandé pour identifier quelle roue ou quel actionneur est en cause avant de commander une pièce.",
+    pieces: [
+      { nom: "Actionneur frein de stationnement électrique", boutique: "Mister-Auto · sur commande", prix: "145€" },
+    ],
+  },
+  {
+    code: "C0200",
+    titre: "Défaut du circuit du capteur de lacet (ESP)",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP désactivé",
+    description:
+      "Le capteur de lacet mesure les mouvements de rotation du véhicule autour de son axe vertical pour permettre à l'ESP de corriger un dérapage. Un défaut désactive cette protection.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de lacet/accélération défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur défaillant" },
+      { pourcentage: 20, libelle: "Mauvais calibrage après une intervention (géométrie, remplacement pare-brise)" },
+      { pourcentage: 10, libelle: "Calculateur ESP défaillant (rare)" },
+    ],
+    avisPro:
+      "Après tout remplacement de pare-brise ou intervention sur la direction, un recalibrage du capteur est souvent nécessaire — à vérifier avant de le remplacer inutilement.",
+    pieces: [
+      { nom: "Capteur de lacet (ESP)", boutique: "Oscaro · livraison 48h", prix: "96€" },
+    ],
+  },
+  {
+    code: "C0300",
+    titre: "Défaut du circuit relais de la pompe ABS",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS désactivé",
+    description:
+      "Le relais qui alimente la pompe du bloc ABS présente un défaut électrique (coincé ouvert ou fermé, câblage endommagé).",
+    causes: [
+      { pourcentage: 40, libelle: "Relais de pompe ABS défaillant" },
+      { pourcentage: 30, libelle: "Câblage d'alimentation du relais endommagé" },
+      { pourcentage: 20, libelle: "Fusible associé grillé" },
+      { pourcentage: 10, libelle: "Calculateur ABS défaillant (rare)" },
+    ],
+    avisPro:
+      "Le relais est une pièce peu coûteuse à tester et remplacer en premier avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Relais pompe ABS", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+
+  // Carrosserie & sécurité (B0XXX)
+  {
+    code: "B0001",
+    titre: "Défaut du circuit de déploiement airbag conducteur",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — airbag potentiellement inopérant, à traiter immédiatement",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de déploiement de l'airbag conducteur (résistance hors plage, circuit ouvert ou court-circuit). L'airbag peut ne pas se déclencher en cas de choc.",
+    causes: [
+      { pourcentage: 35, libelle: "Module airbag conducteur défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur (souvent la spirale contact sous le volant) endommagé" },
+      { pourcentage: 20, libelle: "Spirale contact (contacteur tournant) usée" },
+      { pourcentage: 15, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ne pas différer l'intervention vu l'enjeu sécurité. La spirale contact sous le volant est une cause très fréquente et abordable à vérifier en premier.",
+    pieces: [
+      { nom: "Spirale contact (contacteur tournant)", boutique: "Oscaro · livraison 48h", prix: "62€" },
+    ],
+  },
+  {
+    code: "B0011",
+    titre: "Défaut du circuit de déploiement airbag passager",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — airbag potentiellement inopérant, à traiter immédiatement",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de déploiement de l'airbag passager. L'airbag peut ne pas se déclencher en cas de choc.",
+    causes: [
+      { pourcentage: 35, libelle: "Module airbag passager défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Capteur d'occupation du siège associé défaillant" },
+      { pourcentage: 15, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Vérifier aussi le capteur d'occupation du siège passager, souvent lié à ce même défaut sur les véhicules récents.",
+    pieces: [
+      { nom: "Module airbag passager", boutique: "Mister-Auto · sur commande", prix: "210€" },
+    ],
+  },
+  {
+    code: "B0012",
+    titre: "Défaut du prétensionneur de ceinture conducteur",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection en cas de choc compromise",
+    description:
+      "Le prétensionneur resserre instantanément la ceinture en cas de choc pour limiter les mouvements du corps. Un défaut de circuit peut l'empêcher de se déclencher.",
+    causes: [
+      { pourcentage: 40, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Boucle de ceinture défaillante" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le prétensionneur est un élément pyrotechnique à usage unique — toujours remplacé par une pièce neuve, jamais reconditionnée, pour des raisons de sécurité.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Mister-Auto · sur commande", prix: "138€" },
+    ],
+  },
+  {
+    code: "B0013",
+    titre: "Défaut du prétensionneur de ceinture passager",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection en cas de choc compromise",
+    description:
+      "Même principe que pour le conducteur, côté passager avant. Un défaut de circuit peut empêcher le prétensionneur de se déclencher en cas de choc.",
+    causes: [
+      { pourcentage: 40, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Boucle de ceinture défaillante" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le prétensionneur est un élément pyrotechnique à usage unique — toujours remplacé par une pièce neuve, jamais reconditionnée, pour des raisons de sécurité.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Mister-Auto · sur commande", prix: "138€" },
+    ],
+  },
+  {
+    code: "B0051",
+    titre: "Défaut du capteur d'impact avant gauche",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement des airbags compromis",
+    description:
+      "Ce capteur détecte les décélérations brutales à l'avant gauche du véhicule pour déclencher les airbags et prétensionneurs concernés. Un défaut de circuit compromet leur déclenchement.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur d'impact défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé (zone exposée aux chocs mineurs)" },
+      { pourcentage: 25, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'état du pare-chocs et de la zone de montage du capteur — un choc mineur non réparé peut avoir endommagé le capteur ou son câblage.",
+    pieces: [
+      { nom: "Capteur d'impact avant gauche", boutique: "AutoDoc · livraison 24h", prix: "44€" },
+    ],
+  },
+  {
+    code: "B0052",
+    titre: "Défaut du capteur d'impact avant droit",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement des airbags compromis",
+    description:
+      "Ce capteur détecte les décélérations brutales à l'avant droit du véhicule pour déclencher les airbags et prétensionneurs concernés. Un défaut de circuit compromet leur déclenchement.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur d'impact défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé (zone exposée aux chocs mineurs)" },
+      { pourcentage: 25, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'état du pare-chocs et de la zone de montage du capteur — un choc mineur non réparé peut avoir endommagé le capteur ou son câblage.",
+    pieces: [
+      { nom: "Capteur d'impact avant droit", boutique: "AutoDoc · livraison 24h", prix: "44€" },
+    ],
+  },
+  {
+    code: "B0092",
+    titre: "Défaut du témoin airbag passager",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "faible",
+    severiteLabel: "Gravité faible — vérifier tout de même le système airbag",
+    description:
+      "Le témoin lumineux qui indique si l'airbag passager est activé ou désactivé (selon présence d'un siège enfant) présente un défaut de circuit — ne signifie pas forcément que l'airbag lui-même est défaillant.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule ou LED du témoin défaillante" },
+      { pourcentage: 30, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 25, libelle: "Capteur d'occupation du siège passager défaillant (cause indirecte)" },
+    ],
+    avisPro:
+      "Contrôler le témoin lui-même avant de suspecter le système airbag complet — c'est souvent juste l'indicateur qui est en cause.",
+    pieces: [
+      { nom: "Témoin airbag passager", boutique: "Oscaro · livraison 48h", prix: "28€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
@@ -775,6 +1265,9 @@ export const categories: Categorie[] = [
   { code: "P01XX", titre: "Carburant & air", desc: "Injection, débit d'air, richesse du mélange.", slug: "p01xx" },
   { code: "P04XX", titre: "Émissions", desc: "Sonde lambda, EGR, catalyseur.", slug: "p04xx" },
   { code: "U0XXX", titre: "Réseau & calculateurs", desc: "Communication entre modules électroniques.", slug: "u0xxx" },
+  { code: "P07XX", titre: "Boîte de vitesses automatique", desc: "Rapports, convertisseur de couple, capteurs de vitesse.", slug: "p07xx" },
+  { code: "C0XXX", titre: "Châssis & ABS/ESP", desc: "Freinage, capteurs de roue, stabilité du véhicule.", slug: "c0xxx" },
+  { code: "B0XXX", titre: "Carrosserie & sécurité", desc: "Airbags, prétensionneurs, capteurs d'impact.", slug: "b0xxx" },
 ];
 
 export function getCategorieBySlug(slug: string): Categorie | undefined {
