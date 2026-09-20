@@ -64,7 +64,7 @@ export default function Home() {
           <span className="font-mono text-xs text-muted">SÉLECTION</span>
         </div>
         <div className="bg-surface border border-line rounded-xl overflow-hidden">
-          {codes.map((c) => (
+          {codes.slice(0, 10).map((c) => (
             <Link
               key={c.code}
               href={`/codes/${c.code.toLowerCase()}`}
