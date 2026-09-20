@@ -112,8 +112,18 @@ export const codes: CodeDefaut[] = [
   },
 ];
 
+// Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
+// préfixe OBD oubliée) vers un format de code canonique, ex. "0171" -> "P0171".
+export function normalizeCode(raw: string): string {
+  const clean = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (/^[PBCU]/.test(clean)) return clean;
+  if (/^\d+$/.test(clean)) return `P${clean}`;
+  return clean;
+}
+
 export function getCodeByCode(code: string): CodeDefaut | undefined {
-  return codes.find((c) => c.code.toLowerCase() === code.toLowerCase());
+  const normalized = normalizeCode(code);
+  return codes.find((c) => c.code.toUpperCase() === normalized);
 }
 
 export function getCodesByCategorie(categorie: string): CodeDefaut[] {

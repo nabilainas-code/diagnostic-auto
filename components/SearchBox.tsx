@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { normalizeCode } from "@/data/codes";
 
 function formatPlate(raw: string) {
   const clean = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
@@ -26,7 +27,7 @@ export default function SearchBox() {
   function handleSubmit() {
     if (!value) return;
     if (tab === "code") {
-      router.push(`/codes/${value.toLowerCase()}`);
+      router.push(`/codes/${normalizeCode(value).toLowerCase()}`);
     } else {
       router.push(`/vehicule/${value.toLowerCase()}`);
     }

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import { getCodeByCode, codes } from "@/data/codes";
+import { getCodeByCode, normalizeCode, codes } from "@/data/codes";
 
 const sevStyle = {
   faible: "text-cyan bg-cyan/10",
@@ -35,7 +35,13 @@ export default async function CodePage({
 }) {
   const { code } = await params;
   const dtc = getCodeByCode(code);
-  if (!dtc) notFound();
+  if (!dtc) {
+    const canonical = normalizeCode(code).toLowerCase();
+    if (canonical !== code.toLowerCase() && getCodeByCode(canonical)) {
+      redirect(`/codes/${canonical}`);
+    }
+    notFound();
+  }
 
   return (
     <>
