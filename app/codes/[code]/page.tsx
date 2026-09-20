@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import { getCodeByCode, normalizeCode, codes } from "@/data/codes";
+import { getCodeByCode, normalizeCode, diagnoseCode, codes } from "@/data/codes";
 
 const sevStyle = {
   faible: "text-cyan bg-cyan/10",
@@ -40,7 +40,63 @@ export default async function CodePage({
     if (canonical !== code.toLowerCase() && getCodeByCode(canonical)) {
       redirect(`/codes/${canonical}`);
     }
-    notFound();
+
+    const diagnostic = diagnoseCode(code);
+    return (
+      <>
+        <Header />
+        <div className="max-w-xl mx-auto px-6 pt-16 pb-16 text-center">
+          <div className="font-mono text-xs text-muted mb-4">
+            <Link href="/" className="hover:text-text">Accueil</Link> /{" "}
+            <span className="text-amber">{code.toUpperCase()}</span>
+          </div>
+
+          <h1 className="font-display font-semibold text-2xl">
+            Ce code n&apos;a pas pu être trouvé
+          </h1>
+
+          <div className="bg-surface border border-line rounded-xl p-5 mt-5 text-left">
+            <div className="font-mono text-xs text-muted tracking-wide mb-2">CE QUI NE VA PAS</div>
+            <p className="text-[#C7CBD3] text-sm leading-relaxed">{diagnostic.message}</p>
+          </div>
+
+          <div className="flex gap-3 justify-center flex-wrap mt-6">
+            <Link
+              href="/"
+              className="bg-amber text-bg border-none rounded-lg px-5 py-3 font-semibold text-sm hover:brightness-110 transition-[filter]"
+            >
+              Retour à l&apos;accueil
+            </Link>
+            <Link
+              href="/codes/categorie/p03xx"
+              className="bg-surface border border-line rounded-lg px-5 py-3 font-semibold text-sm hover:border-amber transition-colors"
+            >
+              Voir les codes disponibles
+            </Link>
+          </div>
+
+          <div className="mt-10 pt-7 border-t border-line text-left">
+            <div className="font-mono text-xs text-muted tracking-wide mb-3">
+              QUELQUES CODES DISPONIBLES
+            </div>
+            <div className="bg-surface border border-line rounded-xl overflow-hidden">
+              {codes.slice(0, 5).map((c) => (
+                <Link
+                  key={c.code}
+                  href={`/codes/${c.code.toLowerCase()}`}
+                  className="flex items-center gap-3 px-4 py-3 border-b border-line last:border-b-0 hover:bg-surface-2 transition-colors"
+                >
+                  <span className="font-mono font-semibold text-xs text-amber bg-amber/10 px-2 py-1 rounded-md flex-shrink-0">
+                    {c.code}
+                  </span>
+                  <span className="text-sm">{c.titre}</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+      </>
+    );
   }
 
   return (

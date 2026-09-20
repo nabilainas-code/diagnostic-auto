@@ -714,6 +714,51 @@ export function getCodeByCode(code: string): CodeDefaut | undefined {
   return codes.find((c) => c.code.toUpperCase() === normalized);
 }
 
+export interface CodeDiagnostic {
+  reason: "missing-prefix" | "wrong-length" | "invalid-format" | "unknown-code";
+  message: string;
+}
+
+// Explique à l'utilisateur pourquoi son code n'a pas été trouvé : lettre
+// oubliée, mauvais nombre de chiffres, format invalide, ou code inconnu de
+// notre base. Utilisé uniquement pour l'affichage — pas pour la recherche.
+export function diagnoseCode(raw: string): CodeDiagnostic {
+  const clean = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+
+  if (/^\d+$/.test(clean)) {
+    if (clean.length === 4) {
+      return {
+        reason: "missing-prefix",
+        message: `Il manque la lettre au début du code. "${clean}" ressemble à un code moteur — essayez "P${clean}". Les autres préfixes possibles sont B (carrosserie), C (châssis) et U (réseau/calculateurs).`,
+      };
+    }
+    return {
+      reason: "wrong-length",
+      message: `Un code défaut, c'est une lettre (P, B, C ou U) suivie de 4 chiffres, par exemple P0420. "${clean}" ne contient que des chiffres et n'a pas le bon format.`,
+    };
+  }
+
+  const match = clean.match(/^([PBCU])(\d*)$/);
+  if (match) {
+    const [, letter, digits] = match;
+    if (digits.length !== 4) {
+      return {
+        reason: "wrong-length",
+        message: `Après la lettre "${letter}", il faut exactement 4 chiffres (ex. ${letter}0420). Vous avez saisi ${digits.length || "aucun"} chiffre${digits.length > 1 ? "s" : ""}.`,
+      };
+    }
+    return {
+      reason: "unknown-code",
+      message: `"${letter}${digits}" a le bon format, mais ne fait pas encore partie des ${codes.length} codes référencés sur Panne Résolue. On enrichit la base régulièrement.`,
+    };
+  }
+
+  return {
+    reason: "invalid-format",
+    message: `"${raw}" n'a pas le format d'un code défaut. Un code défaut, c'est une lettre (P, B, C ou U) suivie de 4 chiffres, par exemple P0420.`,
+  };
+}
+
 export function getCodesByCategorie(categorie: string): CodeDefaut[] {
   return codes.filter((c) => c.categorie.toLowerCase() === categorie.toLowerCase());
 }
