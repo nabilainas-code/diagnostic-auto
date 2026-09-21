@@ -6660,6 +6660,300 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic mécanique boîte AT6 (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
     ],
   },
+  {
+    code: "F4C0",
+    titre: "Défaut éclairage feu de position arrière droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — visibilité réduite de nuit",
+    description:
+      "Le boîtier de servitude intelligent (BSI) détecte une anomalie sur le circuit d'éclairage du feu de position arrière droit, empêchant son allumage correct.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'ampoule en premier — c'est la cause la plus fréquente et la moins coûteuse, accessible sans outillage particulier sur la plupart des modèles.",
+    pieces: [
+      { nom: "Ampoule feu de position", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4C1",
+    titre: "Défaut éclairage feu de position arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — visibilité réduite de nuit",
+    description:
+      "Le boîtier de servitude intelligent (BSI) détecte une anomalie sur le circuit d'éclairage du feu de position arrière gauche, empêchant son allumage correct.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'ampoule en premier — c'est la cause la plus fréquente et la moins coûteuse, accessible sans outillage particulier sur la plupart des modèles.",
+    pieces: [
+      { nom: "Ampoule feu de position", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4A6",
+    titre: "Défaut éclairage clignotant gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation compromise",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du clignotant gauche, ce qui peut se traduire par un clignotement plus rapide que la normale ou une absence totale d'éclairage.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED de clignotant grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du clignotant endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un clignotement anormalement rapide au tableau de bord est le signe caractéristique d'une ampoule grillée — un remplacement simple résout généralement le défaut.",
+    pieces: [
+      { nom: "Ampoule clignotant", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4C7",
+    titre: "Défaut éclairage feu de recul droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — visibilité réduite en marche arrière",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du feu de recul droit, ce qui réduit la visibilité en marche arrière, notamment de nuit.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Contacteur de marche arrière (boîte de vitesses) en cause" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si les deux feux de recul sont concernés en même temps, suspecter en priorité le contacteur de marche arrière sur la boîte plutôt que le BSI.",
+    pieces: [
+      { nom: "Ampoule feu de recul", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4C4",
+    titre: "Défaut pression d'huile moteur — signalé par le BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de dommage moteur immédiat",
+    description:
+      "Le boîtier de servitude intelligent relaie une alerte de pression d'huile moteur anormale, transmise par le calculateur moteur — un défaut potentiellement grave pour la durée de vie du moteur.",
+    causes: [
+      { pourcentage: 35, libelle: "Niveau d'huile moteur insuffisant" },
+      { pourcentage: 28, libelle: "Capteur de pression d'huile défaillant (fausse alerte)" },
+      { pourcentage: 22, libelle: "Pompe à huile usée" },
+      { pourcentage: 15, libelle: "Crépine d'aspiration d'huile colmatée" },
+    ],
+    avisPro:
+      "Arrêter le moteur dès que possible et vérifier le niveau d'huile avant toute chose — continuer à rouler avec une pression d'huile réellement basse peut détruire le moteur en quelques minutes.",
+    pieces: [
+      { nom: "Capteur de pression d'huile moteur", boutique: "Oscaro · livraison 48h", prix: "28€" },
+    ],
+  },
+  {
+    code: "F4E9",
+    titre: "Défaut éclairage diurne (DRL) droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — feux de croisement non affectés",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du feu de circulation diurne droit, sans affecter l'éclairage principal des feux de croisement.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du feu diurne défaillante (module non réparable individuellement sur certains modèles)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Sur les modèles à LED, le feu diurne fait souvent partie d'un bloc optique complet non réparable séparément — un diagnostic permet de confirmer avant de commander une pièce coûteuse.",
+    pieces: [
+      { nom: "Diagnostic feu diurne LED (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4DA",
+    titre: "Défaut bouton de neutralisation lève-vitres arrière — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sécurité enfants électrique affectée uniquement",
+    description:
+      "Le bouton qui permet au conducteur de désactiver les lève-vitres arrière (sécurité enfants électrique) envoie un signal incohérent au BSI.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de neutralisation défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 18, libelle: "Connecteur de la commande de portière corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que les lève-vitres arrière fonctionnent normalement malgré ce défaut — il s'agit généralement d'un problème isolé au bouton, sans impact sur la fonction elle-même.",
+    pieces: [
+      { nom: "Bloc commande lève-vitres", boutique: "Mister-Auto · sur commande", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F4DB",
+    titre: "Défaut commande impulsionnelle montée vitre arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle généralement préservée",
+    description:
+      "La fonction de montée automatique en une seule impulsion de la vitre arrière gauche ne répond plus, sans forcément affecter la commande manuelle classique (maintien du bouton).",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de lève-vitre fatigué (protection anti-pincement déclenchée)" },
+      { pourcentage: 28, libelle: "Bouton de commande défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Réinitialiser l'apprentissage de la vitre (vitre fermée, maintenir le bouton quelques secondes) résout souvent ce défaut sans intervention mécanique.",
+    pieces: [
+      { nom: "Diagnostic lève-vitre arrière gauche (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4DC",
+    titre: "Défaut commande impulsionnelle descente vitre arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle généralement préservée",
+    description:
+      "La fonction de descente automatique en une seule impulsion de la vitre arrière gauche ne répond plus, sans forcément affecter la commande manuelle classique (maintien du bouton).",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de lève-vitre fatigué (protection anti-pincement déclenchée)" },
+      { pourcentage: 28, libelle: "Bouton de commande défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Réinitialiser l'apprentissage de la vitre (vitre fermée, maintenir le bouton quelques secondes) résout souvent ce défaut sans intervention mécanique.",
+    pieces: [
+      { nom: "Diagnostic lève-vitre arrière gauche (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4EC",
+    titre: "Défaut déverrouillage des portes et du hayon — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — accès au véhicule potentiellement bloqué",
+    description:
+      "Le BSI ne parvient plus à commander correctement le déverrouillage centralisé des portes et du hayon, ce qui peut bloquer l'accès normal au véhicule par la commande centralisée.",
+    causes: [
+      { pourcentage: 35, libelle: "Moteur de serrure défaillant sur une ou plusieurs portes" },
+      { pourcentage: 28, libelle: "Câblage du circuit de verrouillage endommagé" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 15, libelle: "Batterie de la télécommande faible (si commande à distance concernée)" },
+    ],
+    avisPro:
+      "En cas de blocage total, l'ouverture manuelle à la clé reste généralement possible — vérifier la batterie de la télécommande avant tout diagnostic plus poussé.",
+    pieces: [
+      { nom: "Diagnostic centralisation portes (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4EE",
+    titre: "Défaut super-condamnation des portes avant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — verrouillage centralisé classique préservé",
+    description:
+      "La fonction de super-condamnation (verrouillage renforcé empêchant l'ouverture même de l'intérieur) ne fonctionne plus correctement sur les portes avant, sans affecter le verrouillage centralisé classique.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de serrure en super-condamnation défaillant" },
+      { pourcentage: 28, libelle: "Câblage dédié à cette fonction endommagé" },
+      { pourcentage: 20, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Configuration de la fonction désactivée par erreur" },
+    ],
+    avisPro:
+      "Le verrouillage centralisé classique continue généralement de fonctionner — seule la fonction de sécurité renforcée est concernée.",
+    pieces: [
+      { nom: "Diagnostic super-condamnation (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FF1B",
+    titre: "Blocage du système d'essuie-glace — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — visibilité et moteur d'essuie-glace en jeu",
+    description:
+      "Le moteur d'essuie-glace rencontre une résistance mécanique anormale lors de son fonctionnement, ce qui peut traduire un blocage du mécanisme ou une surcharge du moteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de tringlerie d'essuie-glace grippé ou faussé" },
+      { pourcentage: 28, libelle: "Balais d'essuie-glace collés au pare-brise (gel, givre non dégagé)" },
+      { pourcentage: 22, libelle: "Moteur d'essuie-glace défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ne jamais forcer sur des essuie-glaces gelés au pare-brise — dégivrer d'abord, un moteur qui force contre un blocage grille rapidement.",
+    pieces: [
+      { nom: "Diagnostic mécanisme essuie-glace (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FF1D",
+    titre: "Défaut moteur d'essuie-glace — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — visibilité fortement réduite par temps de pluie",
+    description:
+      "Le moteur qui entraîne les essuie-glaces avant présente une anomalie électrique ou mécanique, ce qui peut réduire fortement la visibilité par temps de pluie.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur d'essuie-glace défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du moteur endommagé" },
+      { pourcentage: 20, libelle: "Fusible ou relais associé grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une visibilité réduite par temps de pluie est un vrai risque de sécurité — à faire diagnostiquer rapidement, ne pas différer.",
+    pieces: [
+      { nom: "Moteur d'essuie-glace avant", boutique: "Mister-Auto · sur commande", prix: "80-130€" },
+    ],
+  },
+  {
+    code: "F4E3",
+    titre: "Défaut commande essuie-glace arrière — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — visibilité avant non affectée",
+    description:
+      "La commande de l'essuie-glace arrière (souvent intégrée à la commande combinée du volant) envoie un signal incohérent au BSI, sans affecter l'essuie-glace avant.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de commande essuie-glace défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 20, libelle: "Moteur d'essuie-glace arrière défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que l'essuie-glace arrière — la visibilité avant, prioritaire pour la sécurité, n'est pas affectée.",
+    pieces: [
+      { nom: "Diagnostic essuie-glace arrière (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
