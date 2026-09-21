@@ -2,6 +2,7 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import SearchBox from "@/components/SearchBox";
 import { codes, categories } from "@/data/codes";
+import { pannes } from "@/data/pannes";
 
 const sevColor = { faible: "bg-cyan", moderee: "bg-amber", elevee: "bg-[#E5484D]" };
 
@@ -53,6 +54,30 @@ export default function Home() {
               <div className="font-mono text-amber text-xs tracking-wide">{c.code}</div>
               <div className="font-display font-semibold text-base mt-1.5">{c.titre}</div>
               <div className="text-muted text-sm mt-1.5 leading-relaxed">{c.desc}</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <div className="flex justify-between items-baseline mb-5 gap-4 flex-wrap">
+          <h2 className="font-display font-semibold text-2xl">Pannes électroniques connues</h2>
+          <span className="font-mono text-xs text-muted">SANS CODE STANDARD</span>
+        </div>
+        <p className="text-muted text-sm max-w-xl mb-5 -mt-2 leading-relaxed">
+          BSI, UCH : ces calculateurs utilisent des codes défaut propriétaires. Voici des guides
+          par symptômes en attendant leur diagnostic complet.
+        </p>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-3.5">
+          {pannes.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/pannes/${p.slug}`}
+              className="bg-surface border border-line rounded-xl p-5 hover:border-amber hover:-translate-y-0.5 transition-all block"
+            >
+              <div className="font-mono text-amber text-xs tracking-wide">{p.boitier}</div>
+              <div className="font-display font-semibold text-base mt-1.5">{p.titre}</div>
+              <div className="text-muted text-sm mt-1.5">{p.marque}</div>
             </Link>
           ))}
         </div>

@@ -16,6 +16,9 @@ export default function Header() {
           <Link href="/codes/categorie/p03xx" className="text-muted text-sm font-medium hover:text-text transition-colors">
             Codes défaut
           </Link>
+          <Link href="/pannes" className="text-muted text-sm font-medium hover:text-text transition-colors">
+            Pannes connues
+          </Link>
           <Link href="/vehicule" className="text-muted text-sm font-medium hover:text-text transition-colors">
             Trouver une pièce
           </Link>
