@@ -5883,6 +5883,174 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic réseau calculateur airbag (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
     ],
   },
+  {
+    code: "P0741",
+    titre: "Convertisseur de couple — pontage bloqué en position ouverte",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surconsommation, boîte fonctionnelle",
+    description:
+      "Le système de pontage du convertisseur de couple, censé rigidifier la liaison moteur-boîte à vitesse stabilisée pour économiser du carburant, reste bloqué en position désengagée.",
+    causes: [
+      { pourcentage: 35, libelle: "Électrovanne de pontage du convertisseur défaillante" },
+      { pourcentage: 28, libelle: "Pression hydraulique insuffisante (niveau d'huile bas)" },
+      { pourcentage: 22, libelle: "Huile de boîte dégradée" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit surtout par une surconsommation et un régime moteur légèrement plus élevé sur autoroute — la boîte reste fonctionnelle.",
+    pieces: [
+      { nom: "Vidange boîte automatique + filtre", boutique: "Recommandé avant pièce", prix: "120-220€" },
+    ],
+  },
+  {
+    code: "P0743",
+    titre: "Circuit électrique du pontage du convertisseur — défaut",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — commande du pontage compromise",
+    description:
+      "Le calculateur détecte une anomalie électrique (court-circuit ou coupure) sur le circuit de commande de l'électrovanne de pontage du convertisseur de couple.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de pontage défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne du faisceau de boîte endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de boîte corrodé" },
+      { pourcentage: 14, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la résistance de l'électrovanne au multimètre permet de confirmer la panne avant d'envisager une intervention plus lourde sur la boîte.",
+    pieces: [
+      { nom: "Diagnostic électrovanne pontage convertisseur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0748",
+    titre: "Électrovanne de régulation de pression A — défaut électrique",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — engagement des rapports perturbé",
+    description:
+      "Le calculateur détecte une anomalie électrique sur l'électrovanne qui régule la pression hydraulique principale de la boîte, essentielle à l'engagement correct des rapports.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de régulation de pression défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne du faisceau de boîte endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de boîte corrodé" },
+      { pourcentage: 14, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer des à-coups marqués lors des changements de rapport — à traiter rapidement pour éviter une usure prématurée des embrayages internes.",
+    pieces: [
+      { nom: "Diagnostic électrovanne régulation pression (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0753",
+    titre: "Électrovanne de changement de rapport A — défaut électrique",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de mode dégradé bloqué sur un rapport",
+    description:
+      "Le calculateur détecte une anomalie électrique sur l'électrovanne qui commande le passage d'un rapport spécifique, ce qui peut bloquer la boîte sur un seul rapport par sécurité (mode dégradé).",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de changement de rapport défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne du faisceau de boîte endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de boîte corrodé" },
+      { pourcentage: 14, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Un mode dégradé bloquant la boîte sur un seul rapport est fréquent avec ce défaut — rouler prudemment jusqu'au diagnostic, la boîte reste utilisable mais limitée.",
+    pieces: [
+      { nom: "Diagnostic électrovanne changement rapport (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0776",
+    titre: "Électrovanne de régulation de pression B — plage/performance",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent résolu par une vidange",
+    description:
+      "L'électrovanne de régulation de pression B envoie une réponse hydraulique qui ne correspond pas exactement à la commande du calculateur, sans être en défaut électrique franc.",
+    causes: [
+      { pourcentage: 35, libelle: "Électrovanne partiellement encrassée" },
+      { pourcentage: 28, libelle: "Huile de boîte dégradée ou de mauvaise spécification" },
+      { pourcentage: 22, libelle: "Filtre à huile de boîte colmaté" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Une vidange complète avec un filtre neuf résout ce défaut dans la majorité des cas, sans remplacement d'électrovanne.",
+    pieces: [
+      { nom: "Vidange boîte automatique + filtre", boutique: "Recommandé avant pièce", prix: "120-220€" },
+    ],
+  },
+  {
+    code: "P0842",
+    titre: "Circuit contacteur de pression de boîte A — signal faible",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — stratégie de contrôle perturbée",
+    description:
+      "Le contacteur qui surveille la pression hydraulique dans un circuit spécifique de la boîte envoie un signal anormalement faible, perturbant la stratégie de contrôle du calculateur.",
+    causes: [
+      { pourcentage: 35, libelle: "Contacteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Pression hydraulique réellement insuffisante (niveau d'huile bas)" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier le niveau d'huile de boîte avant de remplacer le contacteur — une pression réellement basse donne le même symptôme qu'un contacteur défaillant.",
+    pieces: [
+      { nom: "Diagnostic contacteur pression boîte (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0894",
+    titre: "Patinage d'un composant de la boîte de vitesses",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — usure interne à traiter rapidement",
+    description:
+      "Le calculateur détecte qu'un embrayage ou un frein interne de la boîte patine au lieu de transmettre le couple correctement, ce qui provoque une hausse anormale du régime moteur sans accélération correspondante.",
+    causes: [
+      { pourcentage: 38, libelle: "Embrayage ou frein interne usé" },
+      { pourcentage: 28, libelle: "Niveau d'huile de boîte insuffisant" },
+      { pourcentage: 22, libelle: "Pression hydraulique insuffisante (pompe à huile usée)" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est un signe d'usure interne à prendre au sérieux — poursuivre la conduite dans cet état accélère l'usure et peut mener à une panne complète de la boîte.",
+    pieces: [
+      { nom: "Diagnostic complet boîte automatique (atelier)", boutique: "Recommandé avant pièce", prix: "80-120€" },
+    ],
+  },
+  {
+    code: "P0218",
+    titre: "Température d'huile de boîte trop élevée (surchauffe)",
+    categorie: "p07xx",
+    categorieLabel: "Transmission",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — arrêt et refroidissement recommandés",
+    description:
+      "Le calculateur détecte que la température de l'huile de la boîte de vitesses dépasse le seuil de sécurité, ce qui peut endommager les composants internes si la situation persiste.",
+    causes: [
+      { pourcentage: 35, libelle: "Remorquage ou conduite en charge prolongée (montagne, caravane)" },
+      { pourcentage: 28, libelle: "Niveau d'huile de boîte insuffisant" },
+      { pourcentage: 22, libelle: "Échangeur/radiateur de boîte partiellement obstrué" },
+      { pourcentage: 15, libelle: "Ventilateur de refroidissement défaillant" },
+    ],
+    avisPro:
+      "En cas de surchauffe, s'arrêter et laisser refroidir avant de continuer — poursuivre la conduite dans cet état peut endommager irrémédiablement les embrayages internes de la boîte.",
+    pieces: [
+      { nom: "Vidange boîte automatique + filtre", boutique: "Recommandé avant pièce", prix: "120-220€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
