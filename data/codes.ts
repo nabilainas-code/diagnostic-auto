@@ -2537,6 +2537,232 @@ export const codes: CodeDefaut[] = [
       { nom: "Programmation VIN calculateur (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
     ],
   },
+  {
+    code: "B1400",
+    titre: "Défaut capteur de température évaporateur — climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation moins efficace, pas de risque",
+    description:
+      "Le capteur de température de l'évaporateur (qui protège contre le givrage et régule la climatisation) envoie un signal incohérent au calculateur dédié de climatisation.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur de température évaporateur défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du capteur endommagé" },
+      { pourcentage: 25, libelle: "Évaporateur givré (manque de fluide réfrigérant)" },
+    ],
+    avisPro:
+      "Vérifier le niveau de fluide réfrigérant avant de remplacer le capteur — un évaporateur givré par manque de gaz peut fausser la lecture.",
+    pieces: [
+      { nom: "Capteur température évaporateur", boutique: "Oscaro · livraison 48h", prix: "28€" },
+    ],
+  },
+  {
+    code: "B1404",
+    titre: "Défaut moteur de distribution d'air — climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — air mal redirigé, pas de risque",
+    description:
+      "Le moteur qui commande les volets de distribution d'air (aérateurs, pare-brise, pieds) ne répond plus correctement — l'air continue d'être soufflé mais pas forcément à l'endroit sélectionné.",
+    causes: [
+      { pourcentage: 45, libelle: "Moteur de distribution défaillant" },
+      { pourcentage: 30, libelle: "Volet de distribution mécaniquement bloqué" },
+      { pourcentage: 25, libelle: "Câblage du moteur endommagé" },
+    ],
+    avisPro:
+      "Écouter un bruit de cliquetis répété derrière la planche de bord — c'est souvent le signe d'un volet bloqué que le moteur essaie inutilement d'actionner.",
+    pieces: [
+      { nom: "Moteur de distribution d'air", boutique: "Mister-Auto · sur commande", prix: "46€" },
+    ],
+  },
+  {
+    code: "B1405",
+    titre: "Défaut moteur de mixage avant gauche — climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température mal réglée côté conducteur",
+    description:
+      "Sur les climatisations bi-zone, ce moteur ajuste le volet de mélange air chaud/froid côté conducteur. Un défaut empêche le réglage précis de la température de ce côté.",
+    causes: [
+      { pourcentage: 45, libelle: "Moteur de mixage défaillant" },
+      { pourcentage: 30, libelle: "Volet de mixage bloqué mécaniquement" },
+      { pourcentage: 25, libelle: "Câblage du moteur endommagé" },
+    ],
+    avisPro:
+      "Souvent accessible en démontant la boîte à gants ou la planche de bord basse côté conducteur — vérifier le volet avant de remplacer le moteur.",
+    pieces: [
+      { nom: "Moteur de mixage air", boutique: "Mister-Auto · sur commande", prix: "42€" },
+    ],
+  },
+  {
+    code: "B1406",
+    titre: "Défaut moteur de mixage avant droit — climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température mal réglée côté passager",
+    description:
+      "Identique à B1405 mais côté passager avant : le moteur qui ajuste le volet de mélange air chaud/froid ne répond plus correctement.",
+    causes: [
+      { pourcentage: 45, libelle: "Moteur de mixage défaillant" },
+      { pourcentage: 30, libelle: "Volet de mixage bloqué mécaniquement" },
+      { pourcentage: 25, libelle: "Câblage du moteur endommagé" },
+    ],
+    avisPro:
+      "Accessible en démontant la boîte à gants côté passager — vérifier le volet avant de remplacer le moteur.",
+    pieces: [
+      { nom: "Moteur de mixage air", boutique: "Mister-Auto · sur commande", prix: "42€" },
+    ],
+  },
+  {
+    code: "B1407",
+    titre: "Défaut pressostat — circuit de climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque d'endommager le compresseur",
+    description:
+      "Le pressostat surveille la pression du circuit de fluide réfrigérant et coupe le compresseur en cas de pression anormale (trop haute ou trop basse) pour le protéger. Un défaut peut empêcher la climatisation de s'enclencher, ou pire, laisser le compresseur fonctionner en conditions dangereuses.",
+    causes: [
+      { pourcentage: 40, libelle: "Manque de fluide réfrigérant (fuite du circuit)" },
+      { pourcentage: 28, libelle: "Pressostat défaillant" },
+      { pourcentage: 20, libelle: "Condenseur encrassé ou ventilateur de refroidissement défaillant" },
+      { pourcentage: 12, libelle: "Câblage du pressostat endommagé" },
+    ],
+    avisPro:
+      "Ne pas forcer le fonctionnement de la climatisation si ce code est présent — faire contrôler l'étanchéité du circuit avant toute recharge de gaz, sous peine d'endommager le compresseur.",
+    pieces: [
+      { nom: "Pressostat climatisation", boutique: "Oscaro · livraison 48h", prix: "24€" },
+      { nom: "Recharge fluide réfrigérant (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B14A0",
+    titre: "Défaut de surtension — calculateur climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent lié à l'alternateur",
+    description:
+      "Le calculateur de climatisation détecte une tension d'alimentation trop élevée — généralement un problème électrique global du véhicule plutôt qu'un défaut propre au calculateur.",
+    causes: [
+      { pourcentage: 45, libelle: "Alternateur qui surcharge (régulateur défaillant)" },
+      { pourcentage: 30, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 25, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Faire contrôler la tension de charge de l'alternateur — une surtension généralisée peut affecter plusieurs calculateurs, pas seulement la climatisation.",
+    pieces: [
+      { nom: "Alternateur", boutique: "Mister-Auto · sur commande", prix: "215€" },
+    ],
+  },
+  {
+    code: "B14A1",
+    titre: "Défaut de sous-tension — calculateur climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent lié à la batterie",
+    description:
+      "Le calculateur de climatisation détecte une tension d'alimentation trop basse — généralement lié à une batterie faible plutôt qu'à un défaut propre au calculateur.",
+    causes: [
+      { pourcentage: 45, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 30, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 25, libelle: "Alternateur qui charge insuffisamment" },
+    ],
+    avisPro:
+      "Tester la batterie et la charge de l'alternateur avant tout diagnostic sur le calculateur de climatisation lui-même.",
+    pieces: [
+      { nom: "Batterie 12V", boutique: "Oscaro · livraison 48h", prix: "89€" },
+    ],
+  },
+  {
+    code: "U1201",
+    titre: "Pas de communication avec le BSI — depuis le calculateur climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation ne reçoit plus de commandes",
+    description:
+      "Le calculateur dédié à la climatisation ne reçoit plus d'informations du BSI, ce qui peut désactiver certaines fonctions automatiques de la climatisation.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN entre BSI et calculateur climatisation endommagé" },
+      { pourcentage: 28, libelle: "Fusible ou alimentation du calculateur climatisation défaillant" },
+      { pourcentage: 22, libelle: "Connecteur corrodé" },
+      { pourcentage: 15, libelle: "BSI ou calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié à la climatisation avant tout diagnostic réseau plus poussé.",
+    pieces: [
+      { nom: "Fusible calculateur climatisation", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+    ],
+  },
+  {
+    code: "U1204",
+    titre: "Pas de réponse du boîtier de jonction — depuis le calculateur climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau perturbée",
+    description:
+      "Le boîtier de jonction (passerelle entre différents réseaux CAN du véhicule) ne répond pas aux sollicitations du calculateur de climatisation.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN endommagé" },
+      { pourcentage: 28, libelle: "Fusible ou alimentation du boîtier de jonction défaillant" },
+      { pourcentage: 22, libelle: "Connecteur corrodé" },
+      { pourcentage: 15, libelle: "Boîtier de jonction défaillant" },
+    ],
+    avisPro:
+      "Ce défaut apparaît souvent en cascade avec d'autres codes réseau — traiter en priorité les autres défauts de communication détectés en même temps.",
+    pieces: [
+      { nom: "Connecteur boîtier de jonction", boutique: "Oscaro · livraison 48h", prix: "22€" },
+    ],
+  },
+  {
+    code: "C1121",
+    titre: "Défaut relais d'alimentation des électrovannes — ASR80",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ASR désactivés",
+    description:
+      "Spécifique aux anciens systèmes ASR80, ce relais alimente l'ensemble des électrovannes du bloc hydraulique ABS/ASR. Un défaut coupe l'alimentation de toutes les électrovannes simultanément.",
+    causes: [
+      { pourcentage: 40, libelle: "Relais d'alimentation défaillant" },
+      { pourcentage: 28, libelle: "Fusible associé grillé" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ASR défaillant" },
+    ],
+    avisPro:
+      "Le relais est une pièce peu coûteuse à tester et remplacer en premier avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Relais électrovannes ABS/ASR", boutique: "AutoDoc · livraison 24h", prix: "16€" },
+    ],
+  },
+  {
+    code: "C1250",
+    titre: "Défaut information vitesse véhicule — ASR80",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ASR ne peuvent plus fonctionner correctement",
+    description:
+      "Le calculateur ABS/ASR ne parvient plus à calculer une vitesse véhicule fiable à partir des capteurs de roue, ce qui l'empêche de réguler correctement la motricité et le freinage assisté.",
+    causes: [
+      { pourcentage: 35, libelle: "Un ou plusieurs capteurs de vitesse de roue défaillants" },
+      { pourcentage: 25, libelle: "Incohérence entre les 4 capteurs (pneus de tailles différentes)" },
+      { pourcentage: 25, libelle: "Câblage endommagé" },
+      { pourcentage: 15, libelle: "Calculateur ABS/ASR défaillant" },
+    ],
+    avisPro:
+      "Vérifier que les 4 pneus sont de dimensions identiques et correctement gonflés — un écart de diamètre entre pneus peut déclencher ce défaut.",
+    pieces: [
+      { nom: "Capteur de vitesse de roue", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
