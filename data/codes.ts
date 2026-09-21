@@ -1492,6 +1492,296 @@ export const codes: CodeDefaut[] = [
       { nom: "Contacteur kick-down", boutique: "Mister-Auto · sur commande", prix: "44€" },
     ],
   },
+  {
+    code: "F701",
+    titre: "Défaut capteur de température d'air habitacle",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation moins précise, pas de risque",
+    description:
+      "Le capteur qui mesure la température de l'air dans l'habitacle envoie un signal incohérent, ce qui perturbe la régulation automatique de la climatisation sans l'empêcher totalement de fonctionner.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur de température habitacle défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du capteur endommagé" },
+      { pourcentage: 15, libelle: "Prise d'air du capteur obstruée (poussière)" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier que la prise d'air du capteur (souvent près de l'autoradio ou du pavillon) n'est pas obstruée avant de le remplacer.",
+    pieces: [
+      { nom: "Capteur température habitacle", boutique: "Oscaro · livraison 48h", prix: "22€" },
+    ],
+  },
+  {
+    code: "F70A",
+    titre: "Défaut capteur de soufflage d'air côté conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation automatique moins précise",
+    description:
+      "Sur les véhicules à climatisation bi-zone, ce capteur mesure la température de l'air soufflé côté conducteur pour ajuster automatiquement le mélange chaud/froid.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur de soufflage défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 25, libelle: "Volet de mélange d'air bloqué mécaniquement" },
+    ],
+    avisPro:
+      "Vérifier que les volets de mélange d'air bougent librement (souvent accessibles en démontant la boîte à gants) avant de remplacer le capteur.",
+    pieces: [
+      { nom: "Capteur de soufflage d'air", boutique: "AutoDoc · livraison 24h", prix: "26€" },
+    ],
+  },
+  {
+    code: "F4A5",
+    titre: "Défaut d'éclairage du clignotant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité routière, contrôle technique",
+    description:
+      "Le BSI détecte une anomalie électrique sur le circuit du clignotant avant ou arrière droit — le plus souvent une ampoule grillée, ce qui fait clignoter le témoin plus vite que la normale au tableau de bord.",
+    causes: [
+      { pourcentage: 55, libelle: "Ampoule de clignotant grillée" },
+      { pourcentage: 25, libelle: "Douille ou connecteur oxydé" },
+      { pourcentage: 15, libelle: "Câblage endommagé" },
+      { pourcentage: 5, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier toutes les ampoules du côté concerné (avant et arrière, parfois répétiteur latéral) avant de suspecter le câblage — c'est presque toujours une ampoule.",
+    pieces: [
+      { nom: "Ampoule clignotant", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4EA",
+    titre: "Défaut d'éclairage du feu de jour gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — feux de croisement non affectés",
+    description:
+      "Le feu de jour (DRL) avant gauche ne s'allume plus correctement. Sur la plupart des véhicules, ceci n'affecte pas l'éclairage nocturne (feux de croisement), qui reste sur un circuit séparé.",
+    causes: [
+      { pourcentage: 40, libelle: "Module LED de feu de jour défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du bloc optique endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié en premier — sur beaucoup de modèles les feux de jour ont leur propre fusible séparé des feux de croisement.",
+    pieces: [
+      { nom: "Module LED feu de jour", boutique: "Mister-Auto · sur commande", prix: "68€" },
+    ],
+  },
+  {
+    code: "F9C7",
+    titre: "Défaut de réglage électrique du rétroviseur conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le moteur de réglage horizontal ou vertical du rétroviseur électrique côté conducteur ne répond plus aux commandes.",
+    causes: [
+      { pourcentage: 45, libelle: "Moteur de réglage du rétroviseur défaillant" },
+      { pourcentage: 30, libelle: "Câblage dans la porte endommagé (zone de flexion)" },
+      { pourcentage: 15, libelle: "Commande de réglage au tableau de bord défaillante" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le câblage dans la gaine de porte avant de remplacer le rétroviseur complet — c'est une pièce coûteuse souvent changée à tort.",
+    pieces: [
+      { nom: "Moteur de réglage rétroviseur", boutique: "Oscaro · livraison 48h", prix: "34€" },
+    ],
+  },
+  {
+    code: "F030",
+    titre: "Pas de communication avec le calculateur de toit ouvrant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit ouvrant hors service, pas de risque",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur dédié au toit ouvrant électrique, qui reste alors bloqué dans sa position actuelle.",
+    causes: [
+      { pourcentage: 35, libelle: "Fusible du toit ouvrant grillé" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du calculateur toit ouvrant endommagé" },
+      { pourcentage: 20, libelle: "Calculateur de toit ouvrant défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié en premier — accessible et peu coûteux à contrôler avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Fusible toit ouvrant", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+    ],
+  },
+  {
+    code: "F888",
+    titre: "Défaut de position du toit ouvrant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit ouvrant potentiellement bloqué",
+    description:
+      "Le capteur de position du toit ouvrant envoie une information incohérente, empêchant le calculateur de savoir si le toit est ouvert, fermé ou entrouvert.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur de position défaillant" },
+      { pourcentage: 30, libelle: "Mécanisme du toit ouvrant grippé ou déréglé" },
+      { pourcentage: 25, libelle: "Câblage du capteur endommagé" },
+    ],
+    avisPro:
+      "Un réapprentissage de la position du toit (souvent via une procédure simple à la commande) résout parfois le défaut sans remplacer de pièce.",
+    pieces: [
+      { nom: "Capteur de position toit ouvrant", boutique: "Mister-Auto · sur commande", prix: "52€" },
+    ],
+  },
+  {
+    code: "F363",
+    titre: "Défaut du témoin airbag",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — à faire vérifier rapidement",
+    description:
+      "Le témoin lumineux airbag au tableau de bord présente un défaut de circuit. Important : ce témoin sert aussi à signaler de vrais défauts du système airbag — un témoin qui reste éteint alors qu'il devrait s'allumer masquerait un problème réel.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED du témoin défaillante" },
+      { pourcentage: 30, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 20, libelle: "Calculateur airbag qui ne communique plus l'état au BSI" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Ne pas se contenter de vérifier l'ampoule : faire lire les défauts du calculateur airbag lui-même pour écarter un vrai problème de sécurité sous-jacent.",
+    pieces: [
+      { nom: "Diagnostic calculateur airbag (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "FCC0",
+    titre: "Défaut contacteur ceinture conducteur non bouclée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte sonore/visuelle affectée uniquement",
+    description:
+      "Le contacteur qui détecte si la ceinture conducteur est bouclée envoie un signal incohérent. La ceinture elle-même reste pleinement fonctionnelle, seule l'alerte de rappel est concernée.",
+    causes: [
+      { pourcentage: 50, libelle: "Contacteur de boucle de ceinture défaillant" },
+      { pourcentage: 30, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de boucle de ceinture oxydé" },
+    ],
+    avisPro:
+      "Le contacteur se situe dans la boucle de ceinture elle-même — un remplacement de la boucle complète est généralement nécessaire, pas juste le contacteur seul.",
+    pieces: [
+      { nom: "Boucle de ceinture conducteur", boutique: "Mister-Auto · sur commande", prix: "78€" },
+    ],
+  },
+  {
+    code: "F17D",
+    titre: "Défaut d'information niveau de carburant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — jauge peu fiable, pas de risque mécanique",
+    description:
+      "Le signal transmis par la jauge de carburant est incohérent, ce qui peut faire afficher un niveau erroné ou instable sur le tableau de bord.",
+    causes: [
+      { pourcentage: 50, libelle: "Jauge à flotteur défaillante dans le réservoir" },
+      { pourcentage: 30, libelle: "Câblage entre le réservoir et le BSI endommagé" },
+      { pourcentage: 20, libelle: "Connecteur au niveau du réservoir oxydé" },
+    ],
+    avisPro:
+      "Ne pas se fier à l'autonomie affichée tant que le défaut n'est pas corrigé — faire le plein à intervalles réguliers en attendant le remplacement de la jauge.",
+    pieces: [
+      { nom: "Jauge à flotteur carburant", boutique: "Mister-Auto · sur commande", prix: "64€" },
+    ],
+  },
+  {
+    code: "F408",
+    titre: "Trappe à carburant non détectée fermée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — vérifier simplement la fermeture",
+    description:
+      "Le capteur de la trappe à carburant indique qu'elle n'est pas correctement fermée. Souvent un simple oubli après un plein, parfois un défaut du capteur lui-même.",
+    causes: [
+      { pourcentage: 55, libelle: "Trappe mal refermée ou bouchon mal vissé" },
+      { pourcentage: 25, libelle: "Capteur de trappe défaillant" },
+      { pourcentage: 20, libelle: "Câblage du capteur endommagé" },
+    ],
+    avisPro:
+      "Vérifier d'abord que la trappe est bien fermée et le bouchon correctement vissé (jusqu'au clic) avant tout diagnostic électrique.",
+    pieces: [
+      { nom: "Capteur de trappe à carburant", boutique: "AutoDoc · livraison 24h", prix: "18€" },
+    ],
+  },
+  {
+    code: "FC93",
+    titre: "Défaut de commande de l'avertisseur sonore (klaxon)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort et signalisation affectés",
+    description:
+      "Le circuit de commande de l'avertisseur sonore présente une anomalie, empêchant son déclenchement normal depuis le volant.",
+    causes: [
+      { pourcentage: 35, libelle: "Contacteur de klaxon au volant défaillant" },
+      { pourcentage: 25, libelle: "Relais de klaxon défaillant" },
+      { pourcentage: 25, libelle: "Câblage de la colonne de direction endommagé" },
+      { pourcentage: 15, libelle: "Klaxon lui-même défaillant" },
+    ],
+    avisPro:
+      "Tester le relais de klaxon en premier — pièce peu coûteuse et fréquemment en cause avant de suspecter le contacteur au volant.",
+    pieces: [
+      { nom: "Relais klaxon", boutique: "AutoDoc · livraison 24h", prix: "8€" },
+      { nom: "Avertisseur sonore (klaxon)", boutique: "Oscaro · livraison 48h", prix: "16€" },
+    ],
+  },
+  {
+    code: "F00B",
+    titre: "Défaut réseau CAN confort",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs fonctions de confort peuvent être affectées",
+    description:
+      "Le réseau CAN dédié aux fonctions de confort (vitres, climatisation, rétroviseurs...) présente une anomalie générale de communication, distincte du réseau moteur ou châssis.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN confort endommagé" },
+      { pourcentage: 25, libelle: "Un module connecté au réseau confort en court-circuit" },
+      { pourcentage: 25, libelle: "Connecteur BSI corrodé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Débrancher un par un les modules récemment intervenus (vitres, rétroviseurs) peut aider à isoler lequel perturbe le réseau avant un diagnostic complet.",
+    pieces: [
+      { nom: "Connecteur BSI", boutique: "Mister-Auto · sur commande", prix: "38€" },
+    ],
+  },
+  {
+    code: "P1732",
+    titre: "Défaut capteur position sélecteur — butée basse — boîte AM6",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — logique de passage des rapports affectée",
+    description:
+      "Spécifique à la boîte automatique AM6 (Peugeot/Citroën), ce capteur intégré au calculateur de boîte détecte la position du sélecteur de vitesses. Un défaut à la butée basse peut fausser la reconnaissance du rapport engagé.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de position sélecteur défaillant" },
+      { pourcentage: 28, libelle: "Réglage mécanique du sélecteur incorrect" },
+      { pourcentage: 20, libelle: "Câblage interne au calculateur de boîte endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de boîte AM6 défaillant" },
+    ],
+    avisPro:
+      "Faire vérifier le réglage mécanique de la tringlerie de sélection avant d'envisager un remplacement du calculateur de boîte, qui est une pièce coûteuse.",
+    pieces: [
+      { nom: "Calculateur boîte AM6 (reconditionné)", boutique: "Mister-Auto · sur commande", prix: "290€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
