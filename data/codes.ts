@@ -6219,6 +6219,447 @@ export const codes: CodeDefaut[] = [
       { nom: "Bougies de préchauffage (jeu)", boutique: "Oscaro · livraison 48h", prix: "45€" },
     ],
   },
+  {
+    code: "B1304",
+    titre: "Défaut capteur de température évaporateur — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — efficacité du froid réduite",
+    description:
+      "Le capteur qui mesure la température de l'évaporateur, utilisé pour éviter le givrage du circuit de climatisation, envoie un signal incohérent ou absent au calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température évaporateur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Sans cette information, le système peut couper le compresseur par sécurité pour éviter le gel de l'évaporateur, réduisant l'efficacité du froid.",
+    pieces: [
+      { nom: "Capteur température évaporateur", boutique: "Oscaro · livraison 48h", prix: "32€" },
+    ],
+  },
+  {
+    code: "B130C",
+    titre: "Défaut capteur d'ensoleillement gauche — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le capteur d'ensoleillement côté gauche, qui permet à la climatisation automatique d'adapter la ventilation selon l'intensité du soleil reçu par ce côté de l'habitacle, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'ensoleillement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur (souvent logé sur la planche de bord) endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que le confort — la climatisation continue de fonctionner mais sans ajuster automatiquement la ventilation selon le soleil de ce côté.",
+    pieces: [
+      { nom: "Capteur d'ensoleillement", boutique: "Oscaro · livraison 48h", prix: "38€" },
+    ],
+  },
+  {
+    code: "B130D",
+    titre: "Défaut moteur du volet de recyclage d'air — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recyclage d'air non maîtrisé",
+    description:
+      "Le petit moteur électrique qui actionne le volet de recyclage (air extérieur / air recyclé) ne répond plus correctement aux commandes du calculateur de climatisation.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur du volet défaillant" },
+      { pourcentage: 28, libelle: "Volet mécaniquement grippé (poussière, corps étranger)" },
+      { pourcentage: 20, libelle: "Câblage du moteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au niveau du tableau de bord accompagne souvent ce défaut avant qu'il ne soit détecté — le moteur essaie en vain d'actionner un volet grippé.",
+    pieces: [
+      { nom: "Moteur volet recyclage d'air", boutique: "Mister-Auto · sur commande", prix: "55-90€" },
+    ],
+  },
+  {
+    code: "B130E",
+    titre: "Défaut moteur du volet de mixage gauche — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — température côté gauche mal régulée",
+    description:
+      "Le moteur qui actionne le volet de mixage côté gauche, réglant la proportion d'air chaud/froid envoyée dans l'habitacle de ce côté, ne répond plus correctement.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur du volet de mixage défaillant" },
+      { pourcentage: 28, libelle: "Volet mécaniquement grippé" },
+      { pourcentage: 20, libelle: "Câblage du moteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Une température qui ne correspond plus au réglage demandé côté gauche de l'habitacle est le symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Moteur volet de mixage", boutique: "Mister-Auto · sur commande", prix: "55-90€" },
+    ],
+  },
+  {
+    code: "B1315",
+    titre: "Défaut moteur du volet de distribution gauche — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — air bloqué sur une seule sortie",
+    description:
+      "Le moteur qui actionne le volet de distribution côté gauche (aération visage, pieds, pare-brise) ne répond plus correctement aux commandes du calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur du volet de distribution défaillant" },
+      { pourcentage: 28, libelle: "Volet mécaniquement grippé" },
+      { pourcentage: 20, libelle: "Câblage du moteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "L'air qui sort toujours par la même sortie quel que soit le réglage choisi est le symptôme typique — le volet reste bloqué sur une position.",
+    pieces: [
+      { nom: "Moteur volet de distribution", boutique: "Mister-Auto · sur commande", prix: "55-90€" },
+    ],
+  },
+  {
+    code: "B133F",
+    titre: "Défaut de la commande de climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — réglages du conducteur non transmis",
+    description:
+      "L'unité de commande de la climatisation (façade de réglage au tableau de bord) présente une anomalie, l'empêchant de transmettre correctement les réglages choisis par le conducteur au calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Commande de climatisation (façade) défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la commande corrodé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Des boutons qui ne répondent plus ou un écran de climatisation figé accompagnent souvent ce défaut — à distinguer d'un simple bug logiciel qui se résout par un redémarrage du contact.",
+    pieces: [
+      { nom: "Diagnostic commande climatisation (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "B131B",
+    titre: "Défaut signal de commande du pulseur d'air — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ventilation bloquée ou coupée",
+    description:
+      "Le signal qui commande la vitesse du pulseur d'air (ventilateur intérieur) est incohérent ou absent, ce qui peut bloquer la ventilation à une vitesse fixe ou la couper totalement.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance ou module de puissance du pulseur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du pulseur endommagé" },
+      { pourcentage: 20, libelle: "Moteur du pulseur défaillant" },
+      { pourcentage: 14, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Si la ventilation ne fonctionne qu'à la vitesse maximale, le module de puissance (souvent appelé « résistance pulseur ») est la première pièce à contrôler.",
+    pieces: [
+      { nom: "Module de puissance pulseur d'air", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
+  {
+    code: "B1344",
+    titre: "Défaut capteur de température habitacle — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température moins précise",
+    description:
+      "Le capteur qui mesure la température de l'air dans l'habitacle, utilisé par la climatisation automatique pour atteindre la température de consigne, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température habitacle défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Une climatisation qui ne parvient plus à stabiliser la température malgré un réglage automatique correct est le symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Capteur de température habitacle", boutique: "Oscaro · livraison 48h", prix: "28€" },
+    ],
+  },
+  {
+    code: "U11DB",
+    titre: "Absence de communication avec le calculateur moteur — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — optimisation du confort perturbée",
+    description:
+      "Le calculateur de climatisation ne reçoit plus les informations transmises par le calculateur moteur (température moteur, régime), nécessaires pour optimiser le fonctionnement du compresseur et du chauffage.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur climatisation oxydé" },
+      { pourcentage: 22, libelle: "Calculateur moteur en défaut propre" },
+      { pourcentage: 15, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier si le calculateur moteur affiche lui-même un défaut au même moment — ce code est souvent la conséquence d'un problème réseau plus large.",
+    pieces: [
+      { nom: "Diagnostic réseau climatisation/moteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U11DA",
+    titre: "Absence de communication avec le combiné d'instruments — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage seulement",
+    description:
+      "Le calculateur de climatisation ne reçoit plus les informations transmises par le combiné d'instruments, ce qui peut affecter l'affichage de la température ou certains réglages liés au véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur climatisation oxydé" },
+      { pourcentage: 22, libelle: "Combiné d'instruments en défaut propre" },
+      { pourcentage: 15, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte surtout l'affichage — la climatisation continue généralement de fonctionner normalement.",
+    pieces: [
+      { nom: "Diagnostic réseau climatisation/combiné (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U11DC",
+    titre: "Absence de communication avec le calculateur airbag — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction de sécurité secondaire seulement",
+    description:
+      "Le calculateur de climatisation ne reçoit plus les informations transmises par le calculateur airbag, une donnée utilisée notamment pour couper certaines fonctions en cas de choc détecté.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur climatisation oxydé" },
+      { pourcentage: 22, libelle: "Calculateur airbag en défaut propre" },
+      { pourcentage: 15, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte pas le fonctionnement quotidien de la climatisation — il concerne une fonction de sécurité secondaire en cas de choc.",
+    pieces: [
+      { nom: "Diagnostic réseau climatisation/airbag (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P17AA",
+    titre: "Défaut moteur de réduction de traînée en mode D — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction confort/économie de carburant",
+    description:
+      "La fonction de réduction de traînée, qui limite l'entraînement du moteur au ralenti en position D pour économiser du carburant, présente un défaut sur son actionneur — une fonction de confort sans impact sur la sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur de réduction de traînée défaillant" },
+      { pourcentage: 28, libelle: "Calibration logicielle de la fonction perturbée" },
+      { pourcentage: 20, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Cette fonction est purement liée à l'économie de carburant — son désactivation temporaire n'empêche pas de rouler normalement.",
+    pieces: [
+      { nom: "Diagnostic fonction réduction de traînée (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P17A3",
+    titre: "Défaut réduction de traînée en marche arrière — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "faible",
+    severiteLabel: "Gravité faible — marche arrière non affectée",
+    description:
+      "La fonction de réduction de traînée en position marche arrière, qui limite l'entraînement du moteur au ralenti pour économiser du carburant en manœuvre, présente un défaut.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur ou embrayage dédié défaillant" },
+      { pourcentage: 28, libelle: "Calibration logicielle perturbée" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Cette fonction de confort n'affecte pas la capacité de la boîte à passer en marche arrière normalement.",
+    pieces: [
+      { nom: "Diagnostic fonction réduction de traînée (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P17A0",
+    titre: "Défaut circuit de verrouillage clé (key lock) — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — clé pouvant rester bloquée ou libre anormalement",
+    description:
+      "Le circuit qui empêche de retirer la clé de contact tant que le levier n'est pas positionné sur P (verrouillage clé) présente une anomalie, ce qui peut bloquer ou libérer la clé de façon anormale.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur de verrouillage clé défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 20, libelle: "Contacteur de position du levier en cause" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Si la clé reste bloquée, ne pas forcer — vérifier que le levier est bien en position P avant tout, un mauvais contact de position peut simuler ce blocage.",
+    pieces: [
+      { nom: "Diagnostic verrouillage clé (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P17A9",
+    titre: "Défaut fonction de réduction de traînée en mode D (variante) — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction confort/économie de carburant",
+    description:
+      "Une seconde variante du défaut de réduction de traînée en position D est détectée, généralement liée à un problème de synchronisation entre l'embrayage et le calculateur lors de l'activation de la fonction.",
+    causes: [
+      { pourcentage: 38, libelle: "Embrayage C1 de réduction de traînée usé" },
+      { pourcentage: 28, libelle: "Pression hydraulique insuffisante lors de l'activation" },
+      { pourcentage: 22, libelle: "Calibration logicielle perturbée" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres défauts de cette fonction, aucun impact sur la sécurité — seule l'économie de carburant en ralenti est concernée.",
+    pieces: [
+      { nom: "Diagnostic fonction réduction de traînée (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P160A",
+    titre: "Défaut d'identification du calculateur — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — nécessite une configuration, pas une pièce",
+    description:
+      "Le calculateur de boîte ne parvient pas à s'identifier correctement sur le réseau du véhicule, généralement après un remplacement de calculateur non recodé pour ce véhicule précis.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur remplacé sans recodage/configuration pour ce véhicule" },
+      { pourcentage: 25, libelle: "Calculateur d'occasion non compatible" },
+      { pourcentage: 15, libelle: "Défaut réseau perturbant l'identification" },
+      { pourcentage: 10, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut nécessite une configuration à la valise constructeur plutôt qu'une pièce — s'assurer que tout calculateur de remplacement est bien codé pour le véhicule avant de le monter.",
+    pieces: [
+      { nom: "Configuration calculateur boîte (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P160E",
+    titre: "Coupure d'alimentation pendant le maintien sous tension — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sauvegarde interne possiblement incomplète",
+    description:
+      "Le calculateur de boîte détecte une coupure d'alimentation pendant sa phase de maintien sous tension après la coupure du contact (nécessaire pour terminer certaines opérations internes), ce qui peut empêcher la sauvegarde correcte de ses données.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage d'alimentation permanente de la boîte endommagé" },
+      { pourcentage: 28, libelle: "Batterie faible ou déconnectée trop rapidement après extinction" },
+      { pourcentage: 22, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Éviter de débrancher la batterie juste après avoir coupé le contact — laisser quelques secondes au calculateur pour terminer sa phase de mise en veille.",
+    pieces: [
+      { nom: "Diagnostic alimentation calculateur boîte (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0882",
+    titre: "Défaut tension d'alimentation de la boîte",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — régulations et engagement des rapports affectés",
+    description:
+      "Le calculateur de boîte détecte une tension d'alimentation générale hors plage de fonctionnement normale, ce qui peut affecter la précision de ses régulations et le bon engagement des rapports.",
+    causes: [
+      { pourcentage: 35, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur déréglé ou défaillant" },
+      { pourcentage: 22, libelle: "Câblage de masse ou d'alimentation endommagé" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Contrôler la tension batterie moteur tournant avant tout autre diagnostic — une simple batterie fatiguée est la cause la plus fréquente.",
+    pieces: [
+      { nom: "Batterie de démarrage", boutique: "Oscaro · livraison 48h", prix: "90-140€" },
+    ],
+  },
+  {
+    code: "P0883",
+    titre: "Défaut surtension d'alimentation de la boîte",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque d'endommager le calculateur",
+    description:
+      "Le calculateur de boîte détecte une tension d'alimentation anormalement élevée, ce qui peut endommager à terme ses composants électroniques si la cause n'est pas corrigée rapidement.",
+    causes: [
+      { pourcentage: 40, libelle: "Alternateur déréglé (régulateur défaillant)" },
+      { pourcentage: 28, libelle: "Batterie récemment remplacée par un modèle inadapté" },
+      { pourcentage: 20, libelle: "Câblage de masse défectueux" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Faire contrôler la tension de charge de l'alternateur moteur tournant sans attendre — une surtension prolongée peut endommager plusieurs calculateurs à la fois.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P1213",
+    titre: "Défaut information transmise par le calculateur ESP — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — stratégie de passage de rapport perturbée",
+    description:
+      "Le calculateur de boîte reçoit une information incohérente en provenance du calculateur ESP (contrôle de stabilité), ce qui peut perturber la stratégie de passage des rapports lors d'une intervention de stabilité.",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau CAN entre calculateur ESP et calculateur boîte" },
+      { pourcentage: 28, libelle: "Calculateur ESP en défaut propre" },
+      { pourcentage: 22, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité si le calculateur ESP affiche lui-même un défaut actif — ce code est souvent la conséquence d'une panne ESP plutôt que de la boîte.",
+    pieces: [
+      { nom: "Diagnostic réseau boîte/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P17A5",
+    titre: "Défaut mécanique ou hydraulique premier rapport avec frein moteur — boîte AT6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — combinaison spécifique affectée",
+    description:
+      "Le calculateur détecte que le premier rapport avec fonction de frein moteur activée ne s'engage pas correctement, signe d'un problème mécanique ou hydraulique interne sur cette combinaison spécifique.",
+    causes: [
+      { pourcentage: 35, libelle: "Embrayage ou frein interne dédié usé" },
+      { pourcentage: 28, libelle: "Électrovanne de commande de cette combinaison défaillante" },
+      { pourcentage: 22, libelle: "Niveau d'huile de boîte insuffisant" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne une combinaison de fonctionnement spécifique (frein moteur en première) — la boîte reste généralement utilisable en conduite normale.",
+    pieces: [
+      { nom: "Diagnostic mécanique boîte AT6 (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
