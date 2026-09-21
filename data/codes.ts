@@ -4276,6 +4276,218 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic rétroéclairage combiné (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
     ],
   },
+  {
+    code: "P0200",
+    titre: "Circuit injecteur — défaut général",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — fonctionnement moteur dégradé",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de commande des injecteurs (court-circuit, coupure ou signal hors plage), sans pouvoir identifier précisément quel cylindre est concerné.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du faisceau injecteurs endommagé" },
+      { pourcentage: 30, libelle: "Connecteur d'injecteur mal enfiché ou corrodé" },
+      { pourcentage: 20, libelle: "Un ou plusieurs injecteurs défaillants" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la résistance de chaque injecteur au multimètre permet souvent d'isoler le cylindre en cause avant de remplacer une pièce.",
+    pieces: [
+      { nom: "Injecteur essence/diesel", boutique: "Mister-Auto · sur commande", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "P0201",
+    titre: "Circuit injecteur cylindre 1 — défaut",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de commande de l'injecteur du cylindre 1 (court-circuit, coupure ou résistance hors plage), ce qui peut provoquer un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 40, libelle: "Injecteur du cylindre 1 défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de l'injecteur endommagé" },
+      { pourcentage: 20, libelle: "Étage de commande de l'injecteur défaillant côté calculateur" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne souvent d'un raté d'allumage détecté sur le même cylindre — traiter les deux ensemble oriente directement vers l'injecteur.",
+    pieces: [
+      { nom: "Injecteur essence/diesel", boutique: "Mister-Auto · sur commande", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "P0202",
+    titre: "Circuit injecteur cylindre 2 — défaut",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de commande de l'injecteur du cylindre 2 (court-circuit, coupure ou résistance hors plage), ce qui peut provoquer un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 40, libelle: "Injecteur du cylindre 2 défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de l'injecteur endommagé" },
+      { pourcentage: 20, libelle: "Étage de commande de l'injecteur défaillant côté calculateur" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne souvent d'un raté d'allumage détecté sur le même cylindre — traiter les deux ensemble oriente directement vers l'injecteur.",
+    pieces: [
+      { nom: "Injecteur essence/diesel", boutique: "Mister-Auto · sur commande", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "P0203",
+    titre: "Circuit injecteur cylindre 3 — défaut",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de commande de l'injecteur du cylindre 3 (court-circuit, coupure ou résistance hors plage), ce qui peut provoquer un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 40, libelle: "Injecteur du cylindre 3 défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de l'injecteur endommagé" },
+      { pourcentage: 20, libelle: "Étage de commande de l'injecteur défaillant côté calculateur" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne souvent d'un raté d'allumage détecté sur le même cylindre — traiter les deux ensemble oriente directement vers l'injecteur.",
+    pieces: [
+      { nom: "Injecteur essence/diesel", boutique: "Mister-Auto · sur commande", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "P0204",
+    titre: "Circuit injecteur cylindre 4 — défaut",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de commande de l'injecteur du cylindre 4 (court-circuit, coupure ou résistance hors plage), ce qui peut provoquer un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 40, libelle: "Injecteur du cylindre 4 défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de l'injecteur endommagé" },
+      { pourcentage: 20, libelle: "Étage de commande de l'injecteur défaillant côté calculateur" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne souvent d'un raté d'allumage détecté sur le même cylindre — traiter les deux ensemble oriente directement vers l'injecteur.",
+    pieces: [
+      { nom: "Injecteur essence/diesel", boutique: "Mister-Auto · sur commande", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "P0230",
+    titre: "Circuit primaire pompe à carburant — défaut",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de non-démarrage ou coupure moteur",
+    description:
+      "Le circuit électrique qui commande la pompe à carburant (relais ou étage de puissance du calculateur) présente une anomalie, ce qui peut empêcher le moteur de démarrer ou provoquer des coupures en roulant.",
+    causes: [
+      { pourcentage: 35, libelle: "Relais de pompe à carburant défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation de la pompe endommagé" },
+      { pourcentage: 22, libelle: "Pompe à carburant défaillante" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant (étage de commande)" },
+    ],
+    avisPro:
+      "Vérifier le relais de pompe en premier — c'est une pièce peu coûteuse et facilement accessible, contrairement à la pompe elle-même souvent logée dans le réservoir.",
+    pieces: [
+      { nom: "Relais pompe à carburant", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+      { nom: "Pompe à carburant complète", boutique: "Mister-Auto · sur commande", prix: "120-220€" },
+    ],
+  },
+  {
+    code: "P0231",
+    titre: "Circuit secondaire pompe à carburant — signal faible",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — pompe fatiguée à surveiller",
+    description:
+      "Le circuit de retour d'information de la pompe à carburant envoie un signal anormalement faible au calculateur, ce qui peut traduire une pompe fatiguée ou un problème de câblage sur ce circuit spécifique.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à carburant fatiguée (débit insuffisant)" },
+      { pourcentage: 28, libelle: "Câblage du circuit de retour endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la pompe corrodé" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Une pompe fatiguée se manifeste souvent par des difficultés à haut régime ou en charge avant de déclencher ce code — ne pas attendre la panne complète pour la remplacer.",
+    pieces: [
+      { nom: "Pompe à carburant complète", boutique: "Mister-Auto · sur commande", prix: "120-220€" },
+    ],
+  },
+  {
+    code: "P0087",
+    titre: "Pression rail carburant/circuit d'alimentation — trop basse",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — perte de puissance, risque de non-démarrage",
+    description:
+      "Le calculateur détecte une pression insuffisante dans la rampe commune (rail) d'injection, ce qui peut provoquer une perte de puissance, des à-coups ou l'impossibilité de démarrer, notamment sur les moteurs diesel à injection common-rail.",
+    causes: [
+      { pourcentage: 35, libelle: "Pompe haute pression défaillante ou usée" },
+      { pourcentage: 25, libelle: "Filtre à carburant colmaté" },
+      { pourcentage: 20, libelle: "Fuite dans le circuit basse ou haute pression" },
+      { pourcentage: 20, libelle: "Capteur de pression rail défaillant (fausse mesure)" },
+    ],
+    avisPro:
+      "Changer le filtre à carburant est le premier réflexe à avoir, peu coûteux, avant d'envisager une pompe haute pression, bien plus onéreuse à remplacer.",
+    pieces: [
+      { nom: "Filtre à carburant", boutique: "AutoDoc · livraison 24h", prix: "18€" },
+      { nom: "Pompe haute pression diesel", boutique: "Mister-Auto · sur commande", prix: "250-450€" },
+    ],
+  },
+  {
+    code: "P0089",
+    titre: "Pression carburant — plage/performance",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent le signe avant-coureur d'une panne plus grave",
+    description:
+      "La pression mesurée dans le circuit d'alimentation ne correspond pas à la valeur attendue par le calculateur compte tenu des conditions de fonctionnement du moteur, sans être en défaut franc de pression trop basse.",
+    causes: [
+      { pourcentage: 35, libelle: "Régulateur de pression de carburant déréglé ou défaillant" },
+      { pourcentage: 28, libelle: "Capteur de pression rail imprécis" },
+      { pourcentage: 22, libelle: "Filtre à carburant partiellement colmaté" },
+      { pourcentage: 15, libelle: "Pompe haute pression en début d'usure" },
+    ],
+    avisPro:
+      "Ce code apparaît souvent avant un défaut de pression franc (P0087) — un contrôle préventif du filtre et du régulateur évite une panne plus grave.",
+    pieces: [
+      { nom: "Régulateur de pression carburant", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
+  {
+    code: "P0193",
+    titre: "Capteur de pression rail carburant — signal élevé",
+    categorie: "p02xx",
+    categorieLabel: "Injection",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation de l'injection perturbée",
+    description:
+      "Le capteur de pression de la rampe commune (rail) d'injection envoie un signal anormalement élevé, incohérent avec la pression réelle du circuit, perturbant la régulation de l'injection.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de pression rail défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (court-circuit vers le +)" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un signal capteur incohérent peut pousser le calculateur à réduire la puissance moteur par sécurité — un remplacement du capteur résout généralement ce défaut sans autre intervention.",
+    pieces: [
+      { nom: "Capteur de pression rail carburant", boutique: "Oscaro · livraison 48h", prix: "55€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
@@ -4351,6 +4563,7 @@ export interface Categorie {
 export const categories: Categorie[] = [
   { code: "P03XX", titre: "Allumage & ratés", desc: "Bougies, bobines, cylindres — à-coups moteur.", slug: "p03xx" },
   { code: "P01XX", titre: "Carburant & air", desc: "Injection, débit d'air, richesse du mélange.", slug: "p01xx" },
+  { code: "P02XX", titre: "Injection", desc: "Circuits injecteurs, pompe et pression carburant.", slug: "p02xx" },
   { code: "P04XX", titre: "Émissions", desc: "Sonde lambda, EGR, catalyseur.", slug: "p04xx" },
   { code: "U0XXX", titre: "Réseau & calculateurs", desc: "Communication entre modules électroniques.", slug: "u0xxx" },
   { code: "P07XX", titre: "Boîte de vitesses automatique", desc: "Rapports, convertisseur de couple, capteurs de vitesse.", slug: "p07xx" },
