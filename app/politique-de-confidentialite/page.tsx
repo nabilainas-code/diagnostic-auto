@@ -32,13 +32,22 @@ export default function ConfidentialitePage() {
           </section>
 
           <section>
+            <h2 className="font-display font-semibold text-base text-text mb-2">Mesure d&apos;audience</h2>
+            <p>
+              Ce site utilise Vercel Web Analytics pour connaître la fréquentation générale
+              (nombre de visites, pages consultées, provenance du trafic). Cet outil ne dépose
+              aucun cookie et ne collecte aucune donnée permettant de vous identifier
+              personnellement — les statistiques sont agrégées et anonymes.
+            </p>
+          </section>
+
+          <section>
             <h2 className="font-display font-semibold text-base text-text mb-2">Cookies</h2>
             <p>
-              Ce site n&apos;utilise actuellement aucun cookie de suivi ni outil de mesure
-              d&apos;audience. Si des cookies non essentiels sont ajoutés à l&apos;avenir (mesure
-              d&apos;audience, régie publicitaire comme Google AdSense), un bandeau de
-              consentement vous permettra de les accepter ou de les refuser avant toute
-              activation, conformément à la réglementation RGPD.
+              Ce site n&apos;utilise actuellement aucun cookie de suivi publicitaire. Si des
+              cookies non essentiels sont ajoutés à l&apos;avenir (régie publicitaire comme
+              Google AdSense), un bandeau de consentement vous permettra de les accepter ou de
+              les refuser avant toute activation, conformément à la réglementation RGPD.
             </p>
           </section>
 
