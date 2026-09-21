@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Panne Résolue — Diagnostic auto et pièces au bon prix",
   description:
     "Entrez un code défaut ou votre plaque d'immatriculation. On identifie le problème, la pièce concernée, et où l'acheter au meilleur prix.",
+  verification: {
+    google: "cfv8IUG9RhFhUEsBVmu2zVogV2at6OviiD2wgifbhqY",
+  },
 };
 
 export default function RootLayout({
