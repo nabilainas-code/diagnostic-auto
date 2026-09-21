@@ -3269,6 +3269,258 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic réseau multiplexé (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
     ],
   },
+  {
+    code: "B1000",
+    titre: "Défaut interne calculateur airbag — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — fiabilité du déclenchement airbag compromise",
+    description:
+      "Le calculateur airbag détecte un défaut interne (mémoire, composant électronique ou alimentation), qui l'empêche de garantir le déclenchement correct des airbags et prétensionneurs en cas de choc.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur airbag défaillant" },
+      { pourcentage: 25, libelle: "Alimentation électrique du calculateur instable" },
+      { pourcentage: 15, libelle: "Masse électrique défectueuse" },
+      { pourcentage: 10, libelle: "Mise à jour logicielle nécessaire (défaut connu du calculateur)" },
+    ],
+    avisPro:
+      "Un défaut interne calculateur nécessite un diagnostic précis à la valise constructeur avant tout remplacement — certains cas se résolvent par une reprogrammation plutôt qu'un changement de pièce.",
+    pieces: [
+      { nom: "Diagnostic calculateur airbag (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B1615",
+    titre: "Défaut capteur d'accélération avant gauche — airbag PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbags frontaux non garanti",
+    description:
+      "Le capteur de choc frontal gauche, qui détecte la décélération brutale lors d'un impact pour déclencher les airbags frontaux, envoie un signal incohérent ou absent au calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de choc défaillant" },
+      { pourcentage: 30, libelle: "Câblage endommagé (zone souvent exposée en cas de choc mineur antérieur)" },
+      { pourcentage: 20, libelle: "Connecteur du capteur mal enfiché ou corrodé" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Après tout choc frontal même léger, ce capteur doit être vérifié — un choc antérieur mal réparé est une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Capteur de choc frontal", boutique: "Oscaro · livraison 48h", prix: "48€" },
+    ],
+  },
+  {
+    code: "B1620",
+    titre: "Défaut capteur d'accélération latérale droite — airbag PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbags latéraux non garanti",
+    description:
+      "Le capteur d'impact latéral droit, qui détecte un choc sur le côté du véhicule pour déclencher les airbags latéraux et rideaux, envoie un signal incohérent ou absent au calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage dans la portière ou le pied de caisse endommagé" },
+      { pourcentage: 20, libelle: "Connecteur corrodé (zone humide, bas de caisse)" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de ce capteur passe souvent par la portière ou le seuil — vérifier l'état du faisceau à ces points de passage avant de remplacer le capteur.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "AutoDoc · livraison 24h", prix: "42€" },
+    ],
+  },
+  {
+    code: "B1651",
+    titre: "Défaut contacteur de neutralisation airbag passager — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — information de statut airbag passager incertaine",
+    description:
+      "Le contacteur qui permet de désactiver manuellement l'airbag passager (pour l'installation d'un siège enfant dos à la route) envoie une information incohérente au calculateur sur sa position réelle.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de neutralisation défaillant" },
+      { pourcentage: 30, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le contacteur est bien positionné sur ON ou OFF sans position intermédiaire — un mauvais positionnement mécanique est une cause fréquente et sans frais.",
+    pieces: [
+      { nom: "Diagnostic contacteur neutralisation (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "B1660",
+    titre: "Défaut témoin airbag passager désactivé — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — défaut d'affichage, sans effet sur l'airbag lui-même",
+    description:
+      "Le témoin lumineux qui indique que l'airbag passager est désactivé (visible au plafonnier ou au tableau de bord) ne s'allume plus ou reste allumé en permanence, sans que cela affecte le fonctionnement réel de l'airbag.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 30, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du témoin oxydé" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant côté pilotage du témoin" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement l'affichage — il ne désactive pas l'airbag lui-même, mais doit être corrigé pour respecter l'obligation d'information sur l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Ampoule/LED témoin airbag passager", boutique: "AutoDoc · livraison 24h", prix: "8€" },
+    ],
+  },
+  {
+    code: "B1800",
+    titre: "Défaut module d'allumage airbag conducteur niveau 1 — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag conducteur non garanti",
+    description:
+      "Le circuit électrique qui déclenche le premier étage de gonflage de l'airbag conducteur (volant) présente une résistance ou une continuité hors plage, ce qui empêche le calculateur de garantir son déclenchement en cas de choc.",
+    causes: [
+      { pourcentage: 45, libelle: "Module gonfleur airbag conducteur défaillant" },
+      { pourcentage: 25, libelle: "Câblage du contacteur tournant (spirale sous volant) endommagé" },
+      { pourcentage: 20, libelle: "Connecteur sous le volant mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité — ne jamais rouler avec ce témoin allumé, l'airbag conducteur peut ne pas se déclencher en cas de choc. Diagnostic et intervention à faire en priorité.",
+    pieces: [
+      { nom: "Contacteur tournant + diagnostic module airbag (atelier)", boutique: "Recommandé avant pièce", prix: "80-120€" },
+    ],
+  },
+  {
+    code: "B1805",
+    titre: "Défaut module d'allumage airbag passager niveau 1 — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag passager non garanti",
+    description:
+      "Le circuit électrique qui déclenche le premier étage de gonflage de l'airbag passager présente une résistance ou une continuité hors plage, ce qui empêche le calculateur de garantir son déclenchement en cas de choc.",
+    causes: [
+      { pourcentage: 45, libelle: "Module gonfleur airbag passager défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le tableau de bord endommagé" },
+      { pourcentage: 17, libelle: "Connecteur du module mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité du passager avant — ne jamais rouler avec ce témoin allumé sans avoir fait vérifier le circuit.",
+    pieces: [
+      { nom: "Diagnostic module airbag passager (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B1820",
+    titre: "Défaut allumeur airbag latéral avant droit — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag latéral non garanti",
+    description:
+      "Le circuit électrique qui déclenche l'airbag latéral situé dans le siège ou la portière avant droite présente une résistance ou une continuité hors plage, empêchant son déclenchement garanti en cas de choc latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Allumeur (gonfleur) airbag latéral défaillant" },
+      { pourcentage: 30, libelle: "Câblage dans l'assise du siège endommagé (usure liée aux réglages répétés)" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de l'airbag latéral passe par l'assise du siège et subit l'usure des réglages répétés — vérifier ce point avant de suspecter le module lui-même.",
+    pieces: [
+      { nom: "Diagnostic airbag latéral avant droit (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B1825",
+    titre: "Défaut allumeur airbag latéral avant gauche — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag latéral non garanti",
+    description:
+      "Le circuit électrique qui déclenche l'airbag latéral situé dans le siège ou la portière avant gauche présente une résistance ou une continuité hors plage, empêchant son déclenchement garanti en cas de choc latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Allumeur (gonfleur) airbag latéral défaillant" },
+      { pourcentage: 30, libelle: "Câblage dans l'assise du siège endommagé (usure liée aux réglages répétés)" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de l'airbag latéral passe par l'assise du siège et subit l'usure des réglages répétés — vérifier ce point avant de suspecter le module lui-même.",
+    pieces: [
+      { nom: "Diagnostic airbag latéral avant gauche (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B1830",
+    titre: "Défaut allumeur airbag rideau droit — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag rideau non garanti",
+    description:
+      "Le circuit électrique qui déclenche l'airbag rideau situé le long du pavillon côté droit présente une résistance ou une continuité hors plage, empêchant son déclenchement garanti en cas de choc latéral ou de tonneau.",
+    causes: [
+      { pourcentage: 42, libelle: "Allumeur (gonfleur) airbag rideau défaillant" },
+      { pourcentage: 28, libelle: "Câblage du pavillon endommagé (infiltration d'eau au niveau du toit)" },
+      { pourcentage: 20, libelle: "Connecteur du pied de caisse ou du pavillon corrodé" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'absence d'infiltration d'eau au niveau du pavillon ou des montants — l'humidité est une cause fréquente de corrosion sur ce circuit spécifique.",
+    pieces: [
+      { nom: "Diagnostic airbag rideau droit (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B1900",
+    titre: "Défaut prétensionneur de ceinture avant droit — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — prétensionneur pyrotechnique non garanti",
+    description:
+      "Le circuit électrique qui déclenche le prétensionneur pyrotechnique de la ceinture de sécurité avant droite présente une résistance ou une continuité hors plage, empêchant son déclenchement garanti en cas de choc.",
+    causes: [
+      { pourcentage: 40, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 30, libelle: "Câblage sous le siège ou dans le pied milieu endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du prétensionneur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne un élément pyrotechnique de sécurité — à traiter en priorité, ne jamais tenter de le démonter soi-même sans formation.",
+    pieces: [
+      { nom: "Diagnostic prétensionneur avant droit (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B1905",
+    titre: "Défaut prétensionneur de ceinture avant gauche — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — prétensionneur pyrotechnique non garanti",
+    description:
+      "Le circuit électrique qui déclenche le prétensionneur pyrotechnique de la ceinture de sécurité avant gauche présente une résistance ou une continuité hors plage, empêchant son déclenchement garanti en cas de choc.",
+    causes: [
+      { pourcentage: 40, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 30, libelle: "Câblage sous le siège ou dans le pied milieu endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du prétensionneur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne un élément pyrotechnique de sécurité — à traiter en priorité, ne jamais tenter de le démonter soi-même sans formation.",
+    pieces: [
+      { nom: "Diagnostic prétensionneur avant gauche (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
