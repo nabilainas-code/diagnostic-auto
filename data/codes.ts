@@ -8990,6 +8990,635 @@ export const codes: CodeDefaut[] = [
       { nom: "Capteur de température extérieure", boutique: "AutoDoc · livraison 24h", prix: "18€" },
     ],
   },
+  {
+    code: "F4BC",
+    titre: "Défaut éclairage clignotant arrière droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation compromise",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du clignotant arrière droit, ce qui peut se traduire par un clignotement plus rapide que la normale ou une absence totale d'éclairage.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED de clignotant grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du clignotant endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un clignotement anormalement rapide au tableau de bord est le signe caractéristique d'une ampoule grillée — un remplacement simple résout généralement le défaut.",
+    pieces: [
+      { nom: "Ampoule clignotant", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4BD",
+    titre: "Défaut éclairage clignotant arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation compromise",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du clignotant arrière gauche, ce qui peut se traduire par un clignotement plus rapide que la normale ou une absence totale d'éclairage.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED de clignotant grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du clignotant endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un clignotement anormalement rapide au tableau de bord est le signe caractéristique d'une ampoule grillée — un remplacement simple résout généralement le défaut.",
+    pieces: [
+      { nom: "Ampoule clignotant", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4E7",
+    titre: "Défaut témoin Stop & Start — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage seulement",
+    description:
+      "Le témoin au tableau de bord qui indique l'activation du système Stop & Start ne s'allume plus ou reste allumé en permanence, sans forcément affecter le fonctionnement réel du système.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 28, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné d'instruments corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne l'affichage — vérifier que le système Stop & Start s'active bien physiquement (coupure moteur à l'arrêt) malgré le témoin défaillant.",
+    pieces: [
+      { nom: "Diagnostic témoin Stop & Start (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F529",
+    titre: "Défaut arrêt moteur en roulant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — événement potentiellement dangereux",
+    description:
+      "Le BSI enregistre un arrêt inattendu du moteur alors que le véhicule était en mouvement, un événement potentiellement dangereux qui mérite un diagnostic approfondi même s'il ne s'est produit qu'une seule fois.",
+    causes: [
+      { pourcentage: 35, libelle: "Panne d'alimentation carburant momentanée" },
+      { pourcentage: 28, libelle: "Défaut électrique généralisé (masse, batterie)" },
+      { pourcentage: 22, libelle: "Calculateur moteur en défaut propre" },
+      { pourcentage: 15, libelle: "Calage lié à une manœuvre (embrayage, ralenti)" },
+    ],
+    avisPro:
+      "Si ce défaut se reproduit, ne pas continuer à rouler sans diagnostic — un calage moteur en roulant peut survenir dans des conditions dangereuses (autoroute, intersection).",
+    pieces: [
+      { nom: "Diagnostic calage moteur (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F17C",
+    titre: "Défaut information niveau de carburant brut — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — précision d'affichage réduite",
+    description:
+      "Le BSI détecte une anomalie sur la mesure brute (non filtrée) du niveau de carburant, transmise par la jauge avant tout traitement, ce qui peut affecter la précision de l'affichage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de niveau (flotteur) défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur corrodé (dans le réservoir)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une jauge qui affiche des valeurs erratiques est le symptôme typique — se fier au compteur kilométrique depuis le dernier plein en attendant la réparation.",
+    pieces: [
+      { nom: "Capteur de niveau carburant (jauge)", boutique: "Mister-Auto · sur commande", prix: "55-90€" },
+    ],
+  },
+  {
+    code: "F3FF",
+    titre: "Défaut affichage rappel ceintures non bouclées — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — vérifier manuellement en complément",
+    description:
+      "L'affichage au tableau de bord qui indique quelles ceintures de sécurité ne sont pas bouclées montre une information incorrecte, sans forcément affecter l'alerte sonore elle-même.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de ceinture défaillant sur un ou plusieurs sièges" },
+      { pourcentage: 28, libelle: "Câblage des contacteurs endommagé" },
+      { pourcentage: 20, libelle: "Connecteur d'un contacteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que chaque passager est bien attaché plutôt que de se fier uniquement à cet affichage tant que le défaut n'est pas corrigé.",
+    pieces: [
+      { nom: "Diagnostic contacteurs ceintures (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F400",
+    titre: "Défaut contacteur des feux de détresse — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — équipement de sécurité essentiel",
+    description:
+      "Le bouton des feux de détresse envoie un signal incohérent au BSI, ce qui peut empêcher leur activation en cas d'urgence ou les déclencher de façon intempestive.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton des feux de détresse défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du bouton corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les feux de détresse sont un équipement de sécurité essentiel — faire diagnostiquer rapidement, sans attendre, en cas de doute sur leur fonctionnement.",
+    pieces: [
+      { nom: "Diagnostic contacteur feux de détresse (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F402",
+    titre: "Défaut capteur de présence du bouchon de réservoir — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — souvent un simple bouchon mal fermé",
+    description:
+      "Le capteur qui détecte si le bouchon de réservoir est bien en place envoie un signal incohérent, ce qui peut déclencher une alerte même quand le bouchon est correctement fermé.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Bouchon de réservoir mal positionné ou usé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le bouchon est bien vissé jusqu'au clic avant de suspecter le capteur — un bouchon mal fermé est la cause la plus fréquente.",
+    pieces: [
+      { nom: "Bouchon de réservoir carburant", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "F4A3",
+    titre: "Défaut témoin du bouton feux de détresse — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonctionnement réel des feux à vérifier",
+    description:
+      "Le témoin lumineux intégré au bouton des feux de détresse ne s'allume plus correctement, sans forcément affecter le déclenchement réel des feux de détresse.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin intégré au bouton grillée" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du bouton corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que les feux de détresse s'activent bien physiquement (clignotants visibles de l'extérieur) malgré le témoin défaillant sur le bouton.",
+    pieces: [
+      { nom: "Diagnostic témoin bouton détresse (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4A7",
+    titre: "Défaut éclairage plaque d'immatriculation — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque de contravention",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit d'éclairage de la plaque d'immatriculation arrière, un défaut simple mais qui peut entraîner une contravention en cas de contrôle de nuit.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 15, libelle: "Infiltration d'eau (feu souvent situé sur le hayon)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un défaut simple et peu coûteux à corriger, mais qui peut valoir une contravention lors d'un contrôle routier de nuit — à ne pas négliger.",
+    pieces: [
+      { nom: "Ampoule éclairage plaque", boutique: "AutoDoc · livraison 24h", prix: "5€" },
+    ],
+  },
+  {
+    code: "F4A9",
+    titre: "Défaut commande d'ouverture de la lunette arrière — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — équipement de confort peu courant",
+    description:
+      "Sur les véhicules équipés d'une lunette arrière ouvrante indépendamment du hayon, la commande électrique d'ouverture envoie un signal incohérent au BSI.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur d'ouverture de la lunette défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la commande corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Cette fonction est un équipement de confort peu courant — vérifier qu'elle est bien présente sur le véhicule avant de chercher plus loin.",
+    pieces: [
+      { nom: "Diagnostic commande lunette arrière (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4AA",
+    titre: "Défaut commande de la lunette arrière chauffante — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — visibilité arrière réduite en cas de buée",
+    description:
+      "La commande de la lunette arrière chauffante (dégivrage) envoie un signal incohérent au BSI, ce qui peut empêcher son activation en cas de buée ou de givre.",
+    causes: [
+      { pourcentage: 40, libelle: "Résistances de la lunette chauffante défaillantes (fils cassés)" },
+      { pourcentage: 28, libelle: "Bouton de commande défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une visibilité réduite par la buée arrière est un vrai risque de sécurité — vérifier ce défaut avant l'hiver, quand la fonction est le plus sollicitée.",
+    pieces: [
+      { nom: "Diagnostic lunette arrière chauffante (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4AC",
+    titre: "Défaut éclairage des pieds — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — purement esthétique",
+    description:
+      "L'éclairage d'ambiance situé au niveau des pieds des passagers ne fonctionne plus correctement, un équipement purement esthétique sans impact sur la sécurité.",
+    causes: [
+      { pourcentage: 42, libelle: "LED de l'éclairage d'ambiance grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est purement esthétique, sans aucun impact sur la sécurité ou le fonctionnement du véhicule.",
+    pieces: [
+      { nom: "Diagnostic éclairage d'ambiance (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4AD",
+    titre: "Défaut plafonniers ou éclairage arrière des pieds — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort intérieur uniquement",
+    description:
+      "Un ou plusieurs plafonniers, ou l'éclairage des pieds à l'arrière, ne s'allument plus correctement, sans affecter l'éclairage extérieur ni la sécurité de conduite.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement l'éclairage intérieur de confort — sans impact sur la conduite ou la sécurité.",
+    pieces: [
+      { nom: "Ampoule plafonnier", boutique: "AutoDoc · livraison 24h", prix: "5€" },
+    ],
+  },
+  {
+    code: "F4B9",
+    titre: "Défaut alimentation contacteur d'allumage électronique — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de non-démarrage",
+    description:
+      "Le contacteur d'allumage électronique (bouton Start/Stop sur les véhicules à démarrage sans clé) ne reçoit plus une alimentation correcte, ce qui peut empêcher le démarrage du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage d'alimentation du contacteur endommagé" },
+      { pourcentage: 28, libelle: "Fusible dédié grillé" },
+      { pourcentage: 22, libelle: "Contacteur Start/Stop défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le véhicule ne démarre plus du tout au bouton, vérifier en premier le fusible dédié avant d'envisager un remplacement du contacteur.",
+    pieces: [
+      { nom: "Diagnostic contacteur Start/Stop (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F4BB",
+    titre: "Défaut LED de statut de protection du véhicule — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — protection réelle de l'alarme préservée",
+    description:
+      "La LED clignotante visible depuis l'extérieur qui indique que l'alarme du véhicule est armée ne fonctionne plus correctement, sans affecter la protection réelle de l'alarme.",
+    causes: [
+      { pourcentage: 42, libelle: "LED de statut défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la LED endommagé" },
+      { pourcentage: 18, libelle: "Connecteur de la LED corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alarme continue généralement de fonctionner normalement — seul le voyant visuel de statut est concerné par ce défaut.",
+    pieces: [
+      { nom: "Diagnostic LED statut alarme (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4BF",
+    titre: "Défaut éclairage feu stop arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — motif de contre-visite au contrôle technique",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du feu stop arrière gauche, ce qui réduit la visibilité du freinage pour les véhicules suivants et constitue un motif de contre-visite au contrôle technique.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Contacteur de pédale de frein en cause" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un feu stop défaillant est un vrai risque de sécurité et un motif de recalage au contrôle technique — à corriger sans attendre.",
+    pieces: [
+      { nom: "Ampoule feu stop", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4E8",
+    titre: "Défaut témoin ESP — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — vérifier qu'il ne s'agit pas d'un vrai défaut ESP",
+    description:
+      "Le témoin lumineux de l'ESP au tableau de bord ne fonctionne plus correctement (ne s'allume plus ou reste allumé en permanence), ce qui peut rendre difficile de savoir si le système est réellement actif.",
+    causes: [
+      { pourcentage: 38, libelle: "LED du témoin ESP grillée" },
+      { pourcentage: 28, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 22, libelle: "Défaut réel côté calculateur ESP (à ne pas exclure)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ne pas négliger ce témoin — vérifier d'abord qu'il ne s'agit pas d'un vrai défaut ESP avant de conclure à un simple problème d'affichage.",
+    pieces: [
+      { nom: "Diagnostic témoin ESP (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4C2",
+    titre: "Niveau de liquide de refroidissement insuffisant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de surchauffe moteur",
+    description:
+      "Le capteur de niveau du vase d'expansion détecte une quantité insuffisante de liquide de refroidissement, un défaut à traiter rapidement pour éviter une surchauffe moteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Fuite dans le circuit de refroidissement (durite, radiateur, joint de culasse)" },
+      { pourcentage: 28, libelle: "Niveau jamais complété après une légère perte naturelle" },
+      { pourcentage: 20, libelle: "Capteur de niveau défaillant (fausse alerte)" },
+      { pourcentage: 12, libelle: "Vase d'expansion fissuré" },
+    ],
+    avisPro:
+      "Ne jamais ouvrir le vase d'expansion moteur chaud — laisser refroidir, compléter le niveau et surveiller si le niveau rebaisse rapidement, signe d'une fuite à traiter.",
+    pieces: [
+      { nom: "Liquide de refroidissement", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "F4CA",
+    titre: "Défaut éclairage feu antibrouillard arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — visibilité réduite par brouillard",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du feu antibrouillard arrière gauche, ce qui réduit la visibilité par temps de brouillard.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'est gênant qu'en conditions de brouillard — mais un contrôle reste nécessaire pour la sécurité et la conformité au contrôle technique.",
+    pieces: [
+      { nom: "Ampoule feu antibrouillard", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4D8",
+    titre: "Défaut éclairage des boutons — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonctionnement des boutons préservé",
+    description:
+      "Le rétroéclairage des boutons de la console centrale ou du tableau de bord ne fonctionne plus correctement, rendant leur identification plus difficile de nuit sans affecter leur fonctionnement réel.",
+    causes: [
+      { pourcentage: 42, libelle: "LED de rétroéclairage des boutons grillées" },
+      { pourcentage: 28, libelle: "Câblage du circuit d'éclairage endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement le rétroéclairage — les boutons continuent généralement de fonctionner normalement au toucher.",
+    pieces: [
+      { nom: "Diagnostic éclairage boutons (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4F1",
+    titre: "Défaut gâche rétractée porte droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — porte potentiellement bloquée",
+    description:
+      "Le mécanisme de gâche électrique de la porte droite, qui se rétracte pour permettre l'ouverture de la porte, ne répond plus correctement lors de la phase de rétraction.",
+    causes: [
+      { pourcentage: 38, libelle: "Gâche électrique défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la gâche endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si la porte reste bloquée fermée, ne pas forcer — un diagnostic permet d'identifier la procédure de déblocage de secours propre au véhicule.",
+    pieces: [
+      { nom: "Diagnostic gâche électrique porte (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4F2",
+    titre: "Défaut gâche étendue porte droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — porte potentiellement mal verrouillée",
+    description:
+      "Le mécanisme de gâche électrique de la porte droite ne répond plus correctement lors de la phase d'extension (verrouillage complet de la porte).",
+    causes: [
+      { pourcentage: 38, libelle: "Gâche électrique défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la gâche endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la porte se verrouille bien complètement — une gâche qui ne s'étend pas totalement peut laisser la porte mal fermée.",
+    pieces: [
+      { nom: "Diagnostic gâche électrique porte (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4F3",
+    titre: "Défaut actionneur de gâche porte droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — composant de commande de la gâche en cause",
+    description:
+      "L'actionneur qui commande le mouvement de la gâche électrique de la porte droite présente une anomalie électrique, empêchant son fonctionnement correct.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur de gâche défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de l'actionneur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche le composant qui pilote physiquement la gâche — un diagnostic électrique précis évite de remplacer toute la serrure à tort.",
+    pieces: [
+      { nom: "Diagnostic actionneur gâche (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4F4",
+    titre: "Défaut gâche rétractée porte gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — porte potentiellement bloquée",
+    description:
+      "Le mécanisme de gâche électrique de la porte gauche, qui se rétracte pour permettre l'ouverture de la porte, ne répond plus correctement lors de la phase de rétraction.",
+    causes: [
+      { pourcentage: 38, libelle: "Gâche électrique défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la gâche endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si la porte reste bloquée fermée, ne pas forcer — un diagnostic permet d'identifier la procédure de déblocage de secours propre au véhicule.",
+    pieces: [
+      { nom: "Diagnostic gâche électrique porte (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4F5",
+    titre: "Défaut gâche étendue porte gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — porte potentiellement mal verrouillée",
+    description:
+      "Le mécanisme de gâche électrique de la porte gauche ne répond plus correctement lors de la phase d'extension (verrouillage complet de la porte).",
+    causes: [
+      { pourcentage: 38, libelle: "Gâche électrique défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la gâche endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la porte se verrouille bien complètement — une gâche qui ne s'étend pas totalement peut laisser la porte mal fermée.",
+    pieces: [
+      { nom: "Diagnostic gâche électrique porte (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4F6",
+    titre: "Défaut actionneur de gâche porte gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — composant de commande de la gâche en cause",
+    description:
+      "L'actionneur qui commande le mouvement de la gâche électrique de la porte gauche présente une anomalie électrique, empêchant son fonctionnement correct.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur de gâche défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de l'actionneur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche le composant qui pilote physiquement la gâche — un diagnostic électrique précis évite de remplacer toute la serrure à tort.",
+    pieces: [
+      { nom: "Diagnostic actionneur gâche (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4E6",
+    titre: "Défaut témoin mode SPORT suspension — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — suspension pilotée fonctionnelle",
+    description:
+      "Le témoin qui indique l'activation du mode de suspension SPORT (fermeté renforcée) ne s'allume plus correctement, sans affecter le fonctionnement réel de la suspension pilotée.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin grillée" },
+      { pourcentage: 28, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné d'instruments corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le mode SPORT s'active bien physiquement (fermeté de la suspension perceptible) malgré le témoin défaillant.",
+    pieces: [
+      { nom: "Diagnostic témoin mode SPORT (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F1AF",
+    titre: "Défaut information invalide du calculateur Stop & Start — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — fonction d'économie désactivée seulement",
+    description:
+      "Le BSI reçoit une information incohérente en provenance du calculateur qui gère le système Stop & Start, ce qui peut désactiver cette fonction par sécurité.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur Stop & Start en défaut propre" },
+      { pourcentage: 28, libelle: "Défaut réseau entre BSI et calculateur Stop & Start" },
+      { pourcentage: 22, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive uniquement la fonction d'économie de carburant à l'arrêt — le véhicule démarre et roule normalement.",
+    pieces: [
+      { nom: "Diagnostic calculateur Stop & Start (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F5F9",
+    titre: "Réinitialisation du boîtier signalisation par un outil de diagnostic — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — trace d'intervention, pas une panne",
+    description:
+      "Ce code indique qu'une réinitialisation du boîtier de signalisation a été effectuée récemment via un outil de diagnostic, généralement suite à une intervention en atelier — pas une panne en soi.",
+    causes: [
+      { pourcentage: 60, libelle: "Intervention récente en atelier avec réinitialisation volontaire" },
+      { pourcentage: 25, libelle: "Mise à jour logicielle effectuée" },
+      { pourcentage: 15, libelle: "Réinitialisation accidentelle lors d'un diagnostic" },
+    ],
+    avisPro:
+      "Ce code n'indique généralement pas une panne mais trace une intervention récente — il peut être effacé sans inquiétude après vérification que tout fonctionne normalement.",
+    pieces: [
+      { nom: "Diagnostic de vérification post-intervention (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
