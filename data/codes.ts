@@ -5039,6 +5039,175 @@ export const codes: CodeDefaut[] = [
       { nom: "Capteur de position arbre à cames", boutique: "Oscaro · livraison 48h", prix: "36€" },
     ],
   },
+  {
+    code: "P0440",
+    titre: "Circuit EVAP — dysfonctionnement général",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sans impact sur la conduite",
+    description:
+      "Le calculateur détecte une anomalie générale dans le circuit de récupération des vapeurs d'essence (EVAP), qui empêche ces vapeurs d'être correctement recyclées vers le moteur au lieu d'être rejetées dans l'atmosphère.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouchon de réservoir mal serré ou joint usé" },
+      { pourcentage: 28, libelle: "Durite du circuit EVAP fissurée ou débranchée" },
+      { pourcentage: 20, libelle: "Électrovanne de purge ou de mise à l'air défaillante" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Vérifier en premier le bouchon de réservoir — un joint fatigué ou un bouchon mal revissé est la cause la plus fréquente et la plus simple à corriger, sans aucune pièce.",
+    pieces: [
+      { nom: "Bouchon de réservoir carburant", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "P0443",
+    titre: "Circuit électrovanne de purge EVAP — défaut",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sans impact sur la conduite",
+    description:
+      "L'électrovanne qui contrôle le passage des vapeurs d'essence stockées vers l'admission moteur (purge du canister) présente une anomalie électrique, l'empêchant de s'ouvrir ou de se fermer correctement.",
+    causes: [
+      { pourcentage: 40, libelle: "Électrovanne de purge défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de l'électrovanne endommagé" },
+      { pourcentage: 20, libelle: "Électrovanne bloquée par des dépôts" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte pas la conduite mais peut provoquer un léger ralenti irrégulier si l'électrovanne reste bloquée ouverte — à corriger avant le contrôle technique.",
+    pieces: [
+      { nom: "Électrovanne de purge EVAP", boutique: "Oscaro · livraison 48h", prix: "28€" },
+    ],
+  },
+  {
+    code: "P0446",
+    titre: "Circuit de mise à l'air du système EVAP — défaut",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sans impact sur la conduite",
+    description:
+      "Le circuit qui permet la mise à l'air libre du système de récupération des vapeurs d'essence (nécessaire pour effectuer les tests d'étanchéité) présente une anomalie, souvent une obstruction.",
+    causes: [
+      { pourcentage: 40, libelle: "Électrovanne ou clapet de mise à l'air bloqué (encrassement, insectes)" },
+      { pourcentage: 28, libelle: "Câblage de l'électrovanne endommagé" },
+      { pourcentage: 20, libelle: "Durite de mise à l'air obstruée" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un nid d'insecte dans l'orifice de mise à l'air est une cause étonnamment fréquente sur les véhicules restés longtemps à l'arrêt — un simple nettoyage suffit parfois.",
+    pieces: [
+      { nom: "Électrovanne mise à l'air EVAP", boutique: "Oscaro · livraison 48h", prix: "26€" },
+    ],
+  },
+  {
+    code: "P0449",
+    titre: "Circuit électrovanne évent EVAP — défaut électrique",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sans impact sur la conduite",
+    description:
+      "Le circuit électrique de l'électrovanne d'évent du système EVAP présente une anomalie (court-circuit ou coupure), empêchant son pilotage correct par le calculateur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'électrovanne endommagé (coupure ou court-circuit)" },
+      { pourcentage: 28, libelle: "Connecteur de l'électrovanne corrodé" },
+      { pourcentage: 22, libelle: "Électrovanne défaillante" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de continuité du câblage au multimètre permet souvent de localiser précisément la coupure avant de remplacer l'électrovanne.",
+    pieces: [
+      { nom: "Électrovanne évent EVAP", boutique: "Oscaro · livraison 48h", prix: "26€" },
+    ],
+  },
+  {
+    code: "P0456",
+    titre: "Fuite détectée dans le circuit EVAP (très petite fuite)",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sans impact sur la conduite",
+    description:
+      "Le calculateur détecte une très petite fuite dans le circuit de récupération des vapeurs d'essence lors de son test d'étanchéité automatique, en dessous du seuil d'une fuite moyenne ou grande.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouchon de réservoir légèrement desserré ou joint fatigué" },
+      { pourcentage: 28, libelle: "Micro-fissure sur une durite du circuit EVAP" },
+      { pourcentage: 20, libelle: "Canister (filtre à charbon actif) fissuré" },
+      { pourcentage: 12, libelle: "Électrovanne du circuit légèrement fuyarde" },
+    ],
+    avisPro:
+      "Ce défaut est purement lié aux émissions, sans impact sur la conduite — vérifier le bouchon de réservoir avant tout, c'est la cause la plus fréquente et gratuite.",
+    pieces: [
+      { nom: "Bouchon de réservoir carburant", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "P0461",
+    titre: "Capteur de niveau de carburant — plage/performance",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage jauge faussé uniquement",
+    description:
+      "Le capteur de niveau de carburant (jauge) envoie un signal qui évolue de façon incohérente par rapport à la consommation réelle, faussant l'affichage de la jauge au tableau de bord.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de niveau (flotteur) défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé (dans le réservoir)" },
+      { pourcentage: 12, libelle: "Calculateur défaillant côté traitement du signal" },
+    ],
+    avisPro:
+      "Une jauge qui affiche des valeurs erratiques ou qui saute brutalement d'un niveau à l'autre est le symptôme typique — le remplacement du flotteur seul est parfois possible sans changer toute la pompe.",
+    pieces: [
+      { nom: "Capteur de niveau carburant (jauge)", boutique: "Mister-Auto · sur commande", prix: "55-90€" },
+    ],
+  },
+  {
+    code: "P0480",
+    titre: "Circuit de commande du ventilateur de refroidissement — défaut",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque de surchauffe moteur",
+    description:
+      "Le circuit qui commande le ventilateur de refroidissement (relais ou étage de puissance) présente une anomalie électrique, ce qui peut empêcher le ventilateur de s'enclencher et exposer le moteur à une surchauffe.",
+    causes: [
+      { pourcentage: 35, libelle: "Relais du ventilateur défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du ventilateur endommagé" },
+      { pourcentage: 22, libelle: "Moteur du ventilateur défaillant" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un ventilateur qui ne s'enclenche plus expose à une surchauffe rapide, surtout en circulation urbaine ou embouteillage — vérifier le relais et le fusible sans attendre.",
+    pieces: [
+      { nom: "Relais ventilateur de refroidissement", boutique: "AutoDoc · livraison 24h", prix: "18€" },
+      { nom: "Moto-ventilateur complet", boutique: "Mister-Auto · sur commande", prix: "90-160€" },
+    ],
+  },
+  {
+    code: "P0411",
+    titre: "Système d'air additionnel — débit incorrect",
+    categorie: "p04xx",
+    categorieLabel: "Émissions",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sans impact sur la conduite",
+    description:
+      "Le système d'injection d'air secondaire, qui envoie temporairement de l'air frais dans l'échappement au démarrage à froid pour accélérer la montée en température du catalyseur, ne fonctionne pas avec le débit attendu.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à air secondaire défaillante" },
+      { pourcentage: 28, libelle: "Clapet anti-retour du circuit d'air bloqué ou grillé" },
+      { pourcentage: 22, libelle: "Durite du circuit d'air percée ou débranchée" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce système ne fonctionne que quelques dizaines de secondes au démarrage à froid — un défaut ici n'affecte pas la conduite mais peut faire échouer le contrôle technique sur les émissions.",
+    pieces: [
+      { nom: "Pompe à air secondaire", boutique: "Mister-Auto · sur commande", prix: "80-140€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
