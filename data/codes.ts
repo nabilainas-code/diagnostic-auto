@@ -5334,6 +5334,218 @@ export const codes: CodeDefaut[] = [
       { nom: "Reprogrammation calculateur (atelier agréé)", boutique: "Recommandé avant pièce", prix: "60-120€" },
     ],
   },
+  {
+    code: "P0299",
+    titre: "Sous-pression de suralimentation (turbo)",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — perte de puissance nette",
+    description:
+      "Le calculateur détecte que la pression de suralimentation générée par le turbocompresseur est inférieure à la valeur attendue, ce qui se traduit par une nette perte de puissance, en particulier à l'accélération.",
+    causes: [
+      { pourcentage: 32, libelle: "Fuite dans le circuit d'admission (durites, colliers)" },
+      { pourcentage: 28, libelle: "Électrovanne de commande de wastegate défaillante" },
+      { pourcentage: 22, libelle: "Turbocompresseur usé (jeu excessif, ailettes endommagées)" },
+      { pourcentage: 18, libelle: "Capteur de pression de suralimentation défaillant (fausse mesure)" },
+    ],
+    avisPro:
+      "Vérifier en premier l'étanchéité des durites d'admission sous le capot — une fuite, même petite, est la cause la plus fréquente et la moins coûteuse à corriger avant de suspecter le turbo lui-même.",
+    pieces: [
+      { nom: "Kit durites/colliers admission turbo", boutique: "AutoDoc · livraison 24h", prix: "25-45€" },
+      { nom: "Turbocompresseur (échange standard)", boutique: "Mister-Auto · sur commande", prix: "350-650€" },
+    ],
+  },
+  {
+    code: "P0234",
+    titre: "Surpression de suralimentation (turbo)",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — mode dégradé immédiat",
+    description:
+      "Le calculateur détecte que la pression de suralimentation dépasse la valeur maximale autorisée, ce qui déclenche généralement une réduction de puissance immédiate pour protéger le moteur.",
+    causes: [
+      { pourcentage: 35, libelle: "Électrovanne de wastegate bloquée ou déréglée" },
+      { pourcentage: 28, libelle: "Actionneur de wastegate mécaniquement grippé" },
+      { pourcentage: 22, libelle: "Capteur de pression de suralimentation défaillant (fausse mesure)" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut déclenche une mise en mode dégradé immédiate par sécurité — ne pas forcer sur l'accélérateur, faire vérifier la wastegate avant de reprendre une conduite normale.",
+    pieces: [
+      { nom: "Électrovanne de wastegate", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
+  {
+    code: "P0236",
+    titre: "Capteur de pression de suralimentation — plage/performance",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation du turbo perturbée",
+    description:
+      "Le capteur qui mesure la pression de suralimentation générée par le turbocompresseur envoie un signal cohérent mais qui ne correspond pas exactement à la pression réelle, perturbant la régulation du turbo.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression de suralimentation encrassé ou défaillant" },
+      { pourcentage: 28, libelle: "Durite de prise de pression fissurée" },
+      { pourcentage: 20, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Vérifier la durite reliant le capteur au circuit d'admission avant de remplacer le capteur — une fissure minime suffit à fausser la mesure.",
+    pieces: [
+      { nom: "Capteur de pression de suralimentation", boutique: "Oscaro · livraison 48h", prix: "38€" },
+    ],
+  },
+  {
+    code: "P0243",
+    titre: "Électrovanne de wastegate — circuit B défaut",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sous- ou surpression selon le blocage",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de l'électrovanne qui commande l'ouverture de la wastegate du turbocompresseur, perturbant la régulation de la pression de suralimentation.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de wastegate défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de l'électrovanne endommagé" },
+      { pourcentage: 20, libelle: "Durite pneumatique de commande fissurée ou débranchée" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer aussi bien une perte de puissance qu'une surpression selon la position de blocage de l'électrovanne — à traiter rapidement dans les deux cas.",
+    pieces: [
+      { nom: "Électrovanne de wastegate", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
+  {
+    code: "P2002",
+    titre: "Rendement du filtre à particules (FAP) sous le seuil — Banc 1",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surveiller avant colmatage complet",
+    description:
+      "Le calculateur détecte que le filtre à particules ne retient plus suffisamment de suie par rapport au seuil attendu, ce qui peut annoncer un FAP encrassé, fissuré ou en fin de vie.",
+    causes: [
+      { pourcentage: 35, libelle: "FAP encrassé par une utilisation prolongée en trajets courts (régénérations incomplètes)" },
+      { pourcentage: 28, libelle: "Capteur de pression différentielle FAP défaillant (fausse mesure)" },
+      { pourcentage: 22, libelle: "FAP fissuré ou percé, laissant passer les particules" },
+      { pourcentage: 15, libelle: "Additif FAP (si équipé) épuisé" },
+    ],
+    avisPro:
+      "Un usage principalement urbain empêche les régénérations complètes du FAP — un trajet prolongé sur route ou autoroute permet parfois de relancer une régénération avant d'envisager un remplacement coûteux.",
+    pieces: [
+      { nom: "Filtre à particules (FAP)", boutique: "Mister-Auto · sur commande", prix: "450-900€" },
+    ],
+  },
+  {
+    code: "P2453",
+    titre: "Circuit capteur de pression différentielle FAP — plage/performance",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "faible",
+    severiteLabel: "Gravité faible — suivi du FAP faussé",
+    description:
+      "Le capteur qui mesure la différence de pression avant/après le filtre à particules (pour estimer son colmatage) envoie un signal incohérent, perturbant le suivi de l'état du FAP par le calculateur.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression différentielle encrassé ou défaillant" },
+      { pourcentage: 28, libelle: "Durites de prise de pression bouchées par la suie" },
+      { pourcentage: 20, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Les durites de prise de pression se bouchent progressivement de suie — un nettoyage ou remplacement de ces durites résout souvent ce défaut sans changer le capteur.",
+    pieces: [
+      { nom: "Capteur de pression différentielle FAP", boutique: "Oscaro · livraison 48h", prix: "42€" },
+    ],
+  },
+  {
+    code: "P2459",
+    titre: "Fréquence de régénération FAP trop élevée",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — FAP qui s'encrasse anormalement vite",
+    description:
+      "Le calculateur déclenche les régénérations du filtre à particules plus fréquemment que la normale, signe que le FAP s'encrasse anormalement vite.",
+    causes: [
+      { pourcentage: 35, libelle: "Trajets trop courts empêchant les régénérations de se terminer complètement" },
+      { pourcentage: 28, libelle: "Injecteurs encrassés provoquant une combustion incomplète" },
+      { pourcentage: 22, libelle: "FAP déjà partiellement colmaté" },
+      { pourcentage: 15, libelle: "Capteur de pression différentielle imprécis" },
+    ],
+    avisPro:
+      "Multiplier les trajets courts en ville aggrave ce défaut — un trajet régulier de 20-30 minutes à vitesse stabilisée aide le système à réguler seul les régénérations.",
+    pieces: [
+      { nom: "Nettoyage injecteurs diesel", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P244A",
+    titre: "Pression différentielle FAP trop basse",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — évoque une fuite plutôt qu'un colmatage",
+    description:
+      "La différence de pression mesurée avant/après le filtre à particules est anormalement basse, ce qui peut traduire un FAP fissuré, percé, ou un capteur/durite déconnecté plutôt qu'un colmatage.",
+    causes: [
+      { pourcentage: 35, libelle: "FAP fissuré ou percé (moins de résistance au passage des gaz)" },
+      { pourcentage: 28, libelle: "Durite de prise de pression débranchée ou fissurée" },
+      { pourcentage: 22, libelle: "Capteur de pression différentielle défaillant" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Une pression anormalement basse (contrairement à un colmatage classique) oriente davantage vers une fuite ou une durite débranchée que vers un FAP encrassé — à vérifier avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur de pression différentielle FAP", boutique: "Oscaro · livraison 48h", prix: "42€" },
+    ],
+  },
+  {
+    code: "P244B",
+    titre: "Pression différentielle FAP trop élevée",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — colmatage important",
+    description:
+      "La différence de pression mesurée avant/après le filtre à particules est anormalement élevée, signe d'un colmatage important qui restreint fortement l'échappement des gaz.",
+    causes: [
+      { pourcentage: 40, libelle: "FAP fortement colmaté, proche de l'obstruction complète" },
+      { pourcentage: 28, libelle: "Durite de prise de pression bouchée par la suie" },
+      { pourcentage: 20, libelle: "Régénérations forcées répétées sans succès" },
+      { pourcentage: 12, libelle: "Capteur de pression différentielle défaillant" },
+    ],
+    avisPro:
+      "Un colmatage important peut nécessiter une régénération forcée en atelier, voire un nettoyage ou remplacement du FAP si la situation est trop avancée — ne pas attendre une perte de puissance sévère.",
+    pieces: [
+      { nom: "Régénération forcée FAP (atelier)", boutique: "Recommandé avant pièce", prix: "80-120€" },
+      { nom: "Filtre à particules (FAP)", boutique: "Mister-Auto · sur commande", prix: "450-900€" },
+    ],
+  },
+  {
+    code: "P2463",
+    titre: "Accumulation de suie FAP excessive",
+    categorie: "p24xx",
+    categorieLabel: "FAP & turbo",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — au-delà de ce qu'une régénération normale résorbe",
+    description:
+      "Le calculateur estime, à partir de son modèle de calcul, une accumulation de suie dans le filtre à particules dépassant le seuil critique, au-delà de ce qu'une régénération normale peut résorber.",
+    causes: [
+      { pourcentage: 38, libelle: "FAP jamais régénéré complètement sur une longue période (usage urbain exclusif)" },
+      { pourcentage: 28, libelle: "Panne empêchant les régénérations (capteur, injecteur, EGR)" },
+      { pourcentage: 22, libelle: "FAP en fin de vie" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant (estimation erronée)" },
+    ],
+    avisPro:
+      "Ce défaut est souvent l'aboutissement de plusieurs petits défauts non traités (EGR, injecteurs, trajets courts) — un diagnostic complet du système diesel est préférable à un simple remplacement du FAP.",
+    pieces: [
+      { nom: "Diagnostic système diesel complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
@@ -5411,6 +5623,7 @@ export const categories: Categorie[] = [
   { code: "P01XX", titre: "Carburant & air", desc: "Injection, débit d'air, richesse du mélange.", slug: "p01xx" },
   { code: "P02XX", titre: "Injection", desc: "Circuits injecteurs, pompe et pression carburant.", slug: "p02xx" },
   { code: "P05XX", titre: "Ralenti & régulation", desc: "Régime de ralenti, capteur de vitesse, tension du système.", slug: "p05xx" },
+  { code: "P24XX", titre: "FAP & turbo", desc: "Filtre à particules, pression de suralimentation, wastegate.", slug: "p24xx" },
   { code: "P04XX", titre: "Émissions", desc: "Sonde lambda, EGR, catalyseur.", slug: "p04xx" },
   { code: "U0XXX", titre: "Réseau & calculateurs", desc: "Communication entre modules électroniques.", slug: "u0xxx" },
   { code: "P07XX", titre: "Boîte de vitesses automatique", desc: "Rapports, convertisseur de couple, capteurs de vitesse.", slug: "p07xx" },
