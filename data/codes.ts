@@ -3017,6 +3017,258 @@ export const codes: CodeDefaut[] = [
       { nom: "Contacteur tournant (spirale sous volant)", boutique: "Mister-Auto · sur commande", prix: "55-90€" },
     ],
   },
+  {
+    code: "U1213",
+    titre: "Défaut communication fonction ESP — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — intégration ESP/boîte dégradée",
+    description:
+      "La boîte de vitesses automatique AL4 ne reçoit plus correctement les informations liées à la fonction ESP (intervention stabilité), ce qui peut perturber la gestion du couple transmis aux roues lors d'un freinage d'urgence ou d'une perte d'adhérence.",
+    causes: [
+      { pourcentage: 40, libelle: "Défaut réseau CAN entre calculateur boîte et calculateur ESP" },
+      { pourcentage: 25, libelle: "Calculateur ESP en défaut propre" },
+      { pourcentage: 20, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "Calculateur de boîte AL4 défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité si le calculateur ESP a lui-même un défaut actif — ce code apparaît souvent en conséquence d'une panne ESP, pas de la boîte elle-même.",
+    pieces: [
+      { nom: "Diagnostic réseau boîte/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P1611",
+    titre: "Défaut pression d'huile insuffisante — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque d'usure prématurée de la boîte",
+    description:
+      "Le calculateur de la boîte AL4 détecte une pression hydraulique insuffisante dans le circuit interne, ce qui peut empêcher les électrovannes de commande de fonctionner correctement et provoquer des à-coups ou un mode dégradé.",
+    causes: [
+      { pourcentage: 35, libelle: "Niveau d'huile de boîte insuffisant ou vidange jamais faite" },
+      { pourcentage: 28, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 22, libelle: "Pompe à huile interne de la boîte usée" },
+      { pourcentage: 15, libelle: "Filtre à huile de boîte colmaté" },
+    ],
+    avisPro:
+      "Vérifier le niveau et l'état de l'huile de boîte avant tout — une AL4 jamais vidangée est la cause la plus fréquente de ce défaut, et la vidange seule résout souvent le problème.",
+    pieces: [
+      { nom: "Vidange boîte AL4 + filtre", boutique: "Recommandé avant pièce", prix: "120-180€" },
+    ],
+  },
+  {
+    code: "P1770",
+    titre: "Défaut usure huile par patinage convertisseur — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — usure accélérée des composants internes",
+    description:
+      "Le calculateur a enregistré un patinage prolongé du convertisseur de couple, ce qui accélère l'usure thermique de l'huile de boîte et peut, à terme, endommager les composants internes si la cause n'est pas traitée.",
+    causes: [
+      { pourcentage: 40, libelle: "Électrovanne de pontage du convertisseur défaillante" },
+      { pourcentage: 30, libelle: "Huile de boîte dégradée ou de mauvaise spécification" },
+      { pourcentage: 20, libelle: "Convertisseur de couple usé" },
+      { pourcentage: 10, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est un signal d'alerte cumulatif — une vidange complète avec une huile conforme à la norme constructeur est la première étape avant d'envisager une panne mécanique plus grave.",
+    pieces: [
+      { nom: "Vidange boîte AL4 (huile norme constructeur)", boutique: "Recommandé avant pièce", prix: "120-180€" },
+    ],
+  },
+  {
+    code: "P1762",
+    titre: "Défaut ligne d'affichage tableau de bord — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "faible",
+    severiteLabel: "Gravité faible — généralement un simple défaut d'affichage",
+    description:
+      "Le calculateur de boîte ne parvient plus à transmettre correctement au tableau de bord les informations de position du levier (P, R, N, D) via la ligne d'affichage série dédiée.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage entre calculateur boîte et combiné d'instruments endommagé" },
+      { pourcentage: 30, libelle: "Connecteur du calculateur de boîte oxydé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 10, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est souvent purement une gêne d'affichage sans impact sur le fonctionnement réel de la boîte — vérifier le câblage avant d'envisager une pièce coûteuse.",
+    pieces: [
+      { nom: "Diagnostic ligne série boîte/combiné (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P1747",
+    titre: "Défaut électrovanne de séquence 6 — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — passages de rapport perturbés",
+    description:
+      "L'une des électrovannes internes de la boîte AL4, qui commande l'engagement des différents rapports en pilotant la pression hydraulique, ne répond plus correctement aux ordres du calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Électrovanne de séquence défaillante (bobine coupée)" },
+      { pourcentage: 30, libelle: "Corps de vanne interne encrassé par des dépôts d'huile" },
+      { pourcentage: 20, libelle: "Câblage interne du faisceau de boîte endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Le faisceau interne de l'AL4 est une cause fréquente sur les boîtes à kilométrage élevé — un diagnostic électrique permet de confirmer avant de démonter la boîte.",
+    pieces: [
+      { nom: "Diagnostic électrovannes boîte AL4 (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "P1748",
+    titre: "Défaut électrovanne de régulation du débit échangeur — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — refroidissement de l'huile dégradé",
+    description:
+      "L'électrovanne qui régule le débit d'huile vers l'échangeur de refroidissement de la boîte (radiateur d'huile) ne fonctionne plus correctement, ce qui peut nuire au refroidissement de l'huile de boîte.",
+    causes: [
+      { pourcentage: 35, libelle: "Électrovanne bloquée ou encrassée" },
+      { pourcentage: 30, libelle: "Câblage de l'électrovanne endommagé" },
+      { pourcentage: 20, libelle: "Échangeur de boîte partiellement obstrué" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Un mauvais refroidissement de l'huile accélère l'usure de la boîte — ne pas ignorer ce défaut même s'il ne provoque pas de symptôme immédiat.",
+    pieces: [
+      { nom: "Diagnostic électrovanne échangeur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P1799",
+    titre: "Défaut signal contacteur multifonction — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage ou passage de rapport bloqué possible",
+    description:
+      "Le contacteur multifonction, qui informe le calculateur de la position exacte du levier de vitesses (P, R, N, D, +/-), envoie un signal incohérent — la boîte peut refuser de démarrer ou rester bloquée sur un rapport par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur multifonction déréglé ou défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Tringlerie de sélection de vitesses mal réglée" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier le réglage de la tringlerie de sélection avant de remplacer le contacteur — un mauvais réglage mécanique est une cause fréquente et moins coûteuse à corriger.",
+    pieces: [
+      { nom: "Contacteur multifonction boîte AL4", boutique: "Oscaro · livraison 48h", prix: "65€" },
+    ],
+  },
+  {
+    code: "P1706",
+    titre: "Défaut signal commande manuelle séquentielle — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "faible",
+    severiteLabel: "Gravité faible — seul le mode séquentiel manuel est affecté",
+    description:
+      "Le signal de la commande manuelle séquentielle (mode +/- au levier ou au volant) envoyé au calculateur de boîte est incohérent ou absent, empêchant le passage manuel des rapports.",
+    causes: [
+      { pourcentage: 35, libelle: "Contacteur de la commande séquentielle défaillant" },
+      { pourcentage: 30, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé au niveau du levier ou du volant" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'empêche généralement pas le fonctionnement automatique normal de la boîte — seul le mode séquentiel manuel est affecté.",
+    pieces: [
+      { nom: "Diagnostic commande séquentielle (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "U1310",
+    titre: "Défaut commande électrique de la boîte automatique — AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — gestion électronique des rapports perturbée",
+    description:
+      "Le module de commande électrique de la boîte AL4 signale un défaut de communication interne, ce qui peut affecter la gestion électronique des changements de rapport.",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau CAN interne au module de commande" },
+      { pourcentage: 30, libelle: "Calculateur de boîte défaillant" },
+      { pourcentage: 20, libelle: "Câblage du module de commande endommagé" },
+      { pourcentage: 15, libelle: "Alimentation électrique instable du module" },
+    ],
+    avisPro:
+      "Faire vérifier la tension batterie et les masses du véhicule avant de suspecter le calculateur — une alimentation instable est une cause fréquente de ce type de défaut.",
+    pieces: [
+      { nom: "Diagnostic module commande boîte (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P1750",
+    titre: "Défaut signal commande de vitesses au volant — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "faible",
+    severiteLabel: "Gravité faible — seules les palettes au volant sont affectées",
+    description:
+      "Les palettes ou boutons de changement de rapport situés au volant (mode séquentiel) envoient un signal incohérent au calculateur de boîte, empêchant leur utilisation.",
+    causes: [
+      { pourcentage: 35, libelle: "Palette ou contacteur au volant défaillant" },
+      { pourcentage: 30, libelle: "Câblage du contacteur tournant (spirale sous volant) endommagé" },
+      { pourcentage: 20, libelle: "Connecteur sous le volant oxydé" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier le contacteur tournant sous le volant en priorité — c'est un point de passage de câblage fragile, sujet à l'usure avec les rotations répétées du volant.",
+    pieces: [
+      { nom: "Diagnostic contacteur tournant / palettes (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P1592",
+    titre: "Défaut alimentation électrovannes et régulateurs — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — commande des rapports largement affectée",
+    description:
+      "L'alimentation électrique commune aux électrovannes et régulateurs internes de la boîte AL4 est hors plage, ce qui empêche le calculateur de commander correctement les changements de rapport.",
+    causes: [
+      { pourcentage: 35, libelle: "Fusible dédié grillé" },
+      { pourcentage: 30, libelle: "Câblage d'alimentation interne à la boîte endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de boîte oxydé ou mal enfiché" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Contrôler le fusible et le connecteur principal de la boîte avant tout démontage — une alimentation coupée touche souvent plusieurs électrovannes en même temps, ce qui oriente vers une cause commune plutôt que mécanique.",
+    pieces: [
+      { nom: "Diagnostic alimentation boîte AL4 (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1118",
+    titre: "Défaut communication réseau — boîte AL4 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication inter-calculateurs dégradée",
+    description:
+      "Le calculateur de la boîte AL4 signale une perte ou une dégradation de la communication avec un ou plusieurs autres calculateurs du véhicule via le réseau multiplexé.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 25, libelle: "Connecteur du calculateur de boîte oxydé" },
+      { pourcentage: 20, libelle: "Autre calculateur du réseau en défaut, perturbant le bus" },
+      { pourcentage: 20, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Un défaut réseau isolé sur la boîte oriente vers son câblage propre — un défaut simultané sur plusieurs calculateurs oriente vers le bus lui-même ou une masse commune.",
+    pieces: [
+      { nom: "Diagnostic réseau multiplexé (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
