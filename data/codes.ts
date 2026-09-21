@@ -4656,6 +4656,217 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
     ],
   },
+  {
+    code: "P0100",
+    titre: "Débitmètre d'air (MAF) — dysfonctionnement du circuit",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dosage du mélange air/carburant faussé",
+    description:
+      "Le capteur de débit d'air massique (MAF), qui mesure la quantité d'air aspirée par le moteur pour doser l'injection, envoie un signal totalement absent ou hors plage — le calculateur ne peut plus doser correctement le mélange air/carburant.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur MAF encrassé (poussière, huile de filtre à air mal choisi)" },
+      { pourcentage: 28, libelle: "Capteur MAF défaillant" },
+      { pourcentage: 22, libelle: "Câblage ou connecteur du capteur endommagé" },
+      { pourcentage: 12, libelle: "Fuite d'air en amont ou en aval du capteur" },
+    ],
+    avisPro:
+      "Un nettoyage au spray spécifique MAF résout souvent ce défaut sans remplacement — éviter tout contact avec le fil chaud du capteur, très fragile.",
+    pieces: [
+      { nom: "Nettoyant capteur débitmètre MAF", boutique: "AutoDoc · livraison 24h", prix: "10€" },
+      { nom: "Débitmètre d'air (MAF)", boutique: "Oscaro · livraison 48h", prix: "65€" },
+    ],
+  },
+  {
+    code: "P0106",
+    titre: "Capteur de pression collecteur (MAP) — plage/performance",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — estimation de charge moteur faussée",
+    description:
+      "Le capteur de pression absolue du collecteur d'admission (MAP), qui mesure la dépression pour estimer la charge moteur, envoie un signal incohérent avec les autres paramètres moteur.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur MAP défaillant" },
+      { pourcentage: 28, libelle: "Durite de prise de dépression fissurée ou débranchée" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 15, libelle: "Fuite d'air sur le collecteur d'admission" },
+    ],
+    avisPro:
+      "Vérifier en premier la durite de dépression reliant le capteur au collecteur — une fissure invisible à l'œil nu est une cause très fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur de pression collecteur (MAP)", boutique: "Oscaro · livraison 48h", prix: "35€" },
+    ],
+  },
+  {
+    code: "P0116",
+    titre: "Capteur de température liquide de refroidissement — plage/performance",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — stratégies moteur faussées",
+    description:
+      "Le capteur de température du liquide de refroidissement envoie un signal cohérent mais qui dérive ou ne correspond pas exactement à la température réelle, perturbant la stratégie du calculateur (richesse, ventilateur, chauffage).",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de température encrassé ou vieillissant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Niveau de liquide de refroidissement bas" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Vérifier le niveau de liquide de refroidissement avant tout — un niveau bas expose parfois le capteur à l'air, faussant sa mesure par intermittence.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "AutoDoc · livraison 24h", prix: "16€" },
+    ],
+  },
+  {
+    code: "P0117",
+    titre: "Capteur de température liquide de refroidissement — signal faible",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surconsommation et surveillance thermique faussée",
+    description:
+      "Le capteur de température du liquide de refroidissement envoie un signal anormalement bas, ce qui est interprété par le calculateur comme une température très froide en permanence, faussant l'enrichissement du mélange.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant (court-circuit interne)" },
+      { pourcentage: 28, libelle: "Câblage du capteur en court-circuit vers la masse" },
+      { pourcentage: 20, libelle: "Connecteur du capteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut provoque souvent une surconsommation et un ventilateur de refroidissement qui ne s'enclenche plus correctement — à corriger rapidement pour éviter une surchauffe non détectée.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "AutoDoc · livraison 24h", prix: "16€" },
+    ],
+  },
+  {
+    code: "P0118",
+    titre: "Capteur de température liquide de refroidissement — signal élevé",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ventilateur pouvant tourner en continu",
+    description:
+      "Le capteur de température du liquide de refroidissement envoie un signal anormalement élevé, interprété par le calculateur comme une température très chaude en permanence, ce qui peut déclencher le ventilateur en continu.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant (circuit ouvert)" },
+      { pourcentage: 28, libelle: "Câblage du capteur coupé ou débranché" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un ventilateur de refroidissement qui tourne en permanence, même moteur froid, est le symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "AutoDoc · livraison 24h", prix: "16€" },
+    ],
+  },
+  {
+    code: "P0130",
+    titre: "Circuit sonde lambda — dysfonctionnement (Banc 1, Capteur 1)",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — dosage du mélange non corrigé",
+    description:
+      "La sonde lambda amont du banc 1, qui mesure la teneur en oxygène des gaz d'échappement pour ajuster le dosage du mélange, envoie un signal totalement absent ou hors plage.",
+    causes: [
+      { pourcentage: 38, libelle: "Sonde lambda encrassée ou en fin de vie" },
+      { pourcentage: 28, libelle: "Câblage de la sonde endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la sonde corrodé" },
+      { pourcentage: 14, libelle: "Fuite d'échappement en amont de la sonde" },
+    ],
+    avisPro:
+      "Une fuite d'échappement avant la sonde fausse sa mesure en y introduisant de l'air extérieur — à vérifier avant de remplacer la sonde elle-même.",
+    pieces: [
+      { nom: "Sonde lambda amont", boutique: "Oscaro · livraison 48h", prix: "58€" },
+    ],
+  },
+  {
+    code: "P0136",
+    titre: "Circuit sonde lambda — dysfonctionnement (Banc 1, Capteur 2)",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "faible",
+    severiteLabel: "Gravité faible — surveillance du catalyseur affectée",
+    description:
+      "La sonde lambda aval du banc 1, qui surveille l'efficacité du catalyseur après le passage des gaz, envoie un signal totalement absent ou hors plage.",
+    causes: [
+      { pourcentage: 38, libelle: "Sonde lambda aval défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la sonde endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la sonde corrodé" },
+      { pourcentage: 14, libelle: "Catalyseur en fin de vie perturbant la mesure" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte pas directement la conduite mais peut fausser la surveillance du catalyseur — à corriger avant le contrôle technique.",
+    pieces: [
+      { nom: "Sonde lambda aval", boutique: "Oscaro · livraison 48h", prix: "48€" },
+    ],
+  },
+  {
+    code: "P0137",
+    titre: "Circuit sonde lambda — tension faible (Banc 1, Capteur 2)",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "faible",
+    severiteLabel: "Gravité faible — risque d'échec au contrôle technique",
+    description:
+      "La sonde lambda aval du banc 1 envoie une tension anormalement basse en continu, ce qui peut traduire une sonde fatiguée ou un problème de masse électrique.",
+    causes: [
+      { pourcentage: 35, libelle: "Sonde lambda aval en fin de vie" },
+      { pourcentage: 28, libelle: "Câblage en court-circuit vers la masse" },
+      { pourcentage: 22, libelle: "Connecteur de la sonde endommagé" },
+      { pourcentage: 15, libelle: "Fuite d'échappement perturbant la mesure" },
+    ],
+    avisPro:
+      "Ce défaut est généralement bénin pour la conduite mais peut provoquer un échec au contrôle technique — à corriger avant le passage.",
+    pieces: [
+      { nom: "Sonde lambda aval", boutique: "Oscaro · livraison 48h", prix: "48€" },
+    ],
+  },
+  {
+    code: "P0138",
+    titre: "Circuit sonde lambda — tension élevée (Banc 1, Capteur 2)",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "faible",
+    severiteLabel: "Gravité faible — risque d'échec au contrôle technique",
+    description:
+      "La sonde lambda aval du banc 1 envoie une tension anormalement élevée en continu, ce qui peut traduire une sonde défaillante ou un court-circuit vers l'alimentation.",
+    causes: [
+      { pourcentage: 35, libelle: "Sonde lambda aval défaillante" },
+      { pourcentage: 28, libelle: "Câblage en court-circuit vers le +" },
+      { pourcentage: 22, libelle: "Connecteur de la sonde endommagé" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est généralement bénin pour la conduite mais peut provoquer un échec au contrôle technique — à corriger avant le passage.",
+    pieces: [
+      { nom: "Sonde lambda aval", boutique: "Oscaro · livraison 48h", prix: "48€" },
+    ],
+  },
+  {
+    code: "P0121",
+    titre: "Capteur de position papillon (TPS) — plage/performance",
+    categorie: "p01xx",
+    categorieLabel: "Carburant",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — réponse à l'accélérateur perturbée",
+    description:
+      "Le capteur de position du papillon des gaz envoie un signal cohérent mais qui ne correspond pas exactement à la position réelle attendue par le calculateur, perturbant la réponse à l'accélérateur.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur TPS défaillant ou déréglé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Corps de papillon encrassé perturbant la course mécanique" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit souvent par des à-coups à l'accélération avant d'être détecté — un diagnostic rapide évite une conduite désagréable prolongée.",
+    pieces: [
+      { nom: "Capteur position papillon (TPS)", boutique: "AutoDoc · livraison 24h", prix: "32€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
