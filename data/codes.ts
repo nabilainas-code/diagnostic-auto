@@ -4867,6 +4867,178 @@ export const codes: CodeDefaut[] = [
       { nom: "Capteur position papillon (TPS)", boutique: "AutoDoc · livraison 24h", prix: "32€" },
     ],
   },
+  {
+    code: "P0351",
+    titre: "Circuit bobine d'allumage cylindre 1 — défaut",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de la bobine d'allumage du cylindre 1 (court-circuit, coupure ou signal hors plage), ce qui provoque généralement un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 42, libelle: "Bobine d'allumage du cylindre 1 défaillante" },
+      { pourcentage: 26, libelle: "Bougie d'allumage usée ou encrassée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur de la bobine endommagé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne quasi systématiquement d'un raté d'allumage détecté sur le même cylindre — remplacer la bobine et la bougie ensemble limite le risque de revenir sur le même défaut.",
+    pieces: [
+      { nom: "Bobine d'allumage", boutique: "Oscaro · livraison 48h", prix: "42€" },
+      { nom: "Bougie d'allumage (jeu)", boutique: "AutoDoc · livraison 24h", prix: "24€" },
+    ],
+  },
+  {
+    code: "P0352",
+    titre: "Circuit bobine d'allumage cylindre 2 — défaut",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de la bobine d'allumage du cylindre 2 (court-circuit, coupure ou signal hors plage), ce qui provoque généralement un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 42, libelle: "Bobine d'allumage du cylindre 2 défaillante" },
+      { pourcentage: 26, libelle: "Bougie d'allumage usée ou encrassée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur de la bobine endommagé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne quasi systématiquement d'un raté d'allumage détecté sur le même cylindre — remplacer la bobine et la bougie ensemble limite le risque de revenir sur le même défaut.",
+    pieces: [
+      { nom: "Bobine d'allumage", boutique: "Oscaro · livraison 48h", prix: "42€" },
+      { nom: "Bougie d'allumage (jeu)", boutique: "AutoDoc · livraison 24h", prix: "24€" },
+    ],
+  },
+  {
+    code: "P0353",
+    titre: "Circuit bobine d'allumage cylindre 3 — défaut",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de la bobine d'allumage du cylindre 3 (court-circuit, coupure ou signal hors plage), ce qui provoque généralement un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 42, libelle: "Bobine d'allumage du cylindre 3 défaillante" },
+      { pourcentage: 26, libelle: "Bougie d'allumage usée ou encrassée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur de la bobine endommagé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne quasi systématiquement d'un raté d'allumage détecté sur le même cylindre — remplacer la bobine et la bougie ensemble limite le risque de revenir sur le même défaut.",
+    pieces: [
+      { nom: "Bobine d'allumage", boutique: "Oscaro · livraison 48h", prix: "42€" },
+      { nom: "Bougie d'allumage (jeu)", boutique: "AutoDoc · livraison 24h", prix: "24€" },
+    ],
+  },
+  {
+    code: "P0354",
+    titre: "Circuit bobine d'allumage cylindre 4 — défaut",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — raté d'allumage probable sur ce cylindre",
+    description:
+      "Le calculateur détecte une anomalie électrique sur le circuit de la bobine d'allumage du cylindre 4 (court-circuit, coupure ou signal hors plage), ce qui provoque généralement un raté d'allumage sur ce cylindre.",
+    causes: [
+      { pourcentage: 42, libelle: "Bobine d'allumage du cylindre 4 défaillante" },
+      { pourcentage: 26, libelle: "Bougie d'allumage usée ou encrassée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur de la bobine endommagé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut s'accompagne quasi systématiquement d'un raté d'allumage détecté sur le même cylindre — remplacer la bobine et la bougie ensemble limite le risque de revenir sur le même défaut.",
+    pieces: [
+      { nom: "Bobine d'allumage", boutique: "Oscaro · livraison 48h", prix: "42€" },
+      { nom: "Bougie d'allumage (jeu)", boutique: "AutoDoc · livraison 24h", prix: "24€" },
+    ],
+  },
+  {
+    code: "P0328",
+    titre: "Circuit capteur de cliquetis — signal élevé",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — avance à l'allumage retardée par sécurité",
+    description:
+      "Le capteur de cliquetis, qui détecte les vibrations anormales de combustion (cliquetis moteur) pour adapter l'avance à l'allumage, envoie un signal anormalement élevé en continu.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de cliquetis défaillant" },
+      { pourcentage: 28, libelle: "Câblage en court-circuit vers le +" },
+      { pourcentage: 20, libelle: "Connecteur du capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Sans mesure fiable du cliquetis, le calculateur retarde l'avance par sécurité, ce qui peut réduire légèrement les performances et augmenter la consommation.",
+    pieces: [
+      { nom: "Capteur de cliquetis", boutique: "AutoDoc · livraison 24h", prix: "30€" },
+    ],
+  },
+  {
+    code: "P0336",
+    titre: "Circuit capteur de position vilebrequin — plage/performance",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de calage brutal",
+    description:
+      "Le capteur de position vilebrequin, essentiel pour synchroniser l'allumage et l'injection, envoie un signal présent mais incohérent avec le régime moteur réel, pouvant provoquer des à-coups ou un calage.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de position vilebrequin défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (couronne) endommagée ou encrassée" },
+      { pourcentage: 20, libelle: "Entrefer capteur/cible incorrect" },
+      { pourcentage: 12, libelle: "Câblage du capteur endommagé" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer un calage brutal sans redémarrage possible — à traiter en priorité, ne pas différer l'intervention.",
+    pieces: [
+      { nom: "Capteur de position vilebrequin", boutique: "Oscaro · livraison 48h", prix: "38€" },
+    ],
+  },
+  {
+    code: "P0341",
+    titre: "Circuit capteur de position arbre à cames — plage/performance",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — démarrage difficile et perte de puissance légère",
+    description:
+      "Le capteur de position arbre à cames envoie un signal présent mais incohérent avec le fonctionnement réel du moteur, perturbant la synchronisation de l'injection séquentielle.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de position arbre à cames défaillant" },
+      { pourcentage: 28, libelle: "Cible denture de l'arbre à cames encrassée" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit souvent par un démarrage plus difficile et une perte de puissance légère plutôt qu'un arrêt moteur complet.",
+    pieces: [
+      { nom: "Capteur de position arbre à cames", boutique: "Oscaro · livraison 48h", prix: "36€" },
+    ],
+  },
+  {
+    code: "P0345",
+    titre: "Circuit capteur de position arbre à cames — défaut (Banc 2)",
+    categorie: "p03xx",
+    categorieLabel: "Allumage",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — synchronisation injection banc 2 perturbée",
+    description:
+      "Le capteur de position de l'arbre à cames du banc 2 (moteurs en V ou à plat, deux rangées de cylindres) envoie un signal absent ou incohérent, perturbant la synchronisation de l'injection sur ce banc.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de position arbre à cames (banc 2) défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du capteur endommagé" },
+      { pourcentage: 20, libelle: "Cible denture de l'arbre à cames encrassée" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Sur un moteur à deux bancs, bien identifier lequel est concerné avant de commander la pièce — les capteurs banc 1 et banc 2 ne sont généralement pas interchangeables.",
+    pieces: [
+      { nom: "Capteur de position arbre à cames", boutique: "Oscaro · livraison 48h", prix: "36€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
