@@ -5208,6 +5208,132 @@ export const codes: CodeDefaut[] = [
       { nom: "Pompe à air secondaire", boutique: "Mister-Auto · sur commande", prix: "80-140€" },
     ],
   },
+  {
+    code: "U0073",
+    titre: "Bus de communication du module de commande — coupure",
+    categorie: "u0xxx",
+    categorieLabel: "Réseau",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coupure de communication généralisée possible",
+    description:
+      "Un ou plusieurs calculateurs cessent d'émettre sur le réseau de communication (bus CAN) suite à un taux d'erreurs trop élevé, provoquant une coupure de communication généralisée qui peut désactiver plusieurs fonctions du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Court-circuit sur le réseau CAN" },
+      { pourcentage: 28, libelle: "Câblage du bus endommagé ou coupé" },
+      { pourcentage: 22, libelle: "Calculateur défaillant perturbant l'ensemble du réseau" },
+      { pourcentage: 15, libelle: "Connecteur du réseau mal enfiché" },
+    ],
+    avisPro:
+      "Ce défaut touche généralement plusieurs calculateurs en même temps — identifier lequel a déclenché la coupure en premier permet de cibler la réparation plus efficacement.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0001",
+    titre: "Bus de communication CAN haute vitesse — défaut",
+    categorie: "u0xxx",
+    categorieLabel: "Réseau",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — fonctions essentielles potentiellement touchées",
+    description:
+      "Le réseau de communication CAN haute vitesse, qui relie les calculateurs les plus critiques du véhicule (moteur, boîte, ABS/ESP), présente une anomalie de transmission des données.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN haute vitesse endommagé ou court-circuité" },
+      { pourcentage: 28, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 22, libelle: "Connecteur d'un calculateur mal enfiché ou corrodé" },
+      { pourcentage: 15, libelle: "Calculateur défaillant perturbant le bus" },
+    ],
+    avisPro:
+      "Un défaut sur le bus haute vitesse peut toucher simultanément plusieurs fonctions essentielles — traiter ce défaut en priorité avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN haute vitesse (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0002",
+    titre: "Bus de communication CAN haute vitesse — plage/performance",
+    categorie: "u0xxx",
+    categorieLabel: "Réseau",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — dysfonctionnements intermittents",
+    description:
+      "Le réseau CAN haute vitesse fonctionne mais présente des erreurs de transmission occasionnelles, sans coupure complète, ce qui peut se traduire par des dysfonctionnements intermittents.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus partiellement endommagé" },
+      { pourcentage: 28, libelle: "Connecteur oxydé sur un calculateur du réseau" },
+      { pourcentage: 22, libelle: "Interférence électromagnétique (équipement ajouté mal installé)" },
+      { pourcentage: 15, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Vérifier si un équipement électrique a été ajouté récemment (autoradio, alarme) — une installation non conforme est une cause fréquente d'interférence sur le réseau.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U0109",
+    titre: "Perte de communication avec le module de préchauffage (bougies)",
+    categorie: "u0xxx",
+    categorieLabel: "Réseau",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — démarrage à froid compliqué",
+    description:
+      "Le calculateur moteur ne reçoit plus les informations du module de commande du préchauffage (bougies de préchauffage diesel), ce qui peut compliquer le démarrage à froid.",
+    causes: [
+      { pourcentage: 35, libelle: "Module de préchauffage défaillant" },
+      { pourcentage: 28, libelle: "Câblage entre calculateur moteur et module de préchauffage endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du module corrodé" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un démarrage à froid plus difficile qu'habituellement accompagne souvent ce défaut — à corriger avant l'arrivée de l'hiver.",
+    pieces: [
+      { nom: "Module de préchauffage bougies", boutique: "Mister-Auto · sur commande", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0128",
+    titre: "Perte de communication avec le calculateur de frein de stationnement",
+    categorie: "u0xxx",
+    categorieLabel: "Réseau",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — frein de stationnement électrique affecté",
+    description:
+      "Le réseau ne transmet plus les informations du calculateur de frein de stationnement électrique, ce qui peut empêcher son activation/désactivation automatique ou déclencher un message d'alerte.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de frein de stationnement endommagé" },
+      { pourcentage: 28, libelle: "Calculateur de frein de stationnement défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 15, libelle: "Défaut réseau CAN généralisé" },
+    ],
+    avisPro:
+      "Si le frein de stationnement électrique reste bloqué, ne pas forcer mécaniquement — un diagnostic permet d'identifier la procédure de déblocage de secours propre au véhicule.",
+    pieces: [
+      { nom: "Diagnostic frein de stationnement électrique (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U0300",
+    titre: "Incompatibilité logicielle interne entre calculateurs",
+    categorie: "u0xxx",
+    categorieLabel: "Réseau",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — nécessite une reprogrammation",
+    description:
+      "Le calculateur détecte que la version logicielle d'un autre module du véhicule n'est pas compatible avec la sienne, généralement après le remplacement ou la reprogrammation d'un calculateur.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur remplacé avec une version logicielle incompatible" },
+      { pourcentage: 30, libelle: "Mise à jour logicielle incomplète ou interrompue" },
+      { pourcentage: 15, libelle: "Calculateur d'occasion non recodé pour ce véhicule" },
+      { pourcentage: 10, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut nécessite une reprogrammation à la valise constructeur plutôt qu'un remplacement de pièce — s'assurer que tout calculateur de remplacement est bien recodé pour le véhicule.",
+    pieces: [
+      { nom: "Reprogrammation calculateur (atelier agréé)", boutique: "Recommandé avant pièce", prix: "60-120€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
