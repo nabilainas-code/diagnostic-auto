@@ -5546,6 +5546,343 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic système diesel complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
     ],
   },
+  {
+    code: "C0051",
+    titre: "Circuit capteur d'angle volant — défaut",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP en veille de sécurité",
+    description:
+      "Le capteur d'angle volant, qui informe le calculateur ABS/ESP de l'orientation donnée par le conducteur, envoie un signal absent ou incohérent — l'ESP se met en veille par sécurité.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le volant ou connecteur du contacteur tournant endommagé" },
+      { pourcentage: 20, libelle: "Calibration du capteur non effectuée après une intervention direction" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la direction (crémaillère, colonne), une calibration du capteur d'angle volant à la valise est indispensable pour effacer ce défaut.",
+    pieces: [
+      { nom: "Diagnostic + calibration capteur angle volant (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C0060",
+    titre: "Circuit électrovanne avant gauche n°1 — défaut",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — régulation ABS compromise sur cette roue",
+    description:
+      "La première électrovanne du circuit hydraulique avant gauche, qui régule la pression appliquée sur cette roue lors d'un freinage ABS, présente une anomalie électrique.",
+    causes: [
+      { pourcentage: 40, libelle: "Électrovanne défaillante ou bloquée" },
+      { pourcentage: 28, libelle: "Câblage du bloc hydraulique endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du bloc ABS mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur ABS défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la résistance de l'électrovanne au multimètre permet de confirmer la panne avant d'envisager le remplacement du bloc hydraulique complet.",
+    pieces: [
+      { nom: "Diagnostic électrovanne bloc ABS (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C0121",
+    titre: "Circuit relais des électrovannes — défaut",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP potentiellement désactivés",
+    description:
+      "Le relais qui alimente l'ensemble des électrovannes du bloc hydraulique ABS présente une anomalie électrique, ce qui peut désactiver totalement la régulation ABS/ESP.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais des électrovannes défaillant" },
+      { pourcentage: 28, libelle: "Fusible associé grillé" },
+      { pourcentage: 22, libelle: "Câblage d'alimentation du relais endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS défaillant" },
+    ],
+    avisPro:
+      "Le relais est une pièce peu coûteuse et facilement accessible — à tester et remplacer en premier avant tout autre diagnostic plus poussé.",
+    pieces: [
+      { nom: "Relais électrovannes ABS", boutique: "AutoDoc · livraison 24h", prix: "16€" },
+    ],
+  },
+  {
+    code: "C0128",
+    titre: "Niveau de liquide de frein bas — circuit",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — vérifier fuite et usure avant de rouler",
+    description:
+      "Le capteur de niveau du bocal de liquide de frein détecte un niveau insuffisant, ce qui peut traduire une fuite dans le circuit de freinage ou une usure importante des plaquettes.",
+    causes: [
+      { pourcentage: 40, libelle: "Plaquettes de frein usées (le niveau baisse naturellement en compensation)" },
+      { pourcentage: 28, libelle: "Fuite sur le circuit de freinage (durite, étrier, maître-cylindre)" },
+      { pourcentage: 20, libelle: "Capteur de niveau défaillant (fausse alerte)" },
+      { pourcentage: 12, libelle: "Bocal fissuré" },
+    ],
+    avisPro:
+      "Ne jamais ignorer ce témoin — vérifier immédiatement l'état des plaquettes et l'absence de fuite visible sous le véhicule avant de reprendre la route.",
+    pieces: [
+      { nom: "Liquide de frein DOT4", boutique: "AutoDoc · livraison 24h", prix: "9€" },
+      { nom: "Plaquettes de frein (jeu)", boutique: "Oscaro · livraison 48h", prix: "35€" },
+    ],
+  },
+  {
+    code: "C0141",
+    titre: "Circuit moteur de pompe ABS avant gauche — défaut",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — pression ABS non générée",
+    description:
+      "Le moteur qui entraîne la pompe hydraulique du circuit ABS présente une anomalie électrique, l'empêchant de générer la pression nécessaire à la régulation antiblocage.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de pompe ABS défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du moteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc ABS corrodé" },
+      { pourcentage: 12, libelle: "Calculateur ABS défaillant" },
+    ],
+    avisPro:
+      "Un bruit de pompe anormal (grincement, absence totale de bruit à l'activation) accompagne souvent ce défaut avant qu'il ne soit détecté par le calculateur.",
+    pieces: [
+      { nom: "Diagnostic moteur pompe ABS (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C0186",
+    titre: "Circuit capteur de lacet (gyromètre) — défaut",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — fonction ESP compromise",
+    description:
+      "Le capteur de lacet, qui mesure la rotation du véhicule autour de son axe vertical pour détecter un survirage ou un sous-virage, envoie un signal absent ou incohérent — fonction essentielle de l'ESP.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est souvent logé sous la console centrale — un choc ou un liquide renversé à cet endroit est une cause fréquente et parfois négligée.",
+    pieces: [
+      { nom: "Capteur de lacet (gyromètre)", boutique: "Oscaro · livraison 48h", prix: "68€" },
+    ],
+  },
+  {
+    code: "C0221",
+    titre: "Signal capteur de vitesse roue avant droite — hors plage",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés par sécurité",
+    description:
+      "Le signal du capteur de vitesse de la roue avant droite est présent mais sort de la plage de valeurs cohérente avec les trois autres roues, désactivant l'ABS/ESP par sécurité.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse partiellement défaillant" },
+      { pourcentage: 28, libelle: "Cible denture endommagée ou encrassée" },
+      { pourcentage: 22, libelle: "Pneu de dimension différente des trois autres" },
+      { pourcentage: 12, libelle: "Câblage partiellement endommagé" },
+    ],
+    avisPro:
+      "Vérifier que les 4 pneus sont bien de la même dimension et correctement gonflés — un écart, même après un simple remplacement de pneu, peut déclencher ce défaut.",
+    pieces: [
+      { nom: "Capteur ABS avant droit", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C0245",
+    titre: "Circuit moteur de la pompe — défaut",
+    categorie: "c0xxx",
+    categorieLabel: "Châssis",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS et ESP désactivés ensemble",
+    description:
+      "Le circuit électrique du moteur de pompe du bloc hydraulique ABS/ESP présente une anomalie, empêchant la génération de pression lors d'une intervention active du système.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de pompe défaillant" },
+      { pourcentage: 28, libelle: "Câblage du moteur endommagé" },
+      { pourcentage: 20, libelle: "Fusible ou relais associé grillé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement l'ABS et l'ESP ensemble — à traiter rapidement, la voiture reste freinable mais sans assistance antiblocage.",
+    pieces: [
+      { nom: "Diagnostic moteur pompe ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "B0020",
+    titre: "Circuit airbag conducteur — défaut de déploiement",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag non garanti",
+    description:
+      "Le circuit qui commande le déploiement de l'airbag conducteur présente une anomalie de résistance ou de continuité, ce qui empêche le calculateur de garantir son déclenchement en cas de choc.",
+    causes: [
+      { pourcentage: 42, libelle: "Module gonfleur airbag conducteur défaillant" },
+      { pourcentage: 26, libelle: "Câblage du contacteur tournant (spirale sous volant) endommagé" },
+      { pourcentage: 20, libelle: "Connecteur sous le volant mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité — ne jamais rouler avec ce témoin allumé, faire diagnostiquer dès que possible.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag conducteur (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B0022",
+    titre: "Circuit airbag passager — défaut de déploiement",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag non garanti",
+    description:
+      "Le circuit qui commande le déploiement de l'airbag passager présente une anomalie de résistance ou de continuité, ce qui empêche le calculateur de garantir son déclenchement en cas de choc.",
+    causes: [
+      { pourcentage: 42, libelle: "Module gonfleur airbag passager défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le tableau de bord endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du module mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité du passager avant — à faire diagnostiquer sans attendre.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B0030",
+    titre: "Circuit airbag latéral conducteur — défaut",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag non garanti",
+    description:
+      "Le circuit qui commande le déploiement de l'airbag latéral situé côté conducteur (siège ou portière) présente une anomalie, empêchant son déclenchement garanti lors d'un choc latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Allumeur (gonfleur) airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage dans l'assise du siège endommagé" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de l'airbag latéral passe par l'assise du siège et subit l'usure des réglages répétés — un point à vérifier avant de suspecter le module lui-même.",
+    pieces: [
+      { nom: "Diagnostic airbag latéral conducteur (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B0040",
+    titre: "Circuit airbag latéral passager — défaut",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag non garanti",
+    description:
+      "Le circuit qui commande le déploiement de l'airbag latéral situé côté passager (siège ou portière) présente une anomalie, empêchant son déclenchement garanti lors d'un choc latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Allumeur (gonfleur) airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage dans l'assise du siège endommagé" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de l'airbag latéral passe par l'assise du siège et subit l'usure des réglages répétés — un point à vérifier avant de suspecter le module lui-même.",
+    pieces: [
+      { nom: "Diagnostic airbag latéral passager (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "B0053",
+    titre: "Circuit capteur d'impact avant droit — défaut",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbags frontaux non garanti",
+    description:
+      "Le capteur de choc frontal droit, qui détecte la décélération brutale lors d'un impact pour déclencher les airbags frontaux, envoie un signal incohérent ou absent au calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de choc défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé (zone souvent exposée en cas de choc antérieur)" },
+      { pourcentage: 20, libelle: "Connecteur du capteur mal enfiché ou corrodé" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Après tout choc frontal même léger, ce capteur doit être vérifié — un choc antérieur mal réparé est une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Capteur de choc frontal", boutique: "Oscaro · livraison 48h", prix: "48€" },
+    ],
+  },
+  {
+    code: "B0060",
+    titre: "Circuit capteur d'impact latéral gauche — défaut",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbags latéraux non garanti",
+    description:
+      "Le capteur d'impact latéral gauche, qui détecte un choc sur le côté du véhicule pour déclencher les airbags latéraux et rideaux, envoie un signal incohérent ou absent au calculateur.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage dans la portière ou le pied de caisse endommagé" },
+      { pourcentage: 20, libelle: "Connecteur corrodé (zone humide, bas de caisse)" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de ce capteur passe souvent par la portière ou le seuil — vérifier l'état du faisceau à ces points de passage avant de remplacer le capteur.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "AutoDoc · livraison 24h", prix: "42€" },
+    ],
+  },
+  {
+    code: "B0081",
+    titre: "Circuit contacteur de ceinture conducteur — défaut",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture faussée",
+    description:
+      "Le contacteur qui détecte si la ceinture de sécurité conducteur est bouclée envoie un signal incohérent, perturbant l'alerte sonore/visuelle de rappel et potentiellement la stratégie de déploiement des airbags.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage au niveau de la boucle de ceinture endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit souvent par une alerte de ceinture qui reste allumée ou clignote alors que la ceinture est bien bouclée — un remplacement du contacteur résout généralement le problème.",
+    pieces: [
+      { nom: "Contacteur de ceinture de sécurité", boutique: "Oscaro · livraison 48h", prix: "32€" },
+    ],
+  },
+  {
+    code: "B0100",
+    titre: "Défaut de communication du calculateur airbag",
+    categorie: "b0xxx",
+    categorieLabel: "Sécurité",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — voyant airbag potentiellement permanent",
+    description:
+      "Le calculateur airbag ne parvient plus à communiquer correctement sur le réseau du véhicule, ce qui peut le priver d'informations essentielles et déclencher un voyant airbag permanent.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau vers le calculateur airbag endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur airbag oxydé" },
+      { pourcentage: 22, libelle: "Défaut réseau généralisé (autre calculateur en cause)" },
+      { pourcentage: 15, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Vérifier si d'autres calculateurs affichent aussi des défauts réseau au même moment — ce code est souvent la conséquence d'un problème réseau plus large.",
+    pieces: [
+      { nom: "Diagnostic réseau calculateur airbag (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
