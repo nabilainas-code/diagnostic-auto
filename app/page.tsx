@@ -105,10 +105,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <footer className="border-t border-line px-6 py-8 text-center text-muted text-sm mt-10">
-        © 2026 Panne Résolue — Diagnostic à titre indicatif. Consultez un professionnel pour toute réparation.
-      </footer>
     </>
   );
 }

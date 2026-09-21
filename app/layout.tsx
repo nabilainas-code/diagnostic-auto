@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://panne-resolue.fr"),
   title: "Panne Résolue — Diagnostic auto et pièces au bon prix",
   description:
     "Entrez un code défaut ou votre plaque d'immatriculation. On identifie le problème, la pièce concernée, et où l'acheter au meilleur prix.",
@@ -19,7 +21,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
