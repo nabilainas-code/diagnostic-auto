@@ -1188,6 +1188,310 @@ export const codes: CodeDefaut[] = [
       { nom: "Témoin airbag passager", boutique: "Oscaro · livraison 48h", prix: "28€" },
     ],
   },
+
+  // Codes propriétaires PSA — Peugeot/Citroën/DS (BSI + boîte AL4)
+  {
+    code: "F9E2",
+    titre: "Pas de communication avec le lève-vitre électrique avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — roulable, vitre concernée hors service",
+    description:
+      "Le BSI (Boîtier de Servitude Intelligent) ne reçoit plus de réponse du module de lève-vitre électrique avant gauche. Ce code est spécifique aux Peugeot et Citroën équipées d'un BSI — il n'existe pas sur les autres marques.",
+    causes: [
+      { pourcentage: 35, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur de porte avant gauche endommagé" },
+      { pourcentage: 20, libelle: "Module lève-vitre intégré défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le câblage dans la gaine de porte (zone de flexion fréquente, cause d'usure classique) avant de remplacer le moteur ou le module.",
+    pieces: [
+      { nom: "Moteur lève-vitre avant gauche", boutique: "Oscaro · livraison 48h", prix: "48€" },
+      { nom: "Faisceau de porte avant gauche", boutique: "Mister-Auto · sur commande", prix: "62€" },
+    ],
+  },
+  {
+    code: "F02F",
+    titre: "Absence de communication avec le(s) moteur(s) d'essuie-glace",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — à traiter rapidement selon météo",
+    description:
+      "Le BSI ne détecte plus de réponse du ou des moteurs d'essuie-glace, qui communiquent en réseau LIN sur les modèles récents. Spécifique aux Peugeot/Citroën.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur d'essuie-glace défaillant" },
+      { pourcentage: 27, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 15, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié en premier — c'est le contrôle le plus rapide avant de démonter quoi que ce soit.",
+    pieces: [
+      { nom: "Moteur essuie-glace", boutique: "AutoDoc · livraison 24h", prix: "54€" },
+      { nom: "Fusible essuie-glace", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+    ],
+  },
+  {
+    code: "F4AE",
+    titre: "Défaut de verrouillage des portes et du hayon",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité du véhicule au stationnement affectée",
+    description:
+      "Le système de centralisation ne parvient pas à verrouiller correctement les portes et le hayon. Le défaut peut venir d'une seule serrure ou de l'ensemble du circuit.",
+    causes: [
+      { pourcentage: 35, libelle: "Serrure électrique défaillante sur une porte" },
+      { pourcentage: 28, libelle: "Câblage de centralisation endommagé" },
+      { pourcentage: 22, libelle: "Moteur de verrouillage du hayon défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Identifier la porte concernée en testant le verrouillage une par une — ça oriente directement vers la bonne serrure sans tout démonter.",
+    pieces: [
+      { nom: "Serrure électrique de porte", boutique: "Oscaro · livraison 48h", prix: "56€" },
+      { nom: "Moteur de verrouillage hayon", boutique: "Mister-Auto · sur commande", prix: "68€" },
+    ],
+  },
+  {
+    code: "F527",
+    titre: "Défaut immobiliseur codé — transpondeur reconnu",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de refus de démarrer",
+    description:
+      "L'antidémarrage reconnaît bien le transpondeur de la clé mais détecte une anomalie dans la suite de la procédure de déverrouillage moteur — souvent un souci de communication interne plutôt que la clé elle-même.",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut de communication entre le BSI et le calculateur moteur" },
+      { pourcentage: 25, libelle: "Antenne de reconnaissance de clé défaillante" },
+      { pourcentage: 25, libelle: "Code antidémarrage désynchronisé côté calculateur moteur" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Faire reprogrammer la synchronisation antidémarrage par un professionnel équipé avant d'envisager un remplacement de pièce — c'est souvent un problème logiciel, pas matériel.",
+    pieces: [
+      { nom: "Antenne transpondeur antidémarrage", boutique: "Mister-Auto · sur commande", prix: "74€" },
+    ],
+  },
+  {
+    code: "F4BA",
+    titre: "Défaut du système d'immobilisation électronique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de refus de démarrer",
+    description:
+      "Défaut général du système antidémarrage électronique, distinct de F527 — ici c'est le module lui-même qui est mis en cause plutôt qu'un problème de reconnaissance de clé.",
+    causes: [
+      { pourcentage: 40, libelle: "Module antidémarrage défaillant" },
+      { pourcentage: 30, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 20, libelle: "BSI défaillant" },
+      { pourcentage: 10, libelle: "Alimentation du module défaillante" },
+    ],
+    avisPro:
+      "Diagnostic à la valise constructeur recommandé pour distinguer un vrai défaut matériel d'un simple besoin de reprogrammation.",
+    pieces: [
+      { nom: "Module antidémarrage électronique", boutique: "Mister-Auto · sur commande", prix: "115€" },
+    ],
+  },
+  {
+    code: "F4D6",
+    titre: "Défaut d'éclairage du tableau de bord",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — visibilité de nuit affectée uniquement",
+    description:
+      "L'éclairage du tableau de bord (rétroéclairage des compteurs) ne fonctionne plus correctement — n'affecte pas le fonctionnement des instruments eux-mêmes, seulement leur visibilité de nuit.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoules ou LED de rétroéclairage défaillantes" },
+      { pourcentage: 30, libelle: "Câblage du combiné d'instruments endommagé" },
+      { pourcentage: 15, libelle: "Variateur d'intensité (rhéostat) défaillant" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le réglage de la molette de luminosité du tableau de bord avant tout diagnostic — un réglage à zéro est parfois pris pour une panne.",
+    pieces: [
+      { nom: "Kit LED rétroéclairage tableau de bord", boutique: "AutoDoc · livraison 24h", prix: "19€" },
+    ],
+  },
+  {
+    code: "F045",
+    titre: "Calculateur non communicant sur le réseau CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — plusieurs fonctions du véhicule peuvent être affectées",
+    description:
+      "Le BSI signale qu'un calculateur du véhicule ne répond plus sur le réseau CAN. Ce code générique PSA apparaît souvent en complément d'un autre défaut plus précis identifiant quel calculateur est concerné.",
+    causes: [
+      { pourcentage: 30, libelle: "Fusible ou alimentation du calculateur concerné défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bus CAN endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur corrodé" },
+      { pourcentage: 20, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Lire l'ensemble des défauts stockés pour identifier quel calculateur précis est en cause avant d'intervenir — F045 seul ne suffit pas à cibler la panne.",
+    pieces: [
+      { nom: "Fusible calculateur", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+      { nom: "Connecteur calculateur", boutique: "Oscaro · livraison 48h", prix: "21€" },
+    ],
+  },
+  {
+    code: "F01C",
+    titre: "Pas de communication avec l'ABS / contrôle de stabilité (ESP)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP potentiellement désactivés",
+    description:
+      "Le BSI ne reçoit plus d'informations du calculateur ABS/ESP. Comme pour le code générique U0121, ça désactive les aides à la conduite par sécurité, mais avec la nomenclature propriétaire PSA.",
+    causes: [
+      { pourcentage: 30, libelle: "Fusible ABS/ESP grillé" },
+      { pourcentage: 28, libelle: "Câblage du bus CAN vers le calculateur ABS endommagé" },
+      { pourcentage: 22, libelle: "Connecteur ABS corrodé" },
+      { pourcentage: 20, libelle: "Calculateur ABS défaillant" },
+    ],
+    avisPro:
+      "Vérifier fusible et connecteur avant tout remplacement du calculateur ABS — traitement prioritaire vu l'enjeu sécurité.",
+    pieces: [
+      { nom: "Fusible ABS", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+      { nom: "Connecteur calculateur ABS", boutique: "Oscaro · livraison 48h", prix: "26€" },
+    ],
+  },
+  {
+    code: "F4B2",
+    titre: "Défaut de commande de surcondamnation (mode piloté)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — verrouillage simple toujours fonctionnel",
+    description:
+      "Le verrouillage renforcé des portes (surcondamnation) en mode piloté par le véhicule ne fonctionne plus — les portes se verrouillent normalement mais pas la fonction de sécurité renforcée.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de surcondamnation défaillant" },
+      { pourcentage: 30, libelle: "Câblage dédié endommagé" },
+      { pourcentage: 20, libelle: "BSI défaillant" },
+      { pourcentage: 10, libelle: "Fonction désactivée par erreur lors d'une précédente intervention" },
+    ],
+    avisPro:
+      "Vérifier si la fonction a été désactivée par erreur lors d'une précédente reprogrammation du BSI avant de suspecter une panne matérielle.",
+    pieces: [
+      { nom: "Moteur de surcondamnation", boutique: "Mister-Auto · sur commande", prix: "58€" },
+    ],
+  },
+  {
+    code: "F528",
+    titre: "Absence de commande du démarreur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — véhicule immobilisé",
+    description:
+      "Le BSI ne parvient pas à envoyer la commande d'activation au démarreur, ce qui empêche le véhicule de démarrer même si l'antidémarrage a validé la clé.",
+    causes: [
+      { pourcentage: 35, libelle: "Relais de démarreur défaillant" },
+      { pourcentage: 28, libelle: "Câblage de commande démarreur endommagé" },
+      { pourcentage: 22, libelle: "Démarreur lui-même défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Tester le relais de démarreur en premier — c'est une pièce peu coûteuse et fréquemment en cause avant de suspecter le démarreur complet.",
+    pieces: [
+      { nom: "Relais démarreur", boutique: "AutoDoc · livraison 24h", prix: "12€" },
+      { nom: "Démarreur", boutique: "Mister-Auto · sur commande", prix: "168€" },
+    ],
+  },
+  {
+    code: "P1167",
+    titre: "Défaut de régulation de pression — boîte AL4",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — à-coups possibles lors des changements de rapport",
+    description:
+      "Spécifique à la boîte automatique AL4 (Peugeot/Citroën), ce code indique un écart entre la pression hydraulique mesurée et la valeur attendue par le calculateur de boîte.",
+    causes: [
+      { pourcentage: 35, libelle: "Solénoïde de régulation de pression défaillant" },
+      { pourcentage: 28, libelle: "Niveau ou qualité d'huile de boîte incorrecte" },
+      { pourcentage: 22, libelle: "Pompe à huile de boîte faible" },
+      { pourcentage: 15, libelle: "Capteur de pression défaillant" },
+    ],
+    avisPro:
+      "Contrôler le niveau et l'état de l'huile AL4 en premier — c'est la vérification la plus rapide et la plus fréquemment en cause.",
+    pieces: [
+      { nom: "Vidange boîte AL4 + filtre", boutique: "AutoDoc · livraison 24h", prix: "48€" },
+      { nom: "Solénoïde régulation pression", boutique: "Mister-Auto · sur commande", prix: "85€" },
+    ],
+  },
+  {
+    code: "P1727",
+    titre: "Défaut de cohérence — information couple moteur (CAN) — boîte AL4",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — roulable, à traiter rapidement",
+    description:
+      "Le calculateur de boîte AL4 détecte une incohérence dans les informations de couple moteur transmises par le calculateur moteur via le réseau CAN — un problème de communication plutôt qu'un défaut mécanique de la boîte.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN entre calculateurs endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur avec version logicielle incompatible" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur de boîte corrodé" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier la cohérence des versions logicielles entre calculateur moteur et calculateur de boîte — un défaut de compatibilité après une intervention est une cause fréquente.",
+    pieces: [
+      { nom: "Connecteur calculateur boîte AL4", boutique: "Oscaro · livraison 48h", prix: "24€" },
+    ],
+  },
+  {
+    code: "U1003",
+    titre: "Défaut de communication CAN — absence de signal — boîte AL4",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — boîte potentiellement en mode dégradé",
+    description:
+      "Le calculateur de boîte AL4 ne reçoit plus aucun signal sur le réseau CAN, contrairement à un simple défaut d'interférence — la ligne semble totalement coupée.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du bus CAN sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Fusible ou alimentation du calculateur de boîte défaillant" },
+      { pourcentage: 20, libelle: "Connecteur du calculateur de boîte débranché" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Contrôler physiquement les connecteurs du calculateur de boîte AL4 (souvent situé près de la boîte elle-même) avant tout diagnostic électronique plus poussé.",
+    pieces: [
+      { nom: "Connecteur calculateur boîte AL4", boutique: "Oscaro · livraison 48h", prix: "24€" },
+      { nom: "Fusible calculateur boîte", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+    ],
+  },
+  {
+    code: "C1395",
+    titre: "Défaut signal contacteur kick-down — boîte AL4",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "faible",
+    severiteLabel: "Gravité faible — perte de la fonction kick-down uniquement",
+    description:
+      "Le contacteur kick-down (qui déclenche une rétrogradation rapide quand on enfonce l'accélérateur à fond) envoie un signal incohérent. La boîte continue de fonctionner normalement, seule cette fonction spécifique est affectée.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur kick-down déréglé ou défaillant" },
+      { pourcentage: 30, libelle: "Câblage de la pédale d'accélérateur endommagé" },
+      { pourcentage: 18, libelle: "Faux contact au niveau de la pédale" },
+      { pourcentage: 10, libelle: "Calculateur de boîte défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le réglage mécanique du contacteur sous la pédale d'accélérateur avant de le remplacer — un simple ajustement suffit parfois.",
+    pieces: [
+      { nom: "Contacteur kick-down", boutique: "Mister-Auto · sur commande", prix: "44€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
@@ -1268,6 +1572,7 @@ export const categories: Categorie[] = [
   { code: "P07XX", titre: "Boîte de vitesses automatique", desc: "Rapports, convertisseur de couple, capteurs de vitesse.", slug: "p07xx" },
   { code: "C0XXX", titre: "Châssis & ABS/ESP", desc: "Freinage, capteurs de roue, stabilité du véhicule.", slug: "c0xxx" },
   { code: "B0XXX", titre: "Carrosserie & sécurité", desc: "Airbags, prétensionneurs, capteurs d'impact.", slug: "b0xxx" },
+  { code: "PSA", titre: "Codes propriétaires PSA", desc: "Peugeot, Citroën, DS — BSI et boîte AL4, spécifiques au constructeur.", slug: "psa" },
 ];
 
 export function getCategorieBySlug(slug: string): Categorie | undefined {
