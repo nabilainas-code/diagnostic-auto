@@ -1995,6 +1995,256 @@ export const codes: CodeDefaut[] = [
       { nom: "Capteur pédale d'accélérateur", boutique: "AutoDoc · livraison 24h", prix: "68€" },
     ],
   },
+  {
+    code: "F032",
+    titre: "Défaut capteur de pluie/luminosité",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonctions automatiques désactivées, commande manuelle OK",
+    description:
+      "Le capteur combiné pluie/luminosité (situé derrière le rétroviseur intérieur) présente un défaut. Ça désactive le déclenchement automatique des essuie-glaces et de l'allumage des feux, sans empêcher leur commande manuelle.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur pluie/luminosité défaillant" },
+      { pourcentage: 25, libelle: "Pare-brise mal recollé après remplacement (décalage du capteur)" },
+      { pourcentage: 20, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Après un remplacement de pare-brise, vérifier que le capteur a bien été recollé à la bonne position — c'est une cause très fréquente de ce défaut.",
+    pieces: [
+      { nom: "Capteur pluie/luminosité", boutique: "Oscaro · livraison 48h", prix: "42€" },
+    ],
+  },
+  {
+    code: "F4C9",
+    titre: "Défaut d'éclairage du feu antibrouillard arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — obligatoire par temps de brouillard",
+    description:
+      "Le feu antibrouillard arrière droit ne s'allume plus correctement. Cet équipement est obligatoire et son absence de fonctionnement peut être sanctionnée en cas de contrôle par mauvaise visibilité.",
+    causes: [
+      { pourcentage: 55, libelle: "Ampoule d'antibrouillard arrière grillée" },
+      { pourcentage: 25, libelle: "Douille ou connecteur oxydé" },
+      { pourcentage: 15, libelle: "Câblage endommagé" },
+      { pourcentage: 5, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier l'ampoule en premier — c'est la cause la plus fréquente et la moins chère à corriger.",
+    pieces: [
+      { nom: "Ampoule antibrouillard arrière", boutique: "AutoDoc · livraison 24h", prix: "5€" },
+    ],
+  },
+  {
+    code: "F4AB",
+    titre: "Défaut de commande du groupe motoventilateur de refroidissement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de surchauffe moteur",
+    description:
+      "Le ventilateur de refroidissement (qui aide à évacuer la chaleur du radiateur, notamment à l'arrêt ou à basse vitesse) ne reçoit plus sa commande correctement. Un ventilateur qui ne se déclenche pas expose le moteur à la surchauffe.",
+    causes: [
+      { pourcentage: 35, libelle: "Module de commande du ventilateur défaillant" },
+      { pourcentage: 25, libelle: "Moteur du groupe motoventilateur grillé" },
+      { pourcentage: 22, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 18, libelle: "Fusible ou relais dédié défaillant" },
+    ],
+    avisPro:
+      "Surveiller la température moteur de près en attendant la réparation — éviter les arrêts prolongés moteur tournant (embouteillages, péages) tant que le défaut n'est pas corrigé.",
+    pieces: [
+      { nom: "Groupe motoventilateur", boutique: "Mister-Auto · sur commande", prix: "145€" },
+      { nom: "Module de commande ventilateur", boutique: "Oscaro · livraison 48h", prix: "68€" },
+    ],
+  },
+  {
+    code: "F730",
+    titre: "Défaut de fonctionnement du pulseur d'air (mode dégradé)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation en mode dégradé, pas de risque",
+    description:
+      "Le module de commande du pulseur d'air de l'habitacle fonctionne en mode dégradé (boucle ouverte) — le pulseur souffle toujours de l'air mais sans la régulation fine habituelle des vitesses.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de commande du pulseur défaillant" },
+      { pourcentage: 30, libelle: "Câblage du pulseur endommagé" },
+      { pourcentage: 20, libelle: "Résistance ou variateur du pulseur défaillant" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Contrôler le variateur/module de puissance du pulseur avant de remplacer le moteur du pulseur lui-même, rarement en cause.",
+    pieces: [
+      { nom: "Module de commande pulseur d'air", boutique: "Oscaro · livraison 48h", prix: "54€" },
+    ],
+  },
+  {
+    code: "F731",
+    titre: "Blocage du rotor du pulseur d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation réduite ou absente",
+    description:
+      "Le rotor du pulseur d'air de l'habitacle est physiquement bloqué, empêchant la ventilation de fonctionner normalement.",
+    causes: [
+      { pourcentage: 50, libelle: "Corps étranger (feuille, débris) bloquant le rotor" },
+      { pourcentage: 30, libelle: "Roulement du pulseur grippé" },
+      { pourcentage: 20, libelle: "Moteur du pulseur défaillant" },
+    ],
+    avisPro:
+      "Vérifier la prise d'air extérieure (souvent sous le pare-brise) pour des feuilles ou débris avant de démonter le pulseur — cause très fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Moteur pulseur d'air habitacle", boutique: "AutoDoc · livraison 24h", prix: "62€" },
+    ],
+  },
+  {
+    code: "F09B",
+    titre: "Absence de communication avec la sirène d'alarme",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — système antivol affecté, pas de risque mécanique",
+    description:
+      "Le BSI ne communique plus avec la sirène autonome du système d'alarme antivol. Le véhicule reste utilisable normalement, seule la protection antivol est concernée.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie interne de la sirène autonome déchargée" },
+      { pourcentage: 30, libelle: "Câblage vers la sirène endommagé" },
+      { pourcentage: 20, libelle: "Sirène défaillante" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Sur les sirènes autonomes (avec batterie de secours), une batterie interne déchargée après plusieurs années est la cause la plus fréquente.",
+    pieces: [
+      { nom: "Sirène d'alarme autonome", boutique: "Mister-Auto · sur commande", prix: "78€" },
+    ],
+  },
+  {
+    code: "FEE4",
+    titre: "Défaut de communication entre la sirène et le système d'alarme",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — système antivol affecté, pas de risque mécanique",
+    description:
+      "Défaut similaire à F09B mais côté protocole de communication entre le calculateur d'alarme et la sirène, plutôt qu'une absence totale de liaison.",
+    causes: [
+      { pourcentage: 35, libelle: "Sirène défaillante ou mal appairée" },
+      { pourcentage: 30, libelle: "Câblage endommagé" },
+      { pourcentage: 20, libelle: "Batterie interne de la sirène faible" },
+      { pourcentage: 15, libelle: "Calculateur d'alarme défaillant" },
+    ],
+    avisPro:
+      "Un réappairage de la sirène avec le calculateur d'alarme (procédure spécifique constructeur) résout parfois le défaut sans remplacement de pièce.",
+    pieces: [
+      { nom: "Sirène d'alarme autonome", boutique: "Mister-Auto · sur commande", prix: "78€" },
+    ],
+  },
+  {
+    code: "F362",
+    titre: "Défaut témoin de désactivation airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — à vérifier, enjeu sécurité enfant",
+    description:
+      "Le témoin qui indique si l'airbag passager est désactivé (utile avec un siège enfant dos à la route) présente un défaut. Il est important de vérifier l'état réel de l'airbag plutôt que de se fier uniquement au témoin.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED du témoin défaillante" },
+      { pourcentage: 30, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 20, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Faire vérifier l'état réel d'activation/désactivation de l'airbag passager par un professionnel avant d'installer un siège enfant dos à la route — ne pas se fier uniquement au témoin en cas de doute.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Mister-Auto · sur commande", prix: "62€" },
+    ],
+  },
+  {
+    code: "F704",
+    titre: "Défaut capteur d'ensoleillement côté conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation automatique moins précise",
+    description:
+      "Le capteur d'ensoleillement (qui détecte l'intensité et la direction du soleil pour ajuster la climatisation automatique bi-zone) côté conducteur envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 50, libelle: "Capteur d'ensoleillement défaillant" },
+      { pourcentage: 30, libelle: "Câblage du capteur (souvent sur la planche de bord) endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+    ],
+    avisPro:
+      "Défaut mineur qui n'affecte que la précision de la climatisation automatique — peut attendre sans risque.",
+    pieces: [
+      { nom: "Capteur d'ensoleillement", boutique: "Oscaro · livraison 48h", prix: "36€" },
+    ],
+  },
+  {
+    code: "F714",
+    titre: "Défaut capteur de qualité d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recirculation automatique moins efficace",
+    description:
+      "Le capteur de qualité d'air (qui déclenche automatiquement la recirculation en cas de pollution extérieure détectée, tunnels, embouteillages) ne fonctionne plus correctement.",
+    causes: [
+      { pourcentage: 50, libelle: "Capteur de qualité d'air défaillant" },
+      { pourcentage: 30, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+    ],
+    avisPro:
+      "En attendant la réparation, la recirculation peut toujours être activée manuellement depuis les commandes de climatisation.",
+    pieces: [
+      { nom: "Capteur de qualité d'air", boutique: "Mister-Auto · sur commande", prix: "48€" },
+    ],
+  },
+  {
+    code: "U1108",
+    titre: "Défaut communication boîte automatique — calculateur moteur — pas de signal — boîte AL4",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AL4",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de mode dégradé de la boîte",
+    description:
+      "Le calculateur de boîte AL4 ne reçoit plus aucun signal du calculateur moteur, contrairement à un simple défaut d'interférence — la communication semble totalement coupée entre les deux calculateurs.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du bus CAN entre calculateur moteur et boîte sectionné" },
+      { pourcentage: 27, libelle: "Fusible ou alimentation de l'un des deux calculateurs défaillant" },
+      { pourcentage: 20, libelle: "Connecteur débranché ou corrodé" },
+      { pourcentage: 15, libelle: "Calculateur moteur ou de boîte défaillant" },
+    ],
+    avisPro:
+      "Contrôler physiquement les connecteurs des deux calculateurs avant tout diagnostic électronique plus poussé — un connecteur mal enfiché après une intervention est une cause fréquente.",
+    pieces: [
+      { nom: "Connecteur calculateur boîte AL4", boutique: "Oscaro · livraison 48h", prix: "24€" },
+    ],
+  },
+  {
+    code: "C1325",
+    titre: "Info vitesse roue arrière gauche non reçue par le CAN (ABS) — boîte AM6",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP et logique de boîte potentiellement affectés",
+    description:
+      "Le calculateur de boîte AM6 utilise les informations de vitesse de roue transmises par le calculateur ABS via le réseau CAN pour affiner ses changements de rapport. Ici, l'information de la roue arrière gauche n'est pas reçue.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue arrière gauche défaillant (côté ABS)" },
+      { pourcentage: 27, libelle: "Câblage du capteur ABS endommagé" },
+      { pourcentage: 20, libelle: "Câblage du bus CAN entre ABS et boîte endommagé" },
+      { pourcentage: 15, libelle: "Calculateur ABS ou de boîte défaillant" },
+    ],
+    avisPro:
+      "Commencer le diagnostic côté ABS (capteur de roue arrière gauche) plutôt que côté boîte — c'est la source de l'information manquante.",
+    pieces: [
+      { nom: "Capteur ABS arrière gauche", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
