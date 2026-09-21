@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import ShareButton from "@/components/ShareButton";
 import { getCodeByCode, normalizeCode, diagnoseCode, codes } from "@/data/codes";
 
 const sevStyle = {
@@ -117,8 +118,11 @@ export default async function CodePage({
           </div>
           <div>
             <h1 className="font-display font-semibold text-2xl sm:text-[1.7rem] leading-tight">{dtc.titre}</h1>
-            <div className={`inline-flex items-center gap-1.5 mt-2.5 text-sm px-3 py-1.5 rounded-full font-medium ${sevStyle[dtc.severite]}`}>
-              ● {dtc.severiteLabel}
+            <div className="flex items-center gap-2.5 mt-2.5 flex-wrap">
+              <div className={`inline-flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-full font-medium ${sevStyle[dtc.severite]}`}>
+                ● {dtc.severiteLabel}
+              </div>
+              <ShareButton code={dtc.code} titre={dtc.titre} />
             </div>
           </div>
         </div>
