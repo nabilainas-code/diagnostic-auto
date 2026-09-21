@@ -8361,6 +8361,635 @@ export const codes: CodeDefaut[] = [
       { nom: "Troisième feu stop (LED)", boutique: "Oscaro · livraison 48h", prix: "45€" },
     ],
   },
+  {
+    code: "F4D9",
+    titre: "Défaut commande d'ouverture du coffre — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ouverture manuelle généralement préservée",
+    description:
+      "La commande électrique d'ouverture du coffre (bouton dédié ou télécommande) envoie un signal incohérent au BSI, ce qui peut empêcher l'ouverture électrique sans affecter l'ouverture manuelle à la clé.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton ou contacteur d'ouverture défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la commande corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'ouverture manuelle du coffre à la clé reste généralement possible en attendant le diagnostic.",
+    pieces: [
+      { nom: "Diagnostic commande ouverture coffre (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4DD",
+    titre: "Défaut commande impulsionnelle montée vitre arrière droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle généralement préservée",
+    description:
+      "La fonction de montée automatique en une seule impulsion de la vitre arrière droite ne répond plus, sans forcément affecter la commande manuelle classique (maintien du bouton).",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de lève-vitre fatigué (protection anti-pincement déclenchée)" },
+      { pourcentage: 28, libelle: "Bouton de commande défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Réinitialiser l'apprentissage de la vitre (vitre fermée, maintenir le bouton quelques secondes) résout souvent ce défaut sans intervention mécanique.",
+    pieces: [
+      { nom: "Diagnostic lève-vitre arrière droit (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4DE",
+    titre: "Défaut commande impulsionnelle descente vitre arrière droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle généralement préservée",
+    description:
+      "La fonction de descente automatique en une seule impulsion de la vitre arrière droite ne répond plus, sans forcément affecter la commande manuelle classique (maintien du bouton).",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de lève-vitre fatigué (protection anti-pincement déclenchée)" },
+      { pourcentage: 28, libelle: "Bouton de commande défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Réinitialiser l'apprentissage de la vitre (vitre fermée, maintenir le bouton quelques secondes) résout souvent ce défaut sans intervention mécanique.",
+    pieces: [
+      { nom: "Diagnostic lève-vitre arrière droit (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4DF",
+    titre: "Défaut commande impulsionnelle vitre avant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle généralement préservée",
+    description:
+      "La fonction de montée ou descente automatique en une seule impulsion d'une vitre avant ne répond plus, sans forcément affecter la commande manuelle classique (maintien du bouton).",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de lève-vitre fatigué (protection anti-pincement déclenchée)" },
+      { pourcentage: 28, libelle: "Bouton de commande défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Réinitialiser l'apprentissage de la vitre (vitre fermée, maintenir le bouton quelques secondes) résout souvent ce défaut sans intervention mécanique.",
+    pieces: [
+      { nom: "Diagnostic lève-vitre avant (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4E1",
+    titre: "Défaut prise 12V ou allume-cigare — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "La sortie d'alimentation 12V (prise allume-cigare ou prise accessoire) ne fournit plus de courant, ce qui empêche de recharger ou brancher un appareil sur cette prise.",
+    causes: [
+      { pourcentage: 40, libelle: "Fusible dédié grillé (souvent dû à un appareil branché en surcharge)" },
+      { pourcentage: 28, libelle: "Prise elle-même encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage de la prise endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié en premier — un appareil de mauvaise qualité branché sur cette prise est une cause fréquente de fusible grillé.",
+    pieces: [
+      { nom: "Fusible prise 12V", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+    ],
+  },
+  {
+    code: "F4EB",
+    titre: "Défaut éclairage feux de position additionnels — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage principal préservé",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit des feux de position additionnels (souvent latéraux ou intégrés aux rétroviseurs), sans affecter l'éclairage principal.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne un éclairage secondaire — vérifier que les feux de position principaux fonctionnent bien en priorité.",
+    pieces: [
+      { nom: "Ampoule feu de position additionnel", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4ED",
+    titre: "Défaut déverrouillage porte conducteur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — accès par cette porte compliqué",
+    description:
+      "Le BSI ne parvient plus à commander correctement le déverrouillage de la porte conducteur, ce qui peut compliquer l'accès au véhicule par cette porte spécifiquement.",
+    causes: [
+      { pourcentage: 35, libelle: "Moteur de serrure de la porte conducteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du circuit de verrouillage endommagé" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 15, libelle: "Barillet ou mécanisme de porte grippé" },
+    ],
+    avisPro:
+      "L'ouverture par une autre porte reste généralement possible — vérifier le mécanisme de la serrure conducteur avant d'envisager un remplacement complet.",
+    pieces: [
+      { nom: "Diagnostic serrure porte conducteur (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4EF",
+    titre: "Défaut super-condamnation des portes arrière — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — verrouillage centralisé classique préservé",
+    description:
+      "La fonction de super-condamnation (verrouillage renforcé empêchant l'ouverture même de l'intérieur) ne fonctionne plus correctement sur les portes arrière, sans affecter le verrouillage centralisé classique.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de serrure en super-condamnation défaillant" },
+      { pourcentage: 28, libelle: "Câblage dédié à cette fonction endommagé" },
+      { pourcentage: 20, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Configuration de la fonction désactivée par erreur" },
+    ],
+    avisPro:
+      "Le verrouillage centralisé classique continue généralement de fonctionner — seule la fonction de sécurité renforcée est concernée.",
+    pieces: [
+      { nom: "Diagnostic super-condamnation arrière (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4F0",
+    titre: "Défaut commande du toit ouvrant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ouverture/fermeture possiblement bloquée",
+    description:
+      "Le BSI détecte une anomalie sur la commande électrique du toit ouvrant, ce qui peut empêcher son ouverture, sa fermeture ou son inclinaison.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur du toit ouvrant défaillant" },
+      { pourcentage: 28, libelle: "Mécanisme mécaniquement grippé (rails encrassés)" },
+      { pourcentage: 22, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage et une lubrification des rails du toit ouvrant résolvent parfois ce défaut sans intervention électrique.",
+    pieces: [
+      { nom: "Diagnostic toit ouvrant (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F524",
+    titre: "Pression permanente détectée sur le contacteur de frein — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — feux stop pouvant rester allumés",
+    description:
+      "Le BSI détecte que le contacteur de la pédale de frein reste en position appuyée en permanence, ce qui peut allumer les feux stop en continu ou perturber certaines fonctions liées au freinage.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur de pédale de frein défaillant ou mal réglé" },
+      { pourcentage: 28, libelle: "Contacteur mécaniquement bloqué" },
+      { pourcentage: 18, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Des feux stop qui restent allumés en permanence, même pied levé, sont le symptôme typique — à corriger rapidement pour éviter de gêner les autres usagers.",
+    pieces: [
+      { nom: "Contacteur de pédale de frein", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "F525",
+    titre: "Absence de pression détectée sur le contacteur de frein — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — feux stop non allumés au freinage",
+    description:
+      "Le BSI ne détecte plus aucun appui sur le contacteur de la pédale de frein, ce qui peut empêcher l'allumage des feux stop et désactiver certaines fonctions de sécurité liées au freinage.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur de pédale de frein défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé ou débranché" },
+      { pourcentage: 18, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Des feux stop qui ne s'allument plus du tout sont un vrai risque de sécurité et un motif de contre-visite — à corriger avant de reprendre la route.",
+    pieces: [
+      { nom: "Contacteur de pédale de frein", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "F561",
+    titre: "Consommation de courant anormale véhicule à l'arrêt — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — batterie à plat en quelques jours",
+    description:
+      "Le BSI détecte une consommation électrique anormalement élevée alors que le véhicule est à l'arrêt, ce qui peut vider la batterie en quelques jours seulement (batterie qui se décharge sans raison apparente).",
+    causes: [
+      { pourcentage: 35, libelle: "Équipement resté allumé ou mal éteint (plafonnier, coffre mal fermé)" },
+      { pourcentage: 28, libelle: "Calculateur qui ne se met pas en veille correctement" },
+      { pourcentage: 22, libelle: "Équipement ajouté (alarme, autoradio) mal installé" },
+      { pourcentage: 15, libelle: "Batterie en fin de vie ne retenant plus la charge" },
+    ],
+    avisPro:
+      "Ce défaut est la cause classique d'une batterie à plat après quelques jours sans rouler — un diagnostic de consommation au repos permet d'identifier précisément le calculateur fautif.",
+    pieces: [
+      { nom: "Diagnostic consommation veille (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F567",
+    titre: "Défaut tension batterie de servitude — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage et équipements électriques affectés",
+    description:
+      "Le BSI détecte une tension anormale au niveau de la batterie de servitude (batterie principale du véhicule), ce qui peut affecter le démarrage et l'alimentation de tous les équipements électriques.",
+    causes: [
+      { pourcentage: 35, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur déréglé ou défaillant" },
+      { pourcentage: 22, libelle: "Câblage ou cosse de batterie oxydée" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Contrôler la tension batterie et la charge de l'alternateur avant tout autre diagnostic — une batterie fatiguée est la cause la plus fréquente et la moins coûteuse à corriger.",
+    pieces: [
+      { nom: "Batterie de démarrage", boutique: "Oscaro · livraison 48h", prix: "90-140€" },
+    ],
+  },
+  {
+    code: "FEB3",
+    titre: "Défaut commande pompe additif diesel — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régénération FAP potentiellement affectée",
+    description:
+      "La pompe qui injecte l'additif diesel (Eolys) destiné à faciliter la régénération du filtre à particules ne répond plus correctement aux commandes.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe additif défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la pompe endommagé" },
+      { pourcentage: 22, libelle: "Réservoir d'additif vide" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier le niveau d'additif dans son réservoir dédié avant de suspecter la pompe — un simple manque de liquide donne le même défaut.",
+    pieces: [
+      { nom: "Additif FAP (Eolys)", boutique: "AutoDoc · livraison 24h", prix: "35€" },
+    ],
+  },
+  {
+    code: "F9AD",
+    titre: "Défaut relais pompe de circulation chauffage — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — chauffage moins efficace",
+    description:
+      "Le relais qui commande la pompe de circulation du liquide de refroidissement dédiée au chauffage de l'habitacle présente une anomalie, ce qui peut réduire l'efficacité du chauffage.",
+    causes: [
+      { pourcentage: 40, libelle: "Relais de la pompe défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du relais endommagé" },
+      { pourcentage: 20, libelle: "Pompe de circulation défaillante" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un chauffage qui devient moins efficace, notamment à l'arrêt ou au ralenti, accompagne souvent ce défaut.",
+    pieces: [
+      { nom: "Relais pompe circulation chauffage", boutique: "AutoDoc · livraison 24h", prix: "18€" },
+    ],
+  },
+  {
+    code: "F159",
+    titre: "Défaut information niveau d'huile moteur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — vérifier manuellement en complément",
+    description:
+      "Le BSI relaie une anomalie sur l'information de niveau d'huile moteur transmise par le calculateur moteur, ce qui peut affecter l'alerte de niveau bas au tableau de bord.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de niveau d'huile défaillant" },
+      { pourcentage: 28, libelle: "Défaut réseau entre calculateur moteur et BSI" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Toujours vérifier le niveau d'huile à la jauge manuelle tant que ce défaut n'est pas corrigé — l'alerte électronique n'est plus fiable.",
+    pieces: [
+      { nom: "Capteur de niveau d'huile", boutique: "Oscaro · livraison 48h", prix: "35€" },
+    ],
+  },
+  {
+    code: "F105",
+    titre: "Défaut information capteur de température évaporateur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — efficacité du froid pouvant être réduite",
+    description:
+      "Le BSI relaie une anomalie sur l'information du capteur de température de l'évaporateur de climatisation, utilisée pour éviter le givrage du circuit.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de température évaporateur défaillant" },
+      { pourcentage: 28, libelle: "Défaut réseau entre calculateur climatisation et BSI" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Sans cette information, le système peut réduire l'efficacité du froid par sécurité pour éviter le gel de l'évaporateur.",
+    pieces: [
+      { nom: "Capteur température évaporateur", boutique: "Oscaro · livraison 48h", prix: "32€" },
+    ],
+  },
+  {
+    code: "F40E",
+    titre: "Défaut bouton d'alarme — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — télécommande généralement préservée",
+    description:
+      "Le bouton dédié à l'alarme (armement/désarmement manuel) reste bloqué en position enfoncée ou son câblage présente un court-circuit à la masse.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton d'alarme mécaniquement bloqué" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit vers la masse" },
+      { pourcentage: 18, libelle: "Connecteur du bouton corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alarme peut continuer à fonctionner via la télécommande malgré ce défaut — seul le bouton manuel dédié est concerné.",
+    pieces: [
+      { nom: "Diagnostic bouton alarme (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F4D7",
+    titre: "Défaut éclairage latéral extérieur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — clignotant principal préservé",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit d'un éclairage latéral extérieur (répétiteur de clignotant sur aile ou rétroviseur), sans affecter le clignotant principal.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne un éclairage secondaire — le clignotement principal continue généralement de fonctionner normalement.",
+    pieces: [
+      { nom: "Ampoule répétiteur latéral", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F151",
+    titre: "Défaut information régime moteur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — affichage compte-tours faussé",
+    description:
+      "Le BSI relaie une anomalie sur l'information de régime moteur transmise par le calculateur moteur, une donnée utilisée notamment pour l'affichage du compte-tours et certaines stratégies de confort.",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau entre calculateur moteur et BSI" },
+      { pourcentage: 28, libelle: "Capteur de régime moteur défaillant en amont" },
+      { pourcentage: 22, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord si un défaut est également présent côté calculateur moteur — la source du problème est généralement là plutôt que dans le BSI.",
+    pieces: [
+      { nom: "Diagnostic réseau BSI/moteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F15C",
+    titre: "Défaut information pression climatisation — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — protection du compresseur en jeu",
+    description:
+      "Le BSI relaie une anomalie sur l'information de pression du circuit de climatisation, utilisée pour protéger le compresseur contre une pression trop haute ou trop basse.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de pression climatisation défaillant" },
+      { pourcentage: 28, libelle: "Défaut réseau entre calculateur climatisation et BSI" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Sans cette information, le système peut couper le compresseur par sécurité, réduisant ou supprimant l'effet de la climatisation.",
+    pieces: [
+      { nom: "Capteur de pression climatisation", boutique: "Oscaro · livraison 48h", prix: "38€" },
+    ],
+  },
+  {
+    code: "F410",
+    titre: "Défaut contacteur d'ouverture de porte droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plafonnier et alerte porte affectés",
+    description:
+      "Le contacteur qui détecte l'ouverture de la porte avant droite (pour l'éclairage intérieur et l'alerte porte ouverte) envoie un signal incohérent au BSI.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur de porte défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut se traduire par un plafonnier qui reste allumé en permanence ou une alerte « porte ouverte » persistante — vérifier le contacteur en premier.",
+    pieces: [
+      { nom: "Contacteur d'ouverture de porte", boutique: "AutoDoc · livraison 24h", prix: "12€" },
+    ],
+  },
+  {
+    code: "F411",
+    titre: "Défaut contacteur d'ouverture de porte gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plafonnier et alerte porte affectés",
+    description:
+      "Le contacteur qui détecte l'ouverture de la porte avant gauche (pour l'éclairage intérieur et l'alerte porte ouverte) envoie un signal incohérent au BSI.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur de porte défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut se traduire par un plafonnier qui reste allumé en permanence ou une alerte « porte ouverte » persistante — vérifier le contacteur en premier.",
+    pieces: [
+      { nom: "Contacteur d'ouverture de porte", boutique: "AutoDoc · livraison 24h", prix: "12€" },
+    ],
+  },
+  {
+    code: "F403",
+    titre: "Défaut signal jauge carburant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — affichage niveau carburant faussé",
+    description:
+      "Le capteur de niveau de carburant (jauge) envoie un signal incohérent au BSI, faussant l'affichage du niveau restant dans le réservoir au tableau de bord.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de niveau (flotteur) défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé (dans le réservoir)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une jauge qui affiche des valeurs erratiques ou qui saute brutalement d'un niveau à l'autre est le symptôme typique — le remplacement du flotteur seul est parfois possible sans changer toute la pompe.",
+    pieces: [
+      { nom: "Capteur de niveau carburant (jauge)", boutique: "Mister-Auto · sur commande", prix: "55-90€" },
+    ],
+  },
+  {
+    code: "F4D3",
+    titre: "Défaut éclairage seuils de porte avant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — purement esthétique",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit d'éclairage des seuils de porte avant (souvent avec logo ou nom du véhicule projeté au sol), un équipement purement esthétique.",
+    causes: [
+      { pourcentage: 42, libelle: "LED du seuil de porte grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est purement esthétique, sans aucun impact sur la sécurité ou le fonctionnement du véhicule.",
+    pieces: [
+      { nom: "Diagnostic éclairage seuils de porte (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F565",
+    titre: "Défaut détection d'intrusion intérieure — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — protection anti-intrusion affectée",
+    description:
+      "Le capteur volumétrique qui détecte un mouvement à l'intérieur de l'habitacle (fonction anti-intrusion de l'alarme) envoie un signal incohérent, ce qui peut désactiver cette protection ou provoquer des déclenchements intempestifs.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur volumétrique défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Objet ou élément mobile déclenchant de fausses détections" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Des déclenchements d'alarme intempestifs sans raison apparente orientent vers ce capteur — vérifier qu'aucun objet ne bouge dans l'habitacle (arbre déodorant suspendu, par exemple).",
+    pieces: [
+      { nom: "Capteur volumétrique d'alarme", boutique: "Mister-Auto · sur commande", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F535",
+    titre: "Rappel d'entretien dépassé — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rappel d'entretien, pas une panne",
+    description:
+      "Le calculateur signale que l'échéance d'entretien programmée (vidange, révision) est dépassée par rapport au kilométrage ou à la date prévue.",
+    causes: [
+      { pourcentage: 70, libelle: "Entretien réellement en retard" },
+      { pourcentage: 20, libelle: "Compteur d'entretien non réinitialisé après une révision effectuée" },
+      { pourcentage: 10, libelle: "Erreur de configuration du compteur d'entretien" },
+    ],
+    avisPro:
+      "Ce n'est pas un défaut technique mais un rappel — si l'entretien vient d'être fait, demander à l'atelier de réinitialiser le compteur à la valise.",
+    pieces: [
+      { nom: "Réinitialisation compteur entretien (atelier)", boutique: "Recommandé avant pièce", prix: "20-30€" },
+    ],
+  },
+  {
+    code: "F068",
+    titre: "Absence de communication avec le module d'admission d'air piloté — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sans impact sur la conduite",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module qui pilote l'admission d'air (volets d'air actifs), une fonction d'optimisation aérodynamique et thermique sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module d'admission d'air endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module d'admission d'air défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Cette fonction optimise l'aérodynamisme et le refroidissement — son absence n'empêche pas de rouler normalement.",
+    pieces: [
+      { nom: "Diagnostic module admission d'air (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F06C",
+    titre: "Absence de communication avec l'unité de maintien de tension réseau — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — Stop & Start potentiellement désactivé",
+    description:
+      "Le BSI ne parvient plus à communiquer avec l'unité qui stabilise la tension du réseau électrique de bord, notamment lors des phases de démarrage et d'arrêt automatique (Stop & Start).",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'unité de maintien de tension endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'unité oxydé" },
+      { pourcentage: 22, libelle: "Unité de maintien de tension défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le Stop & Start par précaution pour éviter des coupures électriques lors des redémarrages automatiques.",
+    pieces: [
+      { nom: "Diagnostic unité maintien tension (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F157",
+    titre: "Défaut information température extérieure — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte verglas également désactivée",
+    description:
+      "Le BSI relaie une anomalie sur l'information de température extérieure transmise via le réseau, utilisée pour l'affichage et l'alerte de risque de verglas.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de température extérieure défaillant" },
+      { pourcentage: 28, libelle: "Défaut réseau transmettant l'information" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive aussi l'alerte de risque de verglas — à corriger avant l'hiver pour conserver cette information de sécurité.",
+    pieces: [
+      { nom: "Capteur de température extérieure", boutique: "AutoDoc · livraison 24h", prix: "18€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
