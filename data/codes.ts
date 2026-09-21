@@ -3773,6 +3773,257 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic commande moteur DAE (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
     ],
   },
+  {
+    code: "P1839",
+    titre: "Défaut activation réduction de traînée en mode D — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction confort/économie de carburant",
+    description:
+      "La fonction de réduction de traînée, qui désolidarise partiellement l'embrayage au ralenti en position D pour économiser du carburant (roue libre au point mort), ne s'active plus correctement.",
+    causes: [
+      { pourcentage: 40, libelle: "Défaut logiciel ou calibration de la fonction confort" },
+      { pourcentage: 28, libelle: "Embrayage C1 partiellement usé" },
+      { pourcentage: 20, libelle: "Calculateur de boîte défaillant" },
+      { pourcentage: 12, libelle: "Défaut réseau perturbant les conditions d'activation" },
+    ],
+    avisPro:
+      "Cette fonction est un confort/économie de carburant sans impact sur la sécurité — son désactivation n'empêche pas de rouler normalement.",
+    pieces: [
+      { nom: "Diagnostic fonction réduction de traînée (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P0928",
+    titre: "Défaut actionneur de verrouillage du levier — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — levier de vitesses bloqué ou libéré anormalement",
+    description:
+      "L'actionneur qui verrouille le levier de vitesses en position P ou N tant que le frein n'est pas actionné (shift-lock) ne fonctionne plus correctement, ce qui peut bloquer ou libérer le levier de façon anormale.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur de verrouillage défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 20, libelle: "Contacteur de pédale de frein en cause" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier le contacteur de feux stop en priorité — c'est lui qui autorise le déverrouillage du levier, une panne à cet endroit est fréquente et peu coûteuse à corriger.",
+    pieces: [
+      { nom: "Diagnostic actionneur shift-lock (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P0736",
+    titre: "Défaut mécanique ou hydraulique marche arrière — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — marche arrière indisponible ou dégradée",
+    description:
+      "Le calculateur détecte que le rapport de marche arrière ne s'engage pas correctement malgré la commande envoyée, signe d'un problème mécanique ou hydraulique interne à la boîte sur ce rapport.",
+    causes: [
+      { pourcentage: 35, libelle: "Embrayage ou frein interne dédié à la marche arrière usé" },
+      { pourcentage: 28, libelle: "Électrovanne de commande de ce rapport défaillante" },
+      { pourcentage: 22, libelle: "Niveau d'huile de boîte insuffisant" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier le niveau d'huile avant tout — un niveau bas prive spécifiquement certains embrayages internes de pression suffisante, la marche arrière étant souvent la première touchée.",
+    pieces: [
+      { nom: "Diagnostic mécanique marche arrière (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "P0969",
+    titre: "Défaut verrouillage électrovanne SLC1 — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — passages de rapport perturbés",
+    description:
+      "L'électrovanne SLC1, qui pilote le passage de certains rapports, reste bloquée dans une position et ne répond plus aux commandes du calculateur, perturbant les changements de vitesse.",
+    causes: [
+      { pourcentage: 40, libelle: "Électrovanne SLC1 bloquée par encrassement" },
+      { pourcentage: 28, libelle: "Bobine de commande défaillante" },
+      { pourcentage: 20, libelle: "Câblage interne du faisceau de boîte endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Une vidange avec un filtre neuf peut suffire à débloquer une électrovanne encrassée — à envisager avant un remplacement de pièce.",
+    pieces: [
+      { nom: "Vidange boîte AM6 + filtre", boutique: "Recommandé avant pièce", prix: "150-220€" },
+    ],
+  },
+  {
+    code: "P0780",
+    titre: "Défaut changement de rapport non désiré — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — comportement de boîte imprévisible",
+    description:
+      "Le calculateur détecte un changement de rapport qui ne correspond pas à la commande attendue (passage à un rapport non sollicité), ce qui peut se traduire par des à-coups ou un comportement imprévisible de la boîte.",
+    causes: [
+      { pourcentage: 35, libelle: "Électrovanne de commande de rapport défaillante" },
+      { pourcentage: 28, libelle: "Capteur de position du sélecteur défaillant" },
+      { pourcentage: 22, libelle: "Calculateur de boîte défaillant" },
+      { pourcentage: 15, libelle: "Câblage interne endommagé" },
+    ],
+    avisPro:
+      "Ce défaut mérite un arrêt rapide pour diagnostic — un changement de rapport imprévu peut surprendre en conduite, notamment en dépassement ou en côte.",
+    pieces: [
+      { nom: "Diagnostic électrovannes boîte AM6 (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "P0298",
+    titre: "Rappel vidange huile de boîte — AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rappel d'entretien, pas une panne",
+    description:
+      "Le calculateur signale, sur la base du kilométrage ou de la qualité mesurée de l'huile, qu'une vidange de la boîte de vitesses est recommandée.",
+    causes: [
+      { pourcentage: 70, libelle: "Vidange de boîte jamais effectuée ou en retard" },
+      { pourcentage: 20, libelle: "Huile de boîte dégradée par une sollicitation intensive (remorquage, ville)" },
+      { pourcentage: 10, libelle: "Capteur de qualité d'huile déclenchant l'alerte de façon anticipée" },
+    ],
+    avisPro:
+      "Ce n'est pas un défaut mais un rappel d'entretien — une vidange régulière de la boîte AM6 prolonge significativement sa durée de vie, contrairement à une idée reçue de boîte 'à vie'.",
+    pieces: [
+      { nom: "Vidange boîte AM6 + filtre", boutique: "Recommandé avant pièce", prix: "150-220€" },
+    ],
+  },
+  {
+    code: "P1830",
+    titre: "Défaut information vitesse roues avant non reçue — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — stratégie de passage de rapport dégradée",
+    description:
+      "Le calculateur de boîte ne reçoit plus l'information de vitesse des roues avant transmise par le réseau CAN, une donnée utilisée pour affiner la stratégie de passage des rapports.",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau CAN entre calculateur ABS et calculateur boîte" },
+      { pourcentage: 28, libelle: "Capteur de vitesse de roue avant défaillant" },
+      { pourcentage: 22, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord si un défaut est également présent côté ABS — ce code est généralement la conséquence d'un problème capteur ou réseau ABS plutôt qu'une panne de la boîte elle-même.",
+    pieces: [
+      { nom: "Diagnostic réseau vitesse roues (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0772",
+    titre: "Défaut engagement embrayage C1 (réduction de traînée) — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction confort, boîte fonctionnelle",
+    description:
+      "L'embrayage C1, sollicité pour la fonction de réduction de traînée en mode D (roue libre au ralenti), ne s'engage pas correctement lors de la reprise d'accélération.",
+    causes: [
+      { pourcentage: 38, libelle: "Embrayage C1 usé" },
+      { pourcentage: 28, libelle: "Électrovanne de commande de l'embrayage défaillante" },
+      { pourcentage: 20, libelle: "Pression hydraulique insuffisante (niveau d'huile bas)" },
+      { pourcentage: 14, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche une fonction de confort/économie de carburant — un léger à-coup à la reprise peut être ressenti mais la boîte reste fonctionnelle.",
+    pieces: [
+      { nom: "Diagnostic embrayage C1 (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "C1335",
+    titre: "Défaut information vitesse roue arrière droite non reçue — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — stratégie de passage de rapport dégradée",
+    description:
+      "Le calculateur de boîte ne reçoit plus l'information de vitesse de la roue arrière droite transmise par le réseau CAN, ce qui peut affecter la précision de la stratégie de passage des rapports.",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau CAN entre calculateur ABS et calculateur boîte" },
+      { pourcentage: 28, libelle: "Capteur de vitesse de roue arrière droite défaillant" },
+      { pourcentage: 22, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord si un défaut est également présent côté ABS sur cette roue précise — la cause est généralement là plutôt que dans la boîte elle-même.",
+    pieces: [
+      { nom: "Diagnostic réseau vitesse roue arrière droite (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0940",
+    titre: "Défaut capteur de température d'huile — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection thermique de la boîte compromise",
+    description:
+      "Le capteur qui mesure la température de l'huile de la boîte de vitesses envoie un signal incohérent, empêchant le calculateur de protéger correctement la boîte contre la surchauffe.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température d'huile défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Sans information fiable de température, le calculateur adopte une stratégie prudente qui peut rendre les passages de rapport moins fluides — un diagnostic rapide évite de rouler longtemps dans ce mode.",
+    pieces: [
+      { nom: "Capteur température huile boîte AM6", boutique: "Oscaro · livraison 48h", prix: "38€" },
+    ],
+  },
+  {
+    code: "P1733",
+    titre: "Défaut capteur de position du sélecteur — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de refus de commande par sécurité",
+    description:
+      "Le capteur intégré au calculateur de boîte, qui détermine la position exacte du levier de vitesses (P, R, N, D), envoie une information incohérente — la boîte peut refuser certaines commandes par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de position défaillant (intégré au calculateur)" },
+      { pourcentage: 28, libelle: "Tringlerie ou câble de sélection mal réglé" },
+      { pourcentage: 20, libelle: "Câblage du calculateur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier le réglage de la tringlerie de sélection avant de suspecter le calculateur — un mauvais réglage mécanique est une cause fréquente et moins coûteuse à corriger.",
+    pieces: [
+      { nom: "Diagnostic capteur position sélecteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P2762",
+    titre: "Défaut verrouillage électrovanne SLU (pontage convertisseur) — boîte AM6 PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AM6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — rendement dégradé, boîte fonctionnelle",
+    description:
+      "L'électrovanne SLU, qui commande le pontage du convertisseur de couple pour améliorer le rendement à vitesse stabilisée, reste bloquée et ne répond plus aux commandes du calculateur.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne SLU bloquée par encrassement" },
+      { pourcentage: 28, libelle: "Bobine de commande défaillante" },
+      { pourcentage: 22, libelle: "Huile de boîte dégradée" },
+      { pourcentage: 12, libelle: "Calculateur de boîte défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit souvent par une légère hausse de consommation plutôt qu'une panne visible — une vidange peut suffire à débloquer l'électrovanne encrassée.",
+    pieces: [
+      { nom: "Vidange boîte AM6 + filtre", boutique: "Recommandé avant pièce", prix: "150-220€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
