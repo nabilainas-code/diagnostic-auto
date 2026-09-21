@@ -4488,6 +4488,174 @@ export const codes: CodeDefaut[] = [
       { nom: "Capteur de pression rail carburant", boutique: "Oscaro · livraison 48h", prix: "55€" },
     ],
   },
+  {
+    code: "P0500",
+    titre: "Capteur de vitesse véhicule — dysfonctionnement",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ralenti et boîte automatique perturbés",
+    description:
+      "Le capteur de vitesse du véhicule (VSS), qui informe le calculateur moteur de la vitesse réelle pour ajuster le ralenti, la boîte de vitesses et diverses fonctions, envoie un signal absent ou incohérent.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse véhicule défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur corrodé" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut perturber le passage des rapports sur boîte automatique et le régime de ralenti — à traiter rapidement même s'il ne provoque pas d'arrêt immédiat du véhicule.",
+    pieces: [
+      { nom: "Capteur de vitesse véhicule", boutique: "AutoDoc · livraison 24h", prix: "28€" },
+    ],
+  },
+  {
+    code: "P0501",
+    titre: "Capteur de vitesse véhicule — plage/performance",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — souvent un signe avant-coureur",
+    description:
+      "Le signal du capteur de vitesse véhicule est présent mais ne correspond pas exactement à la plage de valeurs attendue par le calculateur, sans être totalement absent.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de vitesse partiellement défaillant" },
+      { pourcentage: 28, libelle: "Cible denture ou pignon capteur encrassé" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est souvent un signe avant-coureur d'une panne complète du capteur — un remplacement préventif évite une panne plus gênante.",
+    pieces: [
+      { nom: "Capteur de vitesse véhicule", boutique: "AutoDoc · livraison 24h", prix: "28€" },
+    ],
+  },
+  {
+    code: "P0505",
+    titre: "Système de régulation de ralenti — dysfonctionnement",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ralenti instable, risque de calage",
+    description:
+      "Le calculateur ne parvient plus à maintenir un régime de ralenti stable via son actionneur de régulation d'air (moteur pas à pas ou papillon motorisé), ce qui peut provoquer un ralenti instable ou des calages.",
+    causes: [
+      { pourcentage: 35, libelle: "Actionneur de régulation de ralenti encrassé ou défaillant" },
+      { pourcentage: 28, libelle: "Corps de papillon encrassé (dépôts de calamine)" },
+      { pourcentage: 20, libelle: "Fuite d'air parasite sur le collecteur d'admission" },
+      { pourcentage: 17, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du corps de papillon et de l'actionneur de ralenti résout ce défaut dans la majorité des cas, pour un coût minime.",
+    pieces: [
+      { nom: "Nettoyant corps de papillon + actionneur ralenti", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "P0506",
+    titre: "Régime de ralenti trop bas par rapport à la consigne",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque de calage",
+    description:
+      "Le régime moteur au ralenti reste durablement inférieur à la valeur visée par le calculateur, ce qui peut provoquer des calages, notamment au ralenti ou lors d'une sollicitation électrique (climatisation, phares).",
+    causes: [
+      { pourcentage: 35, libelle: "Fuite d'air parasite sur le collecteur d'admission" },
+      { pourcentage: 28, libelle: "Actionneur de régulation de ralenti encrassé" },
+      { pourcentage: 22, libelle: "Corps de papillon encrassé" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité les durites et joints d'admission pour une fuite d'air — une fuite même minime suffit à déstabiliser le ralenti.",
+    pieces: [
+      { nom: "Kit durites/joints admission", boutique: "AutoDoc · livraison 24h", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "P0507",
+    titre: "Régime de ralenti trop élevé par rapport à la consigne",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surconsommation et ralenti anormal",
+    description:
+      "Le régime moteur au ralenti reste durablement supérieur à la valeur visée par le calculateur, ce qui peut se traduire par un ralenti anormalement haut et une surconsommation.",
+    causes: [
+      { pourcentage: 35, libelle: "Fuite d'air parasite importante sur le collecteur d'admission" },
+      { pourcentage: 28, libelle: "Actionneur de régulation de ralenti bloqué en position ouverte" },
+      { pourcentage: 22, libelle: "Corps de papillon mal calibré après nettoyage ou remplacement" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Après tout nettoyage du corps de papillon, une réinitialisation de l'apprentissage du ralenti à la valise est souvent nécessaire pour éviter ce défaut.",
+    pieces: [
+      { nom: "Diagnostic + réapprentissage ralenti (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "P0560",
+    titre: "Tension du système — dysfonctionnement",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — régulations électroniques imprécises",
+    description:
+      "Le calculateur moteur détecte une tension d'alimentation générale hors plage de fonctionnement normale, ce qui peut affecter la précision de tous les calculs et régulations qu'il effectue.",
+    causes: [
+      { pourcentage: 35, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur déréglé ou défaillant" },
+      { pourcentage: 22, libelle: "Câblage de masse ou d'alimentation endommagé" },
+      { pourcentage: 15, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Contrôler la tension batterie moteur à l'arrêt et moteur tournant avant tout autre diagnostic — une simple batterie fatiguée est la cause la plus fréquente et la moins coûteuse à corriger.",
+    pieces: [
+      { nom: "Batterie de démarrage", boutique: "Oscaro · livraison 48h", prix: "90-140€" },
+    ],
+  },
+  {
+    code: "P0562",
+    titre: "Sous-tension du système",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dysfonctionnements électroniques en cascade",
+    description:
+      "La tension d'alimentation mesurée par le calculateur est anormalement basse, ce qui peut provoquer des dysfonctionnements électroniques en cascade sur plusieurs systèmes du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Batterie faible ou défectueuse" },
+      { pourcentage: 28, libelle: "Alternateur ne chargeant plus correctement" },
+      { pourcentage: 20, libelle: "Câblage ou cosse de batterie oxydée" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche rarement le calculateur lui-même — commencer systématiquement par un contrôle de la batterie et de la charge de l'alternateur.",
+    pieces: [
+      { nom: "Batterie de démarrage", boutique: "Oscaro · livraison 48h", prix: "90-140€" },
+    ],
+  },
+  {
+    code: "P0563",
+    titre: "Surtension du système",
+    categorie: "p05xx",
+    categorieLabel: "Ralenti & régulation",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque d'endommager les calculateurs",
+    description:
+      "La tension d'alimentation mesurée par le calculateur est anormalement élevée, ce qui peut endommager à terme les composants électroniques du véhicule si la cause n'est pas corrigée rapidement.",
+    causes: [
+      { pourcentage: 40, libelle: "Alternateur déréglé (régulateur défaillant)" },
+      { pourcentage: 28, libelle: "Batterie récemment remplacée par un modèle inadapté" },
+      { pourcentage: 20, libelle: "Câblage de masse défectueux" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Faire contrôler la tension de charge de l'alternateur moteur tournant sans attendre — une surtension prolongée peut endommager plusieurs calculateurs à la fois.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
@@ -4564,6 +4732,7 @@ export const categories: Categorie[] = [
   { code: "P03XX", titre: "Allumage & ratés", desc: "Bougies, bobines, cylindres — à-coups moteur.", slug: "p03xx" },
   { code: "P01XX", titre: "Carburant & air", desc: "Injection, débit d'air, richesse du mélange.", slug: "p01xx" },
   { code: "P02XX", titre: "Injection", desc: "Circuits injecteurs, pompe et pression carburant.", slug: "p02xx" },
+  { code: "P05XX", titre: "Ralenti & régulation", desc: "Régime de ralenti, capteur de vitesse, tension du système.", slug: "p05xx" },
   { code: "P04XX", titre: "Émissions", desc: "Sonde lambda, EGR, catalyseur.", slug: "p04xx" },
   { code: "U0XXX", titre: "Réseau & calculateurs", desc: "Communication entre modules électroniques.", slug: "u0xxx" },
   { code: "P07XX", titre: "Boîte de vitesses automatique", desc: "Rapports, convertisseur de couple, capteurs de vitesse.", slug: "p07xx" },
