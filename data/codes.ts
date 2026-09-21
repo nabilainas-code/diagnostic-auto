@@ -1782,6 +1782,219 @@ export const codes: CodeDefaut[] = [
       { nom: "Calculateur boîte AM6 (reconditionné)", boutique: "Mister-Auto · sur commande", prix: "290€" },
     ],
   },
+  {
+    code: "F797",
+    titre: "Défaut de commande du soutien lombaire du siège",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le contacteur qui commande le réglage du soutien lombaire du siège reste bloqué en position active, ce qui peut provoquer un gonflage continu ou un blocage du réglage.",
+    causes: [
+      { pourcentage: 45, libelle: "Contacteur de réglage lombaire bloqué mécaniquement" },
+      { pourcentage: 30, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 25, libelle: "Moteur ou pompe de réglage lombaire défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le contacteur revient bien à sa position neutre après utilisation — un simple grain de saleté peut le bloquer.",
+    pieces: [
+      { nom: "Contacteur réglage lombaire", boutique: "Oscaro · livraison 48h", prix: "28€" },
+    ],
+  },
+  {
+    code: "F018",
+    titre: "Pas de communication avec le calculateur de direction assistée électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance de direction potentiellement perdue",
+    description:
+      "Le BSI ne reçoit plus de réponse du calculateur de direction assistée électrique. Sans assistance, la direction reste fonctionnelle mais devient beaucoup plus dure à manœuvrer, en particulier à basse vitesse.",
+    causes: [
+      { pourcentage: 32, libelle: "Fusible ou alimentation de la direction assistée défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bus CAN vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur de direction corrodé" },
+      { pourcentage: 18, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "À traiter rapidement vu l'effort de conduite supplémentaire — vérifier fusible et connecteurs avant d'envisager le remplacement du calculateur, pièce coûteuse.",
+    pieces: [
+      { nom: "Fusible direction assistée", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+      { nom: "Connecteur calculateur direction", boutique: "Oscaro · livraison 48h", prix: "26€" },
+    ],
+  },
+  {
+    code: "F085",
+    titre: "Pas de communication avec le calculateur d'aide au stationnement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI ne communique plus avec le calculateur qui gère les radars de stationnement (avant et/ou arrière). Les capteurs eux-mêmes peuvent être en bon état, c'est la liaison qui est en cause.",
+    causes: [
+      { pourcentage: 35, libelle: "Fusible du calculateur d'aide au stationnement grillé" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du calculateur endommagé" },
+      { pourcentage: 22, libelle: "Calculateur d'aide au stationnement défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié avant tout autre diagnostic — contrôle rapide et gratuit.",
+    pieces: [
+      { nom: "Calculateur aide au stationnement", boutique: "Mister-Auto · sur commande", prix: "95€" },
+    ],
+  },
+  {
+    code: "F4C6",
+    titre: "Défaut correcteur d'assiette des projecteurs Xenon",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque d'éblouissement, à corriger rapidement",
+    description:
+      "Le système de correction automatique d'assiette des feux Xenon (qui ajuste l'orientation des phares selon la charge du véhicule) présente un défaut. Un mauvais réglage peut éblouir les autres usagers ou réduire l'éclairage de la route.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de hauteur de caisse défaillant" },
+      { pourcentage: 28, libelle: "Moteur de correction d'assiette du projecteur défaillant" },
+      { pourcentage: 20, libelle: "Câblage du capteur ou du moteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur de correction défaillant" },
+    ],
+    avisPro:
+      "Ce réglage est soumis au contrôle technique sur véhicules Xenon — à faire corriger avant un contrôle si le défaut persiste.",
+    pieces: [
+      { nom: "Capteur de hauteur de caisse", boutique: "Oscaro · livraison 48h", prix: "32€" },
+      { nom: "Moteur correcteur d'assiette", boutique: "Mister-Auto · sur commande", prix: "58€" },
+    ],
+  },
+  {
+    code: "F520",
+    titre: "Défaut de cohérence du régulateur de vitesse",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulateur indisponible, conduite normale possible",
+    description:
+      "Le système détecte une incohérence dans les informations liées au régulateur/limiteur de vitesse, ce qui désactive la fonction par sécurité sans affecter la conduite normale du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Commande de régulateur au volant défaillante" },
+      { pourcentage: 25, libelle: "Incohérence entre capteur de vitesse et information moteur" },
+      { pourcentage: 25, libelle: "Câblage de la commande régulateur endommagé" },
+      { pourcentage: 15, libelle: "Calculateur moteur ou BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier la commande au volant (contacts qui peuvent s'encrasser avec le temps) avant tout diagnostic plus poussé.",
+    pieces: [
+      { nom: "Commande régulateur de vitesse (volant)", boutique: "Mister-Auto · sur commande", prix: "72€" },
+    ],
+  },
+  {
+    code: "F035",
+    titre: "Pas de communication avec le boîtier fusibles de la remorque",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — n'affecte que le fonctionnement de l'attelage",
+    description:
+      "Sur les véhicules équipés d'un attelage électrifié, ce code signale une perte de communication avec le boîtier gérant l'alimentation électrique de la remorque (feux, clignotants). N'a aucun impact si vous ne tractez pas.",
+    causes: [
+      { pourcentage: 40, libelle: "Fusible du boîtier attelage grillé" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur de l'attelage endommagé (corrosion, humidité)" },
+      { pourcentage: 20, libelle: "Boîtier électronique d'attelage défaillant" },
+      { pourcentage: 10, libelle: "BSI défaillant (rare)" },
+    ],
+    avisPro:
+      "Le connecteur d'attelage est très exposé à l'humidité et au sel — un nettoyage et un traitement anti-corrosion résolvent souvent le problème.",
+    pieces: [
+      { nom: "Boîtier électronique attelage", boutique: "Mister-Auto · sur commande", prix: "86€" },
+    ],
+  },
+  {
+    code: "F52B",
+    titre: "Tension insuffisante fournie par l'alternateur piloté",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de panne de batterie",
+    description:
+      "L'alternateur à régulation pilotée (qui ajuste sa charge selon les besoins électriques du véhicule) ne fournit pas une tension suffisante, ce qui risque d'entraîner une décharge progressive de la batterie.",
+    causes: [
+      { pourcentage: 38, libelle: "Alternateur défaillant" },
+      { pourcentage: 25, libelle: "Câblage de régulation pilotée endommagé" },
+      { pourcentage: 20, libelle: "Batterie usée qui fausse la régulation" },
+      { pourcentage: 17, libelle: "Connecteur d'alternateur corrodé" },
+    ],
+    avisPro:
+      "Tester la batterie en même temps que l'alternateur — une batterie fatiguée peut fausser le diagnostic et faire suspecter l'alternateur à tort.",
+    pieces: [
+      { nom: "Alternateur", boutique: "Mister-Auto · sur commande", prix: "215€" },
+      { nom: "Batterie 12V", boutique: "Oscaro · livraison 48h", prix: "89€" },
+    ],
+  },
+  {
+    code: "F015",
+    titre: "Pas de communication avec le calculateur moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — nombreuses fonctions du véhicule affectées",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur moteur, ce qui peut affecter le démarrage, l'affichage du tableau de bord et de nombreuses fonctions dépendant des informations moteur.",
+    causes: [
+      { pourcentage: 32, libelle: "Fusible ou alimentation du calculateur moteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bus CAN endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur moteur corrodé" },
+      { pourcentage: 18, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Vérifier fusibles et connecteurs du calculateur moteur en priorité — c'est un défaut qui affecte potentiellement le démarrage, à traiter rapidement.",
+    pieces: [
+      { nom: "Fusible calculateur moteur", boutique: "AutoDoc · livraison 24h", prix: "4€" },
+      { nom: "Connecteur calculateur moteur", boutique: "Oscaro · livraison 48h", prix: "21€" },
+    ],
+  },
+  {
+    code: "P1800",
+    titre: "Défaut de programmation position Neutre — boîte AT6",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — logique de démarrage/neutre affectée",
+    description:
+      "Spécifique à la boîte automatique AT6, ce code signale un défaut d'apprentissage ou de programmation de la position Neutre (N) par le calculateur de boîte, utilisée notamment pour autoriser le démarrage en sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Apprentissage de position non effectué après une intervention" },
+      { pourcentage: 28, libelle: "Capteur de position sélecteur défaillant" },
+      { pourcentage: 20, libelle: "Réglage mécanique du sélecteur incorrect" },
+      { pourcentage: 12, libelle: "Calculateur de boîte AT6 défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la tringlerie de sélection, un réapprentissage des positions à la valise constructeur est indispensable — c'est souvent la cause de ce défaut.",
+    pieces: [
+      { nom: "Diagnostic + réapprentissage boîte AT6 (atelier)", boutique: "Recommandé avant pièce", prix: "80-120€" },
+    ],
+  },
+  {
+    code: "P1703",
+    titre: "Défaut information position pédale accélérateur — boîte AT6",
+    categorie: "psa",
+    categorieLabel: "PSA — Boîte AT6",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — réactivité de la boîte affectée",
+    description:
+      "Le calculateur de boîte AT6 reçoit une information incorrecte du calculateur moteur concernant la position de la pédale d'accélérateur, ce qui peut perturber la logique de passage des rapports.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN entre calculateur moteur et boîte endommagé" },
+      { pourcentage: 28, libelle: "Capteur de pédale d'accélérateur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur de boîte corrodé" },
+      { pourcentage: 15, libelle: "Calculateur moteur ou de boîte défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord le capteur de pédale d'accélérateur, commun aux deux calculateurs, avant de suspecter le câblage entre calculateurs.",
+    pieces: [
+      { nom: "Capteur pédale d'accélérateur", boutique: "AutoDoc · livraison 24h", prix: "68€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
