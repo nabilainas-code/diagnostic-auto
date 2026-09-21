@@ -7710,6 +7710,657 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic réseau CAN carrosserie (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
     ],
   },
+  {
+    code: "F5FF",
+    titre: "Réinitialisation inattendue du BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coupure momentanée possible",
+    description:
+      "Le boîtier de servitude intelligent redémarre de façon inattendue pendant son fonctionnement, ce qui peut provoquer une coupure momentanée de plusieurs équipements électriques.",
+    causes: [
+      { pourcentage: 35, libelle: "Alimentation électrique instable (batterie ou masse)" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Surcharge électrique momentanée sur le réseau" },
+      { pourcentage: 15, libelle: "Mise à jour logicielle incomplète" },
+    ],
+    avisPro:
+      "Si ce défaut revient fréquemment, faire contrôler en priorité la tension batterie et l'état des masses électriques du véhicule.",
+    pieces: [
+      { nom: "Diagnostic alimentation BSI (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F04C",
+    titre: "Absence de communication avec le module télématique — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — services connectés seulement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module télématique embarqué (services connectés, géolocalisation), sans affecter les fonctions essentielles du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module télématique endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module télématique défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les services connectés — la conduite et la sécurité du véhicule ne sont pas affectées.",
+    pieces: [
+      { nom: "Diagnostic module télématique (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F024",
+    titre: "Absence de communication avec le boîtier fusibles moteur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — plusieurs équipements essentiels concernés",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le boîtier de fusibles situé dans le compartiment moteur, ce qui peut affecter l'alimentation de plusieurs équipements électriques essentiels.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le boîtier fusibles moteur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du boîtier oxydé (exposition à l'humidité sous le capot)" },
+      { pourcentage: 22, libelle: "Boîtier fusibles moteur défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce boîtier est exposé aux intempéries sous le capot — vérifier l'étanchéité de son couvercle, une infiltration d'eau est une cause fréquente.",
+    pieces: [
+      { nom: "Diagnostic boîtier fusibles moteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F025",
+    titre: "Absence de communication avec le module de porte conducteur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs commandes de la porte affectées",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module électronique intégré à la porte conducteur, ce qui peut désactiver plusieurs commandes situées à cet endroit (vitres, rétroviseurs, verrouillage).",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage entre la porte et le BSI endommagé (fatigue du passage de porte)" },
+      { pourcentage: 28, libelle: "Connecteur du module de porte oxydé" },
+      { pourcentage: 22, libelle: "Module de porte défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le câblage qui passe par le pied de porte (soufflet) est un point de fragilité connu, sollicité à chaque ouverture — à vérifier en priorité.",
+    pieces: [
+      { nom: "Diagnostic module porte conducteur (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F026",
+    titre: "Absence de communication avec le module de porte passager — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs commandes de la porte affectées",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module électronique intégré à la porte passager avant, ce qui peut désactiver plusieurs commandes situées à cet endroit.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage entre la porte et le BSI endommagé (fatigue du passage de porte)" },
+      { pourcentage: 28, libelle: "Connecteur du module de porte oxydé" },
+      { pourcentage: 22, libelle: "Module de porte défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le câblage qui passe par le pied de porte (soufflet) est un point de fragilité connu, sollicité à chaque ouverture — à vérifier en priorité.",
+    pieces: [
+      { nom: "Diagnostic module porte passager (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F027",
+    titre: "Absence de communication avec le panneau de commande du siège gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglages électriques uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le panneau de commande électrique du siège avant gauche (réglages électriques, mémoires), sans affecter la position mécanique actuelle du siège.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du panneau de commande oxydé" },
+      { pourcentage: 22, libelle: "Panneau de commande défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que les réglages électriques — le siège reste utilisable dans sa position actuelle.",
+    pieces: [
+      { nom: "Diagnostic panneau commande siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F028",
+    titre: "Absence de communication avec le panneau de commande du siège droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglages électriques uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le panneau de commande électrique du siège avant droit (réglages électriques, mémoires), sans affecter la position mécanique actuelle du siège.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du panneau de commande oxydé" },
+      { pourcentage: 22, libelle: "Panneau de commande défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que les réglages électriques — le siège reste utilisable dans sa position actuelle.",
+    pieces: [
+      { nom: "Diagnostic panneau commande siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F029",
+    titre: "Absence de communication avec le calculateur de la console de commande — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs boutons regroupés affectés",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur de la console centrale de commande, ce qui peut désactiver plusieurs boutons regroupés à cet endroit.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers la console de commande endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de la console oxydé" },
+      { pourcentage: 22, libelle: "Console de commande défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier si plusieurs boutons de la console centrale sont simultanément inactifs — un point commun de connexion est souvent en cause.",
+    pieces: [
+      { nom: "Diagnostic console de commande (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F02B",
+    titre: "Absence de communication avec l'unité relais du coffre — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — accès mécanique généralement préservé",
+    description:
+      "Le BSI ne parvient plus à communiquer avec l'unité relais qui gère certaines fonctions électriques du coffre (ouverture, éclairage), sans affecter l'accès mécanique au coffre.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'unité relais du coffre endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'unité oxydé" },
+      { pourcentage: 22, libelle: "Unité relais défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'ouverture manuelle du coffre à la clé ou au bouton dédié reste généralement possible malgré ce défaut.",
+    pieces: [
+      { nom: "Diagnostic unité relais coffre (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F02C",
+    titre: "Absence de communication avec l'affichage tête haute — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — combiné d'instruments classique préservé",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module d'affichage tête haute, ce qui désactive la projection d'informations sur le pare-brise sans affecter le tableau de bord classique.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module d'affichage tête haute endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module d'affichage tête haute défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement l'affichage tête haute — toutes les informations restent disponibles sur le combiné d'instruments classique.",
+    pieces: [
+      { nom: "Diagnostic affichage tête haute (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F02E",
+    titre: "Absence de communication avec la console climatisation arrière — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation avant préservée",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur de la console de climatisation arrière (sur les véhicules équipés d'une régulation indépendante), sans affecter la climatisation avant.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers la console arrière endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de la console oxydé" },
+      { pourcentage: 22, libelle: "Console climatisation arrière défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que la régulation indépendante à l'arrière — la climatisation avant continue de fonctionner normalement.",
+    pieces: [
+      { nom: "Diagnostic console climatisation arrière (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F036",
+    titre: "Absence de communication avec la mémoire de position du siège conducteur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglages manuels préservés",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui mémorise les positions préréglées du siège conducteur, désactivant cette fonction de confort sans affecter les réglages manuels.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de mémoire de siège endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur de mémoire de siège défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les boutons de réglage manuel du siège continuent généralement de fonctionner — seule la fonction mémoire préréglée est concernée.",
+    pieces: [
+      { nom: "Diagnostic mémoire siège conducteur (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F037",
+    titre: "Absence de communication avec la mémoire de position du siège passager — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglages manuels préservés",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui mémorise les positions préréglées du siège passager, désactivant cette fonction de confort sans affecter les réglages manuels.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de mémoire de siège endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur de mémoire de siège défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les boutons de réglage manuel du siège continuent généralement de fonctionner — seule la fonction mémoire préréglée est concernée.",
+    pieces: [
+      { nom: "Diagnostic mémoire siège passager (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F03A",
+    titre: "Absence de communication avec le calculateur de détection de choc piéton — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — fonction de sécurité piétonne concernée",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui détecte un choc avec un piéton (pour déclencher le relevage du capot sur certains modèles), une fonction de sécurité piétonne.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de détection piéton endommagé" },
+      { pourcentage: 28, libelle: "Connecteur ou capteur de choc avant corrodé" },
+      { pourcentage: 22, libelle: "Calculateur de détection défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Cette fonction de sécurité piétonne mérite un diagnostic rapide même si elle n'affecte pas la conduite quotidienne du véhicule.",
+    pieces: [
+      { nom: "Diagnostic détection choc piéton (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F03B",
+    titre: "Absence de communication avec le système d'alerte de franchissement de ligne — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide à la conduite optionnelle",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui gère l'alerte de franchissement involontaire de ligne, désactivant cette aide à la conduite optionnelle.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de l'aide à la conduite endommagé" },
+      { pourcentage: 28, libelle: "Caméra ou capteur associé mal aligné/encrassé" },
+      { pourcentage: 22, libelle: "Calculateur défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le pare-brise (zone caméra) est propre et non obstrué — une caméra encrassée ou mal calibrée est une cause fréquente.",
+    pieces: [
+      { nom: "Diagnostic caméra aide à la conduite (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F03D",
+    titre: "Absence de communication avec le kit mains libres — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — téléphonie uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module qui gère le kit mains libres Bluetooth, désactivant les appels et certaines fonctions audio associées.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module mains libres endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module mains libres défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que la téléphonie mains libres — l'autoradio et la conduite restent normaux.",
+    pieces: [
+      { nom: "Diagnostic module mains libres (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F03F",
+    titre: "Absence de communication avec la climatisation automatique — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation automatique compromise",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur de la climatisation entièrement automatique, ce qui peut la faire fonctionner en mode dégradé ou empêcher toute régulation.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur climatisation endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur climatisation défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "En mode dégradé, la climatisation continue souvent de souffler mais sans réguler automatiquement la température — vérifier le mode manuel en attendant.",
+    pieces: [
+      { nom: "Diagnostic réseau BSI/climatisation auto (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F040",
+    titre: "Absence de communication avec le calculateur de climatisation avant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation zone avant compromise",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui gère la climatisation de la zone avant de l'habitacle.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur climatisation endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur climatisation défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier le mode manuel de la climatisation en attendant un diagnostic complet — la fonction de base peut parfois continuer de fonctionner.",
+    pieces: [
+      { nom: "Diagnostic réseau BSI/climatisation (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F041",
+    titre: "Absence de communication avec le correcteur de hauteur arrière — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — hauteur du véhicule déréglée",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui régule la hauteur arrière du véhicule (suspension hydraulique ou pneumatique), ce qui peut laisser le véhicule affaissé ou trop haut à l'arrière.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de correction de hauteur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur de correction de hauteur défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une différence de hauteur visible entre l'avant et l'arrière du véhicule est le signe caractéristique de ce défaut — à corriger pour éviter d'endommager la suspension.",
+    pieces: [
+      { nom: "Diagnostic correcteur de hauteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F044",
+    titre: "Absence de communication avec l'amplificateur audio haute-fidélité — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec l'amplificateur audio numérique haute-fidélité, ce qui peut réduire ou couper le son de la chaîne audio sans affecter les autres fonctions du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'amplificateur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'amplificateur oxydé" },
+      { pourcentage: 22, libelle: "Amplificateur défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement le confort audio — sans impact sur la conduite ou la sécurité du véhicule.",
+    pieces: [
+      { nom: "Diagnostic amplificateur audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F047",
+    titre: "Absence de communication avec le calculateur de direction assistée électrique — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — perte d'assistance possible",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur de la direction assistée électrique, ce qui peut provoquer une perte d'assistance et rendre la direction nettement plus lourde.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de direction assistée endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur de direction assistée défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une direction qui durcit brutalement doit être prise au sérieux — s'arrêter dès que possible pour éviter une manœuvre dangereuse.",
+    pieces: [
+      { nom: "Diagnostic réseau BSI/direction assistée (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F04B",
+    titre: "Absence de communication avec l'écran multifonction — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — indicateurs essentiels préservés ailleurs",
+    description:
+      "Le BSI ne parvient plus à communiquer avec l'écran multifonction du tableau de bord, ce qui peut afficher un écran figé ou éteint sans affecter le fonctionnement mécanique du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'écran multifonction endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'écran oxydé" },
+      { pourcentage: 22, libelle: "Écran multifonction défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne l'affichage d'informations secondaires — les indicateurs essentiels (vitesse, carburant) restent généralement visibles ailleurs sur le tableau de bord.",
+    pieces: [
+      { nom: "Diagnostic écran multifonction (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F04D",
+    titre: "Absence de communication avec le calculateur antipatinage — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — motricité et stabilité concernées",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui gère l'antipatinage des roues (ASR), une fonction liée à la motricité et à la stabilité du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur antipatinage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur antipatinage défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier si un défaut est également présent côté ABS/ESP — l'antipatinage partage souvent le même calculateur que ces fonctions.",
+    pieces: [
+      { nom: "Diagnostic réseau BSI/antipatinage (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F062",
+    titre: "Absence de communication avec le système audio — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur du système audio (autoradio), ce qui peut couper le son ou figer l'affichage sans affecter les autres fonctions du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'autoradio endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'autoradio oxydé" },
+      { pourcentage: 22, libelle: "Autoradio défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement le confort audio — sans impact sur la conduite ou la sécurité du véhicule.",
+    pieces: [
+      { nom: "Diagnostic système audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F063",
+    titre: "Absence de communication avec l'unité de rappel de ceinture non bouclée — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte de sécurité désactivée",
+    description:
+      "Le BSI ne parvient plus à communiquer avec l'unité qui gère l'alerte sonore et visuelle de rappel de ceinture de sécurité non bouclée.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'unité de rappel endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'unité oxydé" },
+      { pourcentage: 22, libelle: "Unité de rappel défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive une alerte de sécurité importante — vérifier systématiquement que chaque passager boucle sa ceinture, même sans rappel automatique.",
+    pieces: [
+      { nom: "Diagnostic unité rappel ceinture (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F065",
+    titre: "Absence de communication avec le hayon motorisé — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ouverture manuelle généralement préservée",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui commande l'ouverture et la fermeture électrique du hayon (coffre motorisé), ce qui peut empêcher son fonctionnement automatique.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur du hayon motorisé endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur du hayon motorisé défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'ouverture et la fermeture manuelles du hayon restent généralement possibles malgré ce défaut — seule la fonction motorisée est concernée.",
+    pieces: [
+      { nom: "Diagnostic hayon motorisé (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F117",
+    titre: "Présence d'eau détectée dans le filtre à carburant diesel",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque pour la pompe haute pression",
+    description:
+      "Le capteur situé dans le filtre à carburant détecte une accumulation d'eau au-delà du seuil autorisé, un défaut sérieux pouvant endommager la pompe haute pression et les injecteurs s'il n'est pas traité.",
+    causes: [
+      { pourcentage: 45, libelle: "Purge d'eau du filtre à carburant jamais effectuée (entretien préventif oublié)" },
+      { pourcentage: 28, libelle: "Condensation accumulée dans le réservoir (réservoir souvent roulé presque vide)" },
+      { pourcentage: 17, libelle: "Carburant de mauvaise qualité lors d'un plein" },
+      { pourcentage: 10, libelle: "Capteur de présence d'eau défaillant (fausse alerte)" },
+    ],
+    avisPro:
+      "Purger le filtre à carburant dès que possible — l'eau qui atteint la pompe haute pression peut provoquer une panne très coûteuse sur un moteur diesel common-rail.",
+    pieces: [
+      { nom: "Purge + filtre à carburant diesel", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F150",
+    titre: "Défaut information vitesse véhicule — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs fonctions liées à la vitesse concernées",
+    description:
+      "Le BSI ne reçoit plus une information fiable de la vitesse du véhicule, une donnée partagée par de nombreux systèmes (essuie-glaces automatiques, verrouillage automatique des portes, régulateur de vitesse).",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau CAN transmettant la vitesse véhicule" },
+      { pourcentage: 28, libelle: "Capteur de vitesse de roue (ABS) défaillant en amont" },
+      { pourcentage: 22, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver plusieurs fonctions liées à la vitesse en même temps — vérifier d'abord si un défaut est également présent côté ABS.",
+    pieces: [
+      { nom: "Diagnostic réseau vitesse véhicule (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F153",
+    titre: "Défaut information accélération longitudinale — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP et régulateur adaptatif concernés",
+    description:
+      "Le BSI relaie une anomalie sur l'information d'accélération longitudinale du véhicule (utilisée notamment par l'ESP et le régulateur de vitesse adaptatif), transmise par un capteur dédié.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur d'accélération longitudinale défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Défaut réseau CAN" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier si l'ESP affiche également un défaut au même moment — cette information est directement utilisée par le système de stabilité.",
+    pieces: [
+      { nom: "Diagnostic capteur accélération longitudinale (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F4BE",
+    titre: "Défaut éclairage feu stop arrière droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — motif de contre-visite au contrôle technique",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du feu stop arrière droit, ce qui réduit la visibilité du freinage pour les véhicules suivants et constitue un motif de contre-visite au contrôle technique.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Contacteur de pédale de frein en cause" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un feu stop défaillant est un vrai risque de sécurité et un motif de recalage au contrôle technique — à corriger sans attendre.",
+    pieces: [
+      { nom: "Ampoule feu stop", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F4C5",
+    titre: "Défaut éclairage troisième feu stop — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — feux stop principaux non affectés",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du troisième feu stop (centre, souvent situé sur la lunette arrière ou le becquet), sans affecter les deux feux stop principaux.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Infiltration d'eau au niveau du feu (souvent situé sur le hayon)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce feu est souvent situé sur une zone mobile (hayon, becquet) où le câblage subit une usure par flexion répétée — un point à vérifier si le défaut revient régulièrement.",
+    pieces: [
+      { nom: "Troisième feu stop (LED)", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
