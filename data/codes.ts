@@ -4024,6 +4024,258 @@ export const codes: CodeDefaut[] = [
       { nom: "Vidange boîte AM6 + filtre", boutique: "Recommandé avant pièce", prix: "150-220€" },
     ],
   },
+  {
+    code: "B2E24",
+    titre: "Bouton d'assistance au stationnement bloqué — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "faible",
+    severiteLabel: "Gravité faible — bouton de confort uniquement",
+    description:
+      "Le bouton qui active ou désactive l'assistance au stationnement (radars de recul/avant) reste bloqué ou envoie un signal incohérent au calculateur du combiné d'instruments.",
+    causes: [
+      { pourcentage: 45, libelle: "Bouton mécaniquement bloqué ou grippé" },
+      { pourcentage: 30, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 15, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 10, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Un simple nettoyage ou déblocage mécanique du bouton résout souvent ce défaut sans remplacement de pièce.",
+    pieces: [
+      { nom: "Diagnostic bouton assistance stationnement (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "B2E26",
+    titre: "Bouton ESP bloqué — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque d'ESP désactivé à l'insu du conducteur",
+    description:
+      "Le bouton qui permet de désactiver l'ESP (contrôle de stabilité) reste bloqué ou envoie un signal incohérent, ce qui peut laisser l'ESP désactivé sans que le conducteur en soit conscient.",
+    causes: [
+      { pourcentage: 45, libelle: "Bouton mécaniquement bloqué ou grippé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 17, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 10, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Vérifier systématiquement au tableau de bord que le témoin ESP indique bien l'état réel du système — un bouton bloqué en position désactivée est un vrai risque de sécurité qui passe facilement inaperçu.",
+    pieces: [
+      { nom: "Diagnostic bouton ESP (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "B2E30",
+    titre: "Bouton alerte de franchissement de ligne bloqué — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide à la conduite optionnelle uniquement",
+    description:
+      "Le bouton qui active ou désactive l'alerte de franchissement involontaire de ligne reste bloqué ou envoie un signal incohérent au calculateur du combiné.",
+    causes: [
+      { pourcentage: 45, libelle: "Bouton mécaniquement bloqué ou grippé" },
+      { pourcentage: 30, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 15, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 10, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte qu'une aide à la conduite optionnelle — sans impact sur la sécurité de base du véhicule.",
+    pieces: [
+      { nom: "Diagnostic bouton aide à la conduite (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "B1004",
+    titre: "Défaut interne combiné d'instruments — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — lisibilité du tableau de bord compromise",
+    description:
+      "Le calculateur du combiné d'instruments (tableau de bord) détecte un défaut interne, pouvant affecter l'affichage des compteurs, jauges ou témoins d'alerte.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur du combiné défaillant" },
+      { pourcentage: 25, libelle: "Alimentation électrique instable" },
+      { pourcentage: 18, libelle: "Masse électrique défectueuse" },
+      { pourcentage: 12, libelle: "Mise à jour logicielle nécessaire" },
+    ],
+    avisPro:
+      "Un affichage erratique du tableau de bord (aiguilles qui s'affolent, témoins qui clignotent tous en même temps) est le symptôme typique de ce défaut — faire un diagnostic avant de rouler si l'affichage devient illisible.",
+    pieces: [
+      { nom: "Diagnostic combiné d'instruments (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "B100C",
+    titre: "Défaut alimentation calculateur combiné — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque d'extinction du tableau de bord",
+    description:
+      "Le calculateur du combiné d'instruments détecte une alimentation électrique hors plage de fonctionnement, ce qui peut provoquer une extinction totale ou partielle du tableau de bord.",
+    causes: [
+      { pourcentage: 35, libelle: "Fusible dédié grillé" },
+      { pourcentage: 30, libelle: "Câblage d'alimentation du combiné endommagé" },
+      { pourcentage: 20, libelle: "Batterie ou alternateur en cause (tension instable)" },
+      { pourcentage: 15, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Vérifier la tension batterie et l'état du fusible avant de suspecter le calculateur — une alimentation instable touche souvent plusieurs équipements électriques en même temps.",
+    pieces: [
+      { nom: "Diagnostic alimentation combiné (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "B151D",
+    titre: "Défaut éclairage écran/console — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lisibilité réduite de nuit",
+    description:
+      "Le circuit d'éclairage de l'écran ou de la console centrale ne fonctionne plus correctement, rendant l'affichage difficilement lisible de nuit.",
+    causes: [
+      { pourcentage: 40, libelle: "LED ou ampoule d'éclairage grillée" },
+      { pourcentage: 30, libelle: "Câblage du circuit d'éclairage endommagé" },
+      { pourcentage: 20, libelle: "Variateur (rhéostat) d'intensité défaillant" },
+      { pourcentage: 10, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord le réglage du variateur d'intensité au tableau de bord — un réglage accidentel à zéro est parfois confondu avec une panne.",
+    pieces: [
+      { nom: "Diagnostic éclairage console (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "U1F03",
+    titre: "Absence de communication avec le BSI — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent lié à un défaut réseau plus large",
+    description:
+      "Le calculateur du combiné d'instruments ne reçoit plus les informations transmises par le boîtier de servitude intelligent (BSI), ce qui peut priver le tableau de bord de plusieurs informations (niveau carburant, portes ouvertes, etc.).",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 25, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 20, libelle: "BSI en défaut propre" },
+      { pourcentage: 20, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Vérifier si le BSI affiche lui-même des défauts au même moment — ce code accompagne souvent un problème réseau plus large plutôt qu'une panne isolée du combiné.",
+    pieces: [
+      { nom: "Diagnostic réseau BSI/combiné (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1F0A",
+    titre: "Défaut réseau CAN — combiné d'instruments PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — plusieurs informations du tableau de bord affectées",
+    description:
+      "Le calculateur du combiné d'instruments détecte une anomalie sur le réseau CAN, ce qui peut le priver de plusieurs informations essentielles venant d'autres calculateurs du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN endommagé ou court-circuité" },
+      { pourcentage: 25, libelle: "Connecteur du combiné mal enfiché ou corrodé" },
+      { pourcentage: 20, libelle: "Résistance de terminaison du bus CAN défaillante" },
+      { pourcentage: 20, libelle: "Autre calculateur du réseau perturbant le bus" },
+    ],
+    avisPro:
+      "Un défaut réseau généralisé touchant le combiné affecte souvent l'affichage de plusieurs informations en même temps — vérifier les autres calculateurs pour une cause commune.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "B128D",
+    titre: "Bouton Stop & Start bloqué — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "faible",
+    severiteLabel: "Gravité faible — désactivation manuelle impossible uniquement",
+    description:
+      "Le bouton qui permet de désactiver manuellement le système Stop & Start reste bloqué ou envoie un signal incohérent au calculateur.",
+    causes: [
+      { pourcentage: 45, libelle: "Bouton mécaniquement bloqué ou grippé" },
+      { pourcentage: 30, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 15, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 10, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'empêche pas le fonctionnement normal du Stop & Start — seule sa désactivation manuelle est impossible.",
+    pieces: [
+      { nom: "Diagnostic bouton Stop & Start (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "B128C",
+    titre: "Défaut statut mode ECO — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "faible",
+    severiteLabel: "Gravité faible — défaut purement informatif",
+    description:
+      "L'information d'état du mode de conduite ECO, affichée au tableau de bord, n'est plus transmise ou affichée correctement par le calculateur du combiné.",
+    causes: [
+      { pourcentage: 40, libelle: "Défaut réseau transmettant le statut ECO" },
+      { pourcentage: 30, libelle: "Calculateur moteur ou boîte en cause (source de l'information)" },
+      { pourcentage: 20, libelle: "Calculateur du combiné défaillant" },
+      { pourcentage: 10, libelle: "Câblage du réseau multiplexé endommagé" },
+    ],
+    avisPro:
+      "Ce défaut est purement informatif — il n'affecte ni la conduite ni la consommation réelle du véhicule.",
+    pieces: [
+      { nom: "Diagnostic affichage mode ECO (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "B154A",
+    titre: "Bouton d'assistance au stationnement semi-automatique bloqué — combiné PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "faible",
+    severiteLabel: "Gravité faible — stationnement manuel classique non affecté",
+    description:
+      "Le bouton qui active la fonction de stationnement semi-automatique (braquage assisté) reste bloqué ou envoie un signal incohérent au calculateur du combiné.",
+    causes: [
+      { pourcentage: 45, libelle: "Bouton mécaniquement bloqué ou grippé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 17, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 10, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive uniquement l'assistance au stationnement automatisée — le stationnement manuel classique reste possible normalement.",
+    pieces: [
+      { nom: "Diagnostic bouton stationnement semi-auto (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "B1549",
+    titre: "Défaut rétroéclairage du combiné d'instruments — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Combiné / écran",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lisibilité de nuit compromise",
+    description:
+      "Le rétroéclairage propre au combiné d'instruments (aiguilles, chiffres, témoins) ne fonctionne plus correctement, rendant le tableau de bord difficilement lisible de nuit ou en cas de faible luminosité.",
+    causes: [
+      { pourcentage: 40, libelle: "LED de rétroéclairage du combiné grillées" },
+      { pourcentage: 30, libelle: "Câblage interne du combiné endommagé" },
+      { pourcentage: 20, libelle: "Variateur (rhéostat) d'intensité défaillant" },
+      { pourcentage: 10, libelle: "Calculateur du combiné défaillant" },
+    ],
+    avisPro:
+      "Rouler de nuit avec un tableau de bord illisible est risqué — traiter ce défaut rapidement même s'il semble uniquement esthétique.",
+    pieces: [
+      { nom: "Diagnostic rétroéclairage combiné (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
