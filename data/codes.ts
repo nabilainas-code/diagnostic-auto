@@ -2245,6 +2245,298 @@ export const codes: CodeDefaut[] = [
       { nom: "Capteur ABS arrière gauche", boutique: "AutoDoc · livraison 24h", prix: "34€" },
     ],
   },
+  {
+    code: "C100A",
+    titre: "Défaut signal capteur de vitesse roue avant gauche — ABS PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Code propriétaire PSA équivalent au générique C0035 : le capteur de vitesse de roue avant gauche envoie un signal incohérent ou absent, désactivant l'ABS et l'ESP par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS avant gauche", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C1015",
+    titre: "Défaut signal capteur de vitesse roue avant droite — ABS PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Code propriétaire PSA équivalent au générique C0040 : le capteur de vitesse de roue avant droite envoie un signal incohérent ou absent, désactivant l'ABS et l'ESP par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS avant droit", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C1020",
+    titre: "Défaut signal capteur de vitesse roue arrière gauche — ABS PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Code propriétaire PSA équivalent au générique C0045 : le capteur de vitesse de roue arrière gauche envoie un signal incohérent ou absent, désactivant l'ABS et l'ESP par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS arrière gauche", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C102B",
+    titre: "Défaut signal capteur de vitesse roue arrière droite — ABS PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP désactivés sur cette roue",
+    description:
+      "Code propriétaire PSA équivalent au générique C0050 : le capteur de vitesse de roue arrière droite envoie un signal incohérent ou absent, désactivant l'ABS et l'ESP par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de vitesse de roue défaillant" },
+      { pourcentage: 28, libelle: "Cible denture (anneau codeur) encrassée ou endommagée" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Entrefer incorrect (capteur mal positionné)" },
+    ],
+    avisPro:
+      "Nettoyer la cible denture et vérifier l'entrefer avant de remplacer le capteur — un simple encrassement est une cause fréquente et gratuite à corriger.",
+    pieces: [
+      { nom: "Capteur ABS arrière droit", boutique: "AutoDoc · livraison 24h", prix: "34€" },
+    ],
+  },
+  {
+    code: "C104B",
+    titre: "Défaut de commande électrovanne d'admission avant gauche — ABS PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS désactivé",
+    description:
+      "L'électrovanne du bloc hydraulique ABS qui régule la pression de freinage sur la roue avant gauche ne répond plus correctement aux commandes du calculateur.",
+    causes: [
+      { pourcentage: 35, libelle: "Électrovanne du bloc hydraulique grippée ou défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Bloc hydraulique ABS encrassé (liquide de frein ancien)" },
+      { pourcentage: 15, libelle: "Calculateur ABS défaillant" },
+    ],
+    avisPro:
+      "Vérifier la date de la dernière purge du liquide de frein — un liquide ancien encrasse les électrovannes du bloc ABS, cause fréquente sur véhicules peu entretenus.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS", boutique: "Mister-Auto · sur commande", prix: "320€" },
+    ],
+  },
+  {
+    code: "C1053",
+    titre: "Défaut électrovanne d'admission arrière gauche — ABS PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS désactivé",
+    description:
+      "L'électrovanne du bloc hydraulique ABS qui régule la pression de freinage sur la roue arrière gauche ne répond plus correctement aux commandes du calculateur.",
+    causes: [
+      { pourcentage: 35, libelle: "Électrovanne du bloc hydraulique grippée ou défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Bloc hydraulique ABS encrassé (liquide de frein ancien)" },
+      { pourcentage: 15, libelle: "Calculateur ABS défaillant" },
+    ],
+    avisPro:
+      "Vérifier la date de la dernière purge du liquide de frein — un liquide ancien encrasse les électrovannes du bloc ABS, cause fréquente sur véhicules peu entretenus.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS", boutique: "Mister-Auto · sur commande", prix: "320€" },
+    ],
+  },
+  {
+    code: "C1073",
+    titre: "Défaut pompe de recirculation ABS/ASR",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ASR désactivés",
+    description:
+      "La pompe de recirculation du bloc hydraulique ABS (qui remet le liquide de frein en pression lors des interventions ABS/ASR) ne fonctionne plus correctement.",
+    causes: [
+      { pourcentage: 35, libelle: "Pompe de recirculation grillée" },
+      { pourcentage: 25, libelle: "Fusible ou relais de pompe défaillant" },
+      { pourcentage: 22, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 18, libelle: "Bloc hydraulique ABS complet défaillant" },
+    ],
+    avisPro:
+      "Vérifier fusible et relais avant d'envisager un remplacement du bloc hydraulique complet, qui est une pièce coûteuse.",
+    pieces: [
+      { nom: "Fusible/relais pompe ABS", boutique: "Oscaro · livraison 48h", prix: "18€" },
+      { nom: "Bloc hydraulique ABS", boutique: "Mister-Auto · sur commande", prix: "320€" },
+    ],
+  },
+  {
+    code: "C121D",
+    titre: "Défaut capteur de pression du circuit de freinage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP et assistance au freinage affectés",
+    description:
+      "Le capteur qui mesure la pression dans le circuit de freinage (utilisé par l'ESP et l'aide au freinage d'urgence) envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de pression de freinage défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du capteur endommagé" },
+      { pourcentage: 20, libelle: "Air dans le circuit de freinage (purge nécessaire)" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'absence d'air dans le circuit de freinage (pédale spongieuse) avant de remplacer le capteur — une purge résout parfois le défaut.",
+    pieces: [
+      { nom: "Capteur de pression circuit de freinage", boutique: "Mister-Auto · sur commande", prix: "86€" },
+    ],
+  },
+  {
+    code: "C1219",
+    titre: "Défaut signal capteur d'angle du volant",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP désactivé",
+    description:
+      "Le capteur d'angle volant, qui indique à l'ESP la direction souhaitée par le conducteur pour la comparer à la trajectoire réelle du véhicule, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le volant (spirale contact) endommagé" },
+      { pourcentage: 20, libelle: "Calibrage du capteur non effectué après une intervention" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant (rare)" },
+    ],
+    avisPro:
+      "Après tout remplacement de crémaillère, colonne de direction ou pneus/parallélisme, un recalibrage du capteur d'angle volant est indispensable.",
+    pieces: [
+      { nom: "Capteur d'angle volant", boutique: "Oscaro · livraison 48h", prix: "78€" },
+    ],
+  },
+  {
+    code: "C121A",
+    titre: "Défaut de calibrage du capteur d'angle du volant",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recalibrage nécessaire, pièce rarement en cause",
+    description:
+      "Contrairement à C1219, ce code n'indique pas une panne matérielle mais l'absence ou l'échec du calibrage du capteur d'angle volant — une procédure obligatoire après certaines interventions.",
+    causes: [
+      { pourcentage: 55, libelle: "Calibrage jamais effectué après une intervention (parallélisme, direction)" },
+      { pourcentage: 25, libelle: "Calibrage interrompu ou mal réalisé" },
+      { pourcentage: 20, libelle: "Capteur d'angle volant défaillant" },
+    ],
+    avisPro:
+      "Refaire la procédure de calibrage à la valise constructeur après avoir vérifié que les roues sont bien en position ligne droite — résout la grande majorité des cas sans remplacement.",
+    pieces: [
+      { nom: "Recalibrage capteur angle volant (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C123C",
+    titre: "Défaut signal capteur gyromètre-accéléromètre (ESP)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP désactivé",
+    description:
+      "Le capteur gyromètre-accéléromètre (qui mesure les mouvements de rotation et d'accélération du véhicule pour détecter un dérapage) envoie un signal incohérent, désactivant l'ESP.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur gyromètre-accéléromètre défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur défaillant" },
+      { pourcentage: 15, libelle: "Véhicule non de niveau lors d'un calibrage (chargement inégal)" },
+      { pourcentage: 10, libelle: "Calculateur ESP défaillant (rare)" },
+    ],
+    avisPro:
+      "Ce capteur est souvent situé sous la console centrale — sensible aux chocs lors d'une intervention sur cette zone, à vérifier en priorité.",
+    pieces: [
+      { nom: "Capteur gyromètre-accéléromètre (ESP)", boutique: "Oscaro · livraison 48h", prix: "96€" },
+    ],
+  },
+  {
+    code: "C1210",
+    titre: "Défaut alimentation capteur accélération transversale/longitudinale",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP désactivé",
+    description:
+      "L'alimentation électrique du capteur d'accélération transversale et longitudinale (associé au gyromètre pour l'ESP) est hors plage — un problème d'alimentation plutôt qu'un capteur défaillant en lui-même.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage d'alimentation du capteur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "Capteur défaillant" },
+    ],
+    avisPro:
+      "Contrôler la tension d'alimentation du capteur au multimètre avant de le remplacer — le problème vient souvent du câblage plutôt que du capteur lui-même.",
+    pieces: [
+      { nom: "Capteur gyromètre-accéléromètre (ESP)", boutique: "Oscaro · livraison 48h", prix: "96€" },
+    ],
+  },
+  {
+    code: "C2100",
+    titre: "Défaut de sous-tension d'alimentation du calculateur ABS/ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent lié à la batterie, pas au calculateur",
+    description:
+      "Le calculateur ABS/ESP reçoit une tension d'alimentation trop basse pour fonctionner correctement — la cause est généralement électrique globale (batterie, alternateur) plutôt qu'un défaut propre au calculateur.",
+    causes: [
+      { pourcentage: 45, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 25, libelle: "Alternateur qui charge insuffisamment" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Tester la batterie et l'alternateur avant tout diagnostic sur le calculateur ABS lui-même — c'est presque toujours la vraie cause de ce code.",
+    pieces: [
+      { nom: "Batterie 12V", boutique: "Oscaro · livraison 48h", prix: "89€" },
+    ],
+  },
+  {
+    code: "C2203",
+    titre: "Numéro de série (VIN) non enregistré dans le calculateur ABS/ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — défaut de configuration, pas de panne matérielle",
+    description:
+      "Ce n'est pas une panne : le numéro de série (VIN) du véhicule n'a pas été enregistré dans le calculateur ABS/ESP, généralement après un remplacement de calculateur non finalisé par la procédure de programmation.",
+    causes: [
+      { pourcentage: 80, libelle: "Procédure de programmation VIN oubliée après remplacement du calculateur" },
+      { pourcentage: 20, libelle: "Calculateur ABS/ESP défaillant empêchant l'enregistrement" },
+    ],
+    avisPro:
+      "Simple oubli de procédure après une intervention — faire enregistrer le VIN à la valise constructeur, aucune pièce à changer normalement.",
+    pieces: [
+      { nom: "Programmation VIN calculateur (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
