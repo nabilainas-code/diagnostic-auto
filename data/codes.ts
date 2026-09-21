@@ -9619,6 +9619,636 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic de vérification post-intervention (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
     ],
   },
+  {
+    code: "F003",
+    titre: "Absence de communication sur le réseau CAN avec le BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — de très nombreuses fonctions potentiellement affectées",
+    description:
+      "Un calculateur signale une perte totale de communication avec le BSI sur le réseau CAN, ce qui peut désactiver simultanément de nombreux équipements électriques du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du BSI oxydé ou mal enfiché" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 15, libelle: "Alimentation du BSI instable" },
+    ],
+    avisPro:
+      "Ce défaut touche potentiellement de très nombreuses fonctions à la fois — un diagnostic réseau complet est indispensable avant tout remplacement de pièce.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FCB0",
+    titre: "Défaut alimentation du BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dysfonctionnements généralisés possibles",
+    description:
+      "Le boîtier de servitude intelligent lui-même détecte une anomalie sur sa propre alimentation électrique, ce qui peut provoquer des dysfonctionnements généralisés sur de nombreux équipements.",
+    causes: [
+      { pourcentage: 35, libelle: "Fusible principal du BSI grillé" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du BSI endommagé" },
+      { pourcentage: 22, libelle: "Batterie ou alternateur en cause (tension instable)" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fusible principal et la tension batterie avant tout autre diagnostic — une alimentation instable touche généralement plusieurs équipements en même temps.",
+    pieces: [
+      { nom: "Diagnostic alimentation BSI (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F978",
+    titre: "Absence de communication avec le module de télépéage — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — badge autoroute classique en alternative",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module de télépéage embarqué (badge autoroute intégré), sans affecter les autres fonctions du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module de télépéage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module de télépéage défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement le badge télépéage intégré — un badge autoroute classique posé sur le pare-brise reste une alternative en attendant la réparation.",
+    pieces: [
+      { nom: "Diagnostic module télépéage (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F8F0",
+    titre: "Absence de communication avec le kit mains libres (variante) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — téléphonie uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module qui gère le kit mains libres Bluetooth, désactivant les appels et certaines fonctions audio associées.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module mains libres endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module mains libres défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que la téléphonie mains libres — l'autoradio et la conduite restent normaux.",
+    pieces: [
+      { nom: "Diagnostic module mains libres (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F523",
+    titre: "Télécommande désynchronisée — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — démarrage à la clé non affecté",
+    description:
+      "La télécommande du véhicule (clé) n'est plus synchronisée avec le BSI, ce qui empêche le verrouillage/déverrouillage à distance sans affecter le démarrage à la clé physique.",
+    causes: [
+      { pourcentage: 50, libelle: "Télécommande désynchronisée après une utilisation hors de portée répétée" },
+      { pourcentage: 25, libelle: "Pile de la télécommande faible" },
+      { pourcentage: 15, libelle: "Interférence radio (proximité d'autres télécommandes ou d'antennes)" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une procédure de resynchronisation à la valise constructeur résout ce défaut dans la grande majorité des cas, sans remplacement de pièce.",
+    pieces: [
+      { nom: "Resynchronisation télécommande (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F1A8",
+    titre: "Défaut information état des serrures — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — verrouillage automatique perturbé",
+    description:
+      "Le BSI ne parvient pas à déterminer de façon fiable l'état verrouillé/déverrouillé des portes, ce qui peut perturber le verrouillage automatique ou l'alerte de porte mal fermée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur d'une serrure défaillant" },
+      { pourcentage: 28, libelle: "Câblage du circuit de verrouillage endommagé" },
+      { pourcentage: 22, libelle: "Défaut réseau perturbant l'information" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que toutes les portes sont bien fermées avant de quitter le véhicule tant que ce défaut n'est pas corrigé.",
+    pieces: [
+      { nom: "Diagnostic état des serrures (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FEA2",
+    titre: "Défaut signal capteur de présence du bouchon — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — souvent un simple bouchon mal fermé",
+    description:
+      "Le capteur qui détecte la présence du bouchon de réservoir envoie un signal incohérent, ce qui peut déclencher une alerte même quand le bouchon est correctement en place.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Bouchon de réservoir mal positionné ou usé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le bouchon est bien vissé jusqu'au clic avant de suspecter le capteur — un bouchon mal fermé est la cause la plus fréquente.",
+    pieces: [
+      { nom: "Bouchon de réservoir carburant", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "FEA4",
+    titre: "Ouverture du bouchon de réservoir détectée en roulant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — vérifier immédiatement",
+    description:
+      "Le BSI détecte que le bouchon de réservoir s'est ouvert ou desserré alors que le véhicule était en mouvement, ce qui peut provoquer une odeur de carburant ou une légère perte.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouchon de réservoir mal revissé lors du dernier plein" },
+      { pourcentage: 28, libelle: "Joint du bouchon usé ne maintenant plus la fermeture" },
+      { pourcentage: 18, libelle: "Capteur de présence défaillant (fausse alerte)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "S'arrêter dès que possible pour vérifier et revisser correctement le bouchon jusqu'au clic — une odeur de carburant à l'intérieur de l'habitacle ne doit jamais être ignorée.",
+    pieces: [
+      { nom: "Bouchon de réservoir carburant", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "F98E",
+    titre: "Défaut feux de route — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — visibilité nocturne fortement réduite",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit des feux de route (pleins phares), ce qui réduit fortement la visibilité en conduite nocturne hors agglomération.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou module LED grillé" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 20, libelle: "Fusible ou relais dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une visibilité nocturne réduite en dehors des zones éclairées est un vrai risque de sécurité — à corriger avant tout trajet de nuit prolongé.",
+    pieces: [
+      { nom: "Ampoule feu de route", boutique: "AutoDoc · livraison 24h", prix: "10€" },
+    ],
+  },
+  {
+    code: "F992",
+    titre: "Défaut clignotant avant droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation compromise",
+    description:
+      "Le boîtier de servitude intelligent détecte une anomalie sur le circuit du clignotant avant droit, ce qui peut se traduire par un clignotement plus rapide que la normale ou une absence totale d'éclairage.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED de clignotant grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du clignotant endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un clignotement anormalement rapide au tableau de bord est le signe caractéristique d'une ampoule grillée — un remplacement simple résout généralement le défaut.",
+    pieces: [
+      { nom: "Ampoule clignotant", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "F993",
+    titre: "Défaut réglage de hauteur des phares — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque d'éblouissement",
+    description:
+      "Le système de correction électrique de la hauteur des phares (adaptation selon la charge du véhicule) ne répond plus correctement, ce qui peut éblouir les véhicules venant en sens inverse ou réduire la portée de l'éclairage.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de correction de hauteur des phares défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 22, libelle: "Capteur de hauteur de caisse défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut valoir une contre-visite au contrôle technique s'il provoque un éblouissement excessif — à faire vérifier avant le passage.",
+    pieces: [
+      { nom: "Moteur correcteur de hauteur de phare", boutique: "Oscaro · livraison 48h", prix: "35€" },
+    ],
+  },
+  {
+    code: "FBAA",
+    titre: "Défaut clignotant arrière gauche (boîtier fusibles coffre) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation compromise",
+    description:
+      "Le boîtier de fusibles situé dans le coffre détecte une anomalie sur le circuit du clignotant arrière gauche, ce qui peut se traduire par un clignotement plus rapide que la normale ou une absence totale d'éclairage.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED de clignotant grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du clignotant endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé (boîtier coffre)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Sur ce type de montage, le boîtier de fusibles du coffre est directement accessible — vérifier le fusible dédié avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Ampoule clignotant", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "FBAC",
+    titre: "Défaut feu antibrouillard arrière gauche (boîtier fusibles coffre) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — visibilité réduite par brouillard",
+    description:
+      "Le boîtier de fusibles situé dans le coffre détecte une anomalie sur le circuit du feu antibrouillard arrière gauche, ce qui réduit la visibilité par temps de brouillard.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 18, libelle: "Fusible dédié grillé (boîtier coffre)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'est gênant qu'en conditions de brouillard — mais un contrôle reste nécessaire pour la sécurité et la conformité au contrôle technique.",
+    pieces: [
+      { nom: "Ampoule feu antibrouillard", boutique: "AutoDoc · livraison 24h", prix: "6€" },
+    ],
+  },
+  {
+    code: "FF2A",
+    titre: "Défaut feu antibrouillard gauche (boîtier attelage) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lié à l'installation d'un attelage",
+    description:
+      "Le boîtier de fusibles dédié à l'attelage de remorque détecte une anomalie sur le circuit du feu antibrouillard gauche du véhicule, souvent lié à l'installation d'un attelage.",
+    causes: [
+      { pourcentage: 38, libelle: "Ampoule ou LED grillée" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur du feu endommagé" },
+      { pourcentage: 22, libelle: "Boîtier de conversion attelage défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Sur un véhicule équipé d'un attelage, ce boîtier de conversion est une source fréquente de défauts électriques — à vérifier en priorité.",
+    pieces: [
+      { nom: "Diagnostic boîtier conversion attelage (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F99C",
+    titre: "Défaut circuit de commande pompe à carburant (boîtier fusibles moteur) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de non-démarrage ou coupure moteur",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit qui commande la pompe à carburant, ce qui peut empêcher le démarrage ou provoquer des coupures en roulant.",
+    causes: [
+      { pourcentage: 35, libelle: "Relais de pompe à carburant défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation de la pompe endommagé" },
+      { pourcentage: 22, libelle: "Pompe à carburant défaillante" },
+      { pourcentage: 15, libelle: "Boîtier fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Vérifier le relais de pompe en premier — c'est une pièce peu coûteuse et facilement accessible, contrairement à la pompe elle-même souvent logée dans le réservoir.",
+    pieces: [
+      { nom: "Relais pompe à carburant", boutique: "AutoDoc · livraison 24h", prix: "15€" },
+    ],
+  },
+  {
+    code: "F943",
+    titre: "Défaut bouton d'appel d'urgence (eCall) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité vital",
+    description:
+      "Le bouton d'appel d'urgence (SOS/eCall), qui contacte automatiquement les secours en cas d'accident grave ou sur demande manuelle, envoie un signal incohérent au BSI.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton d'appel d'urgence défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du bouton corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce système peut être vital en cas d'accident — faire diagnostiquer sans attendre pour s'assurer qu'il reste opérationnel.",
+    pieces: [
+      { nom: "Diagnostic bouton appel d'urgence (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F968",
+    titre: "Absence de batterie de secours (eCall) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité en cas de choc compromise",
+    description:
+      "La batterie de secours dédiée au système d'appel d'urgence (permettant son fonctionnement même en cas de coupure de la batterie principale lors d'un choc) n'est plus détectée.",
+    causes: [
+      { pourcentage: 45, libelle: "Batterie de secours en fin de vie" },
+      { pourcentage: 28, libelle: "Connecteur de la batterie de secours débranché ou corrodé" },
+      { pourcentage: 17, libelle: "Câblage endommagé" },
+      { pourcentage: 10, libelle: "Calculateur eCall défaillant" },
+    ],
+    avisPro:
+      "Cette batterie garantit le fonctionnement de l'appel d'urgence même batterie principale déconnectée lors d'un choc — à faire remplacer rapidement, c'est un élément de sécurité important.",
+    pieces: [
+      { nom: "Batterie de secours eCall", boutique: "Mister-Auto · sur commande", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FD90",
+    titre: "Défaut haut-parleur d'urgence (eCall) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication d'urgence compromise",
+    description:
+      "Le haut-parleur dédié à la communication avec les services d'urgence lors d'un appel eCall présente une anomalie, ce qui peut empêcher toute conversation audible lors d'un appel d'urgence.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur d'urgence défaillant" },
+      { pourcentage: 28, libelle: "Câblage du haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du haut-parleur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur eCall défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche un équipement de sécurité important — faire diagnostiquer rapidement pour garantir une communication possible avec les secours en cas de besoin.",
+    pieces: [
+      { nom: "Diagnostic haut-parleur d'urgence (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FD99",
+    titre: "Absence d'alimentation de secours — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — systèmes critiques concernés",
+    description:
+      "L'alimentation de secours qui permet à certains systèmes critiques (dont l'appel d'urgence) de continuer à fonctionner en cas de coupure de la batterie principale n'est plus détectée.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie de secours défaillante ou débranchée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation de secours endommagé" },
+      { pourcentage: 20, libelle: "Connecteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Cette alimentation de secours est un élément de sécurité, notamment pour l'appel d'urgence en cas d'accident — à faire vérifier rapidement.",
+    pieces: [
+      { nom: "Diagnostic alimentation de secours (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FD9A",
+    titre: "Défaut alimentation de secours (batterie déchargée) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — efficacité réduite en cas de choc",
+    description:
+      "La batterie de secours dédiée aux systèmes critiques est détectée mais insuffisamment chargée, ce qui peut limiter son efficacité en cas de coupure de l'alimentation principale.",
+    causes: [
+      { pourcentage: 45, libelle: "Batterie de secours en fin de vie ne retenant plus la charge" },
+      { pourcentage: 30, libelle: "Circuit de charge de la batterie de secours défaillant" },
+      { pourcentage: 15, libelle: "Véhicule resté longtemps sans rouler" },
+      { pourcentage: 10, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Comme pour la batterie principale, cette batterie de secours s'use avec le temps — un remplacement préventif tous les quelques années est recommandé.",
+    pieces: [
+      { nom: "Batterie de secours eCall", boutique: "Mister-Auto · sur commande", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F953",
+    titre: "Défaut module Bluetooth — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort de connectivité uniquement",
+    description:
+      "Le module Bluetooth qui permet le couplage avec un téléphone (appels mains libres, streaming audio) présente une anomalie, ce qui peut empêcher tout appairage ou couper les connexions existantes.",
+    causes: [
+      { pourcentage: 40, libelle: "Module Bluetooth défaillant" },
+      { pourcentage: 28, libelle: "Câblage du module endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Essayer d'abord de réinitialiser les appareils appairés (oublier puis recoupler le téléphone) avant d'envisager une panne matérielle du module.",
+    pieces: [
+      { nom: "Diagnostic module Bluetooth (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F940",
+    titre: "Défaut antenne GPS — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — navigation affectée uniquement",
+    description:
+      "L'antenne GPS qui permet la géolocalisation du véhicule pour la navigation et les services connectés présente une anomalie, ce qui peut empêcher toute localisation précise.",
+    causes: [
+      { pourcentage: 40, libelle: "Antenne GPS défaillante" },
+      { pourcentage: 28, libelle: "Câblage de l'antenne endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de l'antenne oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte la navigation et la géolocalisation — sans impact sur la conduite ou la mécanique du véhicule.",
+    pieces: [
+      { nom: "Antenne GPS", boutique: "Mister-Auto · sur commande", prix: "45-80€" },
+    ],
+  },
+  {
+    code: "F976",
+    titre: "Défaut module CD/DVD (surchauffe) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — disparaît souvent après refroidissement",
+    description:
+      "Le lecteur CD/DVD intégré à l'autoradio détecte une surchauffe interne et se met en sécurité, ce qui peut interrompre la lecture ou empêcher l'éjection d'un disque.",
+    causes: [
+      { pourcentage: 40, libelle: "Ventilation du module insuffisante (poussière accumulée)" },
+      { pourcentage: 28, libelle: "Lecteur en fin de vie" },
+      { pourcentage: 20, libelle: "Utilisation prolongée en environnement chaud (soleil direct)" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Laisser refroidir l'appareil et éviter une exposition prolongée au soleil direct — ce défaut est rarement grave et disparaît souvent après refroidissement.",
+    pieces: [
+      { nom: "Diagnostic module CD/DVD (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F706",
+    titre: "Défaut capteur qualité de l'air (monoxyde de carbone) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — protection anti-pollution désactivée",
+    description:
+      "Le capteur de qualité de l'air, qui détecte la présence de monoxyde de carbone ou de pollution extérieure pour fermer automatiquement le recyclage d'air, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de qualité de l'air défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Cette fonction protège les occupants en cas de pollution extérieure élevée (tunnel, embouteillage) — à faire vérifier même si elle n'affecte pas directement la conduite.",
+    pieces: [
+      { nom: "Capteur qualité de l'air", boutique: "Oscaro · livraison 48h", prix: "48€" },
+    ],
+  },
+  {
+    code: "FCF9",
+    titre: "Défaut mémoire interne calculateur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — configuration potentiellement perdue",
+    description:
+      "Un calculateur du véhicule détecte une anomalie dans sa propre mémoire interne, ce qui peut provoquer des pertes de configuration ou des dysfonctionnements variés.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur défaillant (mémoire physiquement endommagée)" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation pendant une écriture mémoire (débranchement batterie mal fait)" },
+      { pourcentage: 20, libelle: "Surtension ayant endommagé la mémoire" },
+      { pourcentage: 12, libelle: "Mise à jour logicielle interrompue" },
+    ],
+    avisPro:
+      "Toujours suivre la procédure correcte pour débrancher la batterie (contact coupé, portes fermées) — une coupure brutale pendant que le calculateur écrit des données peut corrompre sa mémoire.",
+    pieces: [
+      { nom: "Diagnostic mémoire calculateur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "FEED",
+    titre: "Données incohérentes dans la mémoire EEPROM du calculateur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — reprogrammation souvent nécessaire",
+    description:
+      "Le calculateur détecte que les données stockées dans sa mémoire non volatile (EEPROM) sont incohérentes, ce qui peut provoquer des erreurs de configuration ou de fonctionnement.",
+    causes: [
+      { pourcentage: 40, libelle: "Coupure d'alimentation pendant une écriture mémoire" },
+      { pourcentage: 28, libelle: "Calculateur défaillant" },
+      { pourcentage: 20, libelle: "Mise à jour logicielle interrompue" },
+      { pourcentage: 12, libelle: "Surtension ayant endommagé la mémoire" },
+    ],
+    avisPro:
+      "Ce défaut nécessite souvent une reprogrammation complète du calculateur à la valise constructeur plutôt qu'un remplacement de pièce.",
+    pieces: [
+      { nom: "Reprogrammation calculateur (atelier agréé)", boutique: "Recommandé avant pièce", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "F627",
+    titre: "Erreur de configuration calculateur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — nécessite une configuration, pas une pièce",
+    description:
+      "Un calculateur détecte que sa configuration ne correspond pas à celle attendue pour ce véhicule, généralement après un remplacement ou une intervention non finalisée par une configuration à la valise.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur remplacé sans configuration finalisée" },
+      { pourcentage: 25, libelle: "Mise à jour logicielle incomplète" },
+      { pourcentage: 15, libelle: "Calculateur d'occasion non recodé pour ce véhicule" },
+      { pourcentage: 10, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut nécessite une configuration à la valise constructeur plutôt qu'un remplacement de pièce — s'assurer que tout calculateur de remplacement est bien codé pour le véhicule.",
+    pieces: [
+      { nom: "Configuration calculateur (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F60D",
+    titre: "Défaut airbag genoux conducteur — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement non garanti",
+    description:
+      "Le circuit de l'airbag de protection des genoux du conducteur, qui limite les blessures aux jambes lors d'un choc frontal, présente une anomalie empêchant son déclenchement garanti.",
+    causes: [
+      { pourcentage: 42, libelle: "Module gonfleur airbag genoux défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le tableau de bord endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du module mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité — ne jamais rouler avec ce témoin allumé, faire diagnostiquer dès que possible.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag genoux (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "FC04",
+    titre: "Défaut capteur de température extérieure (variante) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte verglas également désactivée",
+    description:
+      "Le capteur qui mesure la température extérieure du véhicule envoie un signal incohérent ou absent, ce qui affecte l'affichage au tableau de bord et l'alerte de risque de verglas.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de température extérieure défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive aussi l'alerte de risque de verglas — à corriger avant l'hiver pour conserver cette information de sécurité.",
+    pieces: [
+      { nom: "Capteur de température extérieure", boutique: "AutoDoc · livraison 24h", prix: "18€" },
+    ],
+  },
+  {
+    code: "F9A8",
+    titre: "Défaut circuit pompe de liquide de refroidissement (récupération de chaleur échappement) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — léger surcroît de consommation par temps froid",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit de la pompe dédiée au système de récupération de chaleur des gaz d'échappement, une fonction qui accélère la montée en température du moteur à froid.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe dédiée défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la pompe endommagé" },
+      { pourcentage: 22, libelle: "Vanne du système de récupération de chaleur bloquée" },
+      { pourcentage: 12, libelle: "Boîtier fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Cette fonction accélère la montée en température à froid pour réduire la consommation — son absence n'empêche pas de rouler normalement, juste un léger surcroît de consommation par temps froid.",
+    pieces: [
+      { nom: "Diagnostic système récupération chaleur échappement (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
