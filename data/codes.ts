@@ -6051,6 +6051,174 @@ export const codes: CodeDefaut[] = [
       { nom: "Vidange boîte automatique + filtre", boutique: "Recommandé avant pièce", prix: "120-220€" },
     ],
   },
+  {
+    code: "P0380",
+    titre: "Circuit de préchauffage/bougies — circuit A défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage à froid compliqué",
+    description:
+      "Le circuit qui alimente le premier groupe de bougies de préchauffage présente une anomalie électrique, ce qui complique fortement le démarrage à froid sur un moteur diesel.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais de préchauffage défaillant" },
+      { pourcentage: 28, libelle: "Fusible dédié grillé" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation des bougies endommagé" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Le relais de préchauffage est une pièce peu coûteuse et facile à tester — à vérifier en premier avant de suspecter les bougies elles-mêmes.",
+    pieces: [
+      { nom: "Relais de préchauffage", boutique: "AutoDoc · livraison 24h", prix: "22€" },
+    ],
+  },
+  {
+    code: "P0381",
+    titre: "Témoin de préchauffage — circuit défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "faible",
+    severiteLabel: "Gravité faible — défaut d'affichage",
+    description:
+      "Le circuit du témoin au tableau de bord qui indique au conducteur que le préchauffage est en cours (ou terminé) présente une anomalie électrique, sans forcément affecter le préchauffage réel des bougies.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 28, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné d'instruments corrodé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne l'affichage, pas forcément le préchauffage lui-même — mais un démarrage plus difficile qu'avant reste un signe à surveiller en parallèle.",
+    pieces: [
+      { nom: "Ampoule/LED témoin préchauffage", boutique: "AutoDoc · livraison 24h", prix: "8€" },
+    ],
+  },
+  {
+    code: "P0382",
+    titre: "Circuit de préchauffage/bougies — circuit B défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage à froid compliqué",
+    description:
+      "Le circuit qui alimente le second groupe de bougies de préchauffage présente une anomalie électrique, ce qui complique fortement le démarrage à froid sur un moteur diesel.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais de préchauffage (circuit B) défaillant" },
+      { pourcentage: 28, libelle: "Fusible dédié grillé" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation des bougies endommagé" },
+      { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Sur les moteurs à deux circuits de préchauffage séparés, bien identifier lequel est en défaut avant de commander une pièce.",
+    pieces: [
+      { nom: "Relais de préchauffage", boutique: "AutoDoc · livraison 24h", prix: "22€" },
+    ],
+  },
+  {
+    code: "P0670",
+    titre: "Module de commande du préchauffage — défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — cycle de préchauffage non géré",
+    description:
+      "Le boîtier électronique qui pilote l'ensemble des bougies de préchauffage (module de préchauffage) présente une anomalie interne, l'empêchant de gérer correctement le cycle de préchauffage.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de préchauffage défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du module endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du module corrodé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Un démarrage à froid nettement plus difficile qu'avant, surtout par temps froid, est le symptôme typique — à corriger avant l'hiver.",
+    pieces: [
+      { nom: "Module de commande préchauffage", boutique: "Mister-Auto · sur commande", prix: "90-150€" },
+    ],
+  },
+  {
+    code: "P0671",
+    titre: "Circuit bougie de préchauffage cylindre 1 — défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — démarrage à froid et raté possible sur ce cylindre",
+    description:
+      "La bougie de préchauffage du cylindre 1 présente une anomalie électrique (résistance hors plage ou circuit coupé), ce qui peut compliquer le démarrage à froid et provoquer un raté sur ce cylindre au démarrage.",
+    causes: [
+      { pourcentage: 42, libelle: "Bougie de préchauffage du cylindre 1 défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de la bougie endommagé" },
+      { pourcentage: 20, libelle: "Module de préchauffage défaillant" },
+      { pourcentage: 10, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Remplacer les bougies de préchauffage par jeu complet plutôt qu'à l'unité — si une a lâché, les autres sont généralement proches de la fin de leur durée de vie.",
+    pieces: [
+      { nom: "Bougies de préchauffage (jeu)", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
+  {
+    code: "P0672",
+    titre: "Circuit bougie de préchauffage cylindre 2 — défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — démarrage à froid et raté possible sur ce cylindre",
+    description:
+      "La bougie de préchauffage du cylindre 2 présente une anomalie électrique (résistance hors plage ou circuit coupé), ce qui peut compliquer le démarrage à froid et provoquer un raté sur ce cylindre au démarrage.",
+    causes: [
+      { pourcentage: 42, libelle: "Bougie de préchauffage du cylindre 2 défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de la bougie endommagé" },
+      { pourcentage: 20, libelle: "Module de préchauffage défaillant" },
+      { pourcentage: 10, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Remplacer les bougies de préchauffage par jeu complet plutôt qu'à l'unité — si une a lâché, les autres sont généralement proches de la fin de leur durée de vie.",
+    pieces: [
+      { nom: "Bougies de préchauffage (jeu)", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
+  {
+    code: "P0673",
+    titre: "Circuit bougie de préchauffage cylindre 3 — défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — démarrage à froid et raté possible sur ce cylindre",
+    description:
+      "La bougie de préchauffage du cylindre 3 présente une anomalie électrique (résistance hors plage ou circuit coupé), ce qui peut compliquer le démarrage à froid et provoquer un raté sur ce cylindre au démarrage.",
+    causes: [
+      { pourcentage: 42, libelle: "Bougie de préchauffage du cylindre 3 défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de la bougie endommagé" },
+      { pourcentage: 20, libelle: "Module de préchauffage défaillant" },
+      { pourcentage: 10, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Remplacer les bougies de préchauffage par jeu complet plutôt qu'à l'unité — si une a lâché, les autres sont généralement proches de la fin de leur durée de vie.",
+    pieces: [
+      { nom: "Bougies de préchauffage (jeu)", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
+  {
+    code: "P0674",
+    titre: "Circuit bougie de préchauffage cylindre 4 — défaut",
+    categorie: "prechauffage",
+    categorieLabel: "Préchauffage",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — démarrage à froid et raté possible sur ce cylindre",
+    description:
+      "La bougie de préchauffage du cylindre 4 présente une anomalie électrique (résistance hors plage ou circuit coupé), ce qui peut compliquer le démarrage à froid et provoquer un raté sur ce cylindre au démarrage.",
+    causes: [
+      { pourcentage: 42, libelle: "Bougie de préchauffage du cylindre 4 défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur de la bougie endommagé" },
+      { pourcentage: 20, libelle: "Module de préchauffage défaillant" },
+      { pourcentage: 10, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Remplacer les bougies de préchauffage par jeu complet plutôt qu'à l'unité — si une a lâché, les autres sont généralement proches de la fin de leur durée de vie.",
+    pieces: [
+      { nom: "Bougies de préchauffage (jeu)", boutique: "Oscaro · livraison 48h", prix: "45€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
@@ -6129,6 +6297,7 @@ export const categories: Categorie[] = [
   { code: "P02XX", titre: "Injection", desc: "Circuits injecteurs, pompe et pression carburant.", slug: "p02xx" },
   { code: "P05XX", titre: "Ralenti & régulation", desc: "Régime de ralenti, capteur de vitesse, tension du système.", slug: "p05xx" },
   { code: "P24XX", titre: "FAP & turbo", desc: "Filtre à particules, pression de suralimentation, wastegate.", slug: "p24xx" },
+  { code: "PRÉCHAUFFAGE", titre: "Préchauffage", desc: "Bougies et circuit de préchauffage avant démarrage à froid (diesel).", slug: "prechauffage" },
   { code: "P04XX", titre: "Émissions", desc: "Sonde lambda, EGR, catalyseur.", slug: "p04xx" },
   { code: "U0XXX", titre: "Réseau & calculateurs", desc: "Communication entre modules électroniques.", slug: "u0xxx" },
   { code: "P07XX", titre: "Boîte de vitesses automatique", desc: "Rapports, convertisseur de couple, capteurs de vitesse.", slug: "p07xx" },
