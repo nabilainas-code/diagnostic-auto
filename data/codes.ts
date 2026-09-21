@@ -6954,6 +6954,174 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic essuie-glace arrière (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
     ],
   },
+  {
+    code: "F4E0",
+    titre: "Défaut alimentation rétroviseur électrochrome — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction de confort uniquement",
+    description:
+      "Le rétroviseur intérieur électrochrome, qui s'assombrit automatiquement pour limiter l'éblouissement de nuit, ne reçoit plus une alimentation électrique correcte.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage d'alimentation du rétroviseur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du rétroviseur corrodé" },
+      { pourcentage: 20, libelle: "Rétroviseur électrochrome défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que la fonction d'assombrissement automatique — le rétroviseur reste utilisable normalement, juste sans cette fonction de confort.",
+    pieces: [
+      { nom: "Rétroviseur intérieur électrochrome", boutique: "Mister-Auto · sur commande", prix: "90-150€" },
+    ],
+  },
+  {
+    code: "F9C8",
+    titre: "Défaut réglage électrique rétroviseur passager — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage manuel généralement possible",
+    description:
+      "Le moteur de réglage horizontal ou vertical du rétroviseur extérieur côté passager ne répond plus aux commandes, empêchant son ajustement électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de réglage du rétroviseur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du rétroviseur endommagé" },
+      { pourcentage: 18, libelle: "Connecteur de la commande de réglage corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le rétroviseur reste orientable manuellement à la main dans la plupart des cas — seul le réglage électrique est concerné par ce défaut.",
+    pieces: [
+      { nom: "Moteur réglage rétroviseur", boutique: "Oscaro · livraison 48h", prix: "38€" },
+    ],
+  },
+  {
+    code: "F04E",
+    titre: "Absence de communication avec le calculateur toit ouvrant — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit ouvrant potentiellement bloqué",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui commande le toit ouvrant électrique, ce qui peut empêcher son ouverture, sa fermeture ou son mode de sécurité anti-pincement.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau vers le calculateur toit ouvrant endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur toit ouvrant oxydé" },
+      { pourcentage: 22, libelle: "Calculateur toit ouvrant défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "En cas de blocage, vérifier s'il existe une manœuvre de secours manuelle propre au véhicule avant de forcer électriquement le mécanisme.",
+    pieces: [
+      { nom: "Diagnostic réseau toit ouvrant (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F04F",
+    titre: "Absence de communication avec le calculateur toit ouvrant (variante) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit ouvrant potentiellement bloqué",
+    description:
+      "Une seconde anomalie de communication entre le BSI et le calculateur du toit ouvrant électrique est détectée, généralement liée au même type de cause que la perte de communication principale.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau vers le calculateur toit ouvrant endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur toit ouvrant oxydé" },
+      { pourcentage: 22, libelle: "Calculateur toit ouvrant défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "En cas de blocage, vérifier s'il existe une manœuvre de secours manuelle propre au véhicule avant de forcer électriquement le mécanisme.",
+    pieces: [
+      { nom: "Diagnostic réseau toit ouvrant (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "FF40",
+    titre: "Bouton du klaxon bloqué — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — klaxon bloqué actif ou inactif",
+    description:
+      "Le bouton d'avertisseur sonore (klaxon), intégré au volant, reste mécaniquement bloqué ou envoie un signal de maintien continu au BSI.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton du klaxon mécaniquement grippé" },
+      { pourcentage: 28, libelle: "Câblage du contacteur tournant sous le volant endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du bouton corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un klaxon qui se déclenche seul ou reste bloqué est gênant mais pas dangereux — débrancher temporairement le fusible du klaxon en attendant l'intervention si besoin.",
+    pieces: [
+      { nom: "Diagnostic bouton klaxon (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F034",
+    titre: "Absence de communication avec le calculateur d'alarme — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — protection antivol désactivée",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui gère l'alarme antivol du véhicule, ce qui peut désactiver la fonction d'alarme sans affecter le verrouillage centralisé classique.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau vers le calculateur d'alarme endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur d'alarme oxydé" },
+      { pourcentage: 22, libelle: "Calculateur d'alarme défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive la protection antivol sans empêcher l'usage normal du véhicule — à corriger rapidement pour retrouver une protection complète.",
+    pieces: [
+      { nom: "Diagnostic réseau alarme (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F521",
+    titre: "Contacteur régulateur/limiteur de vitesse bloqué — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — confort de conduite affecté",
+    description:
+      "Le contacteur qui active et règle le régulateur ou le limiteur de vitesse reste mécaniquement bloqué ou envoie un signal incohérent, empêchant l'utilisation normale de cette fonction.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur régulateur/limiteur défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 18, libelle: "Connecteur de la commande corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que le confort de conduite — le véhicule reste utilisable normalement sans régulateur ni limiteur de vitesse.",
+    pieces: [
+      { nom: "Diagnostic contacteur régulateur vitesse (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F401",
+    titre: "Défaut information positive du contact — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de non-démarrage",
+    description:
+      "Le BSI ne reçoit plus correctement l'information indiquant que le contact est mis (position marche), ce qui peut empêcher le démarrage du véhicule ou l'alimentation de certains équipements.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de démarrage (antivol de direction) défaillant" },
+      { pourcentage: 28, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le véhicule ne démarre plus du tout, ce défaut doit être vérifié en priorité — le contacteur de démarrage est une pièce d'usure sur les véhicules à kilométrage élevé.",
+    pieces: [
+      { nom: "Diagnostic contacteur de démarrage (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
