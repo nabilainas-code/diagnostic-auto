@@ -11461,6 +11461,612 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic carte SIM télématique (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
     ],
   },
+  {
+    code: "F6A1",
+    titre: "Déclenchement du dispositif anti-sous-marinage enregistré",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — composant pyrotechnique déjà déclenché",
+    description:
+      "Le calculateur airbag a enregistré le déclenchement du dispositif anti-sous-marinage (qui relève l'avant de l'assise du siège pour empêcher l'occupant de glisser sous la ceinture lors d'un choc), généralement suite à un accident réel.",
+    causes: [
+      { pourcentage: 70, libelle: "Dispositif déclenché lors d'un choc réel" },
+      { pourcentage: 20, libelle: "Défaut électrique ayant provoqué un déclenchement intempestif (rare)" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce composant pyrotechnique ne peut pas être réutilisé après déclenchement — son remplacement est obligatoire, généralement accompagné d'un contrôle complet du système de sécurité après un choc.",
+    pieces: [
+      { nom: "Remplacement dispositif anti-sous-marinage + diagnostic (atelier)", boutique: "Recommandé avant pièce", prix: "150-250€" },
+    ],
+  },
+  {
+    code: "F602",
+    titre: "Défaut airbag conducteur niveau 2 — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement modulé non garanti",
+    description:
+      "Le circuit du second étage de gonflage de l'airbag conducteur (déclenchement à intensité modulée selon la gravité du choc) présente une anomalie empêchant son fonctionnement garanti.",
+    causes: [
+      { pourcentage: 42, libelle: "Module gonfleur airbag conducteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur tournant (spirale sous volant) endommagé" },
+      { pourcentage: 18, libelle: "Connecteur sous le volant mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité — ne jamais rouler avec ce témoin allumé, faire diagnostiquer dès que possible.",
+    pieces: [
+      { nom: "Diagnostic module airbag conducteur niveau 2 (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F601",
+    titre: "Défaut airbag conducteur niveau 1 — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag conducteur non garanti",
+    description:
+      "Le circuit du premier étage de gonflage de l'airbag conducteur présente une anomalie de résistance ou de continuité, empêchant son déclenchement garanti en cas de choc.",
+    causes: [
+      { pourcentage: 42, libelle: "Module gonfleur airbag conducteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur tournant (spirale sous volant) endommagé" },
+      { pourcentage: 18, libelle: "Connecteur sous le volant mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité — ne jamais rouler avec ce témoin allumé, faire diagnostiquer dès que possible.",
+    pieces: [
+      { nom: "Diagnostic module airbag conducteur niveau 1 (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F608",
+    titre: "Défaut airbag latéral avant droit — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag latéral non garanti",
+    description:
+      "Le circuit de l'airbag latéral situé côté avant droit (siège ou portière) présente une anomalie, empêchant son déclenchement garanti lors d'un choc latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Allumeur (gonfleur) airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage dans l'assise du siège endommagé (usure liée aux réglages répétés)" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de l'airbag latéral passe par l'assise du siège et subit l'usure des réglages répétés — un point à vérifier avant de suspecter le module lui-même.",
+    pieces: [
+      { nom: "Diagnostic airbag latéral avant droit (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F609",
+    titre: "Défaut airbag latéral arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag latéral non garanti",
+    description:
+      "Le circuit de l'airbag latéral situé côté arrière gauche (siège ou portière) présente une anomalie, empêchant son déclenchement garanti lors d'un choc latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Allumeur (gonfleur) airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage dans l'assise du siège endommagé" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Le câblage de l'airbag latéral passe par l'assise du siège et subit l'usure des réglages répétés — un point à vérifier avant de suspecter le module lui-même.",
+    pieces: [
+      { nom: "Diagnostic airbag latéral arrière gauche (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "FC81",
+    titre: "Défaut écriture mémoire transpondeur lors de la programmation d'une clé",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — clé potentiellement inutilisable",
+    description:
+      "L'écriture des données dans la puce transpondeur d'une clé a échoué pendant une procédure de programmation à la valise, ce qui peut rendre la clé inutilisable pour démarrer le véhicule.",
+    causes: [
+      { pourcentage: 50, libelle: "Puce transpondeur défectueuse ou de mauvaise qualité" },
+      { pourcentage: 25, libelle: "Procédure de programmation interrompue (coupure de contact prématurée)" },
+      { pourcentage: 15, libelle: "Antenne de lecture du contacteur défaillante" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Recommencer la procédure de programmation avec une clé neuve de qualité d'origine constructeur — les clés bon marché non homologuées échouent plus souvent à cette étape.",
+    pieces: [
+      { nom: "Programmation clé transpondeur (atelier)", boutique: "Recommandé avant pièce", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "F174",
+    titre: "Information invalide de la télécommande au volant — écran multifonction PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — navigation des menus perturbée uniquement",
+    description:
+      "L'écran multifonction reçoit une information incohérente en provenance de la télécommande au volant (boutons de défilement des menus), perturbant la navigation dans les menus.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de la télécommande au volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur tournant sous le volant endommagé" },
+      { pourcentage: 20, libelle: "Connecteur corrodé" },
+      { pourcentage: 12, libelle: "Écran multifonction défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement la navigation dans les menus de l'écran — sans impact sur la conduite ou la sécurité du véhicule.",
+    pieces: [
+      { nom: "Diagnostic télécommande au volant (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "F70E",
+    titre: "Défaut capteur de température évaporateur arrière — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation avant préservée",
+    description:
+      "Sur les véhicules équipés d'une climatisation arrière indépendante, le capteur de température de l'évaporateur arrière envoie un signal incohérent, pouvant réduire l'efficacité du froid à l'arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température évaporateur arrière défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que la climatisation arrière — la climatisation avant continue de fonctionner normalement.",
+    pieces: [
+      { nom: "Capteur température évaporateur", boutique: "Oscaro · livraison 48h", prix: "32€" },
+    ],
+  },
+  {
+    code: "F564",
+    titre: "Paramètres d'entretien mal configurés — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rappels d'entretien faussés",
+    description:
+      "Les paramètres qui déterminent l'intervalle d'entretien du véhicule (kilométrage, type d'huile, conditions d'utilisation) sont configurés de façon incohérente, ce qui peut fausser les rappels d'entretien.",
+    causes: [
+      { pourcentage: 50, libelle: "Configuration incorrecte lors d'un entretien ou d'une intervention" },
+      { pourcentage: 30, libelle: "Calculateur remplacé sans reconfiguration complète" },
+      { pourcentage: 20, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se corrige par une reconfiguration des paramètres d'entretien à la valise constructeur, sans remplacement de pièce.",
+    pieces: [
+      { nom: "Reconfiguration paramètres entretien (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "FD81",
+    titre: "Défaut interne module de services connectés — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — services connectés uniquement",
+    description:
+      "Le module qui gère les services connectés (assistance, informations à distance) détecte une anomalie interne, ce qui peut désactiver tout ou partie de ces services sans affecter les fonctions essentielles du véhicule.",
+    causes: [
+      { pourcentage: 45, libelle: "Module de services défaillant" },
+      { pourcentage: 25, libelle: "Mise à jour logicielle interrompue" },
+      { pourcentage: 20, libelle: "Alimentation du module instable" },
+      { pourcentage: 10, libelle: "Câblage endommagé" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les services connectés — la conduite et la sécurité du véhicule ne sont pas affectées.",
+    pieces: [
+      { nom: "Diagnostic module services connectés (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FC57",
+    titre: "Défaut classification des occupants — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déploiement airbag potentiellement incorrect",
+    description:
+      "Le système qui classifie les occupants des sièges (adulte, enfant, siège vide) pour adapter le déploiement des airbags ne parvient plus à établir une classification fiable.",
+    causes: [
+      { pourcentage: 38, libelle: "Tapis de détection de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage du système de classification endommagé" },
+      { pourcentage: 22, libelle: "Calculateur de classification défaillant" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut activer ou désactiver certains airbags de façon incorrecte selon l'occupation réelle des sièges — à faire diagnostiquer rapidement, c'est un élément de sécurité important.",
+    pieces: [
+      { nom: "Diagnostic classification occupants (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F56D",
+    titre: "Défaut détection porte conducteur ouverte — unité de gestion des alimentations PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque de décharge batterie au repos",
+    description:
+      "L'unité de gestion et de protection des alimentations électriques détecte une incohérence sur l'état de la porte conducteur (ouverte/fermée), ce qui peut perturber la mise en veille électrique du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de porte conducteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "Unité de gestion des alimentations défaillante" },
+    ],
+    avisPro:
+      "Une porte mal détectée comme ouverte peut empêcher le véhicule de se mettre correctement en veille, provoquant une décharge de la batterie au repos.",
+    pieces: [
+      { nom: "Contacteur d'ouverture de porte", boutique: "AutoDoc · livraison 24h", prix: "12€" },
+    ],
+  },
+  {
+    code: "F01B",
+    titre: "Absence de communication avec le module capteur double fonction — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — fonctions automatiques désactivées",
+    description:
+      "Le BSI ne parvient plus à communiquer avec un module regroupant deux capteurs (par exemple pluie et luminosité), ce qui peut désactiver l'activation automatique des essuie-glaces et/ou des feux.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module capteur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module capteur défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les fonctions automatiques (essuie-glaces, feux) sont concernées — les commandes manuelles restent généralement disponibles en attendant la réparation.",
+    pieces: [
+      { nom: "Diagnostic module capteur double fonction (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FCF6",
+    titre: "Défaut réseau LIN — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — équipements secondaires affectés",
+    description:
+      "Le BSI détecte une anomalie sur un réseau LIN (bus de communication simplifié utilisé pour des équipements secondaires comme les lève-vitres ou les rétroviseurs), perturbant la communication avec les équipements concernés.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus LIN endommagé" },
+      { pourcentage: 28, libelle: "Connecteur d'un équipement du réseau LIN oxydé" },
+      { pourcentage: 22, libelle: "Équipement du réseau LIN défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le réseau LIN gère généralement des équipements secondaires — un défaut ici touche rarement les fonctions essentielles du véhicule.",
+    pieces: [
+      { nom: "Diagnostic réseau LIN (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F623",
+    titre: "Défaut capteur de tonneau — calculateur airbag PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément de sécurité important",
+    description:
+      "Le capteur qui détecte un retournement du véhicule (tonneau), utilisé pour déclencher les airbags rideaux et prétensionneurs de façon adaptée, présente une anomalie interne.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de tonneau défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne du calculateur endommagé" },
+      { pourcentage: 20, libelle: "Alimentation du calculateur instable" },
+      { pourcentage: 12, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est un élément de sécurité important sur route ou en cas de perte de contrôle — à faire diagnostiquer sans attendre.",
+    pieces: [
+      { nom: "Diagnostic capteur de tonneau (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F962",
+    titre: "Défaut connexion filaire calculateur airbag (variante) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — fonctionnement général du calculateur compromis",
+    description:
+      "Le calculateur airbag détecte une seconde anomalie possible sur l'un de ses connecteurs ou câblages, ce qui peut compromettre son bon fonctionnement général.",
+    causes: [
+      { pourcentage: 38, libelle: "Connecteur du calculateur airbag mal enfiché ou corrodé" },
+      { pourcentage: 28, libelle: "Câblage principal du calculateur endommagé" },
+      { pourcentage: 22, libelle: "Calculateur airbag défaillant" },
+      { pourcentage: 12, libelle: "Intervention récente ayant débranché le connecteur sans le reconnecter correctement" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité — ne jamais rouler avec ce témoin allumé, faire diagnostiquer dès que possible.",
+    pieces: [
+      { nom: "Diagnostic connexion calculateur airbag (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F95A",
+    titre: "Défaut interne calculateur télématique — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — services connectés uniquement",
+    description:
+      "Le calculateur télématique, qui gère les services connectés et la géolocalisation, détecte une anomalie interne, sans affecter les fonctions essentielles du véhicule.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur télématique défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur instable" },
+      { pourcentage: 20, libelle: "Mise à jour logicielle interrompue" },
+      { pourcentage: 10, libelle: "Câblage endommagé" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les services connectés — la conduite et la sécurité du véhicule ne sont pas affectées.",
+    pieces: [
+      { nom: "Diagnostic calculateur télématique (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F630",
+    titre: "Déclenchement non confirmé par le capteur de sécurité — calculateur airbag PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — fiabilité du système à vérifier",
+    description:
+      "Le calculateur airbag a commandé un déclenchement mais n'a pas reçu de confirmation du capteur de sécurité associé, ce qui traduit une incohérence interne nécessitant un diagnostic approfondi du système.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de sécurité défaillant" },
+      { pourcentage: 28, libelle: "Câblage entre le calculateur et le capteur endommagé" },
+      { pourcentage: 20, libelle: "Calculateur airbag défaillant" },
+      { pourcentage: 12, libelle: "Défaut électrique transitoire" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la fiabilité du système de sécurité — à faire diagnostiquer en priorité par un professionnel qualifié en systèmes de retenue.",
+    pieces: [
+      { nom: "Diagnostic approfondi système airbag (atelier)", boutique: "Recommandé avant pièce", prix: "70-100€" },
+    ],
+  },
+  {
+    code: "F997",
+    titre: "Défaut circuit de commande du klaxon (boîtier fusibles moteur) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — avertisseur sonore indisponible",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit qui commande l'avertisseur sonore (klaxon), ce qui peut empêcher son déclenchement.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais du klaxon défaillant" },
+      { pourcentage: 28, libelle: "Klaxon lui-même défaillant" },
+      { pourcentage: 22, libelle: "Câblage du circuit klaxon endommagé" },
+      { pourcentage: 12, libelle: "Boîtier fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Le relais et le klaxon sont des pièces peu coûteuses à tester et remplacer avant d'envisager un diagnostic plus poussé.",
+    pieces: [
+      { nom: "Relais klaxon", boutique: "AutoDoc · livraison 24h", prix: "14€" },
+    ],
+  },
+  {
+    code: "F705",
+    titre: "Défaut capteur d'ensoleillement passager — climatisation PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le capteur d'ensoleillement côté passager, qui permet à la climatisation automatique bi-zone d'adapter la ventilation selon l'intensité du soleil reçu par ce côté, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'ensoleillement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "Calculateur climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que le confort — la climatisation continue de fonctionner mais sans ajuster automatiquement la ventilation selon le soleil de ce côté.",
+    pieces: [
+      { nom: "Capteur d'ensoleillement", boutique: "Oscaro · livraison 48h", prix: "38€" },
+    ],
+  },
+  {
+    code: "F942",
+    titre: "Défaut antenne FM/AM — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "L'antenne dédiée à la réception radio FM et AM présente une anomalie, ce qui peut dégrader ou supprimer la réception de certaines stations.",
+    causes: [
+      { pourcentage: 40, libelle: "Antenne radio défaillante ou endommagée" },
+      { pourcentage: 28, libelle: "Câblage de l'antenne endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de l'antenne oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est purement lié au confort d'écoute radio — sans impact sur la conduite ou la sécurité.",
+    pieces: [
+      { nom: "Antenne radio", boutique: "AutoDoc · livraison 24h", prix: "20€" },
+    ],
+  },
+  {
+    code: "F955",
+    titre: "Défaut module GPS — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — navigation affectée uniquement",
+    description:
+      "Le module GPS qui calcule la position du véhicule pour la navigation et les services de géolocalisation présente une anomalie interne, distincte d'un simple problème d'antenne.",
+    causes: [
+      { pourcentage: 42, libelle: "Module GPS défaillant" },
+      { pourcentage: 28, libelle: "Câblage du module endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte la navigation et la géolocalisation — sans impact sur la conduite ou la mécanique du véhicule.",
+    pieces: [
+      { nom: "Diagnostic module GPS (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F522",
+    titre: "Mémoire de défauts saturée — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — nécessite un effacement mémoire",
+    description:
+      "La mémoire du BSI qui enregistre l'historique des défauts est pleine, ce qui peut empêcher l'enregistrement de nouveaux défauts jusqu'à ce qu'elle soit effacée.",
+    causes: [
+      { pourcentage: 60, libelle: "Accumulation de défauts anciens jamais effacés lors d'un entretien" },
+      { pourcentage: 25, libelle: "Défaut récurrent remplissant rapidement la mémoire" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un effacement complet de la mémoire de défauts à la valise, suivi d'un nouveau diagnostic, permet d'identifier les défauts réellement actifs plutôt que l'historique accumulé.",
+    pieces: [
+      { nom: "Effacement mémoire défauts (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F9B8",
+    titre: "Défaut relais de maintien sous tension (boîtier fusibles moteur) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sauvegarde de données potentiellement incomplète",
+    description:
+      "Le relais qui maintient certains calculateurs sous tension pendant quelques instants après la coupure du contact (pour terminer des opérations internes) présente une anomalie.",
+    causes: [
+      { pourcentage: 40, libelle: "Relais de maintien défaillant" },
+      { pourcentage: 28, libelle: "Câblage du relais endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "Boîtier fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher certains calculateurs de sauvegarder correctement leurs données avant extinction complète — à faire vérifier si des pertes de configuration reviennent régulièrement.",
+    pieces: [
+      { nom: "Relais de maintien sous tension", boutique: "AutoDoc · livraison 24h", prix: "16€" },
+    ],
+  },
+  {
+    code: "F998",
+    titre: "Défaut circuit de commande lave-phares (boîtier fusibles moteur) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage lui-même non affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit qui commande les lave-phares (jets nettoyant les optiques avant), ce qui peut empêcher leur déclenchement.",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe ou vérin de lave-phares défaillant" },
+      { pourcentage: 28, libelle: "Câblage du circuit endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "Boîtier fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est purement lié au nettoyage des optiques — sans impact sur l'éclairage lui-même ni sur la sécurité de conduite.",
+    pieces: [
+      { nom: "Diagnostic circuit lave-phares (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FEC7",
+    titre: "Défaut détecteur de luminosité ambiante — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — activation manuelle des feux toujours possible",
+    description:
+      "Le capteur de luminosité qui déclenche automatiquement l'allumage des feux à la tombée de la nuit envoie un signal incohérent, perturbant cette fonction automatique.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de luminosité défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'empêche pas d'allumer les feux manuellement — seule l'activation automatique à la tombée de la nuit est concernée.",
+    pieces: [
+      { nom: "Diagnostic capteur luminosité (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "FF64",
+    titre: "Défaut information vitesse véhicule reçue par fil — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — fonctions dépendantes de la vitesse affectées",
+    description:
+      "Le BSI ne reçoit plus l'information de vitesse du véhicule transmise par une liaison filaire directe (plutôt que par le réseau CAN), ce qui peut affecter certaines fonctions dépendantes de la vitesse.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage de la liaison filaire endommagé" },
+      { pourcentage: 28, libelle: "Capteur de vitesse en amont défaillant" },
+      { pourcentage: 22, libelle: "Connecteur endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord si un défaut de vitesse est également présent côté ABS ou calculateur moteur — la source du problème est généralement en amont du BSI.",
+    pieces: [
+      { nom: "Diagnostic liaison vitesse véhicule (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F707",
+    titre: "Défaut capteur qualité de l'air (monoxyde d'azote) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — protection anti-pollution désactivée",
+    description:
+      "Le capteur de qualité de l'air, qui détecte la présence de monoxyde d'azote ou de pollution extérieure pour fermer automatiquement le recyclage d'air, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de qualité de l'air défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Cette fonction protège les occupants en cas de pollution extérieure élevée (tunnel, embouteillage) — à faire vérifier même si elle n'affecte pas directement la conduite.",
+    pieces: [
+      { nom: "Capteur qualité de l'air", boutique: "Oscaro · livraison 48h", prix: "48€" },
+    ],
+  },
+  {
+    code: "F082",
+    titre: "Absence de communication entre le boîtier attelage et le BSI — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — véhicule sans remorque non affecté",
+    description:
+      "Le boîtier de conversion électrique dédié à l'attelage de remorque ne parvient plus à communiquer avec le BSI, ce qui peut désactiver la gestion électrique de la remorque.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage entre le boîtier attelage et le BSI endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du boîtier attelage oxydé" },
+      { pourcentage: 22, libelle: "Boîtier de conversion attelage défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que l'électricité de la remorque — le véhicule continue de fonctionner normalement sans remorque attelée.",
+    pieces: [
+      { nom: "Diagnostic boîtier conversion attelage (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
