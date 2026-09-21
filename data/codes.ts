@@ -3521,6 +3521,258 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic prétensionneur avant gauche (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
     ],
   },
+  {
+    code: "C1412",
+    titre: "Défaut moteur de direction assistée électrique — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance de direction perdue",
+    description:
+      "Le calculateur de direction assistée détecte une anomalie sur le moteur électrique qui génère l'assistance au volant — la direction peut devenir subitement plus lourde à manœuvrer, notamment à basse vitesse.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur électrique d'assistance défaillant" },
+      { pourcentage: 28, libelle: "Câblage du moteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du moteur mal enfiché ou corrodé" },
+      { pourcentage: 12, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Une direction qui durcit brutalement doit être prise au sérieux — s'arrêter dès que possible pour éviter une manœuvre dangereuse, notamment en stationnement ou à basse vitesse.",
+    pieces: [
+      { nom: "Diagnostic moteur direction assistée (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "C1400",
+    titre: "Défaut capteur de couple — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance coupée par sécurité",
+    description:
+      "Le capteur de couple, qui mesure la force appliquée par le conducteur sur le volant pour doser l'assistance électrique, envoie un signal incohérent — le calculateur coupe alors l'assistance par sécurité.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de couple défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la colonne de direction endommagé" },
+      { pourcentage: 18, libelle: "Connecteur sous le volant oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est intégré à la colonne de direction — son remplacement isolé n'est pas toujours possible, un diagnostic précis évite de commander la mauvaise pièce.",
+    pieces: [
+      { nom: "Diagnostic capteur de couple (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1407",
+    titre: "Défaut information vitesse véhicule — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — dosage de l'assistance par vitesse dégradé",
+    description:
+      "Le calculateur de direction assistée ne reçoit plus une information fiable de la vitesse du véhicule, une donnée essentielle pour doser l'assistance (plus forte à l'arrêt, plus légère sur route rapide).",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau CAN transmettant la vitesse véhicule" },
+      { pourcentage: 30, libelle: "Capteur de vitesse de roue (ABS) défaillant en amont" },
+      { pourcentage: 20, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 15, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit souvent par une assistance qui ne varie plus avec la vitesse plutôt qu'une perte totale — vérifier d'abord si un défaut ABS est également présent.",
+    pieces: [
+      { nom: "Diagnostic réseau vitesse véhicule (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1409",
+    titre: "Défaut alimentation capteur de couple — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance coupée par sécurité",
+    description:
+      "L'alimentation électrique dédiée au capteur de couple de la direction assistée est hors plage, ce qui empêche le calculateur de recevoir une mesure fiable et coupe l'assistance par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage d'alimentation du capteur endommagé" },
+      { pourcentage: 30, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 20, libelle: "Capteur de couple défaillant" },
+      { pourcentage: 10, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Contrôler la tension d'alimentation au connecteur du capteur avant de le remplacer — un simple faux contact peut provoquer ce défaut.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteur de couple (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C140B",
+    titre: "Défaut alimentation calculateur — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de coupure totale de l'assistance",
+    description:
+      "Le calculateur de direction assistée électrique détecte une alimentation électrique hors plage de fonctionnement, ce qui peut provoquer une coupure temporaire ou totale de l'assistance.",
+    causes: [
+      { pourcentage: 35, libelle: "Fusible dédié grillé" },
+      { pourcentage: 30, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 20, libelle: "Batterie ou alternateur en cause (tension instable)" },
+      { pourcentage: 15, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Vérifier la tension batterie et l'état du fusible avant de suspecter le calculateur — une alimentation instable touche souvent plusieurs équipements électriques en même temps.",
+    pieces: [
+      { nom: "Diagnostic alimentation calculateur DAE (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1318",
+    titre: "Absence de communication avec le BSI — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent lié à un défaut réseau plus large",
+    description:
+      "Le calculateur de direction assistée ne reçoit plus les informations transmises par le boîtier de servitude intelligent (BSI), ce qui peut le priver de données de configuration nécessaires à son fonctionnement normal.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau multiplexé endommagé" },
+      { pourcentage: 25, libelle: "Connecteur du calculateur de direction oxydé" },
+      { pourcentage: 20, libelle: "BSI en défaut propre" },
+      { pourcentage: 20, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Vérifier si le BSI affiche lui-même des défauts au même moment — ce code est souvent la conséquence d'un problème réseau plus large plutôt qu'une panne isolée de la direction.",
+    pieces: [
+      { nom: "Diagnostic réseau BSI/direction (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1411",
+    titre: "Défaut capteur de température moteur — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance parfois réduite par précaution",
+    description:
+      "Le capteur qui surveille la température du moteur électrique d'assistance envoie une information incohérente, empêchant le calculateur de protéger correctement le moteur contre la surchauffe.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant" },
+      { pourcentage: 30, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 10, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut pousser le calculateur à réduire l'assistance par prudence même sans surchauffe réelle — un diagnostic permet de confirmer avant de remplacer une pièce.",
+    pieces: [
+      { nom: "Diagnostic capteur température moteur DAE (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1405",
+    titre: "Défaut surintensité moteur — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coupure de protection immédiate",
+    description:
+      "Le calculateur détecte un courant excessif dans le moteur électrique d'assistance et coupe son alimentation par sécurité pour éviter d'endommager le moteur ou l'électronique de puissance.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur électrique d'assistance défaillant (court-circuit interne)" },
+      { pourcentage: 28, libelle: "Câblage du moteur endommagé (court-circuit)" },
+      { pourcentage: 20, libelle: "Colonne de direction grippée mécaniquement, forçant le moteur" },
+      { pourcentage: 12, libelle: "Calculateur de direction assistée défaillant (étage de puissance)" },
+    ],
+    avisPro:
+      "Vérifier que la colonne de direction tourne librement mécaniquement avant de suspecter le moteur — un grippage mécanique force le moteur à consommer plus de courant que la normale.",
+    pieces: [
+      { nom: "Diagnostic surintensité moteur DAE (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "U1205",
+    titre: "Défaut communication avec le capteur d'angle volant — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination avec l'ESP affectée",
+    description:
+      "Le calculateur de direction assistée ne reçoit plus les informations du capteur d'angle volant, ce qui peut affecter la coordination avec l'ESP lors des manœuvres de stabilisation.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage sous le volant ou connecteur du contacteur tournant endommagé" },
+      { pourcentage: 28, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 22, libelle: "Défaut réseau CAN" },
+      { pourcentage: 15, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Si un défaut similaire apparaît aussi côté ABS/ESP, la cause est probablement commune au capteur d'angle volant lui-même plutôt qu'à la direction assistée.",
+    pieces: [
+      { nom: "Diagnostic capteur angle volant (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1419",
+    titre: "Défaut couplage direction assistée / ESP — PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — souvent lié à une panne ESP",
+    description:
+      "La coordination entre le calculateur de direction assistée et le calculateur ESP, qui permet d'ajuster l'assistance lors d'une intervention de stabilité, ne fonctionne plus correctement.",
+    causes: [
+      { pourcentage: 35, libelle: "Défaut réseau CAN entre les deux calculateurs" },
+      { pourcentage: 30, libelle: "Calculateur ESP en défaut propre" },
+      { pourcentage: 20, libelle: "Calculateur de direction assistée défaillant" },
+      { pourcentage: 15, libelle: "Câblage du réseau multiplexé endommagé" },
+    ],
+    avisPro:
+      "Vérifier en priorité les défauts côté ESP — ce code accompagne souvent une panne ESP plutôt qu'une panne propre à la direction assistée.",
+    pieces: [
+      { nom: "Diagnostic couplage DAE/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1415",
+    titre: "Surchauffe moteur ou calculateur — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coupure de protection le temps du refroidissement",
+    description:
+      "Le moteur électrique d'assistance ou son calculateur atteint une température excessive, ce qui déclenche une réduction ou une coupure temporaire de l'assistance pour protéger les composants.",
+    causes: [
+      { pourcentage: 35, libelle: "Sollicitation excessive répétée (manœuvres lentes et braquages prolongés)" },
+      { pourcentage: 28, libelle: "Ventilation ou refroidissement du calculateur insuffisant" },
+      { pourcentage: 22, libelle: "Moteur électrique défaillant, consommant un courant anormal" },
+      { pourcentage: 15, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Ce défaut disparaît souvent après refroidissement — s'il revient fréquemment sans sollicitation excessive, un diagnostic électrique du moteur est nécessaire.",
+    pieces: [
+      { nom: "Diagnostic surchauffe DAE (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1404",
+    titre: "Défaut commande liée au moteur — direction assistée PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — Direction assistée",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dosage du courant moteur compromis",
+    description:
+      "Le circuit de commande qui pilote le moteur électrique d'assistance présente une anomalie, empêchant le calculateur de doser correctement le courant envoyé au moteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Étage de puissance du calculateur défaillant" },
+      { pourcentage: 28, libelle: "Câblage entre calculateur et moteur endommagé" },
+      { pourcentage: 20, libelle: "Moteur électrique défaillant" },
+      { pourcentage: 14, libelle: "Connecteur mal enfiché" },
+    ],
+    avisPro:
+      "Ce défaut touche l'électronique de commande plutôt que le moteur lui-même — un diagnostic précis évite de remplacer le moteur à tort.",
+    pieces: [
+      { nom: "Diagnostic commande moteur DAE (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
