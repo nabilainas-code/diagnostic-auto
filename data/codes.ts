@@ -39188,6 +39188,8682 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic compatibilité pneumatiques (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
     ],
   },
+  {
+    code: "B0002",
+    titre: "Défaut de la ligne de l'airbag conducteur niveau 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du deuxième niveau de déploiement de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag conducteur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité — ne jamais rouler avec ce voyant allumé en continu.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0010",
+    titre: "Défaut de la ligne de l'airbag passager niveau 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du premier niveau de déploiement de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag passager défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0021",
+    titre: "Défaut de la ligne de l'airbag rideau gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag rideau situé côté gauche du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0028",
+    titre: "Défaut de la ligne de l'airbag latéral avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag latéral situé côté droit, protégeant le thorax en cas de choc latéral.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag latéral endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag latéral défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0029",
+    titre: "Défaut de la ligne de l'airbag rideau droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag rideau situé côté droit du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0038",
+    titre: "Défaut de l'airbag arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le circuit de l'airbag protégeant la place arrière droite, présent sur certains modèles équipés.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag arrière droit endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag arrière droit défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag arrière (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0070",
+    titre: "Défaut de la ligne du prétensionneur de rappel de sangle conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur de rappel de sangle de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0072",
+    titre: "Défaut de la ligne du prétensionneur de rappel de sangle passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur de rappel de sangle de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0073",
+    titre: "Défaut du prétensionneur de rappel de sangle arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le prétensionneur de rappel de sangle de la place arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0075",
+    titre: "Défaut du prétensionneur de rappel de sangle arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le prétensionneur de rappel de sangle de la place arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0079",
+    titre: "Prétensionneur de rappel de sangle conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B007A",
+    titre: "Défaut de la ligne du prétensionneur de rappel de sangle passager (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur la ligne du prétensionneur de rappel de sangle passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0091",
+    titre: "Défaut de la ligne du capteur d'accélération latérale gauche 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du premier capteur d'accélération latérale côté gauche, utilisé pour détecter un choc latéral.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc latéral pour déclencher les airbags concernés — un défaut ici doit être traité en priorité.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B0094",
+    titre: "Défaut du capteur d'accélération latérale central avant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur d'accélération latérale central situé à l'avant du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact central défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur central complète les capteurs latéraux pour une détection précise du type de choc.",
+    pieces: [
+      { nom: "Capteur d'impact central", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B0096",
+    titre: "Défaut de la ligne du capteur d'accélération latérale droite 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du premier capteur d'accélération latérale côté droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc latéral côté droit.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B0097",
+    titre: "Défaut de la ligne du capteur d'accélération latérale droite 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du deuxième capteur d'accélération latérale côté droit, redondant avec le premier pour la sécurité.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "La redondance de ces capteurs est une mesure de sécurité — un défaut sur l'un d'eux doit être traité rapidement.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B0085",
+    titre: "Défaut du capteur de position du siège conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité airbag possiblement affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur qui mesure la position du siège conducteur, utilisé pour adapter le déploiement de l'airbag.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur influence le mode de déploiement de l'airbag conducteur — un diagnostic par un atelier habilité aux systèmes de sécurité est recommandé.",
+    pieces: [
+      { nom: "Capteur position siège conducteur", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B00C5",
+    titre: "Défaut du capteur de position du siège passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité airbag possiblement affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur qui mesure la position du siège passager avant, utilisé pour adapter le déploiement de l'airbag.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur influence le mode de déploiement de l'airbag passager — un diagnostic par un atelier habilité aux systèmes de sécurité est recommandé.",
+    pieces: [
+      { nom: "Capteur position siège passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B00D2",
+    titre: "Défaut du témoin d'alerte airbags et prétensionneurs",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit du témoin lumineux d'alerte airbags et prétensionneurs au tableau de bord.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 28, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 20, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un témoin qui ne s'allume pas au démarrage (test des ampoules) est un signe de ce défaut — à distinguer d'une vraie panne du système de sécurité.",
+    pieces: [
+      { nom: "Diagnostic circuit témoin airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B00D5",
+    titre: "Défaut du témoin LED de désactivation de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le témoin LED qui indique la désactivation de l'airbag passager avant.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager — un défaut d'affichage nécessite un diagnostic pour confirmer l'état réel de l'airbag.",
+    pieces: [
+      { nom: "Diagnostic témoin désactivation airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B00DF",
+    titre: "Défaut de la ligne du contacteur de désactivation de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commande de désactivation affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du contacteur (clé) permettant de désactiver manuellement l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la désactivation manuelle de l'airbag passager, nécessaire pour installer un siège enfant dos à la route à cette place.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1003",
+    titre: "Défaut de configuration sécurisée",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur sa configuration sécurisée, généralement après une intervention ou un remplacement de calculateur.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur remplacé sans recodage complet" },
+      { pourcentage: 28, libelle: "Configuration incompatible avec le véhicule" },
+      { pourcentage: 18, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement du calculateur de sécurité passive, une procédure de configuration complète avec l'outil constructeur est indispensable.",
+    pieces: [
+      { nom: "Configuration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B1009",
+    titre: "Défaut du calculateur airbag",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur de sécurité passive signale une défaillance générale, un code de tête nécessitant une lecture complémentaire.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B100A",
+    titre: "Défaut du calculateur airbag (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Variante du défaut général sur le calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1401",
+    titre: "Défaut de configuration du côté de conduite",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la configuration indiquant le côté de conduite (gauche ou droite), essentielle pour la logique de déclenchement des airbags.",
+    causes: [
+      { pourcentage: 42, libelle: "Configuration incorrecte après remplacement du calculateur" },
+      { pourcentage: 28, libelle: "Calculateur importé sans reconfiguration" },
+      { pourcentage: 18, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Cette configuration doit impérativement correspondre à la position réelle du volant — une erreur ici peut inverser la logique de déclenchement conducteur/passager.",
+    pieces: [
+      { nom: "Configuration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B140A",
+    titre: "Prétensionneurs de rappel de ceinture déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les prétensionneurs de rappel de ceinture se sont déclenchés, généralement suite à un choc détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, réel ou intempestif, le véhicule doit être expertisé et les éléments concernés remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B140B",
+    titre: "Dispositif anti-sous-marinage déclenché",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que le dispositif anti-sous-marinage s'est déclenché, généralement suite à un choc frontal détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc frontal" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, le véhicule doit être expertisé et les éléments concernés remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B140C",
+    titre: "Prétensionneurs de rappel de ceinture déclenchés (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Variante du code confirmant le déclenchement des prétensionneurs de rappel de ceinture.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, le véhicule doit être expertisé avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B140E",
+    titre: "Airbags avant déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les airbags avant (conducteur et/ou passager) se sont déployés, généralement suite à un choc frontal important.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc frontal" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, le véhicule doit être expertisé et l'ensemble du système remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B140F",
+    titre: "Airbag conducteur déclenché (airbag passager désactivé)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que l'airbag conducteur s'est déployé, avec pour conséquence une désactivation automatique de l'airbag passager selon la logique de sécurité.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc frontal" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, le véhicule doit être expertisé et l'ensemble du système remis en état.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1410",
+    titre: "Airbags latéraux gauches déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les airbags latéraux du côté gauche se sont déployés, généralement suite à un choc latéral.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc latéral" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, le véhicule doit être expertisé et les éléments remis en état.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1411",
+    titre: "Airbags latéraux droits déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les airbags latéraux du côté droit se sont déployés, généralement suite à un choc latéral.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc latéral" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, le véhicule doit être expertisé et les éléments remis en état.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1412",
+    titre: "Airbag rideau gauche déclenché",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que l'airbag rideau gauche s'est déployé, généralement suite à un choc latéral.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc latéral" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, le véhicule doit être expertisé et les éléments remis en état.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1413",
+    titre: "Airbag rideau droit déclenché",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que l'airbag rideau droit s'est déployé, généralement suite à un choc latéral.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc latéral" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, le véhicule doit être expertisé et les éléments remis en état.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1420",
+    titre: "Actionneur pyrotechnique sous le capot, côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'actionneur pyrotechnique situé sous le capot côté gauche, utilisé pour soulever le capot en cas de choc piéton.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Actionneur pyrotechnique défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce dispositif protège les piétons en cas de choc — un défaut ici doit être traité par un atelier habilité aux systèmes pyrotechniques.",
+    pieces: [
+      { nom: "Diagnostic actionneur pyrotechnique capot (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1421",
+    titre: "Actionneur pyrotechnique sous le capot, côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'actionneur pyrotechnique situé sous le capot côté droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Actionneur pyrotechnique défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce dispositif protège les piétons en cas de choc — un défaut ici doit être traité par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic actionneur pyrotechnique capot (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1430",
+    titre: "Défaut du capteur piéton",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection piéton affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur qui détecte un choc avec un piéton, utilisé pour déclencher le capot actif.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur piéton défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé (choc sur pare-chocs)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur, situé dans le pare-chocs avant, est souvent endommagé lors d'un choc mineur — un contrôle après tout impact frontal est recommandé.",
+    pieces: [
+      { nom: "Capteur piéton pare-chocs", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1431",
+    titre: "Airbag de capot déclenché",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que le dispositif de capot actif (airbag externe) s'est déployé, généralement suite à une détection de choc piéton.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc piéton détecté" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur piéton" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement de ce dispositif, le capot et les actionneurs doivent être expertisés et remplacés avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état capot actif (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1432",
+    titre: "Limiteurs d'effort de ceinture adaptatifs déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les limiteurs d'effort de ceinture adaptatifs se sont déclenchés, généralement suite à un choc détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, le véhicule doit être expertisé et les éléments remis en état.",
+    pieces: [
+      { nom: "Remise en état système sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1433",
+    titre: "Actionneurs de capot déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les actionneurs pyrotechniques du capot se sont déclenchés, généralement suite à une détection de choc piéton.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc piéton détecté" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur piéton" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, le capot et les actionneurs doivent être expertisés et remplacés avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état capot actif (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1434",
+    titre: "Limitation d'effort de ceinture côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que la limitation d'effort de la ceinture côté droit s'est déclenchée, généralement suite à un choc détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, le véhicule doit être expertisé et les éléments remis en état.",
+    pieces: [
+      { nom: "Remise en état système sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1435",
+    titre: "Limitation d'effort de ceinture côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que la limitation d'effort de la ceinture côté gauche s'est déclenchée, généralement suite à un choc détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, le véhicule doit être expertisé et les éléments remis en état.",
+    pieces: [
+      { nom: "Remise en état système sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1436",
+    titre: "Airbag de capot déclenché (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Variante du code confirmant le déclenchement du dispositif de capot actif suite à une détection de choc piéton.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc piéton détecté" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur piéton" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, le capot et les actionneurs doivent être expertisés et remplacés.",
+    pieces: [
+      { nom: "Remise en état capot actif (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "B1415",
+    titre: "Détection d'un choc arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — événement de sécurité enregistré",
+    description:
+      "Le calculateur de sécurité passive a enregistré la détection d'un choc à l'arrière du véhicule, information utilisée pour déclencher certains dispositifs de sécurité.",
+    causes: [
+      { pourcentage: 50, libelle: "Choc réel détecté à l'arrière du véhicule" },
+      { pourcentage: 30, libelle: "Détection intempestive suite à un défaut de capteur d'impact arrière" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute détection de choc, réelle ou intempestive, un contrôle complet du système de sécurité passive est recommandé.",
+    pieces: [
+      { nom: "Diagnostic système sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1800",
+    titre: "Défaut des données de température extérieure",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage température affecté",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur les données de température extérieure reçues via le réseau, utilisées par certaines fonctions de confort.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de température extérieure défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte uniquement l'affichage de la température extérieure — sans impact sur la sécurité passive elle-même.",
+    pieces: [
+      { nom: "Capteur température extérieure", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "U1802",
+    titre: "Défaut de l'information de vitesse du véhicule",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — information de vitesse affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'information de vitesse du véhicule reçue via le réseau, utilisée pour certaines fonctions de sécurité.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur source de l'information défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur sécurité passive oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette information peut être utilisée pour adapter certaines fonctions de sécurité active — un diagnostic réseau est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1F00",
+    titre: "Défaut non enregistré dans le journal de défauts du BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — code informatif",
+    description:
+      "Le calculateur de sécurité passive signale qu'un défaut détecté n'a pas pu être enregistré dans le journal de défauts du BSI, un code informatif sur la communication du journal.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "BSI défaillant sur sa fonction de journalisation" },
+      { pourcentage: 20, libelle: "Mémoire du BSI saturée" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce code accompagne généralement un autre défaut réel qui n'a pas pu être correctement journalisé — à analyser avec les autres codes présents.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1F0F",
+    titre: "Calculateur muet sur le réseau CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur isolé du réseau",
+    description:
+      "Le calculateur de sécurité passive n'émet plus aucun message sur le réseau CAN, l'isolant des autres calculateurs du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Câblage du réseau coupé au niveau du calculateur" },
+      { pourcentage: 12, libelle: "Connecteur mal enfiché après une intervention" },
+    ],
+    avisPro:
+      "Ce défaut est prioritaire à traiter car il peut masquer d'autres codes de sécurité devenus injoignables — vérifier en premier l'alimentation et les masses du calculateur.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B00B5",
+    titre: "Défaut du capteur de position du siège conducteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité airbag possiblement affectée",
+    description:
+      "Variante du défaut sur le capteur qui mesure la position du siège conducteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur influence le mode de déploiement de l'airbag conducteur.",
+    pieces: [
+      { nom: "Capteur position siège conducteur", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B0004",
+    titre: "Défaut de l'airbag genoux conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le circuit de l'airbag qui protège les genoux du conducteur en cas de choc frontal.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag genoux endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag genoux défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag genoux (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0071",
+    titre: "Défaut de la ligne du prétensionneur central de rappel de sangle",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur central de rappel de sangle, sur les véhicules équipés d'une place centrale avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0074",
+    titre: "Défaut de la ligne du prétensionneur central de rappel de sangle, rangée 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur central de rappel de sangle de deuxième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0076",
+    titre: "Défaut de la ligne du prétensionneur de rappel de sangle gauche, rangée 3",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur de rappel de sangle gauche de troisième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0077",
+    titre: "Défaut de la ligne du prétensionneur central de rappel de sangle, rangée 3",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur central de rappel de sangle de troisième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0078",
+    titre: "Défaut de la ligne du prétensionneur de rappel de sangle droite, rangée 3",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur de rappel de sangle droite de troisième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B0090",
+    titre: "Défaut de la ligne du capteur d'accélération latérale avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du capteur d'accélération latérale avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc latéral pour déclencher les airbags concernés.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B0095",
+    titre: "Défaut de la ligne du capteur d'accélération latérale avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du capteur d'accélération latérale avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc latéral pour déclencher les airbags concernés.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B0099",
+    titre: "Défaut du capteur de détection de retournement",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur qui détecte un risque de retournement du véhicule, utilisé pour déclencher certains dispositifs de sécurité (rideaux, arceaux).",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de retournement défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est essentiel pour la protection en cas de retournement — un défaut ici doit être traité en priorité.",
+    pieces: [
+      { nom: "Diagnostic capteur retournement (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1402",
+    titre: "Présence du dispositif anti-sous-marinage conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — information de configuration",
+    description:
+      "Le calculateur de sécurité passive enregistre la présence configurée du dispositif anti-sous-marinage côté conducteur, une information de configuration plutôt qu'un défaut actif.",
+    causes: [
+      { pourcentage: 50, libelle: "Configuration normale enregistrée" },
+      { pourcentage: 30, libelle: "Configuration incorrecte après intervention" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce code est généralement informatif — à croiser avec d'autres codes actifs si présents.",
+    pieces: [
+      { nom: "Diagnostic configuration sécurité passive (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1403",
+    titre: "Présence du dispositif anti-sous-marinage passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — information de configuration",
+    description:
+      "Le calculateur de sécurité passive enregistre la présence configurée du dispositif anti-sous-marinage côté passager, une information de configuration plutôt qu'un défaut actif.",
+    causes: [
+      { pourcentage: 50, libelle: "Configuration normale enregistrée" },
+      { pourcentage: 30, libelle: "Configuration incorrecte après intervention" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce code est généralement informatif — à croiser avec d'autres codes actifs si présents.",
+    pieces: [
+      { nom: "Diagnostic configuration sécurité passive (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1408",
+    titre: "Défaut interne du système de déclenchement",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne de son système de déclenchement pyrotechnique.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1409",
+    titre: "Défaut interne du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur de sécurité passive signale une défaillance interne générale.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1416",
+    titre: "Airbag latéral avant gauche de type tête",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'airbag latéral avant gauche de type combiné tête/thorax, une variante conçue pour protéger à la fois la tête et le buste.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1417",
+    titre: "Airbag latéral avant droit de type tête",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'airbag latéral avant droit de type combiné tête/thorax.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B141B",
+    titre: "Airbag latéral central entre conducteur et passager avant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'airbag latéral central déployé entre les sièges conducteur et passager avant, protégeant en cas de choc latéral opposé.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag central endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag central défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cet airbag central protège contre le contact entre occupants en cas de choc latéral opposé — un équipement présent sur les modèles les plus récents.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag central (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B141C",
+    titre: "Airbag de ceinture pour place centrale avant (banquette)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'airbag intégré à la ceinture de sécurité de la place centrale avant, sur les véhicules équipés d'une banquette avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag ceinture endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag ceinture défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Équipement rare, présent uniquement sur certains modèles à banquette avant trois places.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag ceinture (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B141D",
+    titre: "Défaut du capteur gauche de détection de choc piéton",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection piéton affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur gauche qui détecte un choc avec un piéton.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur piéton gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé (choc sur pare-chocs)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur, situé dans le pare-chocs avant gauche, est souvent endommagé lors d'un choc mineur.",
+    pieces: [
+      { nom: "Capteur piéton pare-chocs gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B141F",
+    titre: "Désactivation automatique liée à la détection de présence passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — état normal de fonctionnement",
+    description:
+      "Le calculateur de sécurité passive signale que l'airbag passager a été automatiquement désactivé suite à la détection d'absence d'occupant sur ce siège, un fonctionnement normal du système.",
+    causes: [
+      { pourcentage: 70, libelle: "Aucun occupant détecté sur le siège passager (fonctionnement normal)" },
+      { pourcentage: 20, libelle: "Capteur de présence défaillant, désactivant à tort" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce code est normal lorsque le siège passager est vide — si un passager est assis et que ce code persiste, un contrôle du capteur de présence est nécessaire.",
+    pieces: [
+      { nom: "Capteur de présence siège passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1B00",
+    titre: "Défaut interne du calculateur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Variante du défaut interne général du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B01",
+    titre: "Capteur d'impact latéral gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur d'impact latéral situé côté gauche du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc latéral pour déclencher les airbags concernés.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1B02",
+    titre: "Capteur d'impact latéral droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur d'impact latéral situé côté droit du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc latéral pour déclencher les airbags concernés.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1B03",
+    titre: "Capteur d'impact avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur d'impact situé à l'avant gauche du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact avant défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc frontal pour déclencher les airbags concernés.",
+    pieces: [
+      { nom: "Capteur d'impact avant", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1B04",
+    titre: "Capteur d'impact avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur d'impact situé à l'avant droit du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'impact avant défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc frontal pour déclencher les airbags concernés.",
+    pieces: [
+      { nom: "Capteur d'impact avant", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1B10",
+    titre: "Défaut de la ligne de l'airbag conducteur niveau",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de déploiement de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag conducteur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B11",
+    titre: "Défaut de la ligne de l'airbag passager niveau",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de déploiement de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag passager défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B12",
+    titre: "Défaut de la ligne du prétensionneur conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B13",
+    titre: "Défaut de la ligne du prétensionneur passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B14",
+    titre: "Défaut de la ligne de l'airbag latéral avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag latéral avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag latéral endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag latéral défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B15",
+    titre: "Défaut de la ligne de l'airbag latéral avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag latéral endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag latéral défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B16",
+    titre: "Défaut de la ligne de l'airbag rideau droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B17",
+    titre: "Défaut de la ligne de l'airbag rideau gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B18",
+    titre: "Défaut de la ligne de l'airbag latéral arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag latéral arrière gauche, présent sur certains modèles équipés.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag arrière endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag arrière défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag arrière (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B19",
+    titre: "Défaut de la ligne de l'airbag latéral arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag latéral arrière droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag arrière endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag arrière défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag arrière (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B1A",
+    titre: "Défaut de la ligne de l'airbag de colonne de direction",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne de l'airbag intégré à la colonne de direction.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag endommagé (zone de flexion de la colonne)" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Le câblage traversant la colonne de direction subit des flexions répétées — c'est une zone classique de rupture de fil.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag colonne de direction (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B1D",
+    titre: "Défaut du prétensionneur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le prétensionneur de ceinture de la place arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B1E",
+    titre: "Défaut du prétensionneur arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le prétensionneur de ceinture de la place arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B20",
+    titre: "Défaut du contacteur de ceinture non bouclée, place avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place avant gauche est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée est un équipement de sécurité important — ce défaut mérite un traitement rapide.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B21",
+    titre: "Défaut du contacteur de ceinture non bouclée, place avant droite",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place avant droite est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée est un équipement de sécurité important — ce défaut mérite un traitement rapide.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B24",
+    titre: "Défaut du contacteur de ceinture non bouclée, place arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place arrière gauche est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B25",
+    titre: "Défaut du contacteur de ceinture non bouclée, place centrale arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place centrale arrière est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B26",
+    titre: "Défaut du contacteur de ceinture non bouclée, place arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place arrière droite est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B27",
+    titre: "Défaut du contacteur de désarmement de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commande de désactivation affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le contacteur (clé) permettant de désarmer manuellement l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désarmement défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la désactivation manuelle de l'airbag passager, nécessaire pour installer un siège enfant dos à la route.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1B28",
+    titre: "Défaut du témoin lumineux d'activation de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le témoin qui indique que l'airbag passager est actif.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Diagnostic témoin activation airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1B29",
+    titre: "Défaut du témoin d'avertissement de désactivation de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le témoin d'avertissement qui indique que l'airbag passager est désactivé.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Diagnostic témoin désactivation airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1B30",
+    titre: "Défaut de la ligne de notification des chocs",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication d'événement affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la ligne qui notifie les autres calculateurs d'un choc détecté, utilisée pour déclencher des actions post-accident (déverrouillage des portes, coupure carburant).",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de la ligne de notification endommagé" },
+      { pourcentage: 28, libelle: "Calculateur destinataire défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette ligne déclenche des actions de sécurité importantes après un choc (déverrouillage, coupure carburant) — un défaut ici mérite un diagnostic rapide.",
+    pieces: [
+      { nom: "Diagnostic ligne notification chocs (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B41",
+    titre: "Détection d'un choc frontal",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — événement de sécurité enregistré",
+    description:
+      "Le calculateur de sécurité passive a enregistré la détection d'un choc à l'avant du véhicule.",
+    causes: [
+      { pourcentage: 50, libelle: "Choc réel détecté à l'avant du véhicule" },
+      { pourcentage: 30, libelle: "Détection intempestive suite à un défaut de capteur d'impact avant" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute détection de choc, un contrôle complet du système de sécurité passive est recommandé.",
+    pieces: [
+      { nom: "Diagnostic système sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B42",
+    titre: "Détection d'un choc latéral",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — événement de sécurité enregistré",
+    description:
+      "Le calculateur de sécurité passive a enregistré la détection d'un choc latéral.",
+    causes: [
+      { pourcentage: 50, libelle: "Choc latéral réel détecté" },
+      { pourcentage: 30, libelle: "Détection intempestive suite à un défaut de capteur d'impact latéral" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute détection de choc, un contrôle complet du système de sécurité passive est recommandé.",
+    pieces: [
+      { nom: "Diagnostic système sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B43",
+    titre: "Détection d'un choc arrière (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — événement de sécurité enregistré",
+    description:
+      "Variante du code de détection d'un choc à l'arrière du véhicule.",
+    causes: [
+      { pourcentage: 50, libelle: "Choc réel détecté à l'arrière du véhicule" },
+      { pourcentage: 30, libelle: "Détection intempestive suite à un défaut de capteur d'impact arrière" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute détection de choc, un contrôle complet du système de sécurité passive est recommandé.",
+    pieces: [
+      { nom: "Diagnostic système sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B44",
+    titre: "Défaut interne du calculateur (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Autre variante du défaut interne général du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B45",
+    titre: "Tension batterie trop basse",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — alimentation générale du système",
+    description:
+      "Le calculateur de sécurité passive détecte que la tension de la batterie est trop basse pour un fonctionnement normal.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1B46",
+    titre: "Tension batterie trop élevée",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générale affectée",
+    description:
+      "Le calculateur de sécurité passive détecte que la tension de la batterie dépasse la valeur maximale admissible.",
+    causes: [
+      { pourcentage: 38, libelle: "Alternateur défaillant, surtension du réseau électrique" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une surtension généralisée du réseau électrique (alternateur défaillant) doit être vérifiée en priorité.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "U1584",
+    titre: "Défaut de l'information de vitesse du véhicule",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — information de vitesse affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'information de vitesse du véhicule reçue via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur source de l'information défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur sécurité passive oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette information peut être utilisée pour adapter certaines fonctions de sécurité active.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1585",
+    titre: "Absence de communication avec le calculateur moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/sécurité affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient plus à dialoguer avec le calculateur de gestion moteur, utilisé pour couper l'alimentation carburant après un choc.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur sécurité passive oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette communication est utilisée pour couper le carburant après un choc — un diagnostic réseau est recommandé pour cette fonction de sécurité.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1586",
+    titre: "Absence de communication avec le capteur d'angle volant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination sécurité affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient plus à dialoguer avec le capteur d'angle du volant, utilisé pour certaines fonctions de sécurité croisées.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette information peut affecter certaines fonctions de sécurité avancées croisées avec la direction.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "U1587",
+    titre: "Absence de communication avec le boîtier de fusibles passerelle",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient plus à dialoguer avec le boîtier de fusibles passerelle, qui relie plusieurs réseaux du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le boîtier passerelle endommagé" },
+      { pourcentage: 28, libelle: "Boîtier de fusibles passerelle défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce boîtier relie plusieurs réseaux du véhicule — un défaut ici peut avoir des répercussions sur plusieurs systèmes.",
+    pieces: [
+      { nom: "Diagnostic boîtier passerelle (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1588",
+    titre: "Absence de communication avec le boîtier de fusibles passerelle (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau affectée",
+    description:
+      "Variante du défaut d'absence de communication avec le boîtier de fusibles passerelle.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le boîtier passerelle endommagé" },
+      { pourcentage: 28, libelle: "Boîtier de fusibles passerelle défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un défaut ici peut avoir des répercussions sur plusieurs systèmes du véhicule.",
+    pieces: [
+      { nom: "Diagnostic boîtier passerelle (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U0018",
+    titre: "Défaut CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le réseau CAN.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du bus CAN endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur sécurité passive oxydé" },
+      { pourcentage: 22, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un défaut réseau sur le calculateur de sécurité passive peut masquer d'autres codes — un diagnostic réseau complet est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "B1B60",
+    titre: "Défaut de configuration du calculateur airbags et prétensionneurs",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur sa configuration générale des airbags et prétensionneurs, généralement après une intervention.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur remplacé sans recodage complet" },
+      { pourcentage: 28, libelle: "Configuration incompatible avec l'équipement du véhicule" },
+      { pourcentage: 18, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement du calculateur de sécurité passive, une procédure de configuration complète avec l'outil constructeur est indispensable.",
+    pieces: [
+      { nom: "Configuration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B1414",
+    titre: "Défaut du circuit d'allumage du module de mise à feu de l'airbag passager niveau 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit d'allumage pyrotechnique du module de premier niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1422",
+    titre: "Défaut de la ligne de l'airbag latéral avant droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut de ligne sur l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag latéral endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag latéral défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1423",
+    titre: "Défaut de la ligne de l'airbag latéral avant droit (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut de ligne sur l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag latéral endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag latéral défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1424",
+    titre: "Défaut du circuit d'allumage du module de l'airbag latéral avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit d'allumage pyrotechnique du module de l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1425",
+    titre: "Défaut du circuit d'allumage du module de l'airbag latéral avant droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le circuit d'allumage pyrotechnique du module de l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1426",
+    titre: "Défaut de la ligne du satellite droit 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la ligne du premier module satellite de détection situé côté droit, utilisé pour relayer les informations de choc.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc — un défaut ici doit être traité en priorité.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1427",
+    titre: "Défaut de la ligne du satellite droit 1 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur la ligne du premier module satellite droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1428",
+    titre: "Défaut de la ligne du satellite droit 1 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur la ligne du premier module satellite droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1429",
+    titre: "Défaut de la ligne du satellite droit 1 (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur la ligne du premier module satellite droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1437",
+    titre: "Défaut de la ligne du satellite gauche 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la ligne du premier module satellite de détection situé côté gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc — un défaut ici doit être traité en priorité.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1438",
+    titre: "Défaut de la ligne du satellite gauche 1 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur la ligne du premier module satellite gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1439",
+    titre: "Défaut de la ligne du satellite gauche 1 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur la ligne du premier module satellite gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1440",
+    titre: "Défaut de la ligne de l'airbag rideau droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut de ligne sur l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1441",
+    titre: "Défaut de la ligne de l'airbag rideau droit (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut de ligne sur l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1442",
+    titre: "Défaut de la ligne de l'airbag rideau droit (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut de ligne sur l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1443",
+    titre: "Défaut de la ligne de l'airbag rideau droit (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut de ligne sur l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1444",
+    titre: "Défaut du circuit d'allumage du module de l'airbag rideau droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit d'allumage pyrotechnique du module de l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1445",
+    titre: "Défaut du circuit d'allumage du module de l'airbag rideau droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le circuit d'allumage pyrotechnique du module de l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1446",
+    titre: "Défaut de la ligne du satellite droit 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la ligne du deuxième module satellite de détection situé côté droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc — un défaut ici doit être traité en priorité.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1447",
+    titre: "Défaut de la ligne du satellite droit 2 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur la ligne du deuxième module satellite droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1448",
+    titre: "Défaut de la ligne du satellite droit 2 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur la ligne du deuxième module satellite droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1449",
+    titre: "Défaut de la ligne du satellite droit 2 (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur la ligne du deuxième module satellite droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1450",
+    titre: "Défaut de la ligne de l'airbag rideau gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut de ligne sur l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1451",
+    titre: "Défaut de la ligne de l'airbag rideau gauche (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut de ligne sur l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1452",
+    titre: "Défaut de la ligne de l'airbag rideau gauche (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut de ligne sur l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1453",
+    titre: "Défaut de la ligne de l'airbag rideau gauche (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut de ligne sur l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne airbag rideau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1454",
+    titre: "Défaut du circuit d'allumage du module de l'airbag rideau gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit d'allumage pyrotechnique du module de l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1455",
+    titre: "Défaut du circuit d'allumage du module de l'airbag rideau gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le circuit d'allumage pyrotechnique du module de l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1456",
+    titre: "Défaut de la ligne du satellite gauche 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la ligne du deuxième module satellite de détection situé côté gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1457",
+    titre: "Défaut de la ligne du satellite gauche 2 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur la ligne du deuxième module satellite gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1458",
+    titre: "Défaut de la ligne du satellite gauche 2 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur la ligne du deuxième module satellite gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1459",
+    titre: "Défaut de la ligne du satellite gauche 2 (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur la ligne du deuxième module satellite gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1466",
+    titre: "Défaut interne du calculateur (accéléromètre de choc frontal)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — capteur de choc concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance de son accéléromètre interne dédié à la détection de choc frontal.",
+    causes: [
+      { pourcentage: 50, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est essentiel à la détection de choc frontal — défaut de sécurité passive prioritaire nécessitant un diagnostic immédiat.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1467",
+    titre: "Défaut interne du calculateur (accéléromètre de choc frontal, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — capteur de choc concerné",
+    description:
+      "Variante du défaut interne sur l'accéléromètre de choc frontal.",
+    causes: [
+      { pourcentage: 50, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire nécessitant un diagnostic immédiat.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1468",
+    titre: "Défaut interne du calculateur (accéléromètre de choc frontal, variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — capteur de choc concerné",
+    description:
+      "Autre variante du défaut interne sur l'accéléromètre de choc frontal.",
+    causes: [
+      { pourcentage: 50, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire nécessitant un diagnostic immédiat.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1476",
+    titre: "Défaut de la tension d'alimentation",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — alimentation générale du système",
+    description:
+      "Le calculateur de sécurité passive détecte que sa tension d'alimentation sort de la plage de fonctionnement normale.",
+    causes: [
+      { pourcentage: 38, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant" },
+      { pourcentage: 22, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1477",
+    titre: "Défaut de la tension d'alimentation (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — alimentation générale du système",
+    description:
+      "Variante du défaut de tension d'alimentation du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 38, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant" },
+      { pourcentage: 22, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie est la première étape avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1478",
+    titre: "Défaut de la tension interne du condensateur de réserve",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive concernée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la tension interne du condensateur de réserve d'énergie, qui permet de déclencher les airbags même en cas de coupure de batterie lors d'un choc.",
+    causes: [
+      { pourcentage: 50, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette réserve d'énergie est un élément de sécurité crucial — défaut prioritaire nécessitant un diagnostic immédiat.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1479",
+    titre: "Défaut de la tension interne du condensateur de réserve (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive concernée",
+    description:
+      "Variante du défaut sur la tension interne du condensateur de réserve d'énergie.",
+    causes: [
+      { pourcentage: 50, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Défaut prioritaire nécessitant un diagnostic immédiat.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1488",
+    titre: "Défaut du témoin du contacteur de désarmement de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le témoin lumineux associé au contacteur de désarmement de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Diagnostic témoin désactivation airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1489",
+    titre: "Défaut du témoin du contacteur de désarmement de l'airbag passager (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Variante du défaut sur le témoin lumineux associé au contacteur de désarmement de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Diagnostic témoin désactivation airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1496",
+    titre: "Défaut interne du calculateur (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Autre variante du défaut interne général du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1497",
+    titre: "Défaut interne du calculateur (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Autre variante du défaut interne général du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1498",
+    titre: "Défaut interne du calculateur (variante 5)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Autre variante du défaut interne général du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1499",
+    titre: "Défaut interne du calculateur ou airbag déclenché",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause ou déclenchement",
+    description:
+      "Le calculateur de sécurité passive détecte soit une défaillance interne générale, soit confirme qu'un airbag s'est déjà déployé, selon le contexte de lecture.",
+    causes: [
+      { pourcentage: 40, libelle: "Déclenchement réel d'un airbag suite à un choc" },
+      { pourcentage: 32, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+    ],
+    avisPro:
+      "Ce code ambigu nécessite de croiser avec les autres codes présents et l'historique du véhicule pour déterminer s'il s'agit d'un vrai déclenchement ou d'une panne calculateur.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1509",
+    titre: "Incompatibilité entre le calculateur airbag et le véhicule",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — incompatibilité de pièce",
+    description:
+      "Le calculateur de sécurité passive détecte que sa référence n'est pas compatible avec le véhicule sur lequel il est installé, généralement suite à un remplacement avec une mauvaise pièce.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur remplacé avec une référence incompatible" },
+      { pourcentage: 30, libelle: "Erreur lors de la commande de la pièce de rechange" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier impérativement que la référence du calculateur installé correspond exactement à celle préconisée pour ce modèle et cette finition précis.",
+    pieces: [
+      { nom: "Diagnostic référence calculateur sécurité passive (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1519",
+    titre: "Défaut de verrouillage du connecteur du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — connexion électrique à vérifier",
+    description:
+      "Le calculateur de sécurité passive détecte que son connecteur principal n'est pas correctement verrouillé, un défaut de sécurité électrique important pour ce système.",
+    causes: [
+      { pourcentage: 50, libelle: "Connecteur mal enfiché ou mal verrouillé après une intervention" },
+      { pourcentage: 30, libelle: "Clip de verrouillage du connecteur cassé" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le connecteur du calculateur est correctement enfiché et verrouillé jusqu'au clic — une intervention récente est souvent en cause.",
+    pieces: [
+      { nom: "Diagnostic connecteur calculateur sécurité passive (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1547",
+    titre: "Défaut du témoin du contacteur de désarmement de l'airbag passager (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Autre variante du défaut sur le témoin lumineux associé au contacteur de désarmement de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "LED du témoin défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Diagnostic témoin désactivation airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1550",
+    titre: "Défaut du témoin lumineux d'alerte airbags et prétensionneurs (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Variante du défaut sur le circuit du témoin lumineux d'alerte airbags et prétensionneurs.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 28, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 20, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un témoin qui ne s'allume pas au démarrage est un signe de ce défaut, à distinguer d'une vraie panne du système.",
+    pieces: [
+      { nom: "Diagnostic circuit témoin airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1551",
+    titre: "Défaut du témoin lumineux d'alerte airbags et prétensionneurs (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Autre variante du défaut sur le circuit du témoin lumineux d'alerte airbags et prétensionneurs.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 28, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 20, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un témoin qui ne s'allume pas au démarrage est un signe de ce défaut.",
+    pieces: [
+      { nom: "Diagnostic circuit témoin airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1557",
+    titre: "Défaut interne du calculateur (variante 6)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Autre variante du défaut interne général du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1570",
+    titre: "Défaut de la ligne du contacteur de désactivation de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commande de désactivation affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur la ligne du contacteur permettant de désactiver manuellement l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la désactivation manuelle de l'airbag passager, nécessaire pour installer un siège enfant dos à la route.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1574",
+    titre: "Défaut de la ligne du contacteur de désactivation de l'airbag passager (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commande de désactivation affectée",
+    description:
+      "Variante du défaut électrique sur la ligne du contacteur de désactivation de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la désactivation manuelle de l'airbag passager.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1575",
+    titre: "Défaut de la ligne du contacteur de désactivation de l'airbag passager (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commande de désactivation affectée",
+    description:
+      "Autre variante du défaut électrique sur la ligne du contacteur de désactivation de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la désactivation manuelle de l'airbag passager.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1576",
+    titre: "Défaut de la ligne du contacteur de désactivation de l'airbag passager (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commande de désactivation affectée",
+    description:
+      "Autre variante du défaut électrique sur la ligne du contacteur de désactivation de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la désactivation manuelle de l'airbag passager.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1581",
+    titre: "Incompatibilité entre le contacteur de désarmement passager et le calculateur airbag",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — incompatibilité de pièce",
+    description:
+      "Le calculateur de sécurité passive détecte que le contacteur de désarmement de l'airbag passager installé n'est pas compatible avec sa configuration.",
+    causes: [
+      { pourcentage: 42, libelle: "Contacteur remplacé avec une référence incompatible" },
+      { pourcentage: 28, libelle: "Configuration du calculateur non mise à jour" },
+      { pourcentage: 18, libelle: "Contacteur de désarmement défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la référence du contacteur installé correspond bien à celle préconisée pour ce modèle.",
+    pieces: [
+      { nom: "Contacteur désactivation airbag passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1595",
+    titre: "Défaut du satellite avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le module satellite de détection situé à l'avant droit du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1596",
+    titre: "Défaut du satellite avant droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le module satellite avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1597",
+    titre: "Défaut du satellite avant droit (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module satellite avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1598",
+    titre: "Défaut du satellite avant droit (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module satellite avant droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant droit", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1599",
+    titre: "Défaut du satellite avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le module satellite de détection situé à l'avant gauche du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1600",
+    titre: "Défaut du satellite avant gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le module satellite avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1601",
+    titre: "Défaut du satellite avant gauche (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module satellite avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1602",
+    titre: "Défaut du satellite avant gauche (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module satellite avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc frontal.",
+    pieces: [
+      { nom: "Module satellite détection choc avant gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1603",
+    titre: "Défaut du prétensionneur conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1604",
+    titre: "Défaut du prétensionneur conducteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut général sur le prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1605",
+    titre: "Défaut du prétensionneur conducteur (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1606",
+    titre: "Défaut du prétensionneur conducteur (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1607",
+    titre: "Défaut du circuit d'allumage du module du prétensionneur conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit d'allumage pyrotechnique du module du prétensionneur conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1608",
+    titre: "Défaut du circuit d'allumage du module du prétensionneur conducteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le circuit d'allumage pyrotechnique du module du prétensionneur conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1609",
+    titre: "Défaut du prétensionneur passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1610",
+    titre: "Défaut du prétensionneur passager (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut général sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1611",
+    titre: "Défaut du prétensionneur passager (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1612",
+    titre: "Défaut du prétensionneur passager (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1613",
+    titre: "Défaut du circuit d'allumage du module du prétensionneur passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit d'allumage pyrotechnique du module du prétensionneur passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1614",
+    titre: "Défaut du circuit d'allumage du module du prétensionneur passager (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le circuit d'allumage pyrotechnique du module du prétensionneur passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1616",
+    titre: "Défaut interne du calculateur (accéléromètre)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — capteur de choc concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance de son accéléromètre interne général.",
+    causes: [
+      { pourcentage: 50, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est essentiel à la détection de choc — défaut de sécurité passive prioritaire nécessitant un diagnostic immédiat.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1619",
+    titre: "Défaut du prétensionneur de rappel de sangle conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1621",
+    titre: "Défaut du prétensionneur de rappel de sangle conducteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut général sur le prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1622",
+    titre: "Défaut du prétensionneur de rappel de sangle conducteur (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1623",
+    titre: "Défaut du circuit d'allumage du module du prétensionneur de rappel de sangle conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit d'allumage pyrotechnique du module du prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1624",
+    titre: "Défaut du circuit d'allumage du module du prétensionneur de rappel de sangle conducteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le circuit d'allumage pyrotechnique du module du prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du circuit d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1637",
+    titre: "Défaut du satellite de choc latéral",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur un module satellite dédié à la détection de choc latéral.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc latéral, essentiel au déclenchement rapide des airbags rideau et latéraux.",
+    pieces: [
+      { nom: "Module satellite détection choc latéral", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1639",
+    titre: "Défaut du satellite de choc latéral (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur un module satellite dédié à la détection de choc latéral.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc latéral.",
+    pieces: [
+      { nom: "Module satellite détection choc latéral", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1640",
+    titre: "Défaut du satellite de choc latéral (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur un module satellite dédié à la détection de choc latéral.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc latéral.",
+    pieces: [
+      { nom: "Module satellite détection choc latéral", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1641",
+    titre: "Défaut du satellite de choc arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur un module satellite dédié à la détection de choc arrière.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc arrière.",
+    pieces: [
+      { nom: "Module satellite détection choc arrière", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1643",
+    titre: "Défaut du satellite de choc arrière (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur un module satellite dédié à la détection de choc arrière.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc arrière.",
+    pieces: [
+      { nom: "Module satellite détection choc arrière", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1644",
+    titre: "Défaut du satellite de choc arrière (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur un module satellite dédié à la détection de choc arrière.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc arrière.",
+    pieces: [
+      { nom: "Module satellite détection choc arrière", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1697",
+    titre: "Défaut de l'appel d'urgence",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — appel automatique d'urgence affecté",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la fonction d'appel d'urgence automatique, déclenchée normalement après un accident détecté.",
+    causes: [
+      { pourcentage: 36, libelle: "Module télématique d'appel d'urgence défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Carte SIM absente ou défaillante" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette fonction de sécurité importante déclenche un appel automatique aux secours en cas d'accident — un défaut ici mérite un diagnostic rapide.",
+    pieces: [
+      { nom: "Diagnostic module appel d'urgence (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1699",
+    titre: "Défaut des modules d'allumage pyrotechnique",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale touchant plusieurs modules d'allumage pyrotechnique simultanément.",
+    causes: [
+      { pourcentage: 36, libelle: "Plusieurs modules d'allumage défaillants" },
+      { pourcentage: 28, libelle: "Câblage commun endommagé" },
+      { pourcentage: 22, libelle: "Alimentation partagée des modules défaillante" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs modules d'allumage tombent en panne simultanément, une alimentation ou un câblage partagé est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic modules allumage pyrotechnique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1469",
+    titre: "Défaut interne du calculateur (accéléromètre de choc latéral)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — capteur de choc concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance de son accéléromètre interne dédié à la détection de choc latéral.",
+    causes: [
+      { pourcentage: 50, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est essentiel à la détection de choc latéral — défaut de sécurité passive prioritaire nécessitant un diagnostic immédiat.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1418",
+    titre: "Défaut de la ligne du satellite de l'airbag latéral avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur la ligne du module satellite de l'airbag latéral avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc pour déclencher l'airbag latéral avant gauche.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1419",
+    titre: "Défaut de la ligne du satellite de l'airbag latéral avant gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur la ligne du module satellite de l'airbag latéral avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le satellite endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module satellite défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce module satellite relaie les informations de capteurs de choc pour déclencher l'airbag latéral avant gauche.",
+    pieces: [
+      { nom: "Module satellite détection choc gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "B1649",
+    titre: "Défaut interne du capteur d'accélération latérale",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le capteur d'accélération latérale signale une défaillance interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur d'accélération latérale défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du capteur défaillante" },
+      { pourcentage: 17, libelle: "Choc ou vibration ayant endommagé le capteur" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur détecte les chocs latéraux — un défaut interne entraîne généralement son remplacement complet.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1650",
+    titre: "Défaut du capteur d'accélération latérale",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le capteur d'accélération latérale.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'accélération latérale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur permet une détection rapide d'un choc latéral pour déclencher les airbags concernés.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1652",
+    titre: "Absence de communication avec le capteur d'accélération latérale",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive ne parvient plus à dialoguer avec le capteur d'accélération latérale.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'accélération latérale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement la détection de choc latéral pour la zone concernée.",
+    pieces: [
+      { nom: "Capteur d'impact latéral", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1653",
+    titre: "Défaut du prétensionneur arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le prétensionneur de la place arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1664",
+    titre: "Défaut du prétensionneur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie générale sur le prétensionneur de la place arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1698",
+    titre: "Défaut interne du calculateur (variante 7)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Autre variante du défaut interne général du calculateur de sécurité passive.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1102",
+    titre: "Absence de communication avec l'ABS ou l'ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coordination sécurité affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient plus à dialoguer avec le calculateur ABS/ESP, utilisé pour certaines fonctions de sécurité croisées après un choc.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur sécurité passive oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication doit être croisé avec les codes propres du calculateur ABS/ESP.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1190",
+    titre: "Événement de défaut non stocké dans le journal de défauts",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — code informatif",
+    description:
+      "Le calculateur de sécurité passive signale qu'un événement de défaut détecté n'a pas pu être stocké dans le journal, un code informatif sur la fonction de journalisation.",
+    causes: [
+      { pourcentage: 40, libelle: "Mémoire du journal de défauts saturée" },
+      { pourcentage: 28, libelle: "Calculateur de sécurité passive défaillant sur sa fonction de journalisation" },
+      { pourcentage: 20, libelle: "Coupure d'alimentation pendant l'écriture" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code accompagne généralement un autre défaut réel — à analyser avec les autres codes présents.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1195",
+    titre: "Défaut interne du calculateur (réseau)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur de sécurité passive signale une défaillance interne détectée via le réseau.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1199",
+    titre: "Numéro d'identification du véhicule (VIN) manquant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive détecte que le numéro d'identification du véhicule (VIN) n'a pas été enregistré dans sa mémoire, généralement après un remplacement.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur remplacé sans enregistrement du VIN" },
+      { pourcentage: 28, libelle: "Procédure de configuration interrompue" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement du calculateur de sécurité passive, l'enregistrement du VIN via l'outil constructeur est une étape indispensable.",
+    pieces: [
+      { nom: "Configuration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U119A",
+    titre: "Défaut interne du calculateur (réseau, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Variante du défaut interne détecté via le réseau.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1206",
+    titre: "Défaut du témoin d'alerte airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le circuit du témoin lumineux d'alerte de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 28, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 20, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Diagnostic circuit témoin airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1207",
+    titre: "Défaut du témoin d'alerte airbag passager (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage du témoin uniquement",
+    description:
+      "Variante du défaut sur le circuit du témoin lumineux d'alerte de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage vers le témoin endommagé" },
+      { pourcentage: 28, libelle: "Ampoule ou LED du témoin grillée" },
+      { pourcentage: 20, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce témoin est obligatoire pour informer les occupants de l'état de l'airbag passager.",
+    pieces: [
+      { nom: "Diagnostic circuit témoin airbag (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "B1B05",
+    titre: "Défaut du module d'allumage de l'airbag conducteur niveau 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le module d'allumage pyrotechnique du deuxième niveau de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B06",
+    titre: "Défaut du module d'allumage de l'airbag conducteur niveau 2 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le module d'allumage du deuxième niveau de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B07",
+    titre: "Défaut du module d'allumage de l'airbag conducteur niveau 2 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module d'allumage du deuxième niveau de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B08",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le module d'allumage pyrotechnique du premier niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B09",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 1 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le module d'allumage du premier niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B0A",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 1 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module d'allumage du premier niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B0B",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 1 (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module d'allumage du premier niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B0C",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le module d'allumage pyrotechnique du deuxième niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B0D",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 2 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le module d'allumage du deuxième niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B0E",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 2 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module d'allumage du deuxième niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B0F",
+    titre: "Défaut du module d'allumage de l'airbag passager niveau 2 (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut sur le module d'allumage du deuxième niveau de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B1B",
+    titre: "Défaut du module d'allumage de l'airbag rideau gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le module d'allumage pyrotechnique de l'airbag rideau gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B22",
+    titre: "Défaut du module d'allumage de l'airbag rideau droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le module d'allumage pyrotechnique de l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B23",
+    titre: "Défaut du module d'allumage de l'airbag rideau droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Variante du défaut sur le module d'allumage de l'airbag rideau droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du module d'allumage endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un module d'allumage pyrotechnique doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B2A",
+    titre: "Défaut du prétensionneur conducteur (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B2B",
+    titre: "Défaut du prétensionneur conducteur (variante 5)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B2C",
+    titre: "Défaut du prétensionneur passager (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B2D",
+    titre: "Défaut du prétensionneur passager (variante 5)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B2E",
+    titre: "Défaut du prétensionneur passager (variante 6)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B2F",
+    titre: "Défaut du prétensionneur passager (variante 7)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Autre variante du défaut général sur le prétensionneur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "B1B50",
+    titre: "Défaut du capteur de ceinture conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur qui signale l'état de la ceinture de sécurité conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée conducteur est un équipement de sécurité important.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B51",
+    titre: "Défaut du capteur de ceinture conducteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Variante du défaut sur le capteur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée conducteur est un équipement de sécurité important.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B52",
+    titre: "Défaut du capteur de ceinture conducteur (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Autre variante du défaut sur le capteur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée conducteur est un équipement de sécurité important.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B54",
+    titre: "Défaut du capteur de ceinture passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur qui signale l'état de la ceinture de sécurité passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée passager est un équipement de sécurité important.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B55",
+    titre: "Défaut du capteur de ceinture passager (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Variante du défaut sur le capteur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée passager est un équipement de sécurité important.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B56",
+    titre: "Défaut du capteur de ceinture passager (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Autre variante du défaut sur le capteur de ceinture passager avant.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée passager est un équipement de sécurité important.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B1B70",
+    titre: "Défaut interne du satellite avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite (capteur de choc déporté) situé à l'avant gauche du véhicule signale un défaut interne, empêchant la détection correcte d'un choc latéral avant gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Satellite avant gauche défaillant" },
+      { pourcentage: 28, libelle: "Connecteur du satellite corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé suite à une réparation de carrosserie" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un choc léger ayant nécessité une réparation de carrosserie avant gauche, vérifier que le satellite n'a pas été débranché ou endommagé lors des travaux.",
+    pieces: [
+      { nom: "Satellite/capteur de choc avant gauche", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B71",
+    titre: "Défaut interne du satellite avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite situé à l'avant droit du véhicule signale un défaut interne, empêchant la détection correcte d'un choc latéral avant droit.",
+    causes: [
+      { pourcentage: 40, libelle: "Satellite avant droit défaillant" },
+      { pourcentage: 28, libelle: "Connecteur du satellite corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé suite à une réparation de carrosserie" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un choc léger ayant nécessité une réparation de carrosserie avant droite, vérifier que le satellite n'a pas été débranché ou endommagé lors des travaux.",
+    pieces: [
+      { nom: "Satellite/capteur de choc avant droit", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B72",
+    titre: "Défaut interne du satellite latéral gauche (avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite latéral gauche avant signale un défaut interne, compromettant la détection d'un choc latéral côté gauche du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Satellite latéral gauche avant défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché sous le seuil de porte" },
+      { pourcentage: 22, libelle: "Câblage endommagé (infiltration d'eau, choc)" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Les satellites situés sous les seuils de porte sont exposés à l'humidité ; vérifier l'état du connecteur et l'absence de corrosion avant remplacement.",
+    pieces: [
+      { nom: "Satellite latéral gauche avant", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B73",
+    titre: "Défaut interne du satellite latéral gauche (arrière)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite latéral gauche arrière signale un défaut interne, compromettant la détection d'un choc latéral arrière côté gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Satellite latéral gauche arrière défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché sous le seuil de porte" },
+      { pourcentage: 22, libelle: "Câblage endommagé (infiltration d'eau, choc)" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'étanchéité du passage de câble sous le seuil arrière gauche, point fréquent d'infiltration d'eau sur ce type de véhicule.",
+    pieces: [
+      { nom: "Satellite latéral gauche arrière", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B74",
+    titre: "Défaut interne du satellite latéral gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite latéral gauche signale un défaut interne, empêchant la détection correcte d'un choc latéral côté gauche du véhicule.",
+    causes: [
+      { pourcentage: 40, libelle: "Satellite latéral gauche défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler le connecteur avant tout remplacement du satellite, une simple oxydation étant une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Satellite latéral gauche", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B75",
+    titre: "Défaut interne du satellite latéral droit (avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite latéral droit avant signale un défaut interne, compromettant la détection d'un choc latéral côté droit du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Satellite latéral droit avant défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché sous le seuil de porte" },
+      { pourcentage: 22, libelle: "Câblage endommagé (infiltration d'eau, choc)" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Les satellites situés sous les seuils de porte sont exposés à l'humidité ; vérifier l'état du connecteur et l'absence de corrosion avant remplacement.",
+    pieces: [
+      { nom: "Satellite latéral droit avant", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B76",
+    titre: "Défaut interne du satellite latéral droit (arrière)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite latéral droit arrière signale un défaut interne, compromettant la détection d'un choc latéral arrière côté droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Satellite latéral droit arrière défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché sous le seuil de porte" },
+      { pourcentage: 22, libelle: "Câblage endommagé (infiltration d'eau, choc)" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'étanchéité du passage de câble sous le seuil arrière droit, point fréquent d'infiltration d'eau sur ce type de véhicule.",
+    pieces: [
+      { nom: "Satellite latéral droit arrière", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B77",
+    titre: "Défaut interne du satellite latéral droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le satellite latéral droit signale un défaut interne, empêchant la détection correcte d'un choc latéral côté droit du véhicule.",
+    causes: [
+      { pourcentage: 40, libelle: "Satellite latéral droit défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler le connecteur avant tout remplacement du satellite, une simple oxydation étant une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Satellite latéral droit", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1B8D",
+    titre: "Défaut du capteur de position du siège conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le capteur de position du siège conducteur, utilisé pour adapter la force de déclenchement de l'airbag et du prétensionneur à la position du siège, signale un défaut.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de position de siège défaillant ou encrassé" },
+      { pourcentage: 30, libelle: "Câblage sous le siège endommagé par frottement" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 15, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Le câblage sous les rails de siège subit des frottements répétés à chaque réglage ; inspecter la gaine de protection avant de conclure à un capteur défectueux.",
+    pieces: [
+      { nom: "Capteur de position de siège conducteur", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1B8E",
+    titre: "Défaut du capteur de position du siège conducteur (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le capteur de position du siège conducteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage sous le siège coupé ou débranché" },
+      { pourcentage: 30, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité la continuité du câblage sous le rail de siège, souvent sectionné lors d'une dépose de siège mal réalisée.",
+    pieces: [
+      { nom: "Capteur de position de siège conducteur", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1B8F",
+    titre: "Défaut du capteur de position du siège conducteur (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du capteur de position du siège conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage sous le siège endommagé (court-circuit)" },
+      { pourcentage: 30, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité sous le siège, notamment après un lavage intérieur ou une infiltration par le seuil de porte.",
+    pieces: [
+      { nom: "Capteur de position de siège conducteur", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1B93",
+    titre: "Défaut du capteur de position du siège passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le capteur de position du siège passager, utilisé pour adapter la force de déclenchement de l'airbag et du prétensionneur, signale un défaut.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur de position de siège défaillant ou encrassé" },
+      { pourcentage: 30, libelle: "Câblage sous le siège endommagé par frottement" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 15, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Le câblage sous les rails de siège subit des frottements répétés à chaque réglage ; inspecter la gaine de protection avant de conclure à un capteur défectueux.",
+    pieces: [
+      { nom: "Capteur de position de siège passager", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1B94",
+    titre: "Défaut du capteur de position du siège passager (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le capteur de position du siège passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage sous le siège coupé ou débranché" },
+      { pourcentage: 30, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 20, libelle: "Connecteur sous le siège mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité la continuité du câblage sous le rail de siège, souvent sectionné lors d'une dépose de siège mal réalisée.",
+    pieces: [
+      { nom: "Capteur de position de siège passager", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1B95",
+    titre: "Défaut du capteur de position du siège passager (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du capteur de position du siège passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage sous le siège endommagé (court-circuit)" },
+      { pourcentage: 30, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité sous le siège, notamment après un lavage intérieur ou une infiltration par le seuil de porte.",
+    pieces: [
+      { nom: "Capteur de position de siège passager", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1BA3",
+    titre: "Défaut du capteur de position du siège conducteur (signal incohérent)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le calculateur détecte un signal incohérent ou hors plage sur le capteur de position du siège conducteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de siège déréglé ou usé" },
+      { pourcentage: 28, libelle: "Mécanisme de réglage du siège grippé ou déformé" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le siège coulisse librement sur toute sa course ; un rail grippé peut fausser durablement le signal du capteur.",
+    pieces: [
+      { nom: "Capteur de position de siège conducteur", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1BA4",
+    titre: "Défaut du capteur de position du siège passager (signal incohérent)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — adaptation du déclenchement affectée",
+    description:
+      "Le calculateur détecte un signal incohérent ou hors plage sur le capteur de position du siège passager.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de siège déréglé ou usé" },
+      { pourcentage: 28, libelle: "Mécanisme de réglage du siège grippé ou déformé" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le siège coulisse librement sur toute sa course ; un rail grippé peut fausser durablement le signal du capteur.",
+    pieces: [
+      { nom: "Capteur de position de siège passager", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1BA5",
+    titre: "Défaut ou absence d'un module d'allumage",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique non détecté",
+    description:
+      "Le calculateur de sécurité passive ne détecte pas ou détecte anormalement un module d'allumage pyrotechnique, ce qui peut correspondre à un élément manquant, débranché ou défaillant.",
+    causes: [
+      { pourcentage: 40, libelle: "Connecteur d'un élément pyrotechnique débranché" },
+      { pourcentage: 28, libelle: "Module d'allumage manquant après intervention (siège, volant, porte)" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute dépose de siège, volant ou garniture de porte, vérifier systématiquement le rebranchement de tous les connecteurs pyrotechniques avant remise sous tension.",
+    pieces: [
+      { nom: "Diagnostic connectique pyrotechnique (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "B1BA6",
+    titre: "Défaut du calculateur de détection de charge occupant (classification non précisée)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — désactivation airbag passager possible",
+    description:
+      "Le calculateur de détection de charge (capteur de poids sous le siège passager) signale un défaut de classification, empêchant de déterminer avec certitude si le siège est occupé par un adulte, un enfant ou vide.",
+    causes: [
+      { pourcentage: 38, libelle: "Tapis/capteur de pression sous le siège passager défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur de charge endommagé" },
+      { pourcentage: 20, libelle: "Calculateur de détection de charge occupant défaillant" },
+      { pourcentage: 14, libelle: "Connecteur mal enfiché sous le siège" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer l'allumage du témoin airbag passager et désactiver l'airbag par sécurité ; à traiter rapidement pour restaurer la protection du passager.",
+    pieces: [
+      { nom: "Capteur/tapis de détection de charge occupant", boutique: "Amazon", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "B1BAA",
+    titre: "Défaut du calculateur de détection de charge occupant (configuration non concordante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recodage nécessaire",
+    description:
+      "Le calculateur de détection de charge occupant signale une configuration non concordante avec celle attendue par le calculateur de sécurité passive, généralement après un remplacement de composant.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur de détection de charge remplacé sans recodage" },
+      { pourcentage: 30, libelle: "Siège passager remplacé par un modèle non compatible" },
+      { pourcentage: 18, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après remplacement du siège passager ou du calculateur de détection de charge, une procédure de configuration avec l'outil constructeur est obligatoire.",
+    pieces: [
+      { nom: "Configuration calculateur détection de charge (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B1BB3",
+    titre: "Défaut du contacteur de neutralisation de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le contacteur permettant de neutraliser manuellement l'airbag passager (pour installation d'un siège enfant) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de neutralisation défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans la boîte à gants" },
+      { pourcentage: 22, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier physiquement la position du contacteur et sa concordance avec le témoin affiché, un défaut sur ce circuit pouvant masquer l'état réel de l'airbag passager.",
+    pieces: [
+      { nom: "Contacteur de neutralisation airbag passager", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B1BB4",
+    titre: "Défaut du contacteur de neutralisation de l'airbag passager (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le contacteur de neutralisation de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du contacteur coupé ou débranché" },
+      { pourcentage: 30, libelle: "Contacteur de neutralisation défaillant" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le câblage dans la boîte à gants, zone où les fils peuvent être pincés lors d'une utilisation intensive du rangement.",
+    pieces: [
+      { nom: "Contacteur de neutralisation airbag passager", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B1BB5",
+    titre: "Défaut du contacteur de neutralisation de l'airbag passager (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du contacteur de neutralisation de l'airbag passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du contacteur endommagé (court-circuit)" },
+      { pourcentage: 30, libelle: "Contacteur de neutralisation défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du contacteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité dans la boîte à gants, notamment après un lavage intérieur ou une infiltration par le pare-brise.",
+    pieces: [
+      { nom: "Contacteur de neutralisation airbag passager", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B1BC7",
+    titre: "Défaut interne du calculateur airbag ou airbag déclenché",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale un défaut interne majeur ou a enregistré un déclenchement effectif des airbags, ce qui impose son remplacement.",
+    causes: [
+      { pourcentage: 45, libelle: "Déclenchement réel des airbags suite à un accident" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 15, libelle: "Alimentation électrique instable lors d'une intervention" },
+      { pourcentage: 10, libelle: "Court-circuit sur le réseau pyrotechnique" },
+    ],
+    avisPro:
+      "Après un déclenchement, le calculateur de sécurité passive doit systématiquement être remplacé, jamais réutilisé ni reprogrammé, pour des raisons de sécurité.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1BC9",
+    titre: "Défaut du contacteur de désarmement de l'airbag conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le contacteur permettant de désarmer manuellement l'airbag conducteur signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désarmement défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé au niveau du volant/colonne" },
+      { pourcentage: 22, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce type de contacteur, plus courant sur véhicules utilitaires, doit être vérifié physiquement pour confirmer sa position réelle avant intervention.",
+    pieces: [
+      { nom: "Contacteur de désarmement airbag conducteur", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B1BCA",
+    titre: "Défaut du contacteur de désarmement de l'airbag conducteur (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le contacteur de désarmement de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du contacteur coupé ou débranché" },
+      { pourcentage: 30, libelle: "Contacteur de désarmement défaillant" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le câblage au niveau de la colonne de direction, zone soumise à des mouvements répétés lors des réglages.",
+    pieces: [
+      { nom: "Contacteur de désarmement airbag conducteur", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B1BCB",
+    titre: "Défaut du contacteur de désarmement de l'airbag conducteur (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du contacteur de désarmement de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du contacteur endommagé (court-circuit)" },
+      { pourcentage: 30, libelle: "Contacteur de désarmement défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du contacteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité de la zone du contacteur, notamment sur les véhicules stationnés régulièrement à l'extérieur.",
+    pieces: [
+      { nom: "Contacteur de désarmement airbag conducteur", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B1BCF",
+    titre: "Défaut des capteurs de tonneau (roll-over)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — détection de retournement compromise",
+    description:
+      "Les capteurs de détection de retournement (roll-over), utilisés pour déclencher les rideaux gonflables et prétensionneurs lors d'un tonneau, signalent un défaut.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de tonneau défaillant" },
+      { pourcentage: 28, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Connecteur mal enfiché" },
+    ],
+    avisPro:
+      "Ce défaut affecte directement la protection en cas de retournement du véhicule ; à traiter en priorité, notamment sur les véhicules hauts (SUV, utilitaires).",
+    pieces: [
+      { nom: "Diagnostic capteur de tonneau (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B1C27",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le module d'allumage de l'airbag latéral (siège) avant gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage de l'airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans l'assise ou le dossier du siège" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture ou l'assise du siège avant gauche, vérifier le rebranchement correct du connecteur pyrotechnique de l'airbag latéral.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C28",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant gauche (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le module d'allumage de l'airbag latéral avant gauche.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché dans le siège" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le connecteur pyrotechnique sous l'assise, fréquemment débranché lors d'une dépose de siège pour nettoyage ou réparation.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C29",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant gauche (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du module d'allumage de l'airbag latéral avant gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé dans le siège (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité sous l'assise du siège, notamment après un nettoyage intérieur intensif.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C2A",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant gauche (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du module d'allumage de l'airbag latéral avant gauche en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C2B",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le module d'allumage de l'airbag latéral (siège) avant droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage de l'airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans l'assise ou le dossier du siège" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture ou l'assise du siège avant droit, vérifier le rebranchement correct du connecteur pyrotechnique de l'airbag latéral.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C2C",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant droit (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le module d'allumage de l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché dans le siège" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le connecteur pyrotechnique sous l'assise, fréquemment débranché lors d'une dépose de siège pour nettoyage ou réparation.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C2D",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant droit (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du module d'allumage de l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé dans le siège (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité sous l'assise du siège, notamment après un nettoyage intérieur intensif.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C2E",
+    titre: "Défaut du module d'allumage de l'airbag latéral avant droit (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du module d'allumage de l'airbag latéral avant droit en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1C33",
+    titre: "Défaut du prétensionneur de rappel de sangle conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le prétensionneur de rappel de sangle de ceinture conducteur (situé sur l'enrouleur) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur de rappel de sangle défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé près du pied de baie ou du bas de caisse" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après une dépose de garniture de pied de caisse, vérifier le rebranchement du connecteur pyrotechnique du prétensionneur de sangle.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C34",
+    titre: "Défaut du prétensionneur de rappel de sangle conducteur (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur situé près de l'enrouleur de ceinture, accessible après dépose de la garniture de pied milieu.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C35",
+    titre: "Défaut du prétensionneur de rappel de sangle conducteur (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du prétensionneur de rappel de sangle conducteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble au bas de caisse, zone exposée aux projections d'eau et de sel en hiver.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C36",
+    titre: "Défaut du prétensionneur de rappel de sangle conducteur (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du prétensionneur de rappel de sangle conducteur en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C38",
+    titre: "Défaut du prétensionneur conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le prétensionneur de ceinture conducteur signale un défaut électrique, compromettant son bon fonctionnement en cas de choc.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur conducteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé près du bas de caisse ou du siège" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur pyrotechnique du prétensionneur après toute dépose de siège ou de garniture, cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C39",
+    titre: "Défaut du prétensionneur conducteur (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Prétensionneur conducteur défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur situé au bas de caisse ou sous le siège, accessible après dépose de garniture.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C3A",
+    titre: "Défaut du prétensionneur conducteur (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Prétensionneur conducteur défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble au bas de caisse, zone exposée aux projections d'eau et de sel en hiver.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C3B",
+    titre: "Défaut du prétensionneur conducteur (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du prétensionneur conducteur en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C42",
+    titre: "Défaut du prétensionneur de rappel de sangle passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le prétensionneur de rappel de sangle de ceinture passager (situé sur l'enrouleur) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur de rappel de sangle défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé près du pied de baie ou du bas de caisse" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après une dépose de garniture de pied de caisse, vérifier le rebranchement du connecteur pyrotechnique du prétensionneur de sangle.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C43",
+    titre: "Défaut du prétensionneur de rappel de sangle passager (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le prétensionneur de rappel de sangle passager.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur situé près de l'enrouleur de ceinture, accessible après dépose de la garniture de pied milieu.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C44",
+    titre: "Défaut du prétensionneur de rappel de sangle passager (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du prétensionneur de rappel de sangle passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble au bas de caisse, zone exposée aux projections d'eau et de sel en hiver.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C45",
+    titre: "Défaut du prétensionneur de rappel de sangle passager (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du prétensionneur de rappel de sangle passager en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C47",
+    titre: "Défaut du prétensionneur passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le prétensionneur de ceinture passager signale un défaut électrique, compromettant son bon fonctionnement en cas de choc.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur passager défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé près du bas de caisse ou du siège" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur pyrotechnique du prétensionneur après toute dépose de siège ou de garniture, cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C48",
+    titre: "Défaut du prétensionneur passager (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le prétensionneur de ceinture passager.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Prétensionneur passager défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur situé au bas de caisse ou sous le siège, accessible après dépose de garniture.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C49",
+    titre: "Défaut du prétensionneur passager (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du prétensionneur de ceinture passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Prétensionneur passager défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble au bas de caisse, zone exposée aux projections d'eau et de sel en hiver.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1C4A",
+    titre: "Défaut du prétensionneur passager (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du prétensionneur passager en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B210D",
+    titre: "Défaut de charge batterie basse",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation à surveiller",
+    description:
+      "Le calculateur de sécurité passive détecte une tension batterie insuffisante, pouvant compromettre le fonctionnement optimal du système airbag.",
+    causes: [
+      { pourcentage: 42, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant (charge insuffisante)" },
+      { pourcentage: 18, libelle: "Connexions de batterie corrodées ou desserrées" },
+      { pourcentage: 12, libelle: "Consommation parasite excessive" },
+    ],
+    avisPro:
+      "Contrôler la tension batterie et le taux de charge de l'alternateur avant toute intervention sur le calculateur airbag ; ce défaut disparaît souvent après recharge complète.",
+    pieces: [
+      { nom: "Batterie de démarrage", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B212C",
+    titre: "Défaut de tension d'alimentation",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation à surveiller",
+    description:
+      "Le calculateur de sécurité passive détecte une tension d'alimentation hors plage de fonctionnement normal.",
+    causes: [
+      { pourcentage: 38, libelle: "Batterie faible ou défaillante" },
+      { pourcentage: 28, libelle: "Alternateur défaillant" },
+      { pourcentage: 20, libelle: "Masse électrique du calculateur défaillante" },
+      { pourcentage: 14, libelle: "Câblage d'alimentation endommagé" },
+    ],
+    avisPro:
+      "Vérifier la tension batterie moteur tournant et au repos, ainsi que la qualité de la masse du calculateur de sécurité passive.",
+    pieces: [
+      { nom: "Batterie de démarrage", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B212D",
+    titre: "Défaut de tension d'alimentation (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation à surveiller",
+    description:
+      "Le calculateur de sécurité passive détecte une tension d'alimentation instable ou intermittente.",
+    causes: [
+      { pourcentage: 38, libelle: "Connexions de batterie desserrées ou corrodées" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 20, libelle: "Alternateur défaillant" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Rechercher un faux contact intermittent sur l'alimentation du calculateur, notamment au niveau des cosses de batterie.",
+    pieces: [
+      { nom: "Cosses de batterie", boutique: "Amazon", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "B223D",
+    titre: "Défaut du calculateur de détection de charge occupant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — désactivation airbag passager possible",
+    description:
+      "Le calculateur de détection de charge occupant (siège passager) signale un défaut de fonctionnement général.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur de détection de charge défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé sous le siège passager" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 14, libelle: "Alimentation électrique instable" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver l'airbag passager par sécurité ; vérifier en priorité le câblage sous le siège avant remplacement du calculateur.",
+    pieces: [
+      { nom: "Calculateur de détection de charge occupant", boutique: "Amazon", prix: "120-220€" },
+    ],
+  },
+  {
+    code: "B2201",
+    titre: "Défaut de calibration",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive signale une anomalie de calibration, généralement après un remplacement de composant ou une opération de configuration incomplète.",
+    causes: [
+      { pourcentage: 42, libelle: "Procédure de calibration non effectuée après remplacement" },
+      { pourcentage: 28, libelle: "Calibration interrompue (coupure batterie pendant l'opération)" },
+      { pourcentage: 18, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 12, libelle: "Outil de diagnostic incompatible ou version obsolète" },
+    ],
+    avisPro:
+      "Relancer une procédure complète de calibration avec l'outil constructeur, en s'assurant que la batterie reste stable durant toute l'opération.",
+    pieces: [
+      { nom: "Calibration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B2205",
+    titre: "Défaut de VIN manquant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive ne dispose pas du numéro d'identification du véhicule (VIN), généralement après un remplacement du calculateur.",
+    causes: [
+      { pourcentage: 55, libelle: "Calculateur remplacé sans écriture du VIN" },
+      { pourcentage: 30, libelle: "Calculateur neuf non initialisé" },
+      { pourcentage: 15, libelle: "BSI défaillant (source du VIN)" },
+    ],
+    avisPro:
+      "Écrire le VIN dans le calculateur avec l'outil constructeur immédiatement après remplacement, cette étape étant obligatoire pour la traçabilité du véhicule.",
+    pieces: [
+      { nom: "Écriture VIN calculateur (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B2206",
+    titre: "Défaut de VIN manquant (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie liée à l'absence ou à l'incohérence du numéro d'identification du véhicule (VIN).",
+    causes: [
+      { pourcentage: 55, libelle: "Calculateur remplacé sans écriture du VIN" },
+      { pourcentage: 30, libelle: "VIN incohérent entre calculateurs du réseau" },
+      { pourcentage: 15, libelle: "BSI défaillant (source du VIN)" },
+    ],
+    avisPro:
+      "Vérifier la cohérence du VIN entre tous les calculateurs du véhicule après tout remplacement d'un élément électronique majeur.",
+    pieces: [
+      { nom: "Écriture VIN calculateur (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B2207",
+    titre: "Défaut interne du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale un défaut interne général, indépendant des éléments périphériques.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B2208",
+    titre: "Défaut interne du calculateur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie interne, distincte du défaut principal.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B2209",
+    titre: "Défaut interne du calculateur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une troisième anomalie interne, distincte des défauts précédents.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B220A",
+    titre: "Défaut interne du calculateur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une quatrième anomalie interne générale.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B220B",
+    titre: "Défaut interne du calculateur (réserve d'énergie)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale un défaut sur sa réserve d'énergie interne, utilisée pour garantir le déclenchement des airbags même en cas de coupure batterie lors d'un choc.",
+    causes: [
+      { pourcentage: 45, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Alimentation électrique instable" },
+    ],
+    avisPro:
+      "Ce défaut est critique car il concerne la capacité du système à fonctionner même en cas de coupure d'alimentation lors d'un choc ; remplacement du calculateur généralement nécessaire.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B220C",
+    titre: "Défaut interne du calculateur (accéléromètre)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale un défaut sur son accéléromètre interne, utilisé pour la détection de choc frontal.",
+    causes: [
+      { pourcentage: 45, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Choc léger ayant perturbé le capteur sans le détruire" },
+    ],
+    avisPro:
+      "Un défaut sur l'accéléromètre interne du calculateur impose son remplacement, cet élément n'étant pas réparable séparément.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B220D",
+    titre: "Défaut interne du calculateur (accéléromètre, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie sur son accéléromètre interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Choc léger ayant perturbé le capteur sans le détruire" },
+    ],
+    avisPro:
+      "Un défaut sur l'accéléromètre interne du calculateur impose son remplacement, cet élément n'étant pas réparable séparément.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B220E",
+    titre: "Défaut de l'accéléromètre de détection de tonneau",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — détection de retournement compromise",
+    description:
+      "L'accéléromètre dédié à la détection de retournement (roll-over), intégré ou déporté du calculateur de sécurité passive, signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Accéléromètre de détection de tonneau défaillant" },
+      { pourcentage: 28, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 18, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Connecteur mal enfiché" },
+    ],
+    avisPro:
+      "Ce défaut affecte la protection en cas de retournement du véhicule ; à traiter en priorité, notamment sur les véhicules hauts (SUV, utilitaires).",
+    pieces: [
+      { nom: "Diagnostic accéléromètre tonneau (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B2255",
+    titre: "Défaut du système de désactivation de la détection de retournement",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — fonction annexe affectée",
+    description:
+      "Le système permettant de désactiver la détection de retournement (par exemple pour un usage tout-terrain avec toit ouvert) signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 12, libelle: "Connecteur mal enfiché" },
+    ],
+    avisPro:
+      "Ce défaut concerne une fonction optionnelle présente sur certains modèles cabriolet ou tout-terrain ; vérifier la présence effective de cet équipement avant intervention.",
+    pieces: [
+      { nom: "Diagnostic système désactivation retournement (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U0019",
+    titre: "Défaut de communication réseau CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication réseau compromise",
+    description:
+      "Le calculateur de sécurité passive signale un défaut sur le bus de communication CAN dédié à la sécurité passive.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du bus CAN endommagé ou coupé" },
+      { pourcentage: 28, libelle: "Connecteur du bus CAN mal enfiché ou corrodé" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 14, libelle: "Résistance de terminaison du bus CAN défaillante" },
+    ],
+    avisPro:
+      "Mesurer la résistance du bus CAN aux extrémités (attendue autour de 60 ohms) pour localiser une coupure ou une résistance de terminaison défaillante.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U0154",
+    titre: "Absence de communication avec le calculateur de détection de charge occupant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag passager possible",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le calculateur de détection de charge occupant du siège passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le calculateur de détection de charge coupé" },
+      { pourcentage: 28, libelle: "Calculateur de détection de charge défaillant ou non alimenté" },
+      { pourcentage: 22, libelle: "Connecteur mal enfiché sous le siège" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'alimentation et la masse du calculateur de détection de charge avant de conclure à un défaut de câblage réseau.",
+    pieces: [
+      { nom: "Calculateur de détection de charge occupant", boutique: "Amazon", prix: "120-220€" },
+    ],
+  },
+  {
+    code: "U0159",
+    titre: "Absence de communication avec le module d'aide au stationnement",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module d'aide au stationnement, ce qui peut affecter des fonctions croisées (désactivation capteurs en cas de choc, etc.).",
+    causes: [
+      { pourcentage: 40, libelle: "Module d'aide au stationnement défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers le module endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive elle-même ; vérifier en priorité le module d'aide au stationnement.",
+    pieces: [
+      { nom: "Diagnostic module aide au stationnement (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0164",
+    titre: "Absence de communication avec le calculateur de climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le calculateur de climatisation, utilisé notamment pour la coupure automatique en cas de choc.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur de climatisation défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers le calculateur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le calculateur de climatisation et son alimentation avant d'intervenir sur le câblage réseau.",
+    pieces: [
+      { nom: "Diagnostic calculateur climatisation (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0168",
+    titre: "Absence de communication avec le calculateur d'antidémarrage",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le calculateur d'antidémarrage.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur d'antidémarrage défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers le calculateur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut apparaître en cascade avec des problèmes de démarrage ; vérifier le calculateur d'antidémarrage en priorité.",
+    pieces: [
+      { nom: "Diagnostic calculateur antidémarrage (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0169",
+    titre: "Absence de communication avec le module de toit ouvrant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module de toit ouvrant, utilisé notamment pour l'ouverture automatique en cas de choc.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de toit ouvrant défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers le module endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fonctionnement du toit ouvrant lui-même avant de traiter ce défaut comme un simple problème réseau.",
+    pieces: [
+      { nom: "Diagnostic module toit ouvrant (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0170",
+    titre: "Absence de communication avec le satellite avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite avant gauche, généralement suite à une coupure de câblage ou une panne du composant.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage du satellite avant gauche coupé" },
+      { pourcentage: 28, libelle: "Satellite avant gauche défaillant" },
+      { pourcentage: 20, libelle: "Connecteur du satellite mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication précède souvent l'apparition du code de défaut interne du satellite ; traiter les deux ensemble.",
+    pieces: [
+      { nom: "Satellite/capteur de choc avant gauche", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0171",
+    titre: "Absence de communication avec le satellite avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite avant droit.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage du satellite avant droit coupé" },
+      { pourcentage: 28, libelle: "Satellite avant droit défaillant" },
+      { pourcentage: 20, libelle: "Connecteur du satellite mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication précède souvent l'apparition du code de défaut interne du satellite ; traiter les deux ensemble.",
+    pieces: [
+      { nom: "Satellite/capteur de choc avant droit", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0172",
+    titre: "Absence de communication avec le satellite latéral gauche (avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite latéral gauche avant.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du satellite coupé sous le seuil de porte" },
+      { pourcentage: 28, libelle: "Satellite latéral gauche avant défaillant" },
+      { pourcentage: 20, libelle: "Connecteur corrodé sous le seuil" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'étanchéité et l'état du connecteur sous le seuil de porte, zone exposée à l'humidité et à la corrosion.",
+    pieces: [
+      { nom: "Satellite latéral gauche avant", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0173",
+    titre: "Absence de communication avec le satellite latéral gauche (arrière)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite latéral gauche arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du satellite coupé sous le seuil de porte arrière" },
+      { pourcentage: 28, libelle: "Satellite latéral gauche arrière défaillant" },
+      { pourcentage: 20, libelle: "Connecteur corrodé sous le seuil" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'étanchéité du passage de câble sous le seuil arrière gauche, point fréquent d'infiltration d'eau.",
+    pieces: [
+      { nom: "Satellite latéral gauche arrière", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0174",
+    titre: "Absence de communication avec le satellite latéral gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite latéral gauche.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage du satellite latéral gauche coupé" },
+      { pourcentage: 28, libelle: "Satellite latéral gauche défaillant" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication précède souvent l'apparition du code de défaut interne du satellite ; traiter les deux ensemble.",
+    pieces: [
+      { nom: "Satellite latéral gauche", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0175",
+    titre: "Absence de communication avec le satellite latéral droit (avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite latéral droit avant.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du satellite coupé sous le seuil de porte" },
+      { pourcentage: 28, libelle: "Satellite latéral droit avant défaillant" },
+      { pourcentage: 20, libelle: "Connecteur corrodé sous le seuil" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'étanchéité et l'état du connecteur sous le seuil de porte, zone exposée à l'humidité et à la corrosion.",
+    pieces: [
+      { nom: "Satellite latéral droit avant", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0176",
+    titre: "Absence de communication avec le satellite latéral droit (arrière)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite latéral droit arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage du satellite coupé sous le seuil de porte arrière" },
+      { pourcentage: 28, libelle: "Satellite latéral droit arrière défaillant" },
+      { pourcentage: 20, libelle: "Connecteur corrodé sous le seuil" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'étanchéité du passage de câble sous le seuil arrière droit, point fréquent d'infiltration d'eau.",
+    pieces: [
+      { nom: "Satellite latéral droit arrière", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0177",
+    titre: "Absence de communication avec le satellite latéral droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur de sécurité passive ne reçoit plus de communication du satellite latéral droit.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage du satellite latéral droit coupé" },
+      { pourcentage: 28, libelle: "Satellite latéral droit défaillant" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication précède souvent l'apparition du code de défaut interne du satellite ; traiter les deux ensemble.",
+    pieces: [
+      { nom: "Satellite latéral droit", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "U0184",
+    titre: "Absence de communication avec le système audio",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le système audio, utilisé notamment pour couper le son automatiquement en cas de choc.",
+    causes: [
+      { pourcentage: 40, libelle: "Autoradio/système audio défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers le système audio endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fonctionnement général du système audio avant de traiter ce défaut comme un problème de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic système audio (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0186",
+    titre: "Absence de communication avec l'amplificateur audio",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec l'amplificateur audio.",
+    causes: [
+      { pourcentage: 40, libelle: "Amplificateur audio défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers l'amplificateur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité l'amplificateur audio, souvent situé dans le coffre.",
+    pieces: [
+      { nom: "Diagnostic amplificateur audio (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0195",
+    titre: "Absence de communication avec la télécommande radio",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le récepteur de télécommande radiofréquence.",
+    causes: [
+      { pourcentage: 40, libelle: "Récepteur de télécommande défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité le fonctionnement de la télécommande.",
+    pieces: [
+      { nom: "Diagnostic récepteur télécommande (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0196",
+    titre: "Absence de communication avec le système multimédia",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le système multimédia central.",
+    causes: [
+      { pourcentage: 40, libelle: "Système multimédia défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers le système multimédia endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fonctionnement général du système multimédia avant de traiter ce défaut comme un problème de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic système multimédia (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0197",
+    titre: "Absence de communication avec le système mains-libres téléphonique",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module mains-libres téléphonique.",
+    causes: [
+      { pourcentage: 40, libelle: "Module mains-libres défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité le module mains-libres.",
+    pieces: [
+      { nom: "Diagnostic module mains-libres (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0199",
+    titre: "Absence de communication avec le module de porte conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module électronique de la porte conducteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de porte conducteur défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage de la boucle de porte endommagé (fils de passage de porte)" },
+      { pourcentage: 20, libelle: "Connecteur de la charnière mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le faisceau souple de passage de porte, une zone de flexion répétée sujette à rupture de fil à la longue.",
+    pieces: [
+      { nom: "Module électronique de porte conducteur", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "U0200",
+    titre: "Absence de communication avec le module de porte passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module électronique de la porte passager avant.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de porte passager défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage de la boucle de porte endommagé (fils de passage de porte)" },
+      { pourcentage: 20, libelle: "Connecteur de la charnière mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le faisceau souple de passage de porte, une zone de flexion répétée sujette à rupture de fil à la longue.",
+    pieces: [
+      { nom: "Module électronique de porte passager", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "U0201",
+    titre: "Absence de communication avec le module de porte arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module électronique de la porte arrière gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de porte arrière gauche défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage de la boucle de porte endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la charnière mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le faisceau souple de passage de porte arrière gauche avant remplacement du module.",
+    pieces: [
+      { nom: "Module électronique de porte arrière gauche", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "U0202",
+    titre: "Absence de communication avec le module de porte arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module électronique de la porte arrière droite.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de porte arrière droite défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage de la boucle de porte endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la charnière mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le faisceau souple de passage de porte arrière droite avant remplacement du module.",
+    pieces: [
+      { nom: "Module électronique de porte arrière droite", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "U0208",
+    titre: "Absence de communication avec le module de siège chauffant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module de gestion des sièges chauffants.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de siège chauffant défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité le fonctionnement des sièges chauffants.",
+    pieces: [
+      { nom: "Diagnostic module siège chauffant (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0209",
+    titre: "Absence de communication avec le module de mémorisation de position de siège",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module de mémoire de position de siège électrique.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de mémoire de siège défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité le fonctionnement du réglage électrique du siège.",
+    pieces: [
+      { nom: "Diagnostic module mémoire de siège (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0229",
+    titre: "Absence de communication avec le module de volant chauffant",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module de gestion du volant chauffant.",
+    causes: [
+      { pourcentage: 40, libelle: "Module de volant chauffant défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage au niveau de la colonne de direction endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité le fonctionnement du volant chauffant.",
+    pieces: [
+      { nom: "Diagnostic module volant chauffant (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0231",
+    titre: "Absence de communication avec le module du capteur de pluie",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le module du capteur de pluie/luminosité.",
+    causes: [
+      { pourcentage: 40, libelle: "Module du capteur de pluie défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage vers le capteur (pare-brise) endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité le fonctionnement des essuie-glaces automatiques.",
+    pieces: [
+      { nom: "Diagnostic capteur de pluie (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U1414",
+    titre: "Défaut de communication réseau CAN (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication réseau compromise",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie sur le bus de communication CAN.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du bus CAN endommagé ou coupé" },
+      { pourcentage: 28, libelle: "Connecteur du bus CAN mal enfiché ou corrodé" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 14, libelle: "Résistance de terminaison du bus CAN défaillante" },
+    ],
+    avisPro:
+      "Mesurer la résistance du bus CAN aux extrémités (attendue autour de 60 ohms) pour localiser une coupure ou une résistance de terminaison défaillante.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B1490",
+    titre: "Défaut du module d'allumage airbag passager niveau 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le second étage (niveau 2) du module d'allumage de l'airbag passager, permettant une modulation de la force de déclenchement, signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage niveau 2 défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans la planche de bord" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le second niveau de déclenchement de l'airbag passager, utilisé pour moduler la puissance selon la sévérité du choc.",
+    pieces: [
+      { nom: "Module airbag passager (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B1491",
+    titre: "Défaut du module d'allumage airbag passager niveau 2 (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le second étage du module d'allumage de l'airbag passager.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Module d'allumage niveau 2 défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur pyrotechnique de l'airbag passager après toute dépose de planche de bord.",
+    pieces: [
+      { nom: "Module airbag passager (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B1492",
+    titre: "Défaut du module d'allumage airbag passager niveau 2 (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du second étage du module d'allumage de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage niveau 2 défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité dans la planche de bord, notamment après une fuite du circuit de climatisation ou du pare-brise.",
+    pieces: [
+      { nom: "Module airbag passager (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B1493",
+    titre: "Défaut du module d'allumage airbag passager niveau 2 (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du second étage du module d'allumage de l'airbag passager en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Module airbag passager (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B1494",
+    titre: "Défaut interne du calculateur (variante niveau 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une anomalie interne liée à la gestion du déclenchement à deux niveaux des airbags.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1495",
+    titre: "Défaut interne du calculateur (variante niveau 2, bis)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie interne liée à la gestion du déclenchement à deux niveaux des airbags.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1573",
+    titre: "Défaut d'alimentation du contacteur de désarmement airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le calculateur détecte un défaut sur la ligne d'alimentation du contacteur de désarmement de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage d'alimentation du contacteur endommagé" },
+      { pourcentage: 28, libelle: "Contacteur de désarmement défaillant" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier la tension d'alimentation au niveau du contacteur avant de le remplacer, un défaut de câblage étant la cause la plus fréquente.",
+    pieces: [
+      { nom: "Contacteur de désarmement airbag passager", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B1588",
+    titre: "Défaut interne du calculateur (réserve d'énergie, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale un défaut sur sa réserve d'énergie interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Alimentation électrique instable" },
+    ],
+    avisPro:
+      "Ce défaut est critique car il concerne la capacité du système à fonctionner même en cas de coupure d'alimentation lors d'un choc ; remplacement du calculateur généralement nécessaire.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1589",
+    titre: "Défaut interne du calculateur (réserve d'énergie, variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie sur sa réserve d'énergie interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Alimentation électrique instable" },
+    ],
+    avisPro:
+      "Ce défaut est critique car il concerne la capacité du système à fonctionner même en cas de coupure d'alimentation lors d'un choc ; remplacement du calculateur généralement nécessaire.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1590",
+    titre: "Défaut interne du calculateur (réserve d'énergie, variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une troisième anomalie sur sa réserve d'énergie interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Alimentation électrique instable" },
+    ],
+    avisPro:
+      "Ce défaut est critique car il concerne la capacité du système à fonctionner même en cas de coupure d'alimentation lors d'un choc ; remplacement du calculateur généralement nécessaire.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1591",
+    titre: "Défaut interne du calculateur (réserve d'énergie, variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une quatrième anomalie sur sa réserve d'énergie interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Alimentation électrique instable" },
+    ],
+    avisPro:
+      "Ce défaut est critique car il concerne la capacité du système à fonctionner même en cas de coupure d'alimentation lors d'un choc ; remplacement du calculateur généralement nécessaire.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1594",
+    titre: "Défaut interne du calculateur (accéléromètre choc latéral)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale un défaut sur son accéléromètre interne dédié à la détection de choc latéral.",
+    causes: [
+      { pourcentage: 45, libelle: "Accéléromètre de choc latéral interne défaillant" },
+      { pourcentage: 30, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 25, libelle: "Choc léger ayant perturbé le capteur sans le détruire" },
+    ],
+    avisPro:
+      "Un défaut sur l'accéléromètre interne du calculateur impose son remplacement, cet élément n'étant pas réparable séparément.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1625",
+    titre: "Défaut du prétensionneur de rappel de sangle passager (variante 1)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le prétensionneur de rappel de sangle de ceinture passager signale une première variante de défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur de rappel de sangle défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé près du pied de baie ou du bas de caisse" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après une dépose de garniture de pied de caisse, vérifier le rebranchement du connecteur pyrotechnique du prétensionneur de sangle.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1626",
+    titre: "Défaut du prétensionneur de rappel de sangle passager (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une seconde variante de défaut sur le prétensionneur de rappel de sangle passager.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur situé près de l'enrouleur de ceinture, accessible après dépose de la garniture de pied milieu.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1627",
+    titre: "Défaut du prétensionneur de rappel de sangle passager (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une troisième variante de défaut sur le prétensionneur de rappel de sangle passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble au bas de caisse, zone exposée aux projections d'eau et de sel en hiver.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1628",
+    titre: "Défaut du prétensionneur de rappel de sangle passager (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une quatrième variante de défaut sur le prétensionneur de rappel de sangle passager.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Prétensionneur de rappel de sangle passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1629",
+    titre: "Défaut interne du calculateur (variante prétensionneurs)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une anomalie interne liée à la gestion des circuits de prétensionneurs.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1630",
+    titre: "Défaut interne du calculateur (variante prétensionneurs, bis)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie interne liée à la gestion des circuits de prétensionneurs.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1631",
+    titre: "Défaut du module d'allumage airbag colonne de direction",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le module d'allumage de l'airbag conducteur, situé dans la colonne de direction, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage de l'airbag conducteur défaillant" },
+      { pourcentage: 28, libelle: "Spirale de contact (ressort de rappel volant) endommagée" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "La spirale de contact du volant est une cause très fréquente de ce défaut, notamment après un remplacement de volant ou de commodo.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1632",
+    titre: "Défaut du module d'allumage airbag colonne de direction (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le module d'allumage de l'airbag conducteur, situé dans la colonne de direction.",
+    causes: [
+      { pourcentage: 42, libelle: "Spirale de contact (ressort de rappel volant) coupée" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "La spirale de contact du volant est une cause très fréquente de ce défaut, notamment après un remplacement de volant ou de commodo.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1633",
+    titre: "Défaut du module d'allumage airbag colonne de direction (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du module d'allumage de l'airbag conducteur, situé dans la colonne de direction.",
+    causes: [
+      { pourcentage: 40, libelle: "Spirale de contact endommagée (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "La spirale de contact du volant est une cause très fréquente de ce défaut, notamment après un remplacement de volant ou de commodo.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1634",
+    titre: "Défaut du module d'allumage airbag colonne de direction (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du module d'allumage de l'airbag conducteur en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Spirale de contact usée ou partiellement rompue" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 22, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut apparaît souvent de façon intermittente lors des braquages du volant, signe caractéristique d'une spirale de contact en fin de vie.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1635",
+    titre: "Défaut interne du calculateur (variante colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une anomalie interne liée à la gestion du circuit airbag conducteur de la colonne de direction.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1636",
+    titre: "Défaut interne du calculateur (variante colonne de direction, bis)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale une seconde anomalie interne liée à la gestion du circuit airbag conducteur de la colonne de direction.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B222C",
+    titre: "Défaut de données non configurées",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive détecte que des données de configuration essentielles n'ont pas été écrites, généralement après un remplacement de calculateur.",
+    causes: [
+      { pourcentage: 55, libelle: "Calculateur remplacé sans configuration complète" },
+      { pourcentage: 30, libelle: "Calculateur neuf non initialisé" },
+      { pourcentage: 15, libelle: "Procédure de configuration interrompue" },
+    ],
+    avisPro:
+      "Effectuer une procédure complète de configuration avec l'outil constructeur après tout remplacement du calculateur de sécurité passive.",
+    pieces: [
+      { nom: "Configuration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B223B",
+    titre: "Défaut de données de configuration erronées",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive détecte que les données de configuration enregistrées sont incohérentes ou erronées par rapport à l'équipement réel du véhicule.",
+    causes: [
+      { pourcentage: 50, libelle: "Configuration incompatible avec l'équipement du véhicule" },
+      { pourcentage: 30, libelle: "Calculateur remplacé sans configuration correcte" },
+      { pourcentage: 20, libelle: "Corruption de la mémoire de configuration du calculateur" },
+    ],
+    avisPro:
+      "Relancer une procédure complète de configuration avec l'outil constructeur en vérifiant que l'équipement sélectionné correspond exactement au véhicule.",
+    pieces: [
+      { nom: "Configuration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U0245",
+    titre: "Absence de communication avec le calculateur de navigation",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur de sécurité passive ne parvient pas à communiquer avec le calculateur de navigation/GPS.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur de navigation défaillant ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage réseau vers le calculateur de navigation endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement peu d'impact sur la sécurité passive ; vérifier en priorité le fonctionnement du système de navigation.",
+    pieces: [
+      { nom: "Diagnostic calculateur navigation (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "B1001",
+    titre: "Défaut interne au calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur de sécurité passive signale un défaut matériel interne général.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de sécurité passive (airbag)", boutique: "Amazon", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "B1002",
+    titre: "Défaut de mise à la masse du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — alimentation compromise",
+    description:
+      "Le calculateur de sécurité passive détecte un défaut sur sa connexion à la masse électrique du véhicule.",
+    causes: [
+      { pourcentage: 42, libelle: "Cosse de masse desserrée ou corrodée" },
+      { pourcentage: 28, libelle: "Point de masse carrosserie oxydé" },
+      { pourcentage: 20, libelle: "Câblage de masse endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité la fixation et l'état du point de masse du calculateur, une masse défaillante pouvant provoquer des défauts multiples et intermittents.",
+    pieces: [
+      { nom: "Contrôle et nettoyage point de masse (atelier équipé)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "B10F1",
+    titre: "Défaut des prétensionneurs déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur a enregistré le déclenchement effectif des prétensionneurs, généralement suite à un accident.",
+    causes: [
+      { pourcentage: 70, libelle: "Déclenchement réel des prétensionneurs suite à un accident" },
+      { pourcentage: 20, libelle: "Court-circuit ayant provoqué un déclenchement accidentel" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un déclenchement, tous les éléments pyrotechniques concernés ainsi que le calculateur doivent être remplacés, jamais réutilisés.",
+    pieces: [
+      { nom: "Prétensionneurs (jeu) + calculateur sécurité passive", boutique: "Amazon", prix: "250-500€" },
+    ],
+  },
+  {
+    code: "B10F2",
+    titre: "Défaut des airbags frontaux et prétensionneurs déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur a enregistré le déclenchement effectif des airbags frontaux et des prétensionneurs, généralement suite à un accident frontal.",
+    causes: [
+      { pourcentage: 75, libelle: "Déclenchement réel suite à un accident frontal" },
+      { pourcentage: 15, libelle: "Court-circuit ayant provoqué un déclenchement accidentel" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un déclenchement frontal, l'ensemble des airbags et prétensionneurs concernés ainsi que le calculateur doivent être remplacés par un professionnel qualifié.",
+    pieces: [
+      { nom: "Kit airbags frontaux + prétensionneurs + calculateur", boutique: "Amazon", prix: "400-800€" },
+    ],
+  },
+  {
+    code: "B10F3",
+    titre: "Défaut des airbags latéraux gauche déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur a enregistré le déclenchement effectif des airbags latéraux côté gauche, généralement suite à un choc latéral.",
+    causes: [
+      { pourcentage: 75, libelle: "Déclenchement réel suite à un choc latéral gauche" },
+      { pourcentage: 15, libelle: "Court-circuit ayant provoqué un déclenchement accidentel" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un déclenchement latéral, l'ensemble des airbags concernés ainsi que le calculateur doivent être remplacés par un professionnel qualifié.",
+    pieces: [
+      { nom: "Kit airbags latéraux gauche + calculateur", boutique: "Amazon", prix: "300-600€" },
+    ],
+  },
+  {
+    code: "B10F4",
+    titre: "Défaut des airbags latéraux droit déclenchés",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur à remplacer",
+    description:
+      "Le calculateur a enregistré le déclenchement effectif des airbags latéraux côté droit, généralement suite à un choc latéral.",
+    causes: [
+      { pourcentage: 75, libelle: "Déclenchement réel suite à un choc latéral droit" },
+      { pourcentage: 15, libelle: "Court-circuit ayant provoqué un déclenchement accidentel" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un déclenchement latéral, l'ensemble des airbags concernés ainsi que le calculateur doivent être remplacés par un professionnel qualifié.",
+    pieces: [
+      { nom: "Kit airbags latéraux droit + calculateur", boutique: "Amazon", prix: "300-600€" },
+    ],
+  },
+  {
+    code: "B104A",
+    titre: "Défaut de configuration du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur de sécurité passive signale une anomalie de configuration générale, généralement après un remplacement.",
+    causes: [
+      { pourcentage: 55, libelle: "Calculateur remplacé sans configuration complète" },
+      { pourcentage: 30, libelle: "Configuration incompatible avec l'équipement du véhicule" },
+      { pourcentage: 15, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Effectuer une procédure complète de configuration avec l'outil constructeur après tout remplacement du calculateur de sécurité passive.",
+    pieces: [
+      { nom: "Configuration calculateur sécurité passive (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1602",
+    titre: "Défaut du bus CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication réseau compromise",
+    description:
+      "Le calculateur de sécurité passive signale une anomalie générale sur le bus de communication CAN.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du bus CAN endommagé ou coupé" },
+      { pourcentage: 28, libelle: "Connecteur du bus CAN mal enfiché ou corrodé" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 14, libelle: "Résistance de terminaison du bus CAN défaillante" },
+    ],
+    avisPro:
+      "Mesurer la résistance du bus CAN aux extrémités (attendue autour de 60 ohms) pour localiser une coupure ou une résistance de terminaison défaillante.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "B1014",
+    titre: "Défaut du contacteur de désactivation de l'airbag passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — désactivation airbag incertaine",
+    description:
+      "Le contacteur de désactivation manuelle de l'airbag passager signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans la boîte à gants" },
+      { pourcentage: 22, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier physiquement la position du contacteur et sa concordance avec le témoin affiché, un défaut sur ce circuit pouvant masquer l'état réel de l'airbag passager.",
+    pieces: [
+      { nom: "Contacteur de neutralisation airbag passager", boutique: "Amazon", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "B101C",
+    titre: "Défaut du contacteur de ceinture conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection bouclage incertaine",
+    description:
+      "Le contacteur de bouclage de ceinture conducteur signale un défaut, ce qui affecte la détection du port de ceinture et l'adaptation du déclenchement des prétensionneurs.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de ceinture conducteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage au niveau de la boucle de ceinture endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fonctionnement mécanique du contacteur de boucle avant de le remplacer, un mécanisme grippé pouvant simuler un défaut électrique.",
+    pieces: [
+      { nom: "Contacteur/boucle de ceinture conducteur", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B101D",
+    titre: "Défaut du contacteur de ceinture passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection bouclage incertaine",
+    description:
+      "Le contacteur de bouclage de ceinture passager signale un défaut, ce qui affecte la détection du port de ceinture et l'adaptation du déclenchement des prétensionneurs.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de ceinture passager défaillant" },
+      { pourcentage: 28, libelle: "Câblage au niveau de la boucle de ceinture endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fonctionnement mécanique du contacteur de boucle avant de le remplacer, un mécanisme grippé pouvant simuler un défaut électrique.",
+    pieces: [
+      { nom: "Contacteur/boucle de ceinture passager", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1015",
+    titre: "Défaut du satellite avant conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection compromise",
+    description:
+      "Le satellite avant côté conducteur signale un défaut, compromettant la détection correcte d'un choc frontal ou latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Satellite avant conducteur défaillant" },
+      { pourcentage: 28, libelle: "Connecteur du satellite corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un choc léger, vérifier que le satellite n'a pas été débranché ou endommagé lors d'une éventuelle réparation de carrosserie.",
+    pieces: [
+      { nom: "Satellite/capteur de choc avant conducteur", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1017",
+    titre: "Défaut du satellite avant passager",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection compromise",
+    description:
+      "Le satellite avant côté passager signale un défaut, compromettant la détection correcte d'un choc frontal ou latéral.",
+    causes: [
+      { pourcentage: 40, libelle: "Satellite avant passager défaillant" },
+      { pourcentage: 28, libelle: "Connecteur du satellite corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un choc léger, vérifier que le satellite n'a pas été débranché ou endommagé lors d'une éventuelle réparation de carrosserie.",
+    pieces: [
+      { nom: "Satellite/capteur de choc avant passager", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B103A",
+    titre: "Défaut du satellite avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection compromise",
+    description:
+      "Le satellite avant gauche signale un défaut, compromettant la détection correcte d'un choc.",
+    causes: [
+      { pourcentage: 40, libelle: "Satellite avant gauche défaillant" },
+      { pourcentage: 28, libelle: "Connecteur du satellite corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un choc léger, vérifier que le satellite n'a pas été débranché ou endommagé lors d'une éventuelle réparation de carrosserie.",
+    pieces: [
+      { nom: "Satellite/capteur de choc avant gauche", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1008",
+    titre: "Défaut du module d'allumage airbag conducteur niveau 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le premier étage (niveau 1) du module d'allumage de l'airbag conducteur signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage niveau 1 défaillant" },
+      { pourcentage: 28, libelle: "Spirale de contact (ressort de rappel volant) endommagée" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "La spirale de contact du volant est une cause très fréquente de ce défaut, notamment après un remplacement de volant ou de commodo.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B101B",
+    titre: "Défaut du module d'allumage airbag conducteur niveau 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le second étage (niveau 2) du module d'allumage de l'airbag conducteur, permettant une modulation de la force de déclenchement, signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage niveau 2 défaillant" },
+      { pourcentage: 28, libelle: "Spirale de contact (ressort de rappel volant) endommagée" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le second niveau de déclenchement de l'airbag conducteur, utilisé pour moduler la puissance selon la sévérité du choc.",
+    pieces: [
+      { nom: "Module airbag conducteur (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B100B",
+    titre: "Défaut du prétensionneur conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le prétensionneur de ceinture conducteur signale un défaut électrique, compromettant son bon fonctionnement en cas de choc.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur conducteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé près du bas de caisse ou du siège" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur pyrotechnique du prétensionneur après toute dépose de siège ou de garniture, cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B100D",
+    titre: "Défaut du prétensionneur central de rangée 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le prétensionneur de la place centrale avant (rangée 1) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur central défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé sous le siège central" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne les véhicules équipés d'une place centrale avant avec ceinture prétensionnée, principalement certains utilitaires et SUV.",
+    pieces: [
+      { nom: "Prétensionneur ceinture centrale rangée 1", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B100E",
+    titre: "Défaut du module d'allumage airbag latéral avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le module d'allumage de l'airbag latéral (siège) avant gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage de l'airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans l'assise ou le dossier du siège" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture ou l'assise du siège avant gauche, vérifier le rebranchement correct du connecteur pyrotechnique de l'airbag latéral.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B100F",
+    titre: "Défaut du module d'allumage airbag latéral avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le module d'allumage de l'airbag latéral (siège) avant droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage de l'airbag latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans l'assise ou le dossier du siège" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture ou l'assise du siège avant droit, vérifier le rebranchement correct du connecteur pyrotechnique de l'airbag latéral.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1021",
+    titre: "Défaut du module d'allumage du rideau gonflable gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le module d'allumage du rideau gonflable (airbag rideau) côté gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage du rideau gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans le pavillon côté gauche" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture de pavillon, vérifier le rebranchement du connecteur pyrotechnique du rideau gonflable.",
+    pieces: [
+      { nom: "Airbag rideau gonflable gauche", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1022",
+    titre: "Défaut du module d'allumage du rideau gonflable droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le module d'allumage du rideau gonflable (airbag rideau) côté droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage du rideau droit défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans le pavillon côté droit" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture de pavillon, vérifier le rebranchement du connecteur pyrotechnique du rideau gonflable.",
+    pieces: [
+      { nom: "Airbag rideau gonflable droit", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1617",
+    titre: "Défaut du capteur d'accélération avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection compromise",
+    description:
+      "Le capteur d'accélération frontale situé à l'avant gauche signale un défaut, compromettant la détection d'un choc frontal.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'accélération avant gauche défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un choc frontal léger, vérifier que le capteur n'a pas été débranché ou endommagé lors d'une réparation de carrosserie avant.",
+    pieces: [
+      { nom: "Capteur d'accélération avant gauche", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1618",
+    titre: "Défaut du capteur d'accélération avant gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection compromise",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le capteur d'accélération frontale avant gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'accélération avant gauche défaillant" },
+      { pourcentage: 28, libelle: "Connecteur corrodé ou mal enfiché" },
+      { pourcentage: 20, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après un choc frontal léger, vérifier que le capteur n'a pas été débranché ou endommagé lors d'une réparation de carrosserie avant.",
+    pieces: [
+      { nom: "Capteur d'accélération avant gauche", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1638",
+    titre: "Défaut des capteurs d'accélération latérale gauche (avant et arrière)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Les capteurs d'accélération latérale gauche avant et arrière signalent un défaut conjoint, compromettant la détection d'un choc latéral côté gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteurs d'accélération latérale gauche défaillants" },
+      { pourcentage: 28, libelle: "Câblage commun endommagé (masse ou alimentation partagée)" },
+      { pourcentage: 22, libelle: "Connecteur corrodé sous le seuil de porte" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un défaut simultané sur deux capteurs partageant le même circuit oriente souvent vers un problème de câblage commun (masse ou alimentation) plutôt que vers une double panne capteur.",
+    pieces: [
+      { nom: "Capteur d'accélération latérale gauche (avant/arrière)", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1690",
+    titre: "Défaut des capteurs d'accélération latérale droite (avant et arrière)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Les capteurs d'accélération latérale droite avant et arrière signalent un défaut conjoint, compromettant la détection d'un choc latéral côté droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteurs d'accélération latérale droite défaillants" },
+      { pourcentage: 28, libelle: "Câblage commun endommagé (masse ou alimentation partagée)" },
+      { pourcentage: 22, libelle: "Connecteur corrodé sous le seuil de porte" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Un défaut simultané sur deux capteurs partageant le même circuit oriente souvent vers un problème de câblage commun (masse ou alimentation) plutôt que vers une double panne capteur.",
+    pieces: [
+      { nom: "Capteur d'accélération latérale droite (avant/arrière)", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1692",
+    titre: "Défaut des capteurs d'accélération latérale droite (variante circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur détecte un circuit ouvert sur les capteurs d'accélération latérale droite avant et arrière.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage commun sectionné" },
+      { pourcentage: 28, libelle: "Capteurs d'accélération latérale droite défaillants" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur sous le seuil de porte droit, point de passage commun pour ces deux capteurs.",
+    pieces: [
+      { nom: "Capteur d'accélération latérale droite (avant/arrière)", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1693",
+    titre: "Défaut des capteurs d'accélération latérale droite (variante court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur détecte un court-circuit sur les capteurs d'accélération latérale droite avant et arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage commun endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Capteurs d'accélération latérale droite défaillants" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble sous le seuil de porte droit, point fréquent d'infiltration d'eau.",
+    pieces: [
+      { nom: "Capteur d'accélération latérale droite (avant/arrière)", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1695",
+    titre: "Défaut des capteurs d'accélération latérale gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — protection latérale compromise",
+    description:
+      "Le calculateur détecte une seconde anomalie sur les capteurs d'accélération latérale gauche avant et arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage commun endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Capteurs d'accélération latérale gauche défaillants" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble sous le seuil de porte gauche, point fréquent d'infiltration d'eau.",
+    pieces: [
+      { nom: "Capteur d'accélération latérale gauche (avant/arrière)", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1801",
+    titre: "Défaut du module d'allumage airbag conducteur niveau 1 (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le premier étage du module d'allumage de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 42, libelle: "Spirale de contact (ressort de rappel volant) coupée" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "La spirale de contact du volant est une cause très fréquente de ce défaut, notamment après un remplacement de volant ou de commodo.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1802",
+    titre: "Défaut du module d'allumage airbag conducteur niveau 1 (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du premier étage du module d'allumage de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Spirale de contact endommagée (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "La spirale de contact du volant est une cause très fréquente de ce défaut, notamment après un remplacement de volant ou de commodo.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1803",
+    titre: "Défaut du module d'allumage airbag conducteur niveau 1 (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du premier étage du module d'allumage de l'airbag conducteur en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Spirale de contact usée ou partiellement rompue" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 22, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut apparaît souvent de façon intermittente lors des braquages du volant, signe caractéristique d'une spirale de contact en fin de vie.",
+    pieces: [
+      { nom: "Spirale de contact volant (contacteur tournant)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1806",
+    titre: "Défaut du module d'allumage airbag passager niveau 1 (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le premier étage du module d'allumage de l'airbag passager.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Module d'allumage niveau 1 défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur pyrotechnique de l'airbag passager après toute dépose de planche de bord.",
+    pieces: [
+      { nom: "Module airbag passager (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B1807",
+    titre: "Défaut du module d'allumage airbag passager niveau 1 (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du premier étage du module d'allumage de l'airbag passager.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage niveau 1 défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité dans la planche de bord, notamment après une fuite du circuit de climatisation ou du pare-brise.",
+    pieces: [
+      { nom: "Module airbag passager (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B1808",
+    titre: "Défaut du module d'allumage airbag passager niveau 1 (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du premier étage du module d'allumage de l'airbag passager en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Module airbag passager (2 niveaux)", boutique: "Amazon", prix: "150-320€" },
+    ],
+  },
+  {
+    code: "B1821",
+    titre: "Défaut du module d'allumage airbag latéral avant droit (circuit ouvert, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le module d'allumage de l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché dans le siège" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le connecteur pyrotechnique sous l'assise, fréquemment débranché lors d'une dépose de siège pour nettoyage ou réparation.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1822",
+    titre: "Défaut du module d'allumage airbag latéral avant droit (court-circuit, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du module d'allumage de l'airbag latéral avant droit.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé dans le siège (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité sous l'assise du siège, notamment après un nettoyage intérieur intensif.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1823",
+    titre: "Défaut du module d'allumage airbag latéral avant droit (résistance hors plage, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du module d'allumage de l'airbag latéral avant droit en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant droit", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1826",
+    titre: "Défaut du module d'allumage airbag latéral avant gauche (circuit ouvert, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le module d'allumage de l'airbag latéral avant gauche.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché dans le siège" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le connecteur pyrotechnique sous l'assise, fréquemment débranché lors d'une dépose de siège pour nettoyage ou réparation.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1827",
+    titre: "Défaut du module d'allumage airbag latéral avant gauche (court-circuit, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du module d'allumage de l'airbag latéral avant gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé dans le siège (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'absence d'humidité sous l'assise du siège, notamment après un nettoyage intérieur intensif.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1828",
+    titre: "Défaut du module d'allumage airbag latéral avant gauche (résistance hors plage, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du module d'allumage de l'airbag latéral avant gauche en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Module airbag latéral siège avant gauche", boutique: "Amazon", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "B1831",
+    titre: "Défaut du module d'allumage du rideau gonflable droit (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le module d'allumage du rideau gonflable côté droit.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché dans le pavillon" },
+      { pourcentage: 28, libelle: "Module d'allumage du rideau droit défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture de pavillon, vérifier le rebranchement du connecteur pyrotechnique du rideau gonflable.",
+    pieces: [
+      { nom: "Airbag rideau gonflable droit", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1832",
+    titre: "Défaut du module d'allumage du rideau gonflable droit (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du module d'allumage du rideau gonflable côté droit.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé dans le pavillon (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage du rideau droit défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité des joints de pavillon (barres de toit, antenne) en cas d'infiltration d'eau vers le connecteur du rideau.",
+    pieces: [
+      { nom: "Airbag rideau gonflable droit", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1833",
+    titre: "Défaut du module d'allumage du rideau gonflable droit (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du module d'allumage du rideau gonflable côté droit en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Airbag rideau gonflable droit", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1835",
+    titre: "Défaut du module d'allumage du rideau gonflable gauche (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le module d'allumage du rideau gonflable côté gauche.",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché dans le pavillon" },
+      { pourcentage: 28, libelle: "Module d'allumage du rideau gauche défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture de pavillon, vérifier le rebranchement du connecteur pyrotechnique du rideau gonflable.",
+    pieces: [
+      { nom: "Airbag rideau gonflable gauche", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1836",
+    titre: "Défaut du module d'allumage du rideau gonflable gauche (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du module d'allumage du rideau gonflable côté gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé dans le pavillon (court-circuit)" },
+      { pourcentage: 28, libelle: "Module d'allumage du rideau gauche défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité des joints de pavillon (barres de toit, antenne) en cas d'infiltration d'eau vers le connecteur du rideau.",
+    pieces: [
+      { nom: "Airbag rideau gonflable gauche", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1837",
+    titre: "Défaut du module d'allumage du rideau gonflable gauche (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du module d'allumage du rideau gonflable côté gauche en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Airbag rideau gonflable gauche", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1838",
+    titre: "Défaut du module d'allumage du rideau gonflable gauche (variante supplémentaire)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une anomalie supplémentaire sur le circuit du module d'allumage du rideau gonflable côté gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Module d'allumage du rideau gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage endommagé dans le pavillon côté gauche" },
+      { pourcentage: 22, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur la garniture de pavillon, vérifier le rebranchement du connecteur pyrotechnique du rideau gonflable.",
+    pieces: [
+      { nom: "Airbag rideau gonflable gauche", boutique: "Amazon", prix: "180-350€" },
+    ],
+  },
+  {
+    code: "B1901",
+    titre: "Défaut du prétensionneur avant droit (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le prétensionneur de ceinture avant droit (passager).",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Prétensionneur avant droit défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur situé au bas de caisse ou sous le siège, accessible après dépose de garniture.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1902",
+    titre: "Défaut du prétensionneur avant droit (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du prétensionneur de ceinture avant droit (passager).",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Prétensionneur avant droit défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble au bas de caisse, zone exposée aux projections d'eau et de sel en hiver.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1903",
+    titre: "Défaut du prétensionneur avant droit (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du prétensionneur avant droit en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Prétensionneur ceinture passager", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1906",
+    titre: "Défaut du prétensionneur avant gauche (circuit ouvert)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un circuit ouvert sur le prétensionneur de ceinture avant gauche (conducteur).",
+    causes: [
+      { pourcentage: 42, libelle: "Câblage sectionné ou débranché" },
+      { pourcentage: 28, libelle: "Prétensionneur avant gauche défaillant" },
+      { pourcentage: 20, libelle: "Connecteur pyrotechnique mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur situé au bas de caisse ou sous le siège, accessible après dépose de garniture.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1907",
+    titre: "Défaut du prétensionneur avant gauche (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte un court-circuit sur le circuit du prétensionneur de ceinture avant gauche (conducteur).",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage endommagé (court-circuit)" },
+      { pourcentage: 28, libelle: "Prétensionneur avant gauche défaillant" },
+      { pourcentage: 20, libelle: "Infiltration d'eau au niveau du connecteur" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Contrôler l'étanchéité du passage de câble au bas de caisse, zone exposée aux projections d'eau et de sel en hiver.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "B1908",
+    titre: "Défaut du prétensionneur avant gauche (résistance hors plage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Airbag",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — élément pyrotechnique concerné",
+    description:
+      "Le calculateur détecte une résistance du circuit du prétensionneur avant gauche en dehors des valeurs attendues.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Corrosion au niveau du connecteur pyrotechnique" },
+      { pourcentage: 22, libelle: "Câblage partiellement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Une résistance hors plage traduit souvent une dégradation progressive du connecteur ; un nettoyage des contacts peut parfois résoudre le défaut avant remplacement.",
+    pieces: [
+      { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
