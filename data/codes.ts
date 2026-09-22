@@ -30840,6 +30840,8354 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
     ],
   },
+  {
+    code: "U1207",
+    titre: "Absence de communication avec le calculateur hybride 1 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Variante du défaut de communication avec le premier calculateur de gestion hybride.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur hybride 1 défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides — un diagnostic spécialisé pour la chaîne de traction électrique est recommandé.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1307",
+    titre: "Absence de communication avec le calculateur hybride 1 (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Autre variante du défaut de communication avec le premier calculateur de gestion hybride.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur hybride 1 défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C13A6",
+    titre: "Défaut du mode ESP tout-terrain",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — mode spécifique désactivé",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le mode de contrôle de traction \"tout-terrain\", une variante de l'ESP adaptée à la conduite hors route.",
+    causes: [
+      { pourcentage: 38, libelle: "Sélecteur de mode de conduite défaillant" },
+      { pourcentage: 28, libelle: "Capteur associé au mode tout-terrain défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "L'ESP standard reste actif — seul le mode tout-terrain spécifique est désactivé par ce défaut.",
+    pieces: [
+      { nom: "Diagnostic mode conduite tout-terrain (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1010",
+    titre: "Absence de communication avec le calculateur d'interface de la chaîne de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le calculateur d'interface qui coordonne les échanges de la chaîne de traction hybride.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides — un diagnostic spécialisé pour la chaîne de traction électrique est recommandé.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U100E",
+    titre: "Absence de communication avec le calculateur d'interface de la chaîne de traction (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Variante du défaut de communication avec le calculateur d'interface de la chaîne de traction.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U11D4",
+    titre: "Défaut de communication avec le superviseur de la chaîne de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur superviseur de la chaîne de traction hybride.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides — un diagnostic spécialisé pour la chaîne de traction électrique est recommandé.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U12D4",
+    titre: "Défaut de communication avec le superviseur de la chaîne de traction (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Variante du défaut de communication avec le calculateur superviseur de la chaîne de traction.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U13D4",
+    titre: "Défaut de communication avec le superviseur de la chaîne de traction (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Autre variante du défaut de communication avec le calculateur superviseur de la chaîne de traction.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U11D5",
+    titre: "Absence de communication avec le calculateur de gestion véhicule électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules électriques",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le calculateur de gestion du véhicule électrique, sur les modèles 100% électriques.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de gestion électrique défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules 100% électriques — un diagnostic spécialisé haute tension est recommandé.",
+    pieces: [
+      { nom: "Diagnostic chaîne électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U12D5",
+    titre: "Absence de communication avec le calculateur de gestion véhicule électrique (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules électriques",
+    description:
+      "Variante du défaut de communication avec le calculateur de gestion du véhicule électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de gestion électrique défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules 100% électriques.",
+    pieces: [
+      { nom: "Diagnostic chaîne électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U13D5",
+    titre: "Absence de communication avec le calculateur de gestion véhicule électrique (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules électriques",
+    description:
+      "Autre variante du défaut de communication avec le calculateur de gestion du véhicule électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de gestion électrique défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules 100% électriques.",
+    pieces: [
+      { nom: "Diagnostic chaîne électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U11D6",
+    titre: "Absence de communication avec le calculateur d'interface de la chaîne de traction (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Autre variante du défaut de communication avec le calculateur d'interface de la chaîne de traction.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1313",
+    titre: "Défaut du signal du capteur gyroscope-accéléromètre (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Autre variante du défaut de signal sur le capteur combiné gyroscope-accéléromètre.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur gyroscope-accéléromètre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur combiné est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du système.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "U1122",
+    titre: "Défaut de communication avec le calculateur du régulateur de vitesse",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulateur de vitesse affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur du régulateur de vitesse.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur du régulateur de vitesse défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur ou le limiteur de vitesse — un diagnostic réseau complet est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "P0605",
+    titre: "Défaut logiciel du calculateur ABS/ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur son propre logiciel, ce code générique étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 40, libelle: "Logiciel corrompu suite à une mise à jour incomplète" },
+      { pourcentage: 28, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 20, libelle: "Coupure d'alimentation pendant une écriture" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Une reprogrammation complète du calculateur avec l'outil constructeur résout généralement ce type de défaut logiciel.",
+    pieces: [
+      { nom: "Reprogrammation calculateur ABS/ESP (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1300",
+    titre: "Défaut du signal du capteur de pression",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie générale sur le signal d'un capteur de pression du circuit de freinage.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C1500",
+    titre: "Mot d'état ESP non valide ou absent sur la communication avec le BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau affectée",
+    description:
+      "Le calculateur ABS/ESP détecte que le mot d'état ESP transmis vers le BSI n'est pas valide ou est absent.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le BSI d'afficher correctement l'état de l'ESP au tableau de bord — un diagnostic réseau complet est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1216",
+    titre: "Défaut de communication avec le calculateur AMVAR",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — suspension pilotée affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur AMVAR, qui gère l'amortissement variable piloté de la suspension.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur AMVAR défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés de suspension à amortissement piloté — sans impact sur l'ABS/ESP de base.",
+    pieces: [
+      { nom: "Diagnostic suspension pilotée AMVAR (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1116",
+    titre: "Absence de communication avec le calculateur de suspension à amortissement variable piloté",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — suspension pilotée affectée",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le calculateur de la suspension à amortissement variable contrôlé.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de suspension pilotée défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés de cette suspension pilotée.",
+    pieces: [
+      { nom: "Diagnostic suspension pilotée (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1313",
+    titre: "Défaut de non-communication CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication ABS/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une absence générale de communication sur le réseau CAN.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du bus CAN endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 22, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un défaut réseau généralisé sur le calculateur ABS/ESP peut masquer d'autres codes de sécurité — un diagnostic réseau complet est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1501",
+    titre: "Incohérence entre le mot d'état ESP et la situation réelle",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence système affectée",
+    description:
+      "Le calculateur ABS/ESP détecte que le mot d'état ESP transmis ne correspond pas à la situation réelle du système, un défaut de cohérence interne.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Capteur essentiel à l'ESP en défaut, faussant l'état" },
+      { pourcentage: 22, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce défaut de cohérence interne nécessite une lecture complète des autres codes pour identifier la cause précise.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1304",
+    titre: "Défaut du signal du capteur de pression (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Variante du défaut de signal sur un capteur de pression du circuit de freinage.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "U1322",
+    titre: "Défaut de communication avec le calculateur du régulateur de vitesse (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulateur de vitesse affecté",
+    description:
+      "Variante du défaut de communication avec le calculateur du régulateur de vitesse.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur du régulateur de vitesse défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur ou le limiteur de vitesse.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1222",
+    titre: "Défaut de communication avec le calculateur du régulateur de vitesse (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulateur de vitesse affecté",
+    description:
+      "Autre variante du défaut de communication avec le calculateur du régulateur de vitesse.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur du régulateur de vitesse défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur ou le limiteur de vitesse.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1316",
+    titre: "Données incohérentes du calculateur de suspension pilotée AMVAR",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — suspension pilotée affectée",
+    description:
+      "Le calculateur ABS/ESP détecte que les données reçues du calculateur AMVAR de suspension à amortissement variable ne sont pas cohérentes.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur AMVAR défaillant" },
+      { pourcentage: 28, libelle: "Capteur de suspension défaillant" },
+      { pourcentage: 22, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés de suspension à amortissement piloté.",
+    pieces: [
+      { nom: "Diagnostic suspension pilotée AMVAR (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1394",
+    titre: "Défaut d'initialisation du capteur double fonction ou du capteur de pression",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calibration requise",
+    description:
+      "Le calculateur ABS/ESP détecte que l'initialisation d'un capteur combiné (double fonction) ou d'un capteur de pression n'a pas pu être effectuée.",
+    causes: [
+      { pourcentage: 38, libelle: "Procédure d'initialisation non effectuée après intervention" },
+      { pourcentage: 28, libelle: "Capteur défaillant" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de capteur, une procédure d'initialisation avec l'outil de diagnostic est indispensable.",
+    pieces: [
+      { nom: "Initialisation capteur (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C1350",
+    titre: "Défaut du système ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP désactivé",
+    description:
+      "Le calculateur détecte une défaillance générale du système ESP, ce code générique nécessitant une lecture complémentaire pour identifier la cause exacte.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 28, libelle: "Capteur essentiel à l'ESP défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé sur un circuit clé de l'ESP" },
+      { pourcentage: 12, libelle: "Alimentation du calculateur défaillante" },
+    ],
+    avisPro:
+      "Ce code générique confirme une désactivation de l'ESP — croiser avec les autres codes présents pour identifier la cause précise.",
+    pieces: [
+      { nom: "Diagnostic système ESP complet (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U2002",
+    titre: "Défaut du mode de déclenchement",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — logique de démarrage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le mode de déclenchement de son propre réveil, une information reçue via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de réveil réseau peut provoquer des comportements incohérents au démarrage.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C0031",
+    titre: "Capteur de vitesse de roue avant gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le capteur de vitesse de la roue avant gauche, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0032",
+    titre: "Capteur de vitesse de roue avant gauche (norme générique, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut générique sur le capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0034",
+    titre: "Capteur de vitesse de roue avant droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le capteur de vitesse de la roue avant droite, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0037",
+    titre: "Capteur de vitesse de roue arrière gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le capteur de vitesse de la roue arrière gauche, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0038",
+    titre: "Capteur de vitesse de roue arrière gauche (norme générique, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut générique sur le capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C003A",
+    titre: "Capteur de vitesse de roue arrière droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le capteur de vitesse de la roue arrière droite, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C003B",
+    titre: "Capteur de vitesse de roue arrière droite (norme générique, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut générique sur le capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0049",
+    titre: "Niveau de liquide de frein (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité de freinage concernée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le niveau de liquide de frein, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 42, libelle: "Niveau de liquide de frein réellement bas (usure des plaquettes ou fuite)" },
+      { pourcentage: 28, libelle: "Capteur de niveau défaillant" },
+      { pourcentage: 18, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 12, libelle: "Fuite dans le circuit de freinage" },
+    ],
+    avisPro:
+      "Vérifier immédiatement le niveau visuellement dans le réservoir — un niveau bas peut signaler une fuite ou des plaquettes très usées.",
+    pieces: [
+      { nom: "Liquide de frein DOT4", boutique: "Pièces auto en ligne", prix: "10-20€" },
+    ],
+  },
+  {
+    code: "C006A",
+    titre: "Défaut du signal du capteur de vitesse de lacet (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le signal du capteur de vitesse de lacet, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1306",
+    titre: "Défaut du signal du capteur d'accélération longitudinale (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Autre variante du défaut de signal sur le capteur d'accélération longitudinale.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'accélération longitudinale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur, souvent intégré au module gyroscope-accéléromètre, est utilisé pour affiner les fonctions ESP sur pente ou forte accélération.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C13A4",
+    titre: "Défaut d'usine (banc à rouleaux)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — événement d'usine, pas une panne",
+    description:
+      "Le calculateur ABS/ESP a enregistré un événement lié à un test sur banc à rouleaux réalisé en usine ou en atelier, un code qui n'indique généralement pas de panne réelle.",
+    causes: [
+      { pourcentage: 60, libelle: "Test sur banc à rouleaux ayant déclenché ce code de test" },
+      { pourcentage: 25, libelle: "Capteur de vitesse ayant détecté une incohérence pendant le test" },
+      { pourcentage: 15, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce code apparaît souvent après un passage au banc de puissance ou un contrôle technique sur rouleaux — un simple effacement suffit généralement.",
+    pieces: [
+      { nom: "Effacement code diagnostic (atelier)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "C1382",
+    titre: "Défaut du relais d'alimentation de la pompe de recirculation",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le relais qui alimente la pompe de recirculation hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais de la pompe défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'ESP — un contrôle du relais est la première étape avant remplacement.",
+    pieces: [
+      { nom: "Relais pompe de recirculation ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1386",
+    titre: "Défaut du relais d'alimentation des électrovannes",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le relais qui alimente l'ensemble des électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais d'alimentation défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce relais alimente l'ensemble des électrovannes — un défaut ici désactive généralement tout le système ABS/ESP à la fois.",
+    pieces: [
+      { nom: "Relais alimentation électrovannes ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1566",
+    titre: "Demande de réduction de charge incohérente du BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence réseau affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une incohérence dans la demande de réduction de charge électrique transmise par le BSI.",
+    causes: [
+      { pourcentage: 36, libelle: "BSI défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de cohérence réseau nécessite un diagnostic croisé entre le BSI et le calculateur ABS/ESP.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C156B",
+    titre: "Défaut de la mémoire EEPROM",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur ABS/ESP concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur sa mémoire EEPROM, utilisée pour stocker sa configuration et ses paramètres de calibration.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant sur sa mémoire EEPROM" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation ayant corrompu la mémoire" },
+      { pourcentage: 18, libelle: "Perturbation électrique externe" },
+      { pourcentage: 12, libelle: "Erreur lors d'une programmation précédente" },
+    ],
+    avisPro:
+      "Un défaut de mémoire EEPROM nécessite généralement une reprogrammation complète, voire un remplacement du calculateur si le défaut persiste.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C156E",
+    titre: "Défaut général des capteurs de vitesse de roue",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale touchant plusieurs capteurs de vitesse de roue simultanément.",
+    causes: [
+      { pourcentage: 36, libelle: "Plusieurs capteurs de vitesse défaillants ou encrassés" },
+      { pourcentage: 28, libelle: "Câblage commun aux capteurs endommagé" },
+      { pourcentage: 22, libelle: "Alimentation partagée des capteurs défaillante" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs de vitesse tombent en panne simultanément, une alimentation ou un câblage partagé est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs vitesse (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C163D",
+    titre: "Défaut du capteur de vitesse de lacet",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie générale sur le capteur de vitesse de lacet.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1640",
+    titre: "Défaut du sens de déplacement des capteurs de vitesse de roue",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence de sens de rotation affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une incohérence sur le sens de déplacement rapporté par les capteurs de vitesse de roue, une information utilisée pour certaines fonctions avancées.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de vitesse défaillant sur la détection de sens" },
+      { pourcentage: 28, libelle: "Câblage endommagé perturbant le signal" },
+      { pourcentage: 22, libelle: "Cible dentée endommagée" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette information de sens de rotation est utilisée pour des fonctions comme la détection de recul — sans impact sur la fonction ABS de base.",
+    pieces: [
+      { nom: "Diagnostic capteurs vitesse de roue (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C164A",
+    titre: "Défaut de programmation de la détection de sous-gonflage des pneus",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur ABS/ESP détecte que la fonction de détection de sous-gonflage des pneus par capteurs de vitesse (méthode indirecte) n'a pas été correctement programmée.",
+    causes: [
+      { pourcentage: 45, libelle: "Programmation non effectuée après intervention sur les pneus/roues" },
+      { pourcentage: 28, libelle: "Procédure d'initialisation interrompue" },
+      { pourcentage: 17, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout changement de pneus ou de roues, une réinitialisation de cette fonction via l'outil de diagnostic est nécessaire pour éviter ce défaut.",
+    pieces: [
+      { nom: "Programmation détection sous-gonflage (atelier)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "C164B",
+    titre: "Défaut de compatibilité des pneumatiques",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence de dimensions des pneus",
+    description:
+      "Le calculateur ABS/ESP détecte que les dimensions des pneumatiques montés ne sont pas cohérentes avec celles attendues, ce qui peut fausser plusieurs calculs de sécurité.",
+    causes: [
+      { pourcentage: 42, libelle: "Pneus de dimensions différentes montés sur le véhicule" },
+      { pourcentage: 28, libelle: "Configuration incorrecte suite à un changement de roues" },
+      { pourcentage: 18, libelle: "Capteur de vitesse défaillant faussant la mesure" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Vérifier que les quatre pneus sont de dimensions identiques et conformes aux préconisations constructeur avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic compatibilité pneumatiques (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
+  {
+    code: "P0603",
+    titre: "Défaut de la mémoire du calculateur ABS/ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur sa mémoire interne, ce code générique étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant sur sa mémoire interne" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation ayant corrompu la mémoire" },
+      { pourcentage: 18, libelle: "Perturbation électrique externe" },
+      { pourcentage: 12, libelle: "Erreur lors d'une programmation précédente" },
+    ],
+    avisPro:
+      "Un effacement suivi d'un nouveau contrôle permet souvent de confirmer si le défaut est ponctuel ou persistant.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P1632",
+    titre: "Défaut de réparation du dispositif de surveillance",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — historique diagnostic à effacer",
+    description:
+      "Le calculateur ABS/ESP signale que le dispositif de surveillance a détecté une intervention de réparation, un code informatif plutôt qu'une panne active.",
+    causes: [
+      { pourcentage: 55, libelle: "Intervention de réparation récente enregistrée normalement" },
+      { pourcentage: 30, libelle: "Effacement des codes non effectué après réparation" },
+      { pourcentage: 15, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce code n'indique généralement pas une panne active — un effacement des codes après toute réparation confirmée résout ce type d'historique.",
+    pieces: [
+      { nom: "Effacement code diagnostic (atelier)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "U1162",
+    titre: "Le calculateur d'alerte de distance provoque des défauts de fonctionnement",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau perturbée",
+    description:
+      "Le calculateur ABS/ESP détecte que le calculateur d'alerte de distance (radar ou caméra avant) perturbe le fonctionnement normal du réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'alerte de distance défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver l'alerte de collision et le freinage d'urgence automatique — un diagnostic rapide du système radar/caméra est recommandé.",
+    pieces: [
+      { nom: "Diagnostic système alerte de distance (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1262",
+    titre: "Le calculateur d'alerte de distance émet des données interdites",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau perturbée",
+    description:
+      "Le calculateur ABS/ESP détecte que le calculateur d'alerte de distance émet des données non conformes sur le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'alerte de distance défaillant" },
+      { pourcentage: 28, libelle: "Logiciel du calculateur d'alerte corrompu" },
+      { pourcentage: 22, libelle: "Câblage du réseau endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver l'alerte de collision et le freinage d'urgence automatique — un diagnostic rapide du système radar/caméra est recommandé.",
+    pieces: [
+      { nom: "Diagnostic système alerte de distance (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1362",
+    titre: "Le calculateur d'alerte de distance provoque des défauts de fonctionnement (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau perturbée",
+    description:
+      "Variante du défaut où le calculateur d'alerte de distance perturbe le fonctionnement normal du réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'alerte de distance défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, un diagnostic rapide du système radar/caméra avant est recommandé.",
+    pieces: [
+      { nom: "Diagnostic système alerte de distance (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1508",
+    titre: "Logiciel incompatible avec le calculateur de gestion moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — compatibilité logicielle",
+    description:
+      "Le calculateur ABS/ESP détecte que son logiciel n'est pas compatible avec la version installée sur le calculateur de gestion moteur.",
+    causes: [
+      { pourcentage: 45, libelle: "Mise à jour partielle ayant créé une incompatibilité de versions" },
+      { pourcentage: 28, libelle: "Calculateur remplacé avec une version logicielle incompatible" },
+      { pourcentage: 17, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 10, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Une mise à jour coordonnée des deux calculateurs avec les versions logicielles compatibles, via l'outil constructeur, résout ce défaut.",
+    pieces: [
+      { nom: "Mise à jour logicielle coordonnée (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "P0000",
+    titre: "Défaut du capteur de la pompe à vide",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le capteur associé à la pompe à vide de l'assistance au freinage, ce code étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de la pompe à vide défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Pompe à vide elle-même défaillante" },
+    ],
+    avisPro:
+      "Ce capteur surveille le niveau de dépression disponible pour l'assistance au freinage — un défaut ici peut augmenter l'effort nécessaire à la pédale.",
+    pieces: [
+      { nom: "Capteur pression pompe à vide", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "U12D6",
+    titre: "Défaut du contrôle de traction (ASR)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — antipatinage affecté",
+    description:
+      "Le calculateur détecte une anomalie de communication liée à la fonction de contrôle de traction (ASR), variante de code réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur ou ESP défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Capteur essentiel à l'ASR défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive l'antipatinage — la traction reste possible mais les roues peuvent patiner plus facilement sur chaussée glissante.",
+    pieces: [
+      { nom: "Diagnostic système ASR (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U11D7",
+    titre: "Défaut du contrôle de traction (ASR, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — antipatinage affecté",
+    description:
+      "Variante du défaut lié à la fonction de contrôle de traction (ASR).",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur ou ESP défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Capteur essentiel à l'ASR défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, cette fonction désactivée nécessite plus d'attention sur chaussée glissante.",
+    pieces: [
+      { nom: "Diagnostic système ASR (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P0C13",
+    titre: "Défaut du contrôle de traction (ASR, norme OBD)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — antipatinage affecté",
+    description:
+      "Variante du défaut ASR selon la codification standard OBD-II, partagée entre plusieurs constructeurs.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur ou ESP défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Capteur essentiel à l'ASR défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, cette fonction désactivée nécessite plus d'attention sur chaussée glissante.",
+    pieces: [
+      { nom: "Diagnostic système ASR (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U13D6",
+    titre: "Défaut du contrôle de traction (ASR, variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — antipatinage affecté",
+    description:
+      "Autre variante du défaut lié à la fonction de contrôle de traction (ASR).",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur ou ESP défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Capteur essentiel à l'ASR défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, cette fonction désactivée nécessite plus d'attention sur chaussée glissante.",
+    pieces: [
+      { nom: "Diagnostic système ASR (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1567",
+    titre: "Défaut du système de freinage d'urgence en cas de collision",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité active affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le système de freinage d'urgence automatique déclenché en cas de risque de collision imminent.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur radar ou caméra avant défaillant" },
+      { pourcentage: 28, libelle: "Calculateur du système anticollision défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce système de sécurité active mérite un diagnostic rapide — vérifier également la propreté du pare-brise devant le capteur, souvent responsable de faux défauts.",
+    pieces: [
+      { nom: "Diagnostic système freinage d'urgence (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1568",
+    titre: "Défaut du système de freinage d'urgence en cas de collision (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité active affectée",
+    description:
+      "Variante du défaut sur le système de freinage d'urgence automatique anticollision.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur radar ou caméra avant défaillant" },
+      { pourcentage: 28, libelle: "Calculateur du système anticollision défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Vérifier la propreté du pare-brise devant le capteur, souvent responsable de faux défauts sur ce type de système.",
+    pieces: [
+      { nom: "Diagnostic système freinage d'urgence (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1569",
+    titre: "Défaut du système de freinage d'urgence en cas de collision (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité active affectée",
+    description:
+      "Autre variante du défaut sur le système de freinage d'urgence automatique anticollision.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur radar ou caméra avant défaillant" },
+      { pourcentage: 28, libelle: "Calculateur du système anticollision défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, vérifier la propreté du pare-brise devant le capteur avant tout remplacement.",
+    pieces: [
+      { nom: "Diagnostic système freinage d'urgence (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C0010",
+    titre: "Électrovanne d'admission avant gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'admission de la roue avant gauche, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0011",
+    titre: "Électrovanne d'échappement avant gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'échappement de la roue avant gauche, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'échappement défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0014",
+    titre: "Électrovanne d'admission avant droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'admission de la roue avant droite, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0015",
+    titre: "Électrovanne d'échappement avant droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'échappement de la roue avant droite, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'échappement défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0018",
+    titre: "Électrovanne d'admission arrière gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'admission de la roue arrière gauche, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0019",
+    titre: "Électrovanne d'échappement arrière gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'échappement de la roue arrière gauche, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'échappement défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C001C",
+    titre: "Électrovanne d'admission arrière droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'admission de la roue arrière droite, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C001D",
+    titre: "Électrovanne d'échappement arrière droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'électrovanne d'échappement de la roue arrière droite, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'échappement défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement, augmentant le risque de blocage de roue en freinage d'urgence.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0020",
+    titre: "Pompe de recirculation (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la pompe de recirculation hydraulique, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe de recirculation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la pompe endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'ESP — un défaut ici désactive généralement l'ensemble des deux systèmes.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0030",
+    titre: "Défaut d'entrefer du capteur de vitesse de roue avant gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signal capteur dégradé",
+    description:
+      "Le calculateur ABS/ESP détecte que l'entrefer du capteur de vitesse avant gauche est en dehors de la tolérance normale, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Roulement de roue usé augmentant le jeu" },
+      { pourcentage: 28, libelle: "Capteur mal positionné ou desserré" },
+      { pourcentage: 22, libelle: "Cible dentée endommagée ou déformée" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un jeu anormal au niveau du roulement de roue est une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Roulement de roue avant gauche", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C0033",
+    titre: "Défaut d'entrefer du capteur de vitesse de roue avant droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signal capteur dégradé",
+    description:
+      "Le calculateur ABS/ESP détecte que l'entrefer du capteur de vitesse avant droite est en dehors de la tolérance normale.",
+    causes: [
+      { pourcentage: 38, libelle: "Roulement de roue usé augmentant le jeu" },
+      { pourcentage: 28, libelle: "Capteur mal positionné ou desserré" },
+      { pourcentage: 22, libelle: "Cible dentée endommagée ou déformée" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un jeu anormal au niveau du roulement de roue est une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Roulement de roue avant droite", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C0036",
+    titre: "Défaut d'entrefer du capteur de vitesse de roue arrière gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signal capteur dégradé",
+    description:
+      "Le calculateur ABS/ESP détecte que l'entrefer du capteur de vitesse arrière gauche est en dehors de la tolérance normale.",
+    causes: [
+      { pourcentage: 38, libelle: "Roulement de roue usé augmentant le jeu" },
+      { pourcentage: 28, libelle: "Capteur mal positionné ou desserré" },
+      { pourcentage: 22, libelle: "Cible dentée endommagée ou déformée" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un jeu anormal au niveau du roulement de roue est une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Roulement de roue arrière gauche", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C0039",
+    titre: "Défaut d'entrefer du capteur de vitesse de roue arrière droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signal capteur dégradé",
+    description:
+      "Le calculateur ABS/ESP détecte que l'entrefer du capteur de vitesse arrière droite est en dehors de la tolérance normale.",
+    causes: [
+      { pourcentage: 38, libelle: "Roulement de roue usé augmentant le jeu" },
+      { pourcentage: 28, libelle: "Capteur mal positionné ou desserré" },
+      { pourcentage: 22, libelle: "Cible dentée endommagée ou déformée" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un jeu anormal au niveau du roulement de roue est une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Roulement de roue arrière droite", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C003C",
+    titre: "Défaut de l'alimentation des capteurs de vitesse de roue",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la ligne d'alimentation électrique partagée par les capteurs de vitesse de roue.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation partagée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Un des capteurs alimentés en court-circuit" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs de vitesse tombent en panne simultanément, cette alimentation partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs vitesse (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C0061",
+    titre: "Défaut du signal du capteur d'accélération latérale (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le signal du capteur d'accélération latérale, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'accélération latérale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C0062",
+    titre: "Défaut du signal du capteur d'accélération longitudinale (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le signal du capteur d'accélération longitudinale, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'accélération longitudinale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur, souvent intégré au module gyroscope-accéléromètre, est utilisé pour affiner les fonctions ESP sur pente ou forte accélération.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C0063",
+    titre: "Défaut du signal du capteur de lacet (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le signal du capteur de lacet, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C0211",
+    titre: "Défaut du calculateur ESP (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur ESP concerné",
+    description:
+      "Le calculateur ESP signale une défaillance générale, selon la codification générique standard partagée entre plusieurs constructeurs.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1001",
+    titre: "Défaut du calculateur ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur ESP concerné",
+    description:
+      "Le calculateur ESP signale une défaillance générale, un code de tête regroupant les défauts internes du module.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1205",
+    titre: "Défaut du relais d'alimentation des électrovannes (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Variante du défaut sur le relais qui alimente l'ensemble des électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais d'alimentation défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce relais alimente l'ensemble des électrovannes — un défaut ici désactive généralement tout le système ABS/ESP à la fois.",
+    pieces: [
+      { nom: "Relais alimentation électrovannes ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1206",
+    titre: "Défaut de l'électrovanne de commutation 1 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Variante du défaut sur la première électrovanne de commutation du circuit hydraulique de freinage actif.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de commutation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ces électrovannes de commutation isolent les circuits de freinage — un défaut ici peut affecter la capacité de l'ESP à freiner une roue de manière indépendante.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1207",
+    titre: "Défaut de l'électrovanne de commutation 2 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Variante du défaut sur la deuxième électrovanne de commutation du circuit hydraulique de freinage actif.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de commutation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour l'électrovanne associée, un défaut ici peut affecter la capacité de l'ESP à freiner une roue de manière indépendante.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1209",
+    titre: "Défaut de l'électrovanne de limitation 2 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Variante du défaut sur la deuxième électrovanne de limitation de pression du circuit hydraulique de freinage actif.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de limitation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette électrovanne limite la pression maximale appliquée par l'ESP — un défaut ici peut affecter la précision du freinage actif.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C120A",
+    titre: "Défaut de la molette de sélection antipatinage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie sur la molette qui permet de sélectionner le mode d'antipatinage (neige, boue, sable selon les modèles).",
+    causes: [
+      { pourcentage: 38, libelle: "Molette de sélection défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la molette endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la molette oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "L'ESP standard reste actif — seul le choix du mode spécifique est affecté par ce défaut.",
+    pieces: [
+      { nom: "Molette sélection mode conduite", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C120B",
+    titre: "Défaut de la régulation de vitesse en descente",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aide à la descente désactivée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la fonction de régulation de vitesse en descente (Hill Descent Control), qui maintient une vitesse constante en pente forte.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de pente ou d'inclinaison défaillant" },
+      { pourcentage: 28, libelle: "Bloc hydraulique ABS défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette fonction facilite les descentes en terrain difficile sans utiliser le frein — sa désactivation n'empêche pas de conduire mais demande plus d'attention en pente forte.",
+    pieces: [
+      { nom: "Diagnostic régulation descente (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1211",
+    titre: "Défaut du calculateur ABS ou ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur ABS ou ESP signale une défaillance générale, un code de tête regroupant plusieurs défauts internes possibles.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1212",
+    titre: "Défaut de configuration",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale de configuration, généralement après une intervention ou un remplacement de pièce sans recodage.",
+    causes: [
+      { pourcentage: 42, libelle: "Configuration non mise à jour après une intervention" },
+      { pourcentage: 28, libelle: "Équipement remplacé sans recodage" },
+      { pourcentage: 18, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention récente sur le système ABS/ESP, un recodage via l'outil de diagnostic évite ce type de défaut.",
+    pieces: [
+      { nom: "Diagnostic et recodage ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1213",
+    titre: "Programmation incorrecte du calculateur ABS/ESP en usine",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur mal programmé",
+    description:
+      "Le calculateur ABS/ESP détecte que sa programmation d'usine ne correspond pas à ce qui est attendu, généralement une erreur de version logicielle.",
+    causes: [
+      { pourcentage: 45, libelle: "Version logicielle incorrecte programmée" },
+      { pourcentage: 30, libelle: "Erreur lors de la chaîne de production" },
+      { pourcentage: 25, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Une reprogrammation avec la version logicielle correcte, disponible via l'outil constructeur, résout ce défaut.",
+    pieces: [
+      { nom: "Reprogrammation calculateur ABS/ESP (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1215",
+    titre: "Défaut du contacteur de pédale de frein",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — information de freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale sur le contacteur de pédale de frein.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de pédale de frein défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver les feux stop ou des aides comme l'assistance au freinage d'urgence.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C1217",
+    titre: "Défaut du contacteur de marche arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction ESP secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le contacteur de marche arrière, utilisé pour certaines fonctions de coordination (détection de recul, aide au démarrage en côte).",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de marche arrière défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte des fonctions secondaires liées à la marche arrière sans désactiver l'ABS/ESP de base.",
+    pieces: [
+      { nom: "Contacteur marche arrière (boîte de vitesses)", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "C1218",
+    titre: "Surchauffe du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — protection thermique activée",
+    description:
+      "Le calculateur ABS/ESP détecte que sa propre température dépasse le seuil de fonctionnement normal, activant une protection thermique.",
+    causes: [
+      { pourcentage: 38, libelle: "Sollicitation intensive et prolongée du système ABS/ESP" },
+      { pourcentage: 28, libelle: "Ventilation insuffisante autour du calculateur" },
+      { pourcentage: 22, libelle: "Calculateur ABS/ESP défaillant, consommant trop de courant" },
+      { pourcentage: 12, libelle: "Court-circuit partiel sur un circuit de sortie" },
+    ],
+    avisPro:
+      "Ce défaut disparaît généralement après refroidissement du calculateur — s'il persiste après un temps de repos, un défaut électrique réel est probable.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1220",
+    titre: "Capteur de vitesse de roue inversé (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — câblage à vérifier",
+    description:
+      "Variante du défaut où deux capteurs de vitesse de roue semblent inversés par rapport à leur position attendue.",
+    causes: [
+      { pourcentage: 48, libelle: "Câblage des capteurs inversé lors d'une intervention (frein, roulement)" },
+      { pourcentage: 28, libelle: "Connecteurs de capteurs intervertis" },
+      { pourcentage: 14, libelle: "Capteur de vitesse défaillant" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut apparaît presque toujours après une intervention sur les freins ou les roulements.",
+    pieces: [
+      { nom: "Diagnostic câblage capteurs vitesse (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1221",
+    titre: "Absence d'accusé de réception du couple moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Le calculateur ESP détecte que le calculateur moteur ne confirme pas la réception de sa demande de réduction de couple lors d'une intervention ESP.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur moteur défaillant, ne confirmant pas la réception" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 14, libelle: "Perturbation réseau ponctuelle" },
+    ],
+    avisPro:
+      "Ce défaut peut réduire l'efficacité de l'ESP lors d'une intervention nécessitant une réduction de couple moteur.",
+    pieces: [
+      { nom: "Diagnostic coordination moteur/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1222",
+    titre: "Défaut de la vitesse véhicule calculée",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — information de vitesse affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la vitesse véhicule calculée à partir des quatre capteurs de roue.",
+    causes: [
+      { pourcentage: 36, libelle: "Un ou plusieurs capteurs de vitesse de roue défaillants" },
+      { pourcentage: 28, libelle: "Câblage endommagé sur l'un des capteurs" },
+      { pourcentage: 22, libelle: "Pneus de tailles différentes faussant le calcul" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Des pneus de dimensions différentes entre les essieux peuvent fausser le calcul de vitesse.",
+    pieces: [
+      { nom: "Diagnostic capteurs vitesse de roue (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "U1121",
+    titre: "Absence de communication avec le calculateur de direction assistée électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination direction/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le calculateur de la direction assistée électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de direction assistée défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter la coordination entre la direction assistée et l'ESP — un diagnostic de la direction est également recommandé.",
+    pieces: [
+      { nom: "Diagnostic direction assistée électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1221",
+    titre: "Absence de communication avec le calculateur de direction assistée électrique (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination direction/ESP affectée",
+    description:
+      "Variante du défaut de communication avec le calculateur de la direction assistée électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de direction assistée défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, un diagnostic de la direction assistée est également recommandé.",
+    pieces: [
+      { nom: "Diagnostic direction assistée électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1638",
+    titre: "Défaut d'estimation de l'angle volant",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte une anomalie sur l'estimation calculée de l'angle du volant, utilisée en secours si le capteur direct est indisponible.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Données réseau incohérentes pour le calcul d'estimation" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette estimation sert de solution de secours — un défaut ici peut réduire la précision de l'ESP dans certaines situations.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1641",
+    titre: "Défaut d'appairage entre les électrovannes ABS/ESP et le bloc de vannes hydrauliques",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ABS/ESP détecte que les électrovannes ne sont pas correctement appairées avec le bloc de vannes hydrauliques, généralement après un remplacement.",
+    causes: [
+      { pourcentage: 45, libelle: "Bloc hydraulique remplacé sans procédure d'appairage" },
+      { pourcentage: 28, libelle: "Procédure d'appairage interrompue" },
+      { pourcentage: 17, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 10, libelle: "Bloc hydraulique défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement du bloc hydraulique, une procédure d'appairage avec l'outil constructeur est indispensable.",
+    pieces: [
+      { nom: "Appairage bloc hydraulique ABS/ESP (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "C1642",
+    titre: "Défaut du capteur gyroscopique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie générale sur le capteur gyroscopique, qui mesure la vitesse de rotation du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur gyroscopique défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1649",
+    titre: "Défaut de spécification du moteur de la pompe hydraulique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — incompatibilité de pièce",
+    description:
+      "Le calculateur ABS/ESP détecte que le moteur de la pompe hydraulique installé ne correspond pas à la spécification attendue, généralement après un remplacement avec une mauvaise référence.",
+    causes: [
+      { pourcentage: 45, libelle: "Pompe hydraulique remplacée avec une référence incompatible" },
+      { pourcentage: 30, libelle: "Configuration incorrecte après remplacement" },
+      { pourcentage: 15, libelle: "Pompe hydraulique défaillante" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Vérifier la référence exacte de la pompe hydraulique installée par rapport à celle préconisée pour ce modèle précis de véhicule.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C163C",
+    titre: "Défaut du signal du capteur de roue arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal du capteur de la roue arrière gauche, selon une codification de génération récente.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C163B",
+    titre: "Défaut du signal du capteur de roue arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal du capteur de la roue arrière droite, selon une codification de génération récente.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "U1321",
+    titre: "Défaut de fonctionnement de la direction assistée électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination direction/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte un défaut de fonctionnement rapporté par la direction assistée électrique via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de direction assistée défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau endommagé" },
+      { pourcentage: 22, libelle: "Moteur de la direction assistée défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un durcissement ou un allègement anormal de la direction peut accompagner ce défaut — un diagnostic de la direction assistée est prioritaire.",
+    pieces: [
+      { nom: "Diagnostic direction assistée électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P0601",
+    titre: "Défaut de la mémoire du calculateur ABS/ESP (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Variante du défaut de mémoire interne du calculateur ABS/ESP, ce code générique étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant sur sa mémoire interne" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation ayant corrompu la mémoire" },
+      { pourcentage: 18, libelle: "Perturbation électrique externe" },
+      { pourcentage: 12, libelle: "Erreur lors d'une programmation précédente" },
+    ],
+    avisPro:
+      "Un effacement suivi d'un nouveau contrôle permet souvent de confirmer si le défaut est ponctuel ou persistant.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1393",
+    titre: "Défaut du signal du capteur de roue arrière gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut de signal sur le capteur de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1418",
+    titre: "Défaut du capteur d'angle volant",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte une anomalie générale sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur ou toute intervention sur la direction, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1314",
+    titre: "Défaut du signal du capteur de lacet (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Autre variante du défaut de signal sur le capteur de lacet.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1654",
+    titre: "Statut de la fonction de freinage d'urgence en cas de collision",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — information d'état, pas une panne",
+    description:
+      "Le calculateur ABS/ESP enregistre un changement de statut de la fonction de freinage d'urgence anticollision, une information d'état plutôt qu'un défaut actif.",
+    causes: [
+      { pourcentage: 50, libelle: "Activation ou désactivation normale de la fonction enregistrée" },
+      { pourcentage: 30, libelle: "Capteur radar/caméra déclenchant un changement d'état inattendu" },
+      { pourcentage: 20, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce code n'est généralement pas une panne mais un enregistrement de changement d'état — à croiser avec d'autres codes actifs si présents.",
+    pieces: [
+      { nom: "Diagnostic système freinage d'urgence (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1651",
+    titre: "Défaut du signal de réinitialisation de la détection de sous-gonflage des pneus",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal du bouton qui permet de réinitialiser la fonction de détection de sous-gonflage des pneus.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton de réinitialisation défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du bouton oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut empêche la réinitialisation manuelle de la fonction après un contrôle de pression — sans impact sur la détection elle-même.",
+    pieces: [
+      { nom: "Bouton réinitialisation pression pneus", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "C1652",
+    titre: "Défaut du bouton de détection de sous-gonflage des pneus",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le bouton dédié à la fonction de détection de sous-gonflage des pneus.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du bouton oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte la commande manuelle de la fonction sans désactiver l'ABS/ESP de base.",
+    pieces: [
+      { nom: "Bouton réinitialisation pression pneus", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "C1653",
+    titre: "ESP en mode réinitialisation",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — état temporaire, pas une panne",
+    description:
+      "Le calculateur ESP signale qu'il se trouve en mode réinitialisation, un état temporaire normal après une coupure de batterie ou une programmation.",
+    causes: [
+      { pourcentage: 55, libelle: "Réinitialisation normale suite à une coupure de batterie" },
+      { pourcentage: 30, libelle: "Réinitialisation suite à une programmation récente" },
+      { pourcentage: 15, libelle: "Calculateur ESP défaillant, bloqué dans cet état" },
+    ],
+    avisPro:
+      "Ce code disparaît normalement après un cycle complet contact mis/coupé — s'il persiste, un diagnostic est nécessaire.",
+    pieces: [
+      { nom: "Diagnostic calculateur ESP (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C0044",
+    titre: "Capteur de pression de freinage interne au bloc hydraulique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le capteur de pression de freinage intégré au bloc hydraulique, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne du bloc hydraulique endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur intégré au bloc hydraulique nécessite généralement le remplacement de l'ensemble en cas de défaillance confirmée.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0046",
+    titre: "Capteur de pression de freinage interne au bloc hydraulique (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Variante du défaut sur le capteur de pression de freinage intégré au bloc hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne du bloc hydraulique endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, ce capteur intégré nécessite généralement le remplacement de l'ensemble hydraulique.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C053A",
+    titre: "Défaut des électrovannes d'admission",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale touchant plusieurs électrovannes d'admission du bloc hydraulique, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 36, libelle: "Une ou plusieurs électrovannes d'admission défaillantes" },
+      { pourcentage: 28, libelle: "Câblage commun endommagé" },
+      { pourcentage: 22, libelle: "Alimentation partagée des électrovannes défaillante" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut touchant plusieurs électrovannes à la fois oriente vers un problème d'alimentation commune plutôt qu'une électrovanne isolée.",
+    pieces: [
+      { nom: "Diagnostic bloc hydraulique ABS (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C05C9",
+    titre: "Capteur de pression de freinage interne au bloc hydraulique (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Autre variante du défaut sur le capteur de pression de freinage intégré au bloc hydraulique, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne du bloc hydraulique endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, ce capteur intégré nécessite généralement le remplacement de l'ensemble hydraulique.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C110A",
+    titre: "Défaut du calculateur de contrôle de stabilité ABS/ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur de contrôle de stabilité (ABS/ESP) signale une défaillance générale, un code de tête regroupant plusieurs causes possibles.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C139E",
+    titre: "Défaut de calibration de l'électrovanne MCI",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la calibration de l'électrovanne MCI (modulation de couple à l'injection), utilisée pour coordonner freinage et gestion moteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Calibration non effectuée après intervention" },
+      { pourcentage: 28, libelle: "Électrovanne MCI défaillante" },
+      { pourcentage: 22, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette fonction coordonne le freinage et la gestion moteur — un défaut ici peut affecter la fluidité des interventions ESP.",
+    pieces: [
+      { nom: "Calibration électrovanne MCI (atelier équipé)", boutique: "Recommandé", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1655",
+    titre: "Défaut du programme électronique de stabilité (ESP, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP désactivé",
+    description:
+      "Variante du défaut de défaillance générale du programme électronique de stabilité (ESP).",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 28, libelle: "Capteur essentiel à l'ESP défaillant (angle volant, lacet, accélération)" },
+      { pourcentage: 22, libelle: "Câblage endommagé sur un circuit clé de l'ESP" },
+      { pourcentage: 12, libelle: "Alimentation du calculateur défaillante" },
+    ],
+    avisPro:
+      "Ce code générique confirme une désactivation de l'ESP — croiser avec les autres codes présents pour identifier la cause précise.",
+    pieces: [
+      { nom: "Diagnostic système ESP complet (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U3000",
+    titre: "Défaut du calculateur de contrôle de stabilité ABS/ESP (variante réseau)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le réseau du véhicule détecte une défaillance générale rapportée par le calculateur de contrôle de stabilité ABS/ESP.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Câblage réseau endommagé" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U3003",
+    titre: "Défaut de la tension de la batterie de servitude",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générale affectée",
+    description:
+      "Le calculateur ABS/ESP détecte que la tension de la batterie de servitude (12V) sort de la plage de fonctionnement normale.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant tout autre diagnostic du système ABS/ESP.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1390",
+    titre: "Défaut de la régulation du couple moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie dans la régulation du couple moteur, une fonction utilisée pour l'antipatinage et le contrôle de stabilité.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur moteur ne répondant pas correctement aux demandes ESP" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 14, libelle: "Perturbation réseau ponctuelle" },
+    ],
+    avisPro:
+      "Ce défaut peut réduire l'efficacité de l'antipatinage — un diagnostic croisé moteur/ESP est nécessaire.",
+    pieces: [
+      { nom: "Diagnostic coordination moteur/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C10AE",
+    titre: "Défaut d'initialisation du capteur gyroscope-accéléromètre",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calibration requise",
+    description:
+      "Le calculateur ESP ne parvient pas à effectuer l'initialisation du capteur combiné gyroscope-accéléromètre, une procédure normalement réalisée automatiquement.",
+    causes: [
+      { pourcentage: 38, libelle: "Véhicule non stationné sur terrain plat lors de la tentative d'initialisation" },
+      { pourcentage: 28, libelle: "Capteur gyroscope-accéléromètre défaillant" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette initialisation nécessite généralement un véhicule à l'arrêt sur une surface parfaitement plane — à réessayer dans ces conditions.",
+    pieces: [
+      { nom: "Calibration capteur gyroscope-accéléromètre (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C2002",
+    titre: "Défaut de calibration des électrovannes du bloc hydraulique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte que la calibration des électrovannes du bloc hydraulique n'a pas été effectuée correctement, généralement après un remplacement.",
+    causes: [
+      { pourcentage: 42, libelle: "Calibration non effectuée après remplacement du bloc hydraulique" },
+      { pourcentage: 28, libelle: "Procédure de calibration interrompue" },
+      { pourcentage: 18, libelle: "Électrovanne défaillante" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement du bloc hydraulique, une procédure de calibration des électrovannes avec l'outil constructeur est indispensable.",
+    pieces: [
+      { nom: "Calibration bloc hydraulique (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "C2003",
+    titre: "Défaut de configuration du BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de configuration transmise par le BSI, généralement après une intervention sans recodage complet.",
+    causes: [
+      { pourcentage: 40, libelle: "BSI ou calculateur ABS/ESP remplacé sans recodage complet" },
+      { pourcentage: 28, libelle: "Configuration incompatible entre les deux calculateurs" },
+      { pourcentage: 20, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Une reprogrammation coordonnée du BSI et du calculateur ABS/ESP avec l'outil constructeur résout généralement ce défaut.",
+    pieces: [
+      { nom: "Configuration coordonnée BSI/ABS-ESP (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "U0136",
+    titre: "Absence de communication avec le calculateur d'embrayage du pont arrière (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — transmission intégrale affectée",
+    description:
+      "Variante du défaut d'absence de communication avec le calculateur qui gère l'embrayage piloté du pont arrière sur les véhicules à transmission intégrale.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'embrayage de pont arrière défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les versions à quatre roues motrices.",
+    pieces: [
+      { nom: "Diagnostic transmission intégrale (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0404",
+    titre: "Défaut de configuration de la fonction stop and start",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction stop and start désactivée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de configuration liée à la fonction stop and start, qui coupe automatiquement le moteur à l'arrêt.",
+    causes: [
+      { pourcentage: 40, libelle: "Configuration incorrecte après intervention" },
+      { pourcentage: 28, libelle: "Batterie non compatible avec la fonction stop and start" },
+      { pourcentage: 20, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive uniquement la fonction stop and start, sans impact sur le freinage ABS/ESP de base.",
+    pieces: [
+      { nom: "Diagnostic fonction stop and start (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1004",
+    titre: "Défaut de communication avec le calculateur moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coordination moteur/freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication générale avec le calculateur moteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur de vitesse et l'antipatinage, en plus de l'ESP.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1203",
+    titre: "Tension batterie ou alternateur trop basse",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — alimentation générale du système",
+    description:
+      "Le calculateur ABS/ESP détecte que la tension fournie par la batterie ou l'alternateur est trop basse pour un fonctionnement normal.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 30, libelle: "Alternateur défaillant, charge insuffisante" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1202",
+    titre: "Entrefer du capteur de vitesse de roue (WSS) hors tolérance",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signal capteur dégradé",
+    description:
+      "Le calculateur ABS/ESP détecte que l'écart (entrefer) entre un capteur de vitesse de roue et sa cible dentée est en dehors de la tolérance normale.",
+    causes: [
+      { pourcentage: 38, libelle: "Roulement de roue usé augmentant le jeu" },
+      { pourcentage: 28, libelle: "Capteur mal positionné ou desserré" },
+      { pourcentage: 22, libelle: "Cible dentée endommagée ou déformée" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un jeu anormal au niveau du roulement de roue est une cause fréquente de ce défaut.",
+    pieces: [
+      { nom: "Roulement de roue", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C1201",
+    titre: "Saut de vitesse ou dents manquantes sur la cible du capteur de roue",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signal capteur dégradé",
+    description:
+      "Le calculateur ABS/ESP détecte un saut brutal de vitesse ou des dents manquantes sur la cible dentée d'un capteur de vitesse de roue, signe d'un problème mécanique ou d'un mauvais type de capteur installé.",
+    causes: [
+      { pourcentage: 36, libelle: "Cible dentée endommagée ou avec des dents manquantes" },
+      { pourcentage: 28, libelle: "Capteur de type incorrect installé lors d'un remplacement" },
+      { pourcentage: 22, libelle: "Mauvais montage du capteur ou de la roue" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le capteur et la cible dentée installés correspondent bien à la référence préconisée pour ce véhicule, surtout après un remplacement de roulement.",
+    pieces: [
+      { nom: "Capteur vitesse de roue", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C2380",
+    titre: "Électrovanne ouverte, court-circuit à la masse ou à la batterie, courant de fuite",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie électrique sur une électrovanne du bloc hydraulique : circuit ouvert, court-circuit à la masse ou à la batterie, ou courant de fuite.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne défaillante (bobinage coupé ou court-circuité)" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut électrique précis sur une électrovanne nécessite un contrôle de continuité et d'isolement avant remplacement du bloc hydraulique.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C2402",
+    titre: "Relais moteur ouvert ou court-circuité, moteur bloqué, fusible grillé",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie électrique sur le circuit du moteur de la pompe hydraulique : relais défaillant, moteur en court-circuit, bloqué mécaniquement ou fusible grillé.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de la pompe hydraulique bloqué ou défaillant" },
+      { pourcentage: 28, libelle: "Relais du moteur défaillant" },
+      { pourcentage: 22, libelle: "Fusible du circuit moteur grillé" },
+      { pourcentage: 14, libelle: "Câblage endommagé" },
+    ],
+    avisPro:
+      "Ce défaut électrique précis nécessite un contrôle du fusible et du relais avant de suspecter le moteur de la pompe lui-même.",
+    pieces: [
+      { nom: "Fusible circuit pompe ABS/ESP", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "C1102",
+    titre: "Tension basse",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — alimentation générale du système",
+    description:
+      "Le calculateur ABS/ESP détecte que sa tension d'alimentation est trop basse pour un fonctionnement normal.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1604",
+    titre: "Défaut du capteur de courant du calculateur, alimentation ou moteur du frein de parking électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique (EPB) détecte une anomalie sur son capteur de courant interne, son alimentation ou son moteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur du frein de parking électrique défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur EPB défaillante" },
+      { pourcentage: 22, libelle: "Capteur de courant interne défaillant" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le serrage ou le desserrage du frein de parking électrique — un desserrage manuel de secours est parfois disponible, à vérifier dans le manuel du véhicule.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C160E",
+    titre: "Bus CAN coupé (P-CAN off)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication réseau interrompue",
+    description:
+      "Le calculateur ABS/ESP détecte que le bus CAN principal (P-CAN) est passé en mode déconnecté, généralement suite à des erreurs de communication répétées.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du bus CAN endommagé ou en court-circuit" },
+      { pourcentage: 28, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 22, libelle: "Un équipement du réseau perturbant le bus" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut nécessite un diagnostic approfondi du bus CAN à l'oscilloscope pour identifier l'équipement à l'origine des erreurs répétées.",
+    pieces: [
+      { nom: "Diagnostic approfondi bus CAN (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1235",
+    titre: "Défaut de ligne du bus MCP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication interne affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la ligne de communication interne MCP (protocole multiplexé), utilisée entre certains modules du système.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de la ligne MCP endommagé" },
+      { pourcentage: 28, libelle: "Module connecté défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication interne nécessite un diagnostic approfondi du calculateur ABS/ESP.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1237",
+    titre: "Signal bruité, décalage ou bloqué sur le bus MCP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication interne affectée",
+    description:
+      "Le calculateur ABS/ESP détecte un signal bruité, décalé ou bloqué sur la ligne de communication interne MCP.",
+    causes: [
+      { pourcentage: 36, libelle: "Perturbation électrique sur la ligne MCP" },
+      { pourcentage: 28, libelle: "Câblage de la ligne endommagé" },
+      { pourcentage: 22, libelle: "Module connecté défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce type de signal perturbé nécessite un diagnostic à l'oscilloscope pour identifier précisément la source du bruit électrique.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1260",
+    titre: "Capteur d'angle volant (SAS) hors plage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte que la valeur transmise par le capteur d'angle du volant (SAS) sort de la plage de mesure normale.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur ou toute intervention sur la direction, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1261",
+    titre: "Capteur d'angle volant (SAS) non calibré",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calibration requise",
+    description:
+      "Le calculateur ESP détecte que le capteur d'angle du volant n'a pas été calibré, généralement après une intervention sur la direction non suivie de cette procédure.",
+    causes: [
+      { pourcentage: 50, libelle: "Calibration non effectuée après intervention (parallélisme, remplacement)" },
+      { pourcentage: 28, libelle: "Procédure de calibration interrompue" },
+      { pourcentage: 14, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 8, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se résout simplement en effectuant la procédure de calibration du capteur d'angle volant avec l'outil de diagnostic, roues droites.",
+    pieces: [
+      { nom: "Calibration capteur angle volant (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C1264",
+    titre: "Décalage, signal bruité ou bloqué du capteur d'angle volant (SAS)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte un décalage (offset), un signal bruité ou bloqué sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration perdue ou incorrecte" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Une recalibration du capteur résout souvent ce type de défaut avant d'envisager son remplacement.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1282",
+    titre: "Erreur d'initialisation du capteur de lacet/accélération (G)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP ne parvient pas à initialiser le capteur combiné de lacet et d'accélération (G), une procédure normalement automatique au démarrage.",
+    causes: [
+      { pourcentage: 38, libelle: "Véhicule non stationné sur terrain plat lors de l'initialisation" },
+      { pourcentage: 28, libelle: "Capteur combiné défaillant" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette initialisation nécessite généralement un véhicule à l'arrêt sur une surface parfaitement plane.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1283",
+    titre: "Signal anormal des capteurs d'accélération latérale, longitudinale ou de lacet",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte un signal anormal sur l'un des capteurs d'accélération latérale, longitudinale ou de vitesse de lacet, intégrés au module combiné.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur combiné gyroscope-accéléromètre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur combiné est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du système.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1285",
+    titre: "Capteur d'accélération longitudinale non calibré",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calibration requise",
+    description:
+      "Le calculateur ESP détecte que le capteur d'accélération longitudinale n'a pas été calibré correctement.",
+    causes: [
+      { pourcentage: 36, libelle: "Véhicule non stationné sur terrain plat lors de la calibration" },
+      { pourcentage: 28, libelle: "Capteur d'accélération longitudinale défaillant" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette calibration nécessite généralement un véhicule à l'arrêt sur une surface parfaitement plane.",
+    pieces: [
+      { nom: "Calibration capteur accélération (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C1286",
+    titre: "Défaut général du capteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — capteur générique en cause",
+    description:
+      "Le calculateur ABS/ESP détecte une défaillance générale d'un capteur associé, sans précision automatique du capteur exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel capteur est concerné avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1520",
+    titre: "Contacteur d'embrayage ouvert ou en court-circuit à la masse ou à la batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction ESP secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie électrique précise sur le contacteur de pédale d'embrayage : circuit ouvert ou court-circuit à la masse ou à la batterie.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de pédale d'embrayage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules à boîte manuelle équipés de ce contacteur.",
+    pieces: [
+      { nom: "Contacteur pédale embrayage", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "C1527",
+    titre: "Contacteur de marche arrière ouvert ou en court-circuit à la masse ou à la batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction ESP secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie électrique précise sur le contacteur de marche arrière : circuit ouvert ou court-circuit à la masse ou à la batterie.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de marche arrière défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte des fonctions secondaires liées à la marche arrière sans désactiver l'ABS/ESP de base.",
+    pieces: [
+      { nom: "Contacteur marche arrière (boîte de vitesses)", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "C1539",
+    titre: "Contacteur de point mort ouvert ou en court-circuit à la masse ou à la batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction ESP secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie électrique précise sur le contacteur de point mort : circuit ouvert ou court-circuit à la masse ou à la batterie.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de point mort défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte des fonctions secondaires liées à la détection du point mort sans désactiver l'ABS/ESP de base.",
+    pieces: [
+      { nom: "Contacteur point mort (boîte de vitesses)", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "C1542",
+    titre: "Contacteur de feux stop (BLS) défaillant, ouvert ou en court-circuit",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — feux stop et aides au freinage affectés",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie électrique précise sur le contacteur de feux stop (BLS) : circuit ouvert, court-circuit ou contacteur défaillant.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de feux stop défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé ou mal réglé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver les feux stop en plus de certaines aides comme l'assistance au freinage d'urgence — un contrôle des feux arrière est indispensable.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C1710",
+    titre: "Ensemble du frein de parking électrique non vérifié",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — vérification requise",
+    description:
+      "Le calculateur du frein de parking électrique (EPB) détecte que l'ensemble mécanique n'a pas été vérifié, généralement après une intervention sur les freins arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Vérification non effectuée après intervention sur les freins arrière" },
+      { pourcentage: 28, libelle: "Procédure d'apprentissage interrompue" },
+      { pourcentage: 20, libelle: "Mécanisme du frein de parking électrique défaillant" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention sur les plaquettes ou disques arrière, une procédure d'apprentissage du frein de parking électrique est indispensable.",
+    pieces: [
+      { nom: "Apprentissage frein de parking électrique (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C1711",
+    titre: "Données EEPROM non valides du frein de parking électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur EPB concerné",
+    description:
+      "Le calculateur du frein de parking électrique détecte que les données stockées dans sa mémoire EEPROM ne sont pas valides.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur EPB défaillant sur sa mémoire EEPROM" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation ayant corrompu la mémoire" },
+      { pourcentage: 18, libelle: "Perturbation électrique externe" },
+      { pourcentage: 12, libelle: "Erreur lors d'une programmation précédente" },
+    ],
+    avisPro:
+      "Ce défaut nécessite généralement une reprogrammation complète du calculateur EPB, voire son remplacement si le défaut persiste.",
+    pieces: [
+      { nom: "Diagnostic calculateur frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1712",
+    titre: "Frein de parking électrique en mode maintenance",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — état temporaire pour intervention",
+    description:
+      "Le calculateur du frein de parking électrique signale qu'il est en mode maintenance, un état activé volontairement pour permettre une intervention sur les plaquettes arrière.",
+    causes: [
+      { pourcentage: 55, libelle: "Mode maintenance activé volontairement pour une intervention" },
+      { pourcentage: 30, libelle: "Mode maintenance non désactivé après l'intervention" },
+      { pourcentage: 15, libelle: "Calculateur EPB défaillant, bloqué dans ce mode" },
+    ],
+    avisPro:
+      "Ce mode doit être désactivé après toute intervention sur les plaquettes arrière — sinon le frein de parking électrique reste inactif.",
+    pieces: [
+      { nom: "Désactivation mode maintenance EPB (atelier équipé)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "C2202",
+    titre: "Détection de recul du véhicule à l'arrêt",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aide au démarrage en côte affectée",
+    description:
+      "Le calculateur ABS/ESP détecte un recul du véhicule alors qu'il devrait être immobile (frein de parking électrique ou situation d'arrêt en côte).",
+    causes: [
+      { pourcentage: 38, libelle: "Frein de parking électrique ne serrant pas suffisamment" },
+      { pourcentage: 28, libelle: "Capteur d'inclinaison ou d'accélération défaillant" },
+      { pourcentage: 22, libelle: "Système de freinage arrière usé (plaquettes, disques)" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de sécurité mérite une attention particulière en stationnement sur pente — vérifier l'état des freins arrière et l'efficacité du frein de parking.",
+    pieces: [
+      { nom: "Diagnostic frein de parking et freins arrière (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C2227",
+    titre: "Température excessive du disque de frein (ESP uniquement)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surchauffe de freinage détectée",
+    description:
+      "Le calculateur ESP détecte, par calcul, que la température d'un disque de frein dépasse le seuil normal, généralement suite à une sollicitation intensive et prolongée.",
+    causes: [
+      { pourcentage: 42, libelle: "Sollicitation intensive et prolongée des freins (montagne, conduite sportive)" },
+      { pourcentage: 28, libelle: "Étrier de frein grippé, frottant en permanence" },
+      { pourcentage: 18, libelle: "Disque de frein voilé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Laisser refroidir les freins après une sollicitation intensive — si le défaut persiste au repos, un étrier grippé est probable.",
+    pieces: [
+      { nom: "Diagnostic système de freinage (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C2234",
+    titre: "Dépression insuffisante pour l'assistance au freinage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Le calculateur détecte que la dépression disponible pour l'assistance au freinage (servofrein) est insuffisante.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à vide défaillante ou fuite dans le circuit de dépression" },
+      { pourcentage: 28, libelle: "Durite de dépression fissurée ou débranchée" },
+      { pourcentage: 22, libelle: "Clapet anti-retour du servofrein défaillant" },
+      { pourcentage: 12, libelle: "Servofrein lui-même défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale nettement plus important que d'habitude confirme généralement ce défaut — à traiter rapidement car il affecte directement la sécurité de freinage.",
+    pieces: [
+      { nom: "Durite de dépression servofrein", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "C2244",
+    titre: "Contrôle incomplet du frein de parking électrique ou coupure d'alimentation inattendue",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte qu'un cycle de serrage ou desserrage n'a pas été mené à son terme, souvent suite à une coupure d'alimentation inattendue.",
+    causes: [
+      { pourcentage: 38, libelle: "Coupure de batterie pendant un cycle de serrage/desserrage" },
+      { pourcentage: 28, libelle: "Mécanisme du frein de parking électrique grippé" },
+      { pourcentage: 22, libelle: "Moteur du frein de parking défaillant" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un nouveau cycle complet de serrage/desserrage permet souvent de réinitialiser ce défaut sans intervention supplémentaire.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C2416",
+    titre: "Défaut électrique du moteur gauche du frein de parking (circuit ouvert, court-circuit, surintensité, force de serrage insuffisante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie électrique sur le moteur gauche : circuit ouvert, court-circuit, surintensité ou force de serrage insuffisante.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur gauche du frein de parking défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé empêchant un serrage correct" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Une force de serrage insuffisante côté gauche doit être diagnostiquée rapidement — le frein de parking pourrait ne pas immobiliser correctement le véhicule.",
+    pieces: [
+      { nom: "Moteur étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "C2417",
+    titre: "Défaut électrique du moteur droit du frein de parking (circuit ouvert, court-circuit, surintensité, force de serrage insuffisante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie électrique sur le moteur droit : circuit ouvert, court-circuit, surintensité ou force de serrage insuffisante.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur droit du frein de parking défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé empêchant un serrage correct" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Une force de serrage insuffisante côté droit doit être diagnostiquée rapidement — le frein de parking pourrait ne pas immobiliser correctement le véhicule.",
+    pieces: [
+      { nom: "Moteur étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "C2418",
+    titre: "Moteur gauche du frein de parking électrique bloqué",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte que le moteur gauche est mécaniquement bloqué (calé), l'empêchant de serrer ou desserrer correctement.",
+    causes: [
+      { pourcentage: 40, libelle: "Mécanisme de l'étrier gauche grippé (corrosion, usure)" },
+      { pourcentage: 28, libelle: "Moteur de l'étrier gauche défaillant" },
+      { pourcentage: 20, libelle: "Câble ou tringlerie mécanique endommagée" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un frein de parking électrique bloqué côté gauche nécessite une intervention rapide — le véhicule peut rester immobilisé si le blocage survient en position serrée.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C2419",
+    titre: "Moteur droit du frein de parking électrique bloqué",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte que le moteur droit est mécaniquement bloqué (calé), l'empêchant de serrer ou desserrer correctement.",
+    causes: [
+      { pourcentage: 40, libelle: "Mécanisme de l'étrier droit grippé (corrosion, usure)" },
+      { pourcentage: 28, libelle: "Moteur de l'étrier droit défaillant" },
+      { pourcentage: 20, libelle: "Câble ou tringlerie mécanique endommagée" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un frein de parking électrique bloqué côté droit nécessite une intervention rapide — le véhicule peut rester immobilisé si le blocage survient en position serrée.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C2420",
+    titre: "Dépassement du temps limite de l'actionneur gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte que l'actionneur gauche n'a pas atteint sa position en temps voulu.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de l'étrier gauche grippé, ralentissant l'actionneur" },
+      { pourcentage: 28, libelle: "Moteur de l'actionneur gauche fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un actionneur lent peut annoncer une usure ou un grippage progressif du mécanisme — un diagnostic avant panne complète est conseillé.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C2421",
+    titre: "Dépassement du temps limite de l'actionneur droit",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte que l'actionneur droit n'a pas atteint sa position en temps voulu.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de l'étrier droit grippé, ralentissant l'actionneur" },
+      { pourcentage: 28, libelle: "Moteur de l'actionneur droit fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un actionneur lent peut annoncer une usure ou un grippage progressif du mécanisme.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C2422",
+    titre: "Absence d'action détectée côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — actionneur gauche sans effet",
+    description:
+      "Le calculateur du frein de parking électrique détecte qu'une commande a été envoyée à l'actionneur gauche sans qu'aucun mouvement ne soit détecté.",
+    causes: [
+      { pourcentage: 38, libelle: "Actionneur gauche mécaniquement bloqué" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur coupé" },
+      { pourcentage: 22, libelle: "Capteur de position de l'actionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Une absence totale de mouvement, plutôt qu'un mouvement lent, oriente vers une coupure de circuit ou un blocage complet.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C2423",
+    titre: "Absence d'action détectée côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — actionneur droit sans effet",
+    description:
+      "Le calculateur du frein de parking électrique détecte qu'une commande a été envoyée à l'actionneur droit sans qu'aucun mouvement ne soit détecté.",
+    causes: [
+      { pourcentage: 38, libelle: "Actionneur droit mécaniquement bloqué" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur coupé" },
+      { pourcentage: 22, libelle: "Capteur de position de l'actionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Une absence totale de mouvement, plutôt qu'un mouvement lent, oriente vers une coupure de circuit ou un blocage complet.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C2424",
+    titre: "Courant de repos du moteur gauche trop élevé",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — frottement mécanique excessif",
+    description:
+      "Le calculateur du frein de parking électrique détecte que le moteur gauche consomme un courant anormalement élevé même au repos, signe d'une résistance mécanique.",
+    causes: [
+      { pourcentage: 40, libelle: "Mécanisme de l'étrier gauche partiellement grippé" },
+      { pourcentage: 28, libelle: "Moteur défaillant, consommant trop de courant" },
+      { pourcentage: 20, libelle: "Corrosion sur les glissières de l'étrier" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut précéder un blocage complet — un nettoyage et une lubrification des glissières de l'étrier peuvent résoudre le problème avant qu'il ne s'aggrave.",
+    pieces: [
+      { nom: "Kit entretien étrier frein de parking électrique", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "C2425",
+    titre: "Courant de repos du moteur droit trop élevé",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — frottement mécanique excessif",
+    description:
+      "Le calculateur du frein de parking électrique détecte que le moteur droit consomme un courant anormalement élevé même au repos, signe d'une résistance mécanique.",
+    causes: [
+      { pourcentage: 40, libelle: "Mécanisme de l'étrier droit partiellement grippé" },
+      { pourcentage: 28, libelle: "Moteur défaillant, consommant trop de courant" },
+      { pourcentage: 20, libelle: "Corrosion sur les glissières de l'étrier" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut précéder un blocage complet — un nettoyage et une lubrification des glissières de l'étrier peuvent résoudre le problème.",
+    pieces: [
+      { nom: "Kit entretien étrier frein de parking électrique", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "C2426",
+    titre: "Tension du moteur du frein de parking trop élevée",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générale affectée",
+    description:
+      "Le calculateur du frein de parking électrique détecte que la tension d'alimentation du moteur dépasse la valeur maximale admissible.",
+    causes: [
+      { pourcentage: 38, libelle: "Alternateur défaillant, surtension du réseau électrique" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du moteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Une surtension généralisée du réseau électrique (alternateur défaillant) doit être vérifiée en priorité.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C2427",
+    titre: "Tension du moteur du frein de parking trop basse",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générale affectée",
+    description:
+      "Le calculateur du frein de parking électrique détecte que la tension d'alimentation du moteur est trop basse pour un fonctionnement normal.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du moteur endommagé" },
+      { pourcentage: 20, libelle: "Fusible du circuit EPB grillé" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie est la première étape avant tout autre diagnostic du frein de parking électrique.",
+    pieces: [
+      { nom: "Fusible circuit frein de parking électrique", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "C2428",
+    titre: "Application dynamique invalide",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — freinage d'urgence par EPB affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie sur la fonction d'application dynamique, qui permet de freiner le véhicule en urgence via le frein de parking en cas de défaillance du circuit principal.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse défaillant, empêchant l'activation dynamique" },
+      { pourcentage: 28, libelle: "Calculateur EPB défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Mécanisme de l'étrier grippé" },
+    ],
+    avisPro:
+      "Cette fonction de secours est importante en cas de panne du circuit de freinage principal — un diagnostic rapide est recommandé malgré son usage rare.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C2430",
+    titre: "Défaillance mécanique du moteur gauche du frein de parking",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une défaillance mécanique interne du moteur gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Moteur gauche défaillant mécaniquement (usure, casse interne)" },
+      { pourcentage: 28, libelle: "Réducteur du moteur endommagé" },
+      { pourcentage: 17, libelle: "Corrosion interne du mécanisme" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Une défaillance mécanique confirmée nécessite le remplacement de l'ensemble étrier motorisé côté gauche.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C2431",
+    titre: "Défaillance mécanique du moteur droit du frein de parking",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une défaillance mécanique interne du moteur droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Moteur droit défaillant mécaniquement (usure, casse interne)" },
+      { pourcentage: 28, libelle: "Réducteur du moteur endommagé" },
+      { pourcentage: 17, libelle: "Corrosion interne du mécanisme" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Une défaillance mécanique confirmée nécessite le remplacement de l'ensemble étrier motorisé côté droit.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C162F",
+    titre: "Erreur de temps de cycle du frein de parking électrique (PBC)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cycle de fonctionnement anormal",
+    description:
+      "Le calculateur du frein de parking électrique détecte que le temps d'un cycle complet de serrage ou desserrage sort de la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de l'étrier grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Moteur fatigué, ralentissant le cycle" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant le cycle" },
+      { pourcentage: 14, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un cycle anormalement long peut précéder un blocage complet — un nettoyage préventif du mécanisme est conseillé.",
+    pieces: [
+      { nom: "Kit entretien étrier frein de parking électrique", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "U0104",
+    titre: "Dépassement du temps limite du freinage d'urgence (AEB) ou du régulateur adaptatif (ACC)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — aides à la conduite affectées",
+    description:
+      "Le calculateur ABS/ESP détecte un dépassement du temps limite de réponse attendu de la fonction de freinage d'urgence automatique (AEB) ou du régulateur de vitesse adaptatif (ACC).",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur radar ou caméra avant défaillant ou trop lent à répondre" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Calculateur du système ACC/AEB défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le freinage d'urgence automatique et le régulateur adaptatif — vérifier également la propreté du pare-brise devant le capteur.",
+    pieces: [
+      { nom: "Diagnostic système ACC/AEB (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1216",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière gauche (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut de signal sur le capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1226",
+    titre: "Défaut de l'électrovanne d'admission avant droite (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Autre variante du défaut sur l'électrovanne d'admission de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1231",
+    titre: "Défaut de l'électrovanne d'échappement avant droite (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Autre variante du défaut sur l'électrovanne d'échappement de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'échappement défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1236",
+    titre: "Défaut de l'électrovanne d'admission avant gauche (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Autre variante du défaut sur l'électrovanne d'admission de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1241",
+    titre: "Défaut de l'électrovanne d'échappement avant gauche (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Autre variante du défaut sur l'électrovanne d'échappement de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'échappement défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1246",
+    titre: "Défaut de l'électrovanne d'admission arrière droite (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Autre variante du défaut sur l'électrovanne d'admission de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1251",
+    titre: "Défaut de l'électrovanne d'échappement arrière droite (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Autre variante du défaut sur l'électrovanne d'échappement de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'échappement défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1256",
+    titre: "Défaut de l'électrovanne d'admission arrière gauche (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Autre variante du défaut sur l'électrovanne d'admission de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne d'admission défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1225",
+    titre: "Écart trop important entre les vitesses de roues",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — cohérence ABS/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte un écart de vitesse trop important entre les différentes roues, en dehors de ce qu'une différence normale en virage peut expliquer.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de vitesse défaillant sur une roue, faussant la mesure" },
+      { pourcentage: 28, libelle: "Pneu sous-gonflé ou de dimension différente" },
+      { pourcentage: 22, libelle: "Roue patinant réellement (perte d'adhérence)" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Vérifier la pression et l'état des quatre pneus avant de suspecter un capteur — un écart de pression important peut fausser cette mesure.",
+    pieces: [
+      { nom: "Diagnostic capteurs vitesse de roue (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1266",
+    titre: "Défaut de la pompe de recirculation ABS/ASR",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la pompe de recirculation, dans sa fonction combinée ABS et antipatinage (ASR).",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe de recirculation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la pompe endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'antipatinage — un défaut ici désactive généralement les deux fonctions.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1273",
+    titre: "Défaut du relais d'alimentation de la pompe de recirculation (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Autre variante du défaut sur le relais qui alimente la pompe de recirculation hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais de la pompe défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un contrôle du relais est la première étape avant remplacement de la pompe.",
+    pieces: [
+      { nom: "Relais pompe de recirculation ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1274",
+    titre: "Défaut du relais d'alimentation de la pompe de recirculation (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Autre variante du défaut sur le relais qui alimente la pompe de recirculation hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais de la pompe défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un contrôle du relais est la première étape avant remplacement de la pompe.",
+    pieces: [
+      { nom: "Relais pompe de recirculation ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1276",
+    titre: "Défaut de fonctionnement du circuit d'alimentation des électrovannes",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de fonctionnement sur le circuit d'alimentation général des électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du circuit d'alimentation endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit électrovannes grillé" },
+      { pourcentage: 22, libelle: "Relais d'alimentation défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut d'alimentation générale désactive souvent tout le système à la fois.",
+    pieces: [
+      { nom: "Fusible circuit électrovannes ABS", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "C1278",
+    titre: "Défaut du relais d'alimentation des électrovannes (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Autre variante du défaut sur le relais qui alimente l'ensemble des électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais d'alimentation défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce relais alimente l'ensemble des électrovannes — un défaut ici désactive généralement tout le système ABS/ESP à la fois.",
+    pieces: [
+      { nom: "Relais alimentation électrovannes ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1279",
+    titre: "Défaut du relais d'alimentation des électrovannes (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Autre variante du défaut sur le relais qui alimente l'ensemble des électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais d'alimentation défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce relais alimente l'ensemble des électrovannes — un défaut ici désactive généralement tout le système ABS/ESP à la fois.",
+    pieces: [
+      { nom: "Relais alimentation électrovannes ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1305",
+    titre: "Défaut de l'électrovanne de limitation 1 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Variante du défaut sur la première électrovanne de limitation de pression du circuit hydraulique de freinage actif.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de limitation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette électrovanne limite la pression maximale appliquée par l'ESP.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1340",
+    titre: "Défaut de fonctionnement du contacteur de feux stop",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — feux stop et aides au freinage affectés",
+    description:
+      "Le calculateur ABS/ESP détecte un défaut de fonctionnement général sur le contacteur de feux stop.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de feux stop défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé ou mal réglé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver les feux stop en plus de certaines aides comme l'assistance au freinage d'urgence.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C1345",
+    titre: "Niveau de liquide de frein bas (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité de freinage concernée",
+    description:
+      "Variante du défaut de niveau bas de liquide de frein.",
+    causes: [
+      { pourcentage: 42, libelle: "Niveau de liquide de frein réellement bas (usure des plaquettes ou fuite)" },
+      { pourcentage: 28, libelle: "Capteur de niveau défaillant" },
+      { pourcentage: 18, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 12, libelle: "Fuite dans le circuit de freinage" },
+    ],
+    avisPro:
+      "Vérifier immédiatement le niveau visuellement dans le réservoir.",
+    pieces: [
+      { nom: "Liquide de frein DOT4", boutique: "Pièces auto en ligne", prix: "10-20€" },
+    ],
+  },
+  {
+    code: "C1361",
+    titre: "Défaut de cohérence entre le contacteur de pédale de frein et le capteur de pression",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence de freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une incohérence entre l'information du contacteur de pédale de frein et celle du capteur de pression de freinage.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de pédale de frein mal réglé ou défaillant" },
+      { pourcentage: 28, libelle: "Capteur de pression de freinage défaillant" },
+      { pourcentage: 22, libelle: "Câblage de l'un des deux circuits endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un contacteur de pédale mal réglé est une cause fréquente de ce type d'incohérence, facile à vérifier et ajuster.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C1364",
+    titre: "Défaut du capteur de pression (générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie générale sur un capteur de pression du circuit de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C1366",
+    titre: "Défaut de cohérence du signal du capteur d'accélération",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte une incohérence sur le signal d'un capteur d'accélération par rapport aux autres données du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'accélération défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Données réseau incohérentes" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de cohérence nécessite une lecture des paramètres en direct pour identifier la source exacte.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1371",
+    titre: "Défaut du signal du capteur gyromètre",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le signal du capteur gyromètre, qui mesure la vitesse de rotation du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur gyromètre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1505",
+    titre: "Défaut de fonctionnement du capteur d'angle volant",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte un défaut de fonctionnement général sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur ou toute intervention sur la direction, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1555",
+    titre: "Absence de communication avec le capteur d'angle volant (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Variante du défaut d'absence de communication avec le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement l'ESP dans son intégralité — un diagnostic rapide est recommandé.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "U1104",
+    titre: "Absence de communication avec le capteur d'angle volant (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Autre variante du défaut d'absence de communication avec le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement l'ESP dans son intégralité.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "U1200",
+    titre: "Absence de communication avec le capteur d'angle volant (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Autre variante du défaut d'absence de communication avec le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement l'ESP dans son intégralité.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1607",
+    titre: "Défaut du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur ABS/ESP concerné",
+    description:
+      "Le calculateur ABS/ESP signale une défaillance générale, ce code de tête nécessitant une lecture complémentaire pour identifier la cause précise.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1621",
+    titre: "Positionnement incorrect du capteur gyromètre-accéléromètre",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte que le capteur combiné gyromètre-accéléromètre n'est pas positionné ou monté correctement.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur mal remonté après une intervention" },
+      { pourcentage: 28, libelle: "Support du capteur déformé ou endommagé" },
+      { pourcentage: 17, libelle: "Capteur défaillant" },
+      { pourcentage: 10, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut apparaît souvent après une intervention ayant nécessité le démontage du capteur — vérifier son orientation et sa fixation exacte.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1860",
+    titre: "Surtension de l'alimentation du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générale affectée",
+    description:
+      "Le calculateur ABS/ESP détecte que sa tension d'alimentation dépasse la valeur maximale admissible.",
+    causes: [
+      { pourcentage: 38, libelle: "Alternateur défaillant, surtension du réseau électrique" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Une surtension généralisée du réseau électrique (alternateur défaillant) doit être vérifiée en priorité.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1861",
+    titre: "Sous-tension de l'alimentation du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générale affectée",
+    description:
+      "Le calculateur ABS/ESP détecte que sa tension d'alimentation est trop basse pour un fonctionnement normal.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant" },
+      { pourcentage: 20, libelle: "Câblage d'alimentation du calculateur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1862",
+    titre: "Défaut du capteur de lacet (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie générale sur le capteur de lacet, selon une codification alternative.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1863",
+    titre: "Défaut du capteur de lacet (variante générique 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Autre variante du défaut général sur le capteur de lacet.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1864",
+    titre: "Défaut de l'électrovanne de limitation 1 (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Autre variante du défaut sur la première électrovanne de limitation de pression du circuit hydraulique de freinage actif.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de limitation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette électrovanne limite la pression maximale appliquée par l'ESP.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "U1073",
+    titre: "Défaut général du réseau CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication ABS/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale sur le réseau CAN, un défaut de portée large touchant potentiellement plusieurs calculateurs.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du bus CAN endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 22, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un défaut réseau généralisé nécessite un diagnostic complet du bus CAN impliquant plusieurs calculateurs.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1100",
+    titre: "Absence de communication avec les électrovannes 1",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le premier groupe d'électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le groupe d'électrovannes endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 22, libelle: "Électrovannes défaillantes" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement l'ABS/ESP sur les roues concernées par ce groupe d'électrovannes.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "U1101",
+    titre: "Absence de communication avec les électrovannes 2",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le deuxième groupe d'électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le groupe d'électrovannes endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 22, libelle: "Électrovannes défaillantes" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement l'ABS/ESP sur les roues concernées par ce groupe d'électrovannes.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "U1106",
+    titre: "Absence de communication avec le calculateur de direction assistée électrique (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination direction/ESP affectée",
+    description:
+      "Variante du défaut d'absence de communication avec le calculateur de la direction assistée électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de direction assistée défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un diagnostic de la direction assistée est également recommandé en complément.",
+    pieces: [
+      { nom: "Diagnostic direction assistée électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1128",
+    titre: "Absence de communication avec le combiné d'instruments",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — affichage tableau de bord affecté",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le combiné d'instruments, ce qui peut affecter l'affichage des témoins ABS/ESP.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher l'affichage correct des témoins ABS/ESP au tableau de bord — le système lui-même peut rester fonctionnel.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U111B",
+    titre: "Absence de communication avec le calculateur moteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coordination moteur/freinage affectée",
+    description:
+      "Variante du défaut d'absence de communication générale avec le calculateur moteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur de vitesse et l'antipatinage, en plus de l'ESP.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1426",
+    titre: "Défaut du signal de régime moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal de régime moteur transmis via le réseau, une information utilisée pour certaines fonctions de coordination.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Capteur de régime moteur défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter des fonctions de coordination moteur/freinage sans empêcher le freinage manuel classique.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1427",
+    titre: "Défaut du signal de couple moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal de couple moteur transmis via le réseau, utilisé par l'ESP pour ses interventions.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Perturbation réseau ponctuelle" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut réduire l'efficacité de l'ESP lors d'une intervention nécessitant une réduction de couple moteur.",
+    pieces: [
+      { nom: "Diagnostic coordination moteur/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1428",
+    titre: "Défaut du signal de couple moteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Variante du défaut sur le signal de couple moteur transmis via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Perturbation réseau ponctuelle" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, ce type de code nécessite un diagnostic croisé moteur/ESP.",
+    pieces: [
+      { nom: "Diagnostic coordination moteur/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U142A",
+    titre: "Défaut du signal de couple moteur (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Autre variante du défaut sur le signal de couple moteur transmis via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Perturbation réseau ponctuelle" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, ce type de code nécessite un diagnostic croisé moteur/ESP.",
+    pieces: [
+      { nom: "Diagnostic coordination moteur/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1430",
+    titre: "Défaut du signal de couple moteur (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Autre variante du défaut sur le signal de couple moteur transmis via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Perturbation réseau ponctuelle" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, ce type de code nécessite un diagnostic croisé moteur/ESP.",
+    pieces: [
+      { nom: "Diagnostic coordination moteur/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1429",
+    titre: "Défaut du signal de couple moteur (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Autre variante du défaut sur le signal de couple moteur transmis via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Perturbation réseau ponctuelle" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, ce type de code nécessite un diagnostic croisé moteur/ESP.",
+    pieces: [
+      { nom: "Diagnostic coordination moteur/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1191",
+    titre: "Le signal de contrôle de détection des défauts ne peut pas être reçu",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surveillance système affectée",
+    description:
+      "Le calculateur ABS/ESP détecte qu'il ne peut pas recevoir le signal de contrôle utilisé pour la détection normale des défauts, limitant sa capacité d'autodiagnostic.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur source du signal défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut limite la capacité d'autodiagnostic du système — un diagnostic réseau complet est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1406",
+    titre: "Défaut de la position de la pédale d'embrayage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction ESP secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'information de position de la pédale d'embrayage transmise via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de pédale d'embrayage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules à boîte manuelle équipés de ce capteur.",
+    pieces: [
+      { nom: "Capteur pédale embrayage", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "U1413",
+    titre: "Défaut du signal de rapport de boîte de vitesses",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination boîte/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'information de rapport de boîte de vitesses engagé, transmise via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur de boîte de vitesses défaillant" },
+      { pourcentage: 22, libelle: "Capteur de rapport engagé défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter des fonctions de coordination liées au rapport engagé, comme certaines aides à la conduite.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1431",
+    titre: "Défaut du signal de rapport de boîte de vitesses (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination boîte/ESP affectée",
+    description:
+      "Variante du défaut sur l'information de rapport de boîte de vitesses engagé.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur de boîte de vitesses défaillant" },
+      { pourcentage: 22, libelle: "Capteur de rapport engagé défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, ce défaut peut affecter des fonctions de coordination liées au rapport engagé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1416",
+    titre: "Défaut du signal du combiné d'instruments",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage tableau de bord affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur un signal transmis par le combiné d'instruments via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte principalement l'affichage — le fonctionnement réel de l'ABS/ESP n'est généralement pas impacté.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1432",
+    titre: "Défaut du signal du combiné d'instruments (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage tableau de bord affecté",
+    description:
+      "Variante du défaut sur un signal transmis par le combiné d'instruments.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte principalement l'affichage.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C0078",
+    titre: "Roue de secours de petit diamètre détectée",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — information de fonctionnement, pas une panne",
+    description:
+      "Le calculateur ABS/ESP détecte qu'une roue de secours de diamètre réduit (galette) est montée sur le véhicule, une information adaptant certaines fonctions.",
+    causes: [
+      { pourcentage: 70, libelle: "Roue de secours galette effectivement montée" },
+      { pourcentage: 20, libelle: "Capteur de vitesse détectant une différence de diamètre anormale" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce code n'est pas une panne — il informe que le système adapte certaines fonctions (vitesse maximale, ESP) à la présence de la roue de secours. Remplacer par une roue standard dès que possible.",
+    pieces: [
+      { nom: "Diagnostic roue de secours (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "C154A",
+    titre: "Défaut de l'étrier de frein motorisé gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie générale sur l'étrier de frein motorisé côté gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Étrier motorisé gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'étrier endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé (corrosion, usure)" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet étrier motorisé peut empêcher le serrage correct du frein de parking électrique de ce côté.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C1560",
+    titre: "Défaut de l'actionneur gauche du frein de parking électrique (FSE)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique (FSE) détecte une anomalie générale sur l'actionneur gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet actionneur peut empêcher le serrage correct du frein de parking électrique côté gauche.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C1564",
+    titre: "Défaut de l'actionneur gauche du frein de parking électrique (FSE, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Variante du défaut sur l'actionneur gauche du frein de parking électrique.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet actionneur peut empêcher le serrage correct du frein de parking électrique côté gauche.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C1561",
+    titre: "Défaut de l'actionneur droit du frein de parking électrique (FSE)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique (FSE) détecte une anomalie générale sur l'actionneur droit.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur droit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet actionneur peut empêcher le serrage correct du frein de parking électrique côté droit.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C1565",
+    titre: "Défaut de l'actionneur droit du frein de parking électrique (FSE, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Variante du défaut sur l'actionneur droit du frein de parking électrique.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur droit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet actionneur peut empêcher le serrage correct du frein de parking électrique côté droit.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C155C",
+    titre: "Défaut de la commande d'activation/désactivation du frein de parking électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — commande du frein de parking affectée",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie sur la commande (bouton) d'activation ou de désactivation.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton de commande du frein de parking défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bouton oxydé" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher l'activation ou la désactivation du frein de parking électrique via la commande habituelle — vérifier s'il existe une procédure de secours dans le manuel du véhicule.",
+    pieces: [
+      { nom: "Bouton frein de parking électrique", boutique: "Pièces auto en ligne", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C1664",
+    titre: "Statut de la fonction de freinage d'urgence en cas de collision (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — information d'état, pas une panne",
+    description:
+      "Variante du code d'enregistrement de statut de la fonction de freinage d'urgence anticollision.",
+    causes: [
+      { pourcentage: 50, libelle: "Activation ou désactivation normale de la fonction enregistrée" },
+      { pourcentage: 30, libelle: "Capteur radar/caméra déclenchant un changement d'état inattendu" },
+      { pourcentage: 20, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce code n'est généralement pas une panne mais un enregistrement de changement d'état.",
+    pieces: [
+      { nom: "Diagnostic système freinage d'urgence (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C156A",
+    titre: "Défaut des capteurs de l'actionneur du frein de parking électrique (FSE)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — capteurs de position affectés",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie sur les capteurs internes de l'actionneur qui mesurent sa position.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de position de l'actionneur défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne à l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Ces capteurs internes permettent de confirmer la position exacte de l'étrier — un défaut ici nécessite généralement le remplacement de l'ensemble.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C156C",
+    titre: "Défaut des capteurs de l'actionneur du frein de parking électrique (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — capteurs de position affectés",
+    description:
+      "Variante du défaut sur les capteurs internes de l'actionneur du frein de parking électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de position de l'actionneur défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne à l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut ici nécessite généralement le remplacement de l'ensemble étrier motorisé.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C156D",
+    titre: "Défaut des capteurs de l'actionneur du frein de parking électrique (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — capteurs de position affectés",
+    description:
+      "Autre variante du défaut sur les capteurs internes de l'actionneur du frein de parking électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de position de l'actionneur défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne à l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut ici nécessite généralement le remplacement de l'ensemble étrier motorisé.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1562",
+    titre: "Défaut des capteurs de l'actionneur du frein de parking électrique (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — capteurs de position affectés",
+    description:
+      "Autre variante du défaut sur les capteurs internes de l'actionneur du frein de parking électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de position de l'actionneur défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne à l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut ici nécessite généralement le remplacement de l'ensemble étrier motorisé.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C162A",
+    titre: "Défaut de dépression dans le servofrein",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Le calculateur détecte une insuffisance de dépression dans l'unité d'assistance au freinage (servofrein).",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à vide défaillante ou fuite dans le circuit de dépression" },
+      { pourcentage: 28, libelle: "Durite de dépression fissurée ou débranchée" },
+      { pourcentage: 22, libelle: "Clapet anti-retour du servofrein défaillant" },
+      { pourcentage: 12, libelle: "Servofrein lui-même défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale nettement plus important que d'habitude confirme généralement ce défaut — à traiter rapidement.",
+    pieces: [
+      { nom: "Durite de dépression servofrein", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "P0657",
+    titre: "Défaut de l'alimentation électrique des capteurs de dépression de l'embrayage et du freinage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — capteurs de dépression affectés",
+    description:
+      "Le calculateur détecte une anomalie sur l'alimentation électrique partagée par les capteurs de dépression du circuit d'embrayage et de freinage.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage d'alimentation partagé endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit grillé" },
+      { pourcentage: 22, libelle: "Un des capteurs en court-circuit" },
+      { pourcentage: 14, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs de dépression tombent en panne simultanément, cette alimentation partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs dépression (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U2213",
+    titre: "Problème de réception du mot d'état de réveil pour le desserrage automatique du frein de parking électrique (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — frein de parking électrique affecté",
+    description:
+      "Variante du défaut de réception du mot d'état lié à la fonction de desserrage automatique du frein de parking électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur du frein de parking électrique défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le desserrage automatique du frein de parking électrique au démarrage — un desserrage manuel via le bouton reste généralement possible.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1148",
+    titre: "Défaut de communication avec le calculateur de gestion moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coordination moteur/freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur de gestion moteur, variante de code réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur de vitesse et l'antipatinage, en plus de l'ESP.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U1165",
+    titre: "Défaut de communication avec le dispositif de détection (radar ou caméra)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aides à la conduite affectées",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le dispositif de détection avant (radar ou caméra), utilisé pour les aides à la conduite.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur radar ou caméra défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le dispositif endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le freinage d'urgence automatique et le régulateur adaptatif — vérifier la propreté du pare-brise devant le capteur.",
+    pieces: [
+      { nom: "Diagnostic système radar/caméra avant (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C110D",
+    titre: "Défaut général du frein de parking électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique concerné",
+    description:
+      "Le calculateur du frein de parking électrique signale une défaillance générale, un code de tête nécessitant une lecture complémentaire.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur EPB défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 20, libelle: "Mécanisme d'un des étriers défaillant" },
+      { pourcentage: 12, libelle: "Câblage endommagé" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1546",
+    titre: "Défaut du capteur récepteur de pression roue avant droite",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surveillance pression pneu affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le capteur récepteur qui reçoit les données de pression directe de la roue avant droite (système TPMS direct).",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression dans la roue défaillant ou pile déchargée" },
+      { pourcentage: 28, libelle: "Antenne réceptrice défaillante" },
+      { pourcentage: 22, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce capteur de pression intégré à la roue fonctionne sur pile — une pile déchargée après plusieurs années est une cause fréquente à vérifier en premier.",
+    pieces: [
+      { nom: "Capteur pression pneu (valve TPMS)", boutique: "Pièces auto en ligne", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C1547",
+    titre: "Défaut du capteur récepteur de pression roue avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surveillance pression pneu affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le capteur récepteur qui reçoit les données de pression directe de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression dans la roue défaillant ou pile déchargée" },
+      { pourcentage: 28, libelle: "Antenne réceptrice défaillante" },
+      { pourcentage: 22, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Une pile déchargée après plusieurs années est une cause fréquente à vérifier en premier.",
+    pieces: [
+      { nom: "Capteur pression pneu (valve TPMS)", boutique: "Pièces auto en ligne", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "C1549",
+    titre: "Défaut de l'étrier de frein motorisé droit",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie générale sur l'étrier de frein motorisé côté droit.",
+    causes: [
+      { pourcentage: 40, libelle: "Étrier motorisé droit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'étrier endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé (corrosion, usure)" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet étrier motorisé peut empêcher le serrage correct du frein de parking électrique de ce côté.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C1657",
+    titre: "Défaut de l'étrier de frein motorisé droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Variante du défaut sur l'étrier de frein motorisé côté droit.",
+    causes: [
+      { pourcentage: 40, libelle: "Étrier motorisé droit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'étrier endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé (corrosion, usure)" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet étrier motorisé peut empêcher le serrage correct du frein de parking électrique de ce côté.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C1658",
+    titre: "Défaut de l'étrier de frein motorisé gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Variante du défaut sur l'étrier de frein motorisé côté gauche.",
+    causes: [
+      { pourcentage: 40, libelle: "Étrier motorisé gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'étrier endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé (corrosion, usure)" },
+      { pourcentage: 10, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Un défaut sur cet étrier motorisé peut empêcher le serrage correct du frein de parking électrique de ce côté.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "U1149",
+    titre: "Défaut du calculateur de boîte automatique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — boîte automatique concernée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur de la boîte de vitesses automatique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de boîte automatique défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé ou pollué par l'huile" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules à boîte automatique.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U115D",
+    titre: "Défaut du sélecteur de mode de contrôle de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le sélecteur qui permet de choisir le mode de contrôle de traction (normal, neige, sport selon les modèles).",
+    causes: [
+      { pourcentage: 38, libelle: "Sélecteur de mode défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le sélecteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du sélecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "L'ESP standard reste actif — seul le choix du mode spécifique est affecté par ce défaut.",
+    pieces: [
+      { nom: "Sélecteur mode conduite", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "P0607",
+    titre: "Défaut du calculateur ABS/ESP (module de performance)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de son module de performance interne, ce code générique étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "Connecteur du calculateur mal enfiché" },
+    ],
+    avisPro:
+      "Un défaut interne au module nécessite généralement un remplacement du calculateur après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P062F",
+    titre: "Défaut de la mémoire EEPROM (norme OBD)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur ABS/ESP concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur sa mémoire EEPROM, ce code étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant sur sa mémoire EEPROM" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation ayant corrompu la mémoire" },
+      { pourcentage: 18, libelle: "Perturbation électrique externe" },
+      { pourcentage: 12, libelle: "Erreur lors d'une programmation précédente" },
+    ],
+    avisPro:
+      "Un défaut de mémoire EEPROM nécessite généralement une reprogrammation complète, voire un remplacement du calculateur.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P06B1",
+    titre: "Défaut de l'alimentation électrique des capteurs",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs capteurs affectés",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur une ligne d'alimentation partagée par plusieurs capteurs, ce code étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation partagée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Un des capteurs alimentés en court-circuit" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs tombent en panne simultanément, cette alimentation partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "P160F",
+    titre: "Défaut de référence d'homologation",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur ABS/ESP détecte une incohérence sur la référence d'homologation enregistrée, généralement après un remplacement avec une référence incompatible.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur remplacé avec une référence d'homologation incompatible" },
+      { pourcentage: 28, libelle: "Configuration incorrecte après remplacement" },
+      { pourcentage: 17, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la référence du calculateur installé correspond bien à celle préconisée pour ce modèle précis de véhicule.",
+    pieces: [
+      { nom: "Diagnostic référence calculateur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "P1702",
+    titre: "Verrouillage d'alimentation non effectué",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — procédure de programmation incomplète",
+    description:
+      "Le calculateur ABS/ESP détecte que la procédure de verrouillage d'alimentation (power latch), nécessaire après une programmation, n'a pas été effectuée.",
+    causes: [
+      { pourcentage: 42, libelle: "Procédure de programmation incomplète" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation pendant la procédure" },
+      { pourcentage: 18, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 12, libelle: "Outil de diagnostic ayant rencontré un problème" },
+    ],
+    avisPro:
+      "Une reprise complète de la procédure de programmation, batterie stabilisée par un chargeur, résout généralement ce défaut.",
+    pieces: [
+      { nom: "Reprogrammation calculateur ABS/ESP (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "P17E0",
+    titre: "Défaut du calculateur (générique OBD)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur ABS/ESP signale une défaillance générale, ce code générique étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "P2670",
+    titre: "Défaut de l'alimentation 5 volts des capteurs n°2",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs capteurs affectés",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur la deuxième ligne d'alimentation 5 volts partagée par plusieurs capteurs.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation 5V partagée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Un des capteurs alimentés en court-circuit" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs tombent en panne simultanément, cette alimentation 5V partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs 5V (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C0001",
+    titre: "Électrovanne de commutation 1 (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie sur la première électrovanne de commutation du circuit hydraulique de freinage actif, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de commutation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ces électrovannes de commutation isolent les circuits de freinage.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0002",
+    titre: "Électrovanne de commutation 2 (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie sur la deuxième électrovanne de commutation, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de commutation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ces électrovannes de commutation isolent les circuits de freinage.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0003",
+    titre: "Électrovanne de limitation 1 (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie sur la première électrovanne de limitation de pression, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de limitation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette électrovanne limite la pression maximale appliquée par l'ESP.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C0004",
+    titre: "Électrovanne de limitation 2 (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie sur la deuxième électrovanne de limitation de pression, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de limitation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Cette électrovanne limite la pression maximale appliquée par l'ESP.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C006B",
+    titre: "Contrôle du système de stabilité",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — événement de contrôle, pas une panne",
+    description:
+      "Le calculateur ESP enregistre un événement lié à un contrôle automatique de son système de stabilité, un code informatif dans la majorité des cas.",
+    causes: [
+      { pourcentage: 55, libelle: "Autocontrôle système normal enregistré" },
+      { pourcentage: 30, libelle: "Capteur ayant échoué à un test d'autocontrôle" },
+      { pourcentage: 15, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce code accompagne souvent un autre défaut plus précis — à analyser en priorité avec les autres codes présents.",
+    pieces: [
+      { nom: "Diagnostic approfondi ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C0501",
+    titre: "Défaut du signal du capteur de vitesse de roue avant gauche (norme générique, variante A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut générique sur le signal du capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0502",
+    titre: "Défaut du signal du capteur de vitesse de roue avant gauche (norme générique, variante B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0503",
+    titre: "Défaut du signal du capteur de vitesse de roue avant gauche (norme générique, variante C)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0507",
+    titre: "Défaut du signal du capteur de vitesse de roue avant droite (norme générique, variante A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut générique sur le signal du capteur de vitesse de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0508",
+    titre: "Défaut du signal du capteur de vitesse de roue avant droite (norme générique, variante B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0509",
+    titre: "Défaut du signal du capteur de vitesse de roue avant droite (norme générique, variante C)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C050D",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière gauche (norme générique, variante A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut générique sur le signal du capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C050E",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière gauche (norme générique, variante B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C050F",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière gauche (norme générique, variante C)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0510",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière gauche (norme générique, variante D)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0513",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière droite (norme générique, variante A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante du défaut générique sur le signal du capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0514",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière droite (norme générique, variante B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0515",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière droite (norme générique, variante C)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0516",
+    titre: "Défaut du signal du capteur de vitesse de roue arrière droite (norme générique, variante D)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante du défaut générique sur le signal du capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C051A",
+    titre: "Capteur de vitesse de roue arrière gauche (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP signale un défaut général sur le capteur de vitesse de la roue arrière gauche, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C051B",
+    titre: "Capteur de vitesse de roue arrière droite (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Le calculateur ABS/ESP signale un défaut général sur le capteur de vitesse de la roue arrière droite, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C051C",
+    titre: "Défaut du capteur gyromètre-accéléromètre du contrôle dynamique de stabilité",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le capteur gyromètre-accéléromètre dédié au contrôle dynamique de stabilité.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur gyromètre-accéléromètre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du système.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C052B",
+    titre: "Pompe de recirculation (norme générique, variante A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Variante du défaut générique sur la pompe de recirculation hydraulique.",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe de recirculation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la pompe endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'ESP.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C052C",
+    titre: "Pompe de recirculation (norme générique, variante B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Autre variante du défaut générique sur la pompe de recirculation hydraulique.",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe de recirculation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la pompe endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'ESP.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C052F",
+    titre: "Défaut de l'alimentation de la pompe de recirculation (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'alimentation électrique de la pompe de recirculation, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage d'alimentation de la pompe endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit de la pompe grillé" },
+      { pourcentage: 22, libelle: "Pompe de recirculation défaillante" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'ESP — un défaut d'alimentation désactive généralement l'ensemble des deux systèmes.",
+    pieces: [
+      { nom: "Fusible circuit pompe ABS/ESP", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "C053C",
+    titre: "Défaut général des capteurs de vitesse de roue (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale touchant plusieurs capteurs de vitesse de roue, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 36, libelle: "Plusieurs capteurs de vitesse défaillants ou encrassés" },
+      { pourcentage: 28, libelle: "Câblage commun aux capteurs endommagé" },
+      { pourcentage: 22, libelle: "Alimentation partagée des capteurs défaillante" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs de vitesse tombent en panne simultanément, une alimentation ou un câblage partagé est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs vitesse (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C053D",
+    titre: "Défaut du capteur de pression du circuit de freinage (norme générique, variante A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Variante du défaut générique sur le capteur de pression du circuit de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C053E",
+    titre: "Défaut du capteur de pression du circuit de freinage (norme générique, variante B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Autre variante du défaut générique sur le capteur de pression du circuit de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C053F",
+    titre: "Défaut du capteur de pression du circuit de freinage (norme générique, variante C)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Autre variante du défaut générique sur le capteur de pression du circuit de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C0540",
+    titre: "Défaut du capteur de pression du circuit de freinage (norme générique, variante D)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Autre variante du défaut générique sur le capteur de pression du circuit de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C0548",
+    titre: "Défaut du capteur de dépression du circuit de freinage (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Le calculateur détecte une anomalie sur le capteur de dépression du circuit de freinage, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de dépression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Fuite dans le circuit de dépression" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale plus important que d'habitude peut accompagner ce défaut — à vérifier avant tout trajet.",
+    pieces: [
+      { nom: "Capteur pression pompe à vide", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C0552",
+    titre: "Défaut du capteur d'accélération longitudinale (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le capteur d'accélération longitudinale, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'accélération longitudinale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur, souvent intégré au module gyroscope-accéléromètre, est utilisé pour affiner les fonctions ESP sur pente ou forte accélération.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C0555",
+    titre: "Capteur de vitesse de roue avant gauche (norme générique, variante finale)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0556",
+    titre: "Capteur de vitesse de roue avant droite (norme générique, variante finale)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0557",
+    titre: "Capteur de vitesse de roue arrière gauche (norme générique, variante finale)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0558",
+    titre: "Capteur de vitesse de roue arrière droite (norme générique, variante finale)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0563",
+    titre: "Défaut du programme électronique de stabilité (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP désactivé",
+    description:
+      "Le calculateur détecte une défaillance générale du programme électronique de stabilité, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 28, libelle: "Capteur essentiel à l'ESP défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé sur un circuit clé de l'ESP" },
+      { pourcentage: 12, libelle: "Alimentation du calculateur défaillante" },
+    ],
+    avisPro:
+      "Ce code générique confirme une désactivation de l'ESP — croiser avec les autres codes présents.",
+    pieces: [
+      { nom: "Diagnostic système ESP complet (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C0609",
+    titre: "Défaut du contacteur de frein à main",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — information de frein à main affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le contacteur qui signale l'état du frein à main (manuel ou électrique).",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de frein à main défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un témoin de frein à main qui reste allumé ou ne s'allume jamais peut accompagner ce défaut.",
+    pieces: [
+      { nom: "Contacteur frein à main", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "C120F",
+    titre: "Défaut du système de pression du servofrein",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Le calculateur détecte une anomalie générale sur le système de pression du servofrein électronique.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression du servofrein défaillant" },
+      { pourcentage: 28, libelle: "Servofrein lui-même défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale plus important que d'habitude confirme généralement ce type de défaut — à traiter rapidement.",
+    pieces: [
+      { nom: "Diagnostic système servofrein (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C138A",
+    titre: "Défaut de l'alimentation d'urgence de la pompe ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le circuit d'alimentation d'urgence de la pompe hydraulique, une réserve utilisée pour garantir le freinage assisté en cas de défaillance de l'alimentation principale.",
+    causes: [
+      { pourcentage: 38, libelle: "Circuit d'alimentation d'urgence défaillant" },
+      { pourcentage: 28, libelle: "Batterie ou câblage principal en cause" },
+      { pourcentage: 22, libelle: "Composant de réserve d'énergie défaillant" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce circuit de secours est une mesure de sécurité importante — un diagnostic rapide est recommandé même sans symptôme visible au quotidien.",
+    pieces: [
+      { nom: "Diagnostic circuit alimentation pompe ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1511",
+    titre: "Défaut du capteur de couple principal",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination ESP affectée",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le capteur de couple principal, utilisé pour certaines fonctions de coordination du système de stabilité.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de couple défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter la précision de certaines interventions ESP nécessitant une information de couple.",
+    pieces: [
+      { nom: "Diagnostic capteur de couple (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1548",
+    titre: "Défaut des actionneurs du frein de parking électrique (FSE)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie générale touchant les deux actionneurs simultanément.",
+    causes: [
+      { pourcentage: 36, libelle: "Alimentation partagée des actionneurs défaillante" },
+      { pourcentage: 28, libelle: "Câblage commun aux deux actionneurs endommagé" },
+      { pourcentage: 22, libelle: "Calculateur EPB défaillant" },
+      { pourcentage: 14, libelle: "Les deux actionneurs défaillants simultanément" },
+    ],
+    avisPro:
+      "Quand les deux actionneurs sont en défaut simultanément, une alimentation ou un câblage commun est souvent la cause plutôt qu'une double panne mécanique.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0076",
+    titre: "Défaut du réseau CAN suspensions et roues",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication châssis affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le bus CAN dédié aux suspensions et aux roues, selon une codification alternative.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du bus CAN suspensions/roues endommagé" },
+      { pourcentage: 28, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 22, libelle: "Un équipement du réseau en défaut" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter plusieurs calculateurs liés au châssis simultanément.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN châssis (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U13A2",
+    titre: "Défaut de communication CAN avec le levier de vitesses séquentiel",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — boîte séquentielle uniquement",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le levier de vitesses séquentiel, sur les véhicules équipés de cette commande.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le levier endommagé" },
+      { pourcentage: 28, libelle: "Levier séquentiel défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés d'un levier séquentiel — sans impact sur l'ABS/ESP de base.",
+    pieces: [
+      { nom: "Diagnostic levier séquentiel (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "U111D",
+    titre: "Défaut de communication avec le calculateur d'aide au stationnement",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aide au stationnement affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur d'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'aide au stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver l'aide au stationnement sans affecter le freinage ABS/ESP de base.",
+    pieces: [
+      { nom: "Diagnostic aide au stationnement (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U112A",
+    titre: "Défaut de communication CAN avec le levier de vitesses séquentiel (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — boîte séquentielle uniquement",
+    description:
+      "Variante du défaut de communication avec le levier de vitesses séquentiel.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le levier endommagé" },
+      { pourcentage: 28, libelle: "Levier séquentiel défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés d'un levier séquentiel.",
+    pieces: [
+      { nom: "Diagnostic levier séquentiel (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "U11A2",
+    titre: "Défaut de communication CAN avec le levier de vitesses séquentiel (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — boîte séquentielle uniquement",
+    description:
+      "Autre variante du défaut de communication avec le levier de vitesses séquentiel.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le levier endommagé" },
+      { pourcentage: 28, libelle: "Levier séquentiel défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés d'un levier séquentiel.",
+    pieces: [
+      { nom: "Diagnostic levier séquentiel (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "U12F0",
+    titre: "Défaut de communication CAN avec le calculateur de contrôle dynamique de stabilité",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication CAN avec un module dédié au contrôle dynamique de stabilité, distinct du calculateur principal.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Module de contrôle dynamique défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive généralement l'ESP dans son intégralité — un diagnostic réseau complet est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C141E",
+    titre: "Défaut du système de stationnement semi-automatique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aide au stationnement affectée",
+    description:
+      "Le calculateur détecte une anomalie générale sur le système de stationnement semi-automatique, qui aide à braquer automatiquement lors d'une manœuvre.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Moteur de direction assistée défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du système défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive uniquement l'assistance semi-automatique — le stationnement manuel reste possible avec la direction assistée classique.",
+    pieces: [
+      { nom: "Diagnostic stationnement semi-automatique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C141F",
+    titre: "Défaut du système de stationnement semi-automatique (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aide au stationnement affectée",
+    description:
+      "Variante du défaut général sur le système de stationnement semi-automatique.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Moteur de direction assistée défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du système défaillant" },
+    ],
+    avisPro:
+      "Le stationnement manuel reste possible avec la direction assistée classique.",
+    pieces: [
+      { nom: "Diagnostic stationnement semi-automatique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1420",
+    titre: "Défaut du système de stationnement semi-automatique (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aide au stationnement affectée",
+    description:
+      "Autre variante du défaut général sur le système de stationnement semi-automatique.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Moteur de direction assistée défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du système défaillant" },
+    ],
+    avisPro:
+      "Le stationnement manuel reste possible avec la direction assistée classique.",
+    pieces: [
+      { nom: "Diagnostic stationnement semi-automatique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U3FFF",
+    titre: "Problème de réception du mot d'état de réveil pour le desserrage automatique du frein de parking électrique (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — frein de parking électrique affecté",
+    description:
+      "Autre variante du défaut de réception du mot d'état lié à la fonction de desserrage automatique du frein de parking électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur du frein de parking électrique défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un desserrage manuel via le bouton reste généralement possible.",
+    pieces: [
+      { nom: "Diagnostic frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C051D",
+    titre: "Défaut du capteur de lacet (norme générique alternative)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le capteur de lacet, selon une codification générique alternative.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "P05FF",
+    titre: "Incohérence entre le capteur de pression de freinage et le capteur de position de pédale",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence de freinage affectée",
+    description:
+      "Le calculateur détecte une incohérence entre la valeur du capteur de pression du système de freinage et celle du capteur de position de la pédale de frein.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de pédale défaillant" },
+      { pourcentage: 28, libelle: "Capteur de pression de freinage défaillant" },
+      { pourcentage: 22, libelle: "Câblage de l'un des deux circuits endommagé" },
+      { pourcentage: 14, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Cette comparaison croisée entre deux capteurs est une mesure de sécurité — une incohérence doit être diagnostiquée rapidement.",
+    pieces: [
+      { nom: "Diagnostic capteurs freinage (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P0555",
+    titre: "Défaut du capteur de pression du circuit de freinage (norme OBD)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le capteur de pression du circuit de freinage, ce code étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "P05E0",
+    titre: "Incohérence détectée entre les deux capteurs de freinage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence de freinage affectée",
+    description:
+      "Le calculateur détecte une incohérence entre les valeurs de deux capteurs redondants du système de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Un des deux capteurs de freinage défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'un des deux circuits endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé sur l'un des capteurs" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "La redondance de ces capteurs est une mesure de sécurité — une incohérence entre eux doit être diagnostiquée rapidement.",
+    pieces: [
+      { nom: "Diagnostic capteurs freinage (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C0042",
+    titre: "Défaut du signal principal du contacteur de frein",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — information de freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal principal du contacteur de pédale de frein, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de pédale de frein défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver les feux stop ou des aides comme l'assistance au freinage d'urgence.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C0043",
+    titre: "Défaut du signal redondant du contacteur de frein",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — redondance de sécurité affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal redondant (de secours) du contacteur de pédale de frein.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de pédale de frein défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce signal redondant est une sécurité en cas de panne du signal principal — un défaut ici doit être traité même si les feux stop fonctionnent encore.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C0075",
+    titre: "Défaut du capteur de pédale de frein",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — information de freinage affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le capteur de la pédale de frein, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de pédale de frein défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur mesure la position de la pédale pour évaluer l'intensité de freinage demandée.",
+    pieces: [
+      { nom: "Capteur pédale de frein", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C0547",
+    titre: "Défaut du capteur de dépression du circuit de freinage (norme générique, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Variante du défaut sur le capteur de dépression du circuit de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de dépression défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Fuite dans le circuit de dépression" },
+      { pourcentage: 12, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale plus important que d'habitude peut accompagner ce défaut.",
+    pieces: [
+      { nom: "Capteur pression pompe à vide", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "U1146",
+    titre: "Absence de communication avec le calculateur superviseur de la chaîne de traction électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules électriques",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le calculateur superviseur de la chaîne de traction électrique, sur les modèles hybrides ou électriques.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides ou électriques — un diagnostic spécialisé pour la chaîne de traction est recommandé.",
+    pieces: [
+      { nom: "Diagnostic chaîne électrique/hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U1306",
+    titre: "Défaut de communication avec le calculateur superviseur de la chaîne hybride sur le réseau CAN hybride",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur superviseur de la chaîne hybride, sur le réseau CAN dédié à la motorisation hybride.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur hybride défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN hybride endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U132A",
+    titre: "Défaut du levier de vitesses séquentiel sur le réseau CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — boîte séquentielle uniquement",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur les données transmises par le levier de vitesses séquentiel via le réseau CAN.",
+    causes: [
+      { pourcentage: 36, libelle: "Levier séquentiel défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le levier endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés d'un levier séquentiel.",
+    pieces: [
+      { nom: "Diagnostic levier séquentiel (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "P0C04",
+    titre: "Défaut du calculateur (norme OBD hybride/électrique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur détecte une défaillance générale, ce code étant partagé avec le standard OBD-II utilisé notamment sur les véhicules hybrides et électriques.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C056D",
+    titre: "Défaut du capteur de position de la pédale de frein (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — information de freinage affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le capteur de position de la pédale de frein, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de pédale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur mesure la position de la pédale pour évaluer l'intensité de freinage demandée.",
+    pieces: [
+      { nom: "Capteur pédale de frein", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "C056E",
+    titre: "Défaut du capteur de position de la pédale de frein (norme générique, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — information de freinage affectée",
+    description:
+      "Variante du défaut sur le capteur de position de la pédale de frein.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de pédale défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur mesure la position de la pédale pour évaluer l'intensité de freinage demandée.",
+    pieces: [
+      { nom: "Capteur pédale de frein", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "U0103",
+    titre: "Absence de communication avec le levier sélecteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — boîte automatique concernée",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le levier sélecteur de vitesses, sur les véhicules à boîte automatique.",
+    causes: [
+      { pourcentage: 36, libelle: "Levier sélecteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le levier endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules à boîte automatique.",
+    pieces: [
+      { nom: "Diagnostic levier sélecteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U0115",
+    titre: "Défaut de communication CAN avec le calculateur de gestion moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coordination moteur/freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication sur le réseau CAN avec le calculateur de gestion moteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur de vitesse et l'antipatinage.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U01B4",
+    titre: "Absence de communication avec le calculateur amplificateur de freinage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage affectée",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le calculateur qui gère l'amplificateur de freinage électrique, présent sur certains modèles à servofrein électronique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur amplificateur de freinage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut augmenter l'effort nécessaire à la pédale de frein — un diagnostic rapide est recommandé.",
+    pieces: [
+      { nom: "Diagnostic amplificateur de freinage électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0293",
+    titre: "Absence de communication avec le calculateur superviseur de la chaîne de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur ABS/ESP ne parvient plus à dialoguer avec le calculateur superviseur de la chaîne de traction hybride.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0294",
+    titre: "Défaut de communication avec le calculateur superviseur de la chaîne de traction électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules électriques",
+    description:
+      "Variante du défaut de communication avec le calculateur superviseur de la chaîne de traction, sur les véhicules électriques.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules électriques.",
+    pieces: [
+      { nom: "Diagnostic chaîne électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0301",
+    titre: "Défaut du CAN intersystèmes avec le calculateur de gestion moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coordination moteur/freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le réseau CAN intersystèmes concernant spécifiquement le calculateur de gestion moteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du CAN intersystèmes endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver le régulateur de vitesse et l'antipatinage.",
+    pieces: [
+      { nom: "Diagnostic réseau intersystèmes (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U0302",
+    titre: "Défaut du CAN intersystèmes avec le calculateur de boîte de vitesses",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — boîte automatique concernée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le réseau CAN intersystèmes concernant spécifiquement le calculateur de boîte de vitesses.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du CAN intersystèmes endommagé" },
+      { pourcentage: 28, libelle: "Calculateur de boîte de vitesses défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules à boîte automatique.",
+    pieces: [
+      { nom: "Diagnostic réseau intersystèmes (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U034B",
+    titre: "Défaut du CAN intersystèmes avec le calculateur amplificateur de freinage électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le réseau CAN intersystèmes concernant le calculateur de l'amplificateur de freinage électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du CAN intersystèmes endommagé" },
+      { pourcentage: 28, libelle: "Calculateur amplificateur de freinage défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut augmenter l'effort nécessaire à la pédale de frein sur les modèles équipés d'un servofrein électronique.",
+    pieces: [
+      { nom: "Diagnostic amplificateur de freinage électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0402",
+    titre: "Défaut de communication avec le calculateur de boîte de vitesses",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — boîte automatique concernée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication générale avec le calculateur de la boîte de vitesses.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur de boîte de vitesses défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé ou pollué par l'huile" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules à boîte automatique.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U0422",
+    titre: "Défaut de communication CAN avec le BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication réseau affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication sur le réseau CAN avec le BSI.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication peut masquer d'autres codes du BSI devenu injoignable.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U0594",
+    titre: "Défaut de communication avec le calculateur superviseur de la chaîne de traction hybride",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur superviseur de la chaîne de traction hybride.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur superviseur hybride défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U04B5",
+    titre: "Défaut CAN du calculateur amplificateur de freinage électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage affectée",
+    description:
+      "Variante du défaut sur le réseau CAN concernant le calculateur de l'amplificateur de freinage électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur amplificateur de freinage défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut augmenter l'effort nécessaire à la pédale de frein.",
+    pieces: [
+      { nom: "Diagnostic amplificateur de freinage électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "U0322",
+    titre: "Défaut de communication CAN avec le BSI (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication réseau affectée",
+    description:
+      "Variante du défaut de communication sur le réseau CAN avec le BSI.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication peut masquer d'autres codes du BSI devenu injoignable.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U135D",
+    titre: "Défaut du contrôle de traction plus (réseau CAN)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — antipatinage renforcé affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie réseau liée à la fonction de contrôle de traction renforcé (traction plus), un mode adapté aux terrains difficiles.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur ou ESP défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Capteur essentiel à la fonction défaillant" },
+    ],
+    avisPro:
+      "L'ESP standard reste actif — seul le mode renforcé pour terrain difficile est désactivé par ce défaut.",
+    pieces: [
+      { nom: "Diagnostic mode traction renforcée (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C0203",
+    titre: "Défaut du signal du capteur de vitesse de roue avant gauche (norme générique, variante finale)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le signal du capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C0047",
+    titre: "Défaut du signal du capteur de pression de freinage (norme générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le signal du capteur de pression de freinage, selon la codification générique standard.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression de freinage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C1120",
+    titre: "Défaut du capteur de vitesse de roue (générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP concerné",
+    description:
+      "Le calculateur ABS/ESP signale une anomalie générale sur un capteur de vitesse de roue, sans précision automatique de la roue exacte.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quelle roue exacte est concernée par ce défaut générique.",
+    pieces: [
+      { nom: "Diagnostic capteurs vitesse de roue (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1440",
+    titre: "Défaut de configuration du véhicule",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale de configuration du véhicule, généralement après une intervention ou un remplacement de pièce sans recodage.",
+    causes: [
+      { pourcentage: 42, libelle: "Configuration non mise à jour après une intervention" },
+      { pourcentage: 28, libelle: "Équipement remplacé sans recodage" },
+      { pourcentage: 18, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention récente sur le système ABS/ESP, un recodage via l'outil de diagnostic évite ce type de défaut.",
+    pieces: [
+      { nom: "Diagnostic et recodage ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "C1570",
+    titre: "Défaut de dépression dans le servofrein (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Variante du défaut de dépression insuffisante dans l'unité d'assistance au freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à vide défaillante ou fuite dans le circuit de dépression" },
+      { pourcentage: 28, libelle: "Durite de dépression fissurée ou débranchée" },
+      { pourcentage: 22, libelle: "Clapet anti-retour du servofrein défaillant" },
+      { pourcentage: 12, libelle: "Servofrein lui-même défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale nettement plus important que d'habitude confirme généralement ce défaut.",
+    pieces: [
+      { nom: "Durite de dépression servofrein", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "C1571",
+    titre: "Défaut de dépression dans le servofrein (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Autre variante du défaut de dépression insuffisante dans l'unité d'assistance au freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à vide défaillante ou fuite dans le circuit de dépression" },
+      { pourcentage: 28, libelle: "Durite de dépression fissurée ou débranchée" },
+      { pourcentage: 22, libelle: "Clapet anti-retour du servofrein défaillant" },
+      { pourcentage: 12, libelle: "Servofrein lui-même défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale nettement plus important que d'habitude confirme généralement ce défaut.",
+    pieces: [
+      { nom: "Durite de dépression servofrein", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "C1572",
+    titre: "Défaut de dépression dans le servofrein (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Autre variante du défaut de dépression insuffisante dans l'unité d'assistance au freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à vide défaillante ou fuite dans le circuit de dépression" },
+      { pourcentage: 28, libelle: "Durite de dépression fissurée ou débranchée" },
+      { pourcentage: 22, libelle: "Clapet anti-retour du servofrein défaillant" },
+      { pourcentage: 12, libelle: "Servofrein lui-même défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale nettement plus important que d'habitude confirme généralement ce défaut.",
+    pieces: [
+      { nom: "Durite de dépression servofrein", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "C1573",
+    titre: "Défaut de dépression dans le servofrein (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — assistance au freinage compromise",
+    description:
+      "Autre variante du défaut de dépression insuffisante dans l'unité d'assistance au freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe à vide défaillante ou fuite dans le circuit de dépression" },
+      { pourcentage: 28, libelle: "Durite de dépression fissurée ou débranchée" },
+      { pourcentage: 22, libelle: "Clapet anti-retour du servofrein défaillant" },
+      { pourcentage: 12, libelle: "Servofrein lui-même défaillant" },
+    ],
+    avisPro:
+      "Un effort de pédale nettement plus important que d'habitude confirme généralement ce défaut.",
+    pieces: [
+      { nom: "Durite de dépression servofrein", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "C141B",
+    titre: "Défaut du circuit électrique de commande de l'étrier de frein motorisé gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie sur le circuit électrique de commande de l'étrier motorisé gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers l'étrier gauche endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'étrier oxydé" },
+      { pourcentage: 22, libelle: "Étrier motorisé gauche défaillant" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Ce défaut électrique nécessite un contrôle de continuité du câblage avant de suspecter l'étrier lui-même.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique gauche", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C141C",
+    titre: "Défaut du circuit électrique de commande de l'étrier de frein motorisé droit",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — frein de parking électrique affecté",
+    description:
+      "Le calculateur du frein de parking électrique détecte une anomalie sur le circuit électrique de commande de l'étrier motorisé droit.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers l'étrier droit endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'étrier oxydé" },
+      { pourcentage: 22, libelle: "Étrier motorisé droit défaillant" },
+      { pourcentage: 12, libelle: "Calculateur EPB défaillant" },
+    ],
+    avisPro:
+      "Ce défaut électrique nécessite un contrôle de continuité du câblage avant de suspecter l'étrier lui-même.",
+    pieces: [
+      { nom: "Étrier frein de parking électrique droit", boutique: "Pièces auto en ligne", prix: "150-280€" },
+    ],
+  },
+  {
+    code: "C141D",
+    titre: "Défaut interne du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur du frein de parking électrique signale une défaillance interne générale.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur EPB défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur frein de parking électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C15FF",
+    titre: "Défaut interne du calculateur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Variante du défaut interne général du calculateur.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Un défaut interne au calculateur nécessite généralement un remplacement après confirmation par plusieurs lectures.",
+    pieces: [
+      { nom: "Diagnostic calculateur ABS/ESP (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "P0652",
+    titre: "Défaut de l'alimentation 5 volts",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs capteurs affectés",
+    description:
+      "Le calculateur détecte une anomalie sur une ligne d'alimentation 5 volts partagée par plusieurs capteurs, ce code étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation 5V" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Un des capteurs alimentés en court-circuit" },
+      { pourcentage: 14, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs tombent en panne simultanément, cette alimentation 5V partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs 5V (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "P0701",
+    titre: "Défaut de la commande de l'actionneur de sélection de rapport",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — boîte automatique concernée",
+    description:
+      "Le calculateur détecte une anomalie sur la commande de l'actionneur qui sélectionne les rapports de la boîte de vitesses automatique.",
+    causes: [
+      { pourcentage: 36, libelle: "Actionneur de sélection défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Calculateur de boîte automatique défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules à boîte automatique — un diagnostic de la transmission est recommandé.",
+    pieces: [
+      { nom: "Diagnostic boîte automatique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "U1141",
+    titre: "Défaut de communication avec le module d'accès mains libres (SDCM)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — accès mains libres affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le module d'accès et de démarrage mains libres (SDCM).",
+    causes: [
+      { pourcentage: 36, libelle: "Module SDCM défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter le démarrage mains libres — la clé physique de secours reste généralement disponible.",
+    pieces: [
+      { nom: "Diagnostic module accès mains libres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U12A2",
+    titre: "Défaut de communication CAN avec le levier de vitesses séquentiel (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — boîte séquentielle uniquement",
+    description:
+      "Autre variante du défaut de communication avec le levier de vitesses séquentiel.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le levier endommagé" },
+      { pourcentage: 28, libelle: "Levier séquentiel défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les véhicules équipés d'un levier séquentiel.",
+    pieces: [
+      { nom: "Diagnostic levier séquentiel (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "U13F0",
+    titre: "Défaut de communication avec le calculateur d'airbag",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coordination sécurité passive affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie de communication avec le calculateur de sécurité passive (airbag), utilisée pour certaines fonctions croisées de sécurité.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur airbag défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur ABS/ESP oxydé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication mérite un diagnostic croisé entre les deux systèmes de sécurité.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "U2107",
+    titre: "Défaut du calculateur de contrôle de stabilité ESP (variante réseau)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le réseau du véhicule détecte une défaillance générale rapportée par le calculateur de contrôle de stabilité ESP.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Câblage réseau endommagé" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1544",
+    titre: "Frein de parking électrique inhibé pour changement de plaquettes",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — mode maintenance actif, pas une panne",
+    description:
+      "Le calculateur du frein de parking électrique signale que le système est volontairement inhibé pour permettre le changement des plaquettes de frein arrière.",
+    causes: [
+      { pourcentage: 55, libelle: "Mode maintenance activé volontairement pour une intervention" },
+      { pourcentage: 30, libelle: "Mode maintenance non désactivé après l'intervention" },
+      { pourcentage: 15, libelle: "Calculateur EPB défaillant, bloqué dans ce mode" },
+    ],
+    avisPro:
+      "Ce mode doit être désactivé après toute intervention sur les plaquettes arrière — sinon le frein de parking électrique reste inactif.",
+    pieces: [
+      { nom: "Désactivation mode maintenance EPB (atelier équipé)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "P3131",
+    titre: "Défaut du calculateur de contrôle de stabilité ESP (norme OBD)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur en cause",
+    description:
+      "Le calculateur ESP signale une défaillance générale, ce code étant partagé avec le standard OBD-II.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur ESP défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément la cause exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi ABS/ESP (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "C1224",
+    titre: "Défaut du signal de régime du moteur thermique",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination moteur/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur le signal de régime du moteur thermique transmis via le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 28, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 22, libelle: "Capteur de régime moteur défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter des fonctions de coordination moteur/freinage.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "C1227",
+    titre: "Défaut de l'électrovanne de commande 1 (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Variante du défaut sur la première électrovanne de commande du freinage actif ESP.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de commande défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ces électrovannes de commande sont utilisées par l'ESP pour freiner une roue spécifique sans action du conducteur.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1228",
+    titre: "Défaut de l'électrovanne de commande 2 (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ESP affectée",
+    description:
+      "Variante du défaut sur la deuxième électrovanne de commande du freinage actif ESP.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne de commande défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Comme pour l'électrovanne associée, un défaut ici peut affecter la capacité de l'ESP à freiner une roue de manière indépendante.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1244",
+    titre: "Défaut du capteur de décélération",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le capteur de décélération, utilisé pour évaluer l'intensité du freinage en cours.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de décélération défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur, souvent intégré au module gyroscope-accéléromètre, est utilisé pour évaluer l'intensité des décélérations.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1249",
+    titre: "Défaut du contacteur de feux stop (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — feux stop et aides au freinage affectés",
+    description:
+      "Variante générique du défaut sur le contacteur de feux stop.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de feux stop défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé ou mal réglé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver les feux stop en plus de certaines aides comme l'assistance au freinage d'urgence.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C1271",
+    titre: "Capteur de vitesse de roue avant droite (variante générique A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante générique du défaut sur le capteur de vitesse de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1275",
+    titre: "Capteur de vitesse de roue avant droite (variante générique B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1464",
+    titre: "Capteur de vitesse de roue avant droite (variante générique C)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1272",
+    titre: "Capteur de vitesse de roue avant gauche (variante générique A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante générique du défaut sur le capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1465",
+    titre: "Capteur de vitesse de roue avant gauche (variante générique B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue avant gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1277",
+    titre: "Capteur de vitesse de roue arrière droite (variante générique A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante générique du défaut sur le capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1466",
+    titre: "Capteur de vitesse de roue arrière droite (variante générique B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière droite", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1333",
+    titre: "Capteur de vitesse de roue arrière gauche (variante générique A)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Variante générique du défaut sur le capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1467",
+    titre: "Capteur de vitesse de roue arrière gauche (variante générique B)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ABS/ESP partiellement désactivé",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de vitesse de roue défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Couronne dentée (cible) endommagée ou sale" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur et de sa cible dentée résout une part significative de ces défauts.",
+    pieces: [
+      { nom: "Capteur vitesse roue arrière gauche", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "C1281",
+    titre: "Défaut du capteur de pression de freinage (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — assistance au freinage affectée",
+    description:
+      "Variante générique du défaut sur le capteur de pression de freinage.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de pression de freinage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé par l'ESP pour évaluer l'intensité du freinage demandé par le conducteur.",
+    pieces: [
+      { nom: "Capteur de pression de freinage", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "C1288",
+    titre: "Configuration du véhicule incorrecte",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le calculateur ABS/ESP détecte que la configuration du véhicule enregistrée est incorrecte.",
+    causes: [
+      { pourcentage: 42, libelle: "Configuration erronée saisie lors d'une intervention" },
+      { pourcentage: 28, libelle: "Calculateur remplacé avec une configuration incompatible" },
+      { pourcentage: 18, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une reprogrammation complète de la configuration avec l'outil constructeur corrige généralement ce défaut.",
+    pieces: [
+      { nom: "Configuration calculateur ABS/ESP (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "C1417",
+    titre: "Défaut de l'alimentation positive après contact",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation après contact affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'alimentation positive reçue après la mise du contact.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de la ligne d'alimentation après contact endommagé" },
+      { pourcentage: 28, libelle: "Fusible associé grillé" },
+      { pourcentage: 22, libelle: "Contacteur d'allumage défaillant" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer des redémarrages inattendus du calculateur ABS/ESP.",
+    pieces: [
+      { nom: "Fusible ligne alimentation après contact", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "C1425",
+    titre: "Défaut du contacteur de feux stop (variante générique 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — feux stop et aides au freinage affectés",
+    description:
+      "Autre variante générique du défaut sur le contacteur de feux stop.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de feux stop défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé ou mal réglé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver les feux stop en plus de certaines aides comme l'assistance au freinage d'urgence.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C1426",
+    titre: "Défaut du contacteur de feux stop (variante générique 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — feux stop et aides au freinage affectés",
+    description:
+      "Autre variante générique du défaut sur le contacteur de feux stop.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de feux stop défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé ou mal réglé" },
+      { pourcentage: 14, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver les feux stop en plus de certaines aides comme l'assistance au freinage d'urgence.",
+    pieces: [
+      { nom: "Contacteur pédale de frein", boutique: "Pièces auto en ligne", prix: "15-40€" },
+    ],
+  },
+  {
+    code: "C1428",
+    titre: "Défaut de la pompe de recirculation (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Variante générique du défaut sur la pompe de recirculation hydraulique.",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe de recirculation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la pompe endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 10, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'ESP.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1432",
+    titre: "Défaut du capteur d'angle volant (variante générique 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Autre variante générique du défaut sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur ou toute intervention sur la direction, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1433",
+    titre: "Défaut du capteur d'angle volant (variante générique 5)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Autre variante générique du défaut sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1434",
+    titre: "Défaut du capteur d'angle volant (variante générique 6)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Autre variante générique du défaut sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1439",
+    titre: "Défaut du capteur d'angle volant (variante générique 7)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Autre variante générique du défaut sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1234",
+    titre: "Défaut du capteur de vitesse de lacet (variante générique)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Variante générique du défaut sur le capteur de vitesse de lacet.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1436",
+    titre: "Défaut du capteur de vitesse de lacet (variante générique 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Autre variante générique du défaut sur le capteur de vitesse de lacet.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1441",
+    titre: "Défaut du système de freinage",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de freinage concerné",
+    description:
+      "Le calculateur signale une défaillance générale touchant le système de freinage dans son ensemble, un code de tête nécessitant une lecture complémentaire.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur ABS/ESP défaillant" },
+      { pourcentage: 28, libelle: "Capteur essentiel au freinage défaillant" },
+      { pourcentage: 22, libelle: "Bloc hydraulique défaillant" },
+      { pourcentage: 14, libelle: "Câblage endommagé sur un circuit clé" },
+    ],
+    avisPro:
+      "Ce code générique confirme un problème sur le système de freinage — croiser avec les autres codes présents pour identifier la cause précise.",
+    pieces: [
+      { nom: "Diagnostic système de freinage complet (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1445",
+    titre: "Défaut du capteur d'angle volant (variante générique 8)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Autre variante générique du défaut sur le capteur d'angle du volant.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'angle volant défaillant" },
+      { pourcentage: 28, libelle: "Calibration du capteur incorrecte ou perdue" },
+      { pourcentage: 22, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 14, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de ce capteur, une procédure de calibration est indispensable.",
+    pieces: [
+      { nom: "Capteur angle volant", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "C1448",
+    titre: "Défaut du signal du capteur de vitesse de lacet",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ESP détecte une anomalie sur le signal du capteur de vitesse de lacet.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP — un défaut ici entraîne généralement la désactivation complète du contrôle de stabilité.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1468",
+    titre: "Défaut de l'électrovanne avant droite",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale sur l'électrovanne de la roue avant droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C1469",
+    titre: "Défaut de l'électrovanne avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale sur l'électrovanne de la roue avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C146A",
+    titre: "Défaut de l'électrovanne arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale sur l'électrovanne de la roue arrière droite.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C146B",
+    titre: "Défaut de l'électrovanne arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulation ABS affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale sur l'électrovanne de la roue arrière gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Électrovanne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc hydraulique oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver la fonction ABS sur cette roue spécifiquement.",
+    pieces: [
+      { nom: "Bloc hydraulique ABS/ESP", boutique: "Pièces auto en ligne", prix: "150-350€" },
+    ],
+  },
+  {
+    code: "C146C",
+    titre: "Défaut de l'alimentation du relais de la pompe de recirculation du bloc ABS/ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'alimentation du relais de la pompe de recirculation intégrée au bloc hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage d'alimentation du relais endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit grillé" },
+      { pourcentage: 22, libelle: "Relais de la pompe défaillant" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Cette pompe est essentielle au fonctionnement de l'ABS et de l'ESP.",
+    pieces: [
+      { nom: "Fusible circuit pompe ABS/ESP", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "C146E",
+    titre: "Défaut de l'alimentation du relais des électrovannes ABS/ESP",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — bloc hydraulique affecté",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie sur l'alimentation du relais qui alimente les électrovannes du bloc hydraulique.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage d'alimentation du relais endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit grillé" },
+      { pourcentage: 22, libelle: "Relais des électrovannes défaillant" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Ce relais alimente l'ensemble des électrovannes — un défaut ici désactive généralement tout le système ABS/ESP à la fois.",
+    pieces: [
+      { nom: "Relais alimentation électrovannes ABS", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "C1472",
+    titre: "Défaut du capteur de décélération (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Variante du défaut sur le capteur de décélération.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de décélération défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est utilisé pour évaluer l'intensité des décélérations lors du freinage.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "C1474",
+    titre: "Défaut du capteur accéléromètre",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ESP partiellement affecté",
+    description:
+      "Le calculateur ESP détecte une anomalie générale sur le capteur accéléromètre.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur accéléromètre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur, souvent intégré au module gyroscope-accéléromètre, est utilisé pour affiner les fonctions ESP.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "U0123",
+    titre: "Défaut du capteur de vitesse de lacet (réseau)",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ESP concerné",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie réseau liée au capteur de vitesse de lacet.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de lacet défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur ESP défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est central au fonctionnement de l'ESP.",
+    pieces: [
+      { nom: "Capteur gyroscope-accéléromètre", boutique: "Pièces auto en ligne", prix: "80-160€" },
+    ],
+  },
+  {
+    code: "U0131",
+    titre: "Défaut du capteur de direction assistée",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — coordination direction/ESP affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie réseau liée à un capteur de la direction assistée.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de direction assistée défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de direction assistée défaillant" },
+    ],
+    avisPro:
+      "Un diagnostic de la direction assistée est également recommandé en complément.",
+    pieces: [
+      { nom: "Diagnostic direction assistée électrique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "C1475",
+    titre: "Défaut de la fonction de détection de sous-gonflage des pneus",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte pression pneus affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale sur la fonction de détection de sous-gonflage des pneus par méthode indirecte (via les capteurs de vitesse de roue).",
+    causes: [
+      { pourcentage: 38, libelle: "Un ou plusieurs capteurs de vitesse défaillants" },
+      { pourcentage: 28, libelle: "Fonction non initialisée après changement de pneus" },
+      { pourcentage: 22, libelle: "Pneus de dimensions non conformes" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Tant que ce défaut n'est pas résolu, la pression des pneus doit être contrôlée manuellement de façon régulière.",
+    pieces: [
+      { nom: "Programmation détection sous-gonflage (atelier)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "C2148",
+    titre: "Défaut lié aux pneumatiques",
+    categorie: "psa",
+    categorieLabel: "PSA — ABS/ESP",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — cohérence des pneus affectée",
+    description:
+      "Le calculateur ABS/ESP détecte une anomalie générale liée aux pneumatiques du véhicule, pouvant concerner leur dimension, leur pression ou leur cohérence entre essieux.",
+    causes: [
+      { pourcentage: 38, libelle: "Pneus de dimensions différentes montés sur le véhicule" },
+      { pourcentage: 28, libelle: "Pression des pneus incohérente entre les roues" },
+      { pourcentage: 22, libelle: "Capteur de vitesse faussant la mesure liée aux pneus" },
+      { pourcentage: 12, libelle: "Calculateur ABS/ESP défaillant" },
+    ],
+    avisPro:
+      "Vérifier que les quatre pneus sont conformes aux préconisations constructeur (dimension et pression) avant tout autre diagnostic.",
+    pieces: [
+      { nom: "Diagnostic compatibilité pneumatiques (atelier)", boutique: "Recommandé avant pièce", prix: "30-50€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
