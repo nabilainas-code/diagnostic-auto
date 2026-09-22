@@ -13197,6 +13197,13453 @@ export const codes: CodeDefaut[] = [
       { nom: "Diagnostic module détection ultrasons (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
     ],
   },
+  {
+    code: "F07D",
+    titre: "Défaut sur le réseau CAN — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication réseau perturbée",
+    description:
+      "Le BSI détecte une anomalie générale sur le bus CAN (le réseau qui relie les calculateurs entre eux). Plusieurs équipements peuvent alors devenir intermittents ou indisponibles.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus CAN endommagé ou pincé" },
+      { pourcentage: 25, libelle: "Connecteur d'un calculateur du réseau oxydé" },
+      { pourcentage: 22, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 18, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un défaut CAN généraliste demande un contrôle de la résistance du bus aux deux extrémités avant de suspecter un calculateur précis — c'est souvent plus rapide et moins coûteux qu'un remplacement au hasard.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F52C",
+    titre: "Absence de demande de déverrouillage du calculateur hybride 1 vers le BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Sur les modèles hybrides, le BSI n'a pas reçu du premier calculateur de gestion hybride la demande de déverrouillage nécessaire à son fonctionnement normal.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur hybride 1 en défaut ou non alimenté" },
+      { pourcentage: 30, libelle: "Câblage entre le calculateur hybride et le BSI endommagé" },
+      { pourcentage: 20, libelle: "Problème de mise à jour logicielle du calculateur hybride" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut spécifique aux hybrides nécessite un outil de diagnostic compatible avec la chaîne de traction électrique — un scan générique ne suffit pas toujours à isoler la cause.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F52D",
+    titre: "Absence d'information en provenance du calculateur hybride 1",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — spécifique véhicules hybrides",
+    description:
+      "Le BSI ne reçoit plus aucune donnée du premier calculateur de gestion du système hybride, ce qui peut affecter la coordination entre moteur thermique et moteur électrique.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur hybride 1 hors ligne ou en panne" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du calculateur hybride défaillant" },
+      { pourcentage: 22, libelle: "Coupure d'alimentation du calculateur hybride" },
+      { pourcentage: 13, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une absence totale d'information (plutôt qu'une valeur erronée) oriente d'abord vers une coupure d'alimentation ou de communication plutôt qu'une panne interne du calculateur.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F006",
+    titre: "Défaut de transmission de l'état de réveil principal sur le CAN intersystèmes",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication inter-calculateurs",
+    description:
+      "Le BSI ne parvient pas à transmettre correctement aux autres calculateurs l'information indiquant que le véhicule est en réveil complet (contact mis ou activité récente).",
+    causes: [
+      { pourcentage: 32, libelle: "Câblage du CAN intersystèmes endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du BSI oxydé ou mal enfiché" },
+      { pourcentage: 25, libelle: "BSI défaillant" },
+      { pourcentage: 15, libelle: "Calculateur destinataire en défaut, perturbant l'accusé de réception" },
+    ],
+    avisPro:
+      "Ce type de défaut peut provoquer des réveils incomplets du réseau — certains équipements restent en veille alors que d'autres sont actifs.",
+    pieces: [
+      { nom: "Diagnostic réseau intersystèmes (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F007",
+    titre: "Défaut de transmission de l'état de réveil partiel sur le CAN intersystèmes",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonctionnement généralement préservé",
+    description:
+      "Le BSI rencontre une anomalie en transmettant l'information de réveil partiel du réseau (mode veille active), utilisée par certains équipements pour économiser la batterie.",
+    causes: [
+      { pourcentage: 34, libelle: "Câblage du CAN intersystèmes endommagé" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du BSI mal enfiché" },
+      { pourcentage: 16, libelle: "Calculateur destinataire en défaut" },
+    ],
+    avisPro:
+      "Ce défaut a surtout un impact sur la gestion de la consommation en veille — une batterie qui se décharge plus vite que d'habitude peut être un signe associé.",
+    pieces: [
+      { nom: "Diagnostic réseau intersystèmes (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F008",
+    titre: "Défaut sur le fil de télédéclenchement (RCD)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — télécommande ou ouverture à distance affectée",
+    description:
+      "Le circuit filaire utilisé pour le déclenchement à distance de certaines fonctions (ouverture centralisée, coffre) présente une anomalie électrique détectée par le BSI.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du fil RCD coupé ou en court-circuit" },
+      { pourcentage: 28, libelle: "Connecteur associé corrodé" },
+      { pourcentage: 20, libelle: "Fusible du circuit RCD grillé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de continuité du fil RCD à l'ohmmètre permet souvent de localiser rapidement une coupure sans démonter le BSI.",
+    pieces: [
+      { nom: "Fusible circuit RCD", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "F012",
+    titre: "Absence de communication du BSI sur le CAN intersystèmes",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — BSI isolé du réseau",
+    description:
+      "Le BSI lui-même ne communique plus sur le bus CAN intersystèmes, ce qui l'isole des autres calculateurs et peut désactiver de nombreuses fonctions de confort et de sécurité.",
+    causes: [
+      { pourcentage: 35, libelle: "BSI défaillant" },
+      { pourcentage: 30, libelle: "Câblage du CAN intersystèmes coupé au niveau du BSI" },
+      { pourcentage: 22, libelle: "Alimentation du BSI défaillante" },
+      { pourcentage: 13, libelle: "Connecteur du BSI mal enfiché après une intervention" },
+    ],
+    avisPro:
+      "Ce défaut est prioritaire à traiter car il peut masquer d'autres codes défaut des calculateurs devenus injoignables — toujours vérifier l'alimentation et les masses du BSI en premier.",
+    pieces: [
+      { nom: "Diagnostic BSI complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F017",
+    titre: "Absence de communication avec la pompe d'additif gazole",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — système additif diesel uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec la pompe qui injecte l'additif dans le réservoir de carburant diesel (système d'aide à la dépollution FAP), sans lien avec le fonctionnement moteur direct.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers la pompe d'additif endommagé" },
+      { pourcentage: 28, libelle: "Pompe d'additif défaillante" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le circuit d'additif du filtre à particules, pas l'injection principale — le véhicule reste roulant mais l'efficacité du FAP à long terme peut être affectée.",
+    pieces: [
+      { nom: "Pompe additif FAP", boutique: "Pièces auto en ligne", prix: "90-160€" },
+    ],
+  },
+  {
+    code: "F021",
+    titre: "Absence de communication avec le module de commande situé sur la colonne de direction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commandes au volant potentiellement affectées",
+    description:
+      "Le BSI ne reçoit plus les informations du module de commandes intégré à la colonne de direction (essuie-glace, clignotants ou régulateur selon équipement).",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage de la colonne de direction endommagé (zone de forte sollicitation)" },
+      { pourcentage: 28, libelle: "Connecteur rotatif ou contacteur tournant défaillant" },
+      { pourcentage: 22, libelle: "Module de commande défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le câblage au niveau de la colonne de direction subit des flexions répétées à chaque braquage — c'est une zone classique de rupture de fil qu'il faut inspecter en priorité.",
+    pieces: [
+      { nom: "Module de commandes sous volant", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "F031",
+    titre: "Absence de communication avec le calculateur d'additif gazole",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — système additif diesel uniquement",
+    description:
+      "Le BSI ne parvient pas à dialoguer avec le calculateur dédié à la gestion de l'additif carburant sur les motorisations diesel équipées de ce système.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le calculateur d'additif endommagé" },
+      { pourcentage: 28, libelle: "Calculateur d'additif défaillant" },
+      { pourcentage: 22, libelle: "Alimentation du calculateur d'additif coupée" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour la pompe associée, ce défaut n'empêche pas de rouler mais mérite un contrôle avant la prochaine régénération du filtre à particules.",
+    pieces: [
+      { nom: "Diagnostic circuit additif FAP (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F038",
+    titre: "Absence de communication avec le calculateur du déflecteur mobile de coffre",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI ne communique plus avec le calculateur qui pilote le déflecteur mobile situé dans le coffre sur certains modèles, sans conséquence sur la conduite.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le calculateur du déflecteur endommagé" },
+      { pourcentage: 28, libelle: "Calculateur du déflecteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé dans la zone du coffre" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Équipement rare et propre à certaines finitions — vérifier d'abord que le véhicule en est bien équipé avant de chercher une pièce à commander.",
+    pieces: [
+      { nom: "Diagnostic déflecteur coffre (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F03E",
+    titre: "Absence de communication avec le compte-tours ou l'afficheur LED du kilométrage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage uniquement",
+    description:
+      "Le BSI ne reçoit plus les données du bloc compte-tours ou de l'afficheur à LED du compteur kilométrique, pouvant provoquer un affichage figé ou absent.",
+    causes: [
+      { pourcentage: 34, libelle: "Câblage du combiné d'instruments endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du combiné mal enfiché" },
+      { pourcentage: 24, libelle: "Combiné d'instruments défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un affichage figé au tableau de bord sans autre symptôme oriente d'abord vers ce défaut de communication plutôt qu'une panne mécanique du moteur.",
+    pieces: [
+      { nom: "Diagnostic combiné d'instruments (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F042",
+    titre: "Absence de communication avec le calculateur électrique de la boîte de vitesses automatique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — boîte automatique concernée",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le calculateur électrique de la boîte de vitesses automatique, ce qui peut entraîner un mode dégradé de la transmission.",
+    causes: [
+      { pourcentage: 34, libelle: "Câblage vers le calculateur de boîte automatique endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de la boîte oxydé ou pollué par de l'huile" },
+      { pourcentage: 24, libelle: "Calculateur de boîte automatique défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une boîte automatique en mode dégradé (souvent bloquée sur un seul rapport) impose de ne pas prolonger la conduite avant diagnostic pour éviter d'aggraver une panne mécanique.",
+    pieces: [
+      { nom: "Diagnostic boîte automatique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "F043",
+    titre: "Absence de communication avec le calculateur d'éclairage d'ambiance intérieur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI ne communique plus avec le calculateur qui gère l'éclairage d'ambiance de l'habitacle, sans impact sur la sécurité ou la conduite.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage vers le calculateur d'ambiance endommagé" },
+      { pourcentage: 28, libelle: "Calculateur d'éclairage d'ambiance défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique — à traiter sans urgence, souvent lors d'un autre passage à l'atelier.",
+    pieces: [
+      { nom: "Calculateur éclairage d'ambiance", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "F04A",
+    titre: "Absence de communication avec le récepteur haute fréquence",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — télécommande d'accès affectée",
+    description:
+      "Le BSI ne reçoit plus les signaux du récepteur haute fréquence qui capte les ordres de la télécommande (verrouillage, déverrouillage à distance).",
+    causes: [
+      { pourcentage: 35, libelle: "Récepteur haute fréquence défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le récepteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du récepteur oxydé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si la télécommande ne fonctionne plus du tout (même à courte distance), ce défaut est un bon point de départ avant de suspecter la pile de la clé.",
+    pieces: [
+      { nom: "Récepteur haute fréquence télécommande", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F050",
+    titre: "Absence de communication avec l'afficheur matriciel",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage uniquement",
+    description:
+      "Le BSI ne dialogue plus avec l'écran d'affichage à matrice de points utilisé pour certaines informations du tableau de bord ou de la console centrale.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'afficheur endommagé" },
+      { pourcentage: 28, libelle: "Afficheur matriciel défaillant" },
+      { pourcentage: 22, libelle: "Connecteur de l'afficheur mal enfiché" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un écran totalement éteint ou figé sur cette zone d'affichage confirme généralement ce défaut plutôt qu'un simple réglage de luminosité.",
+    pieces: [
+      { nom: "Diagnostic afficheur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F058",
+    titre: "Absence de communication avec le calculateur de porte coulissante latérale",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — porte coulissante motorisée affectée",
+    description:
+      "Le BSI ne reçoit plus d'information du calculateur qui gère l'ouverture et la fermeture motorisées de la porte latérale coulissante (utilitaires et monospaces).",
+    causes: [
+      { pourcentage: 34, libelle: "Câblage souple vers la porte coulissante endommagé (zone de flexion répétée)" },
+      { pourcentage: 28, libelle: "Calculateur de porte coulissante défaillant" },
+      { pourcentage: 24, libelle: "Connecteur de porte oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le faisceau qui alimente une porte coulissante motorisée est particulièrement exposé à la fatigue mécanique — une inspection visuelle du soufflet de câblage est la première étape.",
+    pieces: [
+      { nom: "Faisceau porte coulissante", boutique: "Pièces auto en ligne", prix: "80-150€" },
+    ],
+  },
+  {
+    code: "F059",
+    titre: "Absence de communication avec le calculateur du toit rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le calculateur qui pilote l'ouverture et la fermeture du toit rétractable électrique.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur du toit rétractable défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur du toit endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du toit oxydé (exposition aux intempéries)" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ne pas forcer l'ouverture ou la fermeture manuelle du toit avant diagnostic, au risque d'endommager les vérins ou le mécanisme.",
+    pieces: [
+      { nom: "Diagnostic toit rétractable (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F05E",
+    titre: "Absence de communication avec le module de détection de sous-gonflage des pneus",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte pression pneus désactivée",
+    description:
+      "Le BSI ne reçoit plus les données du module qui surveille la pression des pneus, désactivant l'alerte de sous-gonflage au tableau de bord.",
+    causes: [
+      { pourcentage: 36, libelle: "Module de détection sous-gonflage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Tant que ce défaut n'est pas résolu, la pression des pneus doit être contrôlée manuellement de façon régulière — l'alerte automatique ne fonctionne plus.",
+    pieces: [
+      { nom: "Module détection pression pneus", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "F060",
+    titre: "Absence de communication avec le module double commande auto-école",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — équipement auto-école uniquement",
+    description:
+      "Le BSI ne dialogue plus avec le module additionnel installé sur les véhicules équipés de doubles commandes pour l'apprentissage de la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Module double commande défaillant" },
+      { pourcentage: 30, libelle: "Câblage additionnel de l'installation auto-école endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Équipement spécifique aux véhicules d'auto-école — un défaut ici ne concerne pas les fonctions standard du véhicule.",
+    pieces: [
+      { nom: "Diagnostic module auto-école (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F05F",
+    titre: "Absence de communication avec le calculateur des projecteurs directionnels",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — éclairage directionnel désactivé",
+    description:
+      "Le BSI ne reçoit plus d'information du calculateur qui oriente les projecteurs directionnels en fonction du volant, désactivant cette fonction d'éclairage.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur des projecteurs directionnels défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les phares restent fonctionnels en éclairage fixe — seule l'orientation dynamique en virage est perdue, ce qui n'empêche pas de rouler de nuit.",
+    pieces: [
+      { nom: "Calculateur projecteurs directionnels", boutique: "Pièces auto en ligne", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "F06A",
+    titre: "Défaut sur le réseau CAN habitacle",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs équipements de confort concernés",
+    description:
+      "Le BSI détecte une anomalie générale sur le bus CAN dédié à l'habitacle, susceptible d'affecter plusieurs équipements de confort simultanément.",
+    causes: [
+      { pourcentage: 34, libelle: "Câblage du CAN habitacle endommagé" },
+      { pourcentage: 26, libelle: "Connecteur d'un équipement du réseau habitacle oxydé" },
+      { pourcentage: 24, libelle: "Résistance de terminaison du bus habitacle défaillante" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs équipements de confort tombent en panne en même temps, ce défaut réseau est souvent la cause commune plutôt que plusieurs pannes isolées.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN habitacle (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F06B",
+    titre: "BSI muet sur le réseau CAN habitacle",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — BSI absent du réseau habitacle",
+    description:
+      "Le BSI n'émet plus aucun message sur le bus CAN habitacle, ce qui prive les autres calculateurs de confort des informations qu'il devrait fournir.",
+    causes: [
+      { pourcentage: 38, libelle: "BSI défaillant" },
+      { pourcentage: 26, libelle: "Alimentation du BSI défaillante" },
+      { pourcentage: 22, libelle: "Câblage du CAN habitacle coupé au niveau du BSI" },
+      { pourcentage: 14, libelle: "Connecteur du BSI mal enfiché après une intervention" },
+    ],
+    avisPro:
+      "Ce défaut mérite un contrôle prioritaire des masses et alimentations du BSI avant d'envisager son remplacement, coûteux et nécessitant une reprogrammation.",
+    pieces: [
+      { nom: "Diagnostic BSI complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F089",
+    titre: "Absence de communication avec le calculateur des projecteurs directionnels (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — éclairage directionnel désactivé",
+    description:
+      "Variante du défaut de communication avec le calculateur des projecteurs directionnels, détectée par le BSI dans une configuration réseau différente.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur des projecteurs directionnels défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut principal associé, l'éclairage fixe reste opérationnel — seule l'orientation dynamique est perdue.",
+    pieces: [
+      { nom: "Calculateur projecteurs directionnels", boutique: "Pièces auto en ligne", prix: "90-180€" },
+    ],
+  },
+  {
+    code: "F10A",
+    titre: "Défaut de cohérence avec le calculateur de la planche de bord",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — affichages tableau de bord possiblement incohérents",
+    description:
+      "Le BSI détecte une incohérence entre les informations qu'il reçoit du calculateur de la planche de bord et celles attendues, pouvant provoquer des affichages erronés.",
+    causes: [
+      { pourcentage: 34, libelle: "Calculateur de planche de bord défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers la planche de bord endommagé" },
+      { pourcentage: 22, libelle: "Mauvaise version logicielle après une intervention" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement récent d'un calculateur de planche de bord, ce défaut de cohérence oriente d'abord vers une reprogrammation ou codage incomplet.",
+    pieces: [
+      { nom: "Diagnostic et recodage planche de bord (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F088",
+    titre: "Absence de communication avec le chargeur CD",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le chargeur de CD multi-disques installé sur certains véhicules, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Chargeur CD défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le chargeur CD endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du chargeur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Équipement de plus en plus rare — vérifier la disponibilité de la pièce avant de s'engager dans une réparation, le remplacement par un système plus récent est parfois plus simple.",
+    pieces: [
+      { nom: "Chargeur CD multi-disques", boutique: "Pièces auto en ligne / occasion", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F4E5",
+    titre: "Défaut sur la sortie secondaire d'information moteur tournant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — signal secondaire uniquement",
+    description:
+      "Le BSI détecte une anomalie sur la sortie secondaire qui informe d'autres équipements que le moteur est en fonctionnement, sans affecter le démarrage lui-même.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de la sortie secondaire endommagé" },
+      { pourcentage: 28, libelle: "Connecteur oxydé" },
+      { pourcentage: 22, libelle: "Équipement destinataire du signal en défaut" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce signal secondaire alimente généralement des équipements annexes (contrôle de charge, avertisseurs) — le moteur continue de fonctionner normalement.",
+    pieces: [
+      { nom: "Diagnostic circuit information moteur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F52A",
+    titre: "Sorties du BSI inhibées définitivement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — plusieurs fonctions désactivées",
+    description:
+      "Le BSI a placé plusieurs de ses sorties de puissance en inhibition permanente par sécurité, généralement suite à un court-circuit ou une surcharge détectée sur l'une d'elles.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur un équipement piloté par le BSI" },
+      { pourcentage: 28, libelle: "Surcharge électrique sur une sortie de puissance" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 14, libelle: "Intervention électrique récente mal réalisée (ajout d'accessoire)" },
+    ],
+    avisPro:
+      "Avant tout remplacement du BSI, il faut impérativement identifier et éliminer la cause du court-circuit — sinon le nouveau boîtier subira le même défaut.",
+    pieces: [
+      { nom: "Diagnostic approfondi circuits de puissance (atelier)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "F4E2",
+    titre: "Défaut sur la sortie +CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation du réseau CAN concernée",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui fournit une alimentation électrique associée au réseau CAN pour certains équipements.",
+    causes: [
+      { pourcentage: 35, libelle: "Court-circuit sur la ligne +CAN" },
+      { pourcentage: 28, libelle: "Câblage de la sortie +CAN endommagé" },
+      { pourcentage: 22, libelle: "Fusible associé grillé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de continuité et d'isolement de la ligne +CAN permet souvent d'éviter un remplacement de BSI non nécessaire.",
+    pieces: [
+      { nom: "Fusible ligne +CAN", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "F4E4",
+    titre: "Défaut sur la sortie principale d'information moteur tournant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs équipements dépendants affectés",
+    description:
+      "Le BSI détecte une anomalie sur la sortie principale qui informe les autres calculateurs que le moteur est en fonctionnement, information utilisée par plusieurs systèmes.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage de la sortie principale endommagé" },
+      { pourcentage: 26, libelle: "Connecteur oxydé" },
+      { pourcentage: 24, libelle: "BSI défaillant" },
+      { pourcentage: 15, libelle: "Équipement destinataire en court-circuit, perturbant la sortie" },
+    ],
+    avisPro:
+      "Contrairement à la sortie secondaire, cette information principale est utilisée par plusieurs calculateurs — un défaut ici peut provoquer plusieurs symptômes simultanés à premier abord sans lien apparent.",
+    pieces: [
+      { nom: "Diagnostic circuit information moteur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F568",
+    titre: "Relais d'alimentation positive du contacteur central détecté fermé sans commande",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — risque de décharge batterie",
+    description:
+      "L'unité de protection des alimentations détecte que le relais principal reste fermé alors qu'aucune commande ne l'a activé, ce qui peut entraîner une consommation électrique continue.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais collé en position fermée" },
+      { pourcentage: 28, libelle: "Unité de protection et gestion des alimentations défaillante" },
+      { pourcentage: 22, libelle: "Court-circuit sur le circuit de commande du relais" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un relais collé fermé peut vider la batterie en quelques jours si le véhicule reste stationné — à traiter rapidement même si le véhicule démarre normalement.",
+    pieces: [
+      { nom: "Relais alimentation positive central", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F569",
+    titre: "Relais d'alimentation positive du contacteur central commandé mais détecté ouvert",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — perte d'alimentation possible",
+    description:
+      "L'unité de protection des alimentations commande la fermeture du relais principal mais détecte qu'il reste ouvert, ce qui peut priver certains équipements d'alimentation.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais défaillant, bloqué en position ouverte" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Unité de protection et gestion des alimentations défaillante" },
+      { pourcentage: 14, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Ce défaut est l'inverse du précédent (relais collé fermé) — ici le relais ne répond plus à la commande, ce qui peut couper l'alimentation d'équipements importants.",
+    pieces: [
+      { nom: "Relais alimentation positive central", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F56A",
+    titre: "Relais d'alimentation positive détecté ouvert en roulant alors que le relais principal est actif",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coupure d'alimentation en conduite",
+    description:
+      "L'unité de protection des alimentations détecte que le relais du contacteur central s'ouvre pendant la conduite alors que le relais principal reste actif, situation anormale.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais défaillant, contact intermittent" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé (faux contact en vibration)" },
+      { pourcentage: 22, libelle: "Unité de protection et gestion des alimentations défaillante" },
+      { pourcentage: 14, libelle: "Connecteur du relais mal enfiché" },
+    ],
+    avisPro:
+      "Une coupure intermittente en roulant est plus difficile à reproduire en atelier statique — un essai routier avec enregistreur de données est souvent nécessaire.",
+    pieces: [
+      { nom: "Diagnostic avec enregistreur de données (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F56B",
+    titre: "Incohérence entre l'état de la clé et le relais d'alimentation du contacteur central",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — gestion des alimentations perturbée",
+    description:
+      "L'unité de protection des alimentations détecte une incohérence entre l'état de la clé (présente, contact mis) et l'état réel du relais d'alimentation principal.",
+    causes: [
+      { pourcentage: 34, libelle: "Contacteur de détection de clé défaillant" },
+      { pourcentage: 28, libelle: "Câblage entre le contacteur de clé et l'unité de gestion endommagé" },
+      { pourcentage: 22, libelle: "Unité de protection et gestion des alimentations défaillante" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce type d'incohérence peut provoquer des difficultés à couper le contact ou des alertes de clé oubliée injustifiées — à vérifier en priorité si ces symptômes sont présents.",
+    pieces: [
+      { nom: "Contacteur détection de clé", boutique: "Pièces auto en ligne", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "F56C",
+    titre: "Demande injustifiée détectée par l'unité de protection et gestion des alimentations",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surveillance électrique déclenchée",
+    description:
+      "L'unité de protection des alimentations détecte une demande d'activation qui ne correspond à aucune situation normale identifiée, déclenchant une alerte de sécurité électrique.",
+    causes: [
+      { pourcentage: 35, libelle: "Court-circuit sur un circuit de commande" },
+      { pourcentage: 28, libelle: "Accessoire ajouté récemment mal raccordé" },
+      { pourcentage: 22, libelle: "Unité de protection et gestion des alimentations défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si un accessoire électrique a été installé récemment (alarme, attelage, éclairage additionnel), il est le premier suspect à vérifier avant d'incriminer le BSI.",
+    pieces: [
+      { nom: "Diagnostic circuits électriques additionnels (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F56E",
+    titre: "Relais d'alimentation positive détecté ouvert avec le véhicule en mouvement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — coupure d'alimentation en conduite",
+    description:
+      "L'unité de protection des alimentations détecte que le relais du contacteur central est ouvert alors que le véhicule est en mouvement, ce qui peut couper l'alimentation de plusieurs équipements.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais défaillant" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Unité de protection et gestion des alimentations défaillante" },
+      { pourcentage: 14, libelle: "Connecteur du relais mal enfiché" },
+    ],
+    avisPro:
+      "Variante du défaut de relais ouvert en roulant — même démarche de diagnostic, avec priorité sur le contrôle du relais et de son câblage de commande.",
+    pieces: [
+      { nom: "Relais alimentation positive central", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F070",
+    titre: "Déclenchement intempestif des CAN carrosserie et confort ou habitacle",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — réveils réseau anormaux",
+    description:
+      "Le BSI détecte que les réseaux CAN carrosserie/confort ou habitacle se réveillent sans raison identifiée, ce qui peut provoquer une décharge de la batterie en stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Équipement défectueux maintenant le réseau éveillé" },
+      { pourcentage: 28, libelle: "Câblage d'un capteur périphérique en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 14, libelle: "Accessoire ajouté récemment mal raccordé au réseau" },
+    ],
+    avisPro:
+      "Ce défaut est une cause fréquente de batterie déchargée après quelques jours d'immobilisation — un contrôle de la consommation en veille (courant de repos) est recommandé.",
+    pieces: [
+      { nom: "Diagnostic consommation en veille (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F071",
+    titre: "Déclenchement intempestif du CAN carrosserie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — réveils réseau anormaux",
+    description:
+      "Le BSI détecte des réveils anormaux du bus CAN dédié à la carrosserie, en dehors des sollicitations normales (ouverture de porte, contact).",
+    causes: [
+      { pourcentage: 36, libelle: "Équipement de carrosserie défectueux maintenant le réseau éveillé" },
+      { pourcentage: 28, libelle: "Câblage d'un capteur de carrosserie en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 14, libelle: "Contacteur de porte ou de coffre bloqué en position activée" },
+    ],
+    avisPro:
+      "Vérifier en priorité les contacteurs de portes et de coffre, souvent responsables de ce type de réveil intempestif du réseau carrosserie.",
+    pieces: [
+      { nom: "Contacteur de porte", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "F072",
+    titre: "Absence de communication avec l'unité de maintien de tension du réseau de bord",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — gestion de la tension batterie affectée",
+    description:
+      "Le BSI ne communique plus avec l'unité chargée de maintenir la tension du réseau électrique du véhicule stable, notamment lors des fortes sollicitations.",
+    causes: [
+      { pourcentage: 35, libelle: "Unité de maintien de tension défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'unité endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Des baisses de tension visibles à l'allumage de plusieurs équipements simultanément peuvent accompagner ce défaut — à signaler au technicien lors du diagnostic.",
+    pieces: [
+      { nom: "Diagnostic réseau de bord (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "FFF0",
+    titre: "Défaut capteur de courant de l'unité d'état de charge batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surveillance batterie affectée",
+    description:
+      "L'unité qui surveille l'état de charge de la batterie détecte une anomalie sur son capteur de courant, faussant potentiellement l'estimation de l'état de charge.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de courant batterie défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur mal enfiché" },
+      { pourcentage: 14, libelle: "Unité de gestion batterie défaillante" },
+    ],
+    avisPro:
+      "Le capteur de courant est généralement intégré à la cosse négative de la batterie — un mauvais serrage lors d'un remplacement de batterie est une cause fréquente.",
+    pieces: [
+      { nom: "Capteur de courant / cosse batterie intelligente", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FFF1",
+    titre: "Défaut capteur de tension de l'unité d'état de charge batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — surveillance batterie affectée",
+    description:
+      "L'unité de surveillance de la batterie détecte une anomalie sur la mesure de tension, ce qui peut fausser les décisions de gestion énergétique du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de tension défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Cosse de batterie mal serrée ou corrodée" },
+      { pourcentage: 14, libelle: "Unité de gestion batterie défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage et un bon serrage des cosses de batterie résolvent une partie de ces défauts sans remplacement de pièce.",
+    pieces: [
+      { nom: "Capteur de courant / cosse batterie intelligente", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FFFE",
+    titre: "Défaut de configuration de l'unité d'état de charge batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "L'unité de surveillance de la batterie n'est pas configurée correctement, généralement après un remplacement de batterie sans recodage du système.",
+    causes: [
+      { pourcentage: 45, libelle: "Batterie remplacée sans recodage de l'unité de gestion" },
+      { pourcentage: 30, libelle: "Type de batterie non reconnu par le système" },
+      { pourcentage: 15, libelle: "Unité de gestion batterie défaillante" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Toute batterie remplacée sur un véhicule récent doit être déclarée via l'outil de diagnostic — sans cette étape, le système de gestion d'énergie fonctionne avec des données erronées.",
+    pieces: [
+      { nom: "Recodage batterie après remplacement (atelier)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "FFF4",
+    titre: "Défaut mémoire RAM de l'unité d'état de charge batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur interne en cause",
+    description:
+      "L'unité de surveillance de la batterie détecte une anomalie interne sur sa mémoire vive, pouvant fausser les calculs d'état de charge en temps réel.",
+    causes: [
+      { pourcentage: 50, libelle: "Unité de gestion batterie défaillante" },
+      { pourcentage: 25, libelle: "Défaut d'alimentation ponctuel ayant corrompu la mémoire" },
+      { pourcentage: 15, libelle: "Parasite électrique externe" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un défaut mémoire interne pointe généralement vers un remplacement de l'unité elle-même plutôt qu'un problème de câblage externe.",
+    pieces: [
+      { nom: "Unité de gestion état de charge batterie", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "FFF5",
+    titre: "Défaut mémoire ROM de l'unité d'état de charge batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur interne en cause",
+    description:
+      "L'unité de surveillance de la batterie détecte une anomalie sur sa mémoire de programme, généralement un signe de défaillance interne du composant.",
+    causes: [
+      { pourcentage: 55, libelle: "Unité de gestion batterie défaillante" },
+      { pourcentage: 25, libelle: "Logiciel corrompu suite à une mise à jour incomplète" },
+      { pourcentage: 20, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce type de défaut mémoire est rarement réparable — le remplacement de l'unité est la solution la plus fiable une fois confirmé par le diagnostic.",
+    pieces: [
+      { nom: "Unité de gestion état de charge batterie", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F562",
+    titre: "Écart de tension d'alimentation entre deux circuits surveillés",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — déséquilibre électrique détecté",
+    description:
+      "Le BSI détecte un écart anormal de tension entre deux circuits d'alimentation qui devraient normalement rester proches, signe possible d'un problème de masse ou de connexion.",
+    causes: [
+      { pourcentage: 34, libelle: "Point de masse corrodé ou desserré" },
+      { pourcentage: 28, libelle: "Câblage endommagé sur l'un des circuits" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un contrôle des points de masse du véhicule (moteur, caisse, batterie) est la première étape logique face à ce type d'écart de tension.",
+    pieces: [
+      { nom: "Diagnostic points de masse (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F5FC",
+    titre: "Défaut interne du boîtier de servitude intelligent (problème de diagnostic)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction diagnostic uniquement",
+    description:
+      "Le BSI signale une anomalie interne limitée à sa propre fonction de diagnostic, sans affecter nécessairement les fonctions courantes du véhicule.",
+    causes: [
+      { pourcentage: 45, libelle: "BSI défaillant sur son module de diagnostic interne" },
+      { pourcentage: 30, libelle: "Logiciel du BSI corrompu ou mise à jour incomplète" },
+      { pourcentage: 25, libelle: "Perturbation électrique passagère" },
+    ],
+    avisPro:
+      "Un effacement suivi d'un nouveau contrôle permet souvent de confirmer si le défaut est ponctuel ou persistant avant d'envisager une intervention plus lourde.",
+    pieces: [
+      { nom: "Diagnostic et reprogrammation BSI (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FFF2",
+    titre: "Défaut calculateur de l'unité d'état de charge batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur en cause",
+    description:
+      "L'unité de surveillance de la batterie signale une défaillance générale de son propre calculateur, distincte des défauts de capteurs individuels.",
+    causes: [
+      { pourcentage: 50, libelle: "Unité de gestion batterie défaillante" },
+      { pourcentage: 28, libelle: "Alimentation de l'unité défaillante" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut généraliste doit être confirmé par plusieurs lectures avant remplacement, car il peut être provoqué par une coupure d'alimentation temporaire.",
+    pieces: [
+      { nom: "Unité de gestion état de charge batterie", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "FFF3",
+    titre: "Défaut capteur de température de l'unité d'état de charge batterie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — précision de mesure affectée",
+    description:
+      "L'unité de surveillance de la batterie détecte une anomalie sur son capteur de température, utilisé pour ajuster les calculs de charge selon les conditions thermiques.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de température défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Unité de gestion batterie défaillante" },
+    ],
+    avisPro:
+      "Ce défaut a surtout un impact par temps très froid ou très chaud, où la précision de la mesure de température influence davantage les calculs de charge.",
+    pieces: [
+      { nom: "Capteur de courant / cosse batterie intelligente", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F52E",
+    titre: "Défaut sur l'information de puissance de la chaîne de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Sur les modèles hybrides, le BSI détecte une anomalie sur l'information de puissance globale échangée entre les éléments de la chaîne de traction électrique et thermique.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur de gestion hybride défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la chaîne de traction endommagé" },
+      { pourcentage: 22, libelle: "Capteur de puissance défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut sur véhicule hybride nécessite un diagnostic avec un outil compatible haute tension — l'intervention doit être confiée à un atelier habilité aux systèmes hybrides.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F52F",
+    titre: "Défaut sur l'information de puissance entre les roues avant et le moteur thermique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le BSI détecte une anomalie sur l'échange d'information de puissance entre les roues avant et le moteur thermique sur un véhicule hybride.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur de gestion hybride défaillant" },
+      { pourcentage: 28, libelle: "Capteur de couple ou de vitesse défaillant" },
+      { pourcentage: 22, libelle: "Câblage de la chaîne de traction endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres défauts de chaîne hybride, un diagnostic spécialisé est recommandé plutôt qu'un remplacement de pièce au hasard.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F530",
+    titre: "Défaut sur l'information de puissance entre les roues arrière et le moteur électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le BSI détecte une anomalie sur l'échange d'information de puissance entre les roues arrière et le moteur électrique sur un véhicule hybride à transmission intégrale.",
+    causes: [
+      { pourcentage: 35, libelle: "Moteur électrique arrière défaillant ou son calculateur associé" },
+      { pourcentage: 28, libelle: "Capteur de couple ou de vitesse arrière défaillant" },
+      { pourcentage: 22, libelle: "Câblage de la chaîne de traction arrière endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne spécifiquement les versions à quatre roues motrices hybrides — un diagnostic par un atelier habilité aux hautes tensions est indispensable.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F531",
+    titre: "Défaut sur l'information de puissance entre le moteur thermique et la batterie de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le BSI détecte une anomalie sur l'information de puissance échangée entre le moteur thermique et la batterie de traction, utilisée pour la gestion énergétique globale.",
+    causes: [
+      { pourcentage: 34, libelle: "Calculateur de gestion hybride défaillant" },
+      { pourcentage: 28, libelle: "Câblage haute tension endommagé" },
+      { pourcentage: 24, libelle: "Batterie de traction défaillante" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant le circuit haute tension doit être manipulé exclusivement par un technicien habilité — ne jamais intervenir soi-même sur ces circuits.",
+    pieces: [
+      { nom: "Diagnostic circuit haute tension (atelier habilité)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "F532",
+    titre: "Défaut sur l'état de charge de la batterie de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le BSI détecte une anomalie sur l'information d'état de charge de la batterie de traction du système hybride, essentielle à la gestion de l'autonomie électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Batterie de traction défaillante ou dégradée" },
+      { pourcentage: 28, libelle: "Capteur d'état de charge défaillant" },
+      { pourcentage: 22, libelle: "Calculateur de gestion hybride défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une baisse visible de l'autonomie électrique accompagne souvent ce défaut — un diagnostic complet de la batterie de traction est nécessaire pour évaluer son état.",
+    pieces: [
+      { nom: "Diagnostic batterie de traction (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "80-150€" },
+    ],
+  },
+  {
+    code: "F533",
+    titre: "Défaut sur le budget de puissance aux bornes de la batterie de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le BSI détecte une anomalie sur le calcul de la puissance disponible aux bornes de la batterie de traction, information utilisée pour limiter les sollicitations électriques.",
+    causes: [
+      { pourcentage: 35, libelle: "Batterie de traction défaillante ou dégradée" },
+      { pourcentage: 28, libelle: "Calculateur de gestion hybride défaillant" },
+      { pourcentage: 22, libelle: "Câblage haute tension endommagé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut se traduire par des à-coups ou des limitations de puissance en mode électrique — le véhicule bascule alors plus souvent sur le moteur thermique.",
+    pieces: [
+      { nom: "Diagnostic batterie de traction (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "80-150€" },
+    ],
+  },
+  {
+    code: "F069",
+    titre: "Absence de communication avec le calculateur d'interface de la chaîne de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le calculateur d'interface qui coordonne les échanges d'information de la chaîne de traction hybride.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Alimentation du calculateur coupée" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de communication peut masquer d'autres codes liés à la chaîne hybride — toujours le traiter en priorité avant d'analyser les défauts associés.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F074",
+    titre: "Défaut d'émission et de réception sur le CAN intersystèmes",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication réseau bidirectionnelle affectée",
+    description:
+      "Le BSI détecte une anomalie touchant à la fois l'émission et la réception de messages sur le bus CAN intersystèmes, un défaut plus large qu'une simple perte de communication.",
+    causes: [
+      { pourcentage: 34, libelle: "Câblage du CAN intersystèmes endommagé sur plusieurs points" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 16, libelle: "Plusieurs calculateurs du réseau en défaut simultanément" },
+    ],
+    avisPro:
+      "Un défaut touchant à la fois émission et réception oriente davantage vers un problème physique du bus (câblage, terminaison) que vers un seul calculateur.",
+    pieces: [
+      { nom: "Diagnostic réseau intersystèmes (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F53B",
+    titre: "Information erronée transmise par le calculateur d'interface de traction — puissance de la chaîne de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur d'interface de la chaîne de traction transmet une valeur de puissance jugée incohérente par le BSI, susceptible de fausser la gestion énergétique.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 28, libelle: "Capteur de puissance défaillant" },
+      { pourcentage: 22, libelle: "Câblage de la chaîne de traction endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une information incohérente (plutôt qu'absente) oriente davantage vers un capteur défaillant que vers une coupure de communication.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F536",
+    titre: "Information erronée transmise par le calculateur d'interface de traction — courant de la batterie de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur d'interface de la chaîne de traction transmet une valeur de courant de la batterie de traction jugée incohérente par le BSI.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de courant de la batterie de traction défaillant" },
+      { pourcentage: 28, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 22, libelle: "Câblage haute tension endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une mesure de courant erronée peut fausser l'estimation d'autonomie électrique affichée au conducteur — à signaler lors du diagnostic.",
+    pieces: [
+      { nom: "Diagnostic batterie de traction (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "80-150€" },
+    ],
+  },
+  {
+    code: "F537",
+    titre: "Information erronée transmise par le calculateur d'interface de traction — tension de la batterie de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur d'interface de la chaîne de traction transmet une valeur de tension de la batterie de traction jugée incohérente par le BSI.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de tension de la batterie de traction défaillant" },
+      { pourcentage: 28, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 22, libelle: "Câblage haute tension endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut nécessite un contrôle de la batterie de traction par un technicien habilité au risque électrique haute tension.",
+    pieces: [
+      { nom: "Diagnostic batterie de traction (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "80-150€" },
+    ],
+  },
+  {
+    code: "F538",
+    titre: "Information erronée transmise par le calculateur d'interface de traction — état de charge de la batterie de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Le calculateur d'interface de la chaîne de traction transmet une valeur d'état de charge de la batterie de traction jugée incohérente par le BSI.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur d'état de charge défaillant" },
+      { pourcentage: 28, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 22, libelle: "Batterie de traction dégradée" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une jauge de charge électrique qui affiche des valeurs incohérentes ou qui saute peut être le symptôme visible de ce défaut.",
+    pieces: [
+      { nom: "Diagnostic batterie de traction (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "80-150€" },
+    ],
+  },
+  {
+    code: "F539",
+    titre: "Information erronée transmise par le calculateur d'interface de traction — autonomie avec équipements consommateurs",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — spécifique véhicules hybrides",
+    description:
+      "Le calculateur d'interface de la chaîne de traction transmet une estimation d'autonomie électrique tenant compte des équipements consommateurs jugée incohérente par le BSI.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 30, libelle: "Capteur d'état de charge défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la chaîne de traction endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut affecte uniquement la précision de l'affichage d'autonomie estimée, sans conséquence directe sur le fonctionnement du véhicule.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F53A",
+    titre: "Information erronée transmise par le calculateur d'interface de traction — autonomie hors équipements consommateurs",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — spécifique véhicules hybrides",
+    description:
+      "Variante du défaut d'autonomie électrique incohérente, ici calculée sans tenir compte des équipements consommateurs additionnels.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 30, libelle: "Capteur d'état de charge défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la chaîne de traction endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, l'impact reste limité à la précision de l'affichage d'autonomie plutôt qu'au fonctionnement réel du véhicule.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F0B6",
+    titre: "Défaut sur une information transmise au réseau (variante 1)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau incohérente",
+    description:
+      "Le BSI détecte qu'une information transmise par un calculateur du réseau ne correspond pas à la plage de valeurs attendue, sans préciser davantage la source exacte.",
+    causes: [
+      { pourcentage: 34, libelle: "Capteur associé défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Calculateur émetteur défaillant" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce type de code générique nécessite une lecture des paramètres en direct pour identifier précisément quelle valeur est jugée incohérente avant toute réparation.",
+    pieces: [
+      { nom: "Diagnostic approfondi avec lecture de paramètres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F0B5",
+    titre: "Défaut sur une information transmise au réseau (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau incohérente",
+    description:
+      "Le BSI détecte une anomalie sur une information transmise par un calculateur du réseau, proche du défaut F0B6 mais associée à un autre paramètre surveillé.",
+    causes: [
+      { pourcentage: 34, libelle: "Capteur associé défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Calculateur émetteur défaillant" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les codes similaires de cette famille, un relevé des paramètres en direct oriente le diagnostic vers le bon calculateur.",
+    pieces: [
+      { nom: "Diagnostic approfondi avec lecture de paramètres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F0B7",
+    titre: "Défaut sur une information transmise au réseau (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau incohérente",
+    description:
+      "Le BSI détecte une anomalie supplémentaire sur une information transmise par le réseau, appartenant à la même famille de défauts génériques de cohérence de données.",
+    causes: [
+      { pourcentage: 34, libelle: "Capteur associé défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Calculateur émetteur défaillant" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une lecture des paramètres en temps réel avec l'outil de diagnostic reste indispensable pour cibler la bonne pièce avant tout remplacement.",
+    pieces: [
+      { nom: "Diagnostic approfondi avec lecture de paramètres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F0B8",
+    titre: "Défaut sur une information transmise au réseau (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau incohérente",
+    description:
+      "Dernière variante de cette famille de défauts génériques signalant qu'une donnée réseau surveillée par le BSI sort de sa plage normale.",
+    causes: [
+      { pourcentage: 34, libelle: "Capteur associé défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Calculateur émetteur défaillant" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ces quatre défauts de la même famille se traitent avec la même méthode : identifier la donnée incohérente avant de remplacer une pièce.",
+    pieces: [
+      { nom: "Diagnostic approfondi avec lecture de paramètres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F53C",
+    titre: "Absence de communication avec le calculateur d'interface de la chaîne de traction (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — spécifique véhicules hybrides",
+    description:
+      "Variante du défaut de perte de communication avec le calculateur d'interface de traction, détectée dans un contexte réseau différent.",
+    causes: [
+      { pourcentage: 35, libelle: "Calculateur d'interface de traction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 22, libelle: "Alimentation du calculateur coupée" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Traiter ce défaut avec la même méthode que le code F069 associé — un diagnostic spécialisé hybride est nécessaire.",
+    pieces: [
+      { nom: "Diagnostic chaîne hybride (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F8A3",
+    titre: "Commande du toit rétractable intérieur bloquée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte que la commande intérieure du toit rétractable reste bloquée en position activée, ce qui peut empêcher son utilisation normale ou provoquer un mouvement non désiré.",
+    causes: [
+      { pourcentage: 38, libelle: "Commande intérieure du toit collée ou déformée" },
+      { pourcentage: 28, libelle: "Eau ou poussière infiltrée dans la commande" },
+      { pourcentage: 22, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ne pas insister sur la commande si elle semble bloquée — un forçage répété peut endommager le mécanisme du toit, plus coûteux à réparer que la commande elle-même.",
+    pieces: [
+      { nom: "Commande intérieure toit rétractable", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "F9ED",
+    titre: "Défaut interne de la carte électronique du lève-vitre avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "La carte électronique intégrée au mécanisme du lève-vitre avant gauche signale une défaillance interne, pouvant provoquer un fonctionnement irrégulier ou une panne complète de la vitre.",
+    causes: [
+      { pourcentage: 40, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 26, libelle: "Moteur de lève-vitre en fin de vie sollicitant trop la carte" },
+      { pourcentage: 20, libelle: "Câblage vers la porte avant gauche endommagé" },
+      { pourcentage: 14, libelle: "Connecteur de porte oxydé" },
+    ],
+    avisPro:
+      "Sur ce type de mécanisme, la carte électronique et le moteur forment souvent un seul ensemble à remplacer — vérifier la référence exacte avant commande.",
+    pieces: [
+      { nom: "Moteur lève-vitre avant gauche avec carte électronique", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "FBE0",
+    titre: "Défaut de l'antenne avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception radio ou accès mains libres affecté",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne située à l'avant gauche du véhicule, utilisée pour la réception radio ou la détection de la clé mains libres selon les modèles.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le véhicule est équipé de l'accès mains libres, une zone de détection de clé qui ne fonctionne plus d'un côté du véhicule est le symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Antenne mains libres avant gauche", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F882",
+    titre: "Défaut du contacteur d'ouverture de la malle du toit rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale l'ouverture de la malle abritant le toit rétractable lorsqu'il est replié.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de malle défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la fermeture complète du toit par sécurité si le système croit la malle ouverte — vérifier d'abord que la malle est bien fermée mécaniquement.",
+    pieces: [
+      { nom: "Contacteur ouverture malle toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FCC6",
+    titre: "Défaut du contacteur de ceinture non bouclée, place arrière droite (3e rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place arrière droite de troisième rangée est attachée, sur les véhicules à 7 places.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alerte sonore ou visuelle de ceinture non bouclée pour cette place peut devenir intempestive ou absente — à vérifier même si un passager y est correctement attaché.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F7CE",
+    titre: "Défaut sur la sortie d'éclairage des commutateurs professionnels",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — équipement professionnel spécifique",
+    description:
+      "Le BSI détecte une anomalie sur le circuit qui éclaire les commutateurs additionnels installés sur certains véhicules utilitaires ou de flotte professionnelle.",
+    causes: [
+      { pourcentage: 36, libelle: "Ampoule ou LED d'éclairage des commutateurs grillée" },
+      { pourcentage: 28, libelle: "Câblage de l'installation professionnelle endommagé" },
+      { pourcentage: 22, libelle: "Connecteur additionnel oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne un équipement additionnel propre aux véhicules professionnels — vérifier d'abord la configuration réelle du véhicule avant intervention.",
+    pieces: [
+      { nom: "Diagnostic installation commutateurs pro (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F69D",
+    titre: "Défaut de l'arceau de protection escamotable arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité cabriolet",
+    description:
+      "Le BSI détecte une anomalie sur l'arceau de sécurité escamotable côté arrière droit, qui doit se déployer automatiquement en cas de risque de retournement sur véhicule cabriolet.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de déploiement de l'arceau défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'arceau endommagé" },
+      { pourcentage: 20, libelle: "Capteur de position de l'arceau défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce dispositif de sécurité ne doit jamais rester en défaut non traité — il joue un rôle en cas de retournement du véhicule, un diagnostic rapide est fortement recommandé.",
+    pieces: [
+      { nom: "Diagnostic arceau de sécurité (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FCE6",
+    titre: "Défaut du capteur extérieur avant droit (variante 6)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'un des capteurs extérieurs situés à l'avant droit du véhicule, généralement associé à l'aide au stationnement ou à la détection d'obstacles.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur (boue, gel, autocollant) résout parfois ce défaut sans remplacement — à vérifier avant toute commande de pièce.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F737",
+    titre: "Défaut du moteur de distribution d'air arrière ou arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte une anomalie sur le moteur qui oriente la distribution d'air de la climatisation vers l'arrière du véhicule ou la zone arrière gauche.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de distribution d'air défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de distribution bloqué mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par une climatisation arrière qui souffle mal ou pas du tout, sans affecter la zone avant.",
+    pieces: [
+      { nom: "Moteur volet distribution climatisation arrière", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F798",
+    titre: "Blocage du contacteur d'abaissement (réglage lombaire)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'abaissement du réglage lombaire électrique du siège reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage lombaire collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un contacteur bloqué peut provoquer un réglage lombaire qui continue de bouger seul — couper le contact permet généralement d'arrêter le mouvement en urgence.",
+    pieces: [
+      { nom: "Contacteur réglage lombaire siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F898",
+    titre: "Présence de courant sur le moteur de lève-vitre arrière gauche ou conducteur sans commande",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque de mouvement de vitre non désiré",
+    description:
+      "Le BSI détecte une tension électrique présente sur le moteur du lève-vitre arrière gauche ou conducteur alors qu'aucune commande n'a été actionnée, situation potentiellement dangereuse.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit dans le câblage du lève-vitre" },
+      { pourcentage: 28, libelle: "Commande de lève-vitre collée en position fermée" },
+      { pourcentage: 22, libelle: "Module de porte défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut mérite une vérification rapide : une vitre qui pourrait se fermer seule représente un risque de coincement, notamment pour les enfants.",
+    pieces: [
+      { nom: "Diagnostic module de porte (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F79C",
+    titre: "Blocage du contacteur de recul (réglage de l'assise)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de réglage vers l'arrière de l'assise du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage d'assise collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres contacteurs de réglage de siège, un nettoyage de la commande résout parfois le blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Contacteur réglage assise siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F8C7",
+    titre: "Défaut du bouton ESC sur le combiné de navigation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande écran uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le bouton d'échappement (ESC) du combiné de commande du système de navigation, utilisé pour revenir en arrière dans les menus.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton ESC défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du combiné de navigation endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Défaut sans conséquence sur la conduite — se traduit uniquement par une navigation dans les menus moins pratique.",
+    pieces: [
+      { nom: "Combiné de commande navigation", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F7BC",
+    titre: "Défaut sur la sortie commune d'angle (dossier / réglage en hauteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie partagée qui pilote à la fois l'inclinaison du dossier et le réglage en hauteur du siège électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage du siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie commune endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Comme cette sortie est partagée entre deux réglages, tester chaque fonction séparément aide à cibler si le problème vient du moteur ou de la commande.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F8AA",
+    titre: "Défaut du temps d'ouverture de la vitre arrière droite ou passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le temps mis par la vitre arrière droite ou passager pour s'ouvrir dépasse la plage normale attendue, signe d'un frottement ou d'une résistance mécanique.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre grippé ou encrassé" },
+      { pourcentage: 28, libelle: "Rail de guidage de la vitre déformé" },
+      { pourcentage: 20, libelle: "Moteur de lève-vitre fatigué" },
+      { pourcentage: 14, libelle: "Calculateur de porte mal calibré" },
+    ],
+    avisPro:
+      "Un nettoyage et une lubrification des rails de guidage résolvent souvent ce type de lenteur avant d'envisager un remplacement de moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FD18",
+    titre: "Défaut de l'unité de traitement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Le BSI signale une défaillance d'une unité de traitement associée à une fonction du véhicule, sans précision supplémentaire sur le module concerné.",
+    causes: [
+      { pourcentage: 40, libelle: "Unité de traitement défaillante" },
+      { pourcentage: 28, libelle: "Alimentation de l'unité défaillante" },
+      { pourcentage: 20, libelle: "Logiciel corrompu suite à une mise à jour incomplète" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quelle unité de traitement est en cause.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F8AD",
+    titre: "Défaut du temps de fermeture du toit rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis par le toit rétractable pour se fermer dépasse la plage normale attendue, signe d'une résistance mécanique ou électrique dans le mécanisme.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme du toit grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Vérin hydraulique ou électrique du toit fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ne pas insister si le toit semble ralenti ou forcer la manœuvre — cela peut endommager davantage le mécanisme, déjà coûteux à réparer.",
+    pieces: [
+      { nom: "Diagnostic mécanisme toit rétractable (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "FD03",
+    titre: "Défaut du bouton arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur un bouton de commande situé à l'arrière droit de l'habitacle, généralement lié à une fonction de confort secondaire.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de confort mineur qui peut être traité sans urgence lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Bouton de commande arrière", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F7AE",
+    titre: "Blocage du contacteur de recul du siège arrière passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de réglage vers l'arrière du siège passager arrière reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort du siège arrière — sans urgence, mais un nettoyage rapide de la commande évite qu'il ne s'aggrave.",
+    pieces: [
+      { nom: "Contacteur réglage siège arrière", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F695",
+    titre: "Défaut sur les prétensionneurs en série de la 2e et 3e rangée côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des prétensionneurs de ceinture montés en série pour les places droites de deuxième et troisième rangée, un système de sécurité passive.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur sous le siège oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive, sans intervention improvisée.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FB8E",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°7",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un septième bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur, qui précise la fonction exacte associée.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F948",
+    titre: "Défaut des boutons de la télécommande (spécifique 807)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — équipement spécifique Peugeot 807",
+    description:
+      "Le BSI détecte une anomalie sur les boutons d'une télécommande spécifique au modèle Peugeot 807, utilisée pour certaines fonctions de confort propres à ce véhicule.",
+    causes: [
+      { pourcentage: 40, libelle: "Télécommande défaillante ou pile faible" },
+      { pourcentage: 28, libelle: "Récepteur de la télécommande défaillant" },
+      { pourcentage: 20, libelle: "Câblage du récepteur endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Avant toute réparation, tester le remplacement de la pile de la télécommande — c'est la cause la plus fréquente et la moins coûteuse.",
+    pieces: [
+      { nom: "Pile télécommande", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "FCE3",
+    titre: "Défaut du capteur intérieur avant gauche (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'un des capteurs intérieurs situés à l'avant gauche de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme ou à un système de confort — le diagnostic précise sa fonction exacte.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD2B",
+    titre: "Défaut de la sortie n°2",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 2, sans précision automatique de l'équipement piloté.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant toute intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F889",
+    titre: "Défaut de la commande intérieure du toit rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur la commande intérieure principale utilisée pour ouvrir ou fermer le toit rétractable.",
+    causes: [
+      { pourcentage: 38, libelle: "Commande intérieure défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la commande oxydé" },
+      { pourcentage: 12, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Si la commande ne répond plus du tout, vérifier d'abord les fusibles dédiés au toit avant de remplacer la commande elle-même.",
+    pieces: [
+      { nom: "Commande intérieure toit rétractable", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "F7AD",
+    titre: "Blocage du contacteur d'avancée du siège arrière passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de réglage vers l'avant du siège passager arrière reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Symétrique du défaut de recul associé — même méthode de diagnostic, en commençant par un nettoyage de la commande.",
+    pieces: [
+      { nom: "Contacteur réglage siège arrière", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FCD3",
+    titre: "Défaut de présence passager, place droite de 2e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur la place droite de la deuxième rangée de sièges, utilisé pour l'alerte ceinture ou l'airbag associé.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place — à traiter avant tout trajet avec un passager assis à cet endroit.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FD0B",
+    titre: "Défaut du circuit du contacteur d'ouverture de porte latérale droite (CPO)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection d'ouverture affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du contacteur de porte ouverte (CPO) de la porte latérale droite, utilisé pour l'éclairage intérieur et les alertes de sécurité.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de porte défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un témoin de porte ouverte qui reste allumé au tableau de bord alors que toutes les portes sont fermées est le symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Contacteur de porte (CPO)", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "F7C0",
+    titre: "Défaut de la sortie de relevage (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le relevage électrique de la colonne de direction, présente sur certaines finitions haut de gamme.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de réglage de colonne défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du volant — sans urgence, mais peut gêner l'installation au poste de conduite pour certains conducteurs.",
+    pieces: [
+      { nom: "Moteur réglage électrique colonne de direction", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "FD0E",
+    titre: "Défaut du circuit du bouton de fermeture côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande de fermeture affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du bouton qui commande la fermeture d'un élément côté gauche du véhicule (porte, hayon ou vitre selon configuration).",
+    causes: [
+      { pourcentage: 36, libelle: "Bouton de fermeture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quel élément exact est concerné par cette commande avant de cibler la réparation.",
+    pieces: [
+      { nom: "Diagnostic circuit bouton fermeture (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F07C",
+    titre: "Défaut CAN du boîtier de fusibles remorque ou du module carrossier",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — attelage ou aménagement spécifique",
+    description:
+      "Le BSI détecte une anomalie de communication CAN avec le boîtier de fusibles dédié à la remorque ou avec un module installé par un carrossier/aménageur.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le boîtier remorque endommagé" },
+      { pourcentage: 28, libelle: "Boîtier de fusibles remorque défaillant" },
+      { pourcentage: 22, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que les véhicules équipés d'un attelage électrique ou d'un aménagement spécial — vérifier d'abord la présence de cet équipement.",
+    pieces: [
+      { nom: "Boîtier électronique attelage", boutique: "Pièces auto en ligne", prix: "70-150€" },
+    ],
+  },
+  {
+    code: "FD2C",
+    titre: "Défaut de la sortie n°3",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 3, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Comme pour les autres sorties numérotées, seul l'outil de diagnostic constructeur permet d'identifier l'équipement précis concerné.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FC86",
+    titre: "Défaut du bouton en bout de commodo d'éclairage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire éclairage",
+    description:
+      "Le BSI détecte une anomalie sur le bouton situé à l'extrémité du commodo d'éclairage, utilisé pour une fonction secondaire (antibrouillard ou éclairage d'accompagnement selon modèle).",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton du commodo défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du commodo endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du commodo mal enfiché" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un commodo qui grésille ou dont une fonction ne répond plus qu'en forçant est un signe d'usure du bouton, réparable sans changer tout le commodo dans certains cas.",
+    pieces: [
+      { nom: "Commodo d'éclairage", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F917",
+    titre: "Défaut de la sortie audio avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le BSI ou le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur avant gauche, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur avant gauche défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'avant gauche confirme généralement ce défaut sans nécessiter de diagnostic électronique poussé.",
+    pieces: [
+      { nom: "Haut-parleur avant gauche", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F7B2",
+    titre: "Défaut du moteur ou capteur du siège central arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage du siège central de la banquette arrière.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage du siège central défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Équipement présent uniquement sur certaines configurations de sièges arrière électriques — vérifier d'abord l'équipement réel du véhicule.",
+    pieces: [
+      { nom: "Diagnostic réglage siège arrière (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FF65",
+    titre: "Défaut du relais de sécurité vitesse véhicule par câble (interne au calculateur de toit)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité liée à la vitesse",
+    description:
+      "Le BSI détecte une anomalie sur le relais de sécurité qui utilise l'information de vitesse du véhicule, intégré au calculateur du toit, pour interdire certaines manœuvres au-delà d'une vitesse donnée.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais de sécurité interne défaillant" },
+      { pourcentage: 28, libelle: "Calculateur du toit défaillant" },
+      { pourcentage: 22, libelle: "Information de vitesse erronée reçue par le calculateur" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce relais empêche normalement l'ouverture du toit ou d'autres équipements au-delà d'une certaine vitesse — un défaut ici peut bloquer ces fonctions par sécurité même à l'arrêt.",
+    pieces: [
+      { nom: "Diagnostic calculateur toit (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F1AE",
+    titre: "Information CAN non valide concernant un paramètre surveillé",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau incohérente",
+    description:
+      "Le BSI détecte qu'une information reçue via le réseau CAN concernant un paramètre surveillé n'est pas jugée valide, sans que la source exacte soit précisée automatiquement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur ou calculateur source défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé sur le circuit concerné" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres défauts de données réseau génériques, une lecture des paramètres en direct est nécessaire pour cibler la source exacte.",
+    pieces: [
+      { nom: "Diagnostic approfondi avec lecture de paramètres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F739",
+    titre: "Défaut du moteur de soufflerie arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte une anomalie sur le moteur de soufflerie qui alimente en air la zone arrière gauche de la climatisation.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de soufflerie arrière défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Résistance de soufflerie grillée" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un bruit anormal avant la panne complète (grincement, sifflement) est fréquent sur ce type de moteur de soufflerie usé — un remplacement préventif peut être envisagé.",
+    pieces: [
+      { nom: "Moteur soufflerie arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F8B2",
+    titre: "Défaut du temps de fermeture de la malle du toit rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis par la malle abritant le toit rétractable pour se fermer dépasse la plage normale, signe d'une résistance mécanique dans le mécanisme.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de la malle grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Vérin de la malle fatigué" },
+      { pourcentage: 22, libelle: "Obstacle gênant la fermeture (objet coincé)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Toujours vérifier qu'aucun objet ne gêne la fermeture de la malle avant d'envisager une réparation mécanique du mécanisme.",
+    pieces: [
+      { nom: "Diagnostic mécanisme malle toit (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FBC6",
+    titre: "Défaut du capteur extérieur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur extérieur situé à l'arrière gauche du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur de stationnement arrière", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F783",
+    titre: "Blocage du contacteur de recul (coulissement du siège)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de coulissement vers l'arrière du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de coulissement collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres contacteurs de siège, un nettoyage de la commande résout souvent le blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Contacteur coulissement siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FF6C",
+    titre: "Défaut du temps d'ouverture des quatre vitres (info avant par CAN, arrière par fil)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitres concernés",
+    description:
+      "Le BSI détecte que le temps d'ouverture combiné des quatre vitres, dont les informations avant transitent par le réseau CAN et les informations arrière par liaison filaire directe, sort de la plage normale.",
+    causes: [
+      { pourcentage: 34, libelle: "Mécanisme d'une ou plusieurs vitres grippé" },
+      { pourcentage: 26, libelle: "Câblage filaire arrière endommagé" },
+      { pourcentage: 24, libelle: "Défaut de communication CAN pour les données avant" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Tester chaque vitre séparément permet d'isoler si le défaut vient d'un mécanisme précis ou d'un problème de communication généralisé.",
+    pieces: [
+      { nom: "Diagnostic lève-vitres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FCD4",
+    titre: "Défaut de présence passager, place centrale de 2e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur la place centrale de la deuxième rangée de sièges.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place centrale — à vérifier avant un trajet avec passager à cette place.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F789",
+    titre: "Blocage du contacteur de redressement (dossier vers l'arrière)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de redressement du dossier de siège vers l'arrière reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de dossier collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un dossier qui continue de bouger après relâchement de la commande est le symptôme typique — couper le contact stoppe le mouvement en urgence.",
+    pieces: [
+      { nom: "Contacteur inclinaison dossier siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F8C8",
+    titre: "Défaut du bouton supérieur de l'écran multifonction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande écran uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le bouton supérieur de navigation dans les menus de l'écran multifonction.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du combiné de commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 12, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Défaut sans conséquence sur la conduite — se traduit uniquement par une navigation dans les menus de l'écran moins pratique.",
+    pieces: [
+      { nom: "Combiné de commande écran multifonction", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "FCCD",
+    titre: "Défaut de présence de siège, place droite de 3e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence physique du siège lui-même à la place droite de troisième rangée, sur les véhicules à sièges amovibles.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de présence de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le plancher endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne les véhicules à sièges de 3e rangée amovibles — vérifier que le siège est correctement verrouillé sur ses fixations.",
+    pieces: [
+      { nom: "Capteur de présence siège amovible", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F7C2",
+    titre: "Défaut sur la sortie commune (appui-tête / lombaire vertical)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie partagée qui pilote à la fois le réglage de l'appui-tête et le réglage vertical du soutien lombaire.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie commune endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Tester chaque fonction séparément (appui-tête puis lombaire) aide à cibler si le problème vient du moteur ou de la commande.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBE7",
+    titre: "Défaut de l'antenne intérieure arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception ou détection clé affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne intérieure arrière, utilisée pour la détection de la clé mains libres à l'intérieur du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une clé mains libres qui n'est plus détectée à l'arrière de l'habitacle (démarrage impossible depuis cette zone) est le symptôme associé à ce défaut.",
+    pieces: [
+      { nom: "Antenne mains libres intérieure", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F7A1",
+    titre: "Défaut du moteur ou capteur (haut du dossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage de la partie haute du dossier de siège.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un bruit de moteur qui tourne sans mouvement visible du dossier oriente vers un problème mécanique plutôt qu'électrique.",
+    pieces: [
+      { nom: "Diagnostic réglage électrique siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD8C",
+    titre: "Défaut interne du microphone (court-circuit)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — mains libres téléphonique affecté",
+    description:
+      "Le microphone utilisé pour le kit mains libres téléphonique ou la reconnaissance vocale signale un court-circuit interne détecté par le BSI ou le calculateur multimédia.",
+    causes: [
+      { pourcentage: 45, libelle: "Microphone défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le microphone endommagé" },
+      { pourcentage: 17, libelle: "Connecteur du microphone oxydé" },
+      { pourcentage: 10, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Le microphone se trouve généralement près du pare-soleil ou du rétroviseur intérieur — un contrôle visuel rapide permet parfois de repérer un câble sectionné.",
+    pieces: [
+      { nom: "Microphone mains libres", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F8C9",
+    titre: "Défaut du bouton central de l'écran multifonction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande écran uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le bouton central de validation dans les menus de l'écran multifonction.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du combiné de commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 12, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Si le bouton central de validation ne répond plus, la navigation dans les menus devient difficile — un remplacement du combiné de commande règle généralement le problème.",
+    pieces: [
+      { nom: "Combiné de commande écran multifonction", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F60C",
+    titre: "Défaut de l'airbag rideau droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le circuit de l'airbag rideau situé côté droit du véhicule, protégeant la tête des occupants en cas de choc latéral.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag rideau droit endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag rideau défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité — ne jamais rouler avec ce voyant allumé en continu.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FECE",
+    titre: "Information reçue du BSI par le réseau CAN jugée non valide",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau incohérente",
+    description:
+      "Un calculateur détecte que les valeurs transmises par le BSI via le réseau CAN ne sont pas valides, ce qui peut affecter les fonctions dépendant de ces informations.",
+    causes: [
+      { pourcentage: 36, libelle: "BSI défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du BSI oxydé" },
+      { pourcentage: 14, libelle: "Logiciel du BSI corrompu" },
+    ],
+    avisPro:
+      "Ce défaut, rapporté par un autre calculateur au sujet du BSI, doit être croisé avec les codes propres du BSI lui-même pour confirmer l'origine réelle du problème.",
+    pieces: [
+      { nom: "Diagnostic BSI complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F950",
+    titre: "Défaut de la sortie du haut-parleur arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur arrière droit, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur arrière droit défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'arrière droit confirme généralement ce défaut, souvent lié à un haut-parleur en fin de vie.",
+    pieces: [
+      { nom: "Haut-parleur arrière droit", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F9B7",
+    titre: "Défaut du relais positif après contact (+APC) ou du faisceau du boîtier de câblage moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — alimentation après contact affectée",
+    description:
+      "Le BSI détecte une anomalie sur le relais qui fournit l'alimentation positive après contact (+APC) ou sur le faisceau de sortie associé, situé dans le boîtier de câblage moteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais +APC défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Faisceau du boîtier de câblage moteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du boîtier moteur oxydé (exposition à la chaleur)" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer des difficultés de démarrage ou des équipements moteur non alimentés après la mise du contact — à traiter en priorité.",
+    pieces: [
+      { nom: "Relais +APC boîtier de câblage moteur", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FD30",
+    titre: "Défaut de la sortie n°7",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 7, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FB86",
+    titre: "Blocage du bouton \"Check\" (autotest véhicule)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que le bouton \"Check\" utilisé pour lancer l'autotest du véhicule au tableau de bord reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton Check défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un bouton bloqué peut relancer l'autotest en boucle à chaque démarrage — vérifier qu'il n'est pas mécaniquement coincé avant tout remplacement.",
+    pieces: [
+      { nom: "Bouton Check tableau de bord", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F686",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'arceau arrière gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité cabriolet",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'arceau de protection escamotable arrière gauche sur véhicule cabriolet.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement de l'arceau défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce dispositif de sécurité anti-retournement ne doit jamais rester en défaut non traité — diagnostic prioritaire par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic arceau de sécurité (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F685",
+    titre: "Défaut interne du calculateur (système de déclenchement des prétensionneurs en série, rangée 3 gauche et droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement des prétensionneurs de ceinture en série pour les places gauche et droite de troisième rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement des prétensionneurs défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité aux systèmes airbag/prétensionneurs est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FEA3",
+    titre: "Défaut du signal du capteur de température en aval du filtre à particules",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — gestion du FAP affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le signal du capteur de température situé après le filtre à particules, utilisé pour surveiller les phases de régénération.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de température FAP défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé par la chaleur" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser la gestion des régénérations du filtre à particules — un voyant FAP peut apparaître en complément de ce code.",
+    pieces: [
+      { nom: "Capteur température aval FAP", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "FF07",
+    titre: "Défaut de la sortie audio droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente les haut-parleurs du côté droit du véhicule, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur droit défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement du côté droit confirme généralement ce défaut, à traiter sans urgence.",
+    pieces: [
+      { nom: "Haut-parleur droit", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F637",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag latéral avant gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag latéral avant gauche, un élément clé de la protection en cas de choc latéral.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement de l'airbag défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, le témoin airbag au tableau de bord doit alerter le conducteur.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FD0C",
+    titre: "Défaut du circuit du bouton d'ouverture côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande d'ouverture affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du bouton qui commande l'ouverture d'un élément côté gauche du véhicule (porte, hayon ou vitre selon configuration).",
+    causes: [
+      { pourcentage: 36, libelle: "Bouton d'ouverture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quel élément exact est concerné par cette commande avant de cibler la réparation.",
+    pieces: [
+      { nom: "Diagnostic circuit bouton ouverture (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F70F",
+    titre: "Boutons bloqués sur le panneau de commande climatisation arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte que les boutons du panneau de commande de climatisation situé à l'arrière gauche restent bloqués en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Panneau de commande défaillant ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le panneau" },
+      { pourcentage: 20, libelle: "Câblage du panneau endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du panneau de commande (boissons renversées, poussière) résout souvent ce type de blocage sans remplacement.",
+    pieces: [
+      { nom: "Panneau commande climatisation arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FF6B",
+    titre: "Défaut du temps de déverrouillage du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis par le mécanisme de déverrouillage du toit rétractable dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de verrouillage grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Actionneur de déverrouillage fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ne pas forcer l'ouverture manuelle du toit si le déverrouillage semble lent — cela peut aggraver le grippage du mécanisme.",
+    pieces: [
+      { nom: "Diagnostic mécanisme toit rétractable (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "F690",
+    titre: "Défaut de l'airbag gauche et de l'airbag rideau gauche en production",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie de configuration liée à la présence en production de l'airbag gauche et de l'airbag rideau gauche, généralement après une intervention sur ces éléments.",
+    causes: [
+      { pourcentage: 40, libelle: "Configuration du calculateur non mise à jour après intervention" },
+      { pourcentage: 28, libelle: "Airbag ou rideau gauche récemment remplacé sans recodage" },
+      { pourcentage: 20, libelle: "Câblage des airbags concernés endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement d'airbag, un recodage complet du calculateur de sécurité passive est indispensable — sans cette étape, ce défaut apparaît systématiquement.",
+    pieces: [
+      { nom: "Recodage calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FD02",
+    titre: "Défaut du bouton arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur un bouton de commande situé à l'arrière gauche de l'habitacle, généralement lié à une fonction de confort secondaire.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de confort mineur qui peut être traité sans urgence lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Bouton de commande arrière", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F9EE",
+    titre: "Défaut interne de la carte électronique du boîtier de mémorisation d'éclairage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction confort uniquement",
+    description:
+      "La carte électronique du boîtier qui mémorise les réglages d'éclairage (temporisation, suivi d'éclairage) signale une défaillance interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Carte électronique du boîtier de mémorisation défaillante" },
+      { pourcentage: 28, libelle: "Alimentation du boîtier défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers le boîtier endommagé" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que les fonctions de confort liées à la temporisation d'éclairage, sans impact sur l'éclairage principal du véhicule.",
+    pieces: [
+      { nom: "Boîtier mémorisation éclairage", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FB8D",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°6",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un sixième bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F6C4",
+    titre: "Déclenchement des arceaux de protection escamotables arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les arceaux de protection escamotables arrière se sont déployés, généralement suite à une détection de risque de retournement ou un choc.",
+    causes: [
+      { pourcentage: 50, libelle: "Déclenchement réel suite à un événement détecté (choc, retournement)" },
+      { pourcentage: 30, libelle: "Déclenchement intempestif suite à un défaut du capteur d'inclinaison" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement, réel ou intempestif, les arceaux et le système associé doivent être contrôlés et remis en état par un atelier habilité avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état arceaux de sécurité (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "F7BB",
+    titre: "Défaut de la sortie de relevage (hauteur du siège)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le relevage électrique en hauteur du siège avant.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage en hauteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du siège — sans urgence, mais peut gêner la position de conduite pour certains conducteurs.",
+    pieces: [
+      { nom: "Moteur réglage hauteur siège", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "F901",
+    titre: "Défaut de l'entrée antenne 2 (vue arrière droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — caméra ou capteur de vue affecté",
+    description:
+      "Le calculateur détecte une anomalie sur la deuxième entrée d'antenne associée à la vue arrière droite du véhicule, utilisée par un système de caméra ou de détection.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne ou capteur de vue arrière droite défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver une partie de l'assistance visuelle arrière droite — à contrôler avant de se fier uniquement aux caméras pour les manœuvres.",
+    pieces: [
+      { nom: "Diagnostic système caméra/capteur vue (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FD1A",
+    titre: "Défaut d'initialisation de la porte droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — porte droite nécessite une réinitialisation",
+    description:
+      "Le BSI détecte que le système de la porte droite n'a pas terminé sa procédure d'initialisation, généralement après une intervention sur la porte ou une coupure de batterie.",
+    causes: [
+      { pourcentage: 40, libelle: "Initialisation non effectuée après une intervention sur la porte" },
+      { pourcentage: 28, libelle: "Calculateur de porte défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la porte endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une simple procédure de réinitialisation avec l'outil de diagnostic (montée puis descente complète de la vitre par exemple) résout souvent ce défaut sans pièce à remplacer.",
+    pieces: [
+      { nom: "Réinitialisation calculateur de porte (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F79D",
+    titre: "Défaut du moteur ou capteur (niveau)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage de niveau du siège électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage de niveau défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un siège qui reste bloqué à un niveau intermédiaire sans pouvoir être ajusté correctement confirme généralement ce type de défaut.",
+    pieces: [
+      { nom: "Diagnostic réglage électrique siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBC7",
+    titre: "Défaut du capteur intérieur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur intérieur situé à l'arrière gauche de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme périmétrique ou à un système de confort — le diagnostic précise sa fonction exacte.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD20",
+    titre: "Défaut de l'entrée audio gauche de l'équipement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur l'entrée gauche d'un équipement audio externe connecté au système (source auxiliaire ou module additionnel).",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de l'entrée audio endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'entrée audio oxydé ou déconnecté" },
+      { pourcentage: 22, libelle: "Équipement source externe défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord qu'une source audio externe est bien branchée et fonctionnelle avant de suspecter le calculateur du véhicule.",
+    pieces: [
+      { nom: "Diagnostic entrées audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F79E",
+    titre: "Défaut du moteur ou capteur (coulissement ou coulissement rapide)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au coulissement standard ou rapide du siège électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de coulissement défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Rail de coulissement grippé mécaniquement" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un rail de coulissement encrassé ou mal lubrifié peut provoquer ce type de défaut sans panne électrique réelle — un nettoyage est à essayer en premier.",
+    pieces: [
+      { nom: "Kit lubrification rails de siège", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "F9EB",
+    titre: "Défaut interne de la carte électronique du lève-vitre arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "La carte électronique intégrée au mécanisme du lève-vitre arrière gauche signale une défaillance interne, pouvant provoquer un fonctionnement irrégulier ou une panne complète de la vitre.",
+    causes: [
+      { pourcentage: 40, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 26, libelle: "Moteur de lève-vitre en fin de vie sollicitant trop la carte" },
+      { pourcentage: 20, libelle: "Câblage vers la porte arrière gauche endommagé" },
+      { pourcentage: 14, libelle: "Connecteur de porte oxydé" },
+    ],
+    avisPro:
+      "Comme pour le lève-vitre avant, la carte électronique et le moteur forment souvent un seul ensemble à remplacer — vérifier la référence exacte avant commande.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière gauche avec carte électronique", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "FBCB",
+    titre: "Défaut du capteur intérieur avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur intérieur situé à l'avant gauche de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme ou à un système de confort — le diagnostic précise sa fonction exacte.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7C1",
+    titre: "Défaut de la sortie d'angle (haut du dossier vers l'avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le réglage d'angle de la partie haute du dossier vers l'avant.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du dossier — sans urgence, mais peut gêner la position de conduite pour certains conducteurs.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7CB",
+    titre: "Défaut de la sortie d'éclairage du clavier de mémorisation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le circuit qui éclaire le clavier de mémorisation des réglages de siège (position mémorisée 1, 2, etc.).",
+    causes: [
+      { pourcentage: 38, libelle: "Ampoule ou LED du clavier de mémorisation grillée" },
+      { pourcentage: 28, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du clavier oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique sans impact sur la mémorisation elle-même — à traiter sans urgence.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "F7EE",
+    titre: "Défaut de mémorisation générale",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — fonctions de mémorisation affectées",
+    description:
+      "Le BSI détecte une anomalie générale sur une fonction de mémorisation (positions de siège, rétroviseurs ou réglages personnalisés), sans précision automatique du module exact.",
+    causes: [
+      { pourcentage: 36, libelle: "Calculateur de mémorisation défaillant" },
+      { pourcentage: 28, libelle: "Coupure batterie ayant effacé les mémoires" },
+      { pourcentage: 22, libelle: "Câblage vers le module de mémorisation endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après toute coupure de batterie, il est normal que certaines mémorisations doivent être reprogrammées manuellement — ce n'est pas systématiquement une panne.",
+    pieces: [
+      { nom: "Diagnostic fonctions de mémorisation (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F8A4",
+    titre: "Défaut de non-inhibition de la commande de verrouillage du coffre",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité de verrouillage du coffre",
+    description:
+      "Le BSI détecte que la commande de verrouillage du coffre n'est pas correctement inhibée dans une situation où elle devrait l'être (coffre ouvert par exemple), un défaut de sécurité logique.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de coffre ouvert défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur de coffre endommagé" },
+      { pourcentage: 22, libelle: "Serrure électrique du coffre défaillante" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut permettre un verrouillage du coffre alors qu'il est encore ouvert — à vérifier avant de considérer le coffre correctement sécurisé.",
+    pieces: [
+      { nom: "Contacteur coffre ouvert", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FD19",
+    titre: "Défaut d'initialisation de la porte gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — porte gauche nécessite une réinitialisation",
+    description:
+      "Le BSI détecte que le système de la porte gauche n'a pas terminé sa procédure d'initialisation, généralement après une intervention sur la porte ou une coupure de batterie.",
+    causes: [
+      { pourcentage: 40, libelle: "Initialisation non effectuée après une intervention sur la porte" },
+      { pourcentage: 28, libelle: "Calculateur de porte défaillant" },
+      { pourcentage: 20, libelle: "Câblage de la porte endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une procédure de réinitialisation avec l'outil de diagnostic résout souvent ce défaut sans qu'aucune pièce ne soit à remplacer.",
+    pieces: [
+      { nom: "Réinitialisation calculateur de porte (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "FCC7",
+    titre: "Défaut du contacteur de ceinture non bouclée, place centrale arrière (3e rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place centrale de troisième rangée est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente — à vérifier même si un passager y est correctement attaché.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FBC0",
+    titre: "Défaut du capteur extérieur avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur extérieur situé à l'avant gauche du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement en premier.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F765",
+    titre: "Défaut interne du panneau de commande climatisation arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le panneau de commande de climatisation situé à l'arrière droit signale une défaillance interne, pouvant provoquer un affichage ou des commandes non fonctionnelles à cet endroit.",
+    causes: [
+      { pourcentage: 45, libelle: "Panneau de commande défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du panneau défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers le panneau endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un panneau totalement éteint côté arrière droit sans autre symptôme confirme généralement ce défaut plutôt qu'un problème de climatisation général.",
+    pieces: [
+      { nom: "Panneau commande climatisation arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F881",
+    titre: "Défaut du signal du contacteur de verrouillage coffre gauche et droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — état de verrouillage du coffre incertain",
+    description:
+      "Le BSI détecte une anomalie sur le signal qui indique si le coffre est verrouillé, côté gauche et droit du mécanisme.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de verrouillage coffre défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Serrure électrique du coffre défaillante" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le système de confirmer que le coffre est bien fermé et verrouillé — à vérifier manuellement en attendant la réparation.",
+    pieces: [
+      { nom: "Contacteur verrouillage coffre", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FD32",
+    titre: "Défaut de la sortie n°9",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 9, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F784",
+    titre: "Blocage du contacteur de relevage (réglage en hauteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de relevage du réglage en hauteur du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage en hauteur collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement de siège non désiré en urgence si le contacteur reste bloqué.",
+    pieces: [
+      { nom: "Contacteur réglage hauteur siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F897",
+    titre: "Défaut du signal du contacteur d'ouverture du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale que le toit rétractable est en position ouverte.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur d'ouverture du toit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser l'affichage de l'état du toit au tableau de bord — vérifier visuellement la position réelle du toit en cas de doute.",
+    pieces: [
+      { nom: "Contacteur ouverture toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F7BA",
+    titre: "Défaut de la sortie d'angle (dossier vers l'avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le réglage d'angle du dossier vers l'avant.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage du dossier défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du dossier — sans urgence, mais peut gêner la position de conduite pour certains conducteurs.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F9DF",
+    titre: "Défaut de tension de fin de course haute ou basse du lève-vitre arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie sur la tension mesurée aux positions de fin de course (haute ou basse) du lève-vitre arrière gauche, utilisée pour calibrer sa course.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre non calibré après intervention" },
+      { pourcentage: 28, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 22, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout démontage de la porte ou du mécanisme de vitre, une procédure d'initialisation de la course est indispensable pour éviter ce type de défaut.",
+    pieces: [
+      { nom: "Réinitialisation lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "FF53",
+    titre: "Défaut du relais de réduction de charge du boîtier de fusibles remorque ou transformateur carrossier",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — équipement attelage/remorque affecté",
+    description:
+      "Le BSI détecte une anomalie sur le relais qui réduit la charge électrique lors de l'utilisation d'une remorque, dans le boîtier de fusibles remorque ou le transformateur installé par un carrossier.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais de réduction de charge défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'installation remorque endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que les véhicules équipés d'un attelage électrique — vérifier d'abord la présence de cet équipement avant diagnostic.",
+    pieces: [
+      { nom: "Relais boîtier électronique attelage", boutique: "Pièces auto en ligne", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "F78C",
+    titre: "Blocage du contacteur d'avancée (appui-tête)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'avancée du réglage de l'appui-tête électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur d'appui-tête collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un appui-tête qui continue de bouger après relâchement de la commande est le symptôme typique — couper le contact stoppe le mouvement en urgence.",
+    pieces: [
+      { nom: "Contacteur réglage appui-tête", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FC0C",
+    titre: "Défaut de la sortie de commande du mécanisme de pliage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseurs ou toit rabattable selon équipement",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote un mécanisme de pliage électrique, généralement associé aux rétroviseurs rabattables ou à un élément similaire.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur du mécanisme de pliage défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si ce sont les rétroviseurs qui ne se replient plus automatiquement, vérifier d'abord qu'aucun obstacle ne bloque mécaniquement leur mouvement.",
+    pieces: [
+      { nom: "Moteur pliage rétroviseur", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F9AA",
+    titre: "Défaut du boîtier de fusibles moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation moteur possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie générale sur le boîtier de fusibles situé dans le compartiment moteur, qui protège plusieurs circuits électriques essentiels.",
+    causes: [
+      { pourcentage: 36, libelle: "Fusible du boîtier moteur grillé" },
+      { pourcentage: 28, libelle: "Boîtier de fusibles moteur oxydé ou pollué par l'humidité" },
+      { pourcentage: 22, libelle: "Connecteur du boîtier mal enfiché" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une inspection visuelle du boîtier de fusibles moteur (corrosion, traces d'humidité) permet souvent d'identifier rapidement la cause sans outil de diagnostic.",
+    pieces: [
+      { nom: "Kit fusibles boîtier moteur", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "FD2D",
+    titre: "Défaut de la sortie n°4",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 4, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F762",
+    titre: "Défaut interne du panneau de commande climatisation conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation avant affectée",
+    description:
+      "Le panneau de commande de climatisation situé côté conducteur signale une défaillance interne, pouvant provoquer un affichage ou des commandes non fonctionnelles.",
+    causes: [
+      { pourcentage: 45, libelle: "Panneau de commande défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du panneau défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers le panneau endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un panneau qui reste éteint ou dont les touches ne répondent plus confirme généralement ce défaut, à traiter rapidement pour le confort du conducteur.",
+    pieces: [
+      { nom: "Panneau commande climatisation conducteur", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F638",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag latéral avant droit)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag latéral avant droit, un élément clé de la protection en cas de choc latéral.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement de l'airbag défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F96F",
+    titre: "Absence de communication avec l'écran multifonction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — affichage central affecté",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec l'écran multifonction du tableau de bord, ce qui peut provoquer un écran figé, éteint ou affichant des informations incomplètes.",
+    causes: [
+      { pourcentage: 35, libelle: "Écran multifonction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'écran endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de l'écran mal enfiché" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un écran totalement noir associé à ce défaut nécessite un contrôle des alimentations et du câblage avant d'envisager le remplacement de l'écran, coûteux.",
+    pieces: [
+      { nom: "Diagnostic écran multifonction (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F734",
+    titre: "Défaut d'acquisition du signal de diagnostic du moteur de soufflerie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur détecte une anomalie sur le signal de retour utilisé pour surveiller le bon fonctionnement du moteur de soufflerie de la climatisation.",
+    causes: [
+      { pourcentage: 36, libelle: "Signal de retour du moteur de soufflerie défaillant" },
+      { pourcentage: 28, libelle: "Câblage du signal endommagé" },
+      { pourcentage: 22, libelle: "Moteur de soufflerie défaillant" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de diagnostic n'empêche pas forcément la soufflerie de fonctionner, mais empêche le système de surveiller correctement son état.",
+    pieces: [
+      { nom: "Diagnostic circuit soufflerie (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FB8F",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°8",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un huitième bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCCE",
+    titre: "Défaut de présence de siège, place centrale de 3e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence physique du siège central de troisième rangée, sur les véhicules à sièges amovibles.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de présence de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le plancher endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le siège est correctement verrouillé sur ses fixations avant d'envisager un remplacement de capteur.",
+    pieces: [
+      { nom: "Capteur de présence siège amovible", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "FB88",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°1",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un premier bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F300",
+    titre: "Défaut de téléchargement de calculateur vierge ou de calibration",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — reprogrammation nécessaire",
+    description:
+      "Le BSI détecte qu'un calculateur associé est vierge (non programmé) ou que le téléchargement de sa calibration ne s'est pas terminé correctement, généralement après un remplacement.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur récemment remplacé non encore programmé" },
+      { pourcentage: 28, libelle: "Procédure de programmation interrompue (coupure, mauvaise connexion)" },
+      { pourcentage: 20, libelle: "Calculateur défaillant empêchant la programmation" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est normal juste après le remplacement d'un calculateur tant que la programmation complète n'a pas été effectuée par l'atelier — pas d'inquiétude si l'intervention est en cours.",
+    pieces: [
+      { nom: "Programmation calculateur (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "F965",
+    titre: "Défaut du module TMC",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — information trafic uniquement",
+    description:
+      "Le module TMC (Traffic Message Channel), qui reçoit les informations trafic pour le système de navigation, signale une anomalie.",
+    causes: [
+      { pourcentage: 40, libelle: "Module TMC défaillant" },
+      { pourcentage: 28, libelle: "Antenne TMC défaillante ou mal positionnée" },
+      { pourcentage: 20, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de navigation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'affecte que la réception des informations trafic en temps réel — la navigation de base continue de fonctionner normalement.",
+    pieces: [
+      { nom: "Module TMC / antenne trafic", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "F98B",
+    titre: "Défaut du feu de position avant gauche (boîtier de fusibles moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage secondaire affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit du feu de position avant gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule du feu de position grillée" },
+      { pourcentage: 25, libelle: "Câblage vers le feu de position endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du feu oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un contrôle visuel rapide de l'ampoule est la première étape logique, cette panne étant le plus souvent liée à une simple ampoule grillée.",
+    pieces: [
+      { nom: "Ampoule feu de position avant", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "FF2D",
+    titre: "Défaut du feu de recul droit (boîtier de fusibles remorque ou module carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage remorque/attelage affecté",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit du feu de recul droit de la remorque attelée.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule du feu de recul de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'apparaît que lorsqu'une remorque est attelée — vérifier en priorité l'ampoule et le câblage de la remorque elle-même.",
+    pieces: [
+      { nom: "Ampoule feu de recul remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F906",
+    titre: "Défaut de l'entrée audio auxiliaire analogique droite 1",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la première entrée auxiliaire analogique droite, utilisée pour connecter une source audio externe.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de l'entrée auxiliaire endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'entrée auxiliaire oxydé ou déconnecté" },
+      { pourcentage: 22, libelle: "Équipement source externe défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord qu'une source audio externe est bien branchée et fonctionnelle avant de suspecter le calculateur du véhicule.",
+    pieces: [
+      { nom: "Diagnostic entrées audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F88A",
+    titre: "Défaut du signal des contacteurs de la trappe articulée gauche et droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — trappe ou volet spécifique",
+    description:
+      "Le BSI détecte une anomalie sur le signal des contacteurs qui détectent l'état d'une trappe articulée gauche et droite (trappe à carburant ou similaire selon équipement).",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de trappe défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que la trappe concernée se ferme correctement avant d'envisager un remplacement de contacteur.",
+    pieces: [
+      { nom: "Contacteur trappe articulée", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F9A9",
+    titre: "Défaut du boîtier de fusibles moteur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation moteur possiblement affectée",
+    description:
+      "Variante du défaut général sur le boîtier de fusibles du compartiment moteur, détectée dans un contexte de circuit différent.",
+    causes: [
+      { pourcentage: 36, libelle: "Fusible du boîtier moteur grillé" },
+      { pourcentage: 28, libelle: "Boîtier de fusibles moteur oxydé ou pollué par l'humidité" },
+      { pourcentage: 22, libelle: "Connecteur du boîtier mal enfiché" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, une inspection visuelle du boîtier est la première étape avant tout remplacement.",
+    pieces: [
+      { nom: "Kit fusibles boîtier moteur", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "FC40",
+    titre: "Défaut du capteur de position de coulissement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège ou d'un mécanisme coulissant affecté",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui mesure la position de coulissement d'un mécanisme électrique (siège ou élément similaire selon équipement).",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de position défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher une mémorisation correcte de la position du mécanisme concerné — à signaler lors du diagnostic.",
+    pieces: [
+      { nom: "Capteur de position coulissement", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FEE0",
+    titre: "Défaut du capteur ultrasons",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — aide au stationnement ou détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie générale sur un capteur à ultrasons, utilisé pour l'aide au stationnement ou la détection de mouvement intérieur selon sa position.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur ultrasons défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur (boue, givre, autocollant) résout parfois ce défaut sans remplacement — à vérifier avant toute commande de pièce.",
+    pieces: [
+      { nom: "Capteur ultrasons", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F68A",
+    titre: "Défaut interne du calculateur (système de déclenchement du rappel de sangle passager avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du rappel de sangle (prétensionneur) du passager avant.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F7B3",
+    titre: "Défaut du moteur ou capteur du siège passager arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage du siège passager arrière.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage du siège défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Équipement présent uniquement sur certaines configurations de sièges arrière électriques — vérifier d'abord l'équipement réel du véhicule.",
+    pieces: [
+      { nom: "Diagnostic réglage siège arrière (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F605",
+    titre: "Défaut du prétensionneur avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le circuit du prétensionneur de ceinture avant gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage du prétensionneur avant gauche endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du prétensionneur débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Prétensionneur défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit de prétensionneur doit être diagnostiqué immédiatement par un atelier habilité — ne jamais rouler avec ce voyant allumé en continu.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F607",
+    titre: "Défaut de l'airbag latéral avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le circuit de l'airbag latéral avant gauche, protégeant le thorax en cas de choc latéral.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag latéral endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag latéral défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité — ne jamais rouler avec ce voyant allumé en continu.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F644",
+    titre: "Défaut interne du calculateur (système de déclenchement des prétensionneurs en série, rangée 2 et 3 gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement des prétensionneurs de ceinture en série pour les places gauches de deuxième et troisième rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement des prétensionneurs défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FC0D",
+    titre: "Défaut de la sortie de commande du mécanisme du rétroviseur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseur électrique affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le mécanisme électrique du rétroviseur (rabattement ou orientation selon équipement).",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur du mécanisme de rétroviseur défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun obstacle ne bloque mécaniquement le rétroviseur avant d'envisager un remplacement du moteur.",
+    pieces: [
+      { nom: "Moteur mécanisme rétroviseur", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F927",
+    titre: "Le tuner radio ne fonctionne pas",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception radio uniquement",
+    description:
+      "Le module tuner qui capte les stations radio ne répond plus, empêchant la réception de la radio sans affecter les autres fonctions du système audio.",
+    causes: [
+      { pourcentage: 42, libelle: "Tuner radio défaillant" },
+      { pourcentage: 26, libelle: "Câblage vers le tuner endommagé" },
+      { pourcentage: 18, libelle: "Antenne radio ou son câblage défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Si la lecture Bluetooth ou USB fonctionne normalement mais que seule la radio est muette, le tuner est le suspect principal.",
+    pieces: [
+      { nom: "Module tuner radio", boutique: "Pièces auto en ligne", prix: "50-110€" },
+    ],
+  },
+  {
+    code: "F9CC",
+    titre: "Défaut du lève-vitre avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie générale sur le mécanisme du lève-vitre avant gauche, pouvant provoquer un fonctionnement irrégulier ou une panne complète.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers la porte avant gauche endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 14, libelle: "Carte électronique du lève-vitre défaillante" },
+    ],
+    avisPro:
+      "Un bruit inhabituel avant la panne complète (grincement, ralentissement) est fréquent et permet d'anticiper le remplacement.",
+    pieces: [
+      { nom: "Moteur lève-vitre avant gauche", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F694",
+    titre: "Défaut sur les prétensionneurs en série de la 2e et 3e rangée côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des prétensionneurs de ceinture montés en série pour les places gauches de deuxième et troisième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur sous le siège oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F048",
+    titre: "Défaut sur le réseau LIN",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication d'un sous-système affectée",
+    description:
+      "Le BSI détecte une anomalie sur un bus LIN, un réseau de communication simplifié utilisé pour des équipements secondaires (rétroviseurs, sièges, capteurs de confort).",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du bus LIN endommagé" },
+      { pourcentage: 28, libelle: "Équipement connecté au bus LIN défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé sur le circuit LIN" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les réseaux LIN pilotent souvent un groupe restreint d'équipements de confort — identifier lesquels sont affectés aide à cibler le sous-système en cause.",
+    pieces: [
+      { nom: "Diagnostic réseau LIN (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "FBE6",
+    titre: "Défaut de l'antenne intérieure avant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection clé mains libres affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne intérieure avant, utilisée pour la détection de la clé mains libres à l'avant de l'habitacle.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une difficulté à démarrer le véhicule alors que la clé est bien présente dans l'habitacle peut accompagner ce défaut.",
+    pieces: [
+      { nom: "Antenne mains libres intérieure", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FCE5",
+    titre: "Défaut du capteur central avant droit (variante 5)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'un des capteurs centraux situés à l'avant droit du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "FEF2",
+    titre: "Circuit ouvert ou déconnecté du contacteur rotatif du toit ouvrant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit ouvrant affecté",
+    description:
+      "Le BSI détecte une coupure de circuit ou une déconnexion sur le contacteur rotatif qui commande le toit ouvrant électrique.",
+    causes: [
+      { pourcentage: 40, libelle: "Connecteur du contacteur débranché ou oxydé" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur coupé" },
+      { pourcentage: 20, libelle: "Contacteur rotatif défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un circuit ouvert oriente d'abord vers une déconnexion ou une coupure de câble, plus simple et moins coûteuse à réparer qu'un composant interne défaillant.",
+    pieces: [
+      { nom: "Contacteur rotatif toit ouvrant", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FD12",
+    titre: "Défaut de la commande du moteur gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur la commande d'un moteur électrique situé côté gauche du véhicule, sans précision automatique de l'équipement exact concerné.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur électrique concerné défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 14, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel moteur est concerné par cette commande avant intervention.",
+    pieces: [
+      { nom: "Diagnostic commandes moteur gauche (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F791",
+    titre: "Blocage du contacteur de rétractation (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte que le contacteur de rétractation électrique de la colonne de direction reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de colonne collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement non désiré de la colonne de direction en urgence.",
+    pieces: [
+      { nom: "Contacteur réglage électrique colonne", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F89F",
+    titre: "Défaut de l'alimentation partagée des capteurs de position",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs capteurs de position affectés",
+    description:
+      "Le BSI détecte une anomalie sur la ligne d'alimentation électrique partagée par plusieurs capteurs de position, ce qui peut affecter simultanément plusieurs fonctions.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation partagée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Un des capteurs alimentés en court-circuit" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs de position tombent en panne simultanément, cette alimentation partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FF52",
+    titre: "Défaut des feux de détresse additionnels (boîtier de fusibles remorque ou transformateur carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation remorque affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des feux de détresse additionnels de la remorque, géré par le boîtier de fusibles remorque ou le transformateur installé par un carrossier.",
+    causes: [
+      { pourcentage: 36, libelle: "Ampoule des feux de détresse de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 14, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de signalisation remorque doit être traité avant tout trajet avec remorque attelée, pour rester en conformité et en sécurité.",
+    pieces: [
+      { nom: "Ampoule feux détresse remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F6C1",
+    titre: "Déclenchement des airbags latéraux droits",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les airbags latéraux du côté droit se sont déployés, généralement suite à un choc latéral détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc latéral" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, réel ou intempestif, le véhicule doit être expertisé et les éléments concernés remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "F73E",
+    titre: "Défaut de l'électrovanne de la boucle froide",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur l'électrovanne qui gère la boucle froide du circuit de climatisation.",
+    causes: [
+      { pourcentage: 36, libelle: "Électrovanne défaillante ou grippée" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de l'électrovanne oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Une climatisation qui souffle moins froid que d'habitude peut être liée à ce défaut — à vérifier avant de suspecter un manque de gaz réfrigérant.",
+    pieces: [
+      { nom: "Électrovanne circuit climatisation", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FC18",
+    titre: "Défaut logiciel du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — reprogrammation possiblement nécessaire",
+    description:
+      "Le BSI détecte une anomalie logicielle sur un calculateur associé, généralement suite à une mise à jour incomplète ou une corruption de données internes.",
+    causes: [
+      { pourcentage: 40, libelle: "Mise à jour logicielle interrompue ou incomplète" },
+      { pourcentage: 28, libelle: "Logiciel corrompu suite à une coupure d'alimentation pendant une écriture" },
+      { pourcentage: 20, libelle: "Calculateur défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une reprogrammation complète du calculateur concerné avec l'outil constructeur résout généralement ce type de défaut logiciel.",
+    pieces: [
+      { nom: "Reprogrammation calculateur (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F796",
+    titre: "Blocage du clavier de mémorisation (bouton M)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le bouton M du clavier de mémorisation des positions de siège reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton M du clavier de mémorisation collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier résout souvent ce type de blocage sans remplacement complet de la pièce.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "F72E",
+    titre: "Défaut du moteur de mixage côté passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui mélange l'air chaud et froid côté passager, sur les systèmes à réglage bizone.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de mixage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de mixage bloqué mécaniquement" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par une température côté passager qui ne suit plus le réglage demandé, sans affecter le côté conducteur.",
+    pieces: [
+      { nom: "Moteur volet mixage climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F787",
+    titre: "Blocage du contacteur de redressement (haut du dossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de redressement de la partie haute du dossier de siège reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement de siège non désiré en urgence si le contacteur reste bloqué.",
+    pieces: [
+      { nom: "Contacteur inclinaison dossier siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F7CC",
+    titre: "Défaut de la sortie du témoin lumineux du clavier de mémorisation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du témoin lumineux associé au clavier de mémorisation des réglages de siège.",
+    causes: [
+      { pourcentage: 38, libelle: "LED du témoin défaillante" },
+      { pourcentage: 28, libelle: "Câblage du témoin endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du clavier oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique sans impact sur la mémorisation elle-même — à traiter sans urgence.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "FC0B",
+    titre: "Défaut interne du moteur de lève-vitre électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le moteur du lève-vitre électrique signale une défaillance interne, pouvant provoquer un fonctionnement irrégulier ou une panne complète de la vitre concernée.",
+    causes: [
+      { pourcentage: 45, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 25, libelle: "Mécanisme mécaniquement grippé sollicitant trop le moteur" },
+      { pourcentage: 18, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 12, libelle: "Carte électronique associée défaillante" },
+    ],
+    avisPro:
+      "Un bruit de moteur qui force sans mouvement de vitre indique souvent un blocage mécanique plutôt qu'une panne purement électrique.",
+    pieces: [
+      { nom: "Moteur lève-vitre électrique", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F8A5",
+    titre: "Défaut de l'alimentation des commandes de lève-vitres",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs lève-vitres affectés",
+    description:
+      "Le BSI détecte une anomalie sur la ligne d'alimentation électrique partagée par les commandes de lève-vitres, ce qui peut affecter plusieurs vitres simultanément.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation partagée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Une des commandes de lève-vitre en court-circuit" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs lève-vitres tombent en panne simultanément, cette alimentation partagée est souvent la cause commune plutôt que plusieurs pannes isolées.",
+    pieces: [
+      { nom: "Diagnostic alimentation lève-vitres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F919",
+    titre: "Défaut de la sortie audio arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur arrière gauche, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur arrière gauche défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'arrière gauche confirme généralement ce défaut, souvent lié à un haut-parleur en fin de vie.",
+    pieces: [
+      { nom: "Haut-parleur arrière gauche", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FBC3",
+    titre: "Défaut du capteur intérieur avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur intérieur situé à l'avant droit de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme ou à un système de confort — le diagnostic précise sa fonction exacte.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F000",
+    titre: "Boîtier de fusibles moteur : calculateur muet sur le CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication moteur absente",
+    description:
+      "Le boîtier de fusibles moteur n'émet plus aucun message sur le réseau CAN, ce qui prive le BSI et les autres calculateurs des informations qu'il devrait fournir.",
+    causes: [
+      { pourcentage: 38, libelle: "Boîtier de fusibles moteur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du boîtier défaillante" },
+      { pourcentage: 22, libelle: "Câblage du CAN coupé au niveau du boîtier moteur" },
+      { pourcentage: 12, libelle: "Connecteur du boîtier mal enfiché après une intervention" },
+    ],
+    avisPro:
+      "Ce défaut est prioritaire car il peut masquer d'autres codes moteur devenus injoignables — vérifier en premier les alimentations et masses du boîtier.",
+    pieces: [
+      { nom: "Diagnostic boîtier fusibles moteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FF55",
+    titre: "Défaut du feu de position additionnel gauche (boîtier de fusibles remorque ou transformateur carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage remorque/attelage affecté",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit du feu de position additionnel gauche de la remorque.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule du feu de position de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'apparaît que lorsqu'une remorque est attelée — vérifier en priorité l'ampoule et le câblage de la remorque.",
+    pieces: [
+      { nom: "Ampoule feu de position remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F9EF",
+    titre: "Défaut interne de la carte électronique du clavier de commande de la porte conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commandes de porte conducteur affectées",
+    description:
+      "La carte électronique intégrée au clavier de commande situé sur la porte conducteur (lève-vitres, rétroviseurs, verrouillage) signale une défaillance interne.",
+    causes: [
+      { pourcentage: 42, libelle: "Carte électronique du clavier défaillante" },
+      { pourcentage: 26, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage vers le clavier endommagé" },
+      { pourcentage: 12, libelle: "Connecteur de porte oxydé" },
+    ],
+    avisPro:
+      "Ce clavier regroupe souvent plusieurs commandes (vitres, rétroviseurs, verrouillage) — une panne complète de toutes ces fonctions oriente directement vers ce défaut.",
+    pieces: [
+      { nom: "Clavier de commande porte conducteur", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FEF9",
+    titre: "Défaut de panne mécanique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — anomalie mécanique détectée",
+    description:
+      "Le BSI détecte qu'un mécanisme électrique rencontre une résistance ou un blocage d'origine mécanique plutôt qu'électrique, sans préciser automatiquement lequel.",
+    causes: [
+      { pourcentage: 40, libelle: "Mécanisme grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Obstacle gênant le mouvement mécanique" },
+      { pourcentage: 20, libelle: "Usure ou casse d'une pièce mécanique du mécanisme" },
+      { pourcentage: 12, libelle: "Moteur électrique associé fatigué" },
+    ],
+    avisPro:
+      "Ce défaut générique nécessite d'identifier avec l'outil de diagnostic quel mécanisme précis est concerné avant toute intervention.",
+    pieces: [
+      { nom: "Diagnostic mécanisme concerné (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F633",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag passager niveau 1)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du premier niveau de l'airbag passager avant.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag passager (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FD83",
+    titre: "Défaut audio interne",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio signale une défaillance interne générale, distincte des défauts propres à un haut-parleur ou une entrée spécifique.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur audio défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur audio défaillante" },
+      { pourcentage: 17, libelle: "Logiciel corrompu suite à une mise à jour incomplète" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un redémarrage complet du système (coupure batterie courte) permet parfois de résoudre ce type de défaut logiciel sans remplacement.",
+    pieces: [
+      { nom: "Diagnostic calculateur audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F6E0",
+    titre: "Détection d'un choc arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — événement de sécurité enregistré",
+    description:
+      "Le calculateur de sécurité passive a enregistré la détection d'un choc à l'arrière du véhicule, information utilisée pour déclencher certains dispositifs de sécurité.",
+    causes: [
+      { pourcentage: 50, libelle: "Choc réel détecté à l'arrière du véhicule" },
+      { pourcentage: 30, libelle: "Détection intempestive suite à un défaut de capteur d'impact arrière" },
+      { pourcentage: 20, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après toute détection de choc, réelle ou intempestive, un contrôle complet du système de sécurité passive est recommandé avant de reprendre la route normalement.",
+    pieces: [
+      { nom: "Diagnostic système sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FBCC",
+    titre: "Défaut du capteur extérieur avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur extérieur situé à l'avant droit du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement en premier.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F7F1",
+    titre: "Défaut : mémoire du bus coupée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — perte de données réseau",
+    description:
+      "Le BSI détecte que la mémoire tampon du bus de communication a été coupée ou réinitialisée de manière anormale, pouvant provoquer une perte temporaire de données échangées.",
+    causes: [
+      { pourcentage: 36, libelle: "Coupure d'alimentation ayant réinitialisé la mémoire du bus" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Câblage du réseau endommagé" },
+      { pourcentage: 14, libelle: "Perturbation électrique externe" },
+    ],
+    avisPro:
+      "Ce défaut est souvent lié à une coupure de batterie récente — un nouveau contrôle après quelques trajets permet de vérifier s'il persiste.",
+    pieces: [
+      { nom: "Diagnostic réseau (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "FF61",
+    titre: "Défaut sur l'une ou les deux commandes du relais de pompe hydraulique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système hydraulique affecté",
+    description:
+      "Le BSI détecte une anomalie sur la commande d'un ou des deux relais qui pilotent la pompe hydraulique, utilisée pour la direction assistée ou le toit rétractable selon les modèles.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais de pompe hydraulique défaillant" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Pompe hydraulique elle-même défaillante" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement, ce défaut peut affecter la direction assistée — à traiter en priorité si un durcissement de la direction est ressenti.",
+    pieces: [
+      { nom: "Relais pompe hydraulique", boutique: "Pièces auto en ligne", prix: "30-65€" },
+    ],
+  },
+  {
+    code: "F60E",
+    titre: "Défaut de l'airbag de protection des genoux du passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie électrique sur le circuit de l'airbag qui protège les genoux du passager avant en cas de choc frontal.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de l'airbag genoux passager endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'airbag débranché ou oxydé" },
+      { pourcentage: 22, libelle: "Airbag genoux défaillant" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut sur un circuit d'airbag doit être diagnostiqué immédiatement par un atelier habilité — ne jamais rouler avec ce voyant allumé en continu.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag genoux (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F8CA",
+    titre: "Défaut du bouton inférieur de l'écran multifonction",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande écran uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le bouton inférieur de navigation dans les menus de l'écran multifonction.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du combiné de commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 12, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Défaut sans conséquence sur la conduite — se traduit uniquement par une navigation dans les menus de l'écran moins pratique.",
+    pieces: [
+      { nom: "Combiné de commande écran multifonction", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F88C",
+    titre: "Défaut de position des trappes articulées",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — trappe ou volet spécifique",
+    description:
+      "Le BSI détecte une anomalie sur le signal de position d'une trappe articulée (trappe à carburant ou similaire selon équipement).",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de trappe défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Trappe mal fermée mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que la trappe concernée se ferme correctement avant d'envisager un remplacement de capteur.",
+    pieces: [
+      { nom: "Capteur position trappe", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F700",
+    titre: "Blocage d'un bouton",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte qu'un bouton de commande générique reste bloqué en position activée, sans précision automatique du bouton exact concerné.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel bouton est concerné avant toute intervention.",
+    pieces: [
+      { nom: "Diagnostic boutons de commande (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F1A6",
+    titre: "Défaut du temps de confirmation d'ouverture de la vitre avant gauche (information multiplexée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le temps de confirmation d'ouverture de la vitre avant gauche, transmis via le réseau multiplexé, dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de lève-vitre grippé ou encrassé" },
+      { pourcentage: 28, libelle: "Défaut de communication réseau ponctuel" },
+      { pourcentage: 22, libelle: "Moteur de lève-vitre fatigué" },
+      { pourcentage: 14, libelle: "Calculateur de porte mal calibré" },
+    ],
+    avisPro:
+      "Un nettoyage et une lubrification des rails de guidage résolvent souvent ce type de lenteur avant d'envisager un remplacement de moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F764",
+    titre: "Défaut interne du panneau de commande climatisation arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le panneau de commande de climatisation situé à l'arrière gauche signale une défaillance interne, pouvant provoquer un affichage ou des commandes non fonctionnelles à cet endroit.",
+    causes: [
+      { pourcentage: 45, libelle: "Panneau de commande défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du panneau défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers le panneau endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un panneau totalement éteint côté arrière gauche sans autre symptôme confirme généralement ce défaut plutôt qu'un problème de climatisation général.",
+    pieces: [
+      { nom: "Panneau commande climatisation arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FC85",
+    titre: "Défaut des commandes d'éclairage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — commande d'éclairage affectée",
+    description:
+      "Le BSI détecte une anomalie générale sur les commandes d'éclairage du véhicule (commodo ou molette selon modèle), sans précision automatique de la fonction exacte.",
+    causes: [
+      { pourcentage: 36, libelle: "Commodo ou molette d'éclairage défaillant" },
+      { pourcentage: 28, libelle: "Câblage des commandes endommagé" },
+      { pourcentage: 22, libelle: "Connecteur des commandes mal enfiché" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un éclairage qui ne répond plus correctement aux commandes doit être diagnostiqué rapidement, car il s'agit d'un équipement de sécurité pour la conduite de nuit.",
+    pieces: [
+      { nom: "Commodo d'éclairage", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FCC8",
+    titre: "Défaut du contacteur de ceinture non bouclée, place gauche (3e rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place gauche de troisième rangée est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente — à vérifier même si un passager y est correctement attaché.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FF62",
+    titre: "Défaut sur une ou plusieurs commandes de lève-vitres arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs lève-vitres arrière affectés",
+    description:
+      "Le BSI détecte une anomalie sur une ou plusieurs commandes de lève-vitres arrière, ce qui peut affecter simultanément plusieurs vitres.",
+    causes: [
+      { pourcentage: 36, libelle: "Commande de lève-vitre défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 22, libelle: "Court-circuit sur le circuit partagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Tester chaque vitre séparément permet d'isoler si le défaut vient d'une commande précise ou d'un problème électrique plus large.",
+    pieces: [
+      { nom: "Diagnostic lève-vitres arrière (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F63E",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag genoux passager)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag de protection des genoux du passager.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag genoux (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F8AB",
+    titre: "Défaut du temps de fermeture de la vitre arrière droite ou passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le temps mis par la vitre arrière droite ou passager pour se fermer dépasse la plage normale attendue, signe d'un frottement ou d'une résistance mécanique.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre grippé ou encrassé" },
+      { pourcentage: 28, libelle: "Rail de guidage de la vitre déformé" },
+      { pourcentage: 20, libelle: "Moteur de lève-vitre fatigué" },
+      { pourcentage: 14, libelle: "Calculateur de porte mal calibré" },
+    ],
+    avisPro:
+      "Un nettoyage et une lubrification des rails de guidage résolvent souvent ce type de lenteur avant d'envisager un remplacement de moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F666",
+    titre: "Défaut du capteur de position du siège passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité airbag possiblement affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le capteur qui mesure la position du siège passager avant, utilisé pour adapter le déploiement de l'airbag.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur influence le mode de déploiement de l'airbag passager — un diagnostic par un atelier habilité aux systèmes de sécurité est recommandé.",
+    pieces: [
+      { nom: "Capteur position siège passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F691",
+    titre: "Défaut de l'airbag droit et de l'airbag rideau droit en production",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie de configuration liée à la présence en production de l'airbag droit et de l'airbag rideau droit, généralement après une intervention sur ces éléments.",
+    causes: [
+      { pourcentage: 40, libelle: "Configuration du calculateur non mise à jour après intervention" },
+      { pourcentage: 28, libelle: "Airbag ou rideau droit récemment remplacé sans recodage" },
+      { pourcentage: 20, libelle: "Câblage des airbags concernés endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement d'airbag, un recodage complet du calculateur de sécurité passive est indispensable — sans cette étape, ce défaut apparaît systématiquement.",
+    pieces: [
+      { nom: "Recodage calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FEFA",
+    titre: "Défaut électronique ou moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — origine à préciser par diagnostic",
+    description:
+      "Le BSI détecte une anomalie qui peut avoir une origine électronique ou mécanique côté moteur, un code générique nécessitant une analyse complémentaire pour cibler la cause exacte.",
+    causes: [
+      { pourcentage: 34, libelle: "Calculateur électronique associé défaillant" },
+      { pourcentage: 28, libelle: "Capteur moteur défaillant" },
+      { pourcentage: 22, libelle: "Câblage endommagé" },
+      { pourcentage: 16, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture complète des paramètres moteur en direct pour orienter le diagnostic vers la bonne origine.",
+    pieces: [
+      { nom: "Diagnostic approfondi moteur/électronique (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FEEC",
+    titre: "Défaut calculateur (mémoire EEPROM vierge)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — reprogrammation nécessaire",
+    description:
+      "Le BSI détecte qu'un calculateur associé a sa mémoire EEPROM vierge, non programmée, généralement après un remplacement de composant.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur récemment remplacé non encore programmé" },
+      { pourcentage: 28, libelle: "Procédure de programmation interrompue" },
+      { pourcentage: 17, libelle: "Calculateur défaillant empêchant la programmation" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est normal juste après le remplacement d'un calculateur tant que la programmation complète n'a pas été effectuée par l'atelier.",
+    pieces: [
+      { nom: "Programmation calculateur (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "FCD6",
+    titre: "Défaut de présence passager, place droite de 3e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur la place droite de la troisième rangée de sièges.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place — à vérifier avant tout trajet avec un passager assis à cet endroit.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F907",
+    titre: "Défaut de l'entrée audio auxiliaire analogique gauche 2",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la deuxième entrée auxiliaire analogique gauche, utilisée pour connecter une source audio externe.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de l'entrée auxiliaire endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'entrée auxiliaire oxydé ou déconnecté" },
+      { pourcentage: 22, libelle: "Équipement source externe défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord qu'une source audio externe est bien branchée et fonctionnelle avant de suspecter le calculateur du véhicule.",
+    pieces: [
+      { nom: "Diagnostic entrées audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD3A",
+    titre: "Défaut d'amplification",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur l'étage d'amplification du système, pouvant provoquer un son faible, déformé ou absent sur plusieurs voies.",
+    causes: [
+      { pourcentage: 42, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 28, libelle: "Alimentation de l'amplificateur défaillante" },
+      { pourcentage: 18, libelle: "Câblage vers l'amplificateur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Un son globalement faible sur toutes les voies plutôt que sur un seul haut-parleur oriente directement vers ce défaut d'amplification.",
+    pieces: [
+      { nom: "Amplificateur audio", boutique: "Pièces auto en ligne", prix: "80-180€" },
+    ],
+  },
+  {
+    code: "F710",
+    titre: "Boutons bloqués sur le panneau de commande climatisation arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte que les boutons du panneau de commande de climatisation situé à l'arrière droit restent bloqués en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Panneau de commande défaillant ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le panneau" },
+      { pourcentage: 20, libelle: "Câblage du panneau endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du panneau de commande résout souvent ce type de blocage sans remplacement.",
+    pieces: [
+      { nom: "Panneau commande climatisation arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F8B3",
+    titre: "Défaut du temps de perte des contacteurs de verrouillage coffre et toit gauche et droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — état de verrouillage incertain",
+    description:
+      "Le BSI détecte que le temps mis à perdre l'information des contacteurs de verrouillage du coffre et du toit, côtés gauche et droit, sort de la plage normale attendue.",
+    causes: [
+      { pourcentage: 34, libelle: "Contacteur de verrouillage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers les contacteurs endommagé" },
+      { pourcentage: 24, libelle: "Mécanisme de verrouillage mécaniquement grippé" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser la confirmation de verrouillage du coffre et du toit — à vérifier visuellement avant de considérer le véhicule sécurisé.",
+    pieces: [
+      { nom: "Diagnostic contacteurs verrouillage coffre/toit (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F895",
+    titre: "Défaut du signal du contacteur de sortie de la tablette",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort coffre uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale que la tablette de coffre (cache-bagages) est en position sortie.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de tablette défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de confort mineur sans impact sur la sécurité — à traiter sans urgence lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Contacteur tablette de coffre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F7A3",
+    titre: "Défaut du moteur ou capteur de réglage horizontal de l'appui-tête",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage horizontal de l'appui-tête électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage d'appui-tête défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un appui-tête bloqué dans une position peut gêner le confort et la posture du conducteur — à traiter sans urgence excessive.",
+    pieces: [
+      { nom: "Diagnostic réglage électrique siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD8A",
+    titre: "Absence du microphone",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — mains libres téléphonique affecté",
+    description:
+      "Le calculateur détecte que le microphone du kit mains libres n'est plus détecté sur le circuit, généralement suite à un débranchement ou une coupure.",
+    causes: [
+      { pourcentage: 42, libelle: "Microphone débranché ou câblage sectionné" },
+      { pourcentage: 28, libelle: "Connecteur du microphone oxydé" },
+      { pourcentage: 18, libelle: "Microphone défaillant" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Le microphone se trouve généralement près du pare-soleil ou du rétroviseur intérieur — un contrôle visuel rapide permet de repérer un débranchement.",
+    pieces: [
+      { nom: "Microphone mains libres", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F1A9",
+    titre: "Ordre d'information du BSI non valide",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau incohérente",
+    description:
+      "Un calculateur détecte qu'un ordre transmis par le BSI n'est pas valide, ce qui peut empêcher l'exécution correcte d'une commande.",
+    causes: [
+      { pourcentage: 36, libelle: "BSI défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau endommagé" },
+      { pourcentage: 22, libelle: "Logiciel du BSI corrompu" },
+      { pourcentage: 14, libelle: "Connecteur du BSI oxydé" },
+    ],
+    avisPro:
+      "Ce défaut, rapporté par un autre calculateur au sujet du BSI, doit être croisé avec les codes propres du BSI pour confirmer l'origine réelle.",
+    pieces: [
+      { nom: "Diagnostic BSI complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FF69",
+    titre: "Défaut du temps de déverrouillage du coffre",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ouverture du coffre affectée",
+    description:
+      "Le BSI détecte que le temps mis par le mécanisme de déverrouillage du coffre dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Serrure électrique du coffre grippée ou mal lubrifiée" },
+      { pourcentage: 28, libelle: "Actionneur de déverrouillage fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une lubrification de la serrure du coffre résout parfois ce type de lenteur sans remplacement de pièce.",
+    pieces: [
+      { nom: "Serrure électrique coffre", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FBC8",
+    titre: "Défaut du capteur extérieur arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur extérieur situé à l'arrière droit du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement en premier.",
+    pieces: [
+      { nom: "Capteur de stationnement arrière", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F90D",
+    titre: "Incohérence de configuration (antenne active codée passive)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le BSI détecte que l'antenne installée est de type actif alors que sa configuration logicielle indique un type passif, généralement après un remplacement sans recodage.",
+    causes: [
+      { pourcentage: 45, libelle: "Antenne remplacée sans recodage de la configuration" },
+      { pourcentage: 30, libelle: "Mauvaise référence d'antenne installée" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+      { pourcentage: 10, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Toute antenne remplacée doit être déclarée via l'outil de diagnostic pour que sa configuration corresponde au type réellement installé.",
+    pieces: [
+      { nom: "Recodage configuration antenne (atelier)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F646",
+    titre: "Défaut interne du calculateur (système de déclenchement du prétensionneur central 2e rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du prétensionneur de la place centrale de deuxième rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F89C",
+    titre: "Dépassement du seuil maximal de température du moteur de la pompe hydraulique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système hydraulique en surchauffe",
+    description:
+      "Le BSI détecte que le moteur de la pompe hydraulique a dépassé sa température maximale admissible, généralement suite à une sollicitation excessive ou prolongée.",
+    causes: [
+      { pourcentage: 38, libelle: "Sollicitation excessive du toit ou de la direction assistée hydraulique" },
+      { pourcentage: 28, libelle: "Pompe hydraulique défaillante, surconsommant du courant" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé forçant le moteur" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Laisser refroidir le système avant toute nouvelle manœuvre — insister en surchauffe peut endommager durablement la pompe hydraulique.",
+    pieces: [
+      { nom: "Diagnostic pompe hydraulique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FF13",
+    titre: "Défaut de fonctionnement du moteur maître d'essuie-glace",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — essuie-glace affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie de fonctionnement sur le moteur principal (maître) qui entraîne les essuie-glaces.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur d'essuie-glace défaillant ou usé" },
+      { pourcentage: 28, libelle: "Mécanisme d'essuie-glace grippé (bras, balais figés)" },
+      { pourcentage: 22, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord que les bras d'essuie-glace ne sont pas figés par le gel ou bloqués mécaniquement avant de suspecter le moteur.",
+    pieces: [
+      { nom: "Moteur essuie-glace maître", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F617",
+    titre: "Défaut du satellite (module additionnel) de la porte avant droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite additionnel installé dans la porte avant droite, qui gère certaines commandes locales (vitres, verrouillage, rétroviseur).",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite de porte défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de porte oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions sur la porte avant droite (vitre, rétroviseur, verrouillage) oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite porte avant droite", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "FBFD",
+    titre: "Défaut d'alimentation du contacteur électronique d'allumage (AVE)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage possiblement affecté",
+    description:
+      "Le BSI détecte une anomalie sur l'alimentation du contacteur électronique qui remplace la clé de contact traditionnelle (bouton start/stop) sur les véhicules à accès mains libres.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur électronique d'allumage défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du contacteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le démarrage par bouton start/stop — un diagnostic rapide est nécessaire si le véhicule ne démarre plus par ce moyen.",
+    pieces: [
+      { nom: "Contacteur électronique allumage (start/stop)", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "FC02",
+    titre: "Défaut de l'entrée des capteurs du mécanisme du rétroviseur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseur électrique affecté",
+    description:
+      "Le BSI détecte une anomalie sur l'entrée qui reçoit les informations des capteurs de position du mécanisme électrique du rétroviseur.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position du rétroviseur défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la mémorisation correcte de la position du rétroviseur — à signaler lors du diagnostic.",
+    pieces: [
+      { nom: "Capteur position rétroviseur", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FD06",
+    titre: "Défaut du circuit du capteur de position S1 côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — capteur de position générique",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du capteur de position référencé S1, situé côté gauche du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position S1 défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quelle fonction est associée à ce capteur avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur de position (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F9B3",
+    titre: "Boîtier de fusibles moteur : absence de communication avec le moteur maître d'essuie-glace sur le LIN",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — essuie-glace affecté",
+    description:
+      "Le boîtier de fusibles moteur ne parvient plus à communiquer avec le moteur maître d'essuie-glace via le réseau LIN.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur d'essuie-glace défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau LIN vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du moteur oxydé" },
+      { pourcentage: 14, libelle: "Boîtier de fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Des essuie-glaces totalement inactifs, sans même un bruit de moteur, confirment généralement ce défaut de communication.",
+    pieces: [
+      { nom: "Moteur essuie-glace maître", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F8BE",
+    titre: "Défaut du temps de rangement de la tablette",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort coffre uniquement",
+    description:
+      "Le BSI détecte que le temps mis par la tablette de coffre motorisée (cache-bagages) pour se ranger dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de la tablette grippé" },
+      { pourcentage: 28, libelle: "Moteur de la tablette fatigué" },
+      { pourcentage: 22, libelle: "Obstacle gênant le rangement" },
+      { pourcentage: 14, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun bagage ou objet ne gêne le rangement automatique de la tablette avant d'envisager une réparation mécanique.",
+    pieces: [
+      { nom: "Diagnostic mécanisme tablette (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F90C",
+    titre: "Défaut antenne passive",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception radio affectée",
+    description:
+      "Le BSI ou le calculateur audio détecte une anomalie sur une antenne de type passif utilisée pour la réception radio.",
+    causes: [
+      { pourcentage: 38, libelle: "Antenne passive défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 12, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Une réception radio dégradée ou absente, en particulier hors des zones urbaines, accompagne généralement ce défaut.",
+    pieces: [
+      { nom: "Antenne radio passive", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "FEF1",
+    titre: "Court-circuit à la masse ou bouton coincé du contacteur rotatif du toit ouvrant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit ouvrant affecté",
+    description:
+      "Le BSI détecte un court-circuit à la masse sur le contacteur rotatif du toit ouvrant, ou que son bouton reste physiquement coincé.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton du contacteur coincé mécaniquement" },
+      { pourcentage: 28, libelle: "Contacteur rotatif défaillant, court-circuité" },
+      { pourcentage: 22, libelle: "Câblage du contacteur en court-circuit à la masse" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord que le bouton n'est pas physiquement bloqué par un objet ou de la poussière avant d'envisager un remplacement.",
+    pieces: [
+      { nom: "Contacteur rotatif toit ouvrant", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F7A6",
+    titre: "Défaut du moteur ou capteur axial (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage axial (profondeur) de la colonne de direction.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage axial défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage de la colonne endommagé" },
+      { pourcentage: 14, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du volant — sans urgence, mais peut gêner l'installation au poste de conduite.",
+    pieces: [
+      { nom: "Moteur réglage axial colonne de direction", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "F956",
+    titre: "Défaut du module CD ou DVD",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort multimédia uniquement",
+    description:
+      "Le module de lecture CD ou DVD intégré au système multimédia signale une anomalie, sans impact sur les autres fonctions du véhicule.",
+    causes: [
+      { pourcentage: 42, libelle: "Module CD/DVD défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Équipement de plus en plus rare — vérifier la disponibilité de la pièce et son intérêt réel avant de s'engager dans une réparation coûteuse.",
+    pieces: [
+      { nom: "Module lecteur CD/DVD", boutique: "Pièces auto en ligne / occasion", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "F79B",
+    titre: "Blocage du contacteur d'avancée (longueur d'assise)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'avancée du réglage de longueur d'assise du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres contacteurs de siège, un nettoyage de la commande résout souvent le blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Contacteur réglage longueur assise", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F947",
+    titre: "Absence de la télécommande (spécifique 807)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — équipement spécifique Peugeot 807",
+    description:
+      "Le BSI ne détecte plus la présence de la télécommande spécifique au modèle Peugeot 807, utilisée pour certaines fonctions de confort propres à ce véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Télécommande absente, perdue ou pile totalement déchargée" },
+      { pourcentage: 28, libelle: "Récepteur de la télécommande défaillant" },
+      { pourcentage: 22, libelle: "Câblage du récepteur endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord la présence physique de la télécommande et l'état de sa pile avant tout diagnostic électronique.",
+    pieces: [
+      { nom: "Pile télécommande", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "F9E3",
+    titre: "Absence de communication avec le calculateur du lève-vitre avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le calculateur ou la carte électronique du lève-vitre avant droit.",
+    causes: [
+      { pourcentage: 35, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la porte avant droite endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de porte oxydé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres défauts de lève-vitre, la carte électronique et le moteur forment souvent un seul ensemble à remplacer.",
+    pieces: [
+      { nom: "Moteur lève-vitre avant droit avec carte électronique", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "F97E",
+    titre: "Défaut de fermeture de l'écran rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — écran motorisé affecté",
+    description:
+      "Le BSI détecte une anomalie lors de la fermeture (escamotage) de l'écran rétractable du système multimédia sur les véhicules équipés de cette option.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de l'écran grippé" },
+      { pourcentage: 28, libelle: "Moteur d'escamotage de l'écran défaillant" },
+      { pourcentage: 22, libelle: "Obstacle gênant la fermeture" },
+      { pourcentage: 14, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun objet ne gêne la fermeture de l'écran avant d'envisager une réparation du mécanisme motorisé.",
+    pieces: [
+      { nom: "Diagnostic mécanisme écran rétractable (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FD17",
+    titre: "Défaut du circuit du contacteur de fin d'ouverture côté droit (CFO)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de fin de course affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du contacteur de fin d'ouverture (CFO) côté droit, utilisé pour confirmer qu'un élément a atteint sa position d'ouverture maximale.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de fin de course défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quel élément exact est concerné par ce contacteur de fin de course avant intervention.",
+    pieces: [
+      { nom: "Diagnostic contacteur fin de course (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F96B",
+    titre: "Défaut de la couche physique CAN CRT (NERR)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — défaut matériel du bus CAN",
+    description:
+      "Le BSI détecte une anomalie sur la couche physique du réseau CAN dédié au confort (CRT), un défaut matériel plus profond qu'une simple perte de communication logicielle.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du bus CAN endommagé physiquement" },
+      { pourcentage: 28, libelle: "Résistance de terminaison du bus défaillante" },
+      { pourcentage: 22, libelle: "Court-circuit sur l'un des fils du bus" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce type de défaut matériel nécessite un contrôle à l'oscilloscope ou à l'ohmmètre du bus CAN plutôt qu'un simple effacement de code.",
+    pieces: [
+      { nom: "Diagnostic approfondi bus CAN (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FC08",
+    titre: "Défaut de position horizontale du rétroviseur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseur électrique affecté",
+    description:
+      "Le BSI détecte une anomalie sur le capteur ou le moteur qui contrôle la position horizontale du rétroviseur électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage horizontal défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du rétroviseur endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un rétroviseur qui ne s'ajuste plus que verticalement, jamais horizontalement, confirme généralement ce défaut précis.",
+    pieces: [
+      { nom: "Moteur réglage rétroviseur", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FCA2",
+    titre: "Le capteur ne passe pas en position verrouillée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — état de verrouillage incertain",
+    description:
+      "Le BSI détecte qu'un capteur associé à un mécanisme de verrouillage ne confirme jamais le passage en position verrouillée, malgré la commande envoyée.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position défaillant" },
+      { pourcentage: 28, libelle: "Mécanisme de verrouillage mécaniquement grippé" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que le mécanisme concerné se verrouille bien physiquement avant de suspecter uniquement le capteur.",
+    pieces: [
+      { nom: "Diagnostic mécanisme de verrouillage (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7AF",
+    titre: "Blocage du contacteur d'avancée (commutateur professionnel)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — équipement professionnel spécifique",
+    description:
+      "Le BSI détecte que le contacteur d'avancée d'un commutateur professionnel additionnel reste bloqué en position activée, sur véhicule utilitaire ou de flotte.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage de l'installation professionnelle endommagé" },
+      { pourcentage: 20, libelle: "Connecteur additionnel oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne un équipement additionnel propre aux véhicules professionnels — vérifier d'abord la configuration réelle du véhicule.",
+    pieces: [
+      { nom: "Diagnostic installation commutateurs pro (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F72D",
+    titre: "Défaut du moteur de mixage côté conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui mélange l'air chaud et froid côté conducteur, sur les systèmes à réglage bizone.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de mixage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de mixage bloqué mécaniquement" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par une température côté conducteur qui ne suit plus le réglage demandé.",
+    pieces: [
+      { nom: "Moteur volet mixage climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F9D7",
+    titre: "Blocage des boutons de lève-vitre du clavier de commande conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitres affectés",
+    description:
+      "Le BSI détecte que les boutons de commande des lève-vitres sur le clavier de la porte conducteur restent bloqués en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Boutons du clavier collés ou usés" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier de commande résout souvent ce type de blocage — vérifier qu'aucun liquide n'a été renversé dessus.",
+    pieces: [
+      { nom: "Clavier de commande porte conducteur", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F73B",
+    titre: "Défaut du moteur de distribution d'air arrière ou arrière gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte une anomalie sur le moteur qui oriente la distribution d'air de la climatisation vers l'arrière du véhicule ou la zone arrière gauche.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de distribution d'air défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de distribution bloqué mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par une climatisation arrière qui souffle mal ou pas du tout.",
+    pieces: [
+      { nom: "Moteur volet distribution climatisation arrière", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F7CA",
+    titre: "Défaut de la sortie d'avancée (moteur multi-mouvements)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie d'avancée d'un moteur multi-mouvements de siège, qui combine plusieurs réglages en un seul actionneur.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur multi-mouvements défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du siège — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F887",
+    titre: "Défaut du signal du contacteur d'ouverture du toit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Variante du défaut de signal du contacteur qui indique que le toit rétractable est en position ouverte.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur d'ouverture du toit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser l'affichage de l'état du toit au tableau de bord — vérifier visuellement la position réelle en cas de doute.",
+    pieces: [
+      { nom: "Contacteur ouverture toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F89E",
+    titre: "Commande de la vitre arrière gauche ou conducteur active sans consommation de courant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — moteur de lève-vitre possiblement déconnecté",
+    description:
+      "Le BSI détecte que la commande du lève-vitre arrière gauche ou conducteur est activée mais qu'aucun courant n'est consommé, signe d'une coupure du circuit moteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de lève-vitre débranché ou câblage coupé" },
+      { pourcentage: 28, libelle: "Moteur de lève-vitre grillé (bobinage coupé)" },
+      { pourcentage: 22, libelle: "Fusible du circuit lève-vitre grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une absence totale de consommation électrique, plutôt qu'un courant anormal, oriente directement vers une coupure de circuit plutôt qu'un blocage mécanique.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière gauche", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FB8A",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°3",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un troisième bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBD4",
+    titre: "Défaut du capteur intérieur arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur intérieur situé à l'arrière droit de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme périmétrique ou à un système de confort.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F89D",
+    titre: "Commande de la vitre arrière droite ou passager active sans consommation de courant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — moteur de lève-vitre possiblement déconnecté",
+    description:
+      "Le BSI détecte que la commande du lève-vitre arrière droite ou passager est activée mais qu'aucun courant n'est consommé, signe d'une coupure du circuit moteur.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de lève-vitre débranché ou câblage coupé" },
+      { pourcentage: 28, libelle: "Moteur de lève-vitre grillé (bobinage coupé)" },
+      { pourcentage: 22, libelle: "Fusible du circuit lève-vitre grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Symétrique du défaut côté gauche associé — même méthode de diagnostic, en commençant par un contrôle de continuité du circuit moteur.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière droit", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F70C",
+    titre: "Défaut du capteur d'air soufflé arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui mesure la température de l'air soufflé côté arrière gauche de la climatisation.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'air soufflé défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser la régulation automatique de température arrière gauche sans empêcher la soufflerie de fonctionner.",
+    pieces: [
+      { nom: "Capteur température air soufflé", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F790",
+    titre: "Blocage du contacteur d'extension (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte que le contacteur d'extension électrique de la colonne de direction reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de colonne collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement non désiré de la colonne de direction en urgence.",
+    pieces: [
+      { nom: "Contacteur réglage électrique colonne", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FD05",
+    titre: "Défaut de la serrure droite à contacteur intégré",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — verrouillage porte droite affecté",
+    description:
+      "Le BSI détecte une anomalie sur la serrure électrique de la porte droite qui intègre son propre contacteur de détection d'état.",
+    causes: [
+      { pourcentage: 36, libelle: "Serrure à contacteur intégré défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la serrure endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la serrure oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un verrouillage centralisé qui ne fonctionne plus que d'un côté du véhicule oriente directement vers ce type de défaut de serrure.",
+    pieces: [
+      { nom: "Serrure électrique porte droite", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F918",
+    titre: "Défaut de la sortie audio avant droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur avant droit, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur avant droit défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'avant droit confirme généralement ce défaut sans nécessiter de diagnostic électronique poussé.",
+    pieces: [
+      { nom: "Haut-parleur avant droit", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FBFE",
+    titre: "Défaut de l'alimentation positive sécurisée d'allumage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage possiblement affecté",
+    description:
+      "Le BSI détecte une anomalie sur la ligne d'alimentation positive sécurisée associée au circuit d'allumage, un circuit protégé par une logique de sécurité anti-démarrage.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur ou relais d'allumage sécurisé défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la ligne sécurisée endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut être lié à un système antidémarrage — si le véhicule refuse de démarrer, un diagnostic prioritaire est nécessaire.",
+    pieces: [
+      { nom: "Diagnostic circuit allumage sécurisé (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F94D",
+    titre: "Blocage du bouton d'appel d'assistance",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — bouton d'urgence affecté",
+    description:
+      "Le BSI détecte que le bouton d'appel d'assistance (souvent situé au pavillon, type SOS ou appel opérateur) reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton d'appel défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur télématique défaillant" },
+    ],
+    avisPro:
+      "Un bouton d'urgence bloqué peut déclencher des appels répétés injustifiés — à traiter rapidement pour éviter la gêne et les appels inutiles.",
+    pieces: [
+      { nom: "Bouton appel d'assistance / SOS", boutique: "Pièces auto en ligne", prix: "30-70€" },
+    ],
+  },
+  {
+    code: "FD0A",
+    titre: "Défaut du circuit du contacteur d'ouverture de porte latérale gauche (CPO)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection d'ouverture affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du contacteur de porte ouverte (CPO) de la porte latérale gauche, utilisé pour l'éclairage intérieur et les alertes de sécurité.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de porte défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un témoin de porte ouverte qui reste allumé au tableau de bord alors que toutes les portes sont fermées est le symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Contacteur de porte (CPO)", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "F9D8",
+    titre: "Blocage des boutons de rétroviseur du clavier de commande conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseurs électriques affectés",
+    description:
+      "Le BSI détecte que les boutons de commande des rétroviseurs sur le clavier de la porte conducteur restent bloqués en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Boutons du clavier collés ou usés" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Clavier de commande porte conducteur", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F78F",
+    titre: "Blocage du contacteur d'abaissement (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte que le contacteur d'abaissement électrique de la colonne de direction reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de colonne collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement non désiré de la colonne de direction en urgence.",
+    pieces: [
+      { nom: "Contacteur réglage électrique colonne", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F671",
+    titre: "Défaut du dispositif anti-sous-marinage passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur le dispositif anti-sous-marinage du siège passager, qui limite le glissement du bassin sous la ceinture en cas de choc frontal.",
+    causes: [
+      { pourcentage: 36, libelle: "Actionneur anti-sous-marinage défaillant" },
+      { pourcentage: 28, libelle: "Câblage du dispositif endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce dispositif de sécurité passive doit être diagnostiqué rapidement par un atelier habilité, sans intervention improvisée sur le siège.",
+    pieces: [
+      { nom: "Diagnostic dispositif anti-sous-marinage (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FB89",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°2",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un deuxième bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCCF",
+    titre: "Défaut de présence de siège, place gauche de 3e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence physique du siège gauche de troisième rangée, sur les véhicules à sièges amovibles.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de présence de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le plancher endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le siège est correctement verrouillé sur ses fixations avant d'envisager un remplacement de capteur.",
+    pieces: [
+      { nom: "Capteur de présence siège amovible", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F632",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag conducteur niveau 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du deuxième niveau de l'airbag conducteur.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F88B",
+    titre: "Défaut du signal des contacteurs de sortie de la trappe articulée gauche et droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — trappe ou volet spécifique",
+    description:
+      "Le BSI détecte une anomalie sur le signal des contacteurs qui détectent l'état de sortie d'une trappe articulée gauche et droite.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de trappe défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement l'état de la trappe concernée avant d'envisager un remplacement de contacteur.",
+    pieces: [
+      { nom: "Contacteur trappe articulée", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F991",
+    titre: "Défaut du clignotant avant gauche (boîtier de câblage moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — signalisation affectée",
+    description:
+      "Le boîtier de câblage moteur détecte une anomalie sur le circuit du clignotant avant gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule du clignotant grillée" },
+      { pourcentage: 25, libelle: "Câblage vers le clignotant endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du clignotant oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un clignotement plus rapide que la normale au tableau de bord est souvent le premier signe d'une ampoule de clignotant grillée.",
+    pieces: [
+      { nom: "Ampoule clignotant avant", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "FBCA",
+    titre: "Défaut du capteur extérieur avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur extérieur situé à l'avant gauche du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement en premier.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F1A7",
+    titre: "Défaut du signal du bouton de désactivation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur le signal du bouton qui permet de désactiver une fonction du véhicule (aide au stationnement ou système similaire selon équipement).",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quelle fonction exacte ce bouton permet de désactiver avant intervention.",
+    pieces: [
+      { nom: "Diagnostic bouton de désactivation (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F610",
+    titre: "Défaut du satellite principal avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite principal installé dans la zone avant gauche, qui gère certaines commandes locales.",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions dans cette zone du véhicule oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite avant gauche", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "F692",
+    titre: "Défaut sur les prétensionneurs en série de la 1ère et 2e rangée côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des prétensionneurs de ceinture montés en série pour les places gauches de première et deuxième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FC07",
+    titre: "Défaut de position verticale du rétroviseur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseur électrique affecté",
+    description:
+      "Le BSI détecte une anomalie sur le capteur ou le moteur qui contrôle la position verticale du rétroviseur électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage vertical défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du rétroviseur endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un rétroviseur qui ne s'ajuste plus que horizontalement, jamais verticalement, confirme généralement ce défaut précis.",
+    pieces: [
+      { nom: "Moteur réglage rétroviseur", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F931",
+    titre: "Incohérence de configuration (chargeur CD présent codé absent)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage nécessaire",
+    description:
+      "Le BSI détecte qu'un chargeur CD est physiquement présent alors que la configuration logicielle indique son absence, généralement après une intervention sans recodage.",
+    causes: [
+      { pourcentage: 45, libelle: "Chargeur CD installé sans recodage de la configuration" },
+      { pourcentage: 30, libelle: "Configuration modifiée par erreur lors d'une intervention" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+      { pourcentage: 10, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Toute installation d'équipement multimédia doit être suivie d'un recodage via l'outil de diagnostic pour que la configuration corresponde à l'équipement réel.",
+    pieces: [
+      { nom: "Recodage configuration multimédia (atelier)", boutique: "Recommandé", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F615",
+    titre: "Défaut du satellite avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite installé dans la zone avant droite, qui gère certaines commandes locales.",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions dans cette zone du véhicule oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite avant droit", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "FEF4",
+    titre: "Défaillance de l'électronique moteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur moteur en cause",
+    description:
+      "Le BSI détecte une défaillance générale de l'électronique de gestion moteur, un code d'alerte transversal qui nécessite un diagnostic moteur complet.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur moteur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur moteur défaillante" },
+      { pourcentage: 20, libelle: "Logiciel moteur corrompu" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique doit être complété par une lecture des codes propres du calculateur moteur pour cibler précisément la panne.",
+    pieces: [
+      { nom: "Diagnostic calculateur moteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F15D",
+    titre: "Information non valide sur l'état des boutons du COM2000/audio-téléphone",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commandes au volant affectées",
+    description:
+      "Le BSI détecte que l'information reçue sur l'état des boutons audio/téléphone du commodo multifonction (COM2000) n'est pas valide.",
+    causes: [
+      { pourcentage: 36, libelle: "Commodo multifonction défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la colonne de direction endommagé" },
+      { pourcentage: 22, libelle: "Connecteur rotatif ou contacteur tournant défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le câblage au niveau de la colonne de direction subit des flexions répétées — c'est une zone classique de rupture de fil.",
+    pieces: [
+      { nom: "Commodo multifonction (COM2000)", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FC99",
+    titre: "Défaut du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Le BSI signale une défaillance générale d'un calculateur associé, sans précision automatique du module exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 20, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quel calculateur est en cause.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FCC2",
+    titre: "Défaut du contacteur de ceinture non bouclée, passager avant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité du passager avant est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée passager avant est un équipement de sécurité important — ce défaut mérite un traitement rapide.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F969",
+    titre: "Défaut de fonctionnement des ventilateurs",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — refroidissement affecté",
+    description:
+      "Le BSI détecte une anomalie sur le fonctionnement des ventilateurs de refroidissement, un équipement important pour éviter la surchauffe moteur ou climatisation.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de ventilateur défaillant" },
+      { pourcentage: 28, libelle: "Relais ou module de commande des ventilateurs défaillant" },
+      { pourcentage: 22, libelle: "Câblage vers les ventilateurs endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut mérite une attention rapide car il peut favoriser une surchauffe moteur, surtout à l'arrêt ou dans les embouteillages.",
+    pieces: [
+      { nom: "Module de commande ventilateurs", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FB83",
+    titre: "Blocage du bouton de réinitialisation du compteur kilométrique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que le bouton de réinitialisation du compteur journalier reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de réinitialisation défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 10, libelle: "Combiné d'instruments défaillant" },
+    ],
+    avisPro:
+      "Un compteur journalier qui se réinitialise seul en boucle est le symptôme typique de ce bouton bloqué.",
+    pieces: [
+      { nom: "Bouton réinitialisation compteur", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "F766",
+    titre: "Défaut de communication avec les micromoteurs",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation ne parvient plus à communiquer avec les micromoteurs qui pilotent les volets internes du circuit d'air.",
+    causes: [
+      { pourcentage: 36, libelle: "Micromoteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers les micromoteurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au niveau du tableau de bord peut accompagner ce défaut, signe d'un micromoteur qui tente de se recaler sans succès.",
+    pieces: [
+      { nom: "Micromoteur volet climatisation", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F7EF",
+    titre: "Défaut de configuration",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage possiblement nécessaire",
+    description:
+      "Le BSI détecte une anomalie générale de configuration sur un calculateur associé, généralement après une intervention ou un remplacement de pièce sans recodage.",
+    causes: [
+      { pourcentage: 42, libelle: "Configuration non mise à jour après une intervention" },
+      { pourcentage: 28, libelle: "Équipement remplacé sans recodage" },
+      { pourcentage: 18, libelle: "Calculateur défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention récente sur un équipement électrique du véhicule, un recodage via l'outil de diagnostic évite ce type de défaut.",
+    pieces: [
+      { nom: "Diagnostic et recodage (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD10",
+    titre: "Défaut de l'actionneur d'ouverture de la serrure gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ouverture porte gauche affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'actionneur électrique qui commande l'ouverture de la serrure de la porte gauche.",
+    causes: [
+      { pourcentage: 38, libelle: "Actionneur d'ouverture défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la serrure oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une ouverture qui ne fonctionne plus que de l'extérieur (poignée manuelle) mais pas via la télécommande oriente vers ce type de défaut.",
+    pieces: [
+      { nom: "Actionneur serrure porte gauche", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "FBDF",
+    titre: "Défaut de mémoire interne du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Le BSI détecte une anomalie sur la mémoire interne d'un calculateur associé, pouvant fausser les données stockées ou les calculs en temps réel.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur défaillant sur sa mémoire interne" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation ayant corrompu la mémoire" },
+      { pourcentage: 17, libelle: "Perturbation électrique externe" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un effacement suivi d'un nouveau contrôle permet souvent de confirmer si le défaut est ponctuel ou persistant.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FC80",
+    titre: "Défaut du calculateur (récepteur haute fréquence)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — télécommande d'accès affectée",
+    description:
+      "Le récepteur haute fréquence qui capte les ordres de la télécommande signale une défaillance interne de son propre calculateur.",
+    causes: [
+      { pourcentage: 45, libelle: "Récepteur haute fréquence défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du récepteur défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers le récepteur endommagé" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si la télécommande ne fonctionne plus du tout, même à courte distance, ce défaut est un bon point de départ.",
+    pieces: [
+      { nom: "Récepteur haute fréquence télécommande", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "FEAC",
+    titre: "Défaut de la commande de la pompe d'additif carburant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — système additif diesel uniquement",
+    description:
+      "Le calculateur détecte une anomalie sur la commande électrique de la pompe qui injecte l'additif dans le réservoir de carburant diesel.",
+    causes: [
+      { pourcentage: 38, libelle: "Pompe d'additif défaillante" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le circuit d'additif du filtre à particules — le véhicule reste roulant mais l'efficacité du FAP à long terme peut être affectée.",
+    pieces: [
+      { nom: "Pompe additif FAP", boutique: "Pièces auto en ligne", prix: "90-160€" },
+    ],
+  },
+  {
+    code: "FD98",
+    titre: "Absence de communication avec le système audio/navigation NG4",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — écran multimédia central affecté",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le système multimédia NG4 (audio, navigation, téléphone), pouvant provoquer un écran figé ou éteint.",
+    causes: [
+      { pourcentage: 36, libelle: "Système NG4 défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le système NG4 endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du système mal enfiché" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un redémarrage du système (coupure batterie courte) permet parfois de résoudre ce défaut avant d'envisager un remplacement coûteux.",
+    pieces: [
+      { nom: "Diagnostic système NG4 (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F7F0",
+    titre: "Module ne communiquant pas",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module non identifié sur le réseau",
+    description:
+      "Le BSI détecte qu'un module attendu sur le réseau ne communique pas, sans précision automatique du module exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 36, libelle: "Module défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Alimentation du module coupée" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture complète des autres défauts pour identifier précisément quel module est concerné.",
+    pieces: [
+      { nom: "Diagnostic réseau approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F69A",
+    titre: "Défaut sur les prétensionneurs en série de la 3e rangée (gauche et droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des prétensionneurs de ceinture montés en série pour les places gauche et droite de troisième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur sous le siège oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F645",
+    titre: "Défaut interne du calculateur (système de déclenchement des prétensionneurs en série, rangée 2 et 3 droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement des prétensionneurs de ceinture en série pour les places droites de deuxième et troisième rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F78A",
+    titre: "Blocage du contacteur de relevage (appui-tête)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de relevage du réglage en hauteur de l'appui-tête électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur d'appui-tête collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un appui-tête qui continue de bouger après relâchement de la commande est le symptôme typique — couper le contact stoppe le mouvement.",
+    pieces: [
+      { nom: "Contacteur réglage appui-tête", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FBDE",
+    titre: "Défaut du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Le BSI signale une défaillance générale d'un calculateur associé, sans précision automatique du module exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 20, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quel calculateur est en cause.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F635",
+    titre: "Défaut interne du calculateur (système de déclenchement du prétensionneur avant gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du prétensionneur de ceinture avant gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F9E5",
+    titre: "Défaut de la protection thermique du lève-vitre arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que la protection thermique du moteur de lève-vitre arrière gauche s'est déclenchée, généralement suite à une sollicitation trop intensive et répétée du mécanisme.",
+    causes: [
+      { pourcentage: 40, libelle: "Utilisation intensive répétée ayant déclenché la protection thermique" },
+      { pourcentage: 30, libelle: "Mécanisme grippé forçant le moteur à surchauffer" },
+      { pourcentage: 18, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Laisser refroidir quelques minutes avant de retester la vitre — si le défaut persiste après refroidissement, un mécanisme grippé est probable.",
+    pieces: [
+      { nom: "Diagnostic mécanisme lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F8A6",
+    titre: "Défaut de l'information CAN du BSI autorisant le fonctionnement du toit rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le calculateur du toit rétractable ne reçoit plus du BSI, via le réseau CAN, l'autorisation nécessaire pour permettre son fonctionnement (généralement liée à la vitesse ou au contact).",
+    causes: [
+      { pourcentage: 36, libelle: "BSI défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Information de vitesse ou de contact erronée transmise au BSI" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher toute manœuvre du toit par sécurité, même si le mécanisme lui-même est en parfait état.",
+    pieces: [
+      { nom: "Diagnostic autorisation toit rétractable (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F788",
+    titre: "Blocage du contacteur d'angle (dossier vers l'avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de réglage d'angle du dossier vers l'avant reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement de siège non désiré en urgence si le contacteur reste bloqué.",
+    pieces: [
+      { nom: "Contacteur inclinaison dossier siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F979",
+    titre: "Défaut interne de l'écran multifonction (rétroéclairage)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lisibilité de l'écran affectée",
+    description:
+      "L'écran multifonction du tableau de bord signale une défaillance de son rétroéclairage, pouvant rendre l'affichage difficile à lire, notamment de nuit.",
+    causes: [
+      { pourcentage: 45, libelle: "Rétroéclairage de l'écran défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du rétroéclairage défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers l'écran endommagé" },
+      { pourcentage: 10, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Un écran lisible en plein jour mais illisible de nuit confirme généralement ce défaut de rétroéclairage.",
+    pieces: [
+      { nom: "Diagnostic écran multifonction (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FC0A",
+    titre: "Défaut de la sortie d'éclairage électronique de porte (seuil, clavier, témoin de clavier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le circuit qui éclaire les éléments électroniques de la porte : seuil de porte, clavier de commande ou témoin lumineux du clavier.",
+    causes: [
+      { pourcentage: 38, libelle: "Ampoule ou LED d'éclairage grillée" },
+      { pourcentage: 28, libelle: "Câblage de porte endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de porte oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique sans impact sur le fonctionnement des commandes elles-mêmes — à traiter sans urgence.",
+    pieces: [
+      { nom: "Éclairage seuil de porte", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FCC9",
+    titre: "Défaut de présence, place centrale avant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un occupant à la place centrale avant, sur les véhicules équipés de cette place (banquette avant).",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place — à vérifier avant tout trajet avec passager à cette place.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F614",
+    titre: "Défaut du satellite avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite installé dans la zone avant gauche, qui gère certaines commandes locales.",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions dans cette zone du véhicule oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite avant gauche", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "FC10",
+    titre: "Défaut de la sortie du lève-vitre (montée/descente)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le mouvement de montée ou de descente du lève-vitre électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un bruit de moteur qui force sans mouvement de vitre indique souvent un blocage mécanique plutôt qu'une panne purement électrique.",
+    pieces: [
+      { nom: "Moteur lève-vitre électrique", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F699",
+    titre: "Défaut sur les prétensionneurs en série de la 2e rangée (gauche et droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des prétensionneurs de ceinture montés en série pour les places gauche et droite de deuxième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur sous le siège oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F687",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'arceau arrière droit)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité cabriolet",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'arceau de protection escamotable arrière droit sur véhicule cabriolet.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement de l'arceau défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce dispositif de sécurité anti-retournement ne doit jamais rester en défaut non traité — diagnostic prioritaire par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic arceau de sécurité (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FD2A",
+    titre: "Défaut de la sortie n°1",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 1, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F960",
+    titre: "Défaut de fonctionnement du ventilateur interne",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — refroidissement d'un équipement électronique",
+    description:
+      "Le BSI détecte une anomalie sur le ventilateur interne qui refroidit un équipement électronique (amplificateur, calculateur multimédia selon les modèles).",
+    causes: [
+      { pourcentage: 38, libelle: "Ventilateur interne défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le ventilateur endommagé" },
+      { pourcentage: 22, libelle: "Poussière obstruant le ventilateur" },
+      { pourcentage: 12, libelle: "Équipement électronique associé défaillant" },
+    ],
+    avisPro:
+      "Sans ce ventilateur, l'équipement concerné peut surchauffer et se mettre en sécurité — à traiter avant que la panne ne s'aggrave.",
+    pieces: [
+      { nom: "Ventilateur interne équipement électronique", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FBC9",
+    titre: "Défaut du capteur intérieur arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur intérieur situé à l'arrière droit de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme périmétrique ou à un système de confort.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBB4",
+    titre: "Défaut de la commande d'ouverture de la lunette arrière (boîtier de fusibles coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lunette arrière ouvrante spécifique",
+    description:
+      "Le boîtier de fusibles du coffre détecte une anomalie sur la commande d'ouverture indépendante de la lunette arrière, présente sur certains modèles.",
+    causes: [
+      { pourcentage: 38, libelle: "Actionneur de la lunette arrière défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles coffre défaillant" },
+    ],
+    avisPro:
+      "Équipement présent uniquement sur certains modèles à lunette arrière ouvrante indépendamment du hayon complet.",
+    pieces: [
+      { nom: "Actionneur ouverture lunette arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F626",
+    titre: "Défaut du calculateur (microcontrôleur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur de sécurité concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance de son propre microcontrôleur interne, le composant central qui traite les données des capteurs de choc.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Perturbation électrique ayant affecté le microcontrôleur" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire concernant le cœur même du calculateur — diagnostic immédiat par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F7A4",
+    titre: "Défaut : capteur ou moteur multi-mouvements",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le capteur ou le moteur d'un mécanisme multi-mouvements de siège, qui combine plusieurs réglages en un seul actionneur.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur multi-mouvements défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du siège — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FF68",
+    titre: "Défaut du temps de verrouillage du coffre",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — verrouillage du coffre affecté",
+    description:
+      "Le BSI détecte que le temps mis par le mécanisme de verrouillage du coffre dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Serrure électrique du coffre grippée ou mal lubrifiée" },
+      { pourcentage: 28, libelle: "Actionneur de verrouillage fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une lubrification de la serrure du coffre résout parfois ce type de lenteur sans remplacement de pièce.",
+    pieces: [
+      { nom: "Serrure électrique coffre", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F8A0",
+    titre: "Défaut du signal du contacteur de verrouillage de la malle du toit côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal du contacteur qui indique si la malle abritant le toit rétractable est verrouillée côté gauche.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de verrouillage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le système de confirmer que la malle est correctement verrouillée — à vérifier visuellement en attendant réparation.",
+    pieces: [
+      { nom: "Contacteur verrouillage malle toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F9DA",
+    titre: "Blocage du bouton de lève-vitre arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le bouton de commande du lève-vitre arrière droit reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton de commande collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du bouton de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Bouton commande lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F7C8",
+    titre: "Défaut de la sortie d'avancée des soutiens lombaires",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote l'avancée électrique des soutiens lombaires du siège.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur ou pompe de soutien lombaire défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du siège — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F6C0",
+    titre: "Déclenchement des airbags latéraux gauches",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les airbags latéraux du côté gauche se sont déployés, généralement suite à un choc latéral détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc latéral" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, réel ou intempestif, le véhicule doit être expertisé et les éléments concernés remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "F782",
+    titre: "Défaut de blocage du contacteur d'avancée (coulissement)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'avancée du coulissement du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de coulissement collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres contacteurs de siège, un nettoyage de la commande résout souvent le blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Contacteur coulissement siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F951",
+    titre: "Défaut de la sortie du haut-parleur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur arrière gauche, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur arrière gauche défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'arrière gauche confirme généralement ce défaut, souvent lié à un haut-parleur en fin de vie.",
+    pieces: [
+      { nom: "Haut-parleur arrière gauche", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FCD5",
+    titre: "Défaut de présence passager, place gauche de 2e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur la place gauche de la deuxième rangée de sièges.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place — à vérifier avant tout trajet avec un passager assis à cette place.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F6C2",
+    titre: "Déclenchement de l'airbag rideau gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que l'airbag rideau gauche s'est déployé, généralement suite à un choc latéral détecté.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc latéral" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, réel ou intempestif, le véhicule doit être expertisé et les éléments concernés remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "F8B4",
+    titre: "Défaut du temps de perte du contacteur d'ouverture du coffre",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection d'ouverture du coffre affectée",
+    description:
+      "Le BSI détecte que le temps mis à perdre l'information du contacteur d'ouverture du coffre sort de la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur d'ouverture du coffre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser la confirmation d'ouverture ou de fermeture du coffre — à vérifier visuellement en cas de doute.",
+    pieces: [
+      { nom: "Contacteur ouverture coffre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F8BF",
+    titre: "Défaut du temps d'extraction de la tablette",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort coffre uniquement",
+    description:
+      "Le BSI détecte que le temps mis par la tablette de coffre motorisée (cache-bagages) pour se déployer dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de la tablette grippé" },
+      { pourcentage: 28, libelle: "Moteur de la tablette fatigué" },
+      { pourcentage: 22, libelle: "Obstacle gênant l'extraction" },
+      { pourcentage: 14, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun bagage ou objet ne gêne le déploiement automatique de la tablette avant d'envisager une réparation mécanique.",
+    pieces: [
+      { nom: "Diagnostic mécanisme tablette (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F98D",
+    titre: "Défaut du feu de croisement avant gauche (boîtier de fusibles moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — éclairage principal affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit du feu de croisement avant gauche, un équipement essentiel pour la conduite de nuit.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule du feu de croisement grillée" },
+      { pourcentage: 26, libelle: "Câblage vers le feu de croisement endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du feu oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un phare de croisement éteint d'un seul côté est un défaut de sécurité à corriger avant tout trajet de nuit — priorité au contrôle de l'ampoule.",
+    pieces: [
+      { nom: "Ampoule feu de croisement", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "FF6A",
+    titre: "Défaut du temps de verrouillage du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis par le mécanisme de verrouillage du toit rétractable dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de verrouillage grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Actionneur de verrouillage fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ne pas forcer la fermeture manuelle du toit si le verrouillage semble lent — cela peut aggraver le grippage du mécanisme.",
+    pieces: [
+      { nom: "Diagnostic mécanisme toit rétractable (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "F736",
+    titre: "Défaut du moteur de mixage arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui mélange l'air chaud et froid côté arrière droit, sur les systèmes à réglage multizone.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de mixage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de mixage bloqué mécaniquement" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par une température arrière droite qui ne suit plus le réglage demandé.",
+    pieces: [
+      { nom: "Moteur volet mixage climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F781",
+    titre: "Blocage du contacteur d'abaissement (niveau)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'abaissement du réglage de niveau du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage de niveau collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement de siège non désiré en urgence si le contacteur reste bloqué.",
+    pieces: [
+      { nom: "Contacteur réglage niveau siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F7B0",
+    titre: "Blocage du contacteur de recul (commutateur professionnel)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — équipement professionnel spécifique",
+    description:
+      "Le BSI détecte que le contacteur de recul d'un commutateur professionnel additionnel reste bloqué en position activée, sur véhicule utilitaire ou de flotte.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage de l'installation professionnelle endommagé" },
+      { pourcentage: 20, libelle: "Connecteur additionnel oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne un équipement additionnel propre aux véhicules professionnels — vérifier d'abord la configuration réelle du véhicule.",
+    pieces: [
+      { nom: "Diagnostic installation commutateurs pro (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F9D1",
+    titre: "Défaut des entrées capteurs du mécanisme de rétroviseur passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseur électrique affecté",
+    description:
+      "Le BSI détecte une anomalie sur les entrées qui reçoivent les informations des capteurs de position du mécanisme électrique du rétroviseur passager.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position du rétroviseur défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la mémorisation correcte de la position du rétroviseur passager — à signaler lors du diagnostic.",
+    pieces: [
+      { nom: "Capteur position rétroviseur", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FBB3",
+    titre: "Défaut de la commande d'éclairage du coffre (boîtier de fusibles coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort coffre uniquement",
+    description:
+      "Le boîtier de fusibles du coffre détecte une anomalie sur la commande de l'éclairage intérieur du coffre.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED d'éclairage du coffre grillée" },
+      { pourcentage: 28, libelle: "Câblage vers l'éclairage du coffre endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles coffre défaillant" },
+    ],
+    avisPro:
+      "Défaut de confort mineur sans impact sur la sécurité — à traiter sans urgence lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Ampoule éclairage coffre", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F620",
+    titre: "Défaut interne du calculateur (accéléromètre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — capteur de choc concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance de son accéléromètre interne, le capteur qui mesure les décélérations brutales pour déclencher les airbags.",
+    causes: [
+      { pourcentage: 50, libelle: "Accéléromètre interne défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est essentiel à la détection de choc — défaut de sécurité passive prioritaire nécessitant un diagnostic immédiat par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FCEC",
+    titre: "Défaut de la commande ou du buzzer gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte sonore secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur une commande ou un avertisseur sonore (buzzer) situé côté gauche du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Buzzer défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le buzzer endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quelle alerte sonore exacte est concernée par ce défaut avant intervention.",
+    pieces: [
+      { nom: "Diagnostic commande/buzzer (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD21",
+    titre: "Défaut de l'entrée audio droite de l'équipement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur l'entrée droite d'un équipement audio externe connecté au système.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de l'entrée audio endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'entrée audio oxydé ou déconnecté" },
+      { pourcentage: 22, libelle: "Équipement source externe défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord qu'une source audio externe est bien branchée et fonctionnelle avant de suspecter le calculateur du véhicule.",
+    pieces: [
+      { nom: "Diagnostic entrées audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F73F",
+    titre: "Défaut de l'électrovanne de la boucle chaude",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur l'électrovanne qui gère la boucle chaude du circuit de chauffage.",
+    causes: [
+      { pourcentage: 36, libelle: "Électrovanne défaillante ou grippée" },
+      { pourcentage: 28, libelle: "Câblage vers l'électrovanne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de l'électrovanne oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un chauffage qui souffle moins chaud que d'habitude peut être lié à ce défaut — à vérifier avant de suspecter le circuit de refroidissement moteur.",
+    pieces: [
+      { nom: "Électrovanne circuit chauffage", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FBCD",
+    titre: "Défaut du capteur intérieur avant droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Variante du défaut de capteur intérieur situé à l'avant droit de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme ou à un système de confort.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCA8",
+    titre: "Moteur du pêne de serrure non alimenté dans le sens du déverrouillage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ouverture de porte affectée",
+    description:
+      "Le BSI détecte que le moteur qui actionne le pêne de la serrure n'est pas alimenté lorsqu'une commande de déverrouillage est envoyée.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le moteur de serrure coupé" },
+      { pourcentage: 28, libelle: "Fusible du circuit de déverrouillage grillé" },
+      { pourcentage: 22, libelle: "Relais de commande de déverrouillage défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une absence totale d'alimentation empêche l'ouverture électrique de cette porte — l'ouverture manuelle de secours reste généralement possible en attendant.",
+    pieces: [
+      { nom: "Diagnostic circuit déverrouillage (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FCB3",
+    titre: "Alimentation non contrôlée de l'accès et du démarrage mains libres (ADML)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage mains libres affecté",
+    description:
+      "Le BSI détecte que l'alimentation du système d'accès et de démarrage mains libres (ADML) n'est plus correctement contrôlée, pouvant empêcher le démarrage sans clé.",
+    causes: [
+      { pourcentage: 36, libelle: "Module ADML défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le démarrage mains libres ne fonctionne plus du tout, la clé physique de secours (souvent intégrée au boîtier) permet généralement de démarrer en attendant réparation.",
+    pieces: [
+      { nom: "Diagnostic système accès mains libres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FF56",
+    titre: "Défaut du relais de statut \"générateur opérationnel\" (boîtier de fusibles remorque ou transformateur carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — équipement attelage/remorque affecté",
+    description:
+      "Le BSI détecte une anomalie sur le relais qui signale le statut de fonctionnement de l'alternateur au boîtier de fusibles remorque ou au transformateur installé par un carrossier.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais de statut défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'installation remorque endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que les véhicules équipés d'un attelage électrique ou d'un aménagement spécial.",
+    pieces: [
+      { nom: "Relais boîtier électronique attelage", boutique: "Pièces auto en ligne", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "F611",
+    titre: "Défaut du satellite principal avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite principal installé dans la zone avant droite, qui gère certaines commandes locales.",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions dans cette zone du véhicule oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite avant droit", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "F63B",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag rideau latéral gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag rideau latéral gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F7A8",
+    titre: "Défaut du moteur ou capteur de réglage horizontal (lombaire)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage horizontal du soutien lombaire du siège.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage lombaire défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage lombaire — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F97C",
+    titre: "Défaut de commande de l'écran rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — écran motorisé affecté",
+    description:
+      "Le BSI détecte une anomalie sur la commande générale de l'écran rétractable du système multimédia sur les véhicules équipés de cette option.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de l'écran grippé" },
+      { pourcentage: 28, libelle: "Moteur d'escamotage de l'écran défaillant" },
+      { pourcentage: 22, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 14, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun objet ne gêne le mouvement de l'écran avant d'envisager une réparation du mécanisme motorisé.",
+    pieces: [
+      { nom: "Diagnostic mécanisme écran rétractable (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FF2B",
+    titre: "Défaut de l'antibrouillard droit (boîtier de fusibles remorque ou module carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage remorque/attelage affecté",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit de l'antibrouillard droit de la remorque attelée.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule de l'antibrouillard de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'apparaît que lorsqu'une remorque est attelée — vérifier en priorité l'ampoule et le câblage de la remorque elle-même.",
+    pieces: [
+      { nom: "Ampoule antibrouillard remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F97D",
+    titre: "Défaut d'inversion de sécurité automatique de l'écran rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité anti-pincement de l'écran affectée",
+    description:
+      "Le BSI détecte une anomalie sur la fonction de sécurité qui inverse automatiquement le mouvement de l'écran rétractable en cas de résistance détectée, évitant tout pincement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de résistance de l'écran défaillant" },
+      { pourcentage: 28, libelle: "Mécanisme grippé déclenchant l'inversion à tort" },
+      { pourcentage: 22, libelle: "Câblage vers le mécanisme endommagé" },
+      { pourcentage: 14, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Cette fonction de sécurité est importante — un défaut ici peut soit bloquer l'écran par excès de prudence, soit désactiver la protection anti-pincement.",
+    pieces: [
+      { nom: "Diagnostic sécurité écran rétractable (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FF00",
+    titre: "Défaut de l'entrée du microphone",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — mains libres téléphonique affecté",
+    description:
+      "Le calculateur détecte une anomalie sur l'entrée qui reçoit le signal du microphone du kit mains libres téléphonique.",
+    causes: [
+      { pourcentage: 38, libelle: "Microphone défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le microphone endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du microphone oxydé" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Le microphone se trouve généralement près du pare-soleil ou du rétroviseur intérieur — un contrôle visuel rapide permet de repérer un câble sectionné.",
+    pieces: [
+      { nom: "Microphone mains libres", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FC41",
+    titre: "Défaut du capteur d'angle du dossier de siège",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui mesure l'angle d'inclinaison du dossier de siège électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'angle défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher une mémorisation correcte de la position du dossier — à signaler lors du diagnostic.",
+    pieces: [
+      { nom: "Capteur d'angle dossier siège", boutique: "Pièces auto en ligne", prix: "30-65€" },
+    ],
+  },
+  {
+    code: "F899",
+    titre: "Présence de courant sur le moteur de lève-vitre arrière droite ou passager sans commande",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — risque de mouvement de vitre non désiré",
+    description:
+      "Le BSI détecte une tension électrique présente sur le moteur du lève-vitre arrière droite ou passager alors qu'aucune commande n'a été actionnée, situation potentiellement dangereuse.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit dans le câblage du lève-vitre" },
+      { pourcentage: 28, libelle: "Commande de lève-vitre collée en position fermée" },
+      { pourcentage: 22, libelle: "Module de porte défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut mérite une vérification rapide : une vitre qui pourrait se fermer seule représente un risque de coincement, notamment pour les enfants.",
+    pieces: [
+      { nom: "Diagnostic module de porte (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F88F",
+    titre: "Défaut de la résistance thermique du moteur de la pompe hydraulique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — système hydraulique affecté",
+    description:
+      "Le BSI détecte une anomalie sur la résistance thermique de protection du moteur de la pompe hydraulique, utilisée pour prévenir la surchauffe.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance thermique défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la résistance endommagé" },
+      { pourcentage: 22, libelle: "Pompe hydraulique elle-même défaillante" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Sans cette protection thermique, la pompe hydraulique risque de surchauffer sans avertissement — à traiter avant toute sollicitation intensive du toit ou de la direction.",
+    pieces: [
+      { nom: "Diagnostic pompe hydraulique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FBD3",
+    titre: "Défaut du capteur extérieur arrière droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Variante du défaut sur le capteur extérieur situé à l'arrière droit du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement en premier.",
+    pieces: [
+      { nom: "Capteur de stationnement arrière", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "FCD8",
+    titre: "Défaut de présence passager, place gauche de 3e rangée (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Variante du défaut de détection de présence pour la place gauche de troisième rangée de sièges.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place — à vérifier avant tout trajet avec un passager assis à cet endroit.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FBE4",
+    titre: "Défaut de l'antenne extérieure du coffre",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection clé mains libres affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne extérieure située près du coffre, utilisée pour la détection de la clé mains libres à cet endroit.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si l'ouverture mains libres du coffre par mouvement de pied ne fonctionne plus, cette antenne est un bon point de départ pour le diagnostic.",
+    pieces: [
+      { nom: "Antenne mains libres coffre", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FC87",
+    titre: "Défaut du bouton en bout de commodo d'essuie-glace",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire essuie-glace",
+    description:
+      "Le BSI détecte une anomalie sur le bouton situé à l'extrémité du commodo d'essuie-glace, utilisé pour une fonction secondaire (lave-glace ou réglage d'intermittence).",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton du commodo défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du commodo endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du commodo mal enfiché" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un commodo dont une fonction secondaire ne répond plus qu'en forçant est un signe d'usure du bouton, réparable sans changer tout le commodo dans certains cas.",
+    pieces: [
+      { nom: "Commodo d'essuie-glace", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F904",
+    titre: "Défaut de l'entrée audio droite du chargeur CD",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur l'entrée droite dédiée au chargeur CD multi-disques.",
+    causes: [
+      { pourcentage: 38, libelle: "Chargeur CD défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le chargeur CD endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du chargeur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Équipement de plus en plus rare — vérifier la disponibilité de la pièce avant de s'engager dans une réparation.",
+    pieces: [
+      { nom: "Chargeur CD multi-disques", boutique: "Pièces auto en ligne / occasion", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F649",
+    titre: "Défaut interne du calculateur (système de déclenchement des prétensionneurs en série, rangée 2 gauche et droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement des prétensionneurs de ceinture en série pour les places gauche et droite de deuxième rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F8BB",
+    titre: "Défaut de tension d'alimentation de l'unité de commande",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation d'un calculateur affectée",
+    description:
+      "Le BSI détecte une anomalie sur la tension d'alimentation reçue par une unité de commande associée, en dehors de la plage de fonctionnement normale.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 28, libelle: "Batterie faible ou alternateur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur de l'unité oxydé" },
+      { pourcentage: 14, libelle: "Unité de commande défaillante" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant de suspecter l'unité de commande elle-même.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD2F",
+    titre: "Défaut de la sortie n°6",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 6, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F64B",
+    titre: "Défaut interne du calculateur (système d'allumage du prétensionneur de ceinture conducteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système d'allumage pyrotechnique du prétensionneur de ceinture conducteur.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur conducteur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F72C",
+    titre: "Défaut du moteur de distribution côté passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui oriente la distribution d'air côté passager (aérateurs, pare-brise, pieds selon le réglage).",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de distribution bloqué mécaniquement" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par un flux d'air qui ne suit plus la zone demandée (aérateurs, pare-brise ou pieds) côté passager.",
+    pieces: [
+      { nom: "Moteur volet distribution climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F94E",
+    titre: "Défaut de la sortie du haut-parleur avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur avant droit, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur avant droit défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'avant droit confirme généralement ce défaut sans nécessiter de diagnostic électronique poussé.",
+    pieces: [
+      { nom: "Haut-parleur avant droit", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F642",
+    titre: "Défaut interne du calculateur (système de déclenchement des prétensionneurs en série, rangée 1 et 2 gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement des prétensionneurs de ceinture en série pour les places gauches de première et deuxième rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F648",
+    titre: "Défaut interne du calculateur (système de déclenchement des prétensionneurs en série, rangée 1 gauche et droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement des prétensionneurs de ceinture en série pour les places gauche et droite de première rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F886",
+    titre: "Défaut du signal du contacteur de fermeture du toit côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal du contacteur qui indique que le toit rétractable est en position fermée, côté gauche.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de fermeture du toit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser l'affichage de l'état du toit au tableau de bord — vérifier visuellement la position réelle du toit en cas de doute.",
+    pieces: [
+      { nom: "Contacteur fermeture toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F9E6",
+    titre: "Défaut de la protection thermique du lève-vitre arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que la protection thermique du moteur de lève-vitre arrière droit s'est déclenchée, généralement suite à une sollicitation trop intensive et répétée du mécanisme.",
+    causes: [
+      { pourcentage: 40, libelle: "Utilisation intensive répétée ayant déclenché la protection thermique" },
+      { pourcentage: 30, libelle: "Mécanisme grippé forçant le moteur à surchauffer" },
+      { pourcentage: 18, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Laisser refroidir quelques minutes avant de retester la vitre — si le défaut persiste après refroidissement, un mécanisme grippé est probable.",
+    pieces: [
+      { nom: "Diagnostic mécanisme lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD09",
+    titre: "Défaut du circuit du capteur de position S2 côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — capteur de position générique",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du capteur de position référencé S2, situé côté droit du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position S2 défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quelle fonction est associée à ce capteur avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur de position (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FEEA",
+    titre: "Défaut calculateur (écriture EEPROM)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — reprogrammation possiblement nécessaire",
+    description:
+      "Le BSI détecte une anomalie lors de l'écriture de données dans la mémoire EEPROM d'un calculateur associé, généralement suite à une coupure pendant la programmation.",
+    causes: [
+      { pourcentage: 40, libelle: "Programmation interrompue par une coupure d'alimentation" },
+      { pourcentage: 28, libelle: "Calculateur défaillant sur sa mémoire EEPROM" },
+      { pourcentage: 20, libelle: "Outil de diagnostic ayant rencontré un problème pendant l'écriture" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une nouvelle tentative de programmation complète avec l'outil constructeur, batterie stabilisée par un chargeur, résout généralement ce type de défaut.",
+    pieces: [
+      { nom: "Reprogrammation calculateur (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F795",
+    titre: "Blocage du clavier de mémorisation (bouton 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le bouton 3 du clavier de mémorisation des positions de siège reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton du clavier de mémorisation collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier résout souvent ce type de blocage sans remplacement complet de la pièce.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "FEEB",
+    titre: "Défaut calculateur (lecture EEPROM)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — reprogrammation possiblement nécessaire",
+    description:
+      "Le BSI détecte une anomalie lors de la lecture de données dans la mémoire EEPROM d'un calculateur associé, pouvant fausser les paramètres utilisés par ce calculateur.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur défaillant sur sa mémoire EEPROM" },
+      { pourcentage: 28, libelle: "Corruption de données suite à une coupure d'alimentation" },
+      { pourcentage: 18, libelle: "Perturbation électrique externe" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un effacement suivi d'un nouveau contrôle permet souvent de confirmer si le défaut est ponctuel ou persistant avant remplacement.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FEFC",
+    titre: "Défaut d'initialisation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — procédure de calibration nécessaire",
+    description:
+      "Le BSI détecte qu'un mécanisme ou un calculateur associé n'a pas terminé sa procédure d'initialisation, généralement après une intervention ou une coupure de batterie.",
+    causes: [
+      { pourcentage: 40, libelle: "Initialisation non effectuée après une intervention" },
+      { pourcentage: 28, libelle: "Coupure de batterie ayant interrompu la procédure" },
+      { pourcentage: 20, libelle: "Calculateur défaillant empêchant l'initialisation" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une procédure de réinitialisation avec l'outil de diagnostic résout souvent ce défaut sans qu'aucune pièce ne soit à remplacer.",
+    pieces: [
+      { nom: "Réinitialisation calculateur (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F794",
+    titre: "Blocage du clavier de mémorisation (bouton 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le bouton 2 du clavier de mémorisation des positions de siège reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton du clavier de mémorisation collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier résout souvent ce type de blocage sans remplacement complet de la pièce.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "F8B5",
+    titre: "Défaut du temps de perte du contacteur d'entrée de la trappe articulée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — trappe ou volet spécifique",
+    description:
+      "Le BSI détecte que le temps mis à perdre l'information du contacteur d'entrée d'une trappe articulée sort de la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de trappe défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Trappe mal fermée mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que la trappe concernée se ferme correctement avant d'envisager un remplacement de contacteur.",
+    pieces: [
+      { nom: "Contacteur trappe articulée", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F732",
+    titre: "Surtension ou sous-tension de la soufflerie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte que la tension appliquée au moteur de soufflerie sort de la plage normale attendue, trop haute ou trop basse.",
+    causes: [
+      { pourcentage: 36, libelle: "Résistance de soufflerie défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Tension batterie anormale" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Une soufflerie qui ne fonctionne plus qu'à vitesse maximale ou minimale, sans réglage intermédiaire, accompagne souvent ce défaut.",
+    pieces: [
+      { nom: "Résistance de soufflerie", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F7C7",
+    titre: "Défaut de la sortie commune (soutien lombaire horizontal / inclinaison haut du dossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie partagée qui pilote à la fois le soutien lombaire horizontal et l'inclinaison de la partie haute du dossier.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie commune endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Tester chaque fonction séparément aide à cibler si le problème vient du moteur ou de la commande.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FB8B",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°4",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un quatrième bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FC00",
+    titre: "Boutons du clavier de commande bloqués",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commandes de porte affectées",
+    description:
+      "Le BSI détecte que les boutons d'un clavier de commande de porte restent bloqués en position activée, empêchant leur bon fonctionnement.",
+    causes: [
+      { pourcentage: 40, libelle: "Boutons du clavier collés ou usés" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Clavier de commande porte", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FD89",
+    titre: "Défaut de connexion du compartiment carte SIM",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — services connectés affectés",
+    description:
+      "Le BSI ou le module télématique détecte une anomalie sur la connexion du compartiment de la carte SIM utilisée pour les services connectés du véhicule.",
+    causes: [
+      { pourcentage: 40, libelle: "Carte SIM mal insérée ou absente" },
+      { pourcentage: 28, libelle: "Connecteur du compartiment SIM oxydé" },
+      { pourcentage: 20, libelle: "Module télématique défaillant" },
+      { pourcentage: 12, libelle: "Câblage vers le module endommagé" },
+    ],
+    avisPro:
+      "Vérifier en premier que la carte SIM est correctement insérée dans son compartiment avant tout diagnostic électronique plus poussé.",
+    pieces: [
+      { nom: "Diagnostic module télématique (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F622",
+    titre: "Défaut interne du calculateur (réserve d'énergie)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive concernée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur sa réserve d'énergie interne, un condensateur qui permet de déclencher les airbags même en cas de coupure de batterie lors d'un choc.",
+    causes: [
+      { pourcentage: 50, libelle: "Condensateur de réserve d'énergie défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Cette réserve d'énergie est un élément de sécurité crucial — défaut prioritaire nécessitant un diagnostic immédiat par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F9DB",
+    titre: "Blocage du bouton de lève-vitre arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le bouton de commande du lève-vitre arrière gauche reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton de commande collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du bouton de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Bouton commande lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F8A2",
+    titre: "Défaut du signal du contacteur de montée de la garniture de toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal du contacteur qui indique la montée de la garniture intérieure du toit rétractable.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de garniture défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut fait partie de la séquence de contrôle du toit rétractable — un diagnostic spécialisé permet de confirmer s'il bloque le mécanisme complet.",
+    pieces: [
+      { nom: "Contacteur garniture de toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FD1C",
+    titre: "Défaut du signal du contacteur de montée de la garniture de toit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Variante du défaut de signal du contacteur de montée de la garniture intérieure du toit rétractable.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de garniture défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Comme pour le défaut associé, un diagnostic spécialisé permet de confirmer l'impact réel sur le mécanisme du toit.",
+    pieces: [
+      { nom: "Contacteur garniture de toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F894",
+    titre: "Défaut du signal du contacteur de rangement de la tablette",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort coffre uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale que la tablette de coffre (cache-bagages) est en position rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de tablette défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de confort mineur sans impact sur la sécurité — à traiter sans urgence lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Contacteur tablette de coffre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F73D",
+    titre: "Défaut du moteur de mixage arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui mélange l'air chaud et froid pour la zone arrière, sur les systèmes à réglage multizone.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de mixage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de mixage bloqué mécaniquement" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par une température arrière qui ne suit plus le réglage demandé.",
+    pieces: [
+      { nom: "Moteur volet mixage climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "FCC3",
+    titre: "Défaut du contacteur de ceinture non bouclée, place droite (2e rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place droite de deuxième rangée est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente — à vérifier même si un passager y est correctement attaché.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FD33",
+    titre: "Défaut de la sortie n°10",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 10, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F954",
+    titre: "Défaut du module GSM",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — services connectés affectés",
+    description:
+      "Le module GSM qui assure la connectivité mobile du véhicule (appel d'urgence, services connectés, mises à jour à distance) signale une anomalie.",
+    causes: [
+      { pourcentage: 38, libelle: "Module GSM défaillant" },
+      { pourcentage: 28, libelle: "Antenne GSM défaillante ou mal positionnée" },
+      { pourcentage: 22, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 12, libelle: "Carte SIM absente ou défaillante" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver l'appel d'urgence automatique en cas d'accident — à traiter avec attention même s'il ne gêne pas la conduite au quotidien.",
+    pieces: [
+      { nom: "Diagnostic module GSM (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F8C4",
+    titre: "Défaut du bouton de validation du navigateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande écran uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le bouton de validation du système de navigation, utilisé pour confirmer un choix dans les menus.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du combiné de commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de navigation défaillant" },
+    ],
+    avisPro:
+      "Défaut sans conséquence sur la conduite — se traduit uniquement par une navigation dans les menus moins pratique.",
+    pieces: [
+      { nom: "Combiné de commande navigation", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F971",
+    titre: "Défaut de l'antenne TV",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception télévision uniquement",
+    description:
+      "Le BSI ou le calculateur multimédia détecte une anomalie sur l'antenne dédiée à la réception télévision, présente sur certains véhicules équipés de cette option.",
+    causes: [
+      { pourcentage: 38, libelle: "Antenne TV défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Équipement rare et propre à certaines finitions haut de gamme — vérifier d'abord que le véhicule en est bien équipé.",
+    pieces: [
+      { nom: "Antenne TV", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F91A",
+    titre: "Défaut de la sortie audio arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur arrière droit, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur arrière droit défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'arrière droit confirme généralement ce défaut, souvent lié à un haut-parleur en fin de vie.",
+    pieces: [
+      { nom: "Haut-parleur arrière droit", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FCB5",
+    titre: "Défaut de la mémoire interne du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Le BSI détecte une anomalie sur la mémoire interne d'un calculateur associé, pouvant fausser les données stockées ou les calculs en temps réel.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur défaillant sur sa mémoire interne" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation ayant corrompu la mémoire" },
+      { pourcentage: 17, libelle: "Perturbation électrique externe" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un effacement suivi d'un nouveau contrôle permet souvent de confirmer si le défaut est ponctuel ou persistant.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F78D",
+    titre: "Blocage du contacteur de recul (appui-tête)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de recul du réglage de l'appui-tête électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur d'appui-tête collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un appui-tête qui continue de bouger après relâchement de la commande est le symptôme typique — couper le contact stoppe le mouvement.",
+    pieces: [
+      { nom: "Contacteur réglage appui-tête", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F681",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag anti-sous-marinage passager)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du dispositif anti-sous-marinage du siège passager.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic dispositif anti-sous-marinage (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F98A",
+    titre: "Défaut du feu de position avant droit (boîtier de câblage moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage secondaire affecté",
+    description:
+      "Le boîtier de câblage moteur détecte une anomalie sur le circuit du feu de position avant droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule du feu de position grillée" },
+      { pourcentage: 25, libelle: "Câblage vers le feu de position endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du feu oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un contrôle visuel rapide de l'ampoule est la première étape logique, cette panne étant le plus souvent liée à une simple ampoule grillée.",
+    pieces: [
+      { nom: "Ampoule feu de position avant", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F8A7",
+    titre: "Défaut de l'alimentation du contacteur de commande du toit rétractable",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur l'alimentation électrique du contacteur qui commande le toit rétractable.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage d'alimentation du contacteur endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit toit grillé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord les fusibles dédiés au toit rétractable avant de remplacer le contacteur de commande lui-même.",
+    pieces: [
+      { nom: "Fusible circuit toit rétractable", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "FC92",
+    titre: "Défaut du contacteur du limiteur/régulateur de vitesse",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — régulateur de vitesse affecté",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui active ou règle le limiteur ou le régulateur de vitesse.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur du régulateur défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un régulateur ou limiteur de vitesse qui ne s'active plus du tout doit être diagnostiqué avant tout trajet autoroutier prolongé.",
+    pieces: [
+      { nom: "Contacteur régulateur/limiteur de vitesse", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F6B1",
+    titre: "Airbag conducteur déclenché (airbag passager désactivé)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que l'airbag conducteur s'est déployé, avec pour conséquence une désactivation automatique de l'airbag passager selon la logique de sécurité du système.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc frontal" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, réel ou intempestif, le véhicule doit être expertisé et l'ensemble du système remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "F698",
+    titre: "Défaut sur les prétensionneurs en série de la 1ère rangée (conducteur et passager avant)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des prétensionneurs de ceinture montés en série pour les places conducteur et passager avant de première rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs avant doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F73A",
+    titre: "Défaut du moteur de soufflerie arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte une anomalie sur le moteur de soufflerie qui alimente en air la zone arrière droite de la climatisation.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de soufflerie arrière défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Résistance de soufflerie grillée" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un bruit anormal avant la panne complète est fréquent sur ce type de moteur de soufflerie usé — un remplacement préventif peut être envisagé.",
+    pieces: [
+      { nom: "Moteur soufflerie arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F72A",
+    titre: "Défaut du moteur de recirculation d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui commande le volet de recirculation d'air (air intérieur / air extérieur).",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de recirculation défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de recirculation bloqué mécaniquement" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Une odeur extérieure persistante dans l'habitacle malgré le mode recirculation activé est un symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Moteur volet recirculation d'air", boutique: "Pièces auto en ligne", prix: "30-65€" },
+    ],
+  },
+  {
+    code: "F621",
+    titre: "Défaut du calculateur (système de déploiement)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — calculateur de sécurité concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance générale de son système de déploiement des dispositifs de sécurité (airbags, prétensionneurs).",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de sécurité passive défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 22, libelle: "Perturbation électrique ayant affecté le système de déploiement" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire concernant le système central de déploiement — diagnostic immédiat par un atelier habilité.",
+    pieces: [
+      { nom: "Diagnostic calculateur sécurité passive (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F98F",
+    titre: "Défaut de l'antibrouillard avant gauche (boîtier de fusibles moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage secondaire affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit de l'antibrouillard avant gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule de l'antibrouillard grillée" },
+      { pourcentage: 25, libelle: "Câblage vers l'antibrouillard endommagé" },
+      { pourcentage: 18, libelle: "Connecteur de l'antibrouillard oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un contrôle visuel rapide de l'ampoule est la première étape logique avant tout diagnostic électronique.",
+    pieces: [
+      { nom: "Ampoule antibrouillard avant", boutique: "Pièces auto en ligne", prix: "8-18€" },
+    ],
+  },
+  {
+    code: "FBA6",
+    titre: "Défaut du feu de recul arrière droit (boîtier de fusibles coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage de manœuvre affecté",
+    description:
+      "Le boîtier de fusibles du coffre détecte une anomalie sur le circuit du feu de recul arrière droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule du feu de recul grillée" },
+      { pourcentage: 25, libelle: "Câblage vers le feu de recul endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du feu oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un contrôle visuel rapide de l'ampoule est la première étape logique — équipement de sécurité important lors des manœuvres.",
+    pieces: [
+      { nom: "Ampoule feu de recul", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F8EB",
+    titre: "Absence de l'alimentation positive permanente de sauvegarde de l'horloge",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — horloge et mémoires affectées",
+    description:
+      "Le BSI détecte l'absence de l'alimentation positive permanente qui maintient l'horloge et certaines mémoires actives même contact coupé.",
+    causes: [
+      { pourcentage: 38, libelle: "Fusible de l'alimentation permanente grillé" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation permanente coupé" },
+      { pourcentage: 22, libelle: "Batterie débranchée ou très faible" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une horloge qui se réinitialise à chaque démarrage est le symptôme typique de ce défaut — souvent lié à une intervention récente sur la batterie.",
+    pieces: [
+      { nom: "Fusible alimentation permanente", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "F9AB",
+    titre: "Défaut du boîtier de fusibles moteur (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation moteur possiblement affectée",
+    description:
+      "Variante du défaut général sur le boîtier de fusibles du compartiment moteur, détectée dans un contexte de circuit différent.",
+    causes: [
+      { pourcentage: 36, libelle: "Fusible du boîtier moteur grillé" },
+      { pourcentage: 28, libelle: "Boîtier de fusibles moteur oxydé ou pollué par l'humidité" },
+      { pourcentage: 22, libelle: "Connecteur du boîtier mal enfiché" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, une inspection visuelle du boîtier est la première étape avant tout remplacement.",
+    pieces: [
+      { nom: "Kit fusibles boîtier moteur", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "FBB2",
+    titre: "Défaut de la commande de verrouillage du coffre (boîtier de fusibles coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — verrouillage du coffre affecté",
+    description:
+      "Le boîtier de fusibles du coffre détecte une anomalie sur la commande de verrouillage électrique du coffre.",
+    causes: [
+      { pourcentage: 38, libelle: "Serrure électrique du coffre défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la serrure endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la serrure oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles coffre défaillant" },
+    ],
+    avisPro:
+      "Un coffre qui ne se verrouille plus électriquement mais reste ouvrable manuellement confirme généralement ce défaut.",
+    pieces: [
+      { nom: "Serrure électrique coffre", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F8A8",
+    titre: "Défaut du temps d'ouverture de la vitre arrière gauche ou conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le temps mis par la vitre arrière gauche ou conducteur pour s'ouvrir dépasse la plage normale attendue, signe d'un frottement ou d'une résistance mécanique.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre grippé ou encrassé" },
+      { pourcentage: 28, libelle: "Rail de guidage de la vitre déformé" },
+      { pourcentage: 20, libelle: "Moteur de lève-vitre fatigué" },
+      { pourcentage: 14, libelle: "Calculateur de porte mal calibré" },
+    ],
+    avisPro:
+      "Un nettoyage et une lubrification des rails de guidage résolvent souvent ce type de lenteur avant d'envisager un remplacement de moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FC11",
+    titre: "Défaut de la sortie commune des rétroviseurs",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseurs électriques affectés",
+    description:
+      "Le BSI détecte une anomalie sur la sortie partagée qui pilote une fonction commune aux deux rétroviseurs électriques (rabattement synchronisé par exemple).",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur d'un des rétroviseurs défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie commune endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Tester chaque rétroviseur séparément aide à identifier si le problème vient d'un seul côté ou de la commande partagée.",
+    pieces: [
+      { nom: "Diagnostic rétroviseurs électriques (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBCE",
+    titre: "Défaut du capteur latéral avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur latéral situé à l'avant gauche du véhicule, généralement associé à l'aide au stationnement ou à la détection d'angle mort.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur latéral de stationnement", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F780",
+    titre: "Blocage du contacteur de relevage (niveau)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de relevage du réglage de niveau du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage de niveau collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement de siège non désiré en urgence si le contacteur reste bloqué.",
+    pieces: [
+      { nom: "Contacteur réglage niveau siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FCD7",
+    titre: "Défaut de présence passager, place centrale de 3e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur la place centrale de la troisième rangée de sièges.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place — à vérifier avant tout trajet avec un passager assis à cet endroit.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FCFB",
+    titre: "Défaut de programmation des capteurs",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recalibration nécessaire",
+    description:
+      "Le BSI détecte qu'un ou plusieurs capteurs associés n'ont pas été correctement programmés ou calibrés, généralement après un remplacement.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur récemment remplacé non encore programmé" },
+      { pourcentage: 28, libelle: "Procédure de programmation interrompue" },
+      { pourcentage: 18, libelle: "Capteur défaillant empêchant la programmation" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après le remplacement de tout capteur, une procédure de programmation avec l'outil constructeur est indispensable pour éviter ce défaut.",
+    pieces: [
+      { nom: "Programmation capteur (atelier équipé)", boutique: "Recommandé", prix: "30-60€" },
+    ],
+  },
+  {
+    code: "F786",
+    titre: "Blocage du contacteur d'angle (haut du dossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de réglage d'angle de la partie haute du dossier reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement de siège non désiré en urgence si le contacteur reste bloqué.",
+    pieces: [
+      { nom: "Contacteur inclinaison dossier siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F79A",
+    titre: "Blocage du contacteur de recul (soutien lombaire)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur de recul du réglage du soutien lombaire électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage lombaire collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un contacteur bloqué peut provoquer un réglage lombaire qui continue de bouger seul — couper le contact permet d'arrêter le mouvement.",
+    pieces: [
+      { nom: "Contacteur réglage lombaire siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F890",
+    titre: "Bouton de lève-vitre bloqué sur le clavier de la porte conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le bouton de commande du lève-vitre sur le clavier de la porte conducteur reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton du clavier collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Clavier de commande porte conducteur", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F740",
+    titre: "Défaut de la pompe de liquide de refroidissement de la boucle chaude",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — chauffage affecté",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur la pompe électrique qui fait circuler le liquide de refroidissement dans la boucle chaude du circuit de chauffage.",
+    causes: [
+      { pourcentage: 36, libelle: "Pompe de circulation défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la pompe endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la pompe oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut réduire l'efficacité du chauffage, notamment à bas régime moteur — à traiter avant l'hiver pour un confort optimal.",
+    pieces: [
+      { nom: "Pompe circulation liquide refroidissement", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FBE5",
+    titre: "Défaut de l'antenne intérieure du coffre",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection clé mains libres affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne intérieure située dans le coffre, utilisée pour la détection de la clé mains libres à cet endroit.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une clé mains libres non détectée dans le coffre peut empêcher le démarrage si elle y est oubliée — vérifier ce point avant diagnostic.",
+    pieces: [
+      { nom: "Antenne mains libres coffre", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F922",
+    titre: "La radio ne fonctionne pas",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une panne générale de la radio, empêchant toute réception ou lecture audio.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur audio défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur audio défaillante" },
+      { pourcentage: 20, libelle: "Câblage vers le calculateur endommagé" },
+      { pourcentage: 12, libelle: "Fusible du circuit audio grillé" },
+    ],
+    avisPro:
+      "Vérifier d'abord le fusible dédié à l'autoradio avant d'envisager un remplacement du calculateur, souvent plus coûteux.",
+    pieces: [
+      { nom: "Fusible circuit audio", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "FBC2",
+    titre: "Défaut du capteur extérieur avant droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Variante du défaut sur le capteur extérieur situé à l'avant droit du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement en premier.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F9D0",
+    titre: "Défaut des entrées capteurs du mécanisme de rétroviseur conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — rétroviseur électrique affecté",
+    description:
+      "Le BSI détecte une anomalie sur les entrées qui reçoivent les informations des capteurs de position du mécanisme électrique du rétroviseur conducteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position du rétroviseur défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la mémorisation correcte de la position du rétroviseur conducteur — à signaler lors du diagnostic.",
+    pieces: [
+      { nom: "Capteur position rétroviseur", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F8B6",
+    titre: "Courant consommé excessif par le moteur de lève-vitre arrière droite ou passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — mécanisme de lève-vitre en forçage",
+    description:
+      "Le BSI détecte que le moteur du lève-vitre arrière droite ou passager consomme un courant anormalement élevé, signe d'une résistance mécanique excessive.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Rail de guidage déformé ou obstrué" },
+      { pourcentage: 22, libelle: "Moteur de lève-vitre en fin de vie" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une surconsommation de courant indique que le moteur force contre une résistance — continuer à utiliser la vitre dans cet état risque de griller le moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F612",
+    titre: "Défaut du satellite arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite installé dans la zone arrière gauche, qui gère certaines commandes locales.",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions dans cette zone du véhicule oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite arrière gauche", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "F63D",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag genoux conducteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag de protection des genoux du conducteur.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag genoux (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F72B",
+    titre: "Défaut du moteur de distribution côté conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui oriente la distribution d'air côté conducteur (aérateurs, pare-brise, pieds selon le réglage).",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de distribution bloqué mécaniquement" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par un flux d'air qui ne suit plus la zone demandée côté conducteur.",
+    pieces: [
+      { nom: "Moteur volet distribution climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "FF54",
+    titre: "Défaut du feu de position additionnel droit (boîtier de fusibles remorque ou transformateur carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage remorque/attelage affecté",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit du feu de position additionnel droit de la remorque.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule du feu de position de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'apparaît que lorsqu'une remorque est attelée — vérifier en priorité l'ampoule et le câblage de la remorque.",
+    pieces: [
+      { nom: "Ampoule feu de position remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "FBDD",
+    titre: "Calculateur non configuré",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — recodage nécessaire",
+    description:
+      "Le BSI détecte qu'un calculateur associé n'a jamais reçu sa configuration, généralement après un remplacement ou une intervention incomplète.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur récemment remplacé non encore configuré" },
+      { pourcentage: 28, libelle: "Procédure de configuration interrompue" },
+      { pourcentage: 17, libelle: "Calculateur défaillant empêchant la configuration" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut est normal juste après le remplacement d'un calculateur tant que la configuration complète n'a pas été effectuée par l'atelier.",
+    pieces: [
+      { nom: "Configuration calculateur (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "FCED",
+    titre: "Défaut de la commande ou du buzzer droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte sonore secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur une commande ou un avertisseur sonore (buzzer) situé côté droit du véhicule.",
+    causes: [
+      { pourcentage: 38, libelle: "Buzzer défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le buzzer endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quelle alerte sonore exacte est concernée par ce défaut avant intervention.",
+    pieces: [
+      { nom: "Diagnostic commande/buzzer (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7A5",
+    titre: "Défaut du moteur ou capteur radial (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage radial (hauteur) de la colonne de direction.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage radial défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage de la colonne endommagé" },
+      { pourcentage: 14, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du volant — sans urgence, mais peut gêner l'installation au poste de conduite.",
+    pieces: [
+      { nom: "Moteur réglage radial colonne de direction", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "FCA9",
+    titre: "Moteur du pêne de serrure non alimenté dans le sens du verrouillage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — verrouillage de porte affecté",
+    description:
+      "Le BSI détecte que le moteur qui actionne le pêne de la serrure n'est pas alimenté lorsqu'une commande de verrouillage est envoyée.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage vers le moteur de serrure coupé" },
+      { pourcentage: 28, libelle: "Fusible du circuit de verrouillage grillé" },
+      { pourcentage: 22, libelle: "Relais de commande de verrouillage défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une absence totale d'alimentation empêche le verrouillage électrique de cette porte — un contrôle rapide du fusible dédié est recommandé.",
+    pieces: [
+      { nom: "Diagnostic circuit verrouillage (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F905",
+    titre: "Défaut de l'entrée audio auxiliaire analogique gauche 1",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la première entrée auxiliaire analogique gauche, utilisée pour connecter une source audio externe.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de l'entrée auxiliaire endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'entrée auxiliaire oxydé ou déconnecté" },
+      { pourcentage: 22, libelle: "Équipement source externe défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord qu'une source audio externe est bien branchée et fonctionnelle avant de suspecter le calculateur du véhicule.",
+    pieces: [
+      { nom: "Diagnostic entrées audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCCA",
+    titre: "Défaut de présence de siège, place droite de 2e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence physique du siège de la place droite de deuxième rangée, sur les véhicules à sièges amovibles.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de présence de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le plancher endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le siège est correctement verrouillé sur ses fixations avant d'envisager un remplacement de capteur.",
+    pieces: [
+      { nom: "Capteur de présence siège amovible", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F8B0",
+    titre: "Défaut du temps de perte du contacteur de sortie de la trappe articulée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — trappe ou volet spécifique",
+    description:
+      "Le BSI détecte que le temps mis à perdre l'information du contacteur de sortie d'une trappe articulée sort de la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de trappe défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Trappe mal positionnée mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement l'état de la trappe concernée avant d'envisager un remplacement de contacteur.",
+    pieces: [
+      { nom: "Contacteur trappe articulée", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FBA5",
+    titre: "Défaut du feu de recul arrière gauche (boîtier de fusibles coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage de manœuvre affecté",
+    description:
+      "Le boîtier de fusibles du coffre détecte une anomalie sur le circuit du feu de recul arrière gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule du feu de recul grillée" },
+      { pourcentage: 25, libelle: "Câblage vers le feu de recul endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du feu oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un contrôle visuel rapide de l'ampoule est la première étape logique — équipement de sécurité important lors des manœuvres.",
+    pieces: [
+      { nom: "Ampoule feu de recul", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "FCE2",
+    titre: "Défaut du capteur central avant gauche (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'un des capteurs centraux situés à l'avant gauche du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "FF2C",
+    titre: "Défaut du feu de recul gauche (boîtier de fusibles remorque ou module carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage remorque/attelage affecté",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit du feu de recul gauche de la remorque attelée.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule du feu de recul de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut n'apparaît que lorsqu'une remorque est attelée — vérifier en priorité l'ampoule et le câblage de la remorque elle-même.",
+    pieces: [
+      { nom: "Ampoule feu de recul remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F63C",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag rideau latéral droit)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag rideau latéral droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag rideau (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F88D",
+    titre: "Défaut du signal du contacteur d'arrêt forcé du lève-vitre (Winstop)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité anti-pincement du lève-vitre affectée",
+    description:
+      "Le BSI détecte une anomalie sur le signal du contacteur qui déclenche l'arrêt forcé du lève-vitre lorsqu'une résistance anormale est détectée, une fonction de sécurité anti-pincement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de résistance du lève-vitre défaillant" },
+      { pourcentage: 28, libelle: "Mécanisme grippé déclenchant l'arrêt à tort" },
+      { pourcentage: 22, libelle: "Câblage vers le mécanisme endommagé" },
+      { pourcentage: 14, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Cette fonction de sécurité anti-pincement est importante — un défaut ici peut soit bloquer la vitre par excès de prudence, soit désactiver la protection.",
+    pieces: [
+      { nom: "Diagnostic sécurité anti-pincement lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F693",
+    titre: "Défaut sur les prétensionneurs en série de la 1ère et 2e rangée côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit des prétensionneurs de ceinture montés en série pour les places droites de première et deuxième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F9EA",
+    titre: "Défaut interne de la carte électronique du lève-vitre arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "La carte électronique intégrée au mécanisme du lève-vitre arrière droit signale une défaillance interne, pouvant provoquer un fonctionnement irrégulier ou une panne complète de la vitre.",
+    causes: [
+      { pourcentage: 40, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 26, libelle: "Moteur de lève-vitre en fin de vie sollicitant trop la carte" },
+      { pourcentage: 20, libelle: "Câblage vers la porte arrière droite endommagé" },
+      { pourcentage: 14, libelle: "Connecteur de porte oxydé" },
+    ],
+    avisPro:
+      "Comme pour le lève-vitre avant, la carte électronique et le moteur forment souvent un seul ensemble à remplacer.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière droit avec carte électronique", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "FEB9",
+    titre: "Défaut de l'alimentation électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générique affectée",
+    description:
+      "Le BSI détecte une anomalie générale sur une ligne d'alimentation électrique, sans précision automatique du circuit exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit grillé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quelle alimentation est en cause.",
+    pieces: [
+      { nom: "Diagnostic circuits d'alimentation (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FCD2",
+    titre: "Défaut de présence passager avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur le siège avant gauche, sur les véhicules à conduite à droite ou configuration spécifique.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut influencer le mode de déploiement de l'airbag associé — un diagnostic par un atelier habilité aux systèmes de sécurité est recommandé.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FD16",
+    titre: "Défaut du circuit du contacteur de fin d'ouverture côté gauche (CFO)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de fin de course affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du contacteur de fin d'ouverture (CFO) côté gauche, utilisé pour confirmer qu'un élément a atteint sa position d'ouverture maximale.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de fin de course défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quel élément exact est concerné par ce contacteur de fin de course avant intervention.",
+    pieces: [
+      { nom: "Diagnostic contacteur fin de course (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FF57",
+    titre: "Défaut du boîtier de fusibles remorque ou transformateur carrossier",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — équipement attelage/remorque affecté",
+    description:
+      "Le BSI détecte une anomalie générale sur le boîtier de fusibles dédié à la remorque ou sur le transformateur installé par un carrossier.",
+    causes: [
+      { pourcentage: 36, libelle: "Boîtier de fusibles remorque défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'installation remorque endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut ne concerne que les véhicules équipés d'un attelage électrique ou d'un aménagement spécial.",
+    pieces: [
+      { nom: "Boîtier électronique attelage", boutique: "Pièces auto en ligne", prix: "70-150€" },
+    ],
+  },
+  {
+    code: "F641",
+    titre: "Défaut interne du calculateur (système de déclenchement des airbags avant et rideau latéral droit en série)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement combiné des airbags latéraux avant et de l'airbag rideau, côté droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbags latéraux (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FD0F",
+    titre: "Défaut du circuit du bouton de fermeture côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande de fermeture affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du bouton qui commande la fermeture d'un élément côté droit du véhicule (porte, hayon ou vitre selon configuration).",
+    causes: [
+      { pourcentage: 36, libelle: "Bouton de fermeture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quel élément exact est concerné par cette commande avant de cibler la réparation.",
+    pieces: [
+      { nom: "Diagnostic circuit bouton fermeture (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F893",
+    titre: "Blocage de la commande centralisée intérieure des vitres",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs lève-vitres affectés",
+    description:
+      "Le BSI détecte que la commande centralisée qui actionne toutes les vitres depuis le poste conducteur reste bloquée en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton de commande centralisée collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage de la commande centralisée résout souvent ce type de blocage sans remplacement complet du clavier.",
+    pieces: [
+      { nom: "Clavier de commande porte conducteur", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F7C6",
+    titre: "Défaut de la sortie de relevage du soutien lombaire",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le relevage électrique du soutien lombaire du siège.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur ou pompe de soutien lombaire défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du siège — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCA0",
+    titre: "Défaut du capteur de position de verrouillage",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — état de verrouillage incertain",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui confirme la position verrouillée d'un mécanisme de fermeture, sans précision automatique du mécanisme exact.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position défaillant" },
+      { pourcentage: 28, libelle: "Mécanisme de verrouillage mécaniquement grippé" },
+      { pourcentage: 22, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que le mécanisme concerné se verrouille bien physiquement avant de suspecter uniquement le capteur.",
+    pieces: [
+      { nom: "Diagnostic mécanisme de verrouillage (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD08",
+    titre: "Défaut du circuit du capteur de position S1 côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — capteur de position générique",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du capteur de position référencé S1, situé côté droit du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position S1 défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quelle fonction est associée à ce capteur avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur de position (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F761",
+    titre: "Défaut interne du panneau de commande climatisation arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le panneau de commande de climatisation situé à l'arrière signale une défaillance interne générale, pouvant provoquer un affichage ou des commandes non fonctionnelles à cet endroit.",
+    causes: [
+      { pourcentage: 45, libelle: "Panneau de commande défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du panneau défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers le panneau endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un panneau totalement éteint à l'arrière sans autre symptôme confirme généralement ce défaut plutôt qu'un problème de climatisation général.",
+    pieces: [
+      { nom: "Panneau commande climatisation arrière", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F616",
+    titre: "Défaut du satellite additionnel de la porte avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite additionnel installé dans la porte avant gauche, qui gère certaines commandes locales (vitres, verrouillage, rétroviseur).",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite de porte défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de porte oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions sur la porte avant gauche (vitre, rétroviseur, verrouillage) oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite porte avant gauche", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "F640",
+    titre: "Défaut interne du calculateur (système de déclenchement des airbags avant et rideau latéral gauche en série)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement combiné des airbags latéraux avant et de l'airbag rideau, côté gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbags latéraux (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FEFB",
+    titre: "Tension en dehors des limites",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation électrique instable",
+    description:
+      "Le BSI détecte qu'une tension mesurée sur un circuit associé sort de la plage de fonctionnement normale, trop haute ou trop basse.",
+    causes: [
+      { pourcentage: 36, libelle: "Batterie faible ou en fin de vie" },
+      { pourcentage: 28, libelle: "Alternateur défaillant, charge insuffisante ou excessive" },
+      { pourcentage: 22, libelle: "Câblage endommagé sur le circuit concerné" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant tout autre diagnostic électrique.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F896",
+    titre: "Défaut du signal du contacteur de déverrouillage du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal du contacteur qui indique que le toit rétractable est en position déverrouillée.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de déverrouillage du toit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser l'affichage de l'état du toit au tableau de bord — vérifier visuellement la position réelle en cas de doute.",
+    pieces: [
+      { nom: "Contacteur déverrouillage toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F89A",
+    titre: "Défaut interne du bloc de vannes hydrauliques ou de son circuit de commande",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système hydraulique affecté",
+    description:
+      "Le BSI détecte une anomalie sur le bloc de vannes hydrauliques qui répartit la pression pour le toit rétractable ou la direction assistée hydraulique, ou sur son circuit de commande électrique.",
+    causes: [
+      { pourcentage: 38, libelle: "Bloc de vannes hydrauliques défaillant" },
+      { pourcentage: 28, libelle: "Câblage du circuit de commande endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du bloc de vannes oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter la direction assistée sur les véhicules équipés d'un système hydraulique partagé — à traiter en priorité si un durcissement est ressenti.",
+    pieces: [
+      { nom: "Diagnostic bloc hydraulique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F8B9",
+    titre: "Cycle non terminé ou interrompu",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — manœuvre motorisée incomplète",
+    description:
+      "Le BSI détecte qu'un cycle de manœuvre motorisée (toit, vitre, coffre selon le contexte) n'a pas été mené à son terme, souvent suite à une interruption manuelle ou une coupure d'alimentation.",
+    causes: [
+      { pourcentage: 36, libelle: "Manœuvre interrompue manuellement ou par obstacle" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation pendant le cycle" },
+      { pourcentage: 22, libelle: "Mécanisme grippé empêchant la fin du cycle" },
+      { pourcentage: 14, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Relancer une manœuvre complète, sans interruption, permet souvent de réinitialiser ce défaut sans intervention supplémentaire.",
+    pieces: [
+      { nom: "Diagnostic mécanisme concerné (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCB4",
+    titre: "Défaut de l'alimentation du capteur de position hors zone",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — capteur de position générique",
+    description:
+      "Le BSI détecte une anomalie sur l'alimentation d'un capteur qui signale qu'un mécanisme est en dehors de sa zone de position normale.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage d'alimentation du capteur endommagé" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel mécanisme est concerné par ce capteur avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur de position (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBAD",
+    titre: "Défaut de l'antibrouillard arrière droit (boîtier de fusibles coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage secondaire affecté",
+    description:
+      "Le boîtier de fusibles du coffre détecte une anomalie sur le circuit de l'antibrouillard arrière droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule de l'antibrouillard arrière grillée" },
+      { pourcentage: 25, libelle: "Câblage vers l'antibrouillard endommagé" },
+      { pourcentage: 18, libelle: "Connecteur de l'antibrouillard oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un contrôle visuel rapide de l'ampoule est la première étape logique avant tout diagnostic électronique.",
+    pieces: [
+      { nom: "Ampoule antibrouillard arrière", boutique: "Pièces auto en ligne", prix: "8-18€" },
+    ],
+  },
+  {
+    code: "FFFF",
+    titre: "Défaut de configuration générale",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recodage possiblement nécessaire",
+    description:
+      "Le BSI détecte une anomalie de configuration générale, un code générique souvent lié à une intervention récente sur le véhicule sans recodage complet.",
+    causes: [
+      { pourcentage: 42, libelle: "Configuration non mise à jour après une intervention" },
+      { pourcentage: 28, libelle: "Équipement remplacé sans recodage" },
+      { pourcentage: 18, libelle: "Calculateur défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après toute intervention récente sur un équipement électrique du véhicule, un recodage via l'outil de diagnostic évite ce type de défaut.",
+    pieces: [
+      { nom: "Diagnostic et recodage (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7BF",
+    titre: "Défaut de la sortie commune (colonne de direction horizontale / verticale)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie partagée qui pilote à la fois le réglage horizontal (profondeur) et vertical (hauteur) de la colonne de direction.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage de colonne défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie commune endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Tester chaque fonction séparément (horizontale puis verticale) aide à cibler si le problème vient du moteur ou de la commande.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques colonne (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F8C5",
+    titre: "Défaut du bouton menu du navigateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande écran uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le bouton d'accès au menu du système de navigation.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du combiné de commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de navigation défaillant" },
+    ],
+    avisPro:
+      "Défaut sans conséquence sur la conduite — se traduit uniquement par une navigation dans les menus de l'écran moins pratique.",
+    pieces: [
+      { nom: "Combiné de commande navigation", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F9C0",
+    titre: "Défaut de la sortie de commande du mécanisme de pliage / dépliage conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège ou rétroviseur affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le pliage ou le dépliage électrique d'un mécanisme côté conducteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur du mécanisme défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun obstacle ne bloque mécaniquement le mécanisme avant d'envisager un remplacement du moteur.",
+    pieces: [
+      { nom: "Diagnostic mécanisme de pliage (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7C5",
+    titre: "Défaut de la sortie de recul de l'appui-tête",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le mouvement de recul de l'appui-tête électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage d'appui-tête défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage de l'appui-tête — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F9D9",
+    titre: "Blocage du bouton de lève-vitre avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le bouton de commande du lève-vitre avant droit reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton de commande collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du bouton de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Bouton commande lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F7BE",
+    titre: "Défaut de la sortie de rétractation (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote la rétractation électrique de la colonne de direction.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage de colonne défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du volant — sans urgence, mais peut gêner l'installation au poste de conduite.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques colonne (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD07",
+    titre: "Défaut du circuit du capteur de position S2 côté gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — capteur de position générique",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du capteur de position référencé S2, situé côté gauche du véhicule.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position S2 défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quelle fonction est associée à ce capteur avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur de position (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F733",
+    titre: "Protection thermique ou surintensité de la soufflerie",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte que la protection thermique du moteur de soufflerie s'est déclenchée ou qu'une surintensité a été mesurée sur son circuit.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de soufflerie défaillant, consommant trop de courant" },
+      { pourcentage: 28, libelle: "Résistance de soufflerie défaillante" },
+      { pourcentage: 22, libelle: "Obstruction mécanique de la turbine de soufflerie" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun corps étranger (feuilles, débris) n'obstrue la turbine de soufflerie avant d'envisager un remplacement de moteur.",
+    pieces: [
+      { nom: "Moteur de soufflerie", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "FCB2",
+    titre: "L'alimentation de l'accès et du démarrage mains libres (ADML) ne se coupe pas",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — consommation électrique en veille",
+    description:
+      "Le BSI détecte que l'alimentation du système d'accès et de démarrage mains libres (ADML) reste active en permanence au lieu de se couper en veille, ce qui peut décharger la batterie.",
+    causes: [
+      { pourcentage: 36, libelle: "Relais de coupure de l'ADML collé" },
+      { pourcentage: 28, libelle: "Module ADML défaillant" },
+      { pourcentage: 22, libelle: "Câblage du circuit de coupure endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut vider la batterie en quelques jours si le véhicule reste stationné — à traiter rapidement même si le démarrage fonctionne normalement.",
+    pieces: [
+      { nom: "Diagnostic système accès mains libres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F89B",
+    titre: "Dépassement du premier seuil de température du moteur de la pompe hydraulique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — système hydraulique en échauffement",
+    description:
+      "Le BSI détecte que le moteur de la pompe hydraulique a dépassé un premier seuil de température, une alerte précoce avant le seuil maximal.",
+    causes: [
+      { pourcentage: 36, libelle: "Sollicitation prolongée du toit ou de la direction assistée hydraulique" },
+      { pourcentage: 28, libelle: "Pompe hydraulique en début de faiblesse" },
+      { pourcentage: 22, libelle: "Mécanisme partiellement grippé forçant le moteur" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Cette alerte précoce permet d'éviter la surchauffe complète — laisser reposer le système quelques minutes entre deux manœuvres du toit.",
+    pieces: [
+      { nom: "Diagnostic pompe hydraulique (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F711",
+    titre: "Bouton du panneau de climatisation conducteur bloqué",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation avant affectée",
+    description:
+      "Le BSI détecte qu'un bouton du panneau de commande de climatisation côté conducteur reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton du panneau collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le panneau" },
+      { pourcentage: 20, libelle: "Câblage du panneau endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du panneau de commande résout souvent ce type de blocage sans remplacement.",
+    pieces: [
+      { nom: "Panneau commande climatisation conducteur", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "FCC4",
+    titre: "Défaut du contacteur de ceinture non bouclée, place centrale (2e rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place centrale de deuxième rangée est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente — à vérifier même si un passager y est correctement attaché.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F7F2",
+    titre: "Défaut du relais de puissance",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation d'un circuit affectée",
+    description:
+      "Le BSI détecte une anomalie sur un relais de puissance qui alimente un circuit important, sans précision automatique du circuit exact concerné.",
+    causes: [
+      { pourcentage: 38, libelle: "Relais de puissance défaillant, collé ou grillé" },
+      { pourcentage: 28, libelle: "Câblage de commande du relais endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du relais oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel circuit est alimenté par ce relais avant intervention.",
+    pieces: [
+      { nom: "Relais de puissance", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "F892",
+    titre: "Bouton de lève-vitre bloqué sur le clavier de la porte passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le bouton de commande du lève-vitre sur le clavier de la porte passager reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton du clavier collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Clavier de commande porte passager", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FBDB",
+    titre: "Défaut de l'alimentation des capteurs",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs capteurs affectés",
+    description:
+      "Le BSI détecte une anomalie sur une ligne d'alimentation partagée par plusieurs capteurs, ce qui peut affecter simultanément plusieurs fonctions.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation partagée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Un des capteurs alimentés en court-circuit" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs tombent en panne simultanément, cette alimentation partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F79F",
+    titre: "Défaut du moteur ou capteur (réglage en hauteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage en hauteur du siège électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage en hauteur défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un siège qui reste bloqué à une hauteur intermédiaire sans pouvoir être ajusté correctement confirme généralement ce type de défaut.",
+    pieces: [
+      { nom: "Diagnostic réglage électrique siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F8AF",
+    titre: "Défaut du temps de perte du contacteur de fermeture du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis à perdre l'information du contacteur de fermeture du toit rétractable sort de la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de fermeture du toit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser la confirmation de fermeture du toit — à vérifier visuellement en cas de doute.",
+    pieces: [
+      { nom: "Contacteur fermeture toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F94F",
+    titre: "Défaut de la sortie du haut-parleur avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente le haut-parleur avant gauche, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur avant gauche défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement à l'avant gauche confirme généralement ce défaut sans nécessiter de diagnostic électronique poussé.",
+    pieces: [
+      { nom: "Haut-parleur avant gauche", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FB8C",
+    titre: "Blocage de l'entrée tout ou rien du bouton n°5",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte que l'une de ses entrées numériques, associée à un cinquième bouton de commande, reste bloquée en position activée en permanence.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant, collé en position enfoncée" },
+      { pourcentage: 28, libelle: "Câblage du bouton en court-circuit" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Identifier physiquement quel bouton correspond à cette entrée nécessite l'outil de diagnostic constructeur.",
+    pieces: [
+      { nom: "Diagnostic entrées BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FF06",
+    titre: "Défaut de la sortie audio gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie qui alimente les haut-parleurs du côté gauche du véhicule, sans impact sur la conduite.",
+    causes: [
+      { pourcentage: 38, libelle: "Haut-parleur gauche défaillant ou grillé" },
+      { pourcentage: 28, libelle: "Câblage vers le haut-parleur endommagé" },
+      { pourcentage: 22, libelle: "Amplificateur audio défaillant" },
+      { pourcentage: 12, libelle: "Connecteur du haut-parleur oxydé" },
+    ],
+    avisPro:
+      "Un son absent ou déformé uniquement du côté gauche confirme généralement ce défaut, à traiter sans urgence.",
+    pieces: [
+      { nom: "Haut-parleur gauche", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FCD1",
+    titre: "Défaut de présence passager, place centrale avant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur la place centrale avant, sur les véhicules équipés d'une banquette avant à trois places.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter l'alerte ceinture non bouclée pour cette place — à vérifier avant tout trajet avec un passager assis à cette place.",
+    pieces: [
+      { nom: "Capteur de présence siège", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FD13",
+    titre: "Défaut de la commande du moteur droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur la commande d'un moteur électrique situé côté droit du véhicule, sans précision automatique de l'équipement exact concerné.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur électrique concerné défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 14, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel moteur est concerné par cette commande avant intervention.",
+    pieces: [
+      { nom: "Diagnostic commandes moteur droit (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F69C",
+    titre: "Défaut de l'arceau de protection escamotable arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité cabriolet",
+    description:
+      "Le BSI détecte une anomalie sur l'arceau de sécurité escamotable côté arrière gauche, qui doit se déployer automatiquement en cas de risque de retournement sur véhicule cabriolet.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de déploiement de l'arceau défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'arceau endommagé" },
+      { pourcentage: 20, libelle: "Capteur de position de l'arceau défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce dispositif de sécurité ne doit jamais rester en défaut non traité — un diagnostic rapide est fortement recommandé.",
+    pieces: [
+      { nom: "Diagnostic arceau de sécurité (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F785",
+    titre: "Blocage du contacteur d'abaissement (réglage en hauteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'abaissement du réglage en hauteur du siège électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage en hauteur collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement de siège non désiré en urgence si le contacteur reste bloqué.",
+    pieces: [
+      { nom: "Contacteur réglage hauteur siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FBFC",
+    titre: "Défaut interne du calculateur d'accès et de démarrage mains libres",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage mains libres affecté",
+    description:
+      "Le calculateur qui gère l'accès et le démarrage mains libres signale une défaillance interne, pouvant empêcher le démarrage sans clé physique.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur d'accès mains libres défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Logiciel corrompu suite à une mise à jour incomplète" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le démarrage mains libres ne fonctionne plus du tout, la clé physique de secours permet généralement de démarrer en attendant réparation.",
+    pieces: [
+      { nom: "Diagnostic calculateur accès mains libres (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FECF",
+    titre: "Défaut sur l'information du boîtier de fusibles moteur reçue par le CAN",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — donnée réseau moteur incohérente",
+    description:
+      "Un calculateur détecte que l'information reçue du boîtier de fusibles moteur via le réseau CAN n'est pas valide, ce qui peut affecter les fonctions dépendant de ces données.",
+    causes: [
+      { pourcentage: 36, libelle: "Boîtier de fusibles moteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du réseau CAN endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du boîtier moteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut, rapporté par un autre calculateur au sujet du boîtier moteur, doit être croisé avec les codes propres de ce boîtier.",
+    pieces: [
+      { nom: "Diagnostic boîtier fusibles moteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F741",
+    titre: "Défaut du moteur de distribution du diffuseur d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui pilote la distribution d'air vers les différents diffuseurs de l'habitacle.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de distribution bloqué mécaniquement" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par un flux d'air qui ne suit plus la zone demandée (pare-brise, aérateurs ou pieds).",
+    pieces: [
+      { nom: "Moteur volet distribution climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F9CD",
+    titre: "Défaut du lève-vitre avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie générale sur le mécanisme du lève-vitre avant droit, pouvant provoquer un fonctionnement irrégulier ou une panne complète.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers la porte avant droite endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 14, libelle: "Carte électronique du lève-vitre défaillante" },
+    ],
+    avisPro:
+      "Un bruit inhabituel avant la panne complète (grincement, ralentissement) est fréquent et permet d'anticiper le remplacement.",
+    pieces: [
+      { nom: "Moteur lève-vitre avant droit", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FCCB",
+    titre: "Défaut de présence de siège, place centrale de 2e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence physique du siège central de deuxième rangée, sur les véhicules à sièges amovibles.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de présence de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le plancher endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le siège est correctement verrouillé sur ses fixations avant d'envisager un remplacement de capteur.",
+    pieces: [
+      { nom: "Capteur de présence siège amovible", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F923",
+    titre: "Le lecteur CD ne fonctionne pas",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le lecteur CD intégré au système audio signale une panne générale, empêchant toute lecture de disque.",
+    causes: [
+      { pourcentage: 42, libelle: "Lecteur CD défaillant (mécanisme ou laser)" },
+      { pourcentage: 26, libelle: "Câblage vers le lecteur endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du lecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Un CD coincé à l'intérieur du lecteur est une cause fréquente — un atelier peut souvent l'extraire sans remplacer toute la pièce.",
+    pieces: [
+      { nom: "Lecteur CD intégré", boutique: "Pièces auto en ligne", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "FBD1",
+    titre: "Défaut du capteur extérieur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur extérieur situé à l'arrière gauche du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement en premier.",
+    pieces: [
+      { nom: "Capteur de stationnement arrière", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "F9DD",
+    titre: "Défaut de tension de fin de course haute ou basse du lève-vitre avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie sur la tension mesurée aux positions de fin de course (haute ou basse) du lève-vitre avant gauche, utilisée pour calibrer sa course.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre non calibré après intervention" },
+      { pourcentage: 28, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 22, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout démontage de la porte ou du mécanisme de vitre, une procédure d'initialisation de la course est indispensable.",
+    pieces: [
+      { nom: "Réinitialisation lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "FC98",
+    titre: "Défaut du calculateur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Le BSI signale une défaillance générale d'un calculateur associé, variante d'un code générique déjà rencontré, sans précision automatique du module exact concerné.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 20, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quel calculateur est en cause.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F7B8",
+    titre: "Défaut de la sortie de relevage (niveau)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le relevage du réglage de niveau du siège électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage de niveau défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage du siège — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F9C6",
+    titre: "Défaut de la sortie d'éclairage du clavier de mémorisation (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Variante du défaut sur le circuit qui éclaire le clavier de mémorisation des réglages de siège.",
+    causes: [
+      { pourcentage: 38, libelle: "Ampoule ou LED du clavier de mémorisation grillée" },
+      { pourcentage: 28, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du clavier oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique sans impact sur la mémorisation elle-même — à traiter sans urgence.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "FBDC",
+    titre: "Défaut de l'alimentation interne du buzzer",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte sonore affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'alimentation interne de l'avertisseur sonore (buzzer) utilisé pour diverses alertes du véhicule.",
+    causes: [
+      { pourcentage: 40, libelle: "Buzzer défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du buzzer endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une absence d'alerte sonore (ceinture, clé oubliée) peut accompagner ce défaut — à vérifier même en l'absence d'autre symptôme visible.",
+    pieces: [
+      { nom: "Buzzer alerte véhicule", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FCE1",
+    titre: "Défaut du capteur extérieur avant gauche (variante 1)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'un des capteurs extérieurs situés à l'avant gauche du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de stationnement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur de stationnement avant", boutique: "Pièces auto en ligne", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "FD1B",
+    titre: "Défaut du circuit d'alimentation des boutons d'ouverture/fermeture",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande d'ouverture générique affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit d'alimentation partagé par les boutons d'ouverture et de fermeture, ce qui peut affecter plusieurs commandes simultanément.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit grillé" },
+      { pourcentage: 22, libelle: "Court-circuit sur l'un des boutons alimentés" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs boutons d'ouverture/fermeture tombent en panne simultanément, cette alimentation partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic circuits boutons ouverture/fermeture (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F9E0",
+    titre: "Absence de communication avec le calculateur du lève-vitre arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le calculateur ou la carte électronique du lève-vitre arrière gauche.",
+    causes: [
+      { pourcentage: 35, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la porte arrière gauche endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de porte oxydé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres défauts de lève-vitre, la carte électronique et le moteur forment souvent un seul ensemble à remplacer.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière gauche avec carte électronique", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "FD01",
+    titre: "Défaut du bouton avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur un bouton de commande situé à l'avant droit de l'habitacle, généralement lié à une fonction de confort secondaire.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de confort mineur qui peut être traité sans urgence lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Bouton de commande avant", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F7A2",
+    titre: "Défaut : capteur ou moteur de réglage vertical de l'appui-tête",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le capteur ou le moteur associé au réglage vertical de l'appui-tête électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage d'appui-tête défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un appui-tête bloqué dans une position peut gêner le confort et la posture du conducteur — à traiter sans urgence excessive.",
+    pieces: [
+      { nom: "Diagnostic réglage électrique siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FF1A",
+    titre: "Défaut de communication LIN entre les deux moteurs d'essuie-glace",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — essuie-glace affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie de communication sur le réseau LIN entre le moteur maître et le moteur esclave d'essuie-glace.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du réseau LIN entre les moteurs endommagé" },
+      { pourcentage: 28, libelle: "Moteur esclave d'essuie-glace défaillant" },
+      { pourcentage: 22, libelle: "Connecteur entre les moteurs oxydé" },
+      { pourcentage: 14, libelle: "Moteur maître d'essuie-glace défaillant" },
+    ],
+    avisPro:
+      "Un seul essuie-glace qui fonctionne alors que l'autre reste immobile est le symptôme typique de cette perte de synchronisation.",
+    pieces: [
+      { nom: "Diagnostic système essuie-glace (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FC03",
+    titre: "Boutons du clavier bloqués",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commandes affectées",
+    description:
+      "Le BSI détecte que les boutons d'un clavier de commande restent bloqués en position activée, empêchant leur bon fonctionnement.",
+    causes: [
+      { pourcentage: 40, libelle: "Boutons du clavier collés ou usés" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Diagnostic clavier de commande (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F78B",
+    titre: "Blocage du contacteur d'abaissement (appui-tête)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'abaissement du réglage de l'appui-tête électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur d'appui-tête collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un appui-tête qui continue de bouger après relâchement de la commande est le symptôme typique — couper le contact stoppe le mouvement.",
+    pieces: [
+      { nom: "Contacteur réglage appui-tête", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F9DC",
+    titre: "Blocage du bouton de lève-vitre avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le bouton de commande du lève-vitre avant gauche reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton de commande collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de porte défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du bouton de commande résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Bouton commande lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F964",
+    titre: "Défaut du module tuner TV",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort multimédia uniquement",
+    description:
+      "Le module qui capte les chaînes de télévision, présent sur certains véhicules équipés de cette option, signale une anomalie.",
+    causes: [
+      { pourcentage: 40, libelle: "Module tuner TV défaillant" },
+      { pourcentage: 28, libelle: "Antenne TV défaillante ou mal positionnée" },
+      { pourcentage: 20, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Équipement rare et propre à certaines finitions haut de gamme — vérifier d'abord que le véhicule en est bien équipé.",
+    pieces: [
+      { nom: "Module tuner TV", boutique: "Pièces auto en ligne", prix: "50-110€" },
+    ],
+  },
+  {
+    code: "F1AA",
+    titre: "Information de réponse au chiffrement non valide",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité antidémarrage possiblement affectée",
+    description:
+      "Le BSI détecte que la réponse cryptographique reçue lors d'un échange de sécurité (antidémarrage) n'est pas valide, ce qui peut empêcher certaines fonctions protégées.",
+    causes: [
+      { pourcentage: 36, libelle: "Clé ou badge mal reconnu par le système" },
+      { pourcentage: 28, libelle: "Module antidémarrage défaillant" },
+      { pourcentage: 22, libelle: "Câblage du circuit sécurisé endommagé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le démarrage du véhicule — vérifier d'abord avec la clé de secours avant tout diagnostic électronique poussé.",
+    pieces: [
+      { nom: "Diagnostic système antidémarrage (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F4D4",
+    titre: "Défaut de l'éclairage des seuils de coffre ou de porte arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le circuit qui éclaire les seuils du coffre ou de la porte arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED d'éclairage de seuil grillée" },
+      { pourcentage: 28, libelle: "Câblage vers l'éclairage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique sans impact sur la sécurité — à traiter sans urgence.",
+    pieces: [
+      { nom: "Éclairage seuil coffre/porte", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F908",
+    titre: "Défaut de l'entrée audio auxiliaire analogique droite 2",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la deuxième entrée auxiliaire analogique droite, utilisée pour connecter une source audio externe.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de l'entrée auxiliaire endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'entrée auxiliaire oxydé ou déconnecté" },
+      { pourcentage: 22, libelle: "Équipement source externe défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Vérifier d'abord qu'une source audio externe est bien branchée et fonctionnelle avant de suspecter le calculateur du véhicule.",
+    pieces: [
+      { nom: "Diagnostic entrées audio (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FECC",
+    titre: "Le capteur ne peut pas être adapté au pare-brise",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — capteur pare-brise mal calibré",
+    description:
+      "Le BSI détecte que le capteur monté sur le pare-brise (pluie, luminosité ou caméra) ne peut pas être correctement calibré, généralement après un remplacement de pare-brise.",
+    causes: [
+      { pourcentage: 42, libelle: "Pare-brise remplacé avec un support de capteur incompatible" },
+      { pourcentage: 28, libelle: "Capteur mal positionné lors du montage" },
+      { pourcentage: 18, libelle: "Capteur défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout remplacement de pare-brise, la calibration du capteur associé doit être effectuée avec l'outil constructeur — sans cette étape, des fonctions d'aide à la conduite peuvent être désactivées.",
+    pieces: [
+      { nom: "Calibration capteur pare-brise (atelier équipé)", boutique: "Recommandé", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F9CE",
+    titre: "Défaut de la vitre arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie générale sur le mécanisme de la vitre arrière gauche, pouvant provoquer un fonctionnement irrégulier ou une panne complète.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers la porte arrière gauche endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 14, libelle: "Carte électronique du lève-vitre défaillante" },
+    ],
+    avisPro:
+      "Un bruit inhabituel avant la panne complète (grincement, ralentissement) est fréquent et permet d'anticiper le remplacement.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière gauche", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FBAB",
+    titre: "Défaut du clignotant arrière droit (boîtier de fusibles coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — signalisation affectée",
+    description:
+      "Le boîtier de fusibles du coffre détecte une anomalie sur le circuit du clignotant arrière droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Ampoule du clignotant grillée" },
+      { pourcentage: 25, libelle: "Câblage vers le clignotant endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du clignotant oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un clignotement plus rapide que la normale au tableau de bord est souvent le premier signe d'une ampoule de clignotant grillée.",
+    pieces: [
+      { nom: "Ampoule clignotant arrière", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "FBC1",
+    titre: "Défaut du capteur intérieur avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur intérieur situé à l'avant gauche de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme périmétrique ou à un système de confort.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCF7",
+    titre: "Défaut de l'alimentation des capteurs (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs capteurs affectés",
+    description:
+      "Variante du défaut sur une ligne d'alimentation partagée par plusieurs capteurs, ce qui peut affecter simultanément plusieurs fonctions.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur la ligne d'alimentation partagée" },
+      { pourcentage: 28, libelle: "Câblage de l'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Un des capteurs alimentés en court-circuit" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Quand plusieurs capteurs tombent en panne simultanément, cette alimentation partagée est souvent la cause commune.",
+    pieces: [
+      { nom: "Diagnostic alimentation capteurs (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F624",
+    titre: "Défaut du capteur de sécurité",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive concernée",
+    description:
+      "Le calculateur de sécurité passive détecte une anomalie sur l'un de ses capteurs de sécurité, utilisés pour valider les conditions de déclenchement des airbags.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de sécurité défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic capteur de sécurité (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F792",
+    titre: "Blocage du contacteur de neutralisation (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte que le contacteur de neutralisation du réglage électrique de la colonne de direction reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de colonne collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement non désiré de la colonne de direction en urgence.",
+    pieces: [
+      { nom: "Contacteur réglage électrique colonne", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FBD2",
+    titre: "Défaut du capteur intérieur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur intérieur situé à l'arrière gauche de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme périmétrique ou à un système de confort.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F4A1",
+    titre: "Défaut de la commande du plafonnier avant/arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — éclairage intérieur affecté",
+    description:
+      "Le BSI détecte une anomalie sur la commande qui pilote le plafonnier avant et arrière de l'habitacle.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule ou LED du plafonnier grillée" },
+      { pourcentage: 28, libelle: "Câblage vers le plafonnier endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un contrôle visuel rapide de l'ampoule ou de la LED est la première étape logique avant tout diagnostic électronique.",
+    pieces: [
+      { nom: "Ampoule/module plafonnier", boutique: "Pièces auto en ligne", prix: "10-30€" },
+    ],
+  },
+  {
+    code: "F903",
+    titre: "Défaut de l'entrée audio gauche du chargeur CD",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur l'entrée gauche dédiée au chargeur CD multi-disques.",
+    causes: [
+      { pourcentage: 38, libelle: "Chargeur CD défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le chargeur CD endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du chargeur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Équipement de plus en plus rare — vérifier la disponibilité de la pièce avant de s'engager dans une réparation.",
+    pieces: [
+      { nom: "Chargeur CD multi-disques", boutique: "Pièces auto en ligne / occasion", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FF2F",
+    titre: "Défaut du feu stop droit (boîtier de fusibles remorque ou module carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation de freinage remorque affectée",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit du feu stop droit de la remorque attelée.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule du feu stop de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de sécurité doit être traité avant tout trajet avec remorque attelée — les feux stop remorque sont essentiels pour la sécurité des autres usagers.",
+    pieces: [
+      { nom: "Ampoule feu stop remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F8B7",
+    titre: "Courant consommé excessif par le moteur de lève-vitre arrière gauche ou conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — mécanisme de lève-vitre en forçage",
+    description:
+      "Le BSI détecte que le moteur du lève-vitre arrière gauche ou conducteur consomme un courant anormalement élevé, signe d'une résistance mécanique excessive.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Rail de guidage déformé ou obstrué" },
+      { pourcentage: 22, libelle: "Moteur de lève-vitre en fin de vie" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une surconsommation de courant indique que le moteur force contre une résistance — continuer à utiliser la vitre dans cet état risque de griller le moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FCD0",
+    titre: "Défaut de présence passager avant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence d'un passager sur le siège avant, utilisé pour adapter le déploiement de l'airbag et l'alerte ceinture.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de présence défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Ce capteur influence directement le déploiement de l'airbag passager — un diagnostic par un atelier habilité aux systèmes de sécurité est recommandé.",
+    pieces: [
+      { nom: "Capteur de présence siège passager", boutique: "Pièces auto en ligne", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FB90",
+    titre: "Blocage du bouton \"Check\" (autotest véhicule, variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Variante du défaut de blocage du bouton \"Check\" utilisé pour lancer l'autotest du véhicule au tableau de bord.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton Check défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un bouton bloqué peut relancer l'autotest en boucle à chaque démarrage — vérifier qu'il n'est pas mécaniquement coincé avant tout remplacement.",
+    pieces: [
+      { nom: "Bouton Check tableau de bord", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FBE2",
+    titre: "Défaut de l'antenne arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection clé mains libres affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne située à l'arrière gauche du véhicule, utilisée pour la détection de la clé mains libres à cet endroit.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le véhicule est équipé de l'accès mains libres, une zone de détection de clé qui ne fonctionne plus à cet endroit est le symptôme typique.",
+    pieces: [
+      { nom: "Antenne mains libres arrière", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FD31",
+    titre: "Défaut de la sortie n°8",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 8, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD1F",
+    titre: "Défaut du circuit de commande de l'actionneur d'ouverture de serrure (AOS)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — ouverture de porte affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit de commande de l'actionneur d'ouverture de serrure (AOS), qui permet l'ouverture électrique d'une porte.",
+    causes: [
+      { pourcentage: 38, libelle: "Actionneur d'ouverture défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'actionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la serrure oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une ouverture qui ne fonctionne plus que manuellement mais pas via la télécommande oriente vers ce type de défaut.",
+    pieces: [
+      { nom: "Actionneur ouverture serrure", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F924",
+    titre: "Défaut entre l'amplificateur Hi-Fi et la radio",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la liaison entre l'amplificateur Hi-Fi et le tuner radio, pouvant provoquer un son faible ou absent.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage entre l'amplificateur et la radio endommagé" },
+      { pourcentage: 28, libelle: "Amplificateur Hi-Fi défaillant" },
+      { pourcentage: 22, libelle: "Connecteur de liaison oxydé" },
+      { pourcentage: 12, libelle: "Tuner radio défaillant" },
+    ],
+    avisPro:
+      "Un son globalement faible malgré un volume élevé oriente vers ce défaut de liaison plutôt qu'un haut-parleur isolé.",
+    pieces: [
+      { nom: "Amplificateur Hi-Fi", boutique: "Pièces auto en ligne", prix: "80-180€" },
+    ],
+  },
+  {
+    code: "F885",
+    titre: "Défaut du signal des contacteurs de verrouillage du toit gauche/droite ou du clavier central",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal des contacteurs de verrouillage du toit, côtés gauche et droit, ou sur le clavier de commande central.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de verrouillage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers les contacteurs endommagé" },
+      { pourcentage: 22, libelle: "Clavier de commande central défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le système de confirmer que le toit est correctement verrouillé — à vérifier visuellement avant de considérer le véhicule sécurisé.",
+    pieces: [
+      { nom: "Diagnostic contacteurs verrouillage toit (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F9D3",
+    titre: "Défaut de l'entrée analogique du clavier de mémorisation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur l'entrée analogique du clavier de mémorisation des positions de siège.",
+    causes: [
+      { pourcentage: 38, libelle: "Clavier de mémorisation défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'entrée analogique endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du clavier oxydé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher la mémorisation correcte des positions de siège — à signaler lors du diagnostic.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "F884",
+    titre: "Défaut du signal du contacteur de verrouillage du toit côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal du contacteur qui indique si le toit rétractable est verrouillé côté droit.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de verrouillage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le système de confirmer que le toit est correctement verrouillé de ce côté — à vérifier visuellement en attendant réparation.",
+    pieces: [
+      { nom: "Contacteur verrouillage toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F9E9",
+    titre: "Défaut de tension de fin de course haute ou basse du lève-vitre arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie sur la tension mesurée aux positions de fin de course (haute ou basse) du lève-vitre arrière droit, utilisée pour calibrer sa course.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre non calibré après intervention" },
+      { pourcentage: 28, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 22, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout démontage de la porte ou du mécanisme de vitre, une procédure d'initialisation de la course est indispensable.",
+    pieces: [
+      { nom: "Réinitialisation lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F98C",
+    titre: "Défaut du feu de croisement avant droit (boîtier de fusibles moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — éclairage principal affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit du feu de croisement avant droit, un équipement essentiel pour la conduite de nuit.",
+    causes: [
+      { pourcentage: 42, libelle: "Ampoule du feu de croisement grillée" },
+      { pourcentage: 26, libelle: "Câblage vers le feu de croisement endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du feu oxydé" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Un phare de croisement éteint d'un seul côté est un défaut de sécurité à corriger avant tout trajet de nuit — priorité au contrôle de l'ampoule.",
+    pieces: [
+      { nom: "Ampoule feu de croisement", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "F973",
+    titre: "Défaut de l'antenne ETC",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — télépéage uniquement",
+    description:
+      "Le BSI ou le calculateur multimédia détecte une anomalie sur l'antenne dédiée au système de télépéage automatique (ETC), présent sur certains véhicules équipés de cette option.",
+    causes: [
+      { pourcentage: 38, libelle: "Antenne ETC défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 12, libelle: "Module ETC défaillant" },
+    ],
+    avisPro:
+      "Équipement rare — vérifier d'abord que le véhicule est équipé d'un système de télépéage intégré avant tout diagnostic.",
+    pieces: [
+      { nom: "Antenne système télépéage", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FBC5",
+    titre: "Défaut du capteur latéral avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur latéral situé à l'avant droit du véhicule, généralement associé à l'aide au stationnement ou à la détection d'angle mort.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur latéral de stationnement", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F760",
+    titre: "Défaut interne du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Un calculateur associé à la climatisation signale une défaillance interne générale, sans précision automatique du module exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur de climatisation défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 20, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quel calculateur est en cause.",
+    pieces: [
+      { nom: "Diagnostic approfondi climatisation (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F07A",
+    titre: "Dysfonctionnement du CAN (boîtier de câblage moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — communication moteur affectée",
+    description:
+      "Le boîtier de câblage moteur détecte un dysfonctionnement général sur le réseau CAN, ce qui peut affecter la communication de plusieurs équipements moteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du CAN endommagé au niveau du boîtier moteur" },
+      { pourcentage: 28, libelle: "Boîtier de câblage moteur défaillant" },
+      { pourcentage: 22, libelle: "Connecteur du boîtier oxydé (exposition à la chaleur)" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut mérite une attention prioritaire car il peut masquer d'autres codes moteur devenus injoignables via le réseau.",
+    pieces: [
+      { nom: "Diagnostic boîtier câblage moteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F8AC",
+    titre: "Défaut du temps d'ouverture du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis par le toit rétractable pour s'ouvrir dépasse la plage normale attendue, signe d'une résistance mécanique ou électrique dans le mécanisme.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme du toit grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Vérin hydraulique ou électrique du toit fatigué" },
+      { pourcentage: 22, libelle: "Tension d'alimentation insuffisante pendant la manœuvre" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ne pas insister si le toit semble ralenti ou forcer la manœuvre — cela peut endommager davantage le mécanisme, déjà coûteux à réparer.",
+    pieces: [
+      { nom: "Diagnostic mécanisme toit rétractable (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "70-120€" },
+    ],
+  },
+  {
+    code: "F7C4",
+    titre: "Défaut de la sortie d'avancée de l'appui-tête",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le mouvement d'avancée de l'appui-tête électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage d'appui-tête défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage de l'appui-tête — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBE9",
+    titre: "Défaut de l'antenne de secours",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception secondaire affectée",
+    description:
+      "Le BSI ou le calculateur multimédia détecte une anomalie sur une antenne de secours utilisée en complément de l'antenne principale.",
+    causes: [
+      { pourcentage: 38, libelle: "Antenne de secours défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 12, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Une réception dégradée uniquement dans certaines zones peut accompagner ce défaut, l'antenne principale continuant d'assurer l'essentiel de la réception.",
+    pieces: [
+      { nom: "Antenne de secours", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "F7BD",
+    titre: "Défaut de la sortie d'avancée du coulissement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le mouvement d'avancée du coulissement du siège électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de coulissement défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Rail de coulissement grippé mécaniquement" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un rail de coulissement encrassé ou mal lubrifié peut provoquer ce type de défaut sans panne électrique réelle.",
+    pieces: [
+      { nom: "Kit lubrification rails de siège", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "FCA1",
+    titre: "Défaut de l'état du capteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — capteur générique en cause",
+    description:
+      "Le BSI détecte une anomalie sur l'état rapporté par un capteur associé à un mécanisme de fermeture ou de verrouillage, sans précision automatique du capteur exact.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic constructeur permet d'identifier précisément quel capteur est concerné avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F404",
+    titre: "Défaut de la thermistance d'huile",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — mesure de température huile affectée",
+    description:
+      "Le calculateur moteur détecte une anomalie sur la thermistance qui mesure la température de l'huile moteur.",
+    causes: [
+      { pourcentage: 40, libelle: "Thermistance d'huile défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la thermistance endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la thermistance oxydé" },
+      { pourcentage: 12, libelle: "Calculateur moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser certaines stratégies de gestion moteur basées sur la température d'huile — à traiter sans attendre pour préserver le moteur.",
+    pieces: [
+      { nom: "Thermistance température huile", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F735",
+    titre: "Défaut du moteur de mixage arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le moteur qui mélange l'air chaud et froid côté arrière gauche, sur les systèmes à réglage multizone.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur de mixage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 22, libelle: "Volet de mixage bloqué mécaniquement" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut se traduit généralement par une température arrière gauche qui ne suit plus le réglage demandé.",
+    pieces: [
+      { nom: "Moteur volet mixage climatisation", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F613",
+    titre: "Défaut du satellite arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — module de porte affecté",
+    description:
+      "Le calculateur détecte une anomalie sur le module satellite installé dans la zone arrière droite, qui gère certaines commandes locales.",
+    causes: [
+      { pourcentage: 38, libelle: "Module satellite défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une panne groupée de plusieurs fonctions dans cette zone du véhicule oriente directement vers ce module satellite.",
+    pieces: [
+      { nom: "Module satellite arrière droit", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "FC0F",
+    titre: "Défaut d'éclairage du clavier de mémorisation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le circuit d'éclairage du clavier de mémorisation des réglages de siège.",
+    causes: [
+      { pourcentage: 38, libelle: "Ampoule ou LED du clavier de mémorisation grillée" },
+      { pourcentage: 28, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du clavier oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique sans impact sur la mémorisation elle-même — à traiter sans urgence.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "F9C1",
+    titre: "Défaut de la sortie de commande du mécanisme de dépliage passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège ou rétroviseur affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le dépliage électrique d'un mécanisme côté passager.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur du mécanisme défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme grippé mécaniquement" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier qu'aucun obstacle ne bloque mécaniquement le mécanisme avant d'envisager un remplacement du moteur.",
+    pieces: [
+      { nom: "Diagnostic mécanisme de dépliage (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F1A5",
+    titre: "Défaut du temps de confirmation d'ouverture de la vitre avant droite (information multiplexée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le temps de confirmation d'ouverture de la vitre avant droite, transmis via le réseau multiplexé, dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de lève-vitre grippé ou encrassé" },
+      { pourcentage: 28, libelle: "Défaut de communication réseau ponctuel" },
+      { pourcentage: 22, libelle: "Moteur de lève-vitre fatigué" },
+      { pourcentage: 14, libelle: "Calculateur de porte mal calibré" },
+    ],
+    avisPro:
+      "Un nettoyage et une lubrification des rails de guidage résolvent souvent ce type de lenteur avant d'envisager un remplacement de moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FF2E",
+    titre: "Défaut du feu stop gauche (boîtier de fusibles remorque ou module carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation de freinage remorque affectée",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit du feu stop gauche de la remorque attelée.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule du feu stop de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de sécurité doit être traité avant tout trajet avec remorque attelée — les feux stop remorque sont essentiels pour la sécurité des autres usagers.",
+    pieces: [
+      { nom: "Ampoule feu stop remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F6B0",
+    titre: "Déclenchement des airbags conducteur et passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dispositif de sécurité déjà activé",
+    description:
+      "Le calculateur de sécurité passive confirme que les airbags conducteur et passager se sont déployés simultanément, généralement suite à un choc frontal important.",
+    causes: [
+      { pourcentage: 55, libelle: "Déclenchement réel suite à un choc frontal" },
+      { pourcentage: 28, libelle: "Déclenchement intempestif suite à un défaut de capteur d'impact" },
+      { pourcentage: 17, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Après tout déclenchement d'airbag, réel ou intempestif, le véhicule doit être expertisé et l'ensemble du système remis en état avant de reprendre la route.",
+    pieces: [
+      { nom: "Remise en état système airbag (atelier spécialisé)", boutique: "Recommandé", prix: "Sur devis" },
+    ],
+  },
+  {
+    code: "F9E7",
+    titre: "Défaut de la protection thermique du lève-vitre avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que la protection thermique du moteur de lève-vitre avant gauche s'est déclenchée, généralement suite à une sollicitation trop intensive et répétée du mécanisme.",
+    causes: [
+      { pourcentage: 40, libelle: "Utilisation intensive répétée ayant déclenché la protection thermique" },
+      { pourcentage: 30, libelle: "Mécanisme grippé forçant le moteur à surchauffer" },
+      { pourcentage: 18, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Laisser refroidir quelques minutes avant de retester la vitre — si le défaut persiste après refroidissement, un mécanisme grippé est probable.",
+    pieces: [
+      { nom: "Diagnostic mécanisme lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F639",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag latéral arrière gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag latéral arrière gauche.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral arrière (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F952",
+    titre: "Défaut de l'antenne FM2",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception radio uniquement",
+    description:
+      "Le BSI ou le calculateur audio détecte une anomalie sur la deuxième antenne FM, utilisée en complément pour améliorer la réception radio.",
+    causes: [
+      { pourcentage: 38, libelle: "Antenne FM2 défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 12, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Une réception radio légèrement dégradée peut accompagner ce défaut, l'antenne principale continuant d'assurer l'essentiel de la réception.",
+    pieces: [
+      { nom: "Antenne radio FM2", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "F97A",
+    titre: "Défaut interne de l'écran multifonction (erreur de synchronisation vidéo)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage écran affecté",
+    description:
+      "L'écran multifonction du tableau de bord signale une erreur de synchronisation du signal vidéo, pouvant provoquer un affichage instable ou déformé.",
+    causes: [
+      { pourcentage: 42, libelle: "Écran multifonction défaillant" },
+      { pourcentage: 28, libelle: "Câblage vidéo vers l'écran endommagé" },
+      { pourcentage: 18, libelle: "Connecteur vidéo oxydé" },
+      { pourcentage: 12, libelle: "Calculateur d'affichage défaillant" },
+    ],
+    avisPro:
+      "Un redémarrage du système (coupure batterie courte) permet parfois de résoudre ce défaut avant d'envisager un remplacement coûteux.",
+    pieces: [
+      { nom: "Diagnostic écran multifonction (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FB85",
+    titre: "Blocage du bouton rhéostat n°2",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage de luminosité affecté",
+    description:
+      "Le BSI détecte que le bouton rhéostat n°2, utilisé pour régler la luminosité de l'éclairage du tableau de bord, reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton rhéostat défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du rhéostat endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un tableau de bord bloqué à une luminosité fixe, sans réaction au réglage, confirme généralement ce type de défaut.",
+    pieces: [
+      { nom: "Molette rhéostat luminosité", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F7B1",
+    titre: "Défaut du moteur ou capteur du siège arrière conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage du siège arrière côté conducteur.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage du siège défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage sous le siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Équipement présent uniquement sur certaines configurations de sièges arrière électriques — vérifier d'abord l'équipement réel du véhicule.",
+    pieces: [
+      { nom: "Diagnostic réglage siège arrière (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCB1",
+    titre: "Absence d'alimentation de l'accès et du démarrage mains libres (ADML)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — démarrage mains libres affecté",
+    description:
+      "Le BSI détecte une absence totale d'alimentation sur le système d'accès et de démarrage mains libres (ADML), empêchant son fonctionnement.",
+    causes: [
+      { pourcentage: 38, libelle: "Fusible du circuit ADML grillé" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation du module coupé" },
+      { pourcentage: 22, libelle: "Module ADML défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le démarrage mains libres ne fonctionne plus du tout, la clé physique de secours permet généralement de démarrer en attendant réparation.",
+    pieces: [
+      { nom: "Fusible circuit ADML", boutique: "Pièces auto en ligne", prix: "5-10€" },
+    ],
+  },
+  {
+    code: "F636",
+    titre: "Défaut interne du calculateur (système de déclenchement du prétensionneur avant droit)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du prétensionneur de ceinture avant droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FCA6",
+    titre: "Pêne de serrure alimenté involontairement en position déverrouillée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité de verrouillage affectée",
+    description:
+      "Le BSI détecte que le moteur du pêne de serrure a été alimenté vers la position déverrouillée sans commande correspondante, un défaut de sécurité électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur le circuit de commande de déverrouillage" },
+      { pourcentage: 28, libelle: "Relais de commande défaillant, collé" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 14, libelle: "Câblage endommagé provoquant une activation parasite" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer un déverrouillage intempestif des portes — à traiter rapidement pour préserver la sécurité anti-intrusion du véhicule.",
+    pieces: [
+      { nom: "Diagnostic circuit verrouillage (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FCC5",
+    titre: "Défaut du contacteur de ceinture non bouclée, place gauche (2e rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alerte ceinture non bouclée affectée",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui signale si la ceinture de sécurité de la place gauche de deuxième rangée est attachée.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de ceinture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé sous le siège" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'alerte ceinture non bouclée pour cette place peut devenir intempestive ou absente — à vérifier même si un passager y est correctement attaché.",
+    pieces: [
+      { nom: "Contacteur ceinture de sécurité", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F8A9",
+    titre: "Défaut du temps de fermeture de la vitre arrière gauche ou conducteur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que le temps mis par la vitre arrière gauche ou conducteur pour se fermer dépasse la plage normale attendue, signe d'un frottement ou d'une résistance mécanique.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre grippé ou encrassé" },
+      { pourcentage: 28, libelle: "Rail de guidage de la vitre déformé" },
+      { pourcentage: 20, libelle: "Moteur de lève-vitre fatigué" },
+      { pourcentage: 14, libelle: "Calculateur de porte mal calibré" },
+    ],
+    avisPro:
+      "Un nettoyage et une lubrification des rails de guidage résolvent souvent ce type de lenteur avant d'envisager un remplacement de moteur.",
+    pieces: [
+      { nom: "Kit lubrification et rails lève-vitre", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FBCF",
+    titre: "Défaut du capteur latéral avant droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Variante du défaut sur le capteur latéral situé à l'avant droit du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur latéral de stationnement", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F643",
+    titre: "Défaut interne du calculateur (système de déclenchement des prétensionneurs en série, rangée 1 et 2 droite)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement des prétensionneurs de ceinture en série pour les places droites de première et deuxième rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneurs (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F63A",
+    titre: "Défaut interne du calculateur (système de déclenchement de l'airbag latéral arrière droit)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — système de sécurité passive concerné",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement de l'airbag latéral arrière droit.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de sécurité passive prioritaire — diagnostic immédiat par un atelier habilité, ne jamais ignorer le témoin airbag associé.",
+    pieces: [
+      { nom: "Diagnostic circuit airbag latéral arrière (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F8A1",
+    titre: "Défaut du signal du contacteur de verrouillage de la malle du toit côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal du contacteur qui indique si la malle abritant le toit rétractable est verrouillée côté droit.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur de verrouillage défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher le système de confirmer que la malle est correctement verrouillée — à vérifier visuellement en attendant réparation.",
+    pieces: [
+      { nom: "Contacteur verrouillage malle toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F8BA",
+    titre: "Tension d'alimentation du calculateur en dehors de la plage de fonctionnement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation d'un calculateur affectée",
+    description:
+      "Le BSI détecte qu'un calculateur associé reçoit une tension d'alimentation en dehors de sa plage de fonctionnement normale.",
+    causes: [
+      { pourcentage: 36, libelle: "Batterie faible ou alternateur défaillant" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de la tension batterie et de la charge de l'alternateur est la première étape avant de suspecter le calculateur lui-même.",
+    pieces: [
+      { nom: "Diagnostic circuit de charge (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBE1",
+    titre: "Défaut de l'antenne avant droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception radio ou accès mains libres affecté",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne située à l'avant droite du véhicule, utilisée pour la réception radio ou la détection de la clé mains libres selon les modèles.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le véhicule est équipé de l'accès mains libres, une zone de détection de clé qui ne fonctionne plus d'un côté du véhicule est le symptôme typique de ce défaut.",
+    pieces: [
+      { nom: "Antenne mains libres avant droite", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F7A0",
+    titre: "Défaut du moteur ou capteur (dossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage du dossier de siège électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage du dossier défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un dossier bloqué dans une position peut gêner le confort et la posture du conducteur — à traiter sans urgence excessive.",
+    pieces: [
+      { nom: "Diagnostic réglage électrique siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7B9",
+    titre: "Défaut de la sortie commune (coulissement / moteur multi-mouvements / niveau)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie partagée qui pilote le coulissement, le moteur multi-mouvements et le réglage de niveau du siège.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur multi-mouvements défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie commune endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Tester chaque fonction séparément aide à cibler si le problème vient du moteur ou de la commande partagée.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F696",
+    titre: "Défaut du prétensionneur central de 2e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du prétensionneur de ceinture de la place centrale de deuxième rangée.",
+    causes: [
+      { pourcentage: 38, libelle: "Prétensionneur défaillant ou déjà déclenché" },
+      { pourcentage: 28, libelle: "Câblage du circuit prétensionneur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur sous le siège oxydé ou débranché" },
+      { pourcentage: 12, libelle: "Calculateur de sécurité passive défaillant" },
+    ],
+    avisPro:
+      "Tout défaut touchant les prétensionneurs doit être diagnostiqué rapidement par un atelier habilité aux systèmes de sécurité passive.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FCF8",
+    titre: "Défaut d'alimentation du calculateur (CAN+)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation réseau affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'alimentation associée à la ligne CAN+ d'un calculateur, pouvant perturber sa communication sur le réseau.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de la ligne CAN+ endommagé" },
+      { pourcentage: 28, libelle: "Fusible associé grillé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un contrôle de continuité et d'isolement de la ligne CAN+ permet souvent d'éviter un remplacement de calculateur non nécessaire.",
+    pieces: [
+      { nom: "Diagnostic ligne CAN+ (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F963",
+    titre: "Défaut du disque dur interne",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort multimédia uniquement",
+    description:
+      "Le système multimédia détecte une anomalie sur son disque dur interne, utilisé pour stocker les cartes de navigation ou des fichiers audio.",
+    causes: [
+      { pourcentage: 42, libelle: "Disque dur interne défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du disque dur défaillante" },
+      { pourcentage: 18, libelle: "Connecteur interne oxydé" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter la navigation embarquée ou la lecture de musique stockée — les fonctions de base (radio, téléphone) restent généralement opérationnelles.",
+    pieces: [
+      { nom: "Diagnostic système multimédia (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FBE8",
+    titre: "Défaut de l'antenne de la tablette arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne intégrée à la tablette de coffre (cache-bagages), utilisée en complément pour la réception radio ou la détection de clé.",
+    causes: [
+      { pourcentage: 38, libelle: "Antenne de la tablette défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 12, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Ce défaut a généralement un impact limité, l'antenne principale continuant d'assurer l'essentiel de la réception.",
+    pieces: [
+      { nom: "Antenne tablette arrière", boutique: "Pièces auto en ligne", prix: "20-50€" },
+    ],
+  },
+  {
+    code: "F713",
+    titre: "Défaut du capteur d'ensoleillement",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation automatique affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie sur le capteur d'ensoleillement, utilisé pour ajuster automatiquement la climatisation selon l'exposition au soleil.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur d'ensoleillement défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut rendre la climatisation automatique moins réactive aux changements d'ensoleillement, sans empêcher son fonctionnement de base.",
+    pieces: [
+      { nom: "Capteur d'ensoleillement", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F8C6",
+    titre: "Défaut du bouton de mode du navigateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande écran uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le bouton de changement de mode d'affichage du système de navigation.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du combiné de commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur du combiné oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de navigation défaillant" },
+    ],
+    avisPro:
+      "Défaut sans conséquence sur la conduite — se traduit uniquement par une navigation dans les modes d'affichage moins pratique.",
+    pieces: [
+      { nom: "Combiné de commande navigation", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F9AC",
+    titre: "Défaut du boîtier de fusibles moteur (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation moteur possiblement affectée",
+    description:
+      "Variante du défaut général sur le boîtier de fusibles du compartiment moteur, détectée dans un contexte de circuit différent.",
+    causes: [
+      { pourcentage: 36, libelle: "Fusible du boîtier moteur grillé" },
+      { pourcentage: 28, libelle: "Boîtier de fusibles moteur oxydé ou pollué par l'humidité" },
+      { pourcentage: 22, libelle: "Connecteur du boîtier mal enfiché" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les défauts associés, une inspection visuelle du boîtier est la première étape avant tout remplacement.",
+    pieces: [
+      { nom: "Kit fusibles boîtier moteur", boutique: "Pièces auto en ligne", prix: "10-25€" },
+    ],
+  },
+  {
+    code: "F9E1",
+    titre: "Absence de communication avec le calculateur du lève-vitre arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI ne parvient plus à dialoguer avec le calculateur ou la carte électronique du lève-vitre arrière droit.",
+    causes: [
+      { pourcentage: 35, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la porte arrière droite endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de porte oxydé" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour les autres défauts de lève-vitre, la carte électronique et le moteur forment souvent un seul ensemble à remplacer.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière droit avec carte électronique", boutique: "Pièces auto en ligne", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "FF25",
+    titre: "Défaut du clignotant arrière gauche remorque (boîtier de fusibles remorque ou module carrossier)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — signalisation remorque affectée",
+    description:
+      "Le boîtier de fusibles remorque ou le module installé par un carrossier détecte une anomalie sur le circuit du clignotant arrière gauche de la remorque attelée.",
+    causes: [
+      { pourcentage: 40, libelle: "Ampoule du clignotant de la remorque grillée" },
+      { pourcentage: 28, libelle: "Câblage de la prise attelage endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de la prise attelage oxydé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles remorque défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de sécurité doit être traité avant tout trajet avec remorque attelée — la signalisation de la remorque est essentielle pour les autres usagers.",
+    pieces: [
+      { nom: "Ampoule clignotant remorque", boutique: "Pièces auto en ligne", prix: "5-15€" },
+    ],
+  },
+  {
+    code: "F9DE",
+    titre: "Défaut de tension de fin de course haute ou basse du lève-vitre avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie sur la tension mesurée aux positions de fin de course (haute ou basse) du lève-vitre avant droit, utilisée pour calibrer sa course.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme de lève-vitre non calibré après intervention" },
+      { pourcentage: 28, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 22, libelle: "Câblage vers le moteur endommagé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Après tout démontage de la porte ou du mécanisme de vitre, une procédure d'initialisation de la course est indispensable.",
+    pieces: [
+      { nom: "Réinitialisation lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F72F",
+    titre: "Défaut de la soufflerie (relecture de l'entrée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation affectée",
+    description:
+      "Le calculateur de climatisation détecte une anomalie lors de la relecture du signal de retour de la soufflerie, utilisé pour confirmer son bon fonctionnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Signal de retour de la soufflerie défaillant" },
+      { pourcentage: 28, libelle: "Câblage du signal endommagé" },
+      { pourcentage: 22, libelle: "Moteur de soufflerie défaillant" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut de relecture n'empêche pas forcément la soufflerie de fonctionner, mais empêche le système de confirmer correctement son état.",
+    pieces: [
+      { nom: "Diagnostic circuit soufflerie (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F7CD",
+    titre: "Défaut de la sortie d'éclairage des commutateurs de siège",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort uniquement",
+    description:
+      "Le BSI détecte une anomalie sur le circuit qui éclaire les commutateurs de réglage électrique du siège.",
+    causes: [
+      { pourcentage: 38, libelle: "Ampoule ou LED d'éclairage des commutateurs grillée" },
+      { pourcentage: 28, libelle: "Câblage des commutateurs endommagé" },
+      { pourcentage: 22, libelle: "Connecteur des commutateurs oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut purement esthétique sans impact sur le fonctionnement des réglages du siège eux-mêmes — à traiter sans urgence.",
+    pieces: [
+      { nom: "Éclairage commutateurs siège", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FEF0",
+    titre: "Défaut du contacteur à impulsion unique du toit ouvrant",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit ouvrant affecté",
+    description:
+      "Le BSI détecte une anomalie sur le contacteur qui permet l'ouverture ou la fermeture du toit ouvrant en une seule pression (fonction \"one-touch\").",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur one-touch défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur du toit ouvrant défaillant" },
+    ],
+    avisPro:
+      "Le toit ouvrant reste généralement utilisable en mode manuel (pression maintenue) même si la fonction one-touch est en défaut.",
+    pieces: [
+      { nom: "Contacteur toit ouvrant", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F9CF",
+    titre: "Défaut de la vitre arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "Le BSI détecte une anomalie générale sur le mécanisme de la vitre arrière droite, pouvant provoquer un fonctionnement irrégulier ou une panne complète.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers la porte arrière droite endommagé" },
+      { pourcentage: 22, libelle: "Mécanisme mécaniquement grippé" },
+      { pourcentage: 14, libelle: "Carte électronique du lève-vitre défaillante" },
+    ],
+    avisPro:
+      "Un bruit inhabituel avant la panne complète (grincement, ralentissement) est fréquent et permet d'anticiper le remplacement.",
+    pieces: [
+      { nom: "Moteur lève-vitre arrière droit", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "FD2E",
+    titre: "Défaut de la sortie n°5",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — sortie générique du BSI",
+    description:
+      "Le BSI détecte une anomalie sur l'une de ses sorties de commande génériques, numérotée 5, de la même famille que les autres défauts de sorties numérotées.",
+    causes: [
+      { pourcentage: 38, libelle: "Équipement piloté par cette sortie défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé ou en court-circuit" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Fusible associé grillé" },
+    ],
+    avisPro:
+      "Seul l'outil de diagnostic constructeur permet d'identifier précisément quel équipement est relié à cette sortie avant intervention.",
+    pieces: [
+      { nom: "Diagnostic sorties BSI (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F8B8",
+    titre: "Défaut du calculateur (toit rétractable)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le calculateur du toit rétractable signale une défaillance générale, distincte des défauts spécifiques déjà identifiés sur ses capteurs ou contacteurs.",
+    causes: [
+      { pourcentage: 42, libelle: "Calculateur du toit rétractable défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 18, libelle: "Logiciel corrompu suite à une mise à jour incomplète" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un redémarrage complet du système (coupure batterie courte) permet parfois de résoudre ce type de défaut logiciel sans remplacement.",
+    pieces: [
+      { nom: "Diagnostic calculateur toit rétractable (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F9E8",
+    titre: "Défaut de la protection thermique du lève-vitre avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — lève-vitre concerné",
+    description:
+      "Le BSI détecte que la protection thermique du moteur de lève-vitre avant droit s'est déclenchée, généralement suite à une sollicitation trop intensive et répétée du mécanisme.",
+    causes: [
+      { pourcentage: 40, libelle: "Utilisation intensive répétée ayant déclenché la protection thermique" },
+      { pourcentage: 30, libelle: "Mécanisme grippé forçant le moteur à surchauffer" },
+      { pourcentage: 18, libelle: "Moteur de lève-vitre défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Laisser refroidir quelques minutes avant de retester la vitre — si le défaut persiste après refroidissement, un mécanisme grippé est probable.",
+    pieces: [
+      { nom: "Diagnostic mécanisme lève-vitre (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FCE4",
+    titre: "Défaut du capteur intérieur avant droit (variante 4)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection intérieure affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'un des capteurs intérieurs situés à l'avant droit de l'habitacle, généralement lié à la détection de présence ou à l'alarme.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement du véhicule, ce capteur peut être lié à l'alarme ou à un système de confort — le diagnostic précise sa fonction exacte.",
+    pieces: [
+      { nom: "Diagnostic capteur intérieur (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F712",
+    titre: "Bouton du panneau de climatisation passager bloqué",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation avant affectée",
+    description:
+      "Le BSI détecte qu'un bouton du panneau de commande de climatisation côté passager reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton du panneau collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le panneau" },
+      { pourcentage: 20, libelle: "Câblage du panneau endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du panneau de commande résout souvent ce type de blocage sans remplacement.",
+    pieces: [
+      { nom: "Panneau commande climatisation passager", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F99B",
+    titre: "Défaut sur le circuit de commande de la pompe à air (boîtier de fusibles moteur)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — dépollution moteur affectée",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie sur le circuit de commande de la pompe à air secondaire, utilisée pour accélérer la montée en température du catalyseur.",
+    causes: [
+      { pourcentage: 36, libelle: "Pompe à air défaillante" },
+      { pourcentage: 28, libelle: "Câblage de commande de la pompe endommagé" },
+      { pourcentage: 22, libelle: "Relais de commande défaillant" },
+      { pourcentage: 14, libelle: "Boîtier de fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut retarder l'efficacité de dépollution à froid — sans conséquence immédiate sur la conduite mais à traiter pour le contrôle antipollution.",
+    pieces: [
+      { nom: "Pompe à air secondaire", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "F70D",
+    titre: "Défaut du capteur d'air soufflé arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui mesure la température de l'air soufflé côté arrière droit de la climatisation.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur d'air soufflé défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser la régulation automatique de température arrière droite sans empêcher la soufflerie de fonctionner.",
+    pieces: [
+      { nom: "Capteur température air soufflé", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "F763",
+    titre: "Défaut interne du panneau de commande climatisation passager",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation avant affectée",
+    description:
+      "Le panneau de commande de climatisation situé côté passager signale une défaillance interne, pouvant provoquer un affichage ou des commandes non fonctionnelles.",
+    causes: [
+      { pourcentage: 45, libelle: "Panneau de commande défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du panneau défaillante" },
+      { pourcentage: 17, libelle: "Câblage vers le panneau endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un panneau qui reste éteint ou dont les touches ne répondent plus confirme généralement ce défaut.",
+    pieces: [
+      { nom: "Panneau commande climatisation passager", boutique: "Pièces auto en ligne", prix: "50-100€" },
+    ],
+  },
+  {
+    code: "F793",
+    titre: "Blocage du clavier de mémorisation (bouton 1)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le bouton 1 du clavier de mémorisation des positions de siège reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton du clavier de mémorisation collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier résout souvent ce type de blocage sans remplacement complet de la pièce.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "F7C3",
+    titre: "Défaut de la sortie de relevage de l'appui-tête",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur la sortie qui pilote le relevage électrique de l'appui-tête.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage d'appui-tête défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la sortie endommagé" },
+      { pourcentage: 22, libelle: "Contacteur de commande défaillant" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage de l'appui-tête — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F9EC",
+    titre: "Défaut interne de la carte électronique du lève-vitre avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — lève-vitre concerné",
+    description:
+      "La carte électronique intégrée au mécanisme du lève-vitre avant droit signale une défaillance interne, pouvant provoquer un fonctionnement irrégulier ou une panne complète de la vitre.",
+    causes: [
+      { pourcentage: 40, libelle: "Carte électronique du lève-vitre défaillante" },
+      { pourcentage: 26, libelle: "Moteur de lève-vitre en fin de vie sollicitant trop la carte" },
+      { pourcentage: 20, libelle: "Câblage vers la porte avant droite endommagé" },
+      { pourcentage: 14, libelle: "Connecteur de porte oxydé" },
+    ],
+    avisPro:
+      "Sur ce type de mécanisme, la carte électronique et le moteur forment souvent un seul ensemble à remplacer.",
+    pieces: [
+      { nom: "Moteur lève-vitre avant droit avec carte électronique", boutique: "Pièces auto en ligne", prix: "70-140€" },
+    ],
+  },
+  {
+    code: "FBC4",
+    titre: "Défaut du capteur latéral avant gauche (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — aide au stationnement possiblement affectée",
+    description:
+      "Variante du défaut sur le capteur latéral situé à l'avant gauche du véhicule, généralement associé à l'aide au stationnement.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur latéral défaillant" },
+      { pourcentage: 28, libelle: "Câblage du capteur endommagé (choc ou infiltration)" },
+      { pourcentage: 22, libelle: "Connecteur du capteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du capteur résout parfois ce défaut sans remplacement — à vérifier systématiquement avant de commander une pièce.",
+    pieces: [
+      { nom: "Capteur latéral de stationnement", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FD0D",
+    titre: "Défaut du circuit du bouton d'ouverture côté droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande d'ouverture affectée",
+    description:
+      "Le BSI détecte une anomalie sur le circuit du bouton qui commande l'ouverture d'un élément côté droit du véhicule (porte, hayon ou vitre selon configuration).",
+    causes: [
+      { pourcentage: 36, libelle: "Bouton d'ouverture défaillant" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'outil de diagnostic précise quel élément exact est concerné par cette commande avant de cibler la réparation.",
+    pieces: [
+      { nom: "Diagnostic circuit bouton ouverture (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F883",
+    titre: "Défaut de la position de la malle du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte une anomalie sur le signal de position de la malle abritant le toit rétractable lorsqu'il est replié.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur de position de la malle défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le capteur endommagé" },
+      { pourcentage: 22, libelle: "Malle mal positionnée mécaniquement" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Vérifier visuellement la position de la malle avant d'envisager un remplacement de capteur.",
+    pieces: [
+      { nom: "Capteur position malle toit", boutique: "Pièces auto en ligne", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "FB84",
+    titre: "Blocage du bouton rhéostat n°1",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage de luminosité affecté",
+    description:
+      "Le BSI détecte que le bouton rhéostat n°1, utilisé pour régler la luminosité de l'éclairage du tableau de bord, reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton rhéostat défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du rhéostat endommagé" },
+      { pourcentage: 20, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un tableau de bord bloqué à une luminosité fixe, sans réaction au réglage, confirme généralement ce type de défaut.",
+    pieces: [
+      { nom: "Molette rhéostat luminosité", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "FEB8",
+    titre: "Défaut interne du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur générique en cause",
+    description:
+      "Un calculateur associé signale une défaillance interne générale, sans précision automatique du module exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 20, libelle: "Logiciel corrompu" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quel calculateur est en cause.",
+    pieces: [
+      { nom: "Diagnostic approfondi (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F8AE",
+    titre: "Défaut du temps de perte du contacteur d'ouverture du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis à perdre l'information du contacteur d'ouverture du toit rétractable sort de la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Contacteur d'ouverture du toit défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé (exposition aux intempéries)" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut fausser la confirmation d'ouverture du toit — à vérifier visuellement en cas de doute.",
+    pieces: [
+      { nom: "Contacteur ouverture toit", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "FED4",
+    titre: "Défaut de la sortie audio gauche du chargeur CD",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie audio gauche dédiée au chargeur CD multi-disques.",
+    causes: [
+      { pourcentage: 38, libelle: "Chargeur CD défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le chargeur CD endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du chargeur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Équipement de plus en plus rare — vérifier la disponibilité de la pièce avant de s'engager dans une réparation.",
+    pieces: [
+      { nom: "Chargeur CD multi-disques", boutique: "Pièces auto en ligne / occasion", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "FBE3",
+    titre: "Défaut de l'antenne arrière droite",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection clé mains libres affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'antenne située à l'arrière droite du véhicule, utilisée pour la détection de la clé mains libres à cet endroit.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si le véhicule est équipé de l'accès mains libres, une zone de détection de clé qui ne fonctionne plus à cet endroit est le symptôme typique.",
+    pieces: [
+      { nom: "Antenne mains libres arrière", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "F07B",
+    titre: "Dysfonctionnement du réseau CAN (unité de relais du coffre)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — communication coffre affectée",
+    description:
+      "L'unité de relais du coffre détecte un dysfonctionnement sur le réseau CAN, ce qui peut affecter la communication des équipements électriques du coffre.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage du CAN endommagé au niveau du coffre" },
+      { pourcentage: 28, libelle: "Unité de relais du coffre défaillante" },
+      { pourcentage: 22, libelle: "Connecteur de l'unité oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut affecter plusieurs fonctions électriques du coffre simultanément — un diagnostic réseau ciblé sur cette zone est recommandé.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN coffre (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FC42",
+    titre: "Défaut du coussin du dossier de siège",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort ou sécurité du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le capteur ou le module intégré au coussin du dossier de siège, souvent lié à la détection de présence ou au confort.",
+    causes: [
+      { pourcentage: 36, libelle: "Capteur du coussin défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le coussin endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Selon l'équipement, ce défaut peut concerner un capteur de présence ou une fonction de massage/chauffage intégrée au dossier — le diagnostic précise sa fonction exacte.",
+    pieces: [
+      { nom: "Diagnostic coussin dossier siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FD00",
+    titre: "Défaut du bouton avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande secondaire affectée",
+    description:
+      "Le BSI détecte une anomalie sur un bouton de commande situé à l'avant gauche de l'habitacle, généralement lié à une fonction de confort secondaire.",
+    causes: [
+      { pourcentage: 38, libelle: "Bouton défaillant ou usé" },
+      { pourcentage: 28, libelle: "Câblage du bouton endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Défaut de confort mineur qui peut être traité sans urgence lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Bouton de commande avant", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F90A",
+    titre: "Défaut de l'entrée audio du synthétiseur vocal droit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur l'entrée droite dédiée au synthétiseur vocal (guidage navigation, alertes vocales).",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage de l'entrée synthétiseur endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'entrée oxydé" },
+      { pourcentage: 22, libelle: "Module synthétiseur vocal défaillant" },
+      { pourcentage: 14, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut couper les instructions vocales de navigation d'un seul côté du système audio — à vérifier lors d'un guidage GPS actif.",
+    pieces: [
+      { nom: "Diagnostic synthétiseur vocal (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FBD0",
+    titre: "Défaut du buzzer",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — alerte sonore affectée",
+    description:
+      "Le BSI détecte une anomalie générale sur l'avertisseur sonore (buzzer) utilisé pour diverses alertes du véhicule.",
+    causes: [
+      { pourcentage: 42, libelle: "Buzzer défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le buzzer endommagé" },
+      { pourcentage: 18, libelle: "Connecteur du buzzer oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une absence d'alerte sonore (ceinture, clé oubliée, feux allumés) peut accompagner ce défaut — à vérifier même en l'absence d'autre symptôme visible.",
+    pieces: [
+      { nom: "Buzzer alerte véhicule", boutique: "Pièces auto en ligne", prix: "15-35€" },
+    ],
+  },
+  {
+    code: "F7A7",
+    titre: "Défaut du moteur ou capteur de réglage vertical (lombaire)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte une anomalie sur le moteur électrique ou le capteur associé au réglage vertical du soutien lombaire du siège.",
+    causes: [
+      { pourcentage: 36, libelle: "Moteur de réglage lombaire défaillant" },
+      { pourcentage: 28, libelle: "Capteur de position défaillant" },
+      { pourcentage: 22, libelle: "Câblage du siège endommagé" },
+      { pourcentage: 14, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne le confort de réglage lombaire — sans urgence, à traiter lors d'un prochain passage à l'atelier.",
+    pieces: [
+      { nom: "Diagnostic réglages électriques siège (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "FEFD",
+    titre: "Déclenchements multiples de la sécurité auto-inversion",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité anti-pincement affectée",
+    description:
+      "Le BSI détecte que la fonction de sécurité auto-inversion (anti-pincement d'un lève-vitre ou du toit) s'est déclenchée à plusieurs reprises, signe d'une résistance mécanique récurrente.",
+    causes: [
+      { pourcentage: 38, libelle: "Mécanisme grippé déclenchant l'inversion de façon répétée" },
+      { pourcentage: 28, libelle: "Capteur de résistance défaillant, déclenchant à tort" },
+      { pourcentage: 22, libelle: "Rail ou guide mécaniquement endommagé" },
+      { pourcentage: 12, libelle: "Calculateur associé défaillant" },
+    ],
+    avisPro:
+      "Des déclenchements répétés de cette sécurité méritent un diagnostic rapide — ils peuvent aussi bien indiquer un vrai risque de pincement qu'un capteur trop sensible.",
+    pieces: [
+      { nom: "Diagnostic sécurité anti-pincement (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F900",
+    titre: "Défaut de l'entrée antenne 1 (vue arrière gauche)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — caméra ou capteur de vue affecté",
+    description:
+      "Le calculateur détecte une anomalie sur la première entrée d'antenne associée à la vue arrière gauche du véhicule, utilisée par un système de caméra ou de détection.",
+    causes: [
+      { pourcentage: 36, libelle: "Antenne ou capteur de vue arrière gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "Calculateur défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver une partie de l'assistance visuelle arrière gauche — à contrôler avant de se fier uniquement aux caméras pour les manœuvres.",
+    pieces: [
+      { nom: "Diagnostic système caméra/capteur vue (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FC14",
+    titre: "Défaut logiciel du calculateur (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — reprogrammation possiblement nécessaire",
+    description:
+      "Variante du défaut logiciel détecté sur un calculateur associé, généralement suite à une mise à jour incomplète ou une corruption de données internes.",
+    causes: [
+      { pourcentage: 40, libelle: "Mise à jour logicielle interrompue ou incomplète" },
+      { pourcentage: 28, libelle: "Logiciel corrompu suite à une coupure d'alimentation pendant une écriture" },
+      { pourcentage: 20, libelle: "Calculateur défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Une reprogrammation complète du calculateur concerné avec l'outil constructeur résout généralement ce type de défaut logiciel.",
+    pieces: [
+      { nom: "Reprogrammation calculateur (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "FCCC",
+    titre: "Défaut de présence de siège, place gauche de 2e rangée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — détection de présence affectée",
+    description:
+      "Le BSI détecte une anomalie sur le capteur qui détecte la présence physique du siège gauche de deuxième rangée, sur les véhicules à sièges amovibles.",
+    causes: [
+      { pourcentage: 38, libelle: "Capteur de présence de siège défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous le plancher endommagé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier que le siège est correctement verrouillé sur ses fixations avant d'envisager un remplacement de capteur.",
+    pieces: [
+      { nom: "Capteur de présence siège amovible", boutique: "Pièces auto en ligne", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "F799",
+    titre: "Blocage du contacteur d'avancée (soutien lombaire)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que le contacteur d'avancée du réglage du soutien lombaire électrique reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de réglage lombaire collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande du siège" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un contacteur bloqué peut provoquer un réglage lombaire qui continue de bouger seul — couper le contact permet d'arrêter le mouvement.",
+    pieces: [
+      { nom: "Contacteur réglage lombaire siège", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F972",
+    titre: "Défaut de l'antenne TV (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réception télévision uniquement",
+    description:
+      "Variante du défaut sur l'antenne dédiée à la réception télévision, présente sur certains véhicules équipés de cette option.",
+    causes: [
+      { pourcentage: 38, libelle: "Antenne TV défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'antenne endommagé" },
+      { pourcentage: 22, libelle: "Connecteur d'antenne oxydé" },
+      { pourcentage: 12, libelle: "Calculateur multimédia défaillant" },
+    ],
+    avisPro:
+      "Équipement rare et propre à certaines finitions haut de gamme — vérifier d'abord que le véhicule en est bien équipé.",
+    pieces: [
+      { nom: "Antenne TV", boutique: "Pièces auto en ligne", prix: "25-60€" },
+    ],
+  },
+  {
+    code: "FCA7",
+    titre: "Pêne de serrure alimenté involontairement en position verrouillée",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — sécurité de verrouillage affectée",
+    description:
+      "Le BSI détecte que le moteur du pêne de serrure a été alimenté vers la position verrouillée sans commande correspondante, un défaut de sécurité électrique.",
+    causes: [
+      { pourcentage: 36, libelle: "Court-circuit sur le circuit de commande de verrouillage" },
+      { pourcentage: 28, libelle: "Relais de commande défaillant, collé" },
+      { pourcentage: 22, libelle: "BSI défaillant" },
+      { pourcentage: 14, libelle: "Câblage endommagé provoquant une activation parasite" },
+    ],
+    avisPro:
+      "Ce défaut peut provoquer un verrouillage intempestif des portes, avec risque de s'enfermer dehors — à traiter rapidement.",
+    pieces: [
+      { nom: "Diagnostic circuit verrouillage (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "F8B1",
+    titre: "Défaut du temps d'ouverture de la malle du toit",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — toit décapotable affecté",
+    description:
+      "Le BSI détecte que le temps mis par la malle abritant le toit rétractable pour s'ouvrir dépasse la plage normale attendue.",
+    causes: [
+      { pourcentage: 36, libelle: "Mécanisme de la malle grippé ou mal lubrifié" },
+      { pourcentage: 28, libelle: "Vérin de la malle fatigué" },
+      { pourcentage: 22, libelle: "Obstacle gênant l'ouverture" },
+      { pourcentage: 14, libelle: "Calculateur du toit rétractable défaillant" },
+    ],
+    avisPro:
+      "Toujours vérifier qu'aucun objet ne gêne l'ouverture de la malle avant d'envisager une réparation mécanique du mécanisme.",
+    pieces: [
+      { nom: "Diagnostic mécanisme malle toit (atelier spécialisé)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FCB6",
+    titre: "Défaut de l'état de verrouillage/déverrouillage enregistré dans la mémoire du calculateur",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — mémoire d'état affectée",
+    description:
+      "Le BSI détecte une anomalie sur l'état de verrouillage ou de déverrouillage enregistré en mémoire, pouvant provoquer une incohérence entre l'état réel et l'état mémorisé.",
+    causes: [
+      { pourcentage: 38, libelle: "Mémoire du calculateur corrompue suite à une coupure d'alimentation" },
+      { pourcentage: 28, libelle: "BSI défaillant" },
+      { pourcentage: 22, libelle: "Perturbation électrique externe" },
+      { pourcentage: 12, libelle: "Capteur de position défaillant" },
+    ],
+    avisPro:
+      "Un effacement suivi d'un nouveau cycle complet de verrouillage/déverrouillage permet souvent de réinitialiser cette mémoire sans intervention supplémentaire.",
+    pieces: [
+      { nom: "Diagnostic mémoire verrouillage (atelier)", boutique: "Recommandé avant pièce", prix: "40-70€" },
+    ],
+  },
+  {
+    code: "F9D2",
+    titre: "Blocage des boutons du clavier de mémorisation",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort du siège affecté",
+    description:
+      "Le BSI détecte que les boutons du clavier de mémorisation des positions de siège restent bloqués en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Boutons du clavier collés ou usés" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans le clavier" },
+      { pourcentage: 20, libelle: "Câblage du clavier endommagé" },
+      { pourcentage: 12, libelle: "Calculateur du siège défaillant" },
+    ],
+    avisPro:
+      "Un nettoyage du clavier de mémorisation résout souvent ce type de blocage sans remplacement complet.",
+    pieces: [
+      { nom: "Clavier mémorisation sièges", boutique: "Pièces auto en ligne", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "FF14",
+    titre: "Défaut de fonctionnement du moteur esclave d'essuie-glace",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — essuie-glace affecté",
+    description:
+      "Le boîtier de fusibles moteur détecte une anomalie de fonctionnement sur le moteur secondaire (esclave) qui entraîne le second balai d'essuie-glace.",
+    causes: [
+      { pourcentage: 38, libelle: "Moteur esclave d'essuie-glace défaillant ou usé" },
+      { pourcentage: 28, libelle: "Mécanisme d'essuie-glace grippé côté esclave" },
+      { pourcentage: 22, libelle: "Câblage vers le moteur esclave endommagé" },
+      { pourcentage: 12, libelle: "Boîtier de fusibles moteur défaillant" },
+    ],
+    avisPro:
+      "Un seul essuie-glace qui bouge alors que l'autre reste immobile confirme généralement ce défaut spécifique au moteur esclave.",
+    pieces: [
+      { nom: "Moteur essuie-glace esclave", boutique: "Pièces auto en ligne", prix: "50-110€" },
+    ],
+  },
+  {
+    code: "F78E",
+    titre: "Blocage du contacteur de relevage (colonne de direction)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglage électrique du volant affecté",
+    description:
+      "Le BSI détecte que le contacteur de relevage électrique de la colonne de direction reste bloqué en position activée.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de colonne collé ou usé" },
+      { pourcentage: 28, libelle: "Infiltration de liquide dans la commande" },
+      { pourcentage: 20, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de colonne défaillant" },
+    ],
+    avisPro:
+      "Couper le contact permet généralement d'arrêter un mouvement non désiré de la colonne de direction en urgence.",
+    pieces: [
+      { nom: "Contacteur réglage électrique colonne", boutique: "Pièces auto en ligne", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "F68C",
+    titre: "Défaut interne du calculateur (système de déclenchement du prétensionneur central de 1ère rangée)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — sécurité passive affectée",
+    description:
+      "Le calculateur de sécurité passive détecte une défaillance interne du système de déclenchement du prétensionneur de la place centrale de première rangée.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur de déclenchement défaillant" },
+      { pourcentage: 28, libelle: "Alimentation du calculateur défaillante" },
+      { pourcentage: 17, libelle: "Perturbation électrique ayant affecté la mémoire interne" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Comme pour tout défaut de sécurité passive, un diagnostic rapide par un atelier habilité est indispensable.",
+    pieces: [
+      { nom: "Diagnostic circuit prétensionneur (atelier spécialisé airbag)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "FED5",
+    titre: "Défaut de la sortie audio droite du chargeur CD",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "Le calculateur audio détecte une anomalie sur la sortie audio droite dédiée au chargeur CD multi-disques.",
+    causes: [
+      { pourcentage: 38, libelle: "Chargeur CD défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le chargeur CD endommagé" },
+      { pourcentage: 22, libelle: "Connecteur du chargeur oxydé" },
+      { pourcentage: 12, libelle: "Calculateur audio défaillant" },
+    ],
+    avisPro:
+      "Équipement de plus en plus rare — vérifier la disponibilité de la pièce avant de s'engager dans une réparation.",
+    pieces: [
+      { nom: "Chargeur CD multi-disques", boutique: "Pièces auto en ligne / occasion", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "F164",
+    titre: "Information non valide sur le statut du bouton de rappel du dernier message de navigation (COM2000)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commandes au volant affectées",
+    description:
+      "Le BSI détecte que l'information reçue sur l'état du bouton de rappel du dernier message de navigation, situé sur le commodo multifonction, n'est pas valide.",
+    causes: [
+      { pourcentage: 36, libelle: "Commodo multifonction défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la colonne de direction endommagé" },
+      { pourcentage: 22, libelle: "Connecteur rotatif ou contacteur tournant défaillant" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le câblage au niveau de la colonne de direction subit des flexions répétées — c'est une zone classique de rupture de fil.",
+    pieces: [
+      { nom: "Commodo multifonction (COM2000)", boutique: "Pièces auto en ligne", prix: "60-130€" },
+    ],
+  },
+  {
+    code: "F7F3",
+    titre: "Défaut d'alimentation électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — alimentation générique affectée",
+    description:
+      "Le BSI détecte une anomalie générale sur une alimentation électrique associée, sans précision automatique du circuit exact concerné par ce code générique.",
+    causes: [
+      { pourcentage: 36, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 28, libelle: "Fusible du circuit grillé" },
+      { pourcentage: 22, libelle: "Connecteur oxydé" },
+      { pourcentage: 14, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce code générique nécessite une lecture des autres défauts associés pour identifier précisément quelle alimentation est en cause.",
+    pieces: [
+      { nom: "Diagnostic circuits d'alimentation (atelier)", boutique: "Recommandé avant pièce", prix: "50-90€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
