@@ -130,12 +130,26 @@ export default async function CodePage({
         <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-6 mt-7">
           <div>
             <div className="bg-surface border border-line rounded-xl p-6 mb-5">
-              <h3 className="font-display font-semibold text-base mb-3.5">Ce que signifie ce code</h3>
+              <h3 className="font-display font-semibold text-base mb-3.5">Signification</h3>
               <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.description}</p>
             </div>
 
+            {dtc.symptomes && dtc.symptomes.length > 0 && (
+              <div className="bg-surface border border-line rounded-xl p-6 mb-5">
+                <h3 className="font-display font-semibold text-base mb-3.5">Symptômes</h3>
+                <ul>
+                  {dtc.symptomes.map((s) => (
+                    <li key={s} className="flex gap-2.5 py-2 border-b border-line last:border-b-0 text-sm text-[#C7CBD3]">
+                      <span className="text-cyan flex-shrink-0">•</span>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="bg-surface border border-line rounded-xl p-6 mb-5">
-              <h3 className="font-display font-semibold text-base mb-3.5">Causes probables, par fréquence</h3>
+              <h3 className="font-display font-semibold text-base mb-3.5">Causes possibles, par fréquence</h3>
               <ul>
                 {dtc.causes.map((c) => (
                   <li key={c.libelle} className="flex gap-3 py-2.5 border-b border-line last:border-b-0 text-sm text-[#C7CBD3]">
@@ -145,6 +159,27 @@ export default async function CodePage({
                 ))}
               </ul>
             </div>
+
+            {dtc.diagnostic && (
+              <div className="bg-surface border border-line rounded-xl p-6 mb-5">
+                <h3 className="font-display font-semibold text-base mb-3.5">Diagnostic</h3>
+                <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.diagnostic}</p>
+              </div>
+            )}
+
+            {dtc.controles && dtc.controles.length > 0 && (
+              <div className="bg-surface border border-line rounded-xl p-6 mb-5">
+                <h3 className="font-display font-semibold text-base mb-3.5">Contrôles à effectuer</h3>
+                <ul>
+                  {dtc.controles.map((c, i) => (
+                    <li key={c} className="flex gap-3 py-2.5 border-b border-line last:border-b-0 text-sm text-[#C7CBD3]">
+                      <span className="font-mono text-cyan text-xs flex-shrink-0 w-5">{i + 1}.</span>
+                      {c}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="bg-surface-2 border border-dashed border-line rounded-xl p-6 text-center text-muted text-xs font-mono tracking-wide mb-5">
               EMPLACEMENT PUBLICITAIRE — RESPONSIVE
@@ -173,8 +208,36 @@ export default async function CodePage({
               </form>
             </div>
 
+            {dtc.vehiculesConcernes && (
+              <div className="bg-surface border border-line rounded-xl p-6 mt-5">
+                <h3 className="font-display font-semibold text-base mb-3.5">Véhicules concernés</h3>
+                <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.vehiculesConcernes}</p>
+              </div>
+            )}
+
+            {dtc.moteursConcernes && (
+              <div className="bg-surface border border-line rounded-xl p-6 mt-5">
+                <h3 className="font-display font-semibold text-base mb-3.5">Moteurs concernés</h3>
+                <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.moteursConcernes}</p>
+              </div>
+            )}
+
+            {dtc.piecesConcernees && dtc.piecesConcernees.length > 0 && (
+              <div className="bg-surface border border-line rounded-xl p-6 mt-5">
+                <h3 className="font-display font-semibold text-base mb-3.5">Pièces susceptibles d&apos;être concernées</h3>
+                <ul>
+                  {dtc.piecesConcernees.map((p) => (
+                    <li key={p} className="flex gap-2.5 py-2 border-b border-line last:border-b-0 text-sm text-[#C7CBD3]">
+                      <span className="text-cyan flex-shrink-0">•</span>
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="bg-surface border border-line rounded-xl p-6 mt-5">
-              <h3 className="font-display font-semibold text-base mb-3.5">Pièces généralement concernées</h3>
+              <h3 className="font-display font-semibold text-base mb-3.5">Pièces / offres</h3>
               {dtc.pieces.map((p) => (
                 <div key={p.nom} className="flex gap-3 items-center bg-surface-2 rounded-lg p-3.5 mb-2.5 last:mb-0">
                   <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-cyan to-[#2E8B84] flex-shrink-0" />

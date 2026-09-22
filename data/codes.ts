@@ -8,8 +8,14 @@ export interface CodeDefaut {
   severite: Severite;
   severiteLabel: string;
   description: string;
+  symptomes?: string[];
   causes: { pourcentage: number; libelle: string }[];
+  diagnostic?: string;
+  controles?: string[];
   avisPro: string;
+  vehiculesConcernes?: string;
+  moteursConcernes?: string;
+  piecesConcernees?: string[];
   pieces: { nom: string; boutique: string; prix: string }[];
 }
 
@@ -25,6 +31,13 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — roulable, à traiter sous 2-3 semaines",
     description:
       "Le calculateur moteur a détecté que le catalyseur ne réduit plus assez efficacement les émissions polluantes. Il compare le signal de la sonde lambda avant et après le catalyseur : l'écart est trop faible, signe que la conversion chimique ne se fait plus correctement.",
+    symptomes: [
+      "Voyant moteur (MIL) allumé et fixe — n'apparaît quasiment jamais en clignotant pour ce code",
+      "Aucun symptôme perceptible à la conduite dans la majorité des cas",
+      "Échec à la mesure de pollution lors du contrôle technique",
+      "Très légère baisse de rendement moteur, difficile à ressentir seul",
+      "Odeur d'œuf pourri à l'échappement si le catalyseur est très dégradé",
+    ],
     causes: [
       { pourcentage: 42, libelle: "Sonde lambda (après catalyseur) défaillante" },
       { pourcentage: 27, libelle: "Catalyseur usé ou encrassé" },
@@ -32,8 +45,30 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 10, libelle: "Bougies ou injecteurs encrassés" },
       { pourcentage: 6, libelle: "Défaut de câblage / connecteur sonde" },
     ],
+    diagnostic:
+      "Le diagnostic doit toujours écarter les causes les moins coûteuses avant d'envisager le catalyseur, qui reste la pièce la plus chère de la chaîne. On commence par comparer en temps réel le signal des deux sondes lambda (amont et aval), on complète par une recherche de fuite sur la ligne d'échappement en amont, puis on évalue l'état de l'allumage et de l'injection — un mélange mal dosé encrasse et détériore le catalyseur plus vite qu'il ne s'use naturellement. Le catalyseur n'est mis en cause qu'une fois ces pistes écartées.",
+    controles: [
+      "Lire les codes stockés et le nombre de cycles de conduite depuis le dernier effacement — un code qui revient vite trahit une cause active",
+      "Comparer en temps réel les signaux des sondes lambda amont et aval à l'aide d'un outil de diagnostic",
+      "Inspecter visuellement la ligne d'échappement en amont du catalyseur (fuite, joint, collecteur fissuré)",
+      "Vérifier l'état des bougies et des injecteurs, et rechercher des ratés d'allumage associés",
+      "Contrôler l'état du câblage et du connecteur de la sonde aval",
+      "Effectuer un essai routier avec relevé des données pour confirmer la disparition ou la persistance du défaut",
+    ],
     avisPro:
       "Lecture des valeurs temps réel des deux sondes lambda à l'OBD, contrôle visuel de fuite à l'échappement, puis test du catalyseur seul si les sondes sont saines. Éviter de remplacer le catalyseur en premier réflexe — c'est la pièce la plus chère et rarement la cause première.",
+    vehiculesConcernes:
+      "Code générique OBD-II/EOBD, non spécifique à un constructeur : concerne tout véhicule essence ou diesel équipé de sondes lambda amont/aval, homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe). Plus fréquent sur les véhicules de plus de 150 000 km ou ayant roulé longtemps avec des ratés d'allumage non traités.",
+    moteursConcernes:
+      "Tous types de motorisation essence et diesel équipés d'un catalyseur avec sonde lambda de contrôle aval (catalyseur trois voies en essence, catalyseur d'oxydation en diesel). Risque d'encrassement accru sur les moteurs essence turbocompressés récents et sur les moteurs diesel en cas de contamination croisée avec le FAP.",
+    piecesConcernees: [
+      "Sonde lambda aval (après catalyseur)",
+      "Sonde lambda amont (avant catalyseur)",
+      "Catalyseur (ligne complète ou élément seul selon montage)",
+      "Joints et collecteur d'échappement",
+      "Bougies d'allumage (moteur essence)",
+      "Injecteurs",
+    ],
     pieces: [
       { nom: "Sonde lambda aval", boutique: "Oscaro · livraison 48h", prix: "54€" },
       { nom: "Catalyseur ligne complète", boutique: "Mister-Auto · sur commande", prix: "189€" },
