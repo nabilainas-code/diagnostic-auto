@@ -12675,6 +12675,528 @@ export const codes: CodeDefaut[] = [
       { nom: "Reconfiguration calculateur (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
     ],
   },
+  {
+    code: "F412",
+    titre: "Défaut contacteur porte coulissante droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — usure mécanique liée au coulissement",
+    description:
+      "Le contacteur qui détecte l'ouverture/fermeture de la porte latérale coulissante droite (sur véhicules équipés, type utilitaire/monospace) envoie un signal incohérent au BSI.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de porte coulissante défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé (usure liée au coulissement répété)" },
+      { pourcentage: 20, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le câblage de ce contacteur subit une forte usure mécanique liée aux mouvements répétés de la porte — un point de fragilité connu sur ce type d'ouverture.",
+    pieces: [
+      { nom: "Diagnostic contacteur porte coulissante (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F413",
+    titre: "Défaut contacteur porte coulissante gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — usure mécanique liée au coulissement",
+    description:
+      "Le contacteur qui détecte l'ouverture/fermeture de la porte latérale coulissante gauche (sur véhicules équipés, type utilitaire/monospace) envoie un signal incohérent au BSI.",
+    causes: [
+      { pourcentage: 40, libelle: "Contacteur de porte coulissante défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé (usure liée au coulissement répété)" },
+      { pourcentage: 20, libelle: "Connecteur du contacteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le câblage de ce contacteur subit une forte usure mécanique liée aux mouvements répétés de la porte — un point de fragilité connu sur ce type d'ouverture.",
+    pieces: [
+      { nom: "Diagnostic contacteur porte coulissante (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4A4",
+    titre: "Défaut relais de coupure actionneur portes coulissantes — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — ouverture manuelle généralement préservée",
+    description:
+      "Le relais qui coupe l'alimentation des actionneurs de porte coulissante par sécurité (par exemple en cas d'obstacle détecté) présente une anomalie, ce qui peut perturber l'ouverture/fermeture motorisée.",
+    causes: [
+      { pourcentage: 40, libelle: "Relais de coupure défaillant" },
+      { pourcentage: 28, libelle: "Câblage du relais endommagé" },
+      { pourcentage: 20, libelle: "Fusible dédié grillé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "L'ouverture et la fermeture manuelles de la porte coulissante restent généralement possibles malgré ce défaut.",
+    pieces: [
+      { nom: "Diagnostic relais porte coulissante (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4B3",
+    titre: "Défaut commande de super-condamnation en mode non piloté — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — verrouillage centralisé classique préservé",
+    description:
+      "La fonction de super-condamnation présente une anomalie lorsqu'elle est activée en dehors du mode normalement piloté par le BSI (par exemple via un bouton dédié), sans affecter le verrouillage centralisé classique.",
+    causes: [
+      { pourcentage: 40, libelle: "Bouton ou contacteur dédié défaillant" },
+      { pourcentage: 28, libelle: "Câblage de la commande endommagé" },
+      { pourcentage: 20, libelle: "BSI défaillant" },
+      { pourcentage: 12, libelle: "Configuration de la fonction incorrecte" },
+    ],
+    avisPro:
+      "Le verrouillage centralisé classique continue généralement de fonctionner — seule cette fonction de sécurité renforcée spécifique est concernée.",
+    pieces: [
+      { nom: "Diagnostic super-condamnation (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4B4",
+    titre: "Défaut commande de super-condamnation via contacteur porte arrière droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — verrouillage centralisé classique préservé",
+    description:
+      "La fonction de super-condamnation qui s'appuie sur le contacteur d'ouverture de la porte arrière droite présente une anomalie, sans affecter le verrouillage centralisé classique.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de porte arrière droite défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le verrouillage centralisé classique continue généralement de fonctionner — seule cette fonction de sécurité renforcée spécifique est concernée.",
+    pieces: [
+      { nom: "Diagnostic contacteur porte arrière droite (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F4B5",
+    titre: "Défaut commande de super-condamnation via contacteur porte arrière gauche — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — verrouillage centralisé classique préservé",
+    description:
+      "La fonction de super-condamnation qui s'appuie sur le contacteur d'ouverture de la porte arrière gauche présente une anomalie, sans affecter le verrouillage centralisé classique.",
+    causes: [
+      { pourcentage: 38, libelle: "Contacteur de porte arrière gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage du contacteur endommagé" },
+      { pourcentage: 22, libelle: "Connecteur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Le verrouillage centralisé classique continue généralement de fonctionner — seule cette fonction de sécurité renforcée spécifique est concernée.",
+    pieces: [
+      { nom: "Diagnostic contacteur porte arrière gauche (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F41A",
+    titre: "Défaut fonction de freinage automatique d'urgence en ville — détection de choc",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — aide au freinage d'urgence désactivée",
+    description:
+      "Le système de freinage automatique d'urgence en ville (qui freine seul en cas de risque de collision à basse vitesse) a détecté un impact ou présente une anomalie sur son système de détection, désactivant potentiellement cette aide à la conduite.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur ou radar de détection avant défaillant" },
+      { pourcentage: 28, libelle: "Pare-brise sale ou obstrué devant la caméra associée" },
+      { pourcentage: 22, libelle: "Choc réel ayant endommagé le capteur" },
+      { pourcentage: 15, libelle: "Calculateur de la fonction défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la zone autour du capteur (souvent près du rétroviseur intérieur ou dans le bouclier) est propre et non obstruée avant de suspecter une panne matérielle.",
+    pieces: [
+      { nom: "Diagnostic freinage automatique d'urgence (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F41B",
+    titre: "Incohérence des informations du freinage automatique d'urgence en ville",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — aide au freinage d'urgence désactivée",
+    description:
+      "Le système de freinage automatique d'urgence en ville reçoit des informations incohérentes entre ses différents capteurs, ce qui peut désactiver cette aide à la conduite par sécurité pour éviter un déclenchement intempestif.",
+    causes: [
+      { pourcentage: 35, libelle: "Capteur ou radar avant défaillant" },
+      { pourcentage: 28, libelle: "Défaut réseau perturbant l'échange d'informations entre capteurs" },
+      { pourcentage: 22, libelle: "Caméra associée mal calibrée" },
+      { pourcentage: 15, libelle: "Calculateur de la fonction défaillant" },
+    ],
+    avisPro:
+      "Après un remplacement de pare-brise ou une intervention sur le bouclier avant, une recalibration de cette fonction à la valise est souvent nécessaire.",
+    pieces: [
+      { nom: "Recalibration freinage automatique d'urgence (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "F81D",
+    titre: "Absence de communication avec la caméra multifonction — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — plusieurs aides à la conduite affectées",
+    description:
+      "Le BSI ne parvient plus à communiquer avec la caméra multifonction (souvent située près du rétroviseur intérieur), utilisée par plusieurs aides à la conduite (freinage automatique, lecture de panneaux, alerte de franchissement de ligne).",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers la caméra endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de la caméra oxydé" },
+      { pourcentage: 22, libelle: "Caméra défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut désactiver plusieurs aides à la conduite en même temps — à faire diagnostiquer, même si le véhicule reste conduisible normalement.",
+    pieces: [
+      { nom: "Diagnostic caméra multifonction (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F959",
+    titre: "Défaut de communication avec l'écran multifonction — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — indicateurs essentiels préservés ailleurs",
+    description:
+      "Le BSI ne parvient plus à communiquer correctement avec l'écran multifonction du tableau de bord, ce qui peut figer ou éteindre l'affichage de certaines informations secondaires.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'écran endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'écran oxydé" },
+      { pourcentage: 22, libelle: "Écran multifonction défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les indicateurs essentiels (vitesse, carburant) restent généralement visibles ailleurs sur le tableau de bord malgré ce défaut.",
+    pieces: [
+      { nom: "Diagnostic écran multifonction (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "FD04",
+    titre: "Défaut serrure gauche à contacteur intégré — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection d'état de verrouillage faussée",
+    description:
+      "La serrure électrique de la porte gauche, qui intègre son propre contacteur de position, envoie un signal incohérent au BSI, perturbant la détection de son état verrouillé/déverrouillé.",
+    causes: [
+      { pourcentage: 38, libelle: "Serrure à contacteur intégré défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers la serrure endommagé" },
+      { pourcentage: 22, libelle: "Connecteur de la serrure corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier manuellement que la porte se verrouille et se déverrouille bien correctement malgré ce défaut d'information.",
+    pieces: [
+      { nom: "Diagnostic serrure gauche (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F080",
+    titre: "Absence de communication entre le boîtier de câblage moteur et le BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — équipements moteur potentiellement affectés",
+    description:
+      "Le boîtier qui regroupe le câblage électrique du compartiment moteur ne parvient plus à communiquer avec le BSI, ce qui peut affecter plusieurs équipements électriques situés sous le capot.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage entre le boîtier moteur et le BSI endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du boîtier oxydé (exposition à l'humidité sous le capot)" },
+      { pourcentage: 22, libelle: "Boîtier de câblage moteur défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'étanchéité des connecteurs sous le capot — l'humidité est une cause fréquente de ce type de défaut sur cette zone exposée.",
+    pieces: [
+      { nom: "Diagnostic boîtier câblage moteur (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F6A3",
+    titre: "Déclenchement des airbags de protection des genoux enregistré",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — composants pyrotechniques déjà déclenchés",
+    description:
+      "Le calculateur airbag a enregistré un déclenchement effectif des airbags de protection des genoux, généralement suite à un choc frontal réel — ces composants pyrotechniques doivent être remplacés après activation.",
+    causes: [
+      { pourcentage: 70, libelle: "Airbags déclenchés lors d'un choc réel" },
+      { pourcentage: 20, libelle: "Défaut électrique ayant provoqué un déclenchement intempestif (rare)" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Des airbags déclenchés ne peuvent pas être réutilisés — leur remplacement est obligatoire, généralement accompagné d'un contrôle complet du système de sécurité après un choc.",
+    pieces: [
+      { nom: "Remplacement airbags genoux + diagnostic (atelier)", boutique: "Recommandé avant pièce", prix: "200-350€" },
+    ],
+  },
+  {
+    code: "F6C3",
+    titre: "Déclenchement de l'airbag rideau droit enregistré",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — composant pyrotechnique déjà déclenché",
+    description:
+      "Le calculateur airbag a enregistré un déclenchement effectif de l'airbag rideau droit, généralement suite à un choc latéral ou un tonneau réel — ce composant pyrotechnique doit être remplacé après activation.",
+    causes: [
+      { pourcentage: 70, libelle: "Airbag rideau déclenché lors d'un choc réel" },
+      { pourcentage: 20, libelle: "Défaut électrique ayant provoqué un déclenchement intempestif (rare)" },
+      { pourcentage: 10, libelle: "Calculateur airbag défaillant" },
+    ],
+    avisPro:
+      "Un airbag rideau déclenché ne peut pas être réutilisé — son remplacement est obligatoire, généralement accompagné d'un contrôle complet du système de sécurité après un choc.",
+    pieces: [
+      { nom: "Remplacement airbag rideau + diagnostic (atelier)", boutique: "Recommandé avant pièce", prix: "200-350€" },
+    ],
+  },
+  {
+    code: "F634",
+    titre: "Défaut interne système de déclenchement airbag passager niveau 2 — calculateur PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — déclenchement airbag passager non garanti",
+    description:
+      "Le circuit interne au calculateur qui pilote le second étage de déclenchement de l'airbag passager présente une anomalie, distincte d'un problème de câblage externe.",
+    causes: [
+      { pourcentage: 45, libelle: "Calculateur airbag défaillant (étage de puissance interne)" },
+      { pourcentage: 25, libelle: "Alimentation du calculateur instable" },
+      { pourcentage: 20, libelle: "Surtension ayant endommagé le circuit interne" },
+      { pourcentage: 10, libelle: "Défaut logiciel du calculateur" },
+    ],
+    avisPro:
+      "Ce défaut touche directement la sécurité du passager avant — ne jamais rouler avec ce témoin allumé, faire diagnostiquer dès que possible.",
+    pieces: [
+      { nom: "Diagnostic calculateur airbag (atelier)", boutique: "Recommandé avant pièce", prix: "60-90€" },
+    ],
+  },
+  {
+    code: "FD11",
+    titre: "Défaut actionneur d'ouverture serrure droite — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — porte potentiellement bloquée",
+    description:
+      "L'actionneur qui commande l'ouverture de la serrure électrique côté droit présente une anomalie électrique, empêchant son fonctionnement correct.",
+    causes: [
+      { pourcentage: 40, libelle: "Actionneur d'ouverture défaillant" },
+      { pourcentage: 28, libelle: "Câblage de l'actionneur endommagé" },
+      { pourcentage: 20, libelle: "Connecteur de l'actionneur corrodé" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Si la porte reste bloquée fermée, ne pas forcer — un diagnostic permet d'identifier la procédure de déblocage de secours propre au véhicule.",
+    pieces: [
+      { nom: "Diagnostic actionneur serrure droite (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F94A",
+    titre: "Défaut haut-parleur (surcharge de l'amplificateur) — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort audio uniquement",
+    description:
+      "L'un des haut-parleurs du système audio provoque une surcharge sur son étage de sortie de l'amplificateur, ce qui peut couper le son sur ce canal par sécurité.",
+    causes: [
+      { pourcentage: 40, libelle: "Haut-parleur défaillant (court-circuit interne)" },
+      { pourcentage: 28, libelle: "Câblage du haut-parleur endommagé (court-circuit)" },
+      { pourcentage: 20, libelle: "Amplificateur défaillant" },
+      { pourcentage: 12, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un volume poussé de façon prolongée à un niveau excessif peut endommager un haut-parleur avec le temps — un remplacement du haut-parleur suffit généralement.",
+    pieces: [
+      { nom: "Haut-parleur", boutique: "Oscaro · livraison 48h", prix: "35€" },
+    ],
+  },
+  {
+    code: "F303",
+    titre: "Défaut de configuration — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — nécessite une configuration, pas une pièce",
+    description:
+      "Le BSI détecte que sa configuration générale ne correspond pas à celle attendue pour ce véhicule, généralement après une intervention ou un remplacement de calculateur non finalisé.",
+    causes: [
+      { pourcentage: 50, libelle: "BSI remplacé ou reprogrammé sans configuration finalisée" },
+      { pourcentage: 25, libelle: "Mise à jour logicielle incomplète" },
+      { pourcentage: 15, libelle: "Configuration véhicule incorrecte d'origine" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut nécessite une configuration à la valise constructeur plutôt qu'un remplacement de pièce.",
+    pieces: [
+      { nom: "Configuration BSI (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F5FB",
+    titre: "Défaut de communication réseau générique — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — segment de réseau à identifier",
+    description:
+      "Le BSI détecte un défaut de communication réseau générique, sans pouvoir isoler précisément le calculateur ou le segment de câblage en cause.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage du réseau endommagé" },
+      { pourcentage: 28, libelle: "Connecteur d'un équipement du réseau oxydé" },
+      { pourcentage: 22, libelle: "Un calculateur du réseau perturbant le bus" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Un diagnostic réseau complet permet d'identifier précisément quel calculateur ou segment de câblage est à l'origine du dysfonctionnement.",
+    pieces: [
+      { nom: "Diagnostic réseau complet (atelier)", boutique: "Recommandé avant pièce", prix: "60-100€" },
+    ],
+  },
+  {
+    code: "F5FD",
+    titre: "Défaut lecture/écriture du journal de défauts — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — historique de diagnostic uniquement",
+    description:
+      "Le BSI rencontre une anomalie lors de la lecture ou de l'écriture de son journal interne de défauts, ce qui peut rendre l'historique des pannes partiellement inaccessible sans affecter le fonctionnement réel du véhicule.",
+    causes: [
+      { pourcentage: 45, libelle: "Mémoire interne du BSI défaillante" },
+      { pourcentage: 28, libelle: "Coupure d'alimentation pendant une écriture" },
+      { pourcentage: 17, libelle: "Mise à jour logicielle interrompue" },
+      { pourcentage: 10, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement l'historique de diagnostic — sans impact sur le fonctionnement réel des équipements du véhicule.",
+    pieces: [
+      { nom: "Diagnostic mémoire BSI (atelier)", boutique: "Recommandé avant pièce", prix: "50-80€" },
+    ],
+  },
+  {
+    code: "F5FE",
+    titre: "Défaut interne au calculateur BSI (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "elevee",
+    severiteLabel: "Gravité élevée — dysfonctionnements variés possibles",
+    description:
+      "Le boîtier de servitude intelligent détecte une seconde anomalie interne possible à son propre fonctionnement, ce qui peut provoquer des dysfonctionnements variés sur plusieurs équipements.",
+    causes: [
+      { pourcentage: 45, libelle: "BSI défaillant" },
+      { pourcentage: 25, libelle: "Alimentation du BSI instable" },
+      { pourcentage: 20, libelle: "Surtension ayant endommagé des composants internes" },
+      { pourcentage: 10, libelle: "Mise à jour logicielle interrompue" },
+    ],
+    avisPro:
+      "Ce défaut interne nécessite un diagnostic approfondi — un remplacement du BSI est une intervention lourde à confirmer avant d'être engagée.",
+    pieces: [
+      { nom: "Diagnostic approfondi BSI (atelier)", boutique: "Recommandé avant pièce", prix: "70-100€" },
+    ],
+  },
+  {
+    code: "FA4A",
+    titre: "Débranchement de la batterie auxiliaire détecté par le BSI",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — trace d'intervention, pas une panne",
+    description:
+      "Le BSI détecte que la batterie de servitude (auxiliaire) du véhicule a été débranchée récemment, généralement suite à une intervention en atelier — ce n'est pas une panne en soi.",
+    causes: [
+      { pourcentage: 65, libelle: "Intervention récente en atelier avec débranchement de la batterie" },
+      { pourcentage: 25, libelle: "Remplacement de la batterie effectué" },
+      { pourcentage: 10, libelle: "Débranchement accidentel" },
+    ],
+    avisPro:
+      "Après un débranchement de batterie, certains apprentissages doivent être refaits — ce code peut être effacé sans inquiétude une fois ces réapprentissages effectués.",
+    pieces: [
+      { nom: "Réapprentissages post-débranchement batterie (atelier)", boutique: "Recommandé avant pièce", prix: "20-40€" },
+    ],
+  },
+  {
+    code: "F067",
+    titre: "Absence de communication avec l'unité télématique autonome ou le module de services — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — services connectés uniquement",
+    description:
+      "Le BSI ne parvient plus à communiquer avec l'unité télématique autonome ou le module de services connectés, sans affecter les fonctions essentielles du véhicule.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers l'unité télématique endommagé" },
+      { pourcentage: 28, libelle: "Connecteur de l'unité oxydé" },
+      { pourcentage: 22, libelle: "Unité télématique défaillante" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne uniquement les services connectés — la conduite et la sécurité du véhicule ne sont pas affectées.",
+    pieces: [
+      { nom: "Diagnostic unité télématique (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F098",
+    titre: "Absence de communication avec l'unité de mémorisation des sièges arrière — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "faible",
+    severiteLabel: "Gravité faible — réglages manuels préservés",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le calculateur qui mémorise les réglages électriques des sièges arrière (sur véhicules équipés), désactivant cette fonction de confort.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le calculateur de mémorisation endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du calculateur oxydé" },
+      { pourcentage: 22, libelle: "Calculateur de mémorisation défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Les réglages manuels des sièges arrière restent généralement disponibles malgré ce défaut — seule la fonction mémoire est concernée.",
+    pieces: [
+      { nom: "Diagnostic mémorisation sièges arrière (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
+  {
+    code: "F09A",
+    titre: "Absence de communication avec le module de détection volumétrique à ultrasons — BSI PSA",
+    categorie: "psa",
+    categorieLabel: "PSA — BSI",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — détection de mouvement intérieur désactivée",
+    description:
+      "Le BSI ne parvient plus à communiquer avec le module qui détecte un mouvement à l'intérieur de l'habitacle par ultrasons (fonction anti-intrusion de l'alarme), désactivant cette protection.",
+    causes: [
+      { pourcentage: 35, libelle: "Câblage vers le module de détection endommagé" },
+      { pourcentage: 28, libelle: "Connecteur du module oxydé" },
+      { pourcentage: 22, libelle: "Module de détection défaillant" },
+      { pourcentage: 15, libelle: "BSI défaillant" },
+    ],
+    avisPro:
+      "Ce défaut désactive la détection de mouvement dans l'habitacle sans affecter le verrouillage centralisé — l'alarme périmétrique de base reste généralement active.",
+    pieces: [
+      { nom: "Diagnostic module détection ultrasons (atelier)", boutique: "Recommandé avant pièce", prix: "40-60€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
