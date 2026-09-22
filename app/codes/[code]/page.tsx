@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import ShareButton from "@/components/ShareButton";
+import FeedbackWidget from "@/components/FeedbackWidget";
 import { getCodeByCode, normalizeCode, diagnoseCode, codes } from "@/data/codes";
 
 const sevStyle = {
@@ -304,6 +305,8 @@ export default async function CodePage({
             </div>
           </div>
         )}
+
+        {process.env.POSTGRES_URL && <FeedbackWidget code={dtc.code} />}
       </div>
     </>
   );

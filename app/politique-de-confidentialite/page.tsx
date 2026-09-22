@@ -24,10 +24,22 @@ export default function ConfidentialitePage() {
           <section>
             <h2 className="font-display font-semibold text-base text-text mb-2">Données collectées</h2>
             <p>
-              Panne Résolue ne dispose d&apos;aucun compte utilisateur ni formulaire de collecte
-              de données personnelles à ce jour. La recherche par code défaut ou par plaque
-              d&apos;immatriculation s&apos;effectue directement dans votre navigateur et n&apos;est
-              pas enregistrée par nos soins.
+              Panne Résolue ne dispose d&apos;aucun compte utilisateur. La recherche par code
+              défaut ou par plaque d&apos;immatriculation s&apos;effectue directement dans votre
+              navigateur et n&apos;est pas enregistrée par nos soins.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="font-display font-semibold text-base text-text mb-2">Retours sur les fiches</h2>
+            <p>
+              Chaque fiche de code défaut propose d&apos;indiquer si le diagnostic vous a aidé
+              (👍 / 👎), avec un champ de précision facultatif. Seuls le code concerné, votre
+              appréciation et, le cas échéant, le texte que vous écrivez sont enregistrés —
+              sans compte, sans adresse IP et sans aucune donnée permettant de vous identifier.
+              Ces retours ne sont jamais publiés : ils servent uniquement à corriger et
+              améliorer le contenu des fiches. Merci de ne pas y inscrire d&apos;information
+              personnelle.
             </p>
           </section>
 
