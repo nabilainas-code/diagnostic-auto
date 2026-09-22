@@ -1,5 +1,12 @@
 export type Severite = "faible" | "moderee" | "elevee";
 
+export interface AssociationVehicule {
+  // true = aucune association modèle/moteur vérifiée : le texte doit rester
+  // générique et ne jamais laisser croire à une compatibilité confirmée.
+  generique: boolean;
+  texte: string;
+}
+
 export interface CodeDefaut {
   code: string;
   titre: string;
@@ -13,10 +20,12 @@ export interface CodeDefaut {
   diagnostic?: string;
   controles?: string[];
   avisPro: string;
-  vehiculesConcernes?: string;
-  moteursConcernes?: string;
+  solutions?: string[];
+  vehiculesConcernes?: AssociationVehicule;
+  moteursConcernes?: AssociationVehicule;
   piecesConcernees?: string[];
   pieces: { nom: string; boutique: string; prix: string }[];
+  faq?: { question: string; reponse: string }[];
 }
 
 // Jeu de données de démarrage — à remplacer par l'import de la base
@@ -46,21 +55,32 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 6, libelle: "Défaut de câblage / connecteur sonde" },
     ],
     diagnostic:
-      "Le diagnostic doit toujours écarter les causes les moins coûteuses avant d'envisager le catalyseur, qui reste la pièce la plus chère de la chaîne. On commence par comparer en temps réel le signal des deux sondes lambda (amont et aval), on complète par une recherche de fuite sur la ligne d'échappement en amont, puis on évalue l'état de l'allumage et de l'injection — un mélange mal dosé encrasse et détériore le catalyseur plus vite qu'il ne s'use naturellement. Le catalyseur n'est mis en cause qu'une fois ces pistes écartées.",
+      "Ce code seul ne dit pas quelle pièce est en cause : il indique uniquement que le calculateur juge le catalyseur inefficace, sans préciser si le problème vient du catalyseur lui-même, d'une sonde, ou d'une fuite en amont. Comprendre le défaut passe d'abord par le contexte d'apparition (à froid, à chaud, après un plein, après une longue immobilisation) et par la vitesse à laquelle il revient après effacement — un retour rapide trahit une cause active plutôt qu'un incident isolé.",
     controles: [
-      "Lire les codes stockés et le nombre de cycles de conduite depuis le dernier effacement — un code qui revient vite trahit une cause active",
+      "Lire les codes stockés et le nombre de cycles de conduite depuis le dernier effacement",
       "Comparer en temps réel les signaux des sondes lambda amont et aval à l'aide d'un outil de diagnostic",
       "Inspecter visuellement la ligne d'échappement en amont du catalyseur (fuite, joint, collecteur fissuré)",
       "Vérifier l'état des bougies et des injecteurs, et rechercher des ratés d'allumage associés",
       "Contrôler l'état du câblage et du connecteur de la sonde aval",
-      "Effectuer un essai routier avec relevé des données pour confirmer la disparition ou la persistance du défaut",
     ],
     avisPro:
-      "Lecture des valeurs temps réel des deux sondes lambda à l'OBD, contrôle visuel de fuite à l'échappement, puis test du catalyseur seul si les sondes sont saines. Éviter de remplacer le catalyseur en premier réflexe — c'est la pièce la plus chère et rarement la cause première.",
-    vehiculesConcernes:
-      "Code générique OBD-II/EOBD, non spécifique à un constructeur : concerne tout véhicule essence ou diesel équipé de sondes lambda amont/aval, homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe). Plus fréquent sur les véhicules de plus de 150 000 km ou ayant roulé longtemps avec des ratés d'allumage non traités.",
-    moteursConcernes:
-      "Tous types de motorisation essence et diesel équipés d'un catalyseur avec sonde lambda de contrôle aval (catalyseur trois voies en essence, catalyseur d'oxydation en diesel). Risque d'encrassement accru sur les moteurs essence turbocompressés récents et sur les moteurs diesel en cas de contamination croisée avec le FAP.",
+      "Un professionnel ne remplace jamais le catalyseur en premier réflexe — c'est la pièce la plus chère de la chaîne et rarement la cause première. Sa méthode suit un ordre précis : d'abord la lecture en temps réel des tensions des deux sondes lambda pour comparer leur réactivité, puis un contrôle de la ligne d'échappement en amont pour écarter une fuite d'air parasite, ensuite un contrôle de l'allumage et de l'injection — bougies et injecteurs encrassés dégradent prématurément un catalyseur par ailleurs sain. Ce n'est qu'après avoir écarté ces trois pistes, et confirmé par un essai routier avec relevé de données que le défaut persiste, qu'il valide un remplacement du catalyseur.",
+    solutions: [
+      "Effacer le code et effectuer un essai routier pour écarter un incident isolé (mauvais carburant, débranchement batterie récent)",
+      "Remplacer la sonde lambda aval si son signal est incohérent — solution la plus fréquente et la moins coûteuse",
+      "Réparer une fuite d'échappement en amont du catalyseur (joint, collecteur fissuré)",
+      "Traiter les ratés d'allumage ou l'encrassement des injecteurs qui dégradent le catalyseur",
+      "Remplacer le catalyseur si son rendement reste insuffisant une fois les autres causes écartées",
+      "Effectuer un nouvel essai routier après réparation pour confirmer la disparition du défaut",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule essence ou diesel équipé de sondes lambda amont/aval, homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe). Plus fréquent sur les véhicules de plus de 150 000 km ou ayant roulé longtemps avec des ratés d'allumage non traités.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Tous types de motorisation essence et diesel équipés d'un catalyseur avec sonde lambda de contrôle aval (catalyseur trois voies en essence, catalyseur d'oxydation en diesel). Risque d'encrassement accru sur les moteurs essence turbocompressés récents et sur les moteurs diesel en cas de contamination croisée avec le FAP.",
+    },
     piecesConcernees: [
       "Sonde lambda aval (après catalyseur)",
       "Sonde lambda amont (avant catalyseur)",
@@ -73,6 +93,24 @@ export const codes: CodeDefaut[] = [
       { nom: "Sonde lambda aval", boutique: "Oscaro · livraison 48h", prix: "54€" },
       { nom: "Catalyseur ligne complète", boutique: "Mister-Auto · sur commande", prix: "189€" },
       { nom: "Kit joints échappement", boutique: "AutoDoc · livraison 24h", prix: "12€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je continuer à rouler avec le code P0420 ?",
+        reponse: "Oui, dans la grande majorité des cas le véhicule reste roulable normalement. Ce défaut ne provoque pas de panne immédiate, mais il fera échouer le contrôle technique et peut, à terme, aggraver l'usure du catalyseur s'il n'est pas traité.",
+      },
+      {
+        question: "Le code P0420 signifie-t-il forcément que le catalyseur est mort ?",
+        reponse: "Non. Dans la majorité des cas, la cause réelle est une sonde lambda défaillante, une fuite d'échappement ou un problème d'allumage/injection — pas le catalyseur lui-même.",
+      },
+      {
+        question: "Pourquoi le code revient-il après effacement ?",
+        reponse: "S'il revient rapidement (en quelques kilomètres ou quelques cycles de conduite), c'est le signe d'une cause active et non d'un incident isolé ; mieux vaut alors procéder aux contrôles décrits ci-dessus plutôt que de continuer à effacer le code.",
+      },
+      {
+        question: "Le remplacement du catalyseur est-il couvert par une garantie ?",
+        reponse: "Selon les pays, les organes antipollution peuvent bénéficier d'une garantie légale prolongée ; il est utile de vérifier ce point auprès du constructeur avant de payer la réparation soi-même.",
+      },
     ],
   },
   {

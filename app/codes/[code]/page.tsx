@@ -164,20 +164,16 @@ export default async function CodePage({
               <div className="bg-surface border border-line rounded-xl p-6 mb-5">
                 <h3 className="font-display font-semibold text-base mb-3.5">Diagnostic</h3>
                 <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.diagnostic}</p>
-              </div>
-            )}
-
-            {dtc.controles && dtc.controles.length > 0 && (
-              <div className="bg-surface border border-line rounded-xl p-6 mb-5">
-                <h3 className="font-display font-semibold text-base mb-3.5">Contrôles à effectuer</h3>
-                <ul>
-                  {dtc.controles.map((c, i) => (
-                    <li key={c} className="flex gap-3 py-2.5 border-b border-line last:border-b-0 text-sm text-[#C7CBD3]">
-                      <span className="font-mono text-cyan text-xs flex-shrink-0 w-5">{i + 1}.</span>
-                      {c}
-                    </li>
-                  ))}
-                </ul>
+                {dtc.controles && dtc.controles.length > 0 && (
+                  <ul className="mt-4">
+                    {dtc.controles.map((c, i) => (
+                      <li key={c} className="flex gap-3 py-2.5 border-b border-line last:border-b-0 text-sm text-[#C7CBD3]">
+                        <span className="font-mono text-cyan text-xs flex-shrink-0 w-5">{i + 1}.</span>
+                        {c}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             )}
 
@@ -185,10 +181,24 @@ export default async function CodePage({
               EMPLACEMENT PUBLICITAIRE — RESPONSIVE
             </div>
 
-            <div className="bg-surface border border-line rounded-xl p-6">
+            <div className="bg-surface border border-line rounded-xl p-6 mb-5">
               <h3 className="font-display font-semibold text-base mb-3.5">Ce que ferait un pro</h3>
               <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.avisPro}</p>
             </div>
+
+            {dtc.solutions && dtc.solutions.length > 0 && (
+              <div className="bg-surface border border-line rounded-xl p-6">
+                <h3 className="font-display font-semibold text-base mb-3.5">Solutions possibles</h3>
+                <ul>
+                  {dtc.solutions.map((s, i) => (
+                    <li key={s} className="flex gap-3 py-2.5 border-b border-line last:border-b-0 text-sm text-[#C7CBD3]">
+                      <span className="font-mono text-cyan text-xs flex-shrink-0 w-5">{i + 1}.</span>
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
 
           <div>
@@ -210,15 +220,37 @@ export default async function CodePage({
 
             {dtc.vehiculesConcernes && (
               <div className="bg-surface border border-line rounded-xl p-6 mt-5">
-                <h3 className="font-display font-semibold text-base mb-3.5">Véhicules concernés</h3>
-                <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.vehiculesConcernes}</p>
+                <div className="flex items-center gap-2.5 mb-3.5 flex-wrap">
+                  <h3 className="font-display font-semibold text-base">Véhicules concernés</h3>
+                  {dtc.vehiculesConcernes.generique ? (
+                    <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-surface-2 text-muted border border-line">
+                      générique — non vérifié
+                    </span>
+                  ) : (
+                    <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-cyan/10 text-cyan border border-cyan/30">
+                      vérifié
+                    </span>
+                  )}
+                </div>
+                <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.vehiculesConcernes.texte}</p>
               </div>
             )}
 
             {dtc.moteursConcernes && (
               <div className="bg-surface border border-line rounded-xl p-6 mt-5">
-                <h3 className="font-display font-semibold text-base mb-3.5">Moteurs concernés</h3>
-                <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.moteursConcernes}</p>
+                <div className="flex items-center gap-2.5 mb-3.5 flex-wrap">
+                  <h3 className="font-display font-semibold text-base">Moteurs concernés</h3>
+                  {dtc.moteursConcernes.generique ? (
+                    <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-surface-2 text-muted border border-line">
+                      générique — non vérifié
+                    </span>
+                  ) : (
+                    <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-cyan/10 text-cyan border border-cyan/30">
+                      vérifié
+                    </span>
+                  )}
+                </div>
+                <p className="text-[#C7CBD3] text-sm leading-relaxed">{dtc.moteursConcernes.texte}</p>
               </div>
             )}
 
@@ -255,6 +287,23 @@ export default async function CodePage({
             </div>
           </div>
         </div>
+
+        {dtc.faq && dtc.faq.length > 0 && (
+          <div className="bg-surface border border-line rounded-xl p-6 mt-6">
+            <h3 className="font-display font-semibold text-base mb-3.5">Questions fréquentes</h3>
+            <div>
+              {dtc.faq.map((f) => (
+                <details key={f.question} className="py-3 border-b border-line last:border-b-0 group">
+                  <summary className="text-sm font-medium cursor-pointer list-none flex items-center justify-between gap-3">
+                    {f.question}
+                    <span className="text-muted flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="text-[#C7CBD3] text-sm leading-relaxed mt-2.5">{f.reponse}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );
