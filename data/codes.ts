@@ -47864,6 +47864,2616 @@ export const codes: CodeDefaut[] = [
       { nom: "Prétensionneur ceinture conducteur", boutique: "Amazon", prix: "70-140€" },
     ],
   },
+  {
+    code: "B1011",
+    titre: "Défaut capteur de température extérieure",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage et régulation faussés",
+    description:
+      "Le capteur de température extérieure, utilisé par le calculateur de climatisation pour ajuster automatiquement le mode chauffage/refroidissement, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de température extérieure défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du capteur endommagé (souvent situé sous le rétroviseur ou le pare-chocs)" },
+      { pourcentage: 28, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est souvent exposé aux intempéries (rétroviseur, calandre) ; vérifier l'état du connecteur avant remplacement.",
+    pieces: [
+      { nom: "Capteur de température extérieure", boutique: "Amazon", prix: "15-30€" },
+    ],
+  },
+  {
+    code: "B1012",
+    titre: "Défaut capteur de température extérieure (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage et régulation faussés",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le capteur de température extérieure.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de température extérieure défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du capteur endommagé" },
+      { pourcentage: 28, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est souvent exposé aux intempéries (rétroviseur, calandre) ; vérifier l'état du connecteur avant remplacement.",
+    pieces: [
+      { nom: "Capteur de température extérieure", boutique: "Amazon", prix: "15-30€" },
+    ],
+  },
+  {
+    code: "B1016",
+    titre: "Défaut capteur de température liquide de refroidissement circuit de chauffage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation du chauffage faussée",
+    description:
+      "Le capteur de température du liquide de refroidissement dédié au circuit de chauffage envoie un signal incohérent au calculateur de climatisation.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Niveau de liquide de refroidissement insuffisant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le niveau de liquide de refroidissement, une prise d'air dans le circuit pouvant fausser la lecture du capteur.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "Amazon", prix: "15-30€" },
+    ],
+  },
+  {
+    code: "B1041",
+    titre: "Défaut du moteur de mélange (volet de mixage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température habitacle mal régulée",
+    description:
+      "Le moteur électrique du volet de mélange, qui dose la proportion d'air chaud et froid envoyée dans l'habitacle, signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué (corps étranger, mécanisme cassé)" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au démarrage du moteur de volet est un signe caractéristique de mécanisme grippé ou de pignon cassé.",
+    pieces: [
+      { nom: "Moteur de volet de mélange (mixage)", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1042",
+    titre: "Défaut du moteur de mélange (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température habitacle mal régulée",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le moteur de volet de mélange.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au démarrage du moteur de volet est un signe caractéristique de mécanisme grippé ou de pignon cassé.",
+    pieces: [
+      { nom: "Moteur de volet de mélange (mixage)", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1045",
+    titre: "Défaut du moteur de mélange (troisième variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température habitacle mal régulée",
+    description:
+      "Le calculateur détecte une troisième anomalie sur le moteur de volet de mélange.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au démarrage du moteur de volet est un signe caractéristique de mécanisme grippé ou de pignon cassé.",
+    pieces: [
+      { nom: "Moteur de volet de mélange (mixage)", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1061",
+    titre: "Défaut du moteur de distribution d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — répartition de l'air affectée",
+    description:
+      "Le moteur électrique du volet de distribution, qui oriente l'air vers les aérateurs, le pare-brise ou les pieds, signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de distribution défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le bon débattement mécanique du volet avant de remplacer le moteur, un mécanisme grippé étant une cause fréquente.",
+    pieces: [
+      { nom: "Moteur de volet de distribution d'air", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1062",
+    titre: "Défaut du moteur de distribution d'air (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — répartition de l'air affectée",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le moteur de volet de distribution.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de distribution défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le bon débattement mécanique du volet avant de remplacer le moteur, un mécanisme grippé étant une cause fréquente.",
+    pieces: [
+      { nom: "Moteur de volet de distribution d'air", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1065",
+    titre: "Défaut du moteur de distribution d'air (troisième variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — répartition de l'air affectée",
+    description:
+      "Le calculateur détecte une troisième anomalie sur le moteur de volet de distribution.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de distribution défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le bon débattement mécanique du volet avant de remplacer le moteur, un mécanisme grippé étant une cause fréquente.",
+    pieces: [
+      { nom: "Moteur de volet de distribution d'air", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1081",
+    titre: "Absence de communication avec le calculateur de climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation potentiellement inopérante",
+    description:
+      "Un calculateur du véhicule ne parvient plus à communiquer avec le calculateur de climatisation, ce qui peut désactiver tout ou partie des fonctions de régulation thermique.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur de climatisation non alimenté ou défaillant" },
+      { pourcentage: 28, libelle: "Câblage réseau endommagé" },
+      { pourcentage: 22, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Fusible d'alimentation du calculateur de climatisation grillé" },
+    ],
+    avisPro:
+      "Vérifier en priorité l'alimentation et les fusibles du calculateur de climatisation avant toute intervention sur le réseau.",
+    pieces: [
+      { nom: "Diagnostic calculateur climatisation (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "B1083",
+    titre: "Défaut interne du calculateur de climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — calculateur à remplacer",
+    description:
+      "Le calculateur de climatisation signale un défaut matériel interne général, indépendant des éléments périphériques.",
+    causes: [
+      { pourcentage: 50, libelle: "Calculateur de climatisation défaillant" },
+      { pourcentage: 30, libelle: "Alimentation électrique instable ayant endommagé le calculateur" },
+      { pourcentage: 20, libelle: "Surtension suite à une intervention sur le réseau électrique" },
+    ],
+    avisPro:
+      "Un défaut interne persistant après effacement impose généralement le remplacement du calculateur, à confirmer par un diagnostic approfondi.",
+    pieces: [
+      { nom: "Calculateur de climatisation", boutique: "Amazon", prix: "120-280€" },
+    ],
+  },
+  {
+    code: "B1094",
+    titre: "Absence de communication avec le calculateur de climatisation (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation potentiellement inopérante",
+    description:
+      "Un second calculateur du véhicule ne parvient plus à communiquer avec le calculateur de climatisation.",
+    causes: [
+      { pourcentage: 38, libelle: "Calculateur de climatisation non alimenté ou défaillant" },
+      { pourcentage: 28, libelle: "Câblage réseau endommagé" },
+      { pourcentage: 22, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Fusible d'alimentation du calculateur de climatisation grillé" },
+    ],
+    avisPro:
+      "Vérifier en priorité l'alimentation et les fusibles du calculateur de climatisation avant toute intervention sur le réseau.",
+    pieces: [
+      { nom: "Diagnostic calculateur climatisation (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "B1095",
+    titre: "Défaut de la résistance chauffante n°1",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "L'élément chauffant électrique n°1, utilisé pour compléter le chauffage habitacle (notamment sur moteurs diesel ou véhicules électrifiés), signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante (coupure interne)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Sur diesel récent, l'absence de résistance chauffante fonctionnelle se traduit par un chauffage très lent en hiver ; vérifier le fusible dédié en premier lieu.",
+    pieces: [
+      { nom: "Résistance chauffante additionnelle", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1096",
+    titre: "Défaut de la résistance chauffante n°1 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "Le calculateur détecte une seconde anomalie sur la résistance chauffante n°1.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante (coupure interne)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Sur diesel récent, l'absence de résistance chauffante fonctionnelle se traduit par un chauffage très lent en hiver ; vérifier le fusible dédié en premier lieu.",
+    pieces: [
+      { nom: "Résistance chauffante additionnelle", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1097",
+    titre: "Défaut de la résistance chauffante n°2",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "L'élément chauffant électrique n°2 signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante (coupure interne)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Les résistances chauffantes fonctionnent généralement par étages ; un seul étage défaillant réduit la puissance de chauffe sans la supprimer totalement.",
+    pieces: [
+      { nom: "Résistance chauffante additionnelle", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1098",
+    titre: "Défaut de la résistance chauffante n°2 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "Le calculateur détecte une seconde anomalie sur la résistance chauffante n°2.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante (coupure interne)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Les résistances chauffantes fonctionnent généralement par étages ; un seul étage défaillant réduit la puissance de chauffe sans la supprimer totalement.",
+    pieces: [
+      { nom: "Résistance chauffante additionnelle", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1099",
+    titre: "Défaut de la résistance chauffante n°3",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "L'élément chauffant électrique n°3 signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante (coupure interne)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Les résistances chauffantes fonctionnent généralement par étages ; un seul étage défaillant réduit la puissance de chauffe sans la supprimer totalement.",
+    pieces: [
+      { nom: "Résistance chauffante additionnelle", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1100",
+    titre: "Défaut de la résistance chauffante n°3 (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "Le calculateur détecte une seconde anomalie sur la résistance chauffante n°3.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante (coupure interne)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Les résistances chauffantes fonctionnent généralement par étages ; un seul étage défaillant réduit la puissance de chauffe sans la supprimer totalement.",
+    pieces: [
+      { nom: "Résistance chauffante additionnelle", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1101",
+    titre: "Défaut du compresseur de climatisation — arrêt permanent",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "Le compresseur électrique de climatisation s'est arrêté de façon permanente suite à une anomalie de fonctionnement détectée par son électronique de contrôle interne.",
+    causes: [
+      { pourcentage: 40, libelle: "Compresseur de climatisation défaillant" },
+      { pourcentage: 28, libelle: "Manque de fluide réfrigérant (fonctionnement à sec)" },
+      { pourcentage: 20, libelle: "Alimentation haute tension du compresseur défaillante (véhicules hybrides/électriques)" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un compresseur qui fonctionne à sec par manque de gaz s'use prématurément ; toujours vérifier la charge en fluide réfrigérant avant de conclure à une panne compresseur.",
+    pieces: [
+      { nom: "Compresseur de climatisation électrique", boutique: "Amazon", prix: "250-600€" },
+    ],
+  },
+  {
+    code: "B1102",
+    titre: "Défaut du compresseur de climatisation — courant excessif",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "Le compresseur électrique de climatisation consomme un courant anormalement élevé, provoquant sa mise en sécurité.",
+    causes: [
+      { pourcentage: 38, libelle: "Compresseur de climatisation défaillant (frottements internes)" },
+      { pourcentage: 28, libelle: "Circuit de climatisation obstrué ou surchargé en fluide" },
+      { pourcentage: 22, libelle: "Huile de compresseur dégradée ou en quantité incorrecte" },
+      { pourcentage: 12, libelle: "Alimentation électrique du compresseur défaillante" },
+    ],
+    avisPro:
+      "Vérifier la charge exacte en fluide réfrigérant et en huile avant de remplacer le compresseur ; une surcharge est une cause fréquente de surconsommation.",
+    pieces: [
+      { nom: "Compresseur de climatisation électrique", boutique: "Amazon", prix: "250-600€" },
+    ],
+  },
+  {
+    code: "B1103",
+    titre: "Défaut du compresseur de climatisation — anomalie de puissance électrique",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "L'électronique de puissance du compresseur électrique de climatisation détecte une anomalie sur son alimentation.",
+    causes: [
+      { pourcentage: 38, libelle: "Compresseur de climatisation défaillant (électronique interne)" },
+      { pourcentage: 28, libelle: "Câblage haute tension endommagé" },
+      { pourcentage: 22, libelle: "Connecteur haute tension mal enfiché ou corrodé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Intervention à réserver à un technicien habilité haute tension sur véhicules hybrides/électriques ; ne pas manipuler le câblage orange sans consignation préalable.",
+    pieces: [
+      { nom: "Diagnostic compresseur électrique HT (atelier habilité)", boutique: "Recommandé", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "B1104",
+    titre: "Défaut du compresseur de climatisation — température trop élevée",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "Le compresseur électrique de climatisation détecte une température de fonctionnement anormalement élevée, provoquant sa mise en sécurité.",
+    causes: [
+      { pourcentage: 38, libelle: "Manque de fluide réfrigérant (mauvais refroidissement du compresseur)" },
+      { pourcentage: 28, libelle: "Condenseur encrassé ou obstrué" },
+      { pourcentage: 22, libelle: "Compresseur défaillant" },
+      { pourcentage: 12, libelle: "Ventilateur de refroidissement du condenseur défaillant" },
+    ],
+    avisPro:
+      "Vérifier la propreté du condenseur (face avant du véhicule) et le fonctionnement du ventilateur avant de conclure à une panne du compresseur.",
+    pieces: [
+      { nom: "Compresseur de climatisation électrique", boutique: "Amazon", prix: "250-600€" },
+    ],
+  },
+  {
+    code: "B1105",
+    titre: "Défaut du compresseur de climatisation — perte de communication",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "Le calculateur de climatisation ne parvient plus à communiquer avec l'électronique de contrôle du compresseur.",
+    causes: [
+      { pourcentage: 40, libelle: "Câblage vers le compresseur coupé ou débranché" },
+      { pourcentage: 28, libelle: "Compresseur non alimenté" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le connecteur du compresseur, souvent situé en position basse et exposé aux projections d'eau et de boue.",
+    pieces: [
+      { nom: "Diagnostic compresseur électrique HT (atelier habilité)", boutique: "Recommandé", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "B1106",
+    titre: "Défaut du compresseur de climatisation — tension trop basse",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "Le compresseur électrique de climatisation détecte une tension d'alimentation insuffisante.",
+    causes: [
+      { pourcentage: 40, libelle: "Batterie 12V ou haute tension faible" },
+      { pourcentage: 28, libelle: "Câblage d'alimentation endommagé" },
+      { pourcentage: 20, libelle: "Connexions corrodées ou desserrées" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Contrôler la tension batterie avant toute intervention sur le compresseur, une tension insuffisante étant la cause la plus fréquente.",
+    pieces: [
+      { nom: "Diagnostic compresseur électrique HT (atelier habilité)", boutique: "Recommandé", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "B1107",
+    titre: "Défaut du compresseur de climatisation — tension trop élevée",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "Le compresseur électrique de climatisation détecte une tension d'alimentation excessive.",
+    causes: [
+      { pourcentage: 38, libelle: "Alternateur ou convertisseur DC/DC défaillant (surtension)" },
+      { pourcentage: 28, libelle: "Compresseur défaillant (électronique interne)" },
+      { pourcentage: 22, libelle: "Régulateur de tension du véhicule défaillant" },
+      { pourcentage: 12, libelle: "Câblage endommagé" },
+    ],
+    avisPro:
+      "Mesurer la tension du réseau de bord moteur tournant avant de conclure à une panne compresseur ; une surtension généralisée affecte souvent plusieurs équipements.",
+    pieces: [
+      { nom: "Diagnostic compresseur électrique HT (atelier habilité)", boutique: "Recommandé", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "B1108",
+    titre: "Défaut de la résistance chauffante électrique n°1 (circuit de chauffage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "La résistance électrique de chauffage n°1 du circuit de chauffage haute puissance signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié en premier lieu avant de remplacer la résistance, plus coûteuse.",
+    pieces: [
+      { nom: "Résistance chauffante électrique", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1109",
+    titre: "Défaut de la résistance chauffante électrique n°2 (circuit de chauffage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "La résistance électrique de chauffage n°2 du circuit de chauffage haute puissance signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié en premier lieu avant de remplacer la résistance, plus coûteuse.",
+    pieces: [
+      { nom: "Résistance chauffante électrique", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1110",
+    titre: "Défaut de la résistance chauffante électrique n°3 (circuit de chauffage)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage additionnel réduit",
+    description:
+      "La résistance électrique de chauffage n°3 du circuit de chauffage haute puissance signale un défaut.",
+    causes: [
+      { pourcentage: 38, libelle: "Résistance chauffante défaillante" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 22, libelle: "Fusible de la résistance grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié en premier lieu avant de remplacer la résistance, plus coûteuse.",
+    pieces: [
+      { nom: "Résistance chauffante électrique", boutique: "Amazon", prix: "60-140€" },
+    ],
+  },
+  {
+    code: "B1111",
+    titre: "Défaut capteur de température liquide entrée pompe de chauffage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation du chauffage faussée",
+    description:
+      "Le capteur de température du liquide de refroidissement à l'entrée de la pompe électrique de circuit de chauffage envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Niveau de liquide de refroidissement insuffisant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le niveau de liquide de refroidissement, une prise d'air dans le circuit pouvant fausser la lecture du capteur.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "Amazon", prix: "15-30€" },
+    ],
+  },
+  {
+    code: "B1112",
+    titre: "Défaut capteur de température liquide entrée pompe de chauffage (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation du chauffage faussée",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le capteur de température d'entrée de la pompe de circuit de chauffage.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Niveau de liquide de refroidissement insuffisant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le niveau de liquide de refroidissement, une prise d'air dans le circuit pouvant fausser la lecture du capteur.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "Amazon", prix: "15-30€" },
+    ],
+  },
+  {
+    code: "B1113",
+    titre: "Défaut capteur de température liquide sortie pompe de chauffage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation du chauffage faussée",
+    description:
+      "Le capteur de température du liquide de refroidissement à la sortie de la pompe électrique de circuit de chauffage envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Niveau de liquide de refroidissement insuffisant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le niveau de liquide de refroidissement, une prise d'air dans le circuit pouvant fausser la lecture du capteur.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "Amazon", prix: "15-30€" },
+    ],
+  },
+  {
+    code: "B1114",
+    titre: "Défaut capteur de température liquide sortie pompe de chauffage (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation du chauffage faussée",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le capteur de température de sortie de la pompe de circuit de chauffage.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de température défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Niveau de liquide de refroidissement insuffisant" },
+    ],
+    avisPro:
+      "Vérifier en priorité le niveau de liquide de refroidissement, une prise d'air dans le circuit pouvant fausser la lecture du capteur.",
+    pieces: [
+      { nom: "Capteur température liquide de refroidissement", boutique: "Amazon", prix: "15-30€" },
+    ],
+  },
+  {
+    code: "B1115",
+    titre: "Défaut de la pompe électrique du circuit de chauffage — dysfonctionnement",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage moins efficace",
+    description:
+      "La pompe électrique de circulation du liquide de refroidissement dédiée au circuit de chauffage signale un dysfonctionnement.",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe électrique grippée ou usée" },
+      { pourcentage: 28, libelle: "Air dans le circuit de chauffage (purge nécessaire)" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Une purge complète du circuit de refroidissement peut résoudre ce défaut si la pompe tourne mais sans débit efficace (présence d'air).",
+    pieces: [
+      { nom: "Pompe électrique circuit de chauffage", boutique: "Amazon", prix: "70-150€" },
+    ],
+  },
+  {
+    code: "B1116",
+    titre: "Défaut de la pompe électrique du circuit de chauffage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — chauffage moins efficace",
+    description:
+      "La pompe électrique de circulation du liquide de refroidissement dédiée au circuit de chauffage signale un défaut électrique général.",
+    causes: [
+      { pourcentage: 40, libelle: "Pompe électrique défaillante (bobinage grillé)" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Fusible de la pompe grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le fusible dédié avant de remplacer la pompe, plus coûteuse.",
+    pieces: [
+      { nom: "Pompe électrique circuit de chauffage", boutique: "Amazon", prix: "70-150€" },
+    ],
+  },
+  {
+    code: "B1117",
+    titre: "Défaut du compresseur de climatisation — partie commande",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation coupée",
+    description:
+      "L'électronique de commande du compresseur électrique de climatisation signale un défaut interne.",
+    causes: [
+      { pourcentage: 45, libelle: "Électronique de commande du compresseur défaillante" },
+      { pourcentage: 30, libelle: "Câblage de commande endommagé" },
+      { pourcentage: 25, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut concerne l'électronique embarquée du compresseur, non réparable séparément ; remplacement de l'ensemble compresseur généralement nécessaire.",
+    pieces: [
+      { nom: "Compresseur de climatisation électrique", boutique: "Amazon", prix: "250-600€" },
+    ],
+  },
+  {
+    code: "B1118",
+    titre: "Défaut capteur de température du compresseur",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — protection thermique compromise",
+    description:
+      "Le capteur de température interne du compresseur de climatisation, utilisé pour le protéger d'une surchauffe, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de température du compresseur défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Compresseur défaillant (surchauffe réelle)" },
+    ],
+    avisPro:
+      "Ce capteur est intégré au compresseur sur la majorité des modèles ; son remplacement isolé n'est généralement pas possible.",
+    pieces: [
+      { nom: "Compresseur de climatisation électrique", boutique: "Amazon", prix: "250-600€" },
+    ],
+  },
+  {
+    code: "B1121",
+    titre: "Défaut du moteur de recirculation d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — qualité de l'air habitacle affectée",
+    description:
+      "Le moteur du volet de recirculation d'air, qui bascule entre air extérieur et air recyclé, signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de recirculation défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué (feuilles, débris dans la prise d'air)" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Nettoyer la prise d'air extérieure (feuilles mortes, débris) avant de remplacer le moteur, une obstruction étant une cause fréquente de blocage du volet.",
+    pieces: [
+      { nom: "Moteur de volet de recirculation d'air", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1122",
+    titre: "Défaut du moteur de recirculation d'air (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — qualité de l'air habitacle affectée",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le moteur de volet de recirculation d'air.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de recirculation défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Nettoyer la prise d'air extérieure (feuilles mortes, débris) avant de remplacer le moteur, une obstruction étant une cause fréquente de blocage du volet.",
+    pieces: [
+      { nom: "Moteur de volet de recirculation d'air", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1123",
+    titre: "Défaut du moteur de recirculation d'air — fonctionnement incorrect",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — qualité de l'air habitacle affectée",
+    description:
+      "Le moteur du volet de recirculation d'air fonctionne de manière incorrecte (course incomplète, position non atteinte).",
+    causes: [
+      { pourcentage: 40, libelle: "Volet mécaniquement bloqué en position intermédiaire" },
+      { pourcentage: 30, libelle: "Moteur de recirculation défaillant" },
+      { pourcentage: 20, libelle: "Calibration du volet perdue" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Une réinitialisation/calibration des volets avec l'outil de diagnostic peut résoudre ce défaut si le mécanisme est mécaniquement sain.",
+    pieces: [
+      { nom: "Moteur de volet de recirculation d'air", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B12F4",
+    titre: "Défaut de contrôle de la vitesse du pulseur d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation réduite ou absente",
+    description:
+      "Le module de contrôle de vitesse du pulseur d'air (résistance ou variateur électronique) signale une anomalie.",
+    causes: [
+      { pourcentage: 40, libelle: "Résistance/variateur de pulseur défaillant" },
+      { pourcentage: 28, libelle: "Moteur de pulseur d'air défaillant" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Fusible du pulseur grillé" },
+    ],
+    avisPro:
+      "Si seules les petites vitesses fonctionnent, la résistance de pulseur est généralement en cause ; si aucune vitesse ne fonctionne, vérifier le fusible et le moteur.",
+    pieces: [
+      { nom: "Résistance/variateur de pulseur d'air", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B12F5",
+    titre: "Défaut de contrôle de la vitesse du pulseur d'air (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation réduite ou absente",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le module de contrôle de vitesse du pulseur d'air.",
+    causes: [
+      { pourcentage: 40, libelle: "Résistance/variateur de pulseur défaillant" },
+      { pourcentage: 28, libelle: "Moteur de pulseur d'air défaillant" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Fusible du pulseur grillé" },
+    ],
+    avisPro:
+      "Si seules les petites vitesses fonctionnent, la résistance de pulseur est généralement en cause ; si aucune vitesse ne fonctionne, vérifier le fusible et le moteur.",
+    pieces: [
+      { nom: "Résistance/variateur de pulseur d'air", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B12F6",
+    titre: "Défaut du capteur de qualité de l'air habitacle",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recirculation automatique affectée",
+    description:
+      "Le capteur de qualité de l'air (détection de pollution extérieure pour déclencher automatiquement la recirculation) envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de qualité de l'air défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce capteur peut s'encrasser avec le temps ; un nettoyage de la grille de prise d'air suffit parfois à résoudre le défaut.",
+    pieces: [
+      { nom: "Capteur de qualité d'air habitacle", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B12F7",
+    titre: "Défaut du capteur de détection de fumée",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le capteur de détection de fumée, utilisé sur certains équipements de sécurité habitacle, signale un défaut.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de détection de fumée défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Cet équipement est rare et présent uniquement sur certaines versions ; vérifier la présence effective du capteur avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur détection fumée (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "B12F8",
+    titre: "Défaut du capteur de détection de fumée (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le capteur de détection de fumée.",
+    causes: [
+      { pourcentage: 40, libelle: "Capteur de détection de fumée défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Cet équipement est rare et présent uniquement sur certaines versions ; vérifier la présence effective du capteur avant intervention.",
+    pieces: [
+      { nom: "Diagnostic capteur détection fumée (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "B12F9",
+    titre: "Défaut du pulseur d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation réduite ou absente",
+    description:
+      "Le moteur du pulseur d'air (ventilateur habitacle) signale un défaut électrique général.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de pulseur d'air défaillant (usure des charbons, roulement)" },
+      { pourcentage: 28, libelle: "Résistance/variateur de pulseur défaillant" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Fusible du pulseur grillé" },
+    ],
+    avisPro:
+      "Un bruit de sifflement ou de grincement du pulseur précède souvent la panne complète ; le remplacer avant blocage total évite d'endommager le variateur.",
+    pieces: [
+      { nom: "Moteur de pulseur d'air (ventilateur habitacle)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1305",
+    titre: "Défaut du capteur de qualité de l'air (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — recirculation automatique affectée",
+    description:
+      "Le calculateur détecte une anomalie sur un second capteur de qualité de l'air.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur de qualité de l'air défaillant ou encrassé" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce capteur peut s'encrasser avec le temps ; un nettoyage de la grille de prise d'air suffit parfois à résoudre le défaut.",
+    pieces: [
+      { nom: "Capteur de qualité d'air habitacle", boutique: "Amazon", prix: "35-70€" },
+    ],
+  },
+  {
+    code: "B1306",
+    titre: "Défaut du capteur d'ensoleillement zone droite",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation bi-zone faussée",
+    description:
+      "Le capteur d'ensoleillement dédié à la zone droite de l'habitacle (climatisation bi-zone), qui compense l'effet du soleil sur la température ressentie, envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur d'ensoleillement défaillant" },
+      { pourcentage: 28, libelle: "Câblage sous la planche de bord endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est généralement situé en haut de la planche de bord ; vérifier qu'il n'a pas été recouvert ou débranché lors d'une intervention.",
+    pieces: [
+      { nom: "Capteur d'ensoleillement", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1307",
+    titre: "Défaut du pulseur d'air arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation arrière réduite ou absente",
+    description:
+      "Le moteur du pulseur d'air arrière (climatisation bi-zone/tri-zone) signale un défaut.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de pulseur arrière défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 20, libelle: "Fusible du pulseur arrière grillé" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "Ce pulseur est généralement situé sous le plancher arrière ou dans la console centrale ; vérifier l'absence d'obstruction (débris, objets).",
+    pieces: [
+      { nom: "Moteur de pulseur d'air arrière", boutique: "Amazon", prix: "50-110€" },
+    ],
+  },
+  {
+    code: "B1308",
+    titre: "Défaut du signal de commande du pulseur arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation arrière réduite ou absente",
+    description:
+      "Le signal de commande du moteur du pulseur d'air arrière gauche signale une anomalie.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de pulseur arrière gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage de commande endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "Vérifier le câblage de commande sous le plancher arrière gauche, zone soumise à l'humidité et aux frottements.",
+    pieces: [
+      { nom: "Moteur de pulseur d'air arrière", boutique: "Amazon", prix: "50-110€" },
+    ],
+  },
+  {
+    code: "B1309",
+    titre: "Défaut du capteur d'air soufflé arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation arrière faussée",
+    description:
+      "Le capteur de température de l'air soufflé côté arrière gauche envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur d'air soufflé arrière gauche défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est intégré dans le conduit d'air arrière gauche ; son accès nécessite souvent la dépose d'une garniture de custode.",
+    pieces: [
+      { nom: "Capteur d'air soufflé arrière", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B130A",
+    titre: "Défaut du capteur d'air soufflé arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — régulation arrière faussée",
+    description:
+      "Le capteur de température de l'air soufflé côté arrière droit envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 42, libelle: "Capteur d'air soufflé arrière droit défaillant" },
+      { pourcentage: 28, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "Ce capteur est intégré dans le conduit d'air arrière droit ; son accès nécessite souvent la dépose d'une garniture de custode.",
+    pieces: [
+      { nom: "Capteur d'air soufflé arrière", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B130B",
+    titre: "Défaut du capteur de température évaporateur arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière moins efficace",
+    description:
+      "Le capteur de température de l'évaporateur arrière (climatisation bi-compartiment) envoie un signal incohérent.",
+    causes: [
+      { pourcentage: 45, libelle: "Capteur de température évaporateur arrière défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 25, libelle: "Évaporateur arrière givré (manque de fluide réfrigérant)" },
+    ],
+    avisPro:
+      "Vérifier le niveau de fluide réfrigérant avant de remplacer le capteur, un évaporateur givré pouvant fausser la lecture.",
+    pieces: [
+      { nom: "Capteur température évaporateur arrière", boutique: "Amazon", prix: "25-50€" },
+    ],
+  },
+  {
+    code: "B130F",
+    titre: "Défaut du moteur de mélange avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température habitacle mal régulée",
+    description:
+      "Le moteur du volet de mélange côté avant droit (climatisation bi-zone) signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au démarrage du moteur de volet est un signe caractéristique de mécanisme grippé ou de pignon cassé.",
+    pieces: [
+      { nom: "Moteur de volet de mélange (mixage)", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1310",
+    titre: "Défaut du signal de retour du pulseur d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — diagnostic de la ventilation affecté",
+    description:
+      "Le signal de retour (information de fonctionnement effectif) du pulseur d'air, transmis au calculateur de climatisation, est incohérent.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de pulseur défaillant (signal de retour absent)" },
+      { pourcentage: 30, libelle: "Câblage du signal de retour endommagé" },
+      { pourcentage: 20, libelle: "Résistance/variateur de pulseur défaillant" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Ce défaut peut apparaître même si le pulseur fonctionne normalement, en cas de simple coupure du fil de retour d'information.",
+    pieces: [
+      { nom: "Moteur de pulseur d'air (ventilateur habitacle)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B1311",
+    titre: "Défaut du moteur de mélange arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température arrière mal régulée",
+    description:
+      "Le moteur du volet de mélange arrière gauche (climatisation multi-zone) signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange arrière défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "L'accès à ce moteur nécessite souvent la dépose d'une garniture arrière ; vérifier le câblage avant de commander la pièce.",
+    pieces: [
+      { nom: "Moteur de volet de mélange arrière", boutique: "Amazon", prix: "30-65€" },
+    ],
+  },
+  {
+    code: "B1312",
+    titre: "Défaut du moteur de mélange arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température arrière mal régulée",
+    description:
+      "Le moteur du volet de mélange arrière droit (climatisation multi-zone) signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange arrière défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "L'accès à ce moteur nécessite souvent la dépose d'une garniture arrière ; vérifier le câblage avant de commander la pièce.",
+    pieces: [
+      { nom: "Moteur de volet de mélange arrière", boutique: "Amazon", prix: "30-65€" },
+    ],
+  },
+  {
+    code: "B1319",
+    titre: "Défaut du moteur de distribution arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — répartition de l'air arrière affectée",
+    description:
+      "Le moteur du volet de distribution arrière droit signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de distribution arrière défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "Vérifier le bon débattement mécanique du volet avant de remplacer le moteur, un mécanisme grippé étant une cause fréquente.",
+    pieces: [
+      { nom: "Moteur de volet de distribution arrière", boutique: "Amazon", prix: "30-65€" },
+    ],
+  },
+  {
+    code: "B131A",
+    titre: "Défaut du moteur de distribution arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — répartition de l'air arrière affectée",
+    description:
+      "Le moteur du volet de distribution arrière gauche signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de distribution arrière défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation arrière défaillant" },
+    ],
+    avisPro:
+      "Vérifier le bon débattement mécanique du volet avant de remplacer le moteur, un mécanisme grippé étant une cause fréquente.",
+    pieces: [
+      { nom: "Moteur de volet de distribution arrière", boutique: "Amazon", prix: "30-65€" },
+    ],
+  },
+  {
+    code: "B131C",
+    titre: "Défaut du pulseur d'air habitacle (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — ventilation réduite ou absente",
+    description:
+      "Le calculateur détecte une anomalie supplémentaire sur le circuit du pulseur d'air habitacle.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de pulseur d'air défaillant" },
+      { pourcentage: 28, libelle: "Résistance/variateur de pulseur défaillant" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 12, libelle: "Fusible du pulseur grillé" },
+    ],
+    avisPro:
+      "Un bruit de sifflement ou de grincement du pulseur précède souvent la panne complète ; le remplacer avant blocage total évite d'endommager le variateur.",
+    pieces: [
+      { nom: "Moteur de pulseur d'air (ventilateur habitacle)", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B131D",
+    titre: "Défaut du moteur de distribution avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — répartition de l'air affectée",
+    description:
+      "Le moteur du volet de distribution avant droit (ou volet des aérateurs de planche de bord) signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de distribution défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier le bon débattement mécanique du volet avant de remplacer le moteur, un mécanisme grippé étant une cause fréquente.",
+    pieces: [
+      { nom: "Moteur de volet de distribution d'air", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1330",
+    titre: "Défaut du bouton de recirculation d'air",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de commande manuelle de la recirculation d'air, sur la commande de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de recirculation défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Ce défaut se manifeste souvent par un bouton qui ne réagit plus ou reste bloqué allumé ; un nettoyage des contacts peut parfois suffire.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B133A",
+    titre: "Défaut du moteur de mélange avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température habitacle mal régulée",
+    description:
+      "Le moteur du volet de mélange côté avant gauche signale un défaut.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au démarrage du moteur de volet est un signe caractéristique de mécanisme grippé ou de pignon cassé.",
+    pieces: [
+      { nom: "Moteur de volet de mélange (mixage)", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B133B",
+    titre: "Défaut du moteur de mélange avant droit (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — température habitacle mal régulée",
+    description:
+      "Le calculateur détecte une seconde anomalie sur le moteur de volet de mélange avant droit.",
+    causes: [
+      { pourcentage: 42, libelle: "Moteur de volet de mélange défaillant ou grippé" },
+      { pourcentage: 28, libelle: "Volet mécaniquement bloqué" },
+      { pourcentage: 20, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Un bruit de cliquetis répété au démarrage du moteur de volet est un signe caractéristique de mécanisme grippé ou de pignon cassé.",
+    pieces: [
+      { nom: "Moteur de volet de mélange (mixage)", boutique: "Amazon", prix: "25-55€" },
+    ],
+  },
+  {
+    code: "B1340",
+    titre: "Défaut du bouton AUTO avant",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de mode automatique de la commande de climatisation avant signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton AUTO défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Ce défaut se manifeste souvent par un bouton qui ne réagit plus ; un nettoyage des contacts peut parfois suffire avant de remplacer toute la façade.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1341",
+    titre: "Défaut du bouton de désembuage/dégivrage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de désembuage/dégivrage avant de la commande de climatisation signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de désembuage défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un bouton de désembuage défaillant est gênant en conditions humides ; vérifier son fonctionnement avant un trajet par mauvais temps.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1342",
+    titre: "Défaut du bouton de lunette arrière chauffante",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de commande de la lunette arrière chauffante, intégré à la commande de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de lunette chauffante défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Vérifier que la lunette arrière elle-même chauffe (buée test) avant de conclure à un défaut du bouton plutôt que de la résistance de vitre.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1343",
+    titre: "Défaut du bouton de climatisation (A/C)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de mise en marche/arrêt de la climatisation (A/C) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton A/C défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher l'activation du compresseur si le bouton reste bloqué en position éteinte ; vérifier le fonctionnement du compresseur en parallèle.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1345",
+    titre: "Défaut du bouton A/C MAX",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de refroidissement maximal (A/C MAX) de la commande de climatisation signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton A/C MAX défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Ce défaut n'empêche généralement pas le fonctionnement normal de la climatisation, seule la fonction de refroidissement rapide est affectée.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1346",
+    titre: "Défaut du bouton MONO",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton MONO, permettant de synchroniser les réglages de température des différentes zones sur une climatisation multi-zone, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton MONO défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Ce défaut n'empêche pas le fonctionnement de base de la climatisation, seule la synchronisation des zones est affectée.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1347",
+    titre: "Défaut du bouton REAR ON",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton d'activation de la climatisation arrière (REAR ON) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton REAR ON défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Ce défaut empêche l'activation manuelle de la climatisation arrière depuis la commande avant ; vérifier le panneau arrière s'il existe.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1348",
+    titre: "Défaut du bouton de désactivation du panneau arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de désactivation de la commande de climatisation arrière signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de désactivation défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande arrière endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Vérifier l'ensemble de la commande arrière si plusieurs boutons de ce panneau sont défectueux simultanément (signe d'une panne du panneau complet).",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B1349",
+    titre: "Défaut du bouton REST (fonction restauration)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton REST, permettant de restaurer les réglages précédents de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton REST défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Fonction de confort mineure ; ce défaut n'affecte pas le fonctionnement principal de la climatisation.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B134A",
+    titre: "Défaut du bouton de distribution — position désembuage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position désembuage du volet de distribution d'air avant signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B134B",
+    titre: "Défaut du bouton de distribution avant gauche — position désembuage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position désembuage du volet de distribution avant gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B134C",
+    titre: "Défaut du bouton de distribution avant droit — position désembuage",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position désembuage du volet de distribution avant droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B134D",
+    titre: "Défaut du bouton de distribution — position ventilation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position ventilation du volet de distribution d'air avant signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B134E",
+    titre: "Défaut du bouton de distribution avant gauche — position ventilation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position ventilation du volet de distribution avant gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B134F",
+    titre: "Défaut du bouton de distribution avant droit — position ventilation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position ventilation du volet de distribution avant droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1350",
+    titre: "Défaut du bouton de distribution — position pieds",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position pieds du volet de distribution d'air avant signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1351",
+    titre: "Défaut du bouton de distribution avant gauche — position pieds",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position pieds du volet de distribution avant gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1352",
+    titre: "Défaut du bouton de distribution avant droit — position pieds",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de sélection de la position pieds du volet de distribution avant droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de distribution défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Un nettoyage des contacts du bouton peut parfois résoudre ce défaut avant de remplacer toute la façade de commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1353",
+    titre: "Défaut du bouton d'augmentation de la vitesse de ventilation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton d'augmentation de la vitesse du pulseur d'air avant signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de ventilation sont défectueux simultanément, suspecter une panne de la façade complète plutôt que des boutons isolés.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1354",
+    titre: "Défaut du bouton de diminution de la vitesse de ventilation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de diminution de la vitesse du pulseur d'air avant signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de ventilation sont défectueux simultanément, suspecter une panne de la façade complète plutôt que des boutons isolés.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1355",
+    titre: "Défaut de la commande de ventilation avant",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "L'ensemble de la commande de vitesse de ventilation avant (molette ou boutons) signale un défaut électrique général.",
+    causes: [
+      { pourcentage: 42, libelle: "Molette/commande de ventilation défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Vérifier si toutes les vitesses sont inaccessibles (panne de commande) ou seulement certaines (panne du pulseur/résistance).",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1356",
+    titre: "Défaut de la commande de température avant",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "L'ensemble de la commande de réglage de température avant (molette ou boutons) signale un défaut électrique général.",
+    causes: [
+      { pourcentage: 42, libelle: "Molette/commande de température défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Vérifier la cohérence entre la température affichée et la température réellement soufflée avant de remplacer la commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1357",
+    titre: "Défaut de la commande de température avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "La commande de réglage de température zone avant gauche (climatisation bi-zone) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Molette/commande de température défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Vérifier la cohérence entre la température affichée et la température réellement soufflée avant de remplacer la commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1358",
+    titre: "Défaut de la commande de température avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "La commande de réglage de température zone avant droit (climatisation bi-zone) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Molette/commande de température défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Vérifier la cohérence entre la température affichée et la température réellement soufflée avant de remplacer la commande.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1359",
+    titre: "Défaut de la commande de distribution avant",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "L'ensemble de la commande de sélection de la distribution d'air avant signale un défaut électrique général.",
+    causes: [
+      { pourcentage: 42, libelle: "Molette/commande de distribution défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation défaillante" },
+    ],
+    avisPro:
+      "Vérifier le bon débattement mécanique des volets de distribution avant de remplacer la commande, un volet grippé pouvant simuler ce défaut.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B135A",
+    titre: "Défaut du bouton de recirculation d'air (façade multifonction)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de commande de la recirculation d'air, intégré à la façade multifonction, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton de recirculation défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Ce défaut se manifeste souvent par un bouton qui ne réagit plus ou reste bloqué allumé ; un nettoyage des contacts peut parfois suffire.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B135B",
+    titre: "Défaut du bouton FAST",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton FAST (mise en régime rapide de la climatisation) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton FAST défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Fonction de confort ; ce défaut n'empêche pas le fonctionnement normal de la climatisation en mode manuel.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B135C",
+    titre: "Défaut du bouton SOFT",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton SOFT (mode doux de climatisation) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton SOFT défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Fonction de confort ; ce défaut n'empêche pas le fonctionnement normal de la climatisation en mode manuel.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B135D",
+    titre: "Défaut du bouton de pare-brise chauffant",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de commande du pare-brise chauffant, intégré à la façade de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Vérifier que le pare-brise chauffant fonctionne réellement (résistances intégrées au verre) avant de conclure à un défaut du bouton.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B135E",
+    titre: "Défaut du bouton NORMAL",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton NORMAL, permettant de revenir au mode de fonctionnement standard de la climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton NORMAL défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Fonction de confort ; ce défaut n'empêche pas le fonctionnement normal de la climatisation en mode manuel.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B135F",
+    titre: "Défaut du bouton d'arrêt de la ventilation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton d'arrêt complet de la ventilation (position 0) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton d'arrêt défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Si ce bouton reste bloqué activé, la ventilation peut rester coupée en permanence malgré les autres réglages.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1360",
+    titre: "Défaut du bouton AUTO de la commande de climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de mode automatique intégré à la façade tactile ou traditionnelle de climatisation signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton AUTO défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Ce défaut se manifeste souvent par un bouton qui ne réagit plus ; un nettoyage des contacts peut parfois suffire avant de remplacer toute la façade.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B1361",
+    titre: "Défaut du bouton de distribution arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle arrière affectée",
+    description:
+      "Le bouton de sélection de la distribution d'air arrière gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande arrière endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Vérifier l'ensemble de la commande arrière si plusieurs boutons sont défectueux simultanément.",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B1362",
+    titre: "Défaut du bouton de distribution arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle arrière affectée",
+    description:
+      "Le bouton de sélection de la distribution d'air arrière droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande arrière endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Vérifier l'ensemble de la commande arrière si plusieurs boutons sont défectueux simultanément.",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B1363",
+    titre: "Défaut du bouton d'augmentation de la ventilation arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle arrière affectée",
+    description:
+      "Le bouton d'augmentation de la vitesse du pulseur d'air arrière signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande arrière endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de ventilation arrière sont défectueux simultanément, suspecter une panne de la façade complète.",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B1364",
+    titre: "Défaut du bouton de diminution de la ventilation arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle arrière affectée",
+    description:
+      "Le bouton de diminution de la vitesse du pulseur d'air arrière signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande arrière endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de ventilation arrière sont défectueux simultanément, suspecter une panne de la façade complète.",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B1365",
+    titre: "Défaut de la commande de température arrière gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle arrière affectée",
+    description:
+      "La commande de réglage de température zone arrière gauche signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Molette/commande de température défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande arrière endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Vérifier la cohérence entre la température affichée et la température réellement soufflée avant de remplacer la commande.",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B1366",
+    titre: "Défaut de la commande de température arrière droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle arrière affectée",
+    description:
+      "La commande de réglage de température zone arrière droit signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Molette/commande de température défaillante" },
+      { pourcentage: 28, libelle: "Câblage interne de la commande arrière endommagé" },
+      { pourcentage: 30, libelle: "Commande de climatisation arrière défaillante" },
+    ],
+    avisPro:
+      "Vérifier la cohérence entre la température affichée et la température réellement soufflée avant de remplacer la commande.",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B139F",
+    titre: "Défaut du bouton de qualité de l'air",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de commande manuelle du contrôle de qualité de l'air (activation de la recirculation automatique anti-pollution) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Fonction de confort ; ce défaut n'empêche pas le fonctionnement normal de la climatisation en mode manuel.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A0",
+    titre: "Défaut du bouton température +",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton d'augmentation de la température de consigne signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de température sont défectueux simultanément, suspecter une panne de la façade complète plutôt que des boutons isolés.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A1",
+    titre: "Défaut du bouton température -",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de diminution de la température de consigne signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de température sont défectueux simultanément, suspecter une panne de la façade complète plutôt que des boutons isolés.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A2",
+    titre: "Défaut du module de ventilation arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle arrière affectée",
+    description:
+      "Le module de commande de ventilation arrière signale un défaut électrique général.",
+    causes: [
+      { pourcentage: 42, libelle: "Module de commande arrière défaillant" },
+      { pourcentage: 28, libelle: "Câblage vers le module arrière endommagé" },
+      { pourcentage: 30, libelle: "Connecteur mal enfiché" },
+    ],
+    avisPro:
+      "Vérifier l'ensemble de la commande arrière si plusieurs fonctions sont affectées simultanément (signe d'une panne du module complet).",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
+  {
+    code: "B13A4",
+    titre: "Défaut du bouton température + avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton d'augmentation de la température de consigne zone avant droit (climatisation bi-zone) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de température sont défectueux simultanément, suspecter une panne de la façade complète plutôt que des boutons isolés.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A5",
+    titre: "Défaut du bouton température - avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — commande manuelle affectée",
+    description:
+      "Le bouton de diminution de la température de consigne zone avant droit (climatisation bi-zone) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant (usure des contacts)" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Si les deux boutons +/- de température sont défectueux simultanément, suspecter une panne de la façade complète plutôt que des boutons isolés.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A6",
+    titre: "Défaut du bouton de siège chauffant avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort affecté",
+    description:
+      "Le bouton de commande du siège chauffant avant droit, intégré à la façade de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Module de siège chauffant défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la résistance chauffante du siège fonctionne réellement avant de conclure à un défaut du bouton seul.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A7",
+    titre: "Défaut du bouton de siège chauffant avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort affecté",
+    description:
+      "Le bouton de commande du siège chauffant avant gauche, intégré à la façade de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Module de siège chauffant défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la résistance chauffante du siège fonctionne réellement avant de conclure à un défaut du bouton seul.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A8",
+    titre: "Défaut de la commande de siège ventilé avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort affecté",
+    description:
+      "La commande du siège ventilé avant droit, intégrée à la façade de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Module de siège ventilé défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la ventilation du siège fonctionne réellement (moteur intégré à l'assise) avant de conclure à un défaut du bouton seul.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13A9",
+    titre: "Défaut de la commande de siège ventilé avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort affecté",
+    description:
+      "La commande du siège ventilé avant gauche, intégrée à la façade de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage interne de la façade endommagé" },
+      { pourcentage: 30, libelle: "Module de siège ventilé défaillant" },
+    ],
+    avisPro:
+      "Vérifier que la ventilation du siège fonctionne réellement (moteur intégré à l'assise) avant de conclure à un défaut du bouton seul.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13AA",
+    titre: "Défaut de la commande de volant chauffant",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — confort affecté",
+    description:
+      "La commande du volant chauffant, intégrée à la façade de climatisation, signale un défaut électrique.",
+    causes: [
+      { pourcentage: 42, libelle: "Bouton défaillant" },
+      { pourcentage: 28, libelle: "Câblage au niveau de la colonne de direction endommagé" },
+      { pourcentage: 30, libelle: "Module de volant chauffant défaillant" },
+    ],
+    avisPro:
+      "Vérifier le câblage au niveau de la spirale de contact du volant, zone soumise à des mouvements répétés lors des braquages.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B13AB",
+    titre: "Défaut de diffusion de la cartouche de parfum",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction de confort affectée",
+    description:
+      "Le système de diffusion de fragrance intégré au circuit de ventilation signale un défaut au niveau de la diffusion.",
+    causes: [
+      { pourcentage: 42, libelle: "Cartouche de fragrance vide ou mal installée" },
+      { pourcentage: 28, libelle: "Diffuseur de fragrance défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur du diffuseur endommagé" },
+    ],
+    avisPro:
+      "Fonction de confort optionnelle sur certains modèles haut de gamme ; vérifier en premier lieu que la cartouche est bien en place et non vide.",
+    pieces: [
+      { nom: "Cartouche/diffuseur de fragrance habitacle", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B13AE",
+    titre: "Défaut de la demande d'activation de la climatisation",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation potentiellement inopérante",
+    description:
+      "Le signal de demande d'activation de la climatisation, transmis par le calculateur moteur ou le calculateur de climatisation, est incohérent.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage de la ligne de demande d'activation endommagé" },
+      { pourcentage: 28, libelle: "Calculateur de climatisation défaillant" },
+      { pourcentage: 22, libelle: "Calculateur moteur ne relayant pas correctement la demande" },
+      { pourcentage: 12, libelle: "Connecteur mal enfiché" },
+    ],
+    avisPro:
+      "Ce défaut peut empêcher l'embrayage effectif du compresseur malgré une demande de climatisation active depuis la commande.",
+    pieces: [
+      { nom: "Diagnostic calculateur climatisation (atelier équipé)", boutique: "Recommandé", prix: "40-80€" },
+    ],
+  },
+  {
+    code: "B13B0",
+    titre: "Défaut d'acquisition du type de cartouche de fragrance — entrée 2",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction de confort affectée",
+    description:
+      "Le système de diffusion de fragrance ne parvient pas à identifier correctement le type de cartouche installée (entrée 2).",
+    causes: [
+      { pourcentage: 42, libelle: "Cartouche de fragrance non reconnue ou mal insérée" },
+      { pourcentage: 28, libelle: "Capteur d'identification de cartouche défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+    ],
+    avisPro:
+      "Vérifier que la cartouche utilisée est bien d'origine ou compatible, certaines cartouches non homologuées n'étant pas reconnues par le système.",
+    pieces: [
+      { nom: "Cartouche/diffuseur de fragrance habitacle", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B13B1",
+    titre: "Défaut d'acquisition du type de cartouche de fragrance — entrée 1",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction de confort affectée",
+    description:
+      "Le système de diffusion de fragrance ne parvient pas à identifier correctement le type de cartouche installée (entrée 1).",
+    causes: [
+      { pourcentage: 42, libelle: "Cartouche de fragrance non reconnue ou mal insérée" },
+      { pourcentage: 28, libelle: "Capteur d'identification de cartouche défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+    ],
+    avisPro:
+      "Vérifier que la cartouche utilisée est bien d'origine ou compatible, certaines cartouches non homologuées n'étant pas reconnues par le système.",
+    pieces: [
+      { nom: "Cartouche/diffuseur de fragrance habitacle", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B13B2",
+    titre: "Défaut du moteur de sélection de fragrance",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction de confort affectée",
+    description:
+      "Le moteur de sélection de fragrance, permettant de choisir parmi plusieurs cartouches installées, signale un défaut.",
+    causes: [
+      { pourcentage: 40, libelle: "Moteur de sélection défaillant ou grippé" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Mécanisme de sélection bloqué" },
+    ],
+    avisPro:
+      "Fonction de confort optionnelle ; ce défaut n'affecte pas le fonctionnement de la climatisation elle-même.",
+    pieces: [
+      { nom: "Cartouche/diffuseur de fragrance habitacle", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B13B3",
+    titre: "Défaut de la commande du ventilateur de diffusion de fragrance",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction de confort affectée",
+    description:
+      "Le petit ventilateur assurant la diffusion de la fragrance dans l'habitacle signale un défaut de commande.",
+    causes: [
+      { pourcentage: 40, libelle: "Ventilateur de diffusion défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Fonction de confort optionnelle ; ce défaut n'affecte pas le fonctionnement de la climatisation elle-même.",
+    pieces: [
+      { nom: "Cartouche/diffuseur de fragrance habitacle", boutique: "Amazon", prix: "20-45€" },
+    ],
+  },
+  {
+    code: "B13BA",
+    titre: "Défaut de la sortie de commande de l'ioniseur n°1",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — qualité de l'air affectée",
+    description:
+      "La première sortie de commande de l'ioniseur d'air (purification de l'air habitacle) signale un défaut électrique.",
+    causes: [
+      { pourcentage: 40, libelle: "Module ioniseur défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Fonction de confort optionnelle sur certains modèles ; ce défaut n'affecte pas le fonctionnement principal de la climatisation.",
+    pieces: [
+      { nom: "Module ioniseur d'air habitacle", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B13BB",
+    titre: "Défaut de la sortie de commande de l'ioniseur n°2",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — qualité de l'air affectée",
+    description:
+      "La seconde sortie de commande de l'ioniseur d'air signale un défaut électrique.",
+    causes: [
+      { pourcentage: 40, libelle: "Module ioniseur défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 30, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Fonction de confort optionnelle sur certains modèles ; ce défaut n'affecte pas le fonctionnement principal de la climatisation.",
+    pieces: [
+      { nom: "Module ioniseur d'air habitacle", boutique: "Amazon", prix: "40-90€" },
+    ],
+  },
+  {
+    code: "B2E34",
+    titre: "Défaut de l'afficheur de température avant gauche",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage seulement",
+    description:
+      "L'afficheur de la température de consigne zone avant gauche signale un défaut, sans affecter la régulation réelle.",
+    causes: [
+      { pourcentage: 45, libelle: "Afficheur LCD défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 25, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Ce défaut est purement visuel ; la climatisation continue de fonctionner normalement selon la température réellement réglée.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B2E35",
+    titre: "Défaut de l'afficheur de température avant droit",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage seulement",
+    description:
+      "L'afficheur de la température de consigne zone avant droit signale un défaut, sans affecter la régulation réelle.",
+    causes: [
+      { pourcentage: 45, libelle: "Afficheur LCD défaillant" },
+      { pourcentage: 30, libelle: "Câblage ou connecteur endommagé" },
+      { pourcentage: 25, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Ce défaut est purement visuel ; la climatisation continue de fonctionner normalement selon la température réellement réglée.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "B2E37",
+    titre: "Défaut du programme interne de l'écran LCD",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — affichage seulement",
+    description:
+      "Le programme interne de l'écran LCD de la commande de climatisation signale une anomalie logicielle.",
+    causes: [
+      { pourcentage: 45, libelle: "Écran LCD défaillant ou corrompu" },
+      { pourcentage: 30, libelle: "Mise à jour logicielle nécessaire" },
+      { pourcentage: 25, libelle: "Façade de commande défaillante" },
+    ],
+    avisPro:
+      "Une réinitialisation via coupure batterie peut parfois résoudre ce défaut logiciel avant d'envisager le remplacement de la façade.",
+    pieces: [
+      { nom: "Commande de climatisation (façade)", boutique: "Amazon", prix: "60-150€" },
+    ],
+  },
+  {
+    code: "U111C",
+    titre: "Absence de communication avec le calculateur de batterie de traction",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — fonction annexe affectée (véhicules électrifiés)",
+    description:
+      "Le calculateur de climatisation ne parvient pas à communiquer avec le calculateur de gestion de la batterie de traction (véhicules hybrides/électriques), utilisé pour coordonner le préconditionnement thermique.",
+    causes: [
+      { pourcentage: 40, libelle: "Calculateur de batterie de traction non alimenté ou défaillant" },
+      { pourcentage: 30, libelle: "Câblage réseau endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 10, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Concerne uniquement les véhicules hybrides/électriques ; ce défaut peut désactiver le préconditionnement thermique programmé de la batterie.",
+    pieces: [
+      { nom: "Diagnostic réseau véhicule électrifié (atelier habilité)", boutique: "Recommandé", prix: "60-120€" },
+    ],
+  },
+  {
+    code: "U1202",
+    titre: "Absence de communication avec le BSI (variante 2)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation potentiellement inopérante",
+    description:
+      "Le calculateur de climatisation ne parvient plus à communiquer avec le boîtier de servitude intelligent (BSI), sur une seconde ligne de communication.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage réseau vers le BSI endommagé" },
+      { pourcentage: 28, libelle: "Connecteur mal enfiché ou corrodé" },
+      { pourcentage: 20, libelle: "BSI défaillant ou non alimenté" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Mesurer la résistance du bus CAN et vérifier l'alimentation du BSI avant de conclure à une panne du calculateur de climatisation.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1203",
+    titre: "Absence de communication avec le BSI (variante 3)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation potentiellement inopérante",
+    description:
+      "Le calculateur de climatisation ne parvient plus à communiquer avec le boîtier de servitude intelligent (BSI), sur une troisième ligne de communication.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage réseau vers le BSI endommagé" },
+      { pourcentage: 28, libelle: "Connecteur mal enfiché ou corrodé" },
+      { pourcentage: 20, libelle: "BSI défaillant ou non alimenté" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Mesurer la résistance du bus CAN et vérifier l'alimentation du BSI avant de conclure à une panne du calculateur de climatisation.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1206",
+    titre: "Absence de réponse du boîtier de jonction passerelle (variante)",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "moderee",
+    severiteLabel: "Gravité modérée — climatisation potentiellement inopérante",
+    description:
+      "Le calculateur de climatisation ne reçoit pas de réponse du boîtier de jonction passerelle (BJP), sur une variante de la ligne de communication.",
+    causes: [
+      { pourcentage: 38, libelle: "Câblage réseau vers le BJP endommagé" },
+      { pourcentage: 28, libelle: "BJP défaillant ou non alimenté" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 14, libelle: "Calculateur de climatisation défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'alimentation et les fusibles du boîtier de jonction passerelle avant toute intervention sur le calculateur de climatisation.",
+    pieces: [
+      { nom: "Diagnostic réseau CAN (atelier équipé)", boutique: "Recommandé", prix: "50-90€" },
+    ],
+  },
+  {
+    code: "U1F2C",
+    titre: "Absence de communication avec le calculateur de climatisation arrière",
+    categorie: "psa",
+    categorieLabel: "PSA — Climatisation",
+    severite: "faible",
+    severiteLabel: "Gravité faible — climatisation arrière potentiellement inopérante",
+    description:
+      "Le calculateur de climatisation avant/multifonction ne parvient pas à communiquer avec la table de commande de climatisation arrière.",
+    causes: [
+      { pourcentage: 40, libelle: "Table de commande arrière non alimentée ou défaillante" },
+      { pourcentage: 28, libelle: "Câblage vers l'arrière du véhicule endommagé" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 12, libelle: "Calculateur de climatisation avant défaillant" },
+    ],
+    avisPro:
+      "Vérifier l'alimentation et les fusibles de la commande de climatisation arrière avant toute intervention sur le câblage.",
+    pieces: [
+      { nom: "Commande de climatisation arrière (façade)", boutique: "Amazon", prix: "50-120€" },
+    ],
+  },
 ];
 
 // Normalise une saisie utilisateur imparfaite (espaces, tirets, lettre de
