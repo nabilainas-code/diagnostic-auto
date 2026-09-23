@@ -29,7 +29,7 @@ export default function NotFound() {
             CODES LES PLUS RECHERCHÉS
           </div>
           <div className="bg-surface border border-line rounded-xl overflow-hidden">
-            {codes.map((c) => (
+            {codes.slice(0, 5).map((c) => (
               <Link
                 key={c.code}
                 href={`/codes/${c.code.toLowerCase()}`}
