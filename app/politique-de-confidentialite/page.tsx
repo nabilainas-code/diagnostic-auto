@@ -46,10 +46,12 @@ export default function ConfidentialitePage() {
           <section>
             <h2 className="font-display font-semibold text-base text-text mb-2">Mesure d&apos;audience</h2>
             <p>
-              Ce site utilise Vercel Web Analytics pour connaître la fréquentation générale
-              (nombre de visites, pages consultées, provenance du trafic). Cet outil ne dépose
-              aucun cookie et ne collecte aucune donnée permettant de vous identifier
-              personnellement — les statistiques sont agrégées et anonymes.
+              Ce site utilise Vercel Web Analytics, ainsi qu&apos;un compteur de visites interne,
+              pour connaître la fréquentation générale (nombre de visites, pages consultées,
+              provenance du trafic, pays et type d&apos;appareil approximatifs). Ces outils ne
+              déposent aucun cookie et ne collectent aucune donnée permettant de vous identifier
+              personnellement — ni adresse IP, ni identifiant de visiteur. Les statistiques sont
+              agrégées et anonymes.
             </p>
           </section>
 
