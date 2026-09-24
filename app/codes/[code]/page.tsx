@@ -12,6 +12,12 @@ const sevStyle = {
   elevee: "text-[#E5484D] bg-[#E5484D]/10",
 };
 
+// Aucun partenariat marchand n'existe encore : on n'attribue aucun prix à
+// une enseigne. Les mentions « Recommandé… » (atelier) restent affichées.
+function mentionPrix(boutique: string) {
+  return boutique.startsWith("Recommandé") ? boutique : "Prix indicatif constaté";
+}
+
 export function generateStaticParams() {
   return codes.map((c) => ({ code: c.code.toLowerCase() }));
 }
@@ -270,13 +276,13 @@ export default async function CodePage({
             )}
 
             <div className="bg-surface border border-line rounded-xl p-6 mt-5">
-              <h3 className="font-display font-semibold text-base mb-3.5">Pièces / offres</h3>
+              <h3 className="font-display font-semibold text-base mb-3.5">Pièces et prix indicatifs</h3>
               {dtc.pieces.map((p) => (
                 <div key={p.nom} className="flex gap-3 items-center bg-surface-2 rounded-lg p-3.5 mb-2.5 last:mb-0">
                   <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-cyan to-[#2E8B84] flex-shrink-0" />
                   <div className="flex-1 min-w-0">
                     <div className="text-sm font-medium">{p.nom}</div>
-                    <div className="text-muted text-xs mt-0.5">{p.boutique}</div>
+                    <div className="text-muted text-xs mt-0.5">{mentionPrix(p.boutique)}</div>
                   </div>
                   <div className="font-mono text-amber font-semibold text-sm flex-shrink-0">{p.prix}</div>
                 </div>
