@@ -122,6 +122,13 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité élevée — évitez de rouler longtemps, risque pour le catalyseur",
     description:
       "Le calculateur détecte des à-coups de rotation moteur caractéristiques d'une combustion incomplète ou absente sur le cylindre 1. Rouler longtemps avec ce défaut peut endommager le catalyseur (carburant non brûlé qui s'y consume).",
+    symptomes: [
+      "Voyant moteur allumé, clignotant quand les ratés sont fréquents",
+      "Moteur qui tremble au ralenti",
+      "À-coups et perte de puissance à l'accélération",
+      "Démarrage parfois plus difficile",
+      "Surconsommation de carburant",
+    ],
     causes: [
       { pourcentage: 35, libelle: "Bougie d'allumage usée ou encrassée" },
       { pourcentage: 28, libelle: "Bobine d'allumage défaillante" },
@@ -129,12 +136,58 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 12, libelle: "Basse compression cylindre 1" },
       { pourcentage: 7, libelle: "Fuite d'admission (joint, durite)" },
     ],
+    diagnostic:
+      "Contrairement à P0300, ce code localise le raté sur le cylindre 1. Il oriente donc vers une pièce propre à ce cylindre : bougie, bobine, injecteur, ou étanchéité du cylindre (compression). Attention, l'emplacement du cylindre 1 varie selon les constructeurs : côté distribution chez certains, côté boîte de vitesses chez d'autres, dont PSA et Renault. Vérifiez-le dans la documentation du véhicule avant toute intervention.",
+    controles: [
+      "Lire le compteur de ratés du cylindre 1 en temps réel et relever les autres codes éventuels",
+      "Inspecter la bougie du cylindre 1 (usure, écartement, dépôts, traces d'huile)",
+      "Permuter la bobine du cylindre 1 avec celle d'un autre cylindre : si le raté se déplace, la bobine est en cause",
+      "Contrôler le connecteur et le câblage de la bobine et de l'injecteur du cylindre 1",
+      "Mesurer la compression du cylindre 1 si bougie et bobine sont saines",
+    ],
     avisPro:
-      "Commencer par contrôler bougie et bobine du cylindre concerné (les plus fréquentes et les moins chères à vérifier), avant d'aller vers un diagnostic compression ou injection.",
+      "Le réflexe du professionnel est le test de permutation : il échange la bobine (ou la bougie) du cylindre 1 avec celle d'un cylindre voisin, efface le code et observe si le raté change de cylindre. Si le défaut suit la pièce, elle est en cause ; s'il reste sur le cylindre 1, il passe à l'injecteur (permutation ou test d'équilibrage), puis à la compression. Cette méthode, qui ne prend que quelques minutes, évite de remplacer des pièces saines.",
+    solutions: [
+      "Remplacer la bougie du cylindre 1, ou le jeu complet si l'entretien est dû",
+      "Remplacer la bobine d'allumage si le raté suit la bobine lors de la permutation",
+      "Réparer le connecteur ou le câblage de la bobine ou de l'injecteur",
+      "Nettoyer ou remplacer l'injecteur du cylindre 1",
+      "En cas de compression faible, faire vérifier soupapes, segments ou joint de culasse",
+      "Effacer le code et contrôler que le compteur de ratés reste à zéro en roulant",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe) et concerne surtout les moteurs essence. Plus fréquent sur les véhicules dont les bougies ou les bobines approchent de leur fin de vie.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Principalement les moteurs essence à bobines individuelles (une bobine par bougie), où une seule bobine défaillante provoque un raté localisé. Les codes équivalents P0302, P0303 et P0304 désignent les cylindres 2, 3 et 4.",
+    },
+    piecesConcernees: [
+      "Bougie du cylindre 1",
+      "Bobine d'allumage du cylindre 1",
+      "Injecteur du cylindre 1",
+      "Connecteurs et faisceau d'allumage et d'injection",
+      "Joints d'admission",
+    ],
     pieces: [
       { nom: "Jeu de bougies d'allumage", boutique: "AutoDoc · livraison 24h", prix: "24€" },
       { nom: "Bobine d'allumage", boutique: "Oscaro · livraison 48h", prix: "38€" },
       { nom: "Injecteur essence", boutique: "Mister-Auto · sur commande", prix: "76€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0301 ?",
+        reponse: "C'est déconseillé sur une longue distance, surtout si le voyant moteur clignote : le carburant non brûlé du cylindre 1 part dans l'échappement et peut détruire le catalyseur. Roulez doucement jusqu'au garage.",
+      },
+      {
+        question: "Où se trouve le cylindre 1 ?",
+        reponse: "Cela dépend du constructeur : il est côté distribution sur certains moteurs, côté boîte de vitesses sur d'autres, notamment chez PSA et Renault. La documentation technique du véhicule ou un garagiste vous le confirmera.",
+      },
+      {
+        question: "Le raté ne se produit qu'à froid, est-ce grave ?",
+        reponse: "Un raté qui n'apparaît qu'au démarrage à froid oriente souvent vers une bougie ou une bobine en fin de vie, ou un injecteur qui fuit légèrement. C'est moins urgent qu'un raté permanent, mais il finit généralement par s'aggraver : mieux vaut le traiter tôt.",
+      },
     ],
   },
   {
@@ -146,6 +199,13 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — consommation et performances affectées",
     description:
       "Le calculateur détecte trop d'oxygène et pas assez de carburant dans le mélange air/essence. Souvent lié à une entrée d'air non mesurée (fuite) ou un manque de pression carburant.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Ralenti instable ou irrégulier",
+      "Hésitations et trous à l'accélération",
+      "Perte de puissance",
+      "Parfois des ratés d'allumage associés (code P0300)",
+    ],
     causes: [
       { pourcentage: 38, libelle: "Fuite d'admission d'air (durite, joint)" },
       { pourcentage: 24, libelle: "Débitmètre d'air (MAF) encrassé ou défaillant" },
@@ -153,12 +213,59 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 12, libelle: "Injecteurs partiellement bouchés" },
       { pourcentage: 6, libelle: "Sonde lambda amont défaillante" },
     ],
+    diagnostic:
+      "Le calculateur ajuste en permanence la quantité de carburant injectée à partir du signal de la sonde lambda amont. P0171 signifie qu'il a dû ajouter beaucoup plus de carburant que prévu, jusqu'à la limite de correction autorisée : il manque du carburant, ou il entre de l'air qui n'est pas mesuré. « Banc 1 » désigne la rangée de cylindres qui contient le cylindre 1 ; un moteur 4 cylindres en ligne n'a qu'un seul banc. Si le code P0174 (banc 2) apparaît aussi sur un moteur en V, la cause est commune aux deux bancs.",
+    controles: [
+      "Lire les corrections de richesse court et long terme au ralenti, puis vers 2 500 tr/min",
+      "Rechercher une prise d'air : durites d'admission, joint de collecteur, recyclage des vapeurs d'huile, durite de servofrein",
+      "Contrôler le débitmètre d'air, dont un encrassement fausse la mesure",
+      "Mesurer la pression de carburant et vérifier le filtre à carburant",
+      "Vérifier l'absence de fuite d'échappement en amont de la sonde lambda amont",
+    ],
     avisPro:
-      "Vérifier en premier les durites d'admission et le joint de débitmètre — c'est la cause la plus fréquente et la plus simple à contrôler visuellement.",
+      "Le professionnel commence par comparer les corrections de richesse au ralenti et à régime moyen. Si la correction est forte au ralenti et diminue en montant en régime, c'est la signature d'une prise d'air : une fuite pèse beaucoup quand le débit d'air est faible, peu à haut régime. Si elle reste forte à tous les régimes, il soupçonne plutôt le débitmètre ou un manque de pression de carburant. Pour trouver une prise d'air, il utilise un générateur de fumée plutôt que de pulvériser un produit au hasard. Il ne remplace la sonde lambda amont qu'en dernier : le plus souvent, elle ne fait que signaler un mélange réellement pauvre.",
+    solutions: [
+      "Remplacer la durite, le joint ou le clapet de recyclage des vapeurs d'huile à l'origine de la prise d'air",
+      "Nettoyer le débitmètre d'air avec un produit adapté, ou le remplacer s'il reste hors tolérance",
+      "Remplacer le filtre à carburant ou traiter un défaut de pompe ou de régulateur de pression",
+      "Nettoyer ou remplacer les injecteurs encrassés",
+      "Réparer une fuite d'échappement en amont de la sonde lambda",
+      "Effacer le code et vérifier que les corrections de richesse reviennent près de zéro",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe), principalement à moteur essence. Plus fréquent sur les véhicules anciens, dont les durites en caoutchouc durcissent et se fendent avec l'âge.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Principalement les moteurs essence régulés par sonde lambda, atmosphériques ou turbocompressés. Sur les moteurs en V (V6, V8), le banc 1 est la rangée qui contient le cylindre 1.",
+    },
+    piecesConcernees: [
+      "Durites et colliers d'admission",
+      "Joint de collecteur d'admission",
+      "Clapet ou reniflard de recyclage des vapeurs d'huile",
+      "Débitmètre d'air",
+      "Filtre et pompe à carburant",
+      "Sonde lambda amont",
+    ],
     pieces: [
       { nom: "Durite admission d'air", boutique: "AutoDoc · livraison 24h", prix: "18€" },
       { nom: "Débitmètre d'air (MAF)", boutique: "Oscaro · livraison 48h", prix: "64€" },
       { nom: "Pompe à carburant", boutique: "Mister-Auto · sur commande", prix: "112€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0171 ?",
+        reponse: "Oui à court terme, mais un mélange trop pauvre fait chauffer davantage la combustion. S'il dure, il peut provoquer des ratés, du cliquetis et une usure prématurée du catalyseur. Faites le diagnostic sans trop tarder.",
+      },
+      {
+        question: "Faut-il changer la sonde lambda ?",
+        reponse: "Rarement en premier. La sonde amont signale un mélange pauvre ; dans la plupart des cas elle mesure juste, et la vraie cause est une prise d'air, le débitmètre ou l'alimentation en carburant.",
+      },
+      {
+        question: "Que signifie « banc 1 » ?",
+        reponse: "C'est la rangée de cylindres qui contient le cylindre 1. Sur un moteur à 4 cylindres en ligne, il n'y a qu'un seul banc ; la précision n'a de sens que sur les moteurs en V, qui en ont deux.",
+      },
     ],
   },
   {
@@ -170,17 +277,68 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité faible — roulable sans risque immédiat",
     description:
       "Le moteur met trop de temps à atteindre sa température de fonctionnement normale. Cause généralement liée au thermostat qui reste bloqué en position ouverte.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Aiguille de température qui monte lentement ou reste basse",
+      "Chauffage de l'habitacle tiède, surtout en hiver",
+      "Surconsommation de carburant, le moteur restant trop froid",
+    ],
     causes: [
       { pourcentage: 55, libelle: "Thermostat bloqué ouvert" },
       { pourcentage: 20, libelle: "Capteur de température moteur défaillant" },
       { pourcentage: 15, libelle: "Niveau de liquide de refroidissement bas" },
       { pourcentage: 10, libelle: "Câblage capteur endommagé" },
     ],
+    diagnostic:
+      "Le calculateur surveille le temps que met le liquide de refroidissement à atteindre sa température de fonctionnement. P0128 signifie qu'elle n'a pas été atteinte dans le délai attendu. Dans la grande majorité des cas, le thermostat reste bloqué en position ouverte : le liquide passe en permanence par le radiateur et le moteur chauffe trop lentement. Le code apparaît surtout en hiver et sur les trajets courts, quand le défaut est le plus visible.",
+    controles: [
+      "Observer la montée en température moteur froid, au ralenti puis en roulant, avec un outil de diagnostic ou l'aiguille du tableau de bord",
+      "Moteur froid, démarrer et surveiller la durite supérieure du radiateur : si elle chauffe dès les premières minutes, le thermostat s'ouvre trop tôt (attention aux brûlures)",
+      "Comparer la valeur du capteur de température moteur avec la température réelle, par exemple au thermomètre infrarouge",
+      "Vérifier que le motoventilateur ne tourne pas en permanence",
+      "Contrôler le niveau de liquide de refroidissement",
+    ],
     avisPro:
-      "Le remplacement du thermostat est peu coûteux et résout la grande majorité des cas — c'est le premier réflexe avant d'aller chercher plus loin.",
+      "Le professionnel ne se contente pas de remplacer le thermostat : il vérifie d'abord que la mesure est juste. Il compare la température lue par le calculateur avec la température réelle du moteur ; si elles diffèrent, c'est le capteur de température qui est en cause, pas le thermostat. Si la mesure est juste et que le moteur monte lentement en température, il confirme le thermostat bloqué ouvert par le contrôle de la durite de radiateur. Il remplace alors le thermostat avec son joint et purge soigneusement le circuit : une poche d'air mal purgée peut provoquer une surchauffe.",
+    solutions: [
+      "Remplacer le thermostat (et son joint ou son boîtier selon le montage)",
+      "Remplacer le capteur de température de liquide de refroidissement si sa mesure est fausse",
+      "Réparer un motoventilateur qui tourne en permanence (relais, commande)",
+      "Compléter ou remplacer le liquide avec celui préconisé par le constructeur, puis purger le circuit",
+      "Effacer le code et vérifier la montée en température sur un trajet complet",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe). Plus fréquent en hiver et sur les véhicules qui font surtout des trajets courts.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Tous les moteurs essence et diesel à refroidissement liquide régulé par thermostat, y compris les thermostats pilotés électriquement de certains moteurs récents. Les diesels, qui chauffent naturellement plus lentement, rendent le défaut particulièrement visible en hiver.",
+    },
+    piecesConcernees: [
+      "Thermostat ou boîtier thermostatique",
+      "Joint de thermostat",
+      "Capteur de température de liquide de refroidissement",
+      "Liquide de refroidissement",
+      "Relais de motoventilateur",
+    ],
     pieces: [
       { nom: "Thermostat moteur", boutique: "AutoDoc · livraison 24h", prix: "16€" },
       { nom: "Capteur de température moteur", boutique: "Oscaro · livraison 48h", prix: "22€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0128 ?",
+        reponse: "Oui, ce n'est pas une panne urgente : le moteur ne risque pas la surchauffe, au contraire il reste trop froid. Mais il consomme plus, s'use plus vite et chauffe mal l'habitacle. À réparer dans les semaines qui viennent.",
+      },
+      {
+        question: "Pourquoi le code apparaît-il surtout en hiver ?",
+        reponse: "Par temps froid, un thermostat bloqué ouvert laisse le radiateur refroidir le moteur en permanence : il n'atteint plus sa température dans le délai surveillé par le calculateur. En été, le même défaut passe souvent inaperçu.",
+      },
+      {
+        question: "Faut-il remplacer tout le liquide de refroidissement ?",
+        reponse: "Le remplacement du thermostat fait perdre une partie du liquide. Il faut au minimum compléter avec le liquide préconisé et purger l'air du circuit. Si le liquide est ancien, c'est l'occasion de le remplacer entièrement.",
+      },
     ],
   },
 
@@ -194,6 +352,13 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité élevée — évitez de rouler longtemps, risque pour le catalyseur",
     description:
       "Le calculateur détecte des ratés de combustion sur plusieurs cylindres à la fois, ou sans schéma identifiable. Contrairement à un raté sur un seul cylindre, ce code pointe souvent vers une cause commune à tout le moteur (carburant, dépression, distribution) plutôt qu'une pièce isolée.",
+    symptomes: [
+      "Voyant moteur allumé, souvent clignotant pendant les ratés",
+      "Moteur qui tremble ou broute, surtout au ralenti et à l'accélération",
+      "Perte de puissance et accélérations hachées",
+      "Surconsommation de carburant",
+      "Odeur de carburant imbrûlé à l'échappement",
+    ],
     causes: [
       { pourcentage: 30, libelle: "Plusieurs bougies d'allumage usées" },
       { pourcentage: 22, libelle: "Fuite de dépression généralisée (durite, joint de collecteur)" },
@@ -201,12 +366,59 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 15, libelle: "Plusieurs bobines d'allumage défaillantes" },
       { pourcentage: 15, libelle: "Calage de la distribution incorrect" },
     ],
+    diagnostic:
+      "P0300 signifie que les ratés ne concernent pas un seul cylindre identifié, ou qu'ils se déplacent d'un cylindre à l'autre. C'est un indice en soi : une cause commune à tous les cylindres (mélange air/carburant, prise d'air, pression de carburant, calage de la distribution) est plus probable qu'une pièce isolée. Un ou plusieurs codes P0301 à P0304 accompagnent souvent P0300 : ils désignent alors les cylindres les plus touchés.",
+    controles: [
+      "Relever les autres codes présents (P0301 à P0304, P0171, codes de capteurs) et les compteurs de ratés par cylindre en temps réel",
+      "Contrôler l'état des bougies et tester les bobines, par exemple en permutant une bobine pour voir si le raté la suit",
+      "Rechercher une prise d'air à l'admission (durites, joint de collecteur, recyclage des vapeurs d'huile), idéalement au générateur de fumée",
+      "Mesurer la pression de carburant et lire les corrections de richesse",
+      "Vérifier le calage de la distribution et faire un test de compression si les ratés persistent sur plusieurs cylindres",
+    ],
     avisPro:
-      "Contrôler globalement avant de cibler un cylindre en particulier : état des bougies, pression carburant, recherche de fuites de dépression au fumigène. Si le défaut persiste, lire les ratés cylindre par cylindre à la valise.",
+      "Face à un P0300, un professionnel ne remplace pas les bobines une à une : comme les ratés sont répartis, il cherche d'abord ce qui est commun à tous les cylindres. Il lit les compteurs de ratés par cylindre et les corrections de richesse en temps réel ; des corrections fortement positives orientent vers une prise d'air ou un manque de carburant, alors qu'un mélange correct oriente vers l'allumage. Il contrôle ensuite les bougies (usure, écartement, dépôts), teste les bobines, puis mesure la pression de carburant. Le calage de la distribution et la compression ne sont vérifiés qu'en dernier, si les ratés persistent malgré un allumage et une alimentation sains.",
+    solutions: [
+      "Remplacer le jeu de bougies s'il est usé ou arrive à l'échéance d'entretien",
+      "Remplacer la ou les bobines défaillantes identifiées lors des tests",
+      "Réparer la prise d'air à l'admission (durite fendue, joint de collecteur)",
+      "Corriger un défaut d'alimentation : filtre à carburant, pompe, régulateur de pression",
+      "Faire corriger le calage de la distribution s'il est décalé",
+      "Effacer le code et refaire un essai routier pour vérifier que les compteurs de ratés restent à zéro",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe) et concerne surtout les moteurs essence. Plus fréquent sur les véhicules dont les bougies ont dépassé leur intervalle de remplacement, ou convertis au GPL, qui sollicite davantage l'allumage.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Principalement les moteurs essence, atmosphériques ou turbocompressés. Les moteurs essence à injection directe sont plus sensibles à l'encrassement des soupapes d'admission, qui peut provoquer des ratés répartis sur plusieurs cylindres.",
+    },
+    piecesConcernees: [
+      "Bougies d'allumage",
+      "Bobines d'allumage",
+      "Durites et joints d'admission",
+      "Filtre et pompe à carburant",
+      "Injecteurs",
+      "Kit de distribution",
+    ],
     pieces: [
       { nom: "Jeu de bougies d'allumage", boutique: "AutoDoc · livraison 24h", prix: "24€" },
       { nom: "Kit durites admission", boutique: "Oscaro · livraison 48h", prix: "29€" },
       { nom: "Filtre à carburant", boutique: "Mister-Auto · sur commande", prix: "19€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0300 ?",
+        reponse: "C'est déconseillé au-delà de quelques kilomètres, surtout si le voyant moteur clignote. Le carburant non brûlé part dans l'échappement et peut surchauffer puis détruire le catalyseur, une réparation bien plus chère que la cause initiale. Roulez doucement jusqu'au garage le plus proche.",
+      },
+      {
+        question: "Quelle différence entre P0300 et P0301 ?",
+        reponse: "P0301 désigne un raté localisé sur le cylindre 1 (P0302 pour le cylindre 2, etc.), ce qui oriente vers une pièce de ce cylindre. P0300 signale des ratés répartis ou aléatoires : la cause est plus souvent commune à tout le moteur, comme une prise d'air ou un problème d'alimentation.",
+      },
+      {
+        question: "Changer les bougies suffit-il ?",
+        reponse: "Parfois, si elles sont usées. Mais si les ratés reviennent après le remplacement, il faut chercher plus loin : bobines, prise d'air, pression de carburant. Changer des pièces au hasard coûte souvent plus cher qu'un diagnostic.",
+      },
     ],
   },
   {
@@ -381,6 +593,13 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — surconsommation et encrassement moteur",
     description:
       "À l'inverse de P0171, le calculateur détecte trop de carburant par rapport à l'oxygène disponible dans le mélange. Peut provoquer une surconsommation, une odeur d'essence à l'échappement et un encrassement progressif.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Surconsommation de carburant",
+      "Fumée noire ou odeur d'essence à l'échappement",
+      "Ralenti irrégulier, voire ratés d'allumage",
+      "Bougies noircies par la suie",
+    ],
     causes: [
       { pourcentage: 30, libelle: "Injecteur qui goutte ou collé ouvert" },
       { pourcentage: 22, libelle: "Capteur de pression carburant défaillant" },
@@ -388,12 +607,60 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 15, libelle: "Filtre à air très encrassé" },
       { pourcentage: 13, libelle: "Régulateur de pression carburant défaillant" },
     ],
+    diagnostic:
+      "C'est l'inverse de P0171 : le calculateur a dû retirer beaucoup de carburant par rapport à sa consigne, jusqu'à la limite de correction autorisée. Il entre trop de carburant, ou moins d'air que ce qui est mesuré. Les causes typiques sont un injecteur qui fuit, une pression de carburant trop élevée, un débitmètre qui surestime l'air, un capteur de température qui fait croire au calculateur que le moteur est froid, ou une électrovanne de purge du canister bloquée ouverte, qui envoie des vapeurs d'essence dans l'admission.",
+    controles: [
+      "Lire les corrections de richesse court et long terme au ralenti et à régime moyen",
+      "Contrôler le filtre à air et le débitmètre d'air",
+      "Vérifier l'électrovanne de purge du canister, qui doit rester fermée moteur froid au ralenti",
+      "Comparer la valeur du capteur de température moteur à la température réelle",
+      "Mesurer la pression de carburant et son maintien moteur arrêté, pour détecter un régulateur défaillant ou un injecteur qui fuit",
+    ],
     avisPro:
-      "Contrôler d'abord l'état du filtre à air et la pression carburant avant de suspecter les injecteurs, plus coûteux à remplacer.",
+      "Le professionnel commence par ce qui est simple et fréquent : le filtre à air, le débitmètre et l'électrovanne de purge du canister, qu'il teste en obturant temporairement sa durite pour voir si les corrections changent. Il vérifie ensuite que le capteur de température moteur dit vrai, car un capteur qui croit le moteur froid enrichit en permanence le mélange. Ce n'est qu'après qu'il mesure la pression de carburant et son maintien moteur arrêté, pour détecter un régulateur défaillant ou un injecteur qui goutte. Il traite rapidement ce défaut, qui encrasse les bougies, dilue l'huile moteur et peut endommager le catalyseur.",
+    solutions: [
+      "Remplacer le filtre à air colmaté",
+      "Nettoyer ou remplacer le débitmètre s'il surestime le débit d'air",
+      "Remplacer l'électrovanne de purge du canister si elle reste ouverte",
+      "Remplacer le capteur de température moteur si sa valeur est fausse",
+      "Remplacer le régulateur de pression ou l'injecteur qui fuit",
+      "Remplacer les bougies encrassées une fois la cause corrigée, puis effacer le code",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe), principalement à moteur essence.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Principalement les moteurs essence régulés par sonde lambda, à injection indirecte comme directe. Sur les moteurs en V, le banc 1 est la rangée qui contient le cylindre 1 ; le code équivalent pour le banc 2 est P0175.",
+    },
+    piecesConcernees: [
+      "Filtre à air",
+      "Débitmètre d'air",
+      "Électrovanne de purge du canister",
+      "Capteur de température de liquide de refroidissement",
+      "Régulateur de pression de carburant",
+      "Injecteurs",
+      "Bougies d'allumage",
+    ],
     pieces: [
       { nom: "Filtre à air", boutique: "AutoDoc · livraison 24h", prix: "14€" },
       { nom: "Régulateur de pression carburant", boutique: "Oscaro · livraison 48h", prix: "47€" },
       { nom: "Sonde lambda amont", boutique: "Mister-Auto · sur commande", prix: "58€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0172 ?",
+        reponse: "Quelques jours, oui, mais pas longtemps : l'excès de carburant encrasse les bougies, dilue l'huile moteur et surchauffe le catalyseur. Le défaut coûte aussi du carburant à chaque kilomètre.",
+      },
+      {
+        question: "Pourquoi une odeur d'essence ?",
+        reponse: "Le carburant en excès ne brûle pas entièrement et part à l'échappement. Si l'odeur est forte près du véhicule à l'arrêt, vérifiez aussi l'absence de fuite de carburant, qui présente un risque d'incendie.",
+      },
+      {
+        question: "Quelle différence avec P0171 ?",
+        reponse: "P0171 signale un mélange trop pauvre, P0172 un mélange trop riche. Les deux codes reposent sur les mêmes mesures, mais leurs causes sont différentes, parfois opposées.",
+      },
     ],
   },
   {
@@ -405,18 +672,71 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — performances et consommation affectées",
     description:
       "Le débitmètre mesure la quantité d'air admise pour calculer la quantité de carburant à injecter. Une valeur hors plage fausse tout le calcul du mélange air/carburant.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Perte de puissance, parfois passage en mode dégradé",
+      "Ralenti instable, voire calage",
+      "Fumée noire à l'accélération sur moteur diesel",
+      "Surconsommation de carburant",
+    ],
     causes: [
       { pourcentage: 40, libelle: "Débitmètre encrassé" },
       { pourcentage: 25, libelle: "Fuite d'admission après le débitmètre" },
       { pourcentage: 18, libelle: "Filtre à air colmaté" },
       { pourcentage: 17, libelle: "Câblage ou connecteur défaillant" },
     ],
+    diagnostic:
+      "Le débitmètre mesure la quantité d'air qui entre dans le moteur. P0101 ne signale pas une coupure électrique mais une mesure incohérente : le calculateur compare la valeur du débitmètre à ce qu'il attend selon le régime, la position de l'accélérateur ou la pression d'admission, et trouve un écart. Le débitmètre peut être encrassé, mais l'air peut aussi réellement manquer ou entrer ailleurs (fuite, filtre bouché). Sur un diesel, une vanne EGR bloquée ouverte est une cause classique : les gaz recirculés prennent la place de l'air frais.",
+    controles: [
+      "Relever la valeur du débitmètre (en g/s ou kg/h) au ralenti et en accélération, et la comparer aux valeurs attendues",
+      "Contrôler l'état du filtre à air et de son boîtier",
+      "Rechercher une fuite entre le débitmètre et le moteur (durites, colliers, échangeur d'air sur moteur turbo)",
+      "Sur diesel, vérifier que la vanne EGR se ferme correctement",
+      "Contrôler le connecteur et l'alimentation électrique du débitmètre",
+    ],
     avisPro:
-      "Nettoyer le débitmètre au spray spécifique avant tout remplacement — c'est la cause la plus fréquente et la moins chère à corriger.",
+      "Un professionnel ne remplace pas le débitmètre sur la seule foi du code. Il lit la valeur mesurée en roulant et la compare aux valeurs théoriques, puis vérifie tout ce qui peut fausser la mesure sans que le débitmètre soit en panne : filtre à air, fuite entre le débitmètre et le moteur, vanne EGR qui reste ouverte sur diesel. Débrancher le débitmètre donne un indice : si le moteur tourne mieux avec les valeurs de secours du calculateur, le débitmètre est suspect. En cas de remplacement, il privilégie une pièce de qualité d'origine, car les débitmètres bas de gamme sont une source fréquente de récidive.",
+    solutions: [
+      "Remplacer le filtre à air s'il est colmaté",
+      "Nettoyer l'élément de mesure du débitmètre avec un nettoyant spécifique, sans jamais le toucher ni souffler à l'air comprimé",
+      "Réparer une fuite d'air entre le débitmètre et le moteur",
+      "Nettoyer ou remplacer la vanne EGR si elle reste ouverte (diesel)",
+      "Remplacer le débitmètre si sa mesure reste hors tolérance",
+      "Effacer le code et contrôler les valeurs en essai routier",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe) équipé d'un débitmètre d'air. Plus fréquent sur les diesels et sur les véhicules dont le filtre à air est peu entretenu.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence et diesel équipés d'un débitmètre d'air à film chaud. Certains moteurs n'en ont pas et calculent le débit d'air à partir d'un capteur de pression d'admission : ils affichent alors d'autres codes.",
+    },
+    piecesConcernees: [
+      "Débitmètre d'air",
+      "Filtre à air",
+      "Durites et colliers d'admission",
+      "Échangeur d'air (intercooler) et ses durites",
+      "Vanne EGR (diesel)",
+    ],
     pieces: [
       { nom: "Débitmètre d'air (MAF)", boutique: "Oscaro · livraison 48h", prix: "64€" },
       { nom: "Filtre à air", boutique: "AutoDoc · livraison 24h", prix: "14€" },
       { nom: "Nettoyant débitmètre", boutique: "AutoDoc · livraison 24h", prix: "9€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0101 ?",
+        reponse: "Oui, généralement, mais le moteur peut manquer de puissance ou passer en mode dégradé, ce qui gêne pour doubler ou s'insérer. Sur un diesel, un mauvais dosage peut aussi encrasser plus vite la vanne EGR et le filtre à particules.",
+      },
+      {
+        question: "Nettoyer le débitmètre suffit-il ?",
+        reponse: "Parfois, si l'élément est simplement encrassé par de l'huile ou de la poussière. Utilisez uniquement un nettoyant spécial débitmètre, sans toucher l'élément. Si le défaut revient, le débitmètre est probablement usé.",
+      },
+      {
+        question: "Le code peut-il revenir après avoir changé le débitmètre ?",
+        reponse: "Oui, si la vraie cause était ailleurs (fuite d'air, filtre bouché, vanne EGR) ou si la pièce de remplacement est de mauvaise qualité.",
+      },
     ],
   },
   {
@@ -561,18 +881,71 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — roulable, à traiter sous 2-3 semaines",
     description:
       "La vanne EGR recycle une partie des gaz d'échappement pour réduire les émissions d'oxydes d'azote. Un débit insuffisant signale le plus souvent un encrassement ou un blocage.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Souvent aucun symptôme perceptible à la conduite",
+      "Légère perte de puissance ou passage en mode dégradé sur certains véhicules",
+      "Cliquetis à l'accélération sur certains moteurs essence",
+    ],
     causes: [
       { pourcentage: 45, libelle: "Vanne EGR encrassée ou bloquée fermée" },
       { pourcentage: 25, libelle: "Durite EGR bouchée par les dépôts de calamine" },
       { pourcentage: 18, libelle: "Capteur de position de la vanne EGR défaillant" },
       { pourcentage: 12, libelle: "Électrovanne de commande EGR défaillante" },
     ],
+    diagnostic:
+      "La vanne EGR renvoie une partie des gaz d'échappement dans l'admission pour abaisser la température de combustion et réduire les oxydes d'azote. P0401 signifie que le calculateur ne constate pas l'effet attendu quand il commande l'ouverture de la vanne : le débit de gaz recirculés est trop faible. Le plus souvent, la vanne ou ses conduits sont colmatés par la calamine, surtout sur les diesels qui roulent beaucoup en ville ; la vanne peut aussi être grippée, ou sa commande défaillante.",
+    controles: [
+      "Comparer la position commandée et la position réelle de la vanne EGR en temps réel",
+      "Tester l'ouverture et la fermeture de la vanne avec l'outil de diagnostic (test actionneur)",
+      "Déposer la vanne et inspecter la calamine sur le clapet et dans les conduits",
+      "Contrôler la commande : électrovanne et durites de dépression sur vanne pneumatique, connecteur sur vanne électrique",
+      "Vérifier le refroidisseur EGR et ses conduits sur les moteurs qui en sont équipés",
+    ],
     avisPro:
-      "Le nettoyage de la vanne EGR (dépose + décalaminage) résout la majorité des cas avant d'envisager un remplacement complet.",
+      "Le professionnel regarde d'abord si la vanne obéit : il compare la position commandée à la position mesurée et lance un test actionneur. Si la vanne suit bien mais que le code revient, ce sont les conduits d'EGR ou l'admission qui sont bouchés par la calamine, et changer la vanne ne servira à rien. Si la vanne est grippée, un nettoyage peut suffire quand le dépôt est léger ; un remplacement s'impose si son moteur électrique ou son capteur de position est défaillant. Après l'intervention, il réalise l'apprentissage de la vanne avec l'outil de diagnostic quand le constructeur l'exige.",
+    solutions: [
+      "Nettoyer la vanne EGR et ses conduits si l'encrassement est modéré",
+      "Remplacer la vanne EGR si elle est grippée ou si son moteur ou son capteur est défaillant",
+      "Remplacer l'électrovanne de commande ou les durites de dépression défectueuses (vanne pneumatique)",
+      "Décalaminer l'admission si les conduits sont fortement obstrués",
+      "Réaliser l'apprentissage de la vanne si le constructeur le prévoit, puis effacer le code",
+      "Rouler régulièrement à régime soutenu sur voie rapide pour limiter l'encrassement",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD équipé d'une vanne EGR, en particulier les diesels. Plus fréquent sur les véhicules qui font surtout des trajets urbains courts, où la calamine s'accumule plus vite.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs diesel en priorité, et moteurs essence équipés d'une recirculation externe des gaz d'échappement. Selon l'âge et la conception du moteur, la vanne est à commande pneumatique (par dépression) ou électrique.",
+    },
+    piecesConcernees: [
+      "Vanne EGR",
+      "Joint de vanne EGR",
+      "Électrovanne de commande EGR (vanne pneumatique)",
+      "Durites de dépression",
+      "Refroidisseur EGR",
+      "Conduits d'admission",
+    ],
     pieces: [
       { nom: "Vanne EGR", boutique: "Mister-Auto · sur commande", prix: "98€" },
       { nom: "Kit nettoyage décalaminant", boutique: "AutoDoc · livraison 24h", prix: "22€" },
       { nom: "Joint vanne EGR", boutique: "Oscaro · livraison 48h", prix: "8€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0401 ?",
+        reponse: "Oui dans la plupart des cas, le véhicule reste utilisable. Mais les émissions polluantes augmentent, le moteur peut passer en mode dégradé sur certains modèles, et l'encrassement a tendance à s'aggraver.",
+      },
+      {
+        question: "Faut-il nettoyer ou remplacer la vanne EGR ?",
+        reponse: "Si la vanne est simplement encrassée et que sa partie électrique fonctionne, un nettoyage soigné suffit souvent. Si elle ne répond plus au test actionneur ou si son capteur de position est défaillant, il faut la remplacer.",
+      },
+      {
+        question: "Peut-on supprimer la vanne EGR ?",
+        reponse: "Non : désactiver ou supprimer un organe antipollution est interdit sur la voie publique et expose à des sanctions. Cela augmente aussi fortement les émissions d'oxydes d'azote.",
+      },
     ],
   },
   {
@@ -4506,17 +4879,71 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité élevée — perte de puissance, risque de non-démarrage",
     description:
       "Le calculateur détecte une pression insuffisante dans la rampe commune (rail) d'injection, ce qui peut provoquer une perte de puissance, des à-coups ou l'impossibilité de démarrer, notamment sur les moteurs diesel à injection common-rail.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Perte de puissance et passage en mode dégradé",
+      "Démarrage difficile ou impossible",
+      "À-coups à l'accélération",
+      "Moteur qui cale en roulant dans les cas sévères",
+    ],
     causes: [
       { pourcentage: 35, libelle: "Pompe haute pression défaillante ou usée" },
       { pourcentage: 25, libelle: "Filtre à carburant colmaté" },
       { pourcentage: 20, libelle: "Fuite dans le circuit basse ou haute pression" },
       { pourcentage: 20, libelle: "Capteur de pression rail défaillant (fausse mesure)" },
     ],
+    diagnostic:
+      "Sur un moteur à injection directe (diesel à rampe commune ou essence à injection directe), la pompe haute pression alimente une rampe dont la pression est mesurée en permanence. P0087 signifie que la pression mesurée reste en dessous de la consigne. Le problème peut venir de l'alimentation basse pression (filtre colmaté, pompe de gavage, prise d'air), de la pompe haute pression ou de son régulateur, d'injecteurs qui laissent fuir trop de carburant, ou du capteur de pression lui-même.",
+    controles: [
+      "Comparer la pression de rampe mesurée à la consigne au démarrage, au ralenti et en accélération",
+      "Vérifier l'âge et l'état du filtre à carburant, et purger l'eau éventuelle sur diesel",
+      "Contrôler la pression et le débit de l'alimentation basse pression, et rechercher des bulles d'air dans le circuit",
+      "Mesurer le débit de retour des injecteurs (test de fuite des injecteurs diesel)",
+      "Contrôler le régulateur de la pompe haute pression et le capteur de pression de rampe",
+    ],
     avisPro:
-      "Changer le filtre à carburant est le premier réflexe à avoir, peu coûteux, avant d'envisager une pompe haute pression, bien plus onéreuse à remplacer.",
+      "Le professionnel remonte le circuit dans le sens du carburant. Il commence par l'alimentation basse pression : un filtre à carburant colmaté ou une prise d'air suffit à affamer la pompe haute pression, et c'est la cause la plus fréquente et la moins coûteuse. Il mesure ensuite les retours des injecteurs, car un injecteur qui fuit fait chuter la pression de toute la rampe. Il ne met en cause la pompe haute pression qu'après ces contrôles. Si la pompe a produit de la limaille, il faut aussi remplacer les injecteurs et nettoyer tout le circuit, sinon les pièces neuves seront détruites à leur tour.",
+    solutions: [
+      "Remplacer le filtre à carburant et purger le circuit",
+      "Supprimer la prise d'air ou remplacer la pompe de gavage défaillante",
+      "Remplacer l'injecteur dont le débit de retour est excessif",
+      "Remplacer le régulateur de la pompe haute pression ou le capteur de pression de rampe défaillant",
+      "Remplacer la pompe haute pression si elle est usée, en nettoyant tout le circuit en cas de limaille",
+      "Effacer le code et contrôler la pression de rampe en essai routier",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD à injection directe, diesel à rampe commune comme essence. Plus fréquent sur les diesels dont le filtre à carburant n'a pas été remplacé selon les préconisations, et par temps froid.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs diesel à rampe commune (common rail) et moteurs essence à injection directe, qui utilisent tous deux une pompe haute pression et une rampe d'injection surveillée par un capteur de pression.",
+    },
+    piecesConcernees: [
+      "Filtre à carburant",
+      "Pompe de gavage (basse pression)",
+      "Régulateur de la pompe haute pression",
+      "Capteur de pression de rampe",
+      "Injecteurs",
+      "Pompe haute pression",
+    ],
     pieces: [
       { nom: "Filtre à carburant", boutique: "AutoDoc · livraison 24h", prix: "18€" },
       { nom: "Pompe haute pression diesel", boutique: "Mister-Auto · sur commande", prix: "250-450€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0087 ?",
+        reponse: "C'est déconseillé : le moteur peut caler en roulant, ce qui est dangereux, par exemple pendant un dépassement ou sur autoroute. Si le véhicule démarre, roulez doucement jusqu'au garage le plus proche.",
+      },
+      {
+        question: "Est-ce le filtre à carburant ?",
+        reponse: "C'est la première chose à vérifier, surtout s'il n'a pas été changé depuis longtemps ou après un plein de mauvaise qualité. S'il est récent, il faut chercher plus loin.",
+      },
+      {
+        question: "Pourquoi le défaut apparaît-il surtout par temps froid ?",
+        reponse: "En hiver, le gazole peut figer (paraffine) et colmater le filtre, surtout avec un carburant non hivernal ou un filtre ancien. Un réchauffeur de gazole défaillant favorise aussi le problème.",
+      },
     ],
   },
   {
@@ -5416,17 +5843,70 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité élevée — perte de puissance nette",
     description:
       "Le calculateur détecte que la pression de suralimentation générée par le turbocompresseur est inférieure à la valeur attendue, ce qui se traduit par une nette perte de puissance, en particulier à l'accélération.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Perte de puissance nette, surtout à l'accélération et en côte",
+      "Passage en mode dégradé (moteur bridé)",
+      "Sifflement anormal à l'accélération, signe d'une fuite d'air sous pression",
+      "Fumée noire à l'accélération sur moteur diesel",
+    ],
     causes: [
       { pourcentage: 32, libelle: "Fuite dans le circuit d'admission (durites, colliers)" },
       { pourcentage: 28, libelle: "Électrovanne de commande de wastegate défaillante" },
       { pourcentage: 22, libelle: "Turbocompresseur usé (jeu excessif, ailettes endommagées)" },
       { pourcentage: 18, libelle: "Capteur de pression de suralimentation défaillant (fausse mesure)" },
     ],
+    diagnostic:
+      "Le calculateur compare la pression de suralimentation mesurée à la consigne qu'il demande au turbo. P0299 signifie que la pression reste trop basse. Pour protéger le moteur, le calculateur passe souvent en mode dégradé, ce qui explique la perte de puissance soudaine. Dans la majorité des cas, le turbo lui-même n'est pas en cause : l'air s'échappe par une durite ou un collier, ou la commande du turbo (géométrie variable ou wastegate) ne fonctionne pas correctement.",
+    controles: [
+      "Comparer en roulant la pression de suralimentation mesurée et la pression demandée",
+      "Inspecter toutes les durites et colliers entre le turbo, l'échangeur d'air et le collecteur d'admission (traces d'huile, fissures, colliers desserrés)",
+      "Tester la commande du turbo : électrovanne, durites de dépression, tige de géométrie variable ou de wastegate",
+      "Contrôler le capteur de pression de suralimentation : moteur arrêté, contact mis, il doit indiquer la pression atmosphérique",
+      "En dernier recours, vérifier le jeu de l'axe du turbo et l'état des ailettes",
+    ],
     avisPro:
-      "Vérifier en premier l'étanchéité des durites d'admission sous le capot — une fuite, même petite, est la cause la plus fréquente et la moins coûteuse à corriger avant de suspecter le turbo lui-même.",
+      "Avant de soupçonner le turbo, le professionnel recherche la fuite : il met le circuit d'admission sous pression avec un outil dédié ou utilise un générateur de fumée, ce qui révèle une durite poreuse ou un collier desserré en quelques minutes. Il vérifie ensuite la commande du turbo, souvent grippée par la calamine sur les turbos à géométrie variable, et le capteur de pression, qui peut simplement mal mesurer. Le remplacement du turbo n'intervient qu'en dernier, et il cherche alors aussi la cause de sa panne (lubrification, filtre à air) : sinon, le turbo neuf risque de casser à son tour.",
+    solutions: [
+      "Remplacer la durite ou le collier qui fuit",
+      "Nettoyer ou débloquer la géométrie variable du turbo si elle est grippée",
+      "Remplacer l'électrovanne de commande ou les durites de dépression défectueuses",
+      "Remplacer le capteur de pression de suralimentation s'il mesure faux",
+      "Remplacer le turbo s'il est endommagé, en traitant la cause de sa panne (huile, filtre à air)",
+      "Effacer le code et vérifier la pression de suralimentation en essai routier",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD équipé d'un turbocompresseur, diesel comme essence. Plus fréquent sur les véhicules à fort kilométrage, dont les durites d'admission ont vieilli.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Tous les moteurs turbocompressés : diesels, le plus souvent équipés d'un turbo à géométrie variable, et moteurs essence turbo, généralement régulés par une wastegate.",
+    },
+    piecesConcernees: [
+      "Durites et colliers d'admission turbo",
+      "Échangeur d'air (intercooler)",
+      "Électrovanne de commande du turbo",
+      "Capteur de pression de suralimentation",
+      "Turbocompresseur",
+    ],
     pieces: [
       { nom: "Kit durites/colliers admission turbo", boutique: "AutoDoc · livraison 24h", prix: "25-45€" },
       { nom: "Turbocompresseur (échange standard)", boutique: "Mister-Auto · sur commande", prix: "350-650€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0299 ?",
+        reponse: "Vous pouvez rouler prudemment jusqu'au garage, en mode dégradé. Évitez les fortes accélérations et l'autoroute : si le turbo lui-même est abîmé, forcer peut aggraver les dégâts. Arrêtez-vous immédiatement en cas de fumée bleue abondante ou de bruit métallique.",
+      },
+      {
+        question: "Le turbo est-il forcément à changer ?",
+        reponse: "Non. Dans la majorité des cas, la cause est une fuite d'air, une commande de turbo grippée ou un capteur défaillant, des réparations bien moins coûteuses qu'un turbo.",
+      },
+      {
+        question: "Pourquoi la puissance revient-elle après avoir coupé le moteur ?",
+        reponse: "Le calculateur sort du mode dégradé au redémarrage, mais la cause demeure : le voyant et la perte de puissance reviennent dès que la situation se reproduit.",
+      },
     ],
   },
   {
@@ -5498,19 +5978,74 @@ export const codes: CodeDefaut[] = [
     categorie: "p24xx",
     categorieLabel: "FAP & turbo",
     severite: "moderee",
-    severiteLabel: "Gravité modérée — surveiller avant colmatage complet",
+    severiteLabel: "Gravité modérée — roulable, à traiter avant le contrôle technique",
     description:
-      "Le calculateur détecte que le filtre à particules ne retient plus suffisamment de suie par rapport au seuil attendu, ce qui peut annoncer un FAP encrassé, fissuré ou en fin de vie.",
+      "Le calculateur surveille l'efficacité du filtre à particules grâce à un capteur qui mesure l'écart de pression entre l'entrée et la sortie du filtre. P2002 signifie que cet écart est trop faible : les gaz traversent le filtre sans résistance, comme s'il était fissuré, fondu ou absent. Une fausse mesure donne le même résultat, et c'est une cause fréquente.",
+    symptomes: [
+      "Voyant moteur ou voyant FAP allumé",
+      "Généralement aucune perte de puissance",
+      "Suie noire visible à la sortie d'échappement si le filtre est fissuré",
+      "Échec à la mesure d'opacité des fumées lors du contrôle technique",
+    ],
     causes: [
-      { pourcentage: 35, libelle: "FAP encrassé par une utilisation prolongée en trajets courts (régénérations incomplètes)" },
-      { pourcentage: 28, libelle: "Capteur de pression différentielle FAP défaillant (fausse mesure)" },
-      { pourcentage: 22, libelle: "FAP fissuré ou percé, laissant passer les particules" },
-      { pourcentage: 15, libelle: "Additif FAP (si équipé) épuisé" },
+      { pourcentage: 35, libelle: "Durite du capteur de pression différentielle débranchée, fendue ou inversée" },
+      { pourcentage: 30, libelle: "Capteur de pression différentielle FAP défaillant (fausse mesure)" },
+      { pourcentage: 25, libelle: "FAP fissuré ou fondu, laissant passer les particules" },
+      { pourcentage: 10, libelle: "Fuite d'échappement au niveau du FAP ou de ses raccords" },
+    ],
+    diagnostic:
+      "Attention à ne pas confondre ce code avec un filtre encrassé : un FAP colmaté provoque au contraire une pression trop élevée et d'autres codes (P2463, P244B). P2002 indique une pression trop faible. Soit le filtre ne retient plus rien (fissure, fonte après une régénération ratée), soit la mesure est fausse : un capteur de pression différentielle défaillant ou une de ses deux petites durites débranchée, percée ou inversée produit exactement le même code, pour une réparation bien moins coûteuse.",
+    controles: [
+      "Lire la pression différentielle du FAP au ralenti puis à régime élevé : elle doit augmenter avec le régime",
+      "Inspecter les deux durites du capteur de pression différentielle (fissure, débranchement, inversion, bouchage)",
+      "Contrôler le capteur et son connecteur",
+      "Observer la sortie d'échappement : de la suie noire indique que le filtre ne retient plus les particules",
+      "Vérifier l'absence de fuite d'échappement autour du FAP",
     ],
     avisPro:
-      "Un usage principalement urbain empêche les régénérations complètes du FAP — un trajet prolongé sur route ou autoroute permet parfois de relancer une régénération avant d'envisager un remplacement coûteux.",
+      "Le professionnel ne condamne jamais le FAP sans avoir vérifié la mesure. Il contrôle d'abord les deux petites durites qui relient le filtre au capteur de pression différentielle : fondues, fendues ou inversées après une intervention, elles faussent tout. Il compare ensuite la pression différentielle affichée à différents régimes ; une valeur qui ne bouge pas trahit un capteur ou une durite en cause. Si la mesure est juste et que la sortie d'échappement est noire de suie, le filtre est fissuré et doit être remplacé. Il cherche alors pourquoi il a cassé : une régénération sur un filtre surchargé en suie peut le faire fondre ou le fissurer.",
+    solutions: [
+      "Remplacer une durite de capteur fendue ou débranchée, ou remonter correctement des durites inversées",
+      "Remplacer le capteur de pression différentielle s'il est défaillant",
+      "Remplacer le FAP s'il est fissuré ou fondu, avec ses joints",
+      "Réinitialiser les valeurs d'apprentissage du FAP avec l'outil de diagnostic après remplacement, si le constructeur le demande",
+      "Rechercher la cause d'un surchargement en suie (trajets courts, injecteur qui fuit, vanne EGR) pour éviter la récidive",
+      "Effacer le code et contrôler la pression différentielle en essai routier",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule diesel équipé d'un filtre à particules, généralisé en Europe à partir de la norme Euro 5 (2011). Plus fréquent sur les véhicules ayant subi une intervention récente sur la ligne d'échappement.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs diesel équipés d'un filtre à particules surveillé par un capteur de pression différentielle, que le FAP fonctionne avec ou sans additif.",
+    },
+    piecesConcernees: [
+      "Capteur de pression différentielle FAP",
+      "Durites du capteur de pression différentielle",
+      "Filtre à particules (FAP)",
+      "Joints et colliers de ligne d'échappement",
+    ],
     pieces: [
       { nom: "Filtre à particules (FAP)", boutique: "Mister-Auto · sur commande", prix: "450-900€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P2002 ?",
+        reponse: "Oui, le moteur fonctionne généralement normalement. Mais si le filtre est percé, le véhicule rejette des particules sans filtration et ne passera pas le contrôle technique.",
+      },
+      {
+        question: "Le FAP est-il forcément à changer ?",
+        reponse: "Non. Une durite de capteur débranchée ou un capteur défaillant produit exactement le même code : ce sont les premières choses à vérifier, pour une réparation bien moins coûteuse qu'un filtre.",
+      },
+      {
+        question: "Une régénération sur autoroute peut-elle régler P2002 ?",
+        reponse: "Non, contrairement à un FAP encrassé. Une régénération brûle la suie accumulée, mais elle ne répare ni un filtre fissuré ni une mesure faussée.",
+      },
+      {
+        question: "Peut-on retirer le FAP ?",
+        reponse: "Non : supprimer ou vider le filtre à particules est interdit, fait échouer le contrôle technique et expose à des sanctions. C'est aussi une source importante de pollution aux particules fines.",
+      },
     ],
   },
   {
