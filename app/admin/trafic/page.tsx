@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 const NB_JOURS_SERIE = 14;
 
-type Totaux = { jour: number; semaine: number; mois: number };
+type Totaux = { jour: number; semaine: number; mois: number; pages_vues: number };
 type JourVisites = { jour: string; visites: number };
 type Ligne = { libelle: string; visites: number };
 type Appareils = { device: string; visites: number };
@@ -57,16 +57,17 @@ export default async function TraficPage() {
     resultats = await Promise.all([
       sql<Totaux>`
         SELECT
-          COUNT(*) FILTER (WHERE created_at > now() - interval '1 day')::int  AS jour,
-          COUNT(*) FILTER (WHERE created_at > now() - interval '7 days')::int AS semaine,
-          COUNT(*) FILTER (WHERE created_at > now() - interval '30 days')::int AS mois
+          COUNT(*) FILTER (WHERE entree AND created_at > now() - interval '1 day')::int   AS jour,
+          COUNT(*) FILTER (WHERE entree AND created_at > now() - interval '7 days')::int  AS semaine,
+          COUNT(*) FILTER (WHERE entree AND created_at > now() - interval '30 days')::int AS mois,
+          COUNT(*) FILTER (WHERE created_at > now() - interval '30 days')::int            AS pages_vues
         FROM app_private.page_views
       `,
       sql<JourVisites>`
         SELECT to_char(created_at AT TIME ZONE 'Europe/Paris', 'YYYY-MM-DD') AS jour,
                COUNT(*)::int AS visites
           FROM app_private.page_views
-         WHERE created_at > now() - (${NB_JOURS_SERIE} * interval '1 day')
+         WHERE entree AND created_at > now() - (${NB_JOURS_SERIE}::int * interval '1 day')
          GROUP BY 1
       `,
       sql<Ligne>`
@@ -80,7 +81,7 @@ export default async function TraficPage() {
       sql<Ligne>`
         SELECT COALESCE(referrer_host, 'Direct') AS libelle, COUNT(*)::int AS visites
           FROM app_private.page_views
-         WHERE created_at > now() - interval '30 days'
+         WHERE entree AND created_at > now() - interval '30 days'
          GROUP BY 1
          ORDER BY visites DESC
          LIMIT 6
@@ -88,7 +89,7 @@ export default async function TraficPage() {
       sql<Ligne>`
         SELECT COALESCE(country, '—') AS libelle, COUNT(*)::int AS visites
           FROM app_private.page_views
-         WHERE created_at > now() - interval '30 days'
+         WHERE entree AND created_at > now() - interval '30 days'
          GROUP BY 1
          ORDER BY visites DESC
          LIMIT 6
@@ -96,7 +97,7 @@ export default async function TraficPage() {
       sql<Appareils>`
         SELECT device, COUNT(*)::int AS visites
           FROM app_private.page_views
-         WHERE created_at > now() - interval '30 days'
+         WHERE entree AND created_at > now() - interval '30 days'
          GROUP BY device
       `,
     ]);
@@ -147,6 +148,9 @@ export default async function TraficPage() {
         <Chiffre valeur={totaux.rows[0].semaine} libelle="7 derniers jours" />
         <Chiffre valeur={totaux.rows[0].mois} libelle="30 derniers jours" />
       </div>
+      <p className="text-muted text-xs mt-2.5">
+        Visites (arrivées sur le site) — {totaux.rows[0].pages_vues} pages vues en tout sur 30 jours.
+      </p>
 
       <h2 className="font-display font-semibold text-base mt-8 mb-3">
         Visites par jour <span className="text-muted font-normal text-xs">(14 derniers jours)</span>
@@ -182,22 +186,22 @@ export default async function TraficPage() {
       </div>
 
       <ListeBarres
-        titre="Pages les plus visitées"
-        sousTitre="30 derniers jours"
+        titre="Pages les plus vues"
+        sousTitre="pages vues, 30 derniers jours"
         vide="Aucune visite pour l'instant."
         lignes={pages.rows}
       />
 
       <ListeBarres
         titre="Provenance"
-        sousTitre="30 derniers jours"
+        sousTitre="visites, 30 derniers jours"
         vide="Aucune visite pour l'instant."
         lignes={referrers.rows}
       />
 
       <ListeBarres
         titre="Pays"
-        sousTitre="30 derniers jours"
+        sousTitre="visites, 30 derniers jours"
         vide="Aucune visite pour l'instant."
         lignes={pays.rows.map((p) => ({ ...p, libelle: `${drapeau(p.libelle)} ${p.libelle}` }))}
       />

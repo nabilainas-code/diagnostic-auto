@@ -14,7 +14,9 @@ CREATE SCHEMA IF NOT EXISTS app_private;
 CREATE TABLE IF NOT EXISTS app_private.page_views (
   id             UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   path           TEXT NOT NULL,             -- ex: "/codes/p0420"
+  entree         BOOLEAN NOT NULL,          -- true : première page vue d'une visite
   referrer_host  TEXT,                      -- ex: "google.com", NULL si direct
+                                            -- ou page vue interne
   country        TEXT,                      -- ex: "FR", NULL si inconnu
   device         TEXT NOT NULL DEFAULT 'inconnu' CHECK (device IN (
                    'mobile', 'ordinateur', 'inconnu'

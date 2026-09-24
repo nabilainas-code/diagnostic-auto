@@ -44,19 +44,24 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Requête invalide." }, { status: 400 });
   }
 
-  if (!isRecord(payload) || typeof payload.path !== "string" || payload.path.length === 0) {
+  if (!isRecord(payload) || typeof payload.path !== "string" || !payload.path.startsWith("/")) {
     return NextResponse.json({ error: "Chemin manquant." }, { status: 400 });
   }
 
   const path = payload.path.slice(0, PATH_MAX);
-  const referrerHost = hoteReferrer(request.headers.get("referer"));
+  const entree = payload.entree === true;
+  // L'en-tête Referer de cette requête pointe vers la page du site
+  // elle-même : la vraie provenance est document.referrer, envoyé par
+  // le client pour la première page vue seulement.
+  const referrerHost =
+    entree && typeof payload.referrer === "string" ? hoteReferrer(payload.referrer) : null;
   const country = request.headers.get("x-vercel-ip-country")?.slice(0, 2) || null;
   const device = appareil(userAgent);
 
   try {
     await sql`
-      INSERT INTO app_private.page_views (path, referrer_host, country, device)
-      VALUES (${path}, ${referrerHost}, ${country}, ${device})
+      INSERT INTO app_private.page_views (path, entree, referrer_host, country, device)
+      VALUES (${path}, ${entree}, ${referrerHost}, ${country}, ${device})
     `;
     return NextResponse.json({ ok: true });
   } catch (erreur) {
