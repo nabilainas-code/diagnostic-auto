@@ -75,9 +75,10 @@ export default function MentionsLegalesPage() {
           <section>
             <h2 className="font-display font-semibold text-base text-text mb-2">Liens et partenaires</h2>
             <p>
-              Ce site peut contenir des liens vers des sites de vente de pièces automobiles
-              (Oscaro, Mister-Auto, AutoDoc) susceptibles de générer une commission d&apos;affiliation
-              en cas d&apos;achat, sans surcoût pour vous. Voir la{" "}
+              Les prix de pièces affichés sur le site sont indicatifs et ne constituent pas des
+              offres commerciales. Des liens vers des sites de vente de pièces automobiles
+              pourront être ajoutés à l&apos;avenir, dont certains pourraient générer une
+              commission d&apos;affiliation en cas d&apos;achat, sans surcoût pour vous. Voir la{" "}
               <Link href="/politique-de-confidentialite" className="text-cyan hover:underline">
                 politique de confidentialité
               </Link>{" "}

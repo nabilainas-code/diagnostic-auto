@@ -79,11 +79,13 @@ export default function ConfidentialitePage() {
           <section>
             <h2 className="font-display font-semibold text-base text-text mb-2">Liens d&apos;affiliation</h2>
             <p>
-              Certains liens vers des sites partenaires (Oscaro, Mister-Auto, AutoDoc) sont des
-              liens d&apos;affiliation : si vous effectuez un achat après avoir cliqué dessus,
-              nous pouvons percevoir une commission, sans surcoût pour vous. Le suivi de ces
-              liens est géré par les partenaires concernés selon leurs propres politiques de
-              confidentialité.
+              Le site ne contient actuellement aucun lien d&apos;affiliation : les prix affichés
+              sont indicatifs et ne proviennent d&apos;aucun partenaire. Des liens vers des sites
+              de vente de pièces pourront être ajoutés à l&apos;avenir ; s&apos;il s&apos;agit de
+              liens d&apos;affiliation, un achat effectué après avoir cliqué dessus pourra nous
+              rapporter une commission, sans surcoût pour vous. Le suivi de ces liens sera alors
+              géré par les partenaires concernés selon leurs propres politiques de
+              confidentialité, et cette page sera mise à jour.
             </p>
           </section>
 

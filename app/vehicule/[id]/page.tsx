@@ -116,9 +116,7 @@ export default async function VehiculePage({
                       <div className="w-11 h-11 rounded-lg bg-gradient-to-br from-cyan to-[#2E8B84] flex-shrink-0" />
                       <div className="flex-1 min-w-0">
                         <div className="text-sm font-medium">{p.nom}</div>
-                        <div className="text-muted text-xs mt-0.5">
-                          {p.boutique} · livraison {p.livraison}
-                        </div>
+                        <div className="text-muted text-xs mt-0.5">Prix indicatif constaté</div>
                       </div>
                       <div className="font-mono text-amber font-semibold text-sm flex-shrink-0">{p.prix}</div>
                     </div>
