@@ -4,6 +4,8 @@ import { connection } from "next/server";
 import type { Metadata } from "next";
 import { sql } from "@vercel/postgres";
 import { estConnecte, motDePasseAdmin } from "@/lib/admin";
+import AdminNav from "../AdminNav";
+import Chiffre from "../Chiffre";
 import FormulaireConnexion from "./FormulaireConnexion";
 import { deconnexion } from "./actions";
 
@@ -58,8 +60,9 @@ export default async function RetoursPage() {
     console.error("[admin/retours] lecture impossible", erreur);
     const tableAbsente = (erreur as { code?: string }).code === "42P01";
     return (
-      <div className="max-w-xl mx-auto px-6 pt-20 pb-16">
+      <div className="max-w-xl mx-auto px-6 pt-8 pb-16">
         <h1 className="font-display font-semibold text-2xl mb-4">Retours utilisateurs</h1>
+        <AdminNav actif="retours" />
         <p className="text-[#C7CBD3] text-sm leading-relaxed">
           {tableAbsente
             ? "La table des retours n'existe pas encore : exécute db/migrations/001_page_feedback.sql dans l'éditeur SQL de Neon."
@@ -75,7 +78,7 @@ export default async function RetoursPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 pt-8 pb-16">
-      <div className="flex items-center justify-between gap-3 mb-6">
+      <div className="flex items-center justify-between gap-3 mb-4">
         <h1 className="font-display font-semibold text-2xl">Retours utilisateurs</h1>
         <form action={deconnexion}>
           <button className="text-muted text-sm hover:text-text transition-colors cursor-pointer">
@@ -83,6 +86,8 @@ export default async function RetoursPage() {
           </button>
         </form>
       </div>
+
+      <AdminNav actif="retours" />
 
       <div className="grid grid-cols-3 gap-3">
         <Chiffre valeur={totalHaut + totalBas} libelle="retours" />
@@ -134,15 +139,6 @@ export default async function RetoursPage() {
           ))}
         </div>
       )}
-    </div>
-  );
-}
-
-function Chiffre({ valeur, libelle }: { valeur: number; libelle: string }) {
-  return (
-    <div className="bg-surface border border-line rounded-xl px-3 py-4 text-center">
-      <div className="font-mono font-semibold text-xl">{valeur}</div>
-      <div className="text-muted text-xs mt-1">{libelle}</div>
     </div>
   );
 }
