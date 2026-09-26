@@ -2,7 +2,14 @@
 
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { COOKIE_ADMIN, egalSecurise, jetonSession, motDePasseAdmin } from "@/lib/admin";
+import {
+  COOKIE_ADMIN,
+  COOKIE_EXCLUSION,
+  OPTIONS_EXCLUSION,
+  egalSecurise,
+  jetonSession,
+  motDePasseAdmin,
+} from "@/lib/admin";
 
 export type EtatConnexion = { erreur: string | null };
 
@@ -17,13 +24,17 @@ export async function connexion(_etat: EtatConnexion, formData: FormData): Promi
     return { erreur: "Mot de passe incorrect." };
   }
 
-  (await cookies()).set(COOKIE_ADMIN, jetonSession(motDePasse), {
+  const magasin = await cookies();
+  magasin.set(COOKIE_ADMIN, jetonSession(motDePasse), {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",
     path: "/admin",
     maxAge: 60 * 60 * 24 * 30,
   });
+  // Se connecter depuis un appareil l'exclut des statistiques de trafic,
+  // y compris après la déconnexion.
+  magasin.set(COOKIE_EXCLUSION, "1", OPTIONS_EXCLUSION);
   redirect("/admin/retours");
 }
 
