@@ -2,10 +2,11 @@ import { notFound, redirect } from "next/navigation";
 import { connection } from "next/server";
 import type { Metadata } from "next";
 import { sql } from "@vercel/postgres";
-import { estConnecte, motDePasseAdmin } from "@/lib/admin";
+import { appareilExclu, estConnecte, motDePasseAdmin } from "@/lib/admin";
 import AdminNav from "../AdminNav";
 import Chiffre from "../Chiffre";
 import { deconnexion } from "../retours/actions";
+import { compterAppareil, exclureAppareil } from "./actions";
 
 export const metadata: Metadata = {
   title: "Trafic | Panne Résolue",
@@ -51,6 +52,8 @@ export default async function TraficPage() {
     // plutôt que de dupliquer le formulaire ici.
     redirect("/admin/retours");
   }
+
+  const exclu = await appareilExclu();
 
   let resultats;
   try {
@@ -108,6 +111,7 @@ export default async function TraficPage() {
       <div className="max-w-xl mx-auto px-6 pt-8 pb-16">
         <h1 className="font-display font-semibold text-2xl mb-4">Trafic</h1>
         <AdminNav actif="trafic" />
+        <ExclusionAppareil exclu={exclu} />
         <p className="text-[#C7CBD3] text-sm leading-relaxed">
           {tableAbsente
             ? "La table des visites n'existe pas encore : exécute db/migrations/002_page_views.sql dans l'éditeur SQL de Neon."
@@ -142,6 +146,8 @@ export default async function TraficPage() {
       </div>
 
       <AdminNav actif="trafic" />
+
+      <ExclusionAppareil exclu={exclu} />
 
       <div className="grid grid-cols-3 gap-3">
         <Chiffre valeur={totaux.rows[0].jour} libelle="aujourd'hui" />
@@ -206,6 +212,24 @@ export default async function TraficPage() {
         lignes={pays.rows.map((p) => ({ ...p, libelle: `${drapeau(p.libelle)} ${p.libelle}` }))}
       />
     </div>
+  );
+}
+
+function ExclusionAppareil({ exclu }: { exclu: boolean }) {
+  return (
+    <form
+      action={exclu ? compterAppareil : exclureAppareil}
+      className="flex items-center justify-between gap-3 bg-surface border border-line rounded-xl px-4 py-3 mb-4 text-sm"
+    >
+      <span className={exclu ? "text-[#C7CBD3]" : "text-amber"}>
+        {exclu
+          ? "✓ Vos visites depuis cet appareil ne sont pas comptées."
+          : "⚠ Vos visites depuis cet appareil sont comptées."}
+      </span>
+      <button className="text-muted text-xs hover:text-text transition-colors cursor-pointer flex-shrink-0 underline">
+        {exclu ? "Les compter" : "Ne plus les compter"}
+      </button>
+    </form>
   );
 }
 

@@ -8,7 +8,8 @@ export default function TrafficBeacon() {
   const dejaCompte = useRef(false);
 
   useEffect(() => {
-    if (pathname.startsWith("/admin")) return;
+    // navigator.webdriver trahit les navigateurs pilotés par un robot.
+    if (pathname.startsWith("/admin") || navigator.webdriver) return;
 
     // Seule la première page vue de l'onglet est une « visite » : c'est
     // là que document.referrer dit d'où vient le visiteur. Les

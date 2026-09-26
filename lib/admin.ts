@@ -3,6 +3,22 @@ import { cookies } from "next/headers";
 
 export const COOKIE_ADMIN = "pr-admin";
 
+// Posé sur les appareils de l'administrateur pour que ses propres visites
+// ne faussent pas les statistiques. Non signé : quelqu'un qui le poserait
+// ne ferait que s'exclure lui-même.
+export const COOKIE_EXCLUSION = "pr-exclu-stats";
+export const OPTIONS_EXCLUSION = {
+  httpOnly: true,
+  secure: process.env.NODE_ENV === "production",
+  sameSite: "lax" as const,
+  path: "/",
+  maxAge: 60 * 60 * 24 * 365,
+};
+
+export async function appareilExclu(): Promise<boolean> {
+  return (await cookies()).get(COOKIE_EXCLUSION)?.value === "1";
+}
+
 export function motDePasseAdmin(): string | null {
   const valeur = process.env.ADMIN_PASSWORD;
   return valeur && valeur.length > 0 ? valeur : null;

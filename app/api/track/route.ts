@@ -1,12 +1,14 @@
 import { sql } from "@vercel/postgres";
 import { NextResponse } from "next/server";
+import { appareilExclu } from "@/lib/admin";
 
 const PATH_MAX = 200;
 
-// Robots connus qui exécutent quand même le JavaScript de la page
-// (ou dont l'en-tête est facile à repérer) — on ne les compte pas
-// comme des visites.
-const RE_BOT = /bot|crawl|spider|slurp|facebookexternalhit|preview|headless|lighthouse|pingdom|uptime/i;
+// Robots, outils d'aperçu de liens, de surveillance et navigateurs
+// automatisés qui exécutent le JavaScript de la page : on ne les compte
+// pas comme des visites. Aucun navigateur grand public n'annonce ces mots.
+const RE_BOT =
+  /bot|crawl|spider|slurp|facebookexternalhit|preview|headless|lighthouse|pingdom|uptime|monitor|inspectiontool|googleother|mediapartners|feedfetcher|python|curl|wget|httpclient|axios|node-fetch|go-http|java\/|scrapy|phantomjs|selenium|puppeteer|playwright/i;
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
@@ -33,7 +35,7 @@ export async function POST(request: Request) {
   }
 
   const userAgent = request.headers.get("user-agent");
-  if (userAgent && RE_BOT.test(userAgent)) {
+  if (!userAgent || RE_BOT.test(userAgent) || (await appareilExclu())) {
     return NextResponse.json({ ok: true });
   }
 
