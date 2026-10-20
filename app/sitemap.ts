@@ -1,18 +1,26 @@
 import type { MetadataRoute } from "next";
 import { codes, categories } from "@/data/codes";
 import { pannes } from "@/data/pannes";
+import { sousCategoriesPsa } from "@/data/navigation";
 
 const BASE_URL = "https://panne-resolue.fr";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, changeFrequency: "weekly", priority: 1 },
+    { url: `${BASE_URL}/codes`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE_URL}/vehicule`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${BASE_URL}/pannes`, changeFrequency: "monthly", priority: 0.6 },
   ];
 
   const categorieRoutes: MetadataRoute.Sitemap = categories.map((c) => ({
     url: `${BASE_URL}/codes/categorie/${c.slug}`,
+    changeFrequency: "weekly",
+    priority: 0.7,
+  }));
+
+  const sousCategorieRoutes: MetadataRoute.Sitemap = sousCategoriesPsa.map((s) => ({
+    url: `${BASE_URL}/codes/categorie/${s.slug}`,
     changeFrequency: "weekly",
     priority: 0.7,
   }));
@@ -29,5 +37,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...categorieRoutes, ...codeRoutes, ...panneRoutes];
+  return [...staticRoutes, ...categorieRoutes, ...sousCategorieRoutes, ...codeRoutes, ...panneRoutes];
 }
