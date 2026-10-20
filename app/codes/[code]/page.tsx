@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import ShareButton from "@/components/ShareButton";
 import FeedbackWidget from "@/components/FeedbackWidget";
+import CodesLies from "@/components/CodesLies";
 import { getCodeByCode, normalizeCode, diagnoseCode, codes } from "@/data/codes";
+import { categorieDuCode, sousCategorieDuCode } from "@/data/navigation";
 
 const sevStyle = {
   faible: "text-cyan bg-cyan/10",
@@ -113,10 +115,19 @@ export default async function CodePage({
       <div className="max-w-6xl mx-auto px-6 pt-8 pb-16">
         <div className="font-mono text-xs text-muted mb-5">
           <Link href="/" className="hover:text-text">Accueil</Link> /{" "}
+          <Link href="/codes" className="hover:text-text">Codes défaut</Link> /{" "}
           <Link href={`/codes/categorie/${dtc.categorie}`} className="hover:text-text">
-            {dtc.categorie.toUpperCase()}
+            {categorieDuCode(dtc)?.titre ?? dtc.categorie.toUpperCase()}
           </Link>{" "}
-          / <span className="text-amber">{dtc.code}</span>
+          / {sousCategorieDuCode(dtc) && (
+            <>
+              <Link href={`/codes/categorie/${sousCategorieDuCode(dtc)!.slug}`} className="hover:text-text">
+                {sousCategorieDuCode(dtc)!.titre}
+              </Link>{" "}
+              /{" "}
+            </>
+          )}
+          <span className="text-amber">{dtc.code}</span>
         </div>
 
         <div className="flex gap-5 items-start flex-wrap pb-7 border-b border-line">
@@ -311,6 +322,8 @@ export default async function CodePage({
             </div>
           </div>
         )}
+
+        <CodesLies dtc={dtc} />
 
         {process.env.POSTGRES_URL && <FeedbackWidget code={dtc.code} />}
       </div>

@@ -13,7 +13,7 @@ export default function Header() {
           </span>
         </Link>
         <nav className="hidden md:flex gap-7 items-center">
-          <Link href="/codes/categorie/p03xx" className="text-muted text-sm font-medium hover:text-text transition-colors">
+          <Link href="/codes" className="text-muted text-sm font-medium hover:text-text transition-colors">
             Codes défaut
           </Link>
           <Link href="/pannes" className="text-muted text-sm font-medium hover:text-text transition-colors">

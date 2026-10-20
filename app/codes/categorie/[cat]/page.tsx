@@ -2,12 +2,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
-import { categories, getCategorieBySlug, getCodesByCategorie } from "@/data/codes";
+import { categories, getCategorieBySlug, getCodesByCategorie, type CodeDefaut } from "@/data/codes";
+import { codesDeSousCategorie, getSousCategorie, sousCategoriesPsa } from "@/data/navigation";
 
 const sevColor = { faible: "bg-cyan", moderee: "bg-amber", elevee: "bg-[#E5484D]" };
 
 export function generateStaticParams() {
-  return categories.map((c) => ({ cat: c.slug }));
+  return [...categories.map((c) => c.slug), ...sousCategoriesPsa.map((s) => s.slug)].map((cat) => ({ cat }));
 }
 
 export async function generateMetadata({
@@ -16,6 +17,13 @@ export async function generateMetadata({
   params: Promise<{ cat: string }>;
 }): Promise<Metadata> {
   const { cat } = await params;
+  const sous = getSousCategorie(cat);
+  if (sous) {
+    return {
+      title: `Codes défaut ${sous.label} (${sous.total} codes) | Panne Résolue`,
+      description: `${sous.total} codes défaut PSA du système ${sous.titre} : signification, causes probables et solutions.`,
+    };
+  }
   const categorie = getCategorieBySlug(cat);
   if (!categorie) return { title: "Catégorie introuvable" };
   return {
@@ -30,10 +38,16 @@ export default async function CategoriePage({
   params: Promise<{ cat: string }>;
 }) {
   const { cat } = await params;
-  const categorie = getCategorieBySlug(cat);
+  const sous = getSousCategorie(cat);
+  const categorie = sous ? getCategorieBySlug(sous.parent) : getCategorieBySlug(cat);
   if (!categorie) notFound();
 
-  const codesDeLaCategorie = getCodesByCategorie(categorie.slug);
+  const estCentrePsa = !sous && categorie.slug === "psa";
+  const codesDeLaCategorie: CodeDefaut[] = sous
+    ? codesDeSousCategorie(sous)
+    : estCentrePsa
+      ? []
+      : getCodesByCategorie(categorie.slug);
 
   return (
     <>
@@ -41,19 +55,46 @@ export default async function CategoriePage({
       <div className="max-w-6xl mx-auto px-6 pt-8 pb-16">
         <div className="font-mono text-xs text-muted mb-5">
           <Link href="/" className="hover:text-text">Accueil</Link> /{" "}
-          <span className="text-amber">{categorie.code}</span>
+          <Link href="/codes" className="hover:text-text">Codes défaut</Link> /{" "}
+          {sous ? (
+            <>
+              <Link href={`/codes/categorie/${categorie.slug}`} className="hover:text-text">
+                {categorie.titre}
+              </Link>{" "}
+              / <span className="text-amber">{sous.titre}</span>
+            </>
+          ) : (
+            <span className="text-amber">{categorie.titre}</span>
+          )}
         </div>
 
         <div className="pb-7 border-b border-line">
-          <div className="font-mono text-xs text-amber tracking-wide">{categorie.code}</div>
+          <div className="font-mono text-xs text-amber tracking-wide">{sous ? sous.label : categorie.code}</div>
           <h1 className="font-display font-semibold text-2xl sm:text-[1.7rem] leading-tight mt-1.5">
-            {categorie.titre}
+            {sous ? `Codes défaut ${sous.label}` : categorie.titre}
           </h1>
-          <p className="text-muted text-sm mt-2 leading-relaxed max-w-xl">{categorie.desc}</p>
+          <p className="text-muted text-sm mt-2 leading-relaxed max-w-xl">
+            {sous
+              ? `${sous.total} codes propriétaires du système ${sous.titre} chez Peugeot, Citroën et DS, classés par numéro.`
+              : categorie.desc}
+          </p>
         </div>
 
         <div className="mt-7">
-          {codesDeLaCategorie.length > 0 ? (
+          {estCentrePsa ? (
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-3.5">
+              {sousCategoriesPsa.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/codes/categorie/${s.slug}`}
+                  className="bg-surface border border-line rounded-xl p-5 hover:border-amber hover:-translate-y-0.5 transition-all block"
+                >
+                  <div className="font-mono text-amber text-xs tracking-wide">{s.total} CODES</div>
+                  <div className="font-display font-semibold text-base mt-1.5">{s.titre}</div>
+                </Link>
+              ))}
+            </div>
+          ) : codesDeLaCategorie.length > 0 ? (
             <div className="bg-surface border border-line rounded-xl overflow-hidden">
               {codesDeLaCategorie.map((c) => (
                 <Link

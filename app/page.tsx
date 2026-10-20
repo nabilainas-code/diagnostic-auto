@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import SearchBox from "@/components/SearchBox";
 import { codes, categories } from "@/data/codes";
 import { pannes } from "@/data/pannes";
+import { fichesDetaillees } from "@/data/navigation";
 
 const sevColor = { faible: "bg-cyan", moderee: "bg-amber", elevee: "bg-[#E5484D]" };
 
@@ -85,11 +86,13 @@ export default function Home() {
 
       <section className="max-w-6xl mx-auto px-6 py-10">
         <div className="flex justify-between items-baseline mb-5 gap-4 flex-wrap">
-          <h2 className="font-display font-semibold text-2xl">Codes les plus recherchés</h2>
-          <span className="font-mono text-xs text-muted">SÉLECTION</span>
+          <h2 className="font-display font-semibold text-2xl">Fiches détaillées</h2>
+          <Link href="/codes" className="font-mono text-xs text-muted hover:text-text transition-colors">
+            TOUS LES CODES →
+          </Link>
         </div>
         <div className="bg-surface border border-line rounded-xl overflow-hidden">
-          {codes.slice(0, 10).map((c) => (
+          {fichesDetaillees.map((c) => (
             <Link
               key={c.code}
               href={`/codes/${c.code.toLowerCase()}`}
