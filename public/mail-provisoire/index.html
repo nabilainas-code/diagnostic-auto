@@ -34,32 +34,26 @@ pre{white-space:pre-wrap;word-break:break-word}
 <div class="card" id="view" style="display:none"></div>
 
 <script>
-const API='/api/mailtm?p=';
-let token=null,account=null,timer=null;
+let sid=null,timer=null,addr='';
 const $=id=>document.getElementById(id);
 const status=(t,e)=>{$('status').textContent=t;$('status').className='status'+(e?' err':'')};
-const rnd=n=>Array.from(crypto.getRandomValues(new Uint8Array(n)),b=>'abcdefghijklmnopqrstuvwxyz0123456789'[b%36]).join('');
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-async function api(path,opt={}){
-  const r=await fetch(API+encodeURIComponent(path),{...opt,headers:{...(opt.body?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{}),...opt.headers}});
+async function api(f,params={}){
+  const q=new URLSearchParams({f,...params});
+  const r=await fetch('/api/tempmail?'+q);
   if(!r.ok)throw new Error(r.status);
-  return r.status===204?null:r.json();
+  return r.json();
 }
 
 async function create(){
-  clearInterval(timer);
+  clearInterval(timer);sid=null;
   $('addr').textContent='Création…';$('inbox').innerHTML='<div class="empty">Boîte vide.</div>';$('view').style.display='none';
   try{
-    token=null;
-    const d=await api('/domains');
-    const domain=d['hydra:member'][0].domain;
-    const address=rnd(10)+'@'+domain,password=rnd(16);
-    account=await api('/accounts',{method:'POST',body:JSON.stringify({address,password})});
-    const t=await api('/token',{method:'POST',body:JSON.stringify({address,password})});
-    token=t.token;
-    $('addr').textContent=address;
-    status('Prête. Valable tant que tu ne la supprimes pas.');
+    const d=await api('get_email_address');
+    sid=d.sid_token;addr=d.email_addr;
+    $('addr').textContent=addr;
+    status('Prête (valable environ 1 heure).');
     refresh();timer=setInterval(refresh,10000);
   }catch(e){
     $('addr').textContent='Erreur';
@@ -68,33 +62,31 @@ async function create(){
 }
 
 async function refresh(){
-  if(!token)return;
+  if(!sid)return;
   try{
-    const m=(await api('/messages'))['hydra:member'];
-    $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${x.id}"><b>${esc(x.subject||'(sans objet)')}</b><small>${esc(x.from.address)} · ${new Date(x.createdAt).toLocaleString('fr-FR')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 10 s.</div>';
-    document.querySelectorAll('.msg').forEach(el=>el.onclick=()=>open(el.dataset.id));
+    const d=await api('check_email',{sid_token:sid,seq:'0'});
+    const m=(d.list||[]).filter(x=>String(x.mail_from)!=='no-reply@guerrillamail.com');
+    $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${esc(x.mail_id)}"><b>${esc(x.mail_subject||'(sans objet)')}</b><small>${esc(x.mail_from)} · ${esc(x.mail_excerpt||'')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 10 s.</div>';
+    document.querySelectorAll('.msg').forEach(el=>el.onclick=()=>openMsg(el.dataset.id));
   }catch(e){status('Erreur de rafraîchissement ('+e.message+')',true)}
 }
 
-async function open(id){
-  const m=await api('/messages/'+id);
-  const v=$('view');v.style.display='block';
-  const html=Array.isArray(m.html)?m.html.join(''):m.html;
-  v.innerHTML=`<b>${esc(m.subject||'(sans objet)')}</b><br><small>De : ${esc(m.from.address)}</small>`+
-    (html?`<iframe sandbox></iframe>`:`<pre>${esc(m.text||'')}</pre>`);
-  if(html)v.querySelector('iframe').srcdoc=html;
-  v.scrollIntoView({behavior:'smooth'});
+async function openMsg(id){
+  try{
+    const m=await api('fetch_email',{sid_token:sid,email_id:id});
+    const v=$('view');v.style.display='block';
+    v.innerHTML=`<b>${esc(m.mail_subject||'(sans objet)')}</b><br><small>De : ${esc(m.mail_from)}</small><iframe sandbox></iframe>`;
+    v.querySelector('iframe').srcdoc=m.mail_body||'';
+    v.scrollIntoView({behavior:'smooth'});
+  }catch(e){status('Impossible d\'ouvrir le mail ('+e.message+')',true)}
 }
 
 $('copy').onclick=async()=>{
-  try{await navigator.clipboard.writeText($('addr').textContent);status('Copié ✔')}
+  try{await navigator.clipboard.writeText(addr);status('Copié ✔')}
   catch{status('Copie manuelle : sélectionne l\'adresse')}
 };
 $('refresh').onclick=refresh;
-$('new').onclick=async()=>{
-  try{if(account)await api('/accounts/'+account.id,{method:'DELETE'})}catch{}
-  create();
-};
+$('new').onclick=create;
 create();
 </script>
 </body>
