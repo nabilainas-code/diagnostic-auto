@@ -68,6 +68,7 @@ async function refresh(){
     const m=(d.list||[]).filter(x=>String(x.mail_from)!=='no-reply@guerrillamail.com');
     $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${esc(x.mail_id)}"><b>${esc(x.mail_subject||'(sans objet)')}</b><small>${esc(x.mail_from)} · ${esc(x.mail_excerpt||'')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 10 s.</div>';
     document.querySelectorAll('.msg').forEach(el=>el.onclick=()=>openMsg(el.dataset.id));
+    status('Dernière vérification : '+new Date().toLocaleTimeString('fr-FR')+' — '+m.length+' mail(s)');
   }catch(e){status('Erreur de rafraîchissement ('+e.message+')',true)}
 }
 
