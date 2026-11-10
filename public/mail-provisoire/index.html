@@ -34,7 +34,7 @@ pre{white-space:pre-wrap;word-break:break-word}
 <div class="card" id="view" style="display:none"></div>
 
 <script>
-const API='https://api.mail.tm';
+const API='/api/mailtm?p=';
 let token=null,account=null,timer=null;
 const $=id=>document.getElementById(id);
 const status=(t,e)=>{$('status').textContent=t;$('status').className='status'+(e?' err':'')};
@@ -42,7 +42,7 @@ const rnd=n=>Array.from(crypto.getRandomValues(new Uint8Array(n)),b=>'abcdefghij
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 async function api(path,opt={}){
-  const r=await fetch(API+path,{...opt,headers:{...(opt.body?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{}),...opt.headers}});
+  const r=await fetch(API+encodeURIComponent(path),{...opt,headers:{...(opt.body?{'Content-Type':'application/json'}:{}),...(token?{Authorization:'Bearer '+token}:{}),...opt.headers}});
   if(!r.ok)throw new Error(r.status);
   return r.status===204?null:r.json();
 }
