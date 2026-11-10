@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mail provisoire</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;padding:16px;max-width:640px;margin:auto}
+h1{font-size:22px;margin:8px 0 16px}
+.card{background:#1e293b;border-radius:14px;padding:14px;margin-bottom:12px}
+.addr{font-size:17px;font-weight:600;word-break:break-all;color:#38bdf8}
+button{background:#38bdf8;color:#0f172a;border:0;border-radius:10px;padding:10px 14px;font-weight:600;font-size:14px;margin:8px 8px 0 0}
+button.sec{background:#334155;color:#e2e8f0}
+.msg{border-top:1px solid #334155;padding:10px 0;cursor:pointer}
+.msg b{display:block}.msg small{color:#94a3b8}
+.empty,.status{color:#94a3b8;font-size:14px}
+.err{color:#fca5a5}
+iframe{width:100%;height:420px;border:0;background:#fff;border-radius:8px;margin-top:8px}
+pre{white-space:pre-wrap;word-break:break-word}
+</style>
+</head>
+<body>
+<h1>📬 Mail provisoire</h1>
+<div class="card">
+  <div class="addr" id="addr">Création…</div>
+  <button id="copy">Copier</button>
+  <button class="sec" id="refresh">Actualiser</button>
+  <button class="sec" id="new">Nouvelle adresse</button>
+  <div class="status" id="status" style="margin-top:8px"></div>
+</div>
+<div class="card" id="inbox"><div class="empty">Boîte vide. Actualisation auto toutes les 10 s.</div></div>
+<div class="card" id="view" style="display:none"></div>
+
+<script>
+const API='https://api.mail.tm';
+let token=null,account=null,timer=null;
+const $=id=>document.getElementById(id);
+const status=(t,e)=>{$('status').textContent=t;$('status').className='status'+(e?' err':'')};
+const rnd=n=>Array.from(crypto.getRandomValues(new Uint8Array(n)),b=>'abcdefghijklmnopqrstuvwxyz0123456789'[b%36]).join('');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+async function api(path,opt={}){
+  const r=await fetch(API+path,{...opt,headers:{'Content-Type':'application/json',...(token?{Authorization:'Bearer '+token}:{}),...opt.headers}});
+  if(!r.ok)throw new Error(r.status);
+  return r.status===204?null:r.json();
+}
+
+async function create(){
+  clearInterval(timer);
+  $('addr').textContent='Création…';$('inbox').innerHTML='<div class="empty">Boîte vide.</div>';$('view').style.display='none';
+  try{
+    token=null;
+    const d=await api('/domains');
+    const domain=d['hydra:member'][0].domain;
+    const address=rnd(10)+'@'+domain,password=rnd(16);
+    account=await api('/accounts',{method:'POST',body:JSON.stringify({address,password})});
+    const t=await api('/token',{method:'POST',body:JSON.stringify({address,password})});
+    token=t.token;
+    $('addr').textContent=address;
+    status('Prête. Valable tant que tu ne la supprimes pas.');
+    refresh();timer=setInterval(refresh,10000);
+  }catch(e){
+    $('addr').textContent='Erreur';
+    status('Impossible de créer l\'adresse ('+e.message+'). Réessaie.',true);
+  }
+}
+
+async function refresh(){
+  if(!token)return;
+  try{
+    const m=(await api('/messages'))['hydra:member'];
+    $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${x.id}"><b>${esc(x.subject||'(sans objet)')}</b><small>${esc(x.from.address)} · ${new Date(x.createdAt).toLocaleString('fr-FR')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 10 s.</div>';
+    document.querySelectorAll('.msg').forEach(el=>el.onclick=()=>open(el.dataset.id));
+  }catch(e){status('Erreur de rafraîchissement ('+e.message+')',true)}
+}
+
+async function open(id){
+  const m=await api('/messages/'+id);
+  const v=$('view');v.style.display='block';
+  const html=Array.isArray(m.html)?m.html.join(''):m.html;
+  v.innerHTML=`<b>${esc(m.subject||'(sans objet)')}</b><br><small>De : ${esc(m.from.address)}</small>`+
+    (html?`<iframe sandbox></iframe>`:`<pre>${esc(m.text||'')}</pre>`);
+  if(html)v.querySelector('iframe').srcdoc=html;
+  v.scrollIntoView({behavior:'smooth'});
+}
+
+$('copy').onclick=async()=>{
+  try{await navigator.clipboard.writeText($('addr').textContent);status('Copié ✔')}
+  catch{status('Copie manuelle : sélectionne l\'adresse')}
+};
+$('refresh').onclick=refresh;
+$('new').onclick=async()=>{
+  try{if(account)await api('/accounts/'+account.id,{method:'DELETE'})}catch{}
+  create();
+};
+create();
+</script>
+</body>
+</html>
