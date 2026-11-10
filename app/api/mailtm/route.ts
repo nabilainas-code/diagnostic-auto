@@ -11,7 +11,11 @@ async function relais(request: Request) {
     return NextResponse.json({ error: "chemin refusé" }, { status: 400 });
   }
 
-  const headers: Record<string, string> = { Accept: "application/json" };
+  const headers: Record<string, string> = {
+    Accept: "application/json",
+    "User-Agent":
+      "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+  };
   const auth = request.headers.get("authorization");
   if (auth) headers.Authorization = auth;
 
