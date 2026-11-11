@@ -30,11 +30,11 @@ pre{white-space:pre-wrap;word-break:break-word}
   <button class="sec" id="new">Nouvelle adresse</button>
   <div class="status" id="status" style="margin-top:8px"></div>
 </div>
-<div class="card" id="inbox"><div class="empty">Boîte vide. Actualisation auto toutes les 10 s.</div></div>
+<div class="card" id="inbox"><div class="empty">Boîte vide. Actualisation auto toutes les 15 s.</div></div>
 <div class="card" id="view" style="display:none"></div>
 
 <script>
-let sid=null,timer=null,addr='';
+let sid=null,timer=null,addr='',echecs=0;
 const $=id=>document.getElementById(id);
 const status=(t,e)=>{$('status').textContent=t;$('status').className='status'+(e?' err':'')};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -54,7 +54,7 @@ async function create(){
     sid=d.sid_token;addr=d.email_addr;
     $('addr').textContent=addr;
     status('Prête (valable environ 1 heure).');
-    refresh();timer=setInterval(refresh,10000);
+    refresh();timer=setInterval(refresh,15000);
   }catch(e){
     $('addr').textContent='Erreur';
     status('Impossible de créer l\'adresse ('+e.message+'). Réessaie.',true);
@@ -66,18 +66,27 @@ async function refresh(){
   try{
     const d=await api('check_email',{sid_token:sid,seq:'0'});
     const m=(d.list||[]).filter(x=>String(x.mail_from)!=='no-reply@guerrillamail.com');
-    $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${esc(x.mail_id)}"><b>${esc(x.mail_subject||'(sans objet)')}</b><small>${esc(x.mail_from)} · ${esc(x.mail_excerpt||'')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 10 s.</div>';
+    $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${esc(x.mail_id)}"><b>${esc(x.mail_subject||'(sans objet)')}</b><small>${esc(x.mail_from)} · ${esc(x.mail_excerpt||'')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 15 s.</div>';
     document.querySelectorAll('.msg').forEach(el=>el.onclick=()=>openMsg(el.dataset.id));
-    status('Dernière vérification : '+new Date().toLocaleTimeString('fr-FR')+' — '+m.length+' mail(s)');
-  }catch(e){status('Erreur de rafraîchissement ('+e.message+')',true)}
+    echecs=0;status('Dernière vérification : '+new Date().toLocaleTimeString('fr-FR')+' — '+m.length+' mail(s)');
+  }catch(e){echecs++;if(echecs>=3)status('Erreur de rafraîchissement ('+e.message+'). Appuie sur Actualiser.',true)}
 }
 
 async function openMsg(id){
   try{
     const m=await api('fetch_email',{sid_token:sid,email_id:id});
     const v=$('view');v.style.display='block';
-    v.innerHTML=`<b>${esc(m.mail_subject||'(sans objet)')}</b><br><small>De : ${esc(m.mail_from)}</small><iframe sandbox></iframe>`;
-    v.querySelector('iframe').srcdoc=m.mail_body||'';
+    const doc=new DOMParser().parseFromString(m.mail_body||'','text/html');
+    doc.querySelectorAll('script,style,head').forEach(e=>e.remove());
+    const seen=new Set(),links=[];
+    doc.querySelectorAll('a[href]').forEach(a=>{
+      const h=a.getAttribute('href')||'';
+      if(/^https?:\/\//i.test(h)&&!seen.has(h)){seen.add(h);links.push({h,t:(a.textContent||'').trim()||h})}
+    });
+    const texte=(doc.body?doc.body.innerText||doc.body.textContent:'').replace(/\n{3,}/g,'\n\n').trim();
+    v.innerHTML=`<b>${esc(m.mail_subject||'(sans objet)')}</b><br><small>De : ${esc(m.mail_from)}</small>`+
+      (links.length?`<div style="margin:10px 0"><b>Liens du mail :</b>`+links.map(l=>`<div style="margin:6px 0;word-break:break-all"><a style="color:#38bdf8" target="_blank" rel="noopener noreferrer" href="${esc(l.h)}">${esc(l.t.slice(0,80))}</a></div>`).join('')+`</div>`:'')+
+      `<pre>${esc(texte)}</pre>`;
     v.scrollIntoView({behavior:'smooth'});
   }catch(e){status('Impossible d\'ouvrir le mail ('+e.message+')',true)}
 }
