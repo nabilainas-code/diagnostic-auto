@@ -65,7 +65,7 @@ async function refresh(){
   if(!sid)return;
   try{
     const d=await api('check_email',{sid_token:sid,seq:'0'});
-    const m=(d.list||[]).filter(x=>String(x.mail_from)!=='no-reply@guerrillamail.com');
+    const m=(d.list||[]).filter(x=>String(x.mail_from)!=='no-reply@guerrillamail.com').sort((a,b)=>Number(b.mail_timestamp)-Number(a.mail_timestamp)).slice(0,10);
     $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${esc(x.mail_id)}"><b>${esc(x.mail_subject||'(sans objet)')}</b><small>${esc(x.mail_from)} · ${esc(x.mail_excerpt||'')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 15 s.</div>';
     document.querySelectorAll('.msg').forEach(el=>el.onclick=()=>openMsg(el.dataset.id));
     echecs=0;status('Dernière vérification : '+new Date().toLocaleTimeString('fr-FR')+' — '+m.length+' mail(s)');
