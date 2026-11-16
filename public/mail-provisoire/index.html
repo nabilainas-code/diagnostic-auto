@@ -34,9 +34,10 @@ pre{white-space:pre-wrap;word-break:break-word}
 <div class="card" id="view" style="display:none"></div>
 
 <script>
-let sid=null,timer=null,addr='',echecs=0;
+let sid=null,timer=null,addr='',echecs=0,cache=new Map();
 const $=id=>document.getElementById(id);
 const status=(t,e)=>{$('status').textContent=t;$('status').className='status'+(e?' err':'')};
+const dec=s=>{const t=document.createElement('textarea');t.innerHTML=String(s??'');return t.value};
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 async function api(f,params={}){
@@ -47,7 +48,7 @@ async function api(f,params={}){
 }
 
 async function create(){
-  clearInterval(timer);sid=null;
+  clearInterval(timer);sid=null;cache=new Map();
   $('addr').textContent='Création…';$('inbox').innerHTML='<div class="empty">Boîte vide.</div>';$('view').style.display='none';
   try{
     const d=await api('get_email_address');
@@ -64,9 +65,10 @@ async function create(){
 async function refresh(){
   if(!sid)return;
   try{
-    const d=await api('check_email',{sid_token:sid,seq:'0'});
-    const m=(d.list||[]).filter(x=>String(x.mail_from)!=='no-reply@guerrillamail.com').sort((a,b)=>Number(b.mail_timestamp)-Number(a.mail_timestamp)).slice(0,10);
-    $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${esc(x.mail_id)}"><b>${esc(x.mail_subject||'(sans objet)')}</b><small>${esc(x.mail_from)} · ${esc(x.mail_excerpt||'')}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 15 s.</div>';
+    let d;try{d=await api('get_email_list',{sid_token:sid,offset:'0'})}catch(e){d=await api('check_email',{sid_token:sid,seq:'0'})}
+    for(const x of (d.list||[]))if(String(x.mail_from)!=='no-reply@guerrillamail.com')cache.set(String(x.mail_id),x);
+    const m=[...cache.values()].sort((a,b)=>Number(b.mail_timestamp)-Number(a.mail_timestamp)).slice(0,10);
+    $('inbox').innerHTML=m.length?m.map(x=>`<div class="msg" data-id="${esc(x.mail_id)}"><b>${esc(dec(x.mail_subject)||'(sans objet)')}</b><small>${esc(dec(x.mail_from))} · ${esc(dec(x.mail_excerpt||''))}</small></div>`).join(''):'<div class="empty">Boîte vide. Actualisation auto toutes les 15 s.</div>';
     document.querySelectorAll('.msg').forEach(el=>el.onclick=()=>openMsg(el.dataset.id));
     echecs=0;status('Dernière vérification : '+new Date().toLocaleTimeString('fr-FR')+' — '+m.length+' mail(s)');
   }catch(e){echecs++;if(echecs>=3)status('Erreur de rafraîchissement ('+e.message+'). Appuie sur Actualiser.',true)}
@@ -79,12 +81,13 @@ async function openMsg(id){
     const doc=new DOMParser().parseFromString(m.mail_body||'','text/html');
     doc.querySelectorAll('script,style,head').forEach(e=>e.remove());
     const seen=new Set(),links=[];
-    doc.querySelectorAll('a[href]').forEach(a=>{
-      const h=a.getAttribute('href')||'';
-      if(/^https?:\/\//i.test(h)&&!seen.has(h)){seen.add(h);links.push({h,t:(a.textContent||'').trim()||h})}
-    });
-    const texte=(doc.body?doc.body.innerText||doc.body.textContent:'').replace(/\n{3,}/g,'\n\n').trim();
-    v.innerHTML=`<b>${esc(m.mail_subject||'(sans objet)')}</b><br><small>De : ${esc(m.mail_from)}</small>`+
+    const add=(h,t)=>{h=dec(h).trim();if(/^https?:\/\//i.test(h)&&!seen.has(h)){seen.add(h);links.push({h,t:(t||'').trim()||h})}};
+    doc.querySelectorAll('a[href]').forEach(a=>add(a.getAttribute('href')||'',a.textContent));
+    for(const u of String(m.mail_body||'').match(/https?:\/\/[^\s"'<>)]+/gi)||[])add(u,'');
+    const cle=/verif|confirm|activ|valid/i;links.sort((a,b)=>(cle.test(b.h+b.t)?1:0)-(cle.test(a.h+a.t)?1:0));
+    let texte=(doc.body?doc.body.textContent:'').replace(/[ \t]+\n/g,'\n').replace(/\n{3,}/g,'\n\n').trim();
+    if(!texte)texte=dec(m.mail_excerpt||'')||'(Le contenu de ce mail est vide. Appuie sur Actualiser puis rouvre-le.)';
+    v.innerHTML=`<b>${esc(dec(m.mail_subject)||'(sans objet)')}</b><br><small>De : ${esc(dec(m.mail_from))}</small>`+(links.length&&cle.test(links[0].h+links[0].t)?`<div><a href="${esc(links[0].h)}" target="_blank" rel="noopener noreferrer"><button>Ouvrir le lien de vérification</button></a></div>`:'')+
       (links.length?`<div style="margin:10px 0"><b>Liens du mail :</b>`+links.map(l=>`<div style="margin:6px 0;word-break:break-all"><a style="color:#38bdf8" target="_blank" rel="noopener noreferrer" href="${esc(l.h)}">${esc(l.t.slice(0,80))}</a></div>`).join('')+`</div>`:'')+
       `<pre>${esc(texte)}</pre>`;
     v.scrollIntoView({behavior:'smooth'});
