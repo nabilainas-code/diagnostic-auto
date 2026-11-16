@@ -89,7 +89,8 @@ async function openMsg(id){
     if(!texte)texte=dec(m.mail_excerpt||'')||'(Le contenu de ce mail est vide. Appuie sur Actualiser puis rouvre-le.)';
     v.innerHTML=`<b>${esc(dec(m.mail_subject)||'(sans objet)')}</b><br><small>De : ${esc(dec(m.mail_from))}</small>`+(links.length&&cle.test(links[0].h+links[0].t)?`<div><a href="${esc(links[0].h)}" target="_blank" rel="noopener noreferrer"><button>Ouvrir le lien de vérification</button></a></div>`:'')+
       (links.length?`<div style="margin:10px 0"><b>Liens du mail :</b>`+links.map(l=>`<div style="margin:6px 0;word-break:break-all"><a style="color:#38bdf8" target="_blank" rel="noopener noreferrer" href="${esc(l.h)}">${esc(l.t.slice(0,80))}</a></div>`).join('')+`</div>`:'')+
-      `<pre>${esc(texte)}</pre>`;
+      `<pre>${esc(texte)}</pre>`+
+      (links.length?'':`<details style="margin-top:8px"><summary style="cursor:pointer;color:#94a3b8">Aucun lien trouvé : détails techniques</summary><pre style="color:#94a3b8;font-size:12px">${esc(Object.keys(m).map(k=>k+' : '+String(m[k]??'').length+' caractères').join('\n'))}\n\nDébut du corps :\n${esc(String(m.mail_body||'').slice(0,600))}</pre></details>`);
     v.scrollIntoView({behavior:'smooth'});
   }catch(e){status('Impossible d\'ouvrir le mail ('+e.message+')',true)}
 }
