@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 // Relais vers l'API publique de Guerrilla Mail pour la page /mail-provisoire.
 const BASE = "https://api.guerrillamail.com/ajax.php";
-const FONCTIONS = new Set(["get_email_address", "check_email", "fetch_email"]);
+const FONCTIONS = new Set(["get_email_address", "check_email", "get_email_list", "fetch_email"]);
 const SIMPLE = /^[A-Za-z0-9_-]{1,64}$/;
 
 export async function GET(request: Request) {
@@ -19,7 +19,7 @@ export async function GET(request: Request) {
     (request.headers.get("x-forwarded-for") ?? "127.0.0.1").split(",")[0].trim(),
   );
   url.searchParams.set("agent", "mail-provisoire");
-  for (const cle of ["sid_token", "seq", "email_id"]) {
+  for (const cle of ["sid_token", "seq", "offset", "email_id"]) {
     const v = src.get(cle);
     if (v === null) continue;
     if (!SIMPLE.test(v)) {
