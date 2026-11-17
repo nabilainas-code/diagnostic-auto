@@ -524,6 +524,13 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité élevée — risque de calage moteur ou de refus de démarrer",
     description:
       "Le capteur de position vilebrequin (PMH) informe le calculateur de la position et du régime moteur pour synchroniser injection et allumage. Un signal défaillant peut provoquer des calages moteur, voire empêcher le démarrage.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Moteur qui démarre difficilement, ou qui ne démarre pas du tout",
+      "Calages en roulant ou à l'arrêt, parfois sans prévenir",
+      "Compte-tours qui tombe à zéro ou s'agite alors que le moteur tourne",
+      "À-coups et perte de puissance, parfois par intermittence",
+    ],
     causes: [
       { pourcentage: 38, libelle: "Capteur PMH défaillant" },
       { pourcentage: 22, libelle: "Entrefer incorrect ou capteur encrassé" },
@@ -531,10 +538,55 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 12, libelle: "Cible denture (roue phonique) endommagée" },
       { pourcentage: 8, libelle: "Calculateur défaillant (rare)" },
     ],
+    diagnostic:
+      "Le capteur de position du vilebrequin indique au calculateur la position exacte et la vitesse de rotation du moteur : c'est ce signal qui synchronise l'injection et l'allumage. Sans lui, le calculateur ne sait plus quand injecter ni quand enflammer, et le moteur cale ou ne démarre plus. Le défaut peut venir du capteur, de son câblage ou de son connecteur, d'un entrefer incorrect, ou de la roue crantée du vilebrequin sur laquelle il lit. Comme il arrive par intermittence, un code qui apparaît puis disparaît est souvent le signe d'un capteur ou d'un connecteur qui s'échauffe.",
+    controles: [
+      "Lire les autres codes (P0336, P0340, ratés) et les circonstances d'apparition (à chaud, à froid, en vibrations)",
+      "Contrôler le signal du capteur au démarrage et en rotation, avec un oscilloscope si possible",
+      "Inspecter le câblage et le connecteur du capteur (broches oxydées, fils frottés ou fondus)",
+      "Vérifier la fixation, l'entrefer et la propreté du capteur (limaille sur un capteur magnétique)",
+      "Contrôler l'état de la roue crantée (dents abîmées ou manquantes)",
+    ],
     avisPro:
-      "Contrôler le signal à l'oscilloscope si possible. Sur beaucoup de modèles, un remplacement direct du capteur résout la majorité des cas sans autre diagnostic.",
+      "Le professionnel sait que ce capteur est une cause classique de calage à chaud : il peut fonctionner à froid et lâcher quand il chauffe. Il observe donc le signal avec le moteur chaud, et teste le capteur en le chauffant légèrement si le défaut est intermittent. Avant de commander la pièce, il contrôle le connecteur, le câblage et l'entrefer, puis l'état de la roue crantée, car un capteur neuf sur un câblage défaillant ne règle rien. Selon les constructeurs, un apprentissage avec l'outil de diagnostic est nécessaire après remplacement. Il traite ce défaut en priorité, car le calage soudain est dangereux.",
+    solutions: [
+      "Remplacer le capteur de position du vilebrequin, solution la plus fréquente",
+      "Réparer le câblage ou remplacer le connecteur endommagé",
+      "Nettoyer le capteur et rétablir son entrefer et sa fixation",
+      "Faire remplacer ou réparer la roue crantée si ses dents sont abîmées",
+      "Effectuer l'apprentissage du capteur avec l'outil de diagnostic si le constructeur le demande",
+      "Effacer le code et faire un essai à chaud pour confirmer la réparation",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule essence ou diesel homologué EOBD. Plus fréquent sur les véhicules de plus de 150 000 km, dont les connecteurs et les capteurs vieillissent sous la chaleur et les vibrations.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Tous les moteurs essence et diesel équipés d'un capteur de position du vilebrequin, de type inductif ou à effet Hall selon le constructeur.",
+    },
+    piecesConcernees: [
+      "Capteur de position du vilebrequin",
+      "Connecteur et faisceau du capteur",
+      "Roue crantée du vilebrequin",
+      "Batterie (tension insuffisante au démarrage)",
+    ],
     pieces: [
       { nom: "Capteur position vilebrequin (PMH)", boutique: "Oscaro · livraison 48h", prix: "42€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0335 ?",
+        reponse: "C'est déconseillé : le moteur peut caler sans prévenir, y compris en roulant. Or, moteur arrêté, la direction et le freinage assistés perdent leur assistance, ce qui est dangereux. Faites vérifier le véhicule avant de reprendre la route.",
+      },
+      {
+        question: "Mon moteur ne démarre plus, est-ce le capteur de vilebrequin ?",
+        reponse: "C'est une cause possible, surtout si le démarreur tourne normalement sans que le moteur ne prenne et que le compte-tours reste à zéro. D'autres pannes (batterie, pompe à carburant, antidémarrage) donnent les mêmes signes : un diagnostic confirme la cause.",
+      },
+      {
+        question: "Quelle différence avec le capteur d'arbre à cames (P0340) ?",
+        reponse: "Le capteur de vilebrequin donne la vitesse et la position du moteur, indispensables pour injecter et allumer. Le capteur d'arbre à cames sert surtout à identifier le cylindre en phase de compression. Un défaut du vilebrequin est généralement plus grave : il peut empêcher de démarrer.",
+      },
     ],
   },
   {
@@ -546,16 +598,66 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — roulable, à traiter sous 2-3 semaines",
     description:
       "Ce capteur informe le calculateur de la position de l'arbre à cames pour la synchronisation de l'injection séquentielle. Un défaut peut dégrader les performances sans forcément empêcher de rouler.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Démarrage plus long que d'habitude, parfois difficile",
+      "Ralenti irrégulier et perte de puissance",
+      "Passage en mode dégradé sur certains véhicules",
+      "Consommation en hausse",
+    ],
     causes: [
       { pourcentage: 42, libelle: "Capteur position arbre à cames défaillant" },
       { pourcentage: 25, libelle: "Câblage ou connecteur endommagé" },
       { pourcentage: 18, libelle: "Courroie ou chaîne de distribution déphasée" },
       { pourcentage: 15, libelle: "Calculateur défaillant (rare)" },
     ],
+    diagnostic:
+      "Le capteur de position de l'arbre à cames permet au calculateur de savoir quel cylindre est en phase de compression, pour commander l'injection séquentielle et, selon les moteurs, l'allumage. Il croise son signal avec celui du capteur de vilebrequin. Quand l'un des deux manque ou devient incohérent, le calculateur peut basculer sur un fonctionnement de secours : le moteur démarre alors plus difficilement et perd en agrément, sans forcément s'arrêter. Le capteur, son connecteur ou son câblage sont les premiers suspects ; un calage de distribution décalé reste possible mais moins fréquent.",
+    controles: [
+      "Lire les autres codes (P0335, P0341, codes de calage) et les circonstances d'apparition",
+      "Comparer en temps réel les signaux des capteurs d'arbre à cames et de vilebrequin",
+      "Inspecter le câblage et le connecteur du capteur (oxydation, fils frottés, humidité)",
+      "Vérifier la fixation du capteur et l'état de la cible qu'il lit",
+      "Contrôler le calage de la distribution si le capteur et son circuit sont sains",
+    ],
     avisPro:
-      "Vérifier d'abord le capteur et son câblage. Si le défaut persiste après remplacement, contrôler le calage de la distribution.",
+      "Le professionnel contrôle d'abord ce qui est simple et peu coûteux : le connecteur du capteur, son câblage et son alimentation, qui causent à eux seuls de nombreux défauts intermittents. Il compare ensuite le signal du capteur d'arbre à cames à celui du vilebrequin avec un outil de diagnostic ou un oscilloscope : un décalage constant oriente vers un calage de distribution décalé, un signal absent vers le capteur ou son circuit. Il ne remplace le capteur qu'après avoir écarté le câblage, puis, si le défaut persiste, il vérifie le calage de la distribution, en prenant garde à une courroie ou une chaîne détendue.",
+    solutions: [
+      "Remplacer le capteur de position de l'arbre à cames, solution la plus fréquente",
+      "Réparer le câblage ou remplacer le connecteur endommagé",
+      "Nettoyer le logement du capteur et vérifier sa fixation",
+      "Faire contrôler et corriger le calage de la distribution s'il est décalé",
+      "Effacer le code et faire un essai routier pour confirmer la réparation",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule essence ou diesel homologué EOBD équipé d'un capteur d'arbre à cames. Plus fréquent sur les véhicules de plus de 150 000 km, dont les connecteurs vieillissent sous la chaleur.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence et diesel équipés d'un capteur de position d'arbre à cames. Sur les moteurs à deux arbres à cames, le code équivalent pour l'autre arbre (ou l'autre banc) est P0345.",
+    },
+    piecesConcernees: [
+      "Capteur de position de l'arbre à cames",
+      "Connecteur et faisceau du capteur",
+      "Kit de distribution (courroie ou chaîne)",
+    ],
     pieces: [
       { nom: "Capteur position arbre à cames", boutique: "AutoDoc · livraison 24h", prix: "36€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0340 ?",
+        reponse: "À court terme, oui dans la plupart des cas : le moteur fonctionne souvent en mode dégradé. Mais il peut démarrer plus difficilement, manquer de puissance ou caler : à faire contrôler sans trop attendre.",
+      },
+      {
+        question: "Quelle différence avec P0335 ?",
+        reponse: "P0335 concerne le capteur de vilebrequin, indispensable pour injecter et allumer : un défaut peut empêcher de démarrer. P0340 concerne le capteur d'arbre à cames, utile à la synchronisation de l'injection : un défaut dégrade le fonctionnement sans toujours l'interdire.",
+      },
+      {
+        question: "Le code peut-il venir de la distribution ?",
+        reponse: "Oui, mais c'est moins fréquent. Une courroie ou une chaîne de distribution décalée change le rapport entre les deux capteurs et peut déclencher ce code. Le capteur et son câblage se contrôlent en premier, car ils sont plus simples à vérifier.",
+      },
     ],
   },
 
@@ -569,6 +671,13 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — consommation et performances affectées",
     description:
       "Comme pour le banc 1 (P0171), le calculateur détecte trop d'oxygène et pas assez de carburant dans le mélange air/essence, mais sur le banc 2 du moteur. Souvent lié à une entrée d'air non mesurée ou un manque de pression carburant.",
+    symptomes: [
+      "Voyant moteur (MIL) allumé",
+      "Ralenti instable ou irrégulier",
+      "Hésitations et trous à l'accélération",
+      "Perte de puissance",
+      "Parfois des ratés d'allumage (code P0300 associé)",
+    ],
     causes: [
       { pourcentage: 38, libelle: "Fuite d'admission d'air (durite, joint)" },
       { pourcentage: 24, libelle: "Débitmètre d'air (MAF) encrassé ou défaillant" },
@@ -576,12 +685,59 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 12, libelle: "Injecteurs partiellement bouchés" },
       { pourcentage: 6, libelle: "Sonde lambda amont défaillante" },
     ],
+    diagnostic:
+      "P0174 est le jumeau de P0171 pour le banc 2 : le calculateur a dû ajouter beaucoup plus de carburant que prévu sur cette rangée de cylindres, jusqu'à la limite de correction autorisée. Il n'existe que sur les moteurs à deux rangées de cylindres (V6, V8, moteur à plat). Le contexte donne un indice précieux : si P0171 et P0174 apparaissent ensemble, la cause est commune aux deux bancs (débitmètre d'air, pression de carburant, prise d'air en amont de l'admission). Si P0174 apparaît seul, elle est propre au banc 2 : prise d'air sur cette rangée, injecteur ou sonde lambda de ce côté.",
+    controles: [
+      "Lire les corrections de richesse des deux bancs, au ralenti puis vers 2 500 tr/min",
+      "Vérifier si P0171 est aussi présent, ce qui oriente vers une cause commune",
+      "Rechercher une prise d'air sur la rangée du banc 2 : durites, joint de collecteur d'admission, recyclage des vapeurs d'huile",
+      "Contrôler le débitmètre d'air et la pression de carburant",
+      "Vérifier les injecteurs et la sonde lambda amont du banc 2",
+    ],
     avisPro:
-      "Vérifier en premier les durites d'admission et le joint de débitmètre — c'est la cause la plus fréquente et la plus simple à contrôler visuellement.",
+      "Le professionnel compare les corrections de richesse des deux bancs : si elles sont toutes les deux fortes, il traite une cause commune (débitmètre, pression de carburant, prise d'air générale) ; si seul le banc 2 corrige beaucoup, il cherche une fuite d'air ou un injecteur propre à cette rangée. Il localise les prises d'air au générateur de fumée plutôt qu'au spray, et vérifie la pression de carburant avant de toucher aux injecteurs. Comme pour P0171, il ne remplace la sonde lambda qu'en dernier : elle ne fait le plus souvent que constater un mélange réellement pauvre.",
+    solutions: [
+      "Remplacer la durite, le joint ou le clapet de recyclage des vapeurs d'huile à l'origine d'une prise d'air",
+      "Nettoyer ou remplacer le débitmètre d'air s'il reste hors tolérance",
+      "Remplacer le filtre à carburant ou traiter un défaut de pompe ou de régulateur de pression",
+      "Nettoyer ou remplacer les injecteurs partiellement bouchés du banc 2",
+      "Remplacer la sonde lambda amont du banc 2 si elle mesure faux",
+      "Effacer le code et vérifier que les corrections de richesse reviennent près de zéro",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il ne concerne que les véhicules à moteur à deux rangées de cylindres (V6, V8, moteurs à plat), homologués EOBD (essence depuis 2001 en Europe). Plus fréquent sur les véhicules anciens, dont les durites et les joints d'admission durcissent et se fendent.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence en V ou à plat régulés par sonde lambda. Sur un moteur à quatre cylindres en ligne, il n'y a qu'un banc : c'est P0171 qui s'applique.",
+    },
+    piecesConcernees: [
+      "Durites et colliers d'admission",
+      "Joint de collecteur d'admission",
+      "Clapet ou reniflard de recyclage des vapeurs d'huile",
+      "Débitmètre d'air",
+      "Filtre et pompe à carburant",
+      "Injecteurs et sonde lambda amont du banc 2",
+    ],
     pieces: [
       { nom: "Durite admission d'air", boutique: "AutoDoc · livraison 24h", prix: "18€" },
       { nom: "Débitmètre d'air (MAF)", boutique: "Oscaro · livraison 48h", prix: "64€" },
       { nom: "Pompe à carburant", boutique: "Mister-Auto · sur commande", prix: "112€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0174 ?",
+        reponse: "Oui à court terme, mais un mélange trop pauvre fait chauffer davantage la combustion. S'il dure, il peut provoquer des ratés, du cliquetis et user le catalyseur : faites le diagnostic sans trop attendre.",
+      },
+      {
+        question: "Quelle différence entre P0171 et P0174 ?",
+        reponse: "Le code est le même, seul le banc change : P0171 pour le banc 1 (celui du cylindre 1), P0174 pour le banc 2. Les deux ensemble pointent vers une cause commune aux deux rangées de cylindres.",
+      },
+      {
+        question: "Faut-il changer la sonde lambda ?",
+        reponse: "Rarement en premier. Elle signale un mélange pauvre mais, dans la plupart des cas, sa mesure est juste : la vraie cause est une prise d'air, le débitmètre ou l'alimentation en carburant.",
+      },
     ],
   },
   {
@@ -748,16 +904,69 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — performances et consommation affectées",
     description:
       "Le débitmètre renvoie un signal électrique trop faible pour être exploitable par le calculateur, l'obligeant à basculer sur des valeurs de secours moins précises.",
+    symptomes: [
+      "Voyant moteur allumé",
+      "Perte de puissance, parfois passage en mode dégradé",
+      "Ralenti instable, voire calage",
+      "Fumée noire à l'accélération sur moteur diesel",
+      "Surconsommation de carburant",
+    ],
     causes: [
-      { pourcentage: 38, libelle: "Débitmètre encrassé ou en panne" },
-      { pourcentage: 27, libelle: "Fuite d'admission importante" },
-      { pourcentage: 20, libelle: "Câblage coupé ou court-circuit" },
-      { pourcentage: 15, libelle: "Connecteur mal enfiché" },
+      { pourcentage: 40, libelle: "Débitmètre encrassé ou en panne" },
+      { pourcentage: 25, libelle: "Câblage coupé ou court-circuité à la masse" },
+      { pourcentage: 20, libelle: "Connecteur mal enfiché ou oxydé" },
+      { pourcentage: 10, libelle: "Alimentation ou masse du débitmètre défaillante (fusible, relais)" },
+      { pourcentage: 5, libelle: "Fuite d'admission très importante" },
+    ],
+    diagnostic:
+      "P0102 ne dit pas que la mesure est fausse, mais que le signal du débitmètre est trop faible pour être exploitable : le calculateur reçoit une tension si basse qu'elle sort de la plage possible. C'est la différence avec P0101, qui signale une mesure incohérente avec ce qui est attendu. P0102 pointe donc d'abord vers un problème électrique : un câblage coupé ou en court-circuit à la masse, un connecteur défaillant, une alimentation ou une masse absente, ou un débitmètre en panne. Le calculateur remplace alors la mesure par des valeurs de secours, moins précises.",
+    controles: [
+      "Lire la valeur du débitmètre en temps réel : une valeur à zéro ou figée oriente vers un défaut électrique",
+      "Contrôler l'alimentation et la masse du débitmètre au connecteur, avec un multimètre",
+      "Inspecter le connecteur et le câblage (broches oxydées, fils frottés, court-circuit à la masse)",
+      "Vérifier le fusible et le relais qui alimentent le débitmètre",
+      "Contrôler visuellement le débitmètre et son boîtier, et nettoyer l'élément de mesure s'il est encrassé",
     ],
     avisPro:
-      "Même approche que pour P0101 : nettoyage du débitmètre en premier réflexe avant remplacement.",
+      "Contrairement à P0101, le nettoyage n'est pas le premier réflexe : le professionnel commence par l'électricité. Il vérifie la présence de l'alimentation et de la masse au connecteur, puis la continuité du câblage jusqu'au calculateur, avec un multimètre. Il observe la valeur lue en temps réel : une valeur nulle ou figée désigne un circuit coupé, un débitmètre encrassé donne plutôt une valeur trop faible mais qui varie. Si le circuit est sain, il teste le débitmètre lui-même, puis le remplace par une pièce de qualité d'origine, car les pièces bas de gamme sont une source fréquente de récidive.",
+    solutions: [
+      "Rétablir l'alimentation ou la masse du débitmètre (fusible, relais, connexion)",
+      "Réparer le câblage coupé ou en court-circuit, ou remplacer le connecteur oxydé",
+      "Nettoyer l'élément de mesure du débitmètre avec un nettoyant spécifique, sans jamais le toucher",
+      "Remplacer le débitmètre s'il est en panne",
+      "Réparer une fuite d'admission très importante, rarement en cause",
+      "Effacer le code et contrôler les valeurs en essai routier",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule homologué EOBD (essence depuis 2001, diesel depuis 2004 en Europe) équipé d'un débitmètre d'air. Plus fréquent sur les véhicules de plus de 150 000 km, dont les connecteurs et les câblages vieillissent.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence et diesel équipés d'un débitmètre d'air à film chaud. Certains moteurs n'en ont pas et calculent le débit d'air à partir d'un capteur de pression d'admission : ils affichent alors d'autres codes.",
+    },
+    piecesConcernees: [
+      "Débitmètre d'air",
+      "Connecteur et faisceau du débitmètre",
+      "Fusible et relais d'alimentation",
+      "Filtre à air",
+    ],
     pieces: [
       { nom: "Débitmètre d'air (MAF)", boutique: "Oscaro · livraison 48h", prix: "64€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0102 ?",
+        reponse: "Oui, en général : le calculateur utilise des valeurs de secours. Mais le moteur peut manquer de puissance, consommer plus ou passer en mode dégradé, ce qui gêne pour dépasser ou s'insérer. À réparer sans trop attendre.",
+      },
+      {
+        question: "Nettoyer le débitmètre suffit-il ?",
+        reponse: "Rarement avec ce code, qui est avant tout un défaut électrique. Contrôlez d'abord l'alimentation, la masse et le câblage. Le nettoyage n'a de sens que si l'élément de mesure est visiblement encrassé.",
+      },
+      {
+        question: "Quelle différence avec P0101 ?",
+        reponse: "P0101 signale une mesure incohérente avec ce que le calculateur attend, souvent à cause d'un encrassement, d'un filtre à air bouché ou d'une fuite. P0102 signale un signal trop faible, donc plutôt un problème de circuit électrique ou un débitmètre en panne.",
+      },
     ],
   },
   {
@@ -813,6 +1022,12 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité modérée — roulable, à traiter sous 2-3 semaines",
     description:
       "Comme pour P0420 mais sur le banc 2, le calculateur détecte que le catalyseur ne réduit plus assez efficacement les émissions polluantes en comparant les signaux des sondes lambda avant et après.",
+    symptomes: [
+      "Voyant moteur (MIL) allumé et fixe",
+      "Aucun symptôme perceptible à la conduite dans la majorité des cas",
+      "Échec possible à la mesure de pollution lors du contrôle technique",
+      "Odeur d'œuf pourri à l'échappement si le catalyseur est très dégradé",
+    ],
     causes: [
       { pourcentage: 42, libelle: "Sonde lambda (après catalyseur) défaillante" },
       { pourcentage: 27, libelle: "Catalyseur usé ou encrassé" },
@@ -820,11 +1035,57 @@ export const codes: CodeDefaut[] = [
       { pourcentage: 10, libelle: "Bougies ou injecteurs encrassés" },
       { pourcentage: 6, libelle: "Défaut de câblage / connecteur sonde" },
     ],
+    diagnostic:
+      "P0430 est le jumeau de P0420 pour le banc 2, la rangée de cylindres qui ne contient pas le cylindre 1 : il n'existe donc que sur les moteurs à deux rangées de cylindres (V6, V8, moteur à plat) équipés d'un catalyseur par banc. Si P0420 et P0430 apparaissent ensemble, une cause commune aux deux bancs (ratés d'allumage, mélange trop riche, carburant de mauvaise qualité) est plus probable que deux catalyseurs usés en même temps. Si P0430 apparaît seul, les contrôles se concentrent sur la ligne d'échappement et les sondes du banc 2.",
+    controles: [
+      "Lire tous les codes présents (P0420, ratés d'allumage, codes de mélange) et les compteurs de ratés par cylindre",
+      "Comparer en temps réel les signaux des sondes lambda amont et aval du banc 2",
+      "Inspecter la ligne d'échappement du banc 2 en amont du catalyseur (joint, collecteur fissuré, flexible)",
+      "Contrôler bougies, bobines et injecteurs des cylindres du banc 2",
+      "Vérifier l'état du câblage et du connecteur de la sonde aval du banc 2",
+    ],
     avisPro:
-      "Lecture des valeurs temps réel des deux sondes lambda du banc 2 à l'OBD, contrôle visuel de fuite à l'échappement, puis test du catalyseur seul si les sondes sont saines.",
+      "Le professionnel commence par identifier le banc 2 : sur un moteur en V, il vérifie quels cylindres le composent avant d'intervenir sur le mauvais côté. Il lit ensuite les signaux des sondes amont et aval de ce banc : une sonde aval qui suit la sonde amont au lieu de rester stable signale un catalyseur inefficace, une sonde aval inerte ou hors tolérance désigne la sonde elle-même. Avant de remplacer un catalyseur, il écarte une fuite d'échappement en amont et tout défaut d'allumage ou d'injection sur ce banc, car ils détruisent un catalyseur sain. S'il trouve P0420 et P0430 ensemble, il cherche d'abord la cause commune.",
+    solutions: [
+      "Effacer le code et faire un essai routier pour écarter un incident isolé",
+      "Remplacer la sonde lambda aval du banc 2 si son signal est incohérent",
+      "Réparer une fuite d'échappement en amont du catalyseur du banc 2",
+      "Traiter les ratés d'allumage ou l'encrassement des injecteurs du banc 2",
+      "Remplacer le catalyseur du banc 2 si son rendement reste insuffisant une fois les autres causes écartées",
+      "Refaire un essai routier avec relevé de données pour confirmer la disparition du défaut",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il ne concerne que les véhicules à moteur à deux rangées de cylindres (V6, V8, moteurs à plat), homologués EOBD (essence depuis 2001 en Europe). Plus fréquent sur les véhicules de plus de 150 000 km ou ayant roulé longtemps avec des ratés d'allumage non traités.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence en V ou à plat avec un catalyseur et une sonde lambda aval par banc. Sur un moteur à quatre cylindres en ligne, il n'y a qu'un banc : c'est P0420 qui s'applique.",
+    },
+    piecesConcernees: [
+      "Sonde lambda aval du banc 2",
+      "Sonde lambda amont du banc 2",
+      "Catalyseur du banc 2",
+      "Joints et collecteur d'échappement",
+      "Bougies et bobines d'allumage",
+    ],
     pieces: [
       { nom: "Sonde lambda aval", boutique: "Oscaro · livraison 48h", prix: "54€" },
       { nom: "Catalyseur ligne complète", boutique: "Mister-Auto · sur commande", prix: "189€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0430 ?",
+        reponse: "Oui, dans la grande majorité des cas : il n'y a pas de panne immédiate. Mais il fera échouer un contrôle de pollution et un catalyseur mal alimenté peut s'user plus vite : mieux vaut traiter le défaut sous quelques semaines.",
+      },
+      {
+        question: "Quelle différence avec P0420 ?",
+        reponse: "Le principe est identique, seul le banc change : P0420 concerne le banc 1 (celui du cylindre 1), P0430 le banc 2. Sur un moteur à quatre cylindres en ligne, seul P0420 existe.",
+      },
+      {
+        question: "P0420 et P0430 apparaissent ensemble, faut-il changer deux catalyseurs ?",
+        reponse: "Pas forcément, et surtout pas avant d'avoir cherché une cause commune : ratés d'allumage, mélange trop riche ou carburant de mauvaise qualité peuvent dégrader les deux catalyseurs, ou fausser leur contrôle.",
+      },
     ],
   },
   {
@@ -836,18 +1097,69 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité faible — roulable sans risque immédiat",
     description:
       "Le système EVAP capte les vapeurs d'essence du réservoir pour les renvoyer au moteur plutôt que de les rejeter à l'atmosphère. Une fuite moyenne (trou, durite fissurée) est détectée par le test d'étanchéité du calculateur.",
+    symptomes: [
+      "Voyant moteur (MIL) allumé et fixe",
+      "Aucun symptôme à la conduite dans la grande majorité des cas",
+      "Parfois une légère odeur d'essence près du véhicule ou du réservoir",
+      "Le voyant s'éteint tout seul puis revient si la fuite est intermittente",
+    ],
     causes: [
       { pourcentage: 45, libelle: "Bouchon de réservoir mal serré ou joint usé" },
       { pourcentage: 25, libelle: "Durite EVAP fissurée" },
       { pourcentage: 18, libelle: "Électrovanne de purge EVAP défaillante" },
       { pourcentage: 12, libelle: "Canister (filtre à charbon) fissuré" },
     ],
+    diagnostic:
+      "Le circuit EVAP capte les vapeurs d'essence du réservoir dans un filtre à charbon (le canister), puis les envoie dans le moteur par une électrovanne de purge au lieu de les rejeter dans l'air. Le calculateur teste régulièrement son étanchéité, dans des conditions précises de remplissage du réservoir et de température. P0442 signale une petite fuite, de l'ordre du millimètre selon la norme. Elle peut venir de n'importe quel point du circuit, mais la cause la plus fréquente est un bouchon de réservoir mal serré ou au joint usé : c'est à vérifier avant tout autre contrôle.",
+    controles: [
+      "Vérifier que le bouchon de réservoir est bien serré (clic), et l'état de son joint",
+      "Inspecter les durites EVAP visibles (fissures, durcissement, raccords desserrés), du réservoir au canister et à l'électrovanne",
+      "Tester l'électrovanne de purge avec un outil de diagnostic : elle doit se fermer de façon étanche",
+      "Contrôler le canister et le tuyau de remplissage (corrosion, fissure)",
+      "Faire un test d'étanchéité à la fumée du circuit EVAP si les contrôles visuels ne trouvent rien",
+    ],
     avisPro:
-      "Vérifier en premier le bouchon de réservoir — c'est la cause la plus fréquente et gratuite à corriger.",
+      "Un professionnel ne cherche pas une fuite d'un millimètre à l'œil : après avoir contrôlé le bouchon, il injecte de la fumée à très basse pression dans le circuit EVAP avec un générateur dédié, et regarde où elle s'échappe. Cette méthode localise en quelques minutes une durite fissurée, un raccord ou un canister poreux, là où le remplacement de pièces au hasard coûte cher. Il teste aussi l'électrovanne de purge, qui peut rester légèrement ouverte. Après la réparation, il efface le code et le circuit doit repasser son test d'étanchéité sur un ou plusieurs trajets avant que le voyant ne reste éteint.",
+    solutions: [
+      "Resserrer le bouchon de réservoir, ou le remplacer si son joint est usé ou fissuré",
+      "Remplacer la durite EVAP fissurée ou resserrer son raccord",
+      "Remplacer l'électrovanne de purge si elle ne se ferme plus de façon étanche",
+      "Remplacer le canister s'il est fissuré ou saturé",
+      "Effacer le code, puis effectuer plusieurs trajets pour confirmer que le test d'étanchéité est réussi",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule essence homologué EOBD équipé d'un circuit de récupération des vapeurs d'essence. Les moteurs diesel n'en ont pas. Plus fréquent sur les véhicules anciens, dont les durites et les joints durcissent avec l'âge.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence uniquement, à injection indirecte comme directe : le circuit EVAP traite les vapeurs d'essence. Un moteur diesel n'a pas de circuit EVAP.",
+    },
+    piecesConcernees: [
+      "Bouchon de réservoir et son joint",
+      "Durites et raccords EVAP",
+      "Électrovanne de purge EVAP",
+      "Canister (filtre à charbon actif)",
+      "Tuyau de remplissage",
+    ],
     pieces: [
       { nom: "Bouchon de réservoir carburant", boutique: "AutoDoc · livraison 24h", prix: "13€" },
       { nom: "Durite EVAP", boutique: "Oscaro · livraison 48h", prix: "16€" },
       { nom: "Électrovanne de purge EVAP", boutique: "Mister-Auto · sur commande", prix: "39€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0442 ?",
+        reponse: "Oui. Une petite fuite EVAP ne gêne pas la conduite et ne met pas le moteur en danger. Elle laisse simplement échapper un peu de vapeurs d'essence : à traiter, mais sans urgence.",
+      },
+      {
+        question: "J'ai resserré le bouchon, pourquoi le voyant reste-t-il allumé ?",
+        reponse: "Le voyant ne s'éteint pas immédiatement : le calculateur doit refaire son test d'étanchéité et le réussir, ce qui demande parfois plusieurs trajets ou quelques jours. Un outil de diagnostic permet d'effacer le code pour vérifier qu'il ne revient pas.",
+      },
+      {
+        question: "Y a-t-il un risque lié à l'odeur d'essence ?",
+        reponse: "Une légère odeur de vapeur peut accompagner une fuite EVAP. En revanche, une odeur forte ou une tache sous le véhicule indique plutôt une fuite de carburant liquide, plus dangereuse (risque d'incendie) : faites-la contrôler sans attendre.",
+      },
     ],
   },
   {
@@ -859,17 +1171,68 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité faible — roulable sans risque immédiat",
     description:
       "Même principe que P0442 mais pour une fuite plus importante, en général plus facile à localiser : une pièce carrément déconnectée ou cassée plutôt qu'une simple fissure.",
+    symptomes: [
+      "Voyant moteur (MIL) allumé et fixe, parfois juste après un plein",
+      "Aucun symptôme à la conduite dans la grande majorité des cas",
+      "Parfois une odeur d'essence plus nette près du réservoir",
+      "Bouchon de réservoir absent, mal fermé ou non remis après le plein",
+    ],
     causes: [
       { pourcentage: 50, libelle: "Bouchon de réservoir absent ou mal fermé" },
       { pourcentage: 25, libelle: "Durite EVAP débranchée" },
       { pourcentage: 15, libelle: "Canister endommagé" },
       { pourcentage: 10, libelle: "Électrovanne de purge bloquée ouverte" },
     ],
+    diagnostic:
+      "P0455 est la version « grosse fuite » de P0442 : le calculateur n'arrive pas du tout à mettre le circuit EVAP en pression ou en dépression, comme si une pièce était carrément ouverte. La cause la plus fréquente, et la plus simple à vérifier, est un bouchon de réservoir oublié ou mal fermé après un plein. Sinon, il faut chercher une durite débranchée ou cassée, un canister endommagé ou un raccord sorti de son logement, souvent à la suite d'une intervention récente sous le véhicule.",
+    controles: [
+      "Contrôler en premier le bouchon de réservoir : présent, bien serré, joint intact",
+      "Inspecter les durites EVAP accessibles à la recherche d'un raccord débranché ou d'une durite cassée",
+      "Vérifier l'état du canister et de ses raccords, souvent sous le véhicule près du réservoir",
+      "Tester l'électrovanne de purge et l'électrovanne d'évent avec un outil de diagnostic",
+      "Réaliser un test d'étanchéité à la fumée si la fuite n'est pas visible",
+    ],
     avisPro:
-      "Contrôle visuel rapide du bouchon et des durites accessibles avant tout diagnostic plus poussé.",
+      "Le professionnel commence par le geste le plus rapide : il regarde le bouchon de réservoir. Comme la fuite est importante, une inspection visuelle des durites et du canister, sur le pont, trouve souvent la cause sans autre outil. Si rien n'est visible, il utilise un générateur de fumée basse pression, qui fait sortir la fuite en quelques secondes. Il vérifie enfin que les électrovannes de purge et d'évent obéissent bien à la commande, car une vanne d'évent bloquée en position ouverte peut imiter une fuite. Après réparation, il efface le code et fait plusieurs trajets pour confirmer que le test d'étanchéité est réussi.",
+    solutions: [
+      "Remettre ou resserrer le bouchon de réservoir, ou le remplacer s'il est endommagé",
+      "Rebrancher ou remplacer la durite EVAP débranchée ou cassée",
+      "Réparer ou remplacer le canister endommagé",
+      "Remplacer l'électrovanne de purge ou d'évent si elle ne répond plus à la commande",
+      "Effacer le code et effectuer plusieurs trajets pour confirmer la réparation",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule essence homologué EOBD équipé d'un circuit de récupération des vapeurs d'essence, notamment après un plein ou une intervention sous le véhicule. Les moteurs diesel n'en ont pas.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence uniquement : le circuit EVAP traite les vapeurs d'essence du réservoir. Un moteur diesel n'a pas de circuit EVAP.",
+    },
+    piecesConcernees: [
+      "Bouchon de réservoir et son joint",
+      "Durites et raccords EVAP",
+      "Canister (filtre à charbon actif)",
+      "Électrovanne de purge EVAP",
+      "Électrovanne d'évent",
+    ],
     pieces: [
       { nom: "Bouchon de réservoir carburant", boutique: "AutoDoc · livraison 24h", prix: "13€" },
       { nom: "Durite EVAP", boutique: "Oscaro · livraison 48h", prix: "16€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0455 ?",
+        reponse: "Oui, le véhicule reste utilisable. Une grosse fuite EVAP laisse toutefois échapper des vapeurs d'essence en plus grande quantité : mieux vaut la traiter rapidement.",
+      },
+      {
+        question: "Le code est apparu juste après le plein, est-ce le bouchon ?",
+        reponse: "C'est la cause la plus probable : un bouchon oublié, mal serré ou mal clipsé provoque exactement ce défaut. Resserrez-le jusqu'au clic, effacez le code et roulez quelques jours pour voir s'il revient.",
+      },
+      {
+        question: "Quelle différence avec P0442 ?",
+        reponse: "P0442 signale une petite fuite, difficile à localiser. P0455 signale une grosse fuite : une pièce ouverte, débranchée ou cassée, en général plus facile à trouver.",
+      },
     ],
   },
   {
@@ -979,16 +1342,64 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité faible — roulable sans risque immédiat",
     description:
       "La sonde lambda amont est chauffée électriquement pour atteindre sa température de fonctionnement plus vite après un démarrage à froid. Un défaut du circuit de chauffage n'empêche pas de rouler mais dégrade la précision du mélange à froid.",
+    symptomes: [
+      "Voyant moteur (MIL) allumé",
+      "Aucun symptôme évident à chaud dans la majorité des cas",
+      "Ralenti légèrement instable après un démarrage à froid",
+      "Surconsommation modérée, le mélange restant moins précis à froid",
+    ],
     causes: [
       { pourcentage: 45, libelle: "Élément chauffant de la sonde défaillant" },
       { pourcentage: 30, libelle: "Câblage ou connecteur de la sonde défaillant" },
       { pourcentage: 15, libelle: "Fusible grillé" },
       { pourcentage: 10, libelle: "Calculateur défaillant (rare)" },
     ],
+    diagnostic:
+      "La sonde lambda amont mesure l'oxygène des gaz d'échappement pour que le calculateur ajuste le mélange. Pour fonctionner correctement, elle doit être chaude : un élément chauffant électrique, commandé par le calculateur, la porte rapidement à température après le démarrage. P0135 signale un défaut dans ce circuit de chauffage : élément coupé, résistance hors plage, alimentation ou masse absente, ou câblage endommagé. « Banc 1, capteur 1 » désigne la sonde située avant le catalyseur, sur la rangée du cylindre 1. Tant qu'elle ne chauffe pas, le calculateur règle le mélange « en aveugle » à froid.",
+    controles: [
+      "Relever les autres codes sur les sondes lambda (P0130 à P0141) et les ratés éventuels",
+      "Mesurer la résistance de l'élément chauffant de la sonde au multimètre et la comparer à la valeur du constructeur",
+      "Vérifier la présence de l'alimentation de chauffage au connecteur, moteur tournant",
+      "Contrôler le fusible et le relais du circuit de chauffage",
+      "Inspecter le câblage près de l'échappement (gaine fondue, fil frotté) et le connecteur",
+    ],
     avisPro:
-      "Mesurer la résistance de l'élément chauffant au multimètre avant de remplacer la sonde entière.",
+      "Le professionnel ne remplace pas la sonde au premier réflexe. Il mesure d'abord la résistance de l'élément chauffant : un circuit ouvert condamne la sonde, une valeur normale oriente vers l'alimentation ou le câblage. Il contrôle ensuite que le chauffage est bien alimenté, en vérifiant le fusible, le relais et la masse commandée par le calculateur. Il inspecte le câblage le long de la ligne d'échappement, où la gaine peut fondre au contact de la chaleur. S'il remplace la sonde, il utilise une pièce adaptée au moteur, car les sondes ne sont pas interchangeables d'un modèle à l'autre.",
+    solutions: [
+      "Remplacer la sonde lambda amont si son élément chauffant est coupé ou hors tolérance",
+      "Remplacer le fusible ou le relais du circuit de chauffage",
+      "Réparer le câblage fondu ou coupé, ou remplacer le connecteur oxydé",
+      "Effacer le code et vérifier que la sonde chauffe bien sur un démarrage à froid",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule essence ou diesel homologué EOBD équipé d'une sonde lambda amont chauffée. Plus fréquent sur les véhicules de plus de 150 000 km, dont les sondes s'usent avec le temps.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Moteurs essence régulés par sonde lambda amont chauffée, et moteurs diesel récents équipés d'une sonde à large bande. Sur un moteur à deux rangées de cylindres, le code équivalent pour le banc 2 est P0155.",
+    },
+    piecesConcernees: [
+      "Sonde lambda amont (banc 1, capteur 1)",
+      "Fusible et relais du chauffage de sonde",
+      "Connecteur et faisceau de la sonde",
+    ],
     pieces: [
       { nom: "Sonde lambda amont", boutique: "Mister-Auto · sur commande", prix: "58€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0135 ?",
+        reponse: "Oui, le véhicule reste utilisable normalement. À froid, le calculateur règle moins précisément le mélange, ce qui peut augmenter légèrement la consommation et les émissions. Une sonde défectueuse peut aussi, à terme, faire apparaître d'autres codes.",
+      },
+      {
+        question: "Que signifie « banc 1, capteur 1 » ?",
+        reponse: "Le banc 1 est la rangée de cylindres qui contient le cylindre 1 ; le capteur 1 est la sonde située avant le catalyseur. La sonde située après le catalyseur est le capteur 2.",
+      },
+      {
+        question: "Le chauffage de la sonde est-il indispensable ?",
+        reponse: "Oui. Une sonde froide ne mesure pas correctement l'oxygène : le chauffage la porte à sa température de fonctionnement en quelques dizaines de secondes. Sans lui, le calculateur reste plus longtemps en fonctionnement dégradé après le démarrage.",
+      },
     ],
   },
   {
@@ -1023,17 +1434,70 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité élevée — risque de mode dégradé ou de refus de démarrer",
     description:
       "Le réseau de bord (bus CAN) ne reçoit plus de messages du calculateur moteur (ECM/PCM). La cause peut venir du calculateur lui-même, de son alimentation, ou d'un câblage de bus endommagé.",
+    symptomes: [
+      "Voyant moteur allumé, souvent accompagné d'autres voyants",
+      "Moteur qui ne démarre pas, ou qui cale",
+      "Compte-tours, jauges ou tableau de bord qui s'éteignent ou se comportent de façon étrange",
+      "Passage en mode dégradé, puissance limitée",
+      "Plusieurs codes « U » en même temps, parfois sur plusieurs calculateurs",
+    ],
     causes: [
       { pourcentage: 30, libelle: "Fusible ou alimentation du calculateur moteur défaillante" },
       { pourcentage: 28, libelle: "Câblage du bus CAN endommagé (coupure, court-circuit)" },
       { pourcentage: 22, libelle: "Connecteur du calculateur mal enfiché ou corrodé" },
       { pourcentage: 20, libelle: "Calculateur moteur défaillant" },
     ],
+    diagnostic:
+      "Les calculateurs du véhicule échangent en permanence des messages sur un réseau appelé bus CAN. U0100 signale que les autres modules ne reçoivent plus de messages du calculateur moteur. Il ne prouve pas que ce calculateur est en panne : il peut ne plus être alimenté, ne plus être correctement relié au réseau, ou le bus lui-même peut être endommagé. Une batterie faible ou une sous-tension peut aussi faire perdre la communication entre calculateurs. C'est pourquoi on contrôle d'abord l'alimentation, les masses et les fusibles, avant de soupçonner le calculateur lui-même.",
+    controles: [
+      "Lire tous les codes de tous les calculateurs, car la perte de communication déclenche des codes en cascade",
+      "Mesurer la tension de la batterie et contrôler cosses et masses",
+      "Vérifier les fusibles et le relais principal qui alimentent le calculateur moteur",
+      "Contrôler les connecteurs du calculateur moteur (broches oxydées, humidité, mauvais enfichage)",
+      "Mesurer la résistance du bus CAN entre CAN-H et CAN-L à la prise de diagnostic, contact coupé : environ 60 ohms à titre indicatif",
+    ],
     avisPro:
-      "Vérifier en premier les fusibles et l'alimentation du calculateur avant de suspecter le bus CAN ou le calculateur lui-même.",
+      "Le professionnel regarde d'abord le plus simple : la batterie, les cosses, les masses, puis les fusibles et le relais du calculateur moteur. Il mesure ensuite si le calculateur est bien alimenté et mis à la masse, connecteur branché. Pour le bus CAN, il mesure la résistance entre les deux fils du réseau, contact coupé, à la prise de diagnostic : une valeur très différente de celle attendue indique un fil coupé, un court-circuit ou un module défaillant qui perturbe le réseau. Il isole ensuite les modules un par un. Le calculateur moteur n'est remplacé qu'en dernier recours, et sa programmation doit alors être refaite.",
+    solutions: [
+      "Recharger ou remplacer la batterie, nettoyer et resserrer les cosses et les masses",
+      "Remplacer le fusible ou le relais qui alimente le calculateur moteur",
+      "Réparer ou remplacer le connecteur du calculateur s'il est oxydé ou mal enfiché",
+      "Réparer le câblage du bus CAN (fil coupé, court-circuit, fil frotté)",
+      "Remplacer ou faire réparer le calculateur moteur en dernier recours, puis le programmer",
+      "Effacer tous les codes et refaire une lecture pour vérifier que la communication est rétablie",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule équipé d'un réseau CAN, c'est-à-dire la quasi-totalité des véhicules récents (obligatoire sur les véhicules vendus aux États-Unis depuis 2008). Plus fréquent après un changement de batterie ou une intervention sur le faisceau électrique.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Tous les moteurs essence et diesel dont le calculateur moteur communique sur un bus CAN. Le code concerne le réseau de communication, pas une motorisation particulière.",
+    },
+    piecesConcernees: [
+      "Batterie, cosses et masses",
+      "Fusibles et relais d'alimentation du calculateur moteur",
+      "Connecteur du calculateur moteur",
+      "Faisceau et câblage du bus CAN",
+      "Calculateur moteur (cas rare)",
+    ],
     pieces: [
       { nom: "Fusible calculateur moteur", boutique: "AutoDoc · livraison 24h", prix: "4€" },
       { nom: "Connecteur calculateur", boutique: "Oscaro · livraison 48h", prix: "21€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code U0100 ?",
+        reponse: "C'est déconseillé : si le calculateur moteur ne communique plus, le moteur peut caler ou refuser de démarrer, et plusieurs systèmes de sécurité (ABS, direction assistée) peuvent être perturbés. Faites contrôler le véhicule avant de reprendre la route.",
+      },
+      {
+        question: "Le calculateur moteur est-il forcément défaillant ?",
+        reponse: "Non, c'est même assez rare. La cause est plus souvent une alimentation défaillante (batterie, fusible, masse), un connecteur oxydé ou un défaut sur le bus de communication.",
+      },
+      {
+        question: "Pourquoi le code apparaît-il après un changement de batterie ?",
+        reponse: "Une batterie mal serrée, une cosse oxydée ou une sous-tension passagère pendant le remplacement peuvent faire perdre la communication entre calculateurs. Si le code persiste, vérifiez les connexions de batterie et les masses, puis effacez les codes.",
+      },
     ],
   },
   {
@@ -5123,16 +5587,68 @@ export const codes: CodeDefaut[] = [
     severiteLabel: "Gravité élevée — dysfonctionnements électroniques en cascade",
     description:
       "La tension d'alimentation mesurée par le calculateur est anormalement basse, ce qui peut provoquer des dysfonctionnements électroniques en cascade sur plusieurs systèmes du véhicule.",
+    symptomes: [
+      "Voyant moteur ou voyant de batterie allumé",
+      "Démarrage difficile ou démarreur qui peine",
+      "Éclairage et ventilation qui faiblissent, surtout au ralenti",
+      "Dysfonctionnements en cascade : ABS, direction assistée, autres voyants, parfois plusieurs codes de communication",
+      "Calages dans les cas sévères",
+    ],
     causes: [
       { pourcentage: 38, libelle: "Batterie faible ou défectueuse" },
       { pourcentage: 28, libelle: "Alternateur ne chargeant plus correctement" },
       { pourcentage: 20, libelle: "Câblage ou cosse de batterie oxydée" },
       { pourcentage: 14, libelle: "Calculateur moteur défaillant" },
     ],
+    diagnostic:
+      "Les calculateurs ont besoin d'une tension d'alimentation stable, généralement autour de 12 volts moteur arrêté et de 13,5 à 14,5 volts moteur tournant. P0562 signale que la tension mesurée est anormalement basse. C'est un code à prendre au sérieux, car une sous-tension fait déraper plusieurs systèmes à la fois et peut créer de nombreux autres codes sans rapport avec leur cause réelle. Dans la très grande majorité des cas, le calculateur n'est pas en cause : il faut vérifier la batterie, la charge fournie par l'alternateur, et l'état des connexions.",
+    controles: [
+      "Mesurer la tension de la batterie moteur arrêté (à pleine charge, environ 12,5 volts ou plus)",
+      "Mesurer la tension moteur tournant, au ralenti puis vers 2 000 tr/min : elle doit monter à environ 13,5 à 14,5 volts",
+      "Faire tester la batterie sous charge (capacité et état de santé)",
+      "Contrôler les cosses de batterie et les masses (oxydation, serrage, chute de tension)",
+      "Vérifier la courroie d'accessoires, son tendeur et le câble de l'alternateur",
+    ],
     avisPro:
-      "Ce défaut touche rarement le calculateur lui-même — commencer systématiquement par un contrôle de la batterie et de la charge de l'alternateur.",
+      "Le professionnel ne cherche pas dans le calculateur avant d'avoir établi un bilan électrique complet. Il teste la batterie sous charge, car une batterie déchargée mais « bonne » se distingue d'une batterie en fin de vie, puis il mesure la tension moteur tournant pour juger la charge de l'alternateur. Il contrôle ensuite les connexions : cosses oxydées, masse corrodée et câble d'alternateur provoquent des chutes de tension qui imitent une panne de charge. Il vérifie aussi la courroie d'accessoires, qui peut patiner. Comme la sous-tension a pu déclencher d'autres codes, il corrige d'abord la cause, efface tous les codes, puis refait une lecture pour voir ce qui revient.",
+    solutions: [
+      "Recharger ou remplacer la batterie si elle ne tient plus la charge",
+      "Remplacer l'alternateur ou son régulateur s'il ne charge plus correctement",
+      "Nettoyer et resserrer les cosses de batterie et les masses, ou remplacer les câbles oxydés",
+      "Remplacer la courroie d'accessoires ou son tendeur si elle patine",
+      "Remplacer par le même type de batterie sur un véhicule Stop & Start (batterie AGM ou EFB, selon le véhicule)",
+      "Effacer tous les codes et refaire une lecture pour vérifier qu'aucun autre défaut ne revient",
+    ],
+    vehiculesConcernes: {
+      generique: true,
+      texte: "Code OBD-II/EOBD générique, non spécifique à un constructeur : aucune association modèle précise n'est confirmée pour ce code à ce jour. Il peut apparaître sur tout véhicule essence ou diesel homologué EOBD. Plus fréquent sur les véhicules dont la batterie a plus de 4 ou 5 ans, ou qui font surtout des trajets courts, qui ne laissent pas à l'alternateur le temps de recharger.",
+    },
+    moteursConcernes: {
+      generique: true,
+      texte: "Tous les moteurs essence et diesel. Le code concerne le réseau électrique du véhicule, pas un type de motorisation en particulier.",
+    },
+    piecesConcernees: [
+      "Batterie",
+      "Alternateur et régulateur de charge",
+      "Cosses et câbles de masse",
+      "Courroie d'accessoires et tendeur",
+    ],
     pieces: [
       { nom: "Batterie de démarrage", boutique: "Oscaro · livraison 48h", prix: "90-140€" },
+    ],
+    faq: [
+      {
+        question: "Puis-je rouler avec le code P0562 ?",
+        reponse: "Pour un court trajet jusqu'au garage, en général oui. Mais si l'alternateur ne charge plus, le véhicule fonctionne sur la seule batterie jusqu'à ce qu'elle se vide, puis cale. Si le voyant de batterie est allumé en roulant, mieux vaut s'arrêter dès que possible.",
+      },
+      {
+        question: "J'ai une batterie neuve et le code revient, pourquoi ?",
+        reponse: "Une batterie neuve ne règle rien si la charge est défaillante : l'alternateur, la courroie ou une connexion oxydée peuvent la vider rapidement. Faites mesurer la tension de charge moteur tournant.",
+      },
+      {
+        question: "Dois-je effacer les autres codes après la réparation ?",
+        reponse: "Oui. Une sous-tension peut avoir déclenché des codes de communication, d'ABS ou de calculateurs sans rapport avec leur cause réelle. Après réparation, effacez-les tous et refaites une lecture : seuls ceux qui reviennent sont de vrais défauts.",
+      },
     ],
   },
   {
